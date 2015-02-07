@@ -1,10 +1,13 @@
 #pragma once
 #include "oxygine-framework.h"
+//#include "Map.h"
+
 using namespace oxygine;
 
 DECLARE_SMART(Player, spPlayer);
 DECLARE_SMART(Joystick, spJoystick);
 DECLARE_SMART(Game, spGame);
+//DECLARE_SMART(Map, spMap);
 class Game: public Actor
 {
 public:
@@ -15,7 +18,10 @@ public:
 private:
 	friend class Player;
 	void doUpdate(const UpdateState &us);
-
+    void renderMap();
+    
+//    spMap _map;
+    
 	spJoystick _move;
 
 	spPlayer _player;

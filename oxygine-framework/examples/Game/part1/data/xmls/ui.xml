@@ -11,4 +11,15 @@
 		<image file="ship.png" />
 		<image file="shipengine.png" />
 	</atlas>
+    
+    <atlas>
+        <image file="room01.png" />
+        <image file="floor.png" />
+        <image file="wall.png" />
+        <image file="human.png" />
+    </atlas>
+    <set path = "tmx" />
+    <atlas>
+        <tmx file="room01.tmx" />
+    </atlas>
 </resources>
