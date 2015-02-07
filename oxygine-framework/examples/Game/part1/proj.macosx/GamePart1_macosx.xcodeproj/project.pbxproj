@@ -18,6 +18,7 @@
 		1E839D002B2BA83FC83A695A /* Unit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04FE4D4FB640E0DF92DFB865 /* Unit.cpp */; };
 		2DC477AC10D6C07B3FE008F6 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 360377333740D8A2FD15BBE6 /* Game.cpp */; };
 		3A631A475DE035FC53ADE5EA /* entry_point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F3B12E3C9D554D9FE28101D /* entry_point.cpp */; };
+		5332459A1A868B57001B14EA /* KeyboardInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 533245981A868B57001B14EA /* KeyboardInput.cpp */; };
 		534E8B331A852DB800506FD1 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 534E8B311A852DB800506FD1 /* Map.cpp */; };
 		53901A481A85442E0097D1B9 /* tmx in Resources */ = {isa = PBXBuildFile; fileRef = 53901A471A85442E0097D1B9 /* tmx */; };
 		53901A4A1A8557FE0097D1B9 /* room01.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 53901A491A8557FE0097D1B9 /* room01.tmx */; };
@@ -118,6 +119,8 @@
 		2CE4BD5BB9DEF92439C0AB58 /* xmls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = xmls; path = ../data/xmls; sourceTree = "<group>"; };
 		360377333740D8A2FD15BBE6 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Game.cpp; path = ../src/Game.cpp; sourceTree = "<group>"; };
 		4DA100C319512824B7570663 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = ../src/Player.cpp; sourceTree = "<group>"; };
+		533245981A868B57001B14EA /* KeyboardInput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KeyboardInput.cpp; sourceTree = "<group>"; };
+		533245991A868B57001B14EA /* KeyboardInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardInput.h; sourceTree = "<group>"; };
 		534E8B311A852DB800506FD1 /* Map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Map.cpp; path = ../src/Map.cpp; sourceTree = "<group>"; };
 		534E8B321A852DB800506FD1 /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Map.h; path = ../src/Map.h; sourceTree = "<group>"; };
 		53901A471A85442E0097D1B9 /* tmx */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tmx; sourceTree = "<group>"; };
@@ -255,22 +258,24 @@
 		04A57D391871FF8B0068B1E5 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				534E8B251A8486C800506FD1 /* Tmx */,
+				7F3B12E3C9D554D9FE28101D /* entry_point.cpp */,
+				F6123B1E6FE4471A00F49751 /* example.cpp */,
+				7623D793B59EF0CD569E6EC2 /* example.h */,
 				360377333740D8A2FD15BBE6 /* Game.cpp */,
 				F196143B0370A9D348494ACC /* Game.h */,
 				0BF9628FC8D38F9748F0CDEB /* Joystick.cpp */,
 				7746CA7A63049ED8F7D6BF42 /* Joystick.h */,
+				533245981A868B57001B14EA /* KeyboardInput.cpp */,
+				533245991A868B57001B14EA /* KeyboardInput.h */,
 				534E8B311A852DB800506FD1 /* Map.cpp */,
 				534E8B321A852DB800506FD1 /* Map.h */,
 				4DA100C319512824B7570663 /* Player.cpp */,
 				D954BD82D7708B65A08FB6B9 /* Player.h */,
-				04FE4D4FB640E0DF92DFB865 /* Unit.cpp */,
-				BD0E956CC3A2F7EB94822B5C /* Unit.h */,
-				7F3B12E3C9D554D9FE28101D /* entry_point.cpp */,
-				F6123B1E6FE4471A00F49751 /* example.cpp */,
-				7623D793B59EF0CD569E6EC2 /* example.h */,
 				5DE458993031811A4C7D28C1 /* res.cpp */,
 				AFA30E959880563E6ABBBC4F /* res.h */,
+				534E8B251A8486C800506FD1 /* Tmx */,
+				04FE4D4FB640E0DF92DFB865 /* Unit.cpp */,
+				BD0E956CC3A2F7EB94822B5C /* Unit.h */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -446,6 +451,7 @@
 				2DC477AC10D6C07B3FE008F6 /* Game.cpp in Sources */,
 				53BA46531A84436700B6201F /* TmxMap.cpp in Sources */,
 				53BA465B1A84436700B6201F /* TmxUtil.cpp in Sources */,
+				5332459A1A868B57001B14EA /* KeyboardInput.cpp in Sources */,
 				53BA46541A84436700B6201F /* TmxObject.cpp in Sources */,
 				53BA46551A84436700B6201F /* TmxObjectGroup.cpp in Sources */,
 				53BA46581A84436700B6201F /* TmxPropertySet.cpp in Sources */,
