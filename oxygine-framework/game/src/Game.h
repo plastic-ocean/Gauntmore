@@ -7,6 +7,7 @@ using namespace oxygine;
 DECLARE_SMART(Player, spPlayer);
 DECLARE_SMART(Joystick, spJoystick);
 DECLARE_SMART(Game, spGame);
+DECLARE_SMART(KeyboardInput, spKeyboardInput)
 //DECLARE_SMART(Map, spMap);
 class Game: public Actor
 {
@@ -18,11 +19,13 @@ public:
 private:
 	friend class Player;
 	void doUpdate(const UpdateState &us);
-    void renderMap();
-    
+	void renderMap();
+
 //    spMap _map;
-    
-	spJoystick _move;
+
+	spKeyboardInput _move;
+
+//	spJoystick _move;
 
 	spPlayer _player;
 };

@@ -1,5 +1,6 @@
 #pragma once
 #include "oxygine-framework.h"
+using namespace oxygine;
 
 #ifndef __S3E__
 #include "SDL.h"
@@ -7,7 +8,7 @@
 
 using namespace oxygine;
 
-class KeyboardInput: public Sprite {
+class KeyboardInput: public Actor {
 public:
     KeyboardInput();
     

@@ -1,12 +1,15 @@
+#include <iostream>
+
 #include "Player.h"
 #include "Game.h"
 #include "res.h"
 #include "Joystick.h"
+#include "KeyboardInput.h"
 #include "Tmx.h"
 
 void Player::_init() {
 	//initialize player
-	_view->setPosition(_game->getSize()/2);
+	_view->setPosition(_game->getSize() / 2);
 
     _human = new Sprite;
     _human->setResAnim(res::ui.getResAnim("human"));

@@ -5,6 +5,7 @@
 #include "Player.h"
 #include "res.h"
 #include "Tmx.h"
+#include "KeyboardInput.h"
 //#include "Map.h"
 
 Game::Game() {}
@@ -23,10 +24,13 @@ void Game::init() {
 	_player = new Player;
 	_player->init(this);
 
-	// create virtual joystick
-	_move = new Joystick;
-	_move->attachTo(this);
-	_move->setY(getHeight() - _move->getHeight());
+	// handle input
+    _move = new KeyboardInput;
+    _move->attachTo(this);
+    
+//	_move = new Joystick;
+//	_move->attachTo(this);
+//	_move->setY(getHeight() - _move->getHeight());
 }
 
 

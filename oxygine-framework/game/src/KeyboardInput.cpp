@@ -1,3 +1,5 @@
+#include <iostream>
+
 #include "KeyboardInput.h"
 #include "Input.h"
 
@@ -13,49 +15,49 @@ KeyboardInput::KeyboardInput():_pressed(false), _dir(0,0) {
 bool KeyboardInput::getDirection(Vector2 &dir) const {
     dir = _dir;
     return _pressed;
-    
+
 }
 
 void KeyboardInput::onEvent(Event *ev) {
     SDL_Event *event = (SDL_Event*) ev->userData;
-    
+
     if (event->type == SDL_KEYDOWN) {
+        const Uint8 *state = SDL_GetKeyboardState(NULL);
         _pressed = true;
-        switch (event->type) {
-            case SDLK_UP:
-                _dir = Vector2(10, 0);
-                break;
-            case SDLK_w:
-                _dir = Vector2(10, 0);
-                break;
-            case SDLK_DOWN:
-                _dir = Vector2(-10, 0);
-                break;
-            case SDLK_s:
-                _dir = Vector2(-10, 0);
-                break;
-            case SDLK_LEFT:
-                _dir = Vector2(0, -10);
-                break;
-            case SDLK_a:
-                _dir = Vector2(0, -10);
-                break;
-            case SDLK_RIGHT:
-                _dir = Vector2(0, 10);
-                break;
-            case SDLK_d:
-                _dir = Vector2(0, 10);
-                break;
+        if (state[SDL_SCANCODE_UP] || state[SDL_SCANCODE_W]) {
+            // Up
+            _dir = Vector2(0, -20);
+        }
+        if (state[SDL_SCANCODE_DOWN] || state[SDL_SCANCODE_S]) {
+            // Down
+            _dir = Vector2(0, 20);
+        }
+        if (state[SDL_SCANCODE_LEFT] || state[SDL_SCANCODE_A]) {
+            // Left
+            _dir = Vector2(-20, 0);
+        }
+        if (state[SDL_SCANCODE_RIGHT] || state[SDL_SCANCODE_D]) {
+            // Right
+            _dir = Vector2(20, 0);
+        }
+        if ((state[SDL_SCANCODE_LEFT] && state[SDL_SCANCODE_UP]) || (state[SDL_SCANCODE_A] && state[SDL_SCANCODE_W])) {
+            // Up/Left
+            _dir = Vector2(-20, -20);
+        }
+        if ((state[SDL_SCANCODE_RIGHT] && state[SDL_SCANCODE_UP]) || (state[SDL_SCANCODE_D] && state[SDL_SCANCODE_W])) {
+            // Up/Right
+            _dir = Vector2(20, -20);
+        }
+        if ((state[SDL_SCANCODE_DOWN] && state[SDL_SCANCODE_LEFT]) || (state[SDL_SCANCODE_S] && state[SDL_SCANCODE_A])) {
+            // Down/Left
+            _dir = Vector2(-20, 20);
+        }
+        if ((state[SDL_SCANCODE_DOWN] && state[SDL_SCANCODE_RIGHT]) || (state[SDL_SCANCODE_S] && state[SDL_SCANCODE_D])) {
+            // Down/Right
+            _dir = Vector2(20, 20);
         }
     } else if (event->type == SDL_KEYUP) {
         _pressed = false;
-    }
-    
-    if (_dir.length() > 100)
-        _dir.normalizeTo(100);
-    
-    if (!_pressed) {
         _dir = Vector2(0,0);
     }
 }
-
