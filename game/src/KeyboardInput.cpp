@@ -47,7 +47,9 @@ void KeyboardInput::onEvent(Event *ev) {
                 _dir = Vector2(0, 10);
                 break;
         }
-    } else if (event->type == SDL_KEYUP) {
+    }
+    
+    if (event->type == SDL_KEYUP) {
         _pressed = false;
     }
     
