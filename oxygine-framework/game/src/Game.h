@@ -1,5 +1,6 @@
 #pragma once
 #include "oxygine-framework.h"
+#include "KeyboardInput.h"
 //#include "Map.h"
 
 using namespace oxygine;
