@@ -42,7 +42,7 @@ void Game::doUpdate(const UpdateState &us) {
 void Game::renderMap() {
     Tmx::Map *map = new Tmx::Map();
     
-    map->ParseFile("room01.tmx");
+    map->ParseFile("../data/tmx/room01.tmx");
     
     for (int i = 0; i < map->GetNumLayers(); ++i) {
         // Get a layer.

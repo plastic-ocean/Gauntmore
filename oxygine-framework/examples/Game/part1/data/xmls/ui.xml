@@ -14,6 +14,7 @@
     
     <atlas>
         <image file="room01.png" />
+	<image file="default_tiles_x.png" />
         <image file="floor.png" />
         <image file="wall.png" />
         <image file="human.png" />
