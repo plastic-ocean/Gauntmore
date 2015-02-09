@@ -7,16 +7,16 @@ using namespace oxygine;
 
 
 DECLARE_SMART(Player, spPlayer);
-DECLARE_SMART(Joystick, spJoystick);
 DECLARE_SMART(Game, spGame);
 DECLARE_SMART(KeyboardInput, spKeyboardInput)
-DECLARE_SMART(Map, spMap);
+DECLARE_SMART(Unit, spUnit);
 
 
 class Game: public Actor {
     
 public:
 	Game();
+    ~Game();
     
     /**
      * Initialzes the game. Creates the map, the player, the monsters, the static objects
@@ -48,14 +48,28 @@ public:
      * @return the tiles vector<SDL_Rect>.
      */
     std::vector<SDL_Rect> getTiles();
+    
+    /**
+     * Gets the keyboard input handler.
+     */
+    spKeyboardInput getMove();
+    
+    /**
+     * Adds unit to the back of the units list.
+     *
+     * @unit is the Unit to be added.
+     */
+    void pushUnit(spUnit unit);
 
-private:
-	friend class Player;
-    Tmx::Map *map;
-    std::vector<SDL_Rect> tiles;
+protected:
+    Tmx::Map *_map;
+    std::vector<SDL_Rect> _tiles;
     
     spKeyboardInput _move;
     spPlayer _player;
+    
+    typedef std::list<spUnit> units;
+    units _units;
     
     /**
      * Updates the player each frame. A virtual method of Actor it is being called each frame.
@@ -67,10 +81,10 @@ private:
     /**
      * Reads the tile map description from the .tmx file and uses it to render the map.
      */
-    void renderMap();
+    void _renderMap();
     
     /**
      * Creates a vector of rectangles called tiles that is used to detect collisions.
      */
-    void createTiles();
+    void _createTiles();
 };

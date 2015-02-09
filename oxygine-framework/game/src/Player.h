@@ -4,16 +4,21 @@
 
 DECLARE_SMART(Player, spPlayer);
 
-
 class Player: public Unit {
     
 public:
-	
+	Player();
+    
+    /**
+     * Reduces the player's hit points.
+     */
+    void damage();
+    
 protected:
     spSprite _sprite;
     
     /**
-     * Initializes the player.
+     * Initializes the player's position and sprite. Called by Unit's init() method.
      */
 	void _init();
     

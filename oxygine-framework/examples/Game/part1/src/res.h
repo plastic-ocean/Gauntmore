@@ -3,6 +3,7 @@
 using namespace oxygine;
 
 namespace res {
+    
 	extern Resources ui;
     
     /**

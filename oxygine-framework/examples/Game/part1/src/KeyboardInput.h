@@ -9,6 +9,7 @@ using namespace oxygine;
 using namespace oxygine;
 
 class KeyboardInput: public Actor {
+    
 public:
     KeyboardInput();
     
@@ -29,5 +30,5 @@ private:
      *
      * @ev is the event, will be turned into an SDL_Event.
      */
-    void onEvent(Event *ev);
+    void _onEvent(Event *ev);
 };

@@ -35,6 +35,7 @@
 		533245D61A871003001B14EA /* TmxTileset.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 533245C41A871003001B14EA /* TmxTileset.cpp */; };
 		533245D71A871003001B14EA /* TmxUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 533245C61A871003001B14EA /* TmxUtil.cpp */; };
 		533245DA1A8710A6001B14EA /* tmx in Resources */ = {isa = PBXBuildFile; fileRef = 533245D91A8710A6001B14EA /* tmx */; };
+		53602FEA1A887F4D0052AC0A /* Creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53602FE81A887F4D0052AC0A /* Creature.cpp */; };
 		693088A7AB377368EE4A018E /* xmls in Resources */ = {isa = PBXBuildFile; fileRef = 2CE4BD5BB9DEF92439C0AB58 /* xmls */; };
 		C8860D93875589970329DCCD /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DA100C319512824B7570663 /* Player.cpp */; };
 		CD59C69314E9E74CD0A11E03 /* gauntmore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6123B1E6FE4471A00F49751 /* gauntmore.cpp */; };
@@ -151,6 +152,8 @@
 		533245C61A871003001B14EA /* TmxUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TmxUtil.cpp; path = ../src/TmxUtil.cpp; sourceTree = "<group>"; };
 		533245C71A871003001B14EA /* TmxUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TmxUtil.h; path = ../src/TmxUtil.h; sourceTree = "<group>"; };
 		533245D91A8710A6001B14EA /* tmx */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tmx; path = ../data/tmx; sourceTree = "<group>"; };
+		53602FE81A887F4D0052AC0A /* Creature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Creature.cpp; path = ../src/Creature.cpp; sourceTree = "<group>"; };
+		53602FE91A887F4D0052AC0A /* Creature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Creature.h; path = ../src/Creature.h; sourceTree = "<group>"; };
 		5DE458993031811A4C7D28C1 /* res.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = res.cpp; path = ../src/res.cpp; sourceTree = "<group>"; };
 		7623D793B59EF0CD569E6EC2 /* gauntmore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gauntmore.h; path = ../src/gauntmore.h; sourceTree = "<group>"; };
 		7F3B12E3C9D554D9FE28101D /* entry_point.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = entry_point.cpp; path = ../src/entry_point.cpp; sourceTree = "<group>"; };
@@ -249,11 +252,13 @@
 		04A57D391871FF8B0068B1E5 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				53602FE81A887F4D0052AC0A /* Creature.cpp */,
+				53602FE91A887F4D0052AC0A /* Creature.h */,
 				7F3B12E3C9D554D9FE28101D /* entry_point.cpp */,
-				F6123B1E6FE4471A00F49751 /* gauntmore.cpp */,
-				7623D793B59EF0CD569E6EC2 /* gauntmore.h */,
 				360377333740D8A2FD15BBE6 /* Game.cpp */,
 				F196143B0370A9D348494ACC /* Game.h */,
+				F6123B1E6FE4471A00F49751 /* gauntmore.cpp */,
+				7623D793B59EF0CD569E6EC2 /* gauntmore.h */,
 				533245A71A871003001B14EA /* KeyboardInput.cpp */,
 				533245A81A871003001B14EA /* KeyboardInput.h */,
 				4DA100C319512824B7570663 /* Player.cpp */,
@@ -435,6 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DC477AC10D6C07B3FE008F6 /* Game.cpp in Sources */,
+				53602FEA1A887F4D0052AC0A /* Creature.cpp in Sources */,
 				533245C91A871003001B14EA /* KeyboardInput.cpp in Sources */,
 				533245CF1A871003001B14EA /* TmxMap.cpp in Sources */,
 				533245D71A871003001B14EA /* TmxUtil.cpp in Sources */,

@@ -10,7 +10,7 @@
  * Constructor.
  */
 KeyboardInput::KeyboardInput():_pressed(false), _dir(0,0) {
-    Input::instance.addEventListener(Input::event_platform, CLOSURE(this, &KeyboardInput::onEvent));
+    Input::instance.addEventListener(Input::event_platform, CLOSURE(this, &KeyboardInput::_onEvent));
 }
 
 
@@ -32,7 +32,7 @@ bool KeyboardInput::getDirection(Vector2 &dir) const {
  * 
  * @ev is the event, will be turned into an SDL_Event.
  */
-void KeyboardInput::onEvent(Event *ev) {
+void KeyboardInput::_onEvent(Event *ev) {
     SDL_Event *event = (SDL_Event*) ev->userData;
     
     if (event->type == SDL_KEYDOWN) {

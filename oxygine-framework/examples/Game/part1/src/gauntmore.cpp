@@ -8,10 +8,10 @@ void gauntmore_preinit() {}
 
 
 void gauntmore_init() {
-	//load resources
+	// Load resources.
 	res::load();
 	
-	//create scene with game
+	// Create game scene.
 	spGame game = new Game;
 	game->init();
 	game->attachTo(getStage());
