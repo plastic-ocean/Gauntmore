@@ -1,10 +1,5 @@
 #pragma once
 #include "oxygine-framework.h"
-using namespace oxygine;
-
-#ifndef __S3E__
-#include "SDL.h"
-#endif
 
 using namespace oxygine;
 

@@ -2,6 +2,7 @@
 
 #include "KeyboardInput.h"
 #include "Input.h"
+#include "SDL.h"
 #include "SDL_keyboard.h"
 #include "SDL_events.h"
 
