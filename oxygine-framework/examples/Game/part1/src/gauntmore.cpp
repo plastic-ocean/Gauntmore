@@ -3,12 +3,11 @@
 #include "Game.h"
 using namespace oxygine;
 
-void example_preinit()
-{
-}
 
-void example_init()
-{
+void gauntmore_preinit() {}
+
+
+void gauntmore_init() {
 	//load resources
 	res::load();
 	
@@ -18,12 +17,10 @@ void example_init()
 	game->attachTo(getStage());
 }
 
-void example_update()
-{
-	
-}
 
-void example_destroy()
-{
+void gauntmore_update() {}
+
+
+void gauntmore_destroy() {
 	res::free();
 }

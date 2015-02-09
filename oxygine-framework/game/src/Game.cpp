@@ -1,73 +1,126 @@
 #include <iostream>
 
 #include "Game.h"
-#include "Joystick.h"
 #include "Player.h"
 #include "res.h"
 #include "Tmx.h"
 #include "KeyboardInput.h"
-//#include "Map.h"
+
 
 Game::Game() {}
 
-
+/**
+ * Initialzes the game. Creates the map, the player, the monsters, the static objects 
+ * and puts them in the game world.
+ */
 void Game::init() {
 	// scene layer would have size of display
 	setSize(getStage()->getSize());
 
 	// create map
-//    _map = new Map();
-//    _map->render(this);
-	renderMap();
-
+    renderMap();
+    createTiles();
+    
 	// create player
 	_player = new Player;
 	_player->init(this);
 
 	// handle input
-	_move = new KeyboardInput;
-	_move->attachTo(this);
-
-//	_move = new Joystick;
-//	_move->attachTo(this);
-//	_move->setY(getHeight() - _move->getHeight());
+    _move = new KeyboardInput;
+    _move->attachTo(this);
 }
 
 
+/**
+ * Updates the player each frame. A virtual method of Actor it is being called each frame.
+ *
+ * @us is the UpdateStatus sent by the global update method.
+ */
 void Game::doUpdate(const UpdateState &us) {
-	// doUpdate is virtual method of Actor
-	// it is being called each frame
-
-	// update player each frame
 	_player->update(us);
 }
 
 
+/**
+ * Reads the tile map description from the .tmx file and uses it to render the map.
+ */
 void Game::renderMap() {
-	Tmx::Map *map = new Tmx::Map();
+    map = new Tmx::Map();
+    
+    map->ParseFile("../data/tmx/room01.tmx");
+    
+    for (int i = 0; i < map->GetNumLayers(); ++i) {
+        // Get a layer.
+        const Tmx::Layer *layer = map->GetLayer(i);
+        
+        for (int x = 0; x < layer->GetWidth(); ++x) {
+            for (int y = 0; y < layer->GetHeight(); ++y) {
+                int tilesetIndex = layer->GetTileTilesetIndex(x, y);
+                const Tmx::Tileset *tileset = map->GetTileset(tilesetIndex);
+                std::string name = tileset->GetName();
+                int tileSize = tileset->GetImage()->GetWidth();
+                int drawX = x * tileSize;
+                int drawY = y * tileSize;
+                // Draw the tile.
+                spSprite sprite = new Sprite;
+                sprite->setResAnim(res::ui.getResAnim(name));
+                sprite->setX(drawX);
+                sprite->setY(drawY);
+                sprite->attachTo(this);
+            }
+        }
+    }
+//    delete map;
+}
 
-	map->ParseFile("../data/tmx/room01.tmx");
 
-	for (int i = 0; i < map->GetNumLayers(); ++i) {
-		// Get a layer.
-		const Tmx::Layer *layer = map->GetLayer(i);
+/**
+ * Creates a vector of rectangles called tiles that is used to detect collisions.
+ */
+void Game::createTiles() {
+    // Build a vector of rectangles to represent the collidable tiles.
+    for (int i = 0; i < map->GetNumLayers(); ++i) {
+        // Get a layer.
+        const Tmx::Layer *layer = map->GetLayer(i);
+        for (int x = 0; x < layer->GetWidth(); ++x) {
+            for (int y = 0; y < layer->GetHeight(); ++y) {
+                
+                int tilesetIndex = layer->GetTileTilesetIndex(x, y);
+                const Tmx::Tileset *tileset = map->GetTileset(tilesetIndex);
+                int tileSize = tileset->GetImage()->GetWidth();
+                std::string name = tileset->GetName();
+                
+                if (name == "wall") {
+                    int posX = x * tileSize;
+                    int posY = y * tileSize;
+                    SDL_Rect tile;
+                    tile.x = posX;
+                    tile.y = posY;
+                    tile.h = tileSize;
+                    tile.w = tileSize;
+                    tiles.push_back(tile);
+                }
+            }
+        }
+    }
+}
 
-		for (int x = 0; x < layer->GetWidth(); ++x) {
-			for (int y = 0; y < layer->GetHeight(); ++y) {
-				int tilesetIndex = layer->GetTileTilesetIndex(x, y);
-				const Tmx::Tileset *tileset = map->GetTileset(tilesetIndex);
-				std::string name = tileset->GetName();
-				int tileSize = tileset->GetImage()->GetWidth();
-				int drawX = x * tileSize;
-				int drawY = y * tileSize;
-				// Draw the tile.
-				spSprite sprite = new Sprite;
-				sprite->setResAnim(res::ui.getResAnim(name));
-				sprite->setX(drawX);
-				sprite->setY(drawY);
-				sprite->attachTo(this);
-			}
-		}
-	}
-	delete map;
+
+/**
+ * Gets the tile map.
+ *
+ * @return the tile map.
+ */
+Tmx::Map *Game::getMap() {
+    return map;
+}
+
+
+/**
+ * Gets tiles.
+ *
+ * @return the tiles vector<SDL_Rect>.
+ */
+std::vector<SDL_Rect> Game::getTiles() {
+    return tiles;
 }

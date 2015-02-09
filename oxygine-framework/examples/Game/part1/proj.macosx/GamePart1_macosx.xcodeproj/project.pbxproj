@@ -35,11 +35,9 @@
 		533245D61A871003001B14EA /* TmxTileset.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 533245C41A871003001B14EA /* TmxTileset.cpp */; };
 		533245D71A871003001B14EA /* TmxUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 533245C61A871003001B14EA /* TmxUtil.cpp */; };
 		533245DA1A8710A6001B14EA /* tmx in Resources */ = {isa = PBXBuildFile; fileRef = 533245D91A8710A6001B14EA /* tmx */; };
-		534E8B331A852DB800506FD1 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 534E8B311A852DB800506FD1 /* Map.cpp */; };
 		693088A7AB377368EE4A018E /* xmls in Resources */ = {isa = PBXBuildFile; fileRef = 2CE4BD5BB9DEF92439C0AB58 /* xmls */; };
 		C8860D93875589970329DCCD /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DA100C319512824B7570663 /* Player.cpp */; };
-		CD59C69314E9E74CD0A11E03 /* example.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6123B1E6FE4471A00F49751 /* example.cpp */; };
-		DA49ED8903C628BA578C8670 /* Joystick.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0BF9628FC8D38F9748F0CDEB /* Joystick.cpp */; };
+		CD59C69314E9E74CD0A11E03 /* gauntmore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6123B1E6FE4471A00F49751 /* gauntmore.cpp */; };
 		EFF139F8BA484314F7AAF645 /* res.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5DE458993031811A4C7D28C1 /* res.cpp */; };
 		F2CFD518E4E2E05ECEDBB262 /* images in Resources */ = {isa = PBXBuildFile; fileRef = BA41FC88D76540A6905224D6 /* images */; };
 /* End PBXBuildFile section */
@@ -114,7 +112,6 @@
 		04A57D761871FFEB0068B1E5 /* oxygine_macosx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = oxygine_macosx.xcodeproj; path = "../../../..//oxygine/SDL/macosx/oxygine_macosx/oxygine_macosx.xcodeproj"; sourceTree = "<group>"; };
 		04A57D7E1872012A0068B1E5 /* SDL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL.xcodeproj; path = "../../../../..//SDL/Xcode/SDL/SDL.xcodeproj"; sourceTree = "<group>"; };
 		04FE4D4FB640E0DF92DFB865 /* Unit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Unit.cpp; path = ../src/Unit.cpp; sourceTree = "<group>"; };
-		0BF9628FC8D38F9748F0CDEB /* Joystick.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Joystick.cpp; path = ../src/Joystick.cpp; sourceTree = "<group>"; };
 		2CE4BD5BB9DEF92439C0AB58 /* xmls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = xmls; path = ../data/xmls; sourceTree = "<group>"; };
 		360377333740D8A2FD15BBE6 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Game.cpp; path = ../src/Game.cpp; sourceTree = "<group>"; };
 		4DA100C319512824B7570663 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = ../src/Player.cpp; sourceTree = "<group>"; };
@@ -154,18 +151,15 @@
 		533245C61A871003001B14EA /* TmxUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TmxUtil.cpp; path = ../src/TmxUtil.cpp; sourceTree = "<group>"; };
 		533245C71A871003001B14EA /* TmxUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TmxUtil.h; path = ../src/TmxUtil.h; sourceTree = "<group>"; };
 		533245D91A8710A6001B14EA /* tmx */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tmx; path = ../data/tmx; sourceTree = "<group>"; };
-		534E8B311A852DB800506FD1 /* Map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Map.cpp; path = ../src/Map.cpp; sourceTree = "<group>"; };
-		534E8B321A852DB800506FD1 /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Map.h; path = ../src/Map.h; sourceTree = "<group>"; };
 		5DE458993031811A4C7D28C1 /* res.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = res.cpp; path = ../src/res.cpp; sourceTree = "<group>"; };
-		7623D793B59EF0CD569E6EC2 /* example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = example.h; path = ../src/example.h; sourceTree = "<group>"; };
-		7746CA7A63049ED8F7D6BF42 /* Joystick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Joystick.h; path = ../src/Joystick.h; sourceTree = "<group>"; };
+		7623D793B59EF0CD569E6EC2 /* gauntmore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gauntmore.h; path = ../src/gauntmore.h; sourceTree = "<group>"; };
 		7F3B12E3C9D554D9FE28101D /* entry_point.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = entry_point.cpp; path = ../src/entry_point.cpp; sourceTree = "<group>"; };
 		AFA30E959880563E6ABBBC4F /* res.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = res.h; path = ../src/res.h; sourceTree = "<group>"; };
 		BA41FC88D76540A6905224D6 /* images */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = images; path = ../data/images; sourceTree = "<group>"; };
 		BD0E956CC3A2F7EB94822B5C /* Unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Unit.h; path = ../src/Unit.h; sourceTree = "<group>"; };
 		D954BD82D7708B65A08FB6B9 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = ../src/Player.h; sourceTree = "<group>"; };
 		F196143B0370A9D348494ACC /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = ../src/Game.h; sourceTree = "<group>"; };
-		F6123B1E6FE4471A00F49751 /* example.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = example.cpp; path = ../src/example.cpp; sourceTree = "<group>"; };
+		F6123B1E6FE4471A00F49751 /* gauntmore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gauntmore.cpp; path = ../src/gauntmore.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,16 +250,12 @@
 			isa = PBXGroup;
 			children = (
 				7F3B12E3C9D554D9FE28101D /* entry_point.cpp */,
-				F6123B1E6FE4471A00F49751 /* example.cpp */,
-				7623D793B59EF0CD569E6EC2 /* example.h */,
+				F6123B1E6FE4471A00F49751 /* gauntmore.cpp */,
+				7623D793B59EF0CD569E6EC2 /* gauntmore.h */,
 				360377333740D8A2FD15BBE6 /* Game.cpp */,
 				F196143B0370A9D348494ACC /* Game.h */,
-				0BF9628FC8D38F9748F0CDEB /* Joystick.cpp */,
-				7746CA7A63049ED8F7D6BF42 /* Joystick.h */,
 				533245A71A871003001B14EA /* KeyboardInput.cpp */,
 				533245A81A871003001B14EA /* KeyboardInput.h */,
-				534E8B311A852DB800506FD1 /* Map.cpp */,
-				534E8B321A852DB800506FD1 /* Map.h */,
 				4DA100C319512824B7570663 /* Player.cpp */,
 				D954BD82D7708B65A08FB6B9 /* Player.h */,
 				5DE458993031811A4C7D28C1 /* res.cpp */,
@@ -448,7 +438,6 @@
 				533245C91A871003001B14EA /* KeyboardInput.cpp in Sources */,
 				533245CF1A871003001B14EA /* TmxMap.cpp in Sources */,
 				533245D71A871003001B14EA /* TmxUtil.cpp in Sources */,
-				DA49ED8903C628BA578C8670 /* Joystick.cpp in Sources */,
 				533245D01A871003001B14EA /* TmxObject.cpp in Sources */,
 				533245CA1A871003001B14EA /* tinyxml2.cpp in Sources */,
 				533245D11A871003001B14EA /* TmxObjectGroup.cpp in Sources */,
@@ -459,8 +448,7 @@
 				533245CC1A871003001B14EA /* TmxImage.cpp in Sources */,
 				533245C81A871003001B14EA /* base64.cpp in Sources */,
 				533245CE1A871003001B14EA /* TmxLayer.cpp in Sources */,
-				534E8B331A852DB800506FD1 /* Map.cpp in Sources */,
-				CD59C69314E9E74CD0A11E03 /* example.cpp in Sources */,
+				CD59C69314E9E74CD0A11E03 /* gauntmore.cpp in Sources */,
 				533245CB1A871003001B14EA /* TmxEllipse.cpp in Sources */,
 				533245D21A871003001B14EA /* TmxPolygon.cpp in Sources */,
 				533245D31A871003001B14EA /* TmxPolyline.cpp in Sources */,

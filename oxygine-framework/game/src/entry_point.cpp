@@ -1,29 +1,20 @@
-/**
-Attention!
-This file has Oxygine initialization stuff.
-If you just started you don't need to understand it exactly you could check it later.
-You could start from example.cpp and example.h it has main functions being called from there
-*/
 #include "core/oxygine.h"
 #include "Stage.h"
 #include "DebugActor.h"
-
-#include "example.h"
-
-
+#include "gauntmore.h"
 using namespace oxygine;
 
 
-//called each frame
-int mainloop()
-{
-	example_update();
+/**
+ * The main loop method. Called each frame.
+ */
+int mainloop() {
+	gauntmore_update();
 	//update our stage
 	//update all actors. Actor::update would be called also for all children
 	getStage()->update();
 	
-	if (core::beginRendering())
-	{		
+	if (core::beginRendering()) {
 		Color clearColor(32, 32, 32, 255);
 		Rect viewport(Point(0, 0), core::getDisplaySize());
 		//render all actors. Actor::render would be called also for all children
@@ -40,84 +31,66 @@ int mainloop()
 	return done ? 1 : 0;
 }
 
-//it is application entry point
-void run()
-{
+
+/** 
+ * The application entry point.
+ */
+void run() {
 	ObjectBase::__startTracingLeaks();
 
-	//initialize Oxygine's internal stuff
+	// Initialize Oxygine's internal stuff.
 	core::init_desc desc;
+    
+    // Setup initial window size.
+    desc.w = 480;
+    desc.h = 480;
 
-#if OXYGINE_SDL || OXYGINE_EMSCRIPTEN
-	//we could setup initial window size on SDL builds
-	desc.w = 480;
-	desc.h = 480;
-	//marmalade settings could be changed from emulator's menu
-#endif
-
-
-	example_preinit();
+	gauntmore_preinit();
 	core::init(&desc);
-
 
 	//create Stage. Stage is a root node
 	Stage::instance = new Stage(true);
 	Point size = core::getDisplaySize();
 	getStage()->setSize(size);
 
-	//DebugActor is a helper actor node. It shows FPS, memory usage and other useful stuff
-//	DebugActor::show();
+	// DebugActor is a helper actor node. It shows FPS, memory usage and other useful stuff.
+    //DebugActor::show();
 		
-	//initialize this example stuff. see example.cpp
-	example_init();
+	// Initialize gauntmore stuff.
+	gauntmore_init();
 
-#ifdef EMSCRIPTEN
-	/*
-	if you build for Emscripten mainloop would be called automatically outside. 
-	see emscripten_set_main_loop below
-	*/	
-	return;
-#endif
-
-
-	//here is main game loop
-	while (1)
-	{
+	// Main game loop.
+	while (1) {
 		int done = mainloop();
 		if (done)
 			break;
 	}
-	//user wants to leave application...
+	// If the user wants to leave application...
 
-	//lets dump all created objects into log
-	//all created and not freed resources would be displayed
+	// Dump all created objects into log all created and not freed resources would be displayed.
 	ObjectBase::dumpCreatedObjects();
 
-	//lets cleanup everything right now and call ObjectBase::dumpObjects() again
-	//we need to free all allocated resources and delete all created actors
-	//all actors/sprites are smart pointer objects and actually you don't need it remove them by hands
-	//but now we want delete it by hands
+	// Cleanup everything right now and call ObjectBase::dumpObjects() again.
+	// Free all allocated resources and delete all created actors.
+	// All actors/sprites are smart pointer objects and the don't need to removed by hand
+	// but this does it anyway just to be safe.
 
-	//check example.cpp
-	example_destroy();
+	gauntmore_destroy();
 
-
-	//renderer.cleanup();
-
-	/**releases all internal components and Stage*/
+	// Releases all internal components and Stage
 	core::release();
 
-	//dump list should be empty now
-	//we deleted everything and could be sure that there aren't any memory leaks
+	// Dump list should be empty now.
+	// Everything has been deleted and there can't be any memory leaks.
 	ObjectBase::dumpCreatedObjects();
 
 	ObjectBase::__stopTracingLeaks();
-	//end
 }
 
+// Main methods depending on context:
+
 #ifdef __S3E__
-int main(int argc, char* argv[])
-{
+int main(int argc, char* argv[]) {
 	run();
 	return 0;
 }
@@ -126,35 +99,17 @@ int main(int argc, char* argv[])
 
 #ifdef OXYGINE_SDL
 #ifdef __MINGW32__
-int WinMain(HINSTANCE hInstance,
-	HINSTANCE hPrevInstance,
-	LPSTR lpCmdLine, int nCmdShow)
-{
+int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
 	run();
 	return 0;
 }
 #else
 #include "SDL_main.h"
-extern "C"
-{
-	int main(int argc, char* argv[])
-	{
+extern "C" {
+	int main(int argc, char* argv[]) {
 		run();
 		return 0;
 	}
 };
 #endif
-#endif
-
-#ifdef EMSCRIPTEN
-#include <emscripten.h>
-
-void one(){ mainloop(); }
-
-int main(int argc, char* argv[])
-{
-	run();
-	emscripten_set_main_loop(one, 0, 0);
-	return 0;
-}
 #endif

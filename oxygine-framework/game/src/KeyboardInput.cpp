@@ -2,25 +2,38 @@
 
 #include "KeyboardInput.h"
 #include "Input.h"
-
-#ifndef __S3E__
 #include "SDL_keyboard.h"
 #include "SDL_events.h"
-#endif
 
+/**
+ * Constructor.
+ */
 KeyboardInput::KeyboardInput():_pressed(false), _dir(0,0) {
     Input::instance.addEventListener(Input::event_platform, CLOSURE(this, &KeyboardInput::onEvent));
 }
 
+
+/**
+ * Gets and sets the direction Vector2 on keyboard input. Used by Player to move the sprite..
+ *
+ * @dir is the direction vector.
+ * @return true on a button press and false when it is lifted up.
+ */
 bool KeyboardInput::getDirection(Vector2 &dir) const {
     dir = _dir;
     return _pressed;
-
+    
 }
 
+
+/**
+ * Sets the movement direction for the Player on valid keyboard input.
+ * 
+ * @ev is the event, will be turned into an SDL_Event.
+ */
 void KeyboardInput::onEvent(Event *ev) {
     SDL_Event *event = (SDL_Event*) ev->userData;
-
+    
     if (event->type == SDL_KEYDOWN) {
         const Uint8 *state = SDL_GetKeyboardState(NULL);
         _pressed = true;
@@ -61,3 +74,4 @@ void KeyboardInput::onEvent(Event *ev) {
         _dir = Vector2(0,0);
     }
 }
+
