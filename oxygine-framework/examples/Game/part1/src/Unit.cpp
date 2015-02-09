@@ -6,6 +6,7 @@
  */
 Unit::Unit():_game(0), _dead(false) {}
 
+
 /**
  * Initializes a unit.
  *
@@ -28,6 +29,7 @@ void Unit::init(const Vector2 &pos, Game *game) {
 	_init();
 }
 
+
 /**
  * Gets the unit's position.
  *
@@ -36,6 +38,17 @@ void Unit::init(const Vector2 &pos, Game *game) {
 const Vector2& Unit::getPosition() {
     return _view->getPosition();
 }
+
+
+/**
+ * Gets the unit's position.
+ *
+ * @return the unit's position
+ */
+void Unit::setPosition(Vector2 position) {
+    _view->setPosition(position);
+}
+
 
 /**
  * Virtual method is overload in children.

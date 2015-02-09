@@ -23,7 +23,9 @@ public:
      *
      * @return the unit's position.
      */
-    const Vector2&getPosition();
+    const Vector2& getPosition();
+    
+    void setPosition(Vector2 position);
 
     /**
      * Calls the overloaded _update method in children.
@@ -54,7 +56,8 @@ protected:
     int _attack;
     int _defense;
     
-    // Indiates if unit is dead. Used to remove unit from game's units list.
+    // Indicates if unit is dead. Set by damage() and retrieved with isDead().
+    // Used to remove unit from game's units list.
     bool _dead;
     
     /**
