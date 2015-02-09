@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BECDF5FE0761BA81005FE872"
-               BuildableName = "SDL2.framework"
-               BlueprintName = "Framework"
-               ReferencedContainer = "container:SDL.xcodeproj">
+               BlueprintIdentifier = "049B572D1871FBE900EF3C66"
+               BuildableName = "gauntmore_macosx.app"
+               BlueprintName = "gauntmore_macosx"
+               ReferencedContainer = "container:gauntmore_macosx.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "049B572D1871FBE900EF3C66"
             BuildableName = "gauntmore_macosx.app"
             BlueprintName = "gauntmore_macosx"
-            ReferencedContainer = "container:../../../gauntmore_macosx.xcodeproj">
+            ReferencedContainer = "container:gauntmore_macosx.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -43,7 +43,8 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
-      useCustomWorkingDirectory = "NO"
+      useCustomWorkingDirectory = "YES"
+      customWorkingDirectory = "/Users/Keith/Desktop/cis330/Gauntmore"
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
@@ -54,7 +55,7 @@
             BlueprintIdentifier = "049B572D1871FBE900EF3C66"
             BuildableName = "gauntmore_macosx.app"
             BlueprintName = "gauntmore_macosx"
-            ReferencedContainer = "container:../../../gauntmore_macosx.xcodeproj">
+            ReferencedContainer = "container:gauntmore_macosx.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -66,15 +67,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BECDF5FE0761BA81005FE872"
-            BuildableName = "SDL2.framework"
-            BlueprintName = "Framework"
-            ReferencedContainer = "container:SDL.xcodeproj">
+            BlueprintIdentifier = "049B572D1871FBE900EF3C66"
+            BuildableName = "gauntmore_macosx.app"
+            BlueprintName = "gauntmore_macosx"
+            ReferencedContainer = "container:gauntmore_macosx.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
