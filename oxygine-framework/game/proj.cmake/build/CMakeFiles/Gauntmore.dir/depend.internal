@@ -4,7 +4,7 @@
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Game.cpp.o
  /home/hkhamm/Gauntmore/oxygine-framework/game/src/Game.cpp
  /home/hkhamm/Gauntmore/oxygine-framework/game/src/Game.h
- /home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.h
  /home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.h
  /home/hkhamm/Gauntmore/oxygine-framework/game/src/Tmx.h
  /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxEllipse.h
@@ -23,146 +23,6 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Game.c
  /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxTileset.h
  /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxUtil.h
  /home/hkhamm/Gauntmore/oxygine-framework/game/src/Unit.h
- /home/hkhamm/Gauntmore/oxygine-framework/game/src/res.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/Actor.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/AnimationFrame.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/AsyncTask.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/Box9Sprite.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/Button.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/ClipRectActor.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/Clock.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/ColorRectSprite.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/DebugActor.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/Draggable.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/Event.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/EventDispatcher.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/Font.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/HttpRequestTask.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/Input.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/InputText.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/KeyEvent.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/MaskedSprite.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/MemoryTexture.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/Multithreading.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/PointerState.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/ProgressBar.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/Property.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/RenderState.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/RootActor.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/Serializable.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/Serialize.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/SlidingActor.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/Sprite.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/Stage.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/TextActor.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/TextField.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/TextStyle.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/TouchEvent.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/Tween.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/TweenQueue.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/UpdateState.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/VisualStyle.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/blocking.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/closure/closure.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/closure/closure_impl.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/core/FileSystem.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/core/ImageData.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/core/ImageDataOperations.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/core/Mem2Native.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/core/Mutex.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/core/NativeTexture.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/core/Object.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/core/Renderer.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/core/Restorable.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/core/ShaderProgram.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/core/Texture.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/core/ThreadMessages.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/core/VertexDeclaration.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/core/VideoDriver.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/core/coroutines.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/core/file.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/core/log.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/core/ox_debug.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/core/oxygine.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/core/pixel.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/core/ref_counter.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/core/vertex.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/initActor.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/math/AffineTransform.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/math/Color.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/math/Rect.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/math/ScalarMath.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/math/matrix.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/math/vector2.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/math/vector3.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/math/vector4.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/oxygine-framework.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/oxygine_include.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/pugixml/pugiconfig.hpp
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/pugixml/pugixml.hpp
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/res/CreateResourceContext.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/res/ResAnim.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/res/ResAtlas.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/res/ResBuffer.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/res/ResFont.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/res/ResFontBM.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/res/ResStarlingAtlas.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/res/Resource.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/res/Resources.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/text_utils/Aligner.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/text_utils/Node.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/text_utils/TextBuilder.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/utils/AtlasTool.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/utils/ImageUtils.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/utils/intrusive_list.h
- /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/utils/stringUtils.h
- /usr/include/SDL2/SDL.h
- /usr/include/SDL2/SDL_assert.h
- /usr/include/SDL2/SDL_atomic.h
- /usr/include/SDL2/SDL_audio.h
- /usr/include/SDL2/SDL_blendmode.h
- /usr/include/SDL2/SDL_clipboard.h
- /usr/include/SDL2/SDL_config.h
- /usr/include/SDL2/SDL_cpuinfo.h
- /usr/include/SDL2/SDL_endian.h
- /usr/include/SDL2/SDL_error.h
- /usr/include/SDL2/SDL_events.h
- /usr/include/SDL2/SDL_filesystem.h
- /usr/include/SDL2/SDL_gamecontroller.h
- /usr/include/SDL2/SDL_gesture.h
- /usr/include/SDL2/SDL_haptic.h
- /usr/include/SDL2/SDL_hints.h
- /usr/include/SDL2/SDL_joystick.h
- /usr/include/SDL2/SDL_keyboard.h
- /usr/include/SDL2/SDL_keycode.h
- /usr/include/SDL2/SDL_loadso.h
- /usr/include/SDL2/SDL_log.h
- /usr/include/SDL2/SDL_main.h
- /usr/include/SDL2/SDL_messagebox.h
- /usr/include/SDL2/SDL_mouse.h
- /usr/include/SDL2/SDL_mutex.h
- /usr/include/SDL2/SDL_pixels.h
- /usr/include/SDL2/SDL_platform.h
- /usr/include/SDL2/SDL_power.h
- /usr/include/SDL2/SDL_quit.h
- /usr/include/SDL2/SDL_rect.h
- /usr/include/SDL2/SDL_render.h
- /usr/include/SDL2/SDL_rwops.h
- /usr/include/SDL2/SDL_scancode.h
- /usr/include/SDL2/SDL_stdinc.h
- /usr/include/SDL2/SDL_surface.h
- /usr/include/SDL2/SDL_system.h
- /usr/include/SDL2/SDL_thread.h
- /usr/include/SDL2/SDL_timer.h
- /usr/include/SDL2/SDL_touch.h
- /usr/include/SDL2/SDL_version.h
- /usr/include/SDL2/SDL_video.h
- /usr/include/SDL2/begin_code.h
- /usr/include/SDL2/close_code.h
-CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.o
- /home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp
- /home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.h
  /home/hkhamm/Gauntmore/oxygine-framework/game/src/res.h
  /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/Actor.h
  /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/AnimationFrame.h
@@ -439,11 +299,9 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Keyboa
  /usr/include/SDL2/SDL_video.h
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
-CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.o
- /home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.cpp.o
  /home/hkhamm/Gauntmore/oxygine-framework/game/src/Game.h
- /home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.h
  /home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.cpp
  /home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.h
  /home/hkhamm/Gauntmore/oxygine-framework/game/src/Tmx.h
@@ -680,6 +538,23 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxUti
  /home/hkhamm/Gauntmore/oxygine-framework/game/src/base64.h
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Unit.cpp.o
  /home/hkhamm/Gauntmore/oxygine-framework/game/src/Game.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/Tmx.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxEllipse.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxImage.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxImageLayer.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxLayer.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxMap.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxMapTile.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxObject.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxObjectGroup.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPoint.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPolygon.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPolyline.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPropertySet.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxTile.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxTileset.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxUtil.h
  /home/hkhamm/Gauntmore/oxygine-framework/game/src/Unit.cpp
  /home/hkhamm/Gauntmore/oxygine-framework/game/src/Unit.h
  /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/Actor.h
@@ -823,7 +698,7 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/base64
  /home/hkhamm/Gauntmore/oxygine-framework/game/src/base64.h
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/entry_point.cpp.o
  /home/hkhamm/Gauntmore/oxygine-framework/game/src/entry_point.cpp
- /home/hkhamm/Gauntmore/oxygine-framework/game/src/example.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.h
  /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/Actor.h
  /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/DebugActor.h
  /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/Event.h
@@ -868,9 +743,26 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/entry_
  /usr/include/SDL2/SDL_stdinc.h
  /usr/include/SDL2/begin_code.h
  /usr/include/SDL2/close_code.h
-CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.o
+CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.o
  /home/hkhamm/Gauntmore/oxygine-framework/game/src/Game.h
- /home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/Tmx.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxEllipse.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxImage.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxImageLayer.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxLayer.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxMap.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxMapTile.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxObject.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxObjectGroup.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPoint.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPolygon.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPolyline.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPropertySet.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxTile.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxTileset.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxUtil.h
+ /home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp
  /home/hkhamm/Gauntmore/oxygine-framework/game/src/res.h
  /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/Actor.h
  /home/hkhamm/Gauntmore/oxygine-framework/oxygine/src/AnimationFrame.h

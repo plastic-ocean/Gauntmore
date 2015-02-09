@@ -7,7 +7,7 @@ C_FLAGS = -I/home/hkhamm/Gauntmore/oxygine-framework/oxygine/greenlets/src -I/ho
 
 C_DEFINES = -DOX_HAVE_LIBJPEG -DOX_HAVE_LIBPNG -DOX_NO_HTTP
 
-CXX_FLAGS = -I/home/hkhamm/Gauntmore/oxygine-framework/oxygine/greenlets/src -I/home/hkhamm/Gauntmore/oxygine-framework/oxygine/src -I/usr/include/SDL2 -I/home/hkhamm/Gauntmore/oxygine-framework/oxygine/third_party/linux/pthreads/include -I/home/hkhamm/Gauntmore/oxygine-framework/oxygine/third_party/linux/zlib -I/home/hkhamm/Gauntmore/oxygine-framework/oxygine/third_party/linux/libjpeg -I/home/hkhamm/Gauntmore/oxygine-framework/oxygine/third_party/linux/libpng   
+CXX_FLAGS = -std=c++11  -I/home/hkhamm/Gauntmore/oxygine-framework/oxygine/greenlets/src -I/home/hkhamm/Gauntmore/oxygine-framework/oxygine/src -I/usr/include/SDL2 -I/home/hkhamm/Gauntmore/oxygine-framework/oxygine/third_party/linux/pthreads/include -I/home/hkhamm/Gauntmore/oxygine-framework/oxygine/third_party/linux/zlib -I/home/hkhamm/Gauntmore/oxygine-framework/oxygine/third_party/linux/libjpeg -I/home/hkhamm/Gauntmore/oxygine-framework/oxygine/third_party/linux/libpng   
 
 CXX_DEFINES = -DOX_HAVE_LIBJPEG -DOX_HAVE_LIBPNG -DOX_NO_HTTP
 

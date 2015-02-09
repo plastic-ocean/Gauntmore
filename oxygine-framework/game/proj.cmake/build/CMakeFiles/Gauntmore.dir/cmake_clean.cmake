@@ -1,12 +1,10 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Game.cpp.o"
   "CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.cpp.o"
-  "CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.o"
-  "CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.o"
   "CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.cpp.o"
   "CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Unit.cpp.o"
   "CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/entry_point.cpp.o"
-  "CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.o"
+  "CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.o"
   "CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/res.cpp.o"
   "CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/base64.cpp.o"
   "CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPropertySet.cpp.o"

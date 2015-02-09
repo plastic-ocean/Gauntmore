@@ -189,30 +189,6 @@ home/hkhamm/Gauntmore/oxygine-framework/game/src/Game.cpp.s:
 	$(MAKE) -f CMakeFiles/Gauntmore.dir/build.make CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Game.cpp.s
 .PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/Game.cpp.s
 
-home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.o: home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.o
-.PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.o
-
-# target to build an object file
-home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.o:
-	$(MAKE) -f CMakeFiles/Gauntmore.dir/build.make CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.o
-.PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.o
-
-home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.i: home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.i
-.PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.i
-
-# target to preprocess a source file
-home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.i:
-	$(MAKE) -f CMakeFiles/Gauntmore.dir/build.make CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.i
-.PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.i
-
-home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.s: home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.s
-.PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.s
-
-# target to generate assembly for a file
-home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.s:
-	$(MAKE) -f CMakeFiles/Gauntmore.dir/build.make CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.s
-.PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.s
-
 home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.o: home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.cpp.o
 .PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.o
 
@@ -236,30 +212,6 @@ home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.s: home/hkhamm/Ga
 home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.cpp.s:
 	$(MAKE) -f CMakeFiles/Gauntmore.dir/build.make CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.cpp.s
 .PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.cpp.s
-
-home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.o: home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.o
-.PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.o
-
-# target to build an object file
-home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.o:
-	$(MAKE) -f CMakeFiles/Gauntmore.dir/build.make CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.o
-.PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.o
-
-home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.i: home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.i
-.PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.i
-
-# target to preprocess a source file
-home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.i:
-	$(MAKE) -f CMakeFiles/Gauntmore.dir/build.make CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.i
-.PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.i
-
-home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.s: home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.s
-.PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.s
-
-# target to generate assembly for a file
-home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.s:
-	$(MAKE) -f CMakeFiles/Gauntmore.dir/build.make CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.s
-.PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.s
 
 home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.o: home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.cpp.o
 .PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.o
@@ -669,29 +621,29 @@ home/hkhamm/Gauntmore/oxygine-framework/game/src/entry_point.cpp.s:
 	$(MAKE) -f CMakeFiles/Gauntmore.dir/build.make CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/entry_point.cpp.s
 .PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/entry_point.cpp.s
 
-home/hkhamm/Gauntmore/oxygine-framework/game/src/example.o: home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.o
-.PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/example.o
+home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.o: home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.o
+.PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.o
 
 # target to build an object file
-home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.o:
-	$(MAKE) -f CMakeFiles/Gauntmore.dir/build.make CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.o
-.PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.o
+home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.o:
+	$(MAKE) -f CMakeFiles/Gauntmore.dir/build.make CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.o
+.PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.o
 
-home/hkhamm/Gauntmore/oxygine-framework/game/src/example.i: home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.i
-.PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/example.i
+home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.i: home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.i
+.PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.i
 
 # target to preprocess a source file
-home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.i:
-	$(MAKE) -f CMakeFiles/Gauntmore.dir/build.make CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.i
-.PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.i
+home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.i:
+	$(MAKE) -f CMakeFiles/Gauntmore.dir/build.make CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.i
+.PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.i
 
-home/hkhamm/Gauntmore/oxygine-framework/game/src/example.s: home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.s
-.PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/example.s
+home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.s: home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.s
+.PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.s
 
 # target to generate assembly for a file
-home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.s:
-	$(MAKE) -f CMakeFiles/Gauntmore.dir/build.make CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.s
-.PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.s
+home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.s:
+	$(MAKE) -f CMakeFiles/Gauntmore.dir/build.make CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.s
+.PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.s
 
 home/hkhamm/Gauntmore/oxygine-framework/game/src/res.o: home/hkhamm/Gauntmore/oxygine-framework/game/src/res.cpp.o
 .PHONY : home/hkhamm/Gauntmore/oxygine-framework/game/src/res.o
@@ -758,15 +710,9 @@ help:
 	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/Game.o"
 	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/Game.i"
 	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/Game.s"
-	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.o"
-	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.i"
-	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.s"
 	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.o"
 	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.i"
 	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.s"
-	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.o"
-	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.i"
-	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.s"
 	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.o"
 	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.i"
 	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.s"
@@ -818,9 +764,9 @@ help:
 	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/entry_point.o"
 	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/entry_point.i"
 	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/entry_point.s"
-	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/example.o"
-	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/example.i"
-	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/example.s"
+	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.o"
+	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.i"
+	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.s"
 	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/res.o"
 	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/res.i"
 	@echo "... home/hkhamm/Gauntmore/oxygine-framework/game/src/res.s"

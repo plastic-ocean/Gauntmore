@@ -1,6 +1,8 @@
 cmake_minimum_required (VERSION 2.6)
 project (Gauntmore)
 
+set(CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS}")
+
 add_subdirectory(../../ oxygine-framework)
 add_definitions(${OXYGINE_DEFINITIONS})
 include_directories(${OXYGINE_INCLUDE_DIRS})

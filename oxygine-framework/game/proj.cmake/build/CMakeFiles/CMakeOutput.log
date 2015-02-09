@@ -28,30 +28,30 @@ The CXX compiler identification is GNU, found in "/home/hkhamm/Gauntmore/oxygine
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec1590906175/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec1590906175.dir/build.make CMakeFiles/cmTryCompileExec1590906175.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec3038321990/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3038321990.dir/build.make CMakeFiles/cmTryCompileExec3038321990.dir/build
 make[1]: Entering directory `/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec1590906175.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1590906175.dir/testCCompiler.c.o   -c /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTryCompileExec1590906175
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1590906175.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTryCompileExec1590906175.dir/testCCompiler.c.o  -o cmTryCompileExec1590906175 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec3038321990.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3038321990.dir/testCCompiler.c.o   -c /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec3038321990
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3038321990.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3038321990.dir/testCCompiler.c.o  -o cmTryCompileExec3038321990 -rdynamic 
 make[1]: Leaving directory `/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec2465406396/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2465406396.dir/build.make CMakeFiles/cmTryCompileExec2465406396.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec3324491217/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3324491217.dir/build.make CMakeFiles/cmTryCompileExec3324491217.dir/build
 make[1]: Entering directory `/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec2465406396.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2465406396.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c
-Linking C executable cmTryCompileExec2465406396
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2465406396.dir/link.txt --verbose=1
-/usr/bin/cc     -v CMakeFiles/cmTryCompileExec2465406396.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec2465406396 -rdynamic  
+Building C object CMakeFiles/cmTryCompileExec3324491217.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3324491217.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec3324491217
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3324491217.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTryCompileExec3324491217.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec3324491217 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/4.8/lto-wrapper
@@ -61,8 +61,8 @@ Thread model: posix
 gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) 
 COMPILER_PATH=/usr/lib/gcc/i686-linux-gnu/4.8/:/usr/lib/gcc/i686-linux-gnu/4.8/:/usr/lib/gcc/i686-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/4.8/:/usr/lib/gcc/i686-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/i686-linux-gnu/4.8/:/usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/4.8/../../../../lib/:/lib/i386-linux-gnu/:/lib/../lib/:/usr/lib/i386-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/i686-linux-gnu/4.8/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2465406396' '-rdynamic' '-mtune=generic' '-march=i686'
- /usr/lib/gcc/i686-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_i386 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTryCompileExec2465406396 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/4.8 -L/usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/4.8/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec2465406396.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/i686-linux-gnu/4.8/crtend.o /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec3324491217' '-rdynamic' '-mtune=generic' '-march=i686'
+ /usr/lib/gcc/i686-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_i386 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTryCompileExec3324491217 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/4.8 -L/usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/4.8/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec3324491217.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/i686-linux-gnu/4.8/crtend.o /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crtn.o
 make[1]: Leaving directory `/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp'
 
 
@@ -70,15 +70,15 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec2465406396/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec2465406396.dir/build.make CMakeFiles/cmTryCompileExec2465406396.dir/build]
+  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec3324491217/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec3324491217.dir/build.make CMakeFiles/cmTryCompileExec3324491217.dir/build]
   ignore line: [make[1]: Entering directory `/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp']
   ignore line: [/usr/bin/cmake -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp/CMakeFiles 1]
-  ignore line: [Building C object CMakeFiles/cmTryCompileExec2465406396.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2465406396.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTryCompileExec2465406396]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2465406396.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTryCompileExec2465406396.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec2465406396 -rdynamic  ]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec3324491217.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3324491217.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec3324491217]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3324491217.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTryCompileExec3324491217.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec3324491217 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/4.8/lto-wrapper]
@@ -88,8 +88,8 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/i686-linux-gnu/4.8/:/usr/lib/gcc/i686-linux-gnu/4.8/:/usr/lib/gcc/i686-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/4.8/:/usr/lib/gcc/i686-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/i686-linux-gnu/4.8/:/usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/4.8/../../../../lib/:/lib/i386-linux-gnu/:/lib/../lib/:/usr/lib/i386-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/i686-linux-gnu/4.8/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2465406396' '-rdynamic' '-mtune=generic' '-march=i686']
-  link line: [ /usr/lib/gcc/i686-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_i386 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTryCompileExec2465406396 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/4.8 -L/usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/4.8/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec2465406396.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/i686-linux-gnu/4.8/crtend.o /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec3324491217' '-rdynamic' '-mtune=generic' '-march=i686']
+  link line: [ /usr/lib/gcc/i686-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_i386 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTryCompileExec3324491217 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/4.8 -L/usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/4.8/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec3324491217.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/i686-linux-gnu/4.8/crtend.o /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/i686-linux-gnu/4.8/collect2] ==> ignore
     arg [--sysroot=/] ==> ignore
     arg [--build-id] ==> ignore
@@ -103,7 +103,7 @@ Parsed C implicit link information from above output:
     arg [/lib/ld-linux.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTryCompileExec2465406396] ==> ignore
+    arg [cmTryCompileExec3324491217] ==> ignore
     arg [/usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/i686-linux-gnu/4.8/crtbegin.o] ==> ignore
@@ -115,7 +115,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/i386-linux-gnu] ==> dir [/usr/lib/i386-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/i686-linux-gnu/4.8/../../..] ==> dir [/usr/lib/gcc/i686-linux-gnu/4.8/../../..]
-    arg [CMakeFiles/cmTryCompileExec2465406396.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTryCompileExec3324491217.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -147,30 +147,30 @@ Parsed C implicit link information from above output:
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec4240256018/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec4240256018.dir/build.make CMakeFiles/cmTryCompileExec4240256018.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec1548433555/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1548433555.dir/build.make CMakeFiles/cmTryCompileExec1548433555.dir/build
 make[1]: Entering directory `/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec4240256018.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTryCompileExec4240256018.dir/testCXXCompiler.cxx.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTryCompileExec4240256018
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4240256018.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTryCompileExec4240256018.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec4240256018 -rdynamic 
+Building CXX object CMakeFiles/cmTryCompileExec1548433555.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec1548433555.dir/testCXXCompiler.cxx.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec1548433555
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1548433555.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec1548433555.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec1548433555 -rdynamic 
 make[1]: Leaving directory `/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec2079515350/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2079515350.dir/build.make CMakeFiles/cmTryCompileExec2079515350.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec293771977/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec293771977.dir/build.make CMakeFiles/cmTryCompileExec293771977.dir/build
 make[1]: Entering directory `/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec2079515350.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTryCompileExec2079515350.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTryCompileExec2079515350
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2079515350.dir/link.txt --verbose=1
-/usr/bin/c++      -v CMakeFiles/cmTryCompileExec2079515350.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec2079515350 -rdynamic  
+Building CXX object CMakeFiles/cmTryCompileExec293771977.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec293771977.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec293771977
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec293771977.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTryCompileExec293771977.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec293771977 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/4.8/lto-wrapper
@@ -180,8 +180,8 @@ Thread model: posix
 gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) 
 COMPILER_PATH=/usr/lib/gcc/i686-linux-gnu/4.8/:/usr/lib/gcc/i686-linux-gnu/4.8/:/usr/lib/gcc/i686-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/4.8/:/usr/lib/gcc/i686-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/i686-linux-gnu/4.8/:/usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/4.8/../../../../lib/:/lib/i386-linux-gnu/:/lib/../lib/:/usr/lib/i386-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/i686-linux-gnu/4.8/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2079515350' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=i686'
- /usr/lib/gcc/i686-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_i386 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTryCompileExec2079515350 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/4.8 -L/usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/4.8/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec2079515350.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/i686-linux-gnu/4.8/crtend.o /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec293771977' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=i686'
+ /usr/lib/gcc/i686-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_i386 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTryCompileExec293771977 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/4.8 -L/usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/4.8/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec293771977.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/i686-linux-gnu/4.8/crtend.o /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crtn.o
 make[1]: Leaving directory `/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp'
 
 
@@ -189,15 +189,15 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec2079515350/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec2079515350.dir/build.make CMakeFiles/cmTryCompileExec2079515350.dir/build]
+  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec293771977/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec293771977.dir/build.make CMakeFiles/cmTryCompileExec293771977.dir/build]
   ignore line: [make[1]: Entering directory `/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp']
   ignore line: [/usr/bin/cmake -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp/CMakeFiles 1]
-  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec2079515350.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec2079515350.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTryCompileExec2079515350]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2079515350.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTryCompileExec2079515350.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec2079515350 -rdynamic  ]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec293771977.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec293771977.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec293771977]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec293771977.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTryCompileExec293771977.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec293771977 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/4.8/lto-wrapper]
@@ -207,8 +207,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/i686-linux-gnu/4.8/:/usr/lib/gcc/i686-linux-gnu/4.8/:/usr/lib/gcc/i686-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/4.8/:/usr/lib/gcc/i686-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/i686-linux-gnu/4.8/:/usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/4.8/../../../../lib/:/lib/i386-linux-gnu/:/lib/../lib/:/usr/lib/i386-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/i686-linux-gnu/4.8/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2079515350' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=i686']
-  link line: [ /usr/lib/gcc/i686-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_i386 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTryCompileExec2079515350 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/4.8 -L/usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/4.8/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec2079515350.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/i686-linux-gnu/4.8/crtend.o /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec293771977' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=i686']
+  link line: [ /usr/lib/gcc/i686-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_i386 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTryCompileExec293771977 /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/4.8 -L/usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/4.8/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec293771977.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/i686-linux-gnu/4.8/crtend.o /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/i686-linux-gnu/4.8/collect2] ==> ignore
     arg [--sysroot=/] ==> ignore
     arg [--build-id] ==> ignore
@@ -222,7 +222,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib/ld-linux.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTryCompileExec2079515350] ==> ignore
+    arg [cmTryCompileExec293771977] ==> ignore
     arg [/usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/i686-linux-gnu/4.8/crtbegin.o] ==> ignore
@@ -234,7 +234,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/i386-linux-gnu] ==> dir [/usr/lib/i386-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/i686-linux-gnu/4.8/../../..] ==> dir [/usr/lib/gcc/i686-linux-gnu/4.8/../../..]
-    arg [CMakeFiles/cmTryCompileExec2079515350.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTryCompileExec293771977.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -264,90 +264,90 @@ Parsed CXX implicit link information from above output:
 Determining if the function XOpenDisplay exists in the /usr/lib/i386-linux-gnu/libX11.so;/usr/lib/i386-linux-gnu/libXext.so passed with the following output:
 Change Dir: /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec424982690/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec424982690.dir/build.make CMakeFiles/cmTryCompileExec424982690.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec3094259627/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3094259627.dir/build.make CMakeFiles/cmTryCompileExec3094259627.dir/build
 make[1]: Entering directory `/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec424982690.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec424982690.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec424982690
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec424982690.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec424982690.dir/CheckFunctionExists.c.o  -o cmTryCompileExec424982690 -rdynamic -lX11 -lXext 
+Building C object CMakeFiles/cmTryCompileExec3094259627.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec3094259627.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3094259627
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3094259627.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec3094259627.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3094259627 -rdynamic -lX11 -lXext 
 make[1]: Leaving directory `/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function gethostbyname exists passed with the following output:
 Change Dir: /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec3733886130/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3733886130.dir/build.make CMakeFiles/cmTryCompileExec3733886130.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec2953778491/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2953778491.dir/build.make CMakeFiles/cmTryCompileExec2953778491.dir/build
 make[1]: Entering directory `/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3733886130.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec3733886130.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec3733886130
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3733886130.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec3733886130.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3733886130 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec2953778491.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec2953778491.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2953778491
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2953778491.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec2953778491.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2953778491 -rdynamic 
 make[1]: Leaving directory `/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function connect exists passed with the following output:
 Change Dir: /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec3405775685/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3405775685.dir/build.make CMakeFiles/cmTryCompileExec3405775685.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec1686214393/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1686214393.dir/build.make CMakeFiles/cmTryCompileExec1686214393.dir/build
 make[1]: Entering directory `/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3405775685.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec3405775685.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec3405775685
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3405775685.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec3405775685.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3405775685 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec1686214393.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec1686214393.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1686214393
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1686214393.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec1686214393.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1686214393 -rdynamic 
 make[1]: Leaving directory `/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function remove exists passed with the following output:
 Change Dir: /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec1741789719/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec1741789719.dir/build.make CMakeFiles/cmTryCompileExec1741789719.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec37436266/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec37436266.dir/build.make CMakeFiles/cmTryCompileExec37436266.dir/build
 make[1]: Entering directory `/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec1741789719.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec1741789719.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec1741789719
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1741789719.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec1741789719.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1741789719 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec37436266.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec37436266.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec37436266
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec37436266.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec37436266.dir/CheckFunctionExists.c.o  -o cmTryCompileExec37436266 -rdynamic 
 make[1]: Leaving directory `/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function shmat exists passed with the following output:
 Change Dir: /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec1777059919/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec1777059919.dir/build.make CMakeFiles/cmTryCompileExec1777059919.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec557252768/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec557252768.dir/build.make CMakeFiles/cmTryCompileExec557252768.dir/build
 make[1]: Entering directory `/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec1777059919.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec1777059919.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec1777059919
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1777059919.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec1777059919.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1777059919 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec557252768.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec557252768.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec557252768
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec557252768.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec557252768.dir/CheckFunctionExists.c.o  -o cmTryCompileExec557252768 -rdynamic 
 make[1]: Leaving directory `/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
 Change Dir: /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec3989801885/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3989801885.dir/build.make CMakeFiles/cmTryCompileExec3989801885.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec1000074667/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1000074667.dir/build.make CMakeFiles/cmTryCompileExec1000074667.dir/build
 make[1]: Entering directory `/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3989801885.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec3989801885.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec3989801885
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3989801885.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec3989801885.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3989801885 -rdynamic -lICE 
+Building C object CMakeFiles/cmTryCompileExec1000074667.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec1000074667.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1000074667
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1000074667.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec1000074667.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1000074667 -rdynamic -lICE 
 make[1]: Leaving directory `/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/CMakeTmp'
 
 

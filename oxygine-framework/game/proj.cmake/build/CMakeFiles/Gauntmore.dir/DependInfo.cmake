@@ -5,9 +5,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/hkhamm/Gauntmore/oxygine-framework/game/src/Game.cpp" "/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Game.cpp.o"
-  "/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp" "/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.o"
   "/home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.cpp" "/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.cpp.o"
-  "/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp" "/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.o"
   "/home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.cpp" "/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.cpp.o"
   "/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxEllipse.cpp" "/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxEllipse.cpp.o"
   "/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxImage.cpp" "/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxImage.cpp.o"
@@ -25,7 +23,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/hkhamm/Gauntmore/oxygine-framework/game/src/Unit.cpp" "/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Unit.cpp.o"
   "/home/hkhamm/Gauntmore/oxygine-framework/game/src/base64.cpp" "/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/base64.cpp.o"
   "/home/hkhamm/Gauntmore/oxygine-framework/game/src/entry_point.cpp" "/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/entry_point.cpp.o"
-  "/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp" "/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.o"
+  "/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp" "/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.o"
   "/home/hkhamm/Gauntmore/oxygine-framework/game/src/res.cpp" "/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/res.cpp.o"
   "/home/hkhamm/Gauntmore/oxygine-framework/game/src/tinyxml2.cpp" "/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/tinyxml2.cpp.o"
   )

@@ -95,55 +95,9 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Keyboa
 
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.cpp.o.provides.build: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.cpp.o
 
-CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.o: CMakeFiles/Gauntmore.dir/flags.make
-CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.o: /home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp
-
-CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp > CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.i
-
-CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.s
-
-CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.o.requires:
-.PHONY : CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.o.requires
-
-CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.o.provides: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Gauntmore.dir/build.make CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.o.provides.build
-.PHONY : CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.o.provides
-
-CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.o.provides.build: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.o
-
-CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.o: CMakeFiles/Gauntmore.dir/flags.make
-CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.o: /home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp
-
-CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp > CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.i
-
-CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.s
-
-CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.o.requires:
-.PHONY : CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.o.requires
-
-CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.o.provides: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Gauntmore.dir/build.make CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.o.provides.build
-.PHONY : CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.o.provides
-
-CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.o.provides.build: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.o
-
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.cpp.o: CMakeFiles/Gauntmore.dir/flags.make
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.cpp.o: /home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.cpp.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.cpp
 
@@ -166,7 +120,7 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Player
 
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Unit.cpp.o: CMakeFiles/Gauntmore.dir/flags.make
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Unit.cpp.o: /home/hkhamm/Gauntmore/oxygine-framework/game/src/Unit.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Unit.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Unit.cpp.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/src/Unit.cpp
 
@@ -189,7 +143,7 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Unit.c
 
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/entry_point.cpp.o: CMakeFiles/Gauntmore.dir/flags.make
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/entry_point.cpp.o: /home/hkhamm/Gauntmore/oxygine-framework/game/src/entry_point.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/entry_point.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/entry_point.cpp.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/src/entry_point.cpp
 
@@ -210,32 +164,32 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/entry_
 
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/entry_point.cpp.o.provides.build: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/entry_point.cpp.o
 
-CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.o: CMakeFiles/Gauntmore.dir/flags.make
-CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.o: /home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_8)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp
+CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.o: CMakeFiles/Gauntmore.dir/flags.make
+CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.o: /home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp
 
-CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp > CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.i
+CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp > CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.i
 
-CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.s
+CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.s
 
-CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.o.requires:
-.PHONY : CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.o.requires
+CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.o.requires:
+.PHONY : CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.o.requires
 
-CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.o.provides: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Gauntmore.dir/build.make CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.o.provides.build
-.PHONY : CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.o.provides
+CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.o.provides: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Gauntmore.dir/build.make CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.o.provides.build
+.PHONY : CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.o.provides
 
-CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.o.provides.build: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.o
+CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.o.provides.build: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.o
 
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/res.cpp.o: CMakeFiles/Gauntmore.dir/flags.make
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/res.cpp.o: /home/hkhamm/Gauntmore/oxygine-framework/game/src/res.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/res.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/res.cpp.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/src/res.cpp
 
@@ -258,7 +212,7 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/res.cp
 
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/base64.cpp.o: CMakeFiles/Gauntmore.dir/flags.make
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/base64.cpp.o: /home/hkhamm/Gauntmore/oxygine-framework/game/src/base64.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/base64.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/base64.cpp.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/src/base64.cpp
 
@@ -281,7 +235,7 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/base64
 
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPropertySet.cpp.o: CMakeFiles/Gauntmore.dir/flags.make
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPropertySet.cpp.o: /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPropertySet.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPropertySet.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPropertySet.cpp.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPropertySet.cpp
 
@@ -304,7 +258,7 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPro
 
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxObject.cpp.o: CMakeFiles/Gauntmore.dir/flags.make
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxObject.cpp.o: /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxObject.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxObject.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxObject.cpp.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxObject.cpp
 
@@ -327,7 +281,7 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxObj
 
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxImage.cpp.o: CMakeFiles/Gauntmore.dir/flags.make
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxImage.cpp.o: /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxImage.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxImage.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxImage.cpp.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxImage.cpp
 
@@ -350,7 +304,7 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxIma
 
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxObjectGroup.cpp.o: CMakeFiles/Gauntmore.dir/flags.make
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxObjectGroup.cpp.o: /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxObjectGroup.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxObjectGroup.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxObjectGroup.cpp.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxObjectGroup.cpp
 
@@ -373,7 +327,7 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxObj
 
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxTile.cpp.o: CMakeFiles/Gauntmore.dir/flags.make
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxTile.cpp.o: /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxTile.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxTile.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxTile.cpp.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxTile.cpp
 
@@ -396,7 +350,7 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxTil
 
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxImageLayer.cpp.o: CMakeFiles/Gauntmore.dir/flags.make
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxImageLayer.cpp.o: /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxImageLayer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxImageLayer.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxImageLayer.cpp.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxImageLayer.cpp
 
@@ -419,7 +373,7 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxIma
 
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxTileset.cpp.o: CMakeFiles/Gauntmore.dir/flags.make
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxTileset.cpp.o: /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxTileset.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxTileset.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxTileset.cpp.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxTileset.cpp
 
@@ -442,7 +396,7 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxTil
 
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxLayer.cpp.o: CMakeFiles/Gauntmore.dir/flags.make
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxLayer.cpp.o: /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxLayer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_18)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxLayer.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxLayer.cpp.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxLayer.cpp
 
@@ -465,7 +419,7 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxLay
 
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPolygon.cpp.o: CMakeFiles/Gauntmore.dir/flags.make
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPolygon.cpp.o: /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPolygon.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPolygon.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPolygon.cpp.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPolygon.cpp
 
@@ -488,7 +442,7 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPol
 
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxUtil.cpp.o: CMakeFiles/Gauntmore.dir/flags.make
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxUtil.cpp.o: /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxUtil.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_20)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxUtil.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxUtil.cpp.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxUtil.cpp
 
@@ -511,7 +465,7 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxUti
 
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/tinyxml2.cpp.o: CMakeFiles/Gauntmore.dir/flags.make
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/tinyxml2.cpp.o: /home/hkhamm/Gauntmore/oxygine-framework/game/src/tinyxml2.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_21)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_19)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/tinyxml2.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/tinyxml2.cpp.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/src/tinyxml2.cpp
 
@@ -534,7 +488,7 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/tinyxm
 
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxMap.cpp.o: CMakeFiles/Gauntmore.dir/flags.make
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxMap.cpp.o: /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxMap.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_22)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxMap.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxMap.cpp.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxMap.cpp
 
@@ -557,7 +511,7 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxMap
 
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPolyline.cpp.o: CMakeFiles/Gauntmore.dir/flags.make
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPolyline.cpp.o: /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPolyline.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_23)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_21)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPolyline.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPolyline.cpp.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPolyline.cpp
 
@@ -580,7 +534,7 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPol
 
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxEllipse.cpp.o: CMakeFiles/Gauntmore.dir/flags.make
 CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxEllipse.cpp.o: /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxEllipse.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_24)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxEllipse.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxEllipse.cpp.o -c /home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxEllipse.cpp
 
@@ -605,12 +559,10 @@ CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxEll
 Gauntmore_OBJECTS = \
 "CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Game.cpp.o" \
 "CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.cpp.o" \
-"CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.o" \
-"CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.o" \
 "CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.cpp.o" \
 "CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Unit.cpp.o" \
 "CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/entry_point.cpp.o" \
-"CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.o" \
+"CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.o" \
 "CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/res.cpp.o" \
 "CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/base64.cpp.o" \
 "CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPropertySet.cpp.o" \
@@ -633,12 +585,10 @@ Gauntmore_EXTERNAL_OBJECTS =
 
 Gauntmore: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Game.cpp.o
 Gauntmore: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.cpp.o
-Gauntmore: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.o
-Gauntmore: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.o
 Gauntmore: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.cpp.o
 Gauntmore: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Unit.cpp.o
 Gauntmore: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/entry_point.cpp.o
-Gauntmore: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.o
+Gauntmore: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.o
 Gauntmore: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/res.cpp.o
 Gauntmore: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/base64.cpp.o
 Gauntmore: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPropertySet.cpp.o
@@ -674,12 +624,10 @@ CMakeFiles/Gauntmore.dir/build: Gauntmore
 
 CMakeFiles/Gauntmore.dir/requires: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Game.cpp.o.requires
 CMakeFiles/Gauntmore.dir/requires: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.cpp.o.requires
-CMakeFiles/Gauntmore.dir/requires: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp.o.requires
-CMakeFiles/Gauntmore.dir/requires: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp.o.requires
 CMakeFiles/Gauntmore.dir/requires: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.cpp.o.requires
 CMakeFiles/Gauntmore.dir/requires: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/Unit.cpp.o.requires
 CMakeFiles/Gauntmore.dir/requires: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/entry_point.cpp.o.requires
-CMakeFiles/Gauntmore.dir/requires: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp.o.requires
+CMakeFiles/Gauntmore.dir/requires: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp.o.requires
 CMakeFiles/Gauntmore.dir/requires: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/res.cpp.o.requires
 CMakeFiles/Gauntmore.dir/requires: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/base64.cpp.o.requires
 CMakeFiles/Gauntmore.dir/requires: CMakeFiles/Gauntmore.dir/home/hkhamm/Gauntmore/oxygine-framework/game/src/TmxPropertySet.cpp.o.requires

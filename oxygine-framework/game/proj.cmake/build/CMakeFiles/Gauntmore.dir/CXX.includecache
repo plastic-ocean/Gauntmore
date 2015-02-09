@@ -11,30 +11,26 @@ iostream
 -
 Game.h
 /home/hkhamm/Gauntmore/oxygine-framework/game/src/Game.h
-Joystick.h
-/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.h
 Player.h
 /home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.h
 res.h
 /home/hkhamm/Gauntmore/oxygine-framework/game/src/res.h
 Tmx.h
 /home/hkhamm/Gauntmore/oxygine-framework/game/src/Tmx.h
+KeyboardInput.h
+/home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.h
 
 /home/hkhamm/Gauntmore/oxygine-framework/game/src/Game.h
 oxygine-framework.h
 /home/hkhamm/Gauntmore/oxygine-framework/game/src/oxygine-framework.h
-
-/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.cpp
-Joystick.h
-/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.h
-res.h
-/home/hkhamm/Gauntmore/oxygine-framework/game/src/res.h
-
-/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.h
-oxygine-framework.h
-/home/hkhamm/Gauntmore/oxygine-framework/game/src/oxygine-framework.h
+KeyboardInput.h
+/home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.h
+Tmx.h
+/home/hkhamm/Gauntmore/oxygine-framework/game/src/Tmx.h
 
 /home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.cpp
+iostream
+-
 KeyboardInput.h
 /home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.h
 Input.h
@@ -50,19 +46,21 @@ oxygine-framework.h
 SDL.h
 /home/hkhamm/Gauntmore/oxygine-framework/game/src/SDL.h
 
-/home/hkhamm/Gauntmore/oxygine-framework/game/src/Map.cpp
-
 /home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.cpp
+iostream
+-
 Player.h
 /home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.h
 Game.h
 /home/hkhamm/Gauntmore/oxygine-framework/game/src/Game.h
 res.h
 /home/hkhamm/Gauntmore/oxygine-framework/game/src/res.h
-Joystick.h
-/home/hkhamm/Gauntmore/oxygine-framework/game/src/Joystick.h
+KeyboardInput.h
+/home/hkhamm/Gauntmore/oxygine-framework/game/src/KeyboardInput.h
 Tmx.h
 /home/hkhamm/Gauntmore/oxygine-framework/game/src/Tmx.h
+SDL.h
+/home/hkhamm/Gauntmore/oxygine-framework/game/src/SDL.h
 
 /home/hkhamm/Gauntmore/oxygine-framework/game/src/Player.h
 Unit.h
@@ -341,14 +339,12 @@ Stage.h
 /home/hkhamm/Gauntmore/oxygine-framework/game/src/Stage.h
 DebugActor.h
 /home/hkhamm/Gauntmore/oxygine-framework/game/src/DebugActor.h
-example.h
-/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.h
+gauntmore.h
+/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.h
 SDL_main.h
 /home/hkhamm/Gauntmore/oxygine-framework/game/src/SDL_main.h
-emscripten.h
--
 
-/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.cpp
+/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.cpp
 oxygine-framework.h
 /home/hkhamm/Gauntmore/oxygine-framework/game/src/oxygine-framework.h
 res.h
@@ -356,7 +352,7 @@ res.h
 Game.h
 /home/hkhamm/Gauntmore/oxygine-framework/game/src/Game.h
 
-/home/hkhamm/Gauntmore/oxygine-framework/game/src/example.h
+/home/hkhamm/Gauntmore/oxygine-framework/game/src/gauntmore.h
 
 /home/hkhamm/Gauntmore/oxygine-framework/game/src/res.cpp
 res.h
