@@ -13,16 +13,18 @@ Unit::Unit():_game(0), _dead(false) {}
  * @game is the game.
  */
 void Unit::init(const Vector2 &pos, Game *game) {
-	// Initialize game
+	// Initialize the game.
 	_game = game;
+    
+    // Attach the Unit (as an Actor) to the game.
 	_view = new Actor;
     _view->attachTo(game);
     _view->setPosition(pos);
     
-    // Adds to global units list
+    // Add to Game's units list.
     _game->pushUnit(this);
 
-	//virtual method was overload in Player
+	// Virtual method that is overload by children.
 	_init();
 }
 

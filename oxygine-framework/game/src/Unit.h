@@ -10,55 +10,62 @@ public:
 	Unit();
     
     /**
-     * Initializes a unit.
+     * Initializes a unit. When initializing any child this is the called method.
+     * It calls the overloaded _init method for all children.
      *
-     * @pos is the units positon
+     * @pos is the unit's positon
      * @game is the game.
      */
     void init(const Vector2 &pos, Game *game);
     
     /**
-     * Gets the units potions.
+     * Gets the unit's position.
      *
-     * @return the unit's position
+     * @return the unit's position.
      */
     const Vector2&getPosition();
 
     /**
-     * Virtual method is overload in children.
+     * Calls the overloaded _update method in children.
      */
     void update(const UpdateState &us);
     
     /**
      * Check for unit death.
      *
-     * @returns ture if unit is dead and false if it is not.
+     * @returns true if unit is dead and false if it is not.
      */
-    bool isDead() const {return _dead;}
+    const bool isDead() {return _dead;}
+    
+    /**
+     * Reduces the Unit's hit points.
+     */
+    virtual void damage(){}
 
 protected:
+    // Each Unit has a view that is attached to the game.
     spActor _view;
+    
+    // A pointer to the game.
     Game *_game;
     
+    // Stats
     int _hp;
     int _attack;
     int _defense;
+    
+    // Indiates if unit is dead. Used to remove unit from game's units list.
     bool _dead;
     
     /**
-     * Initializes a units position and sprite. Called by the init() method by children.
+     * Initializes a child of Unit. Called by Unit::init() for all children.
      */
 	virtual void _init(){}
     
     /**
-     * Updates the unit every frame. Called by the update() method by children.
+     * Updates a child of Unit every frame. Called by Unit::update() for all children.
      *
      * @us is the UpdateStatus sent by Unit's update method.
      */
 	virtual void _update(const UpdateState &us){}
-    
-    /**
-     * Reduces the creatures hit points.
-     */
-    virtual void damage(){}
 };

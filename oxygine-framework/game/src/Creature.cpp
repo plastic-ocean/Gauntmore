@@ -16,8 +16,6 @@ void Creature::damage() {
         // The create is dead, hide it with an alpha tween.
         _dead = true;
         _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-        
-        // TODO end the game
     }
 }
 
