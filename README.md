@@ -2,7 +2,7 @@
 
 Gauntmore is a 2D, top down, hack-and-slash, real-time, roguelike, with procedural tile-based map generation, and permanent death.
 
-The project is being built for the University of Oregon's CIS 330 in Winter 2015.
+The project is being built at the University of Oregon for CIS 330 in Winter 2015.
 
 ### Xcode Project
 
