@@ -45,7 +45,7 @@ void Player::_update(const UpdateState &us) {
  * @y is the y coordinate to check.
  * @h is the height coordinate to check.
  * @w is the width coordinate to check.
- * @return true is there is a collision and false if there is not
+ * @return true if there is a collision and false if there is not
  */
 bool Player::detectCollision(int x, int y, int h, int w) {
     bool isCollision = false;
