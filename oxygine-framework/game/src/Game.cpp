@@ -2,10 +2,10 @@
 
 #include "Game.h"
 #include "Player.h"
+#include "Creature.h"
 #include "res.h"
 #include "Tmx.h"
 #include "KeyboardInput.h"
-
 
 /**
  * Constructor.

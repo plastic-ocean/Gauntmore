@@ -1,16 +1,14 @@
 #pragma once
 #include "oxygine-framework.h"
-#include "KeyboardInput.h"
 #include "Tmx.h"
 
 using namespace oxygine;
 
-
 DECLARE_SMART(Player, spPlayer);
-DECLARE_SMART(Game, spGame);
+DECLARE_SMART(Creature, spCreature);
 DECLARE_SMART(KeyboardInput, spKeyboardInput)
 DECLARE_SMART(Unit, spUnit);
-
+DECLARE_SMART(Game, spGame);
 
 class Game: public Actor {
     
