@@ -38,7 +38,7 @@ public:
     const bool isDead() {return _dead;}
     
     /**
-     * Reduces the Unit's hit points.
+     * Reduces the Unit's hit points. Overload this for each child.
      */
     virtual void damage(){}
 

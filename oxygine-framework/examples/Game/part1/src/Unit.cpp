@@ -29,7 +29,7 @@ void Unit::init(const Vector2 &pos, Game *game) {
 }
 
 /**
- * Gets the units potions.
+ * Gets the unit's position.
  *
  * @return the unit's position
  */
