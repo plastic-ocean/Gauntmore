@@ -7,7 +7,11 @@
 #include "KeyboardInput.h"
 
 
+/**
+ * Constructor.
+ */
 Game::Game() {}
+
 
 /**
  * Initialzes the game. Creates the map, the player, the monsters, the static objects 
@@ -103,6 +107,36 @@ void Game::createTiles() {
             }
         }
     }
+}
+
+
+/**
+ * Detects collisions between the player and the walls.
+ *
+ * @x is the x coordinate to check.
+ * @y is the y coordinate to check.
+ * @h is the height coordinate to check.
+ * @w is the width coordinate to check.
+ * @return true if there is a collision and false if there is not
+ */
+bool Game::detectCollision(int x, int y, int h, int w) {
+    bool isCollision = false;
+    SDL_Rect spriteRect;
+    spriteRect.x = x;
+    spriteRect.y = y;
+    spriteRect.h = h;
+    spriteRect.w = w;
+    
+    // Iterate through the tiles vector to see if the spriteRect collides with the tile.
+    const SDL_Rect *sprite = &spriteRect;
+    for (SDL_Rect tileRect : tiles) {
+        const SDL_Rect *tile = &tileRect;
+        if (SDL_HasIntersection(sprite, tile)) {
+            isCollision = true;
+        }
+    }
+    
+    return isCollision;
 }
 
 

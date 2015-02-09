@@ -1,14 +1,10 @@
 #include "Unit.h"
 #include "Game.h"
 
-Unit::Unit():_game(0)
-{
+Unit::Unit():_game(0) {}
 
-}
-
-void Unit::init(Game *game)
-{
-	//initialize base
+void Unit::init(Game *game) {
+	//initialize game
 	_game = game;
 	_view = new Actor;
 	_view->attachTo(game);
@@ -17,8 +13,7 @@ void Unit::init(Game *game)
 	_init();
 }
 
-void Unit::update(const UpdateState &us)
-{
+void Unit::update(const UpdateState &us) {
 	//virtual method was overload in Player
 	_update(us);
 }

@@ -22,7 +22,18 @@ public:
      * Initialzes the game. Creates the map, the player, the monsters, the static objects
      * and puts them in the game world.
      */
-	void init();    
+    void init();
+    
+    /**
+     * Detects collisions between the Units and the walls.
+     *
+     * @x is the x coordinate to check.
+     * @y is the y coordinate to check.
+     * @h is the height coordinate to check.
+     * @w is the width coordinate to check.
+     * @return true is there is a collision and false if there is not
+     */
+    bool detectCollision(int x, int y, int h, int w);
     
     /**
      * Gets the tile map.
@@ -42,6 +53,7 @@ private:
 	friend class Player;
     Tmx::Map *map;
     std::vector<SDL_Rect> tiles;
+    
     spKeyboardInput _move;
     spPlayer _player;
     

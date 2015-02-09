@@ -48,7 +48,7 @@ void run() {
 	gauntmore_preinit();
 	core::init(&desc);
 
-	//create Stage. Stage is a root node
+	// Create the Stage. Stage is a root node.
 	Stage::instance = new Stage(true);
 	Point size = core::getDisplaySize();
 	getStage()->setSize(size);
@@ -56,10 +56,10 @@ void run() {
 	// DebugActor is a helper actor node. It shows FPS, memory usage and other useful stuff.
     //DebugActor::show();
 		
-	// Initialize gauntmore stuff.
+	// Initialize the game and attach to the stage.
 	gauntmore_init();
 
-	// Main game loop.
+	// Start the main loop.
 	while (1) {
 		int done = mainloop();
 		if (done)
@@ -67,12 +67,12 @@ void run() {
 	}
 	// If the user wants to leave application...
 
-	// Dump all created objects into log all created and not freed resources would be displayed.
+	// Dump all created objects into log. All created and not freed resources are displayed.
 	ObjectBase::dumpCreatedObjects();
 
-	// Cleanup everything right now and call ObjectBase::dumpObjects() again.
+	// Cleanup everything and call ObjectBase::dumpObjects() again.
 	// Free all allocated resources and delete all created actors.
-	// All actors/sprites are smart pointer objects and the don't need to removed by hand
+	// All actors/sprites are smart pointer objects and they don't need to removed by hand
 	// but this does it anyway just to be safe.
 
 	gauntmore_destroy();
