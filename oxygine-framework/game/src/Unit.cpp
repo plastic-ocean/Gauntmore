@@ -41,9 +41,9 @@ const Vector2& Unit::getPosition() {
 
 
 /**
- * Gets the unit's position.
+ * Sets the unit's position.
  *
- * @return the unit's position
+ * @position the position to set
  */
 void Unit::setPosition(Vector2 position) {
     _view->setPosition(position);

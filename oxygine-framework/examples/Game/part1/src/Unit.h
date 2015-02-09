@@ -25,6 +25,11 @@ public:
      */
     const Vector2& getPosition();
     
+    /**
+     * Sets the unit's position.
+     *
+     * @position the position to set
+     */
     void setPosition(Vector2 position);
 
     /**
