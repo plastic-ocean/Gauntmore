@@ -1,0 +1,19 @@
+Date: 2/9
+
+Attendance:
+
+Keith Hamm
+David Wenzel
+Steven Warren
+Benjamin Barnes
+
+Minutes:
+
+Keith Hamm setup the oxygine-framework based project and declared and defined all the starting classes. There is now a writeup that describes all the files in the project, what the methods do, the class hierarchy, and the connections between game objects. We are now ready to get started with some of the more complex parts of the project including:
+
+- dynamic map creation
+- monster pathfinding
+- the combat system
+- sprite animation
+- game world design
+- the creation of Things including Chests, Potions, Gold

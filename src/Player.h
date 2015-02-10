@@ -13,8 +13,6 @@ public:
     void damage();
     
 protected:
-    spSprite _sprite;
-    
     /**
      * Initializes the player's position and sprite. Called by Unit's init() method.
      */

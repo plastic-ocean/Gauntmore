@@ -3,14 +3,15 @@
 #include "Player.h"
 #include "Game.h"
 #include "res.h"
-#include "KeyboardInput.h"
 #include "Tmx.h"
 #include "SDL.h"
+
 
 /**
  * Constructor
  */
 Player::Player() {}
+
 
 /**
  * Initializes the player's position and sprite. Called by Unit's init() method.
@@ -53,12 +54,5 @@ void Player::damage() {
  * @us is the UpdateStatus sent by Unit's update method.
  */
 void Player::_update(const UpdateState &us) {
-	Vector2 dir;
-	if (_game->getMove()->getDirection(dir)) {
-		Vector2 pos = getPosition();
-		pos = pos + dir * (us.dt / 1000.0f) * 5;
-        if (!_game->detectCollision(pos.x, pos.y, 32, 32)) {
-            setPosition(pos);
-        }
-	}
+    _move(us);
 }

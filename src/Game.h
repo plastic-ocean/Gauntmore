@@ -1,4 +1,5 @@
 #pragma once
+#include "tinyxml2.h"
 #include "oxygine-framework.h"
 #include "Tmx.h"
 
@@ -75,6 +76,11 @@ protected:
      * @us is the UpdateStatus sent by the global update method.
      */
 	void doUpdate(const UpdateState &us);
+    
+    /**
+     * Generates a maze in a .tmx file.
+     */
+    void _generateTmxFile();
     
     /**
      * Reads the tile map description from the .tmx file and uses it to render the map.

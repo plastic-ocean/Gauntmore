@@ -41,6 +41,7 @@
 		534097C81A896C19000434F6 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 534097C51A896C19000434F6 /* images */; };
 		534097C91A896C19000434F6 /* tmx in Resources */ = {isa = PBXBuildFile; fileRef = 534097C61A896C19000434F6 /* tmx */; };
 		534097CA1A896C19000434F6 /* xmls in Resources */ = {isa = PBXBuildFile; fileRef = 534097C71A896C19000434F6 /* xmls */; };
+		534097D21A898396000434F6 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 534097D01A898396000434F6 /* Map.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +164,8 @@
 		534097C51A896C19000434F6 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = data/images; sourceTree = "<group>"; };
 		534097C61A896C19000434F6 /* tmx */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tmx; path = data/tmx; sourceTree = "<group>"; };
 		534097C71A896C19000434F6 /* xmls */ = {isa = PBXFileReference; lastKnownFileType = folder; name = xmls; path = data/xmls; sourceTree = "<group>"; };
+		534097D01A898396000434F6 /* Map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Map.cpp; path = src/Map.cpp; sourceTree = "<group>"; };
+		534097D11A898396000434F6 /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Map.h; path = src/Map.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +271,8 @@
 				534097CB1A896C3F000434F6 /* tmx */,
 				534097A91A896C0A000434F6 /* Unit.cpp */,
 				534097AA1A896C0A000434F6 /* Unit.h */,
+				534097D01A898396000434F6 /* Map.cpp */,
+				534097D11A898396000434F6 /* Map.h */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -445,6 +450,7 @@
 				534097BE1A896C0A000434F6 /* TmxTile.cpp in Sources */,
 				534097AD1A896C0A000434F6 /* entry_point.cpp in Sources */,
 				534097B71A896C0A000434F6 /* TmxLayer.cpp in Sources */,
+				534097D21A898396000434F6 /* Map.cpp in Sources */,
 				534097BF1A896C0A000434F6 /* TmxTileset.cpp in Sources */,
 				534097BC1A896C0A000434F6 /* TmxPolyline.cpp in Sources */,
 				534097B11A896C0A000434F6 /* Player.cpp in Sources */,

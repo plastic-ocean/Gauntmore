@@ -139,6 +139,14 @@ void Game::doUpdate(const UpdateState &us) {
 
 
 /**
+ * Generates a maze in a .tmx file.
+ */
+void _generateTmxFile() {
+    
+}
+
+
+/**
  * Reads the tile map description from the .tmx file and uses it to render the map.
  */
 void Game::_renderMap() {

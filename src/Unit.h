@@ -52,6 +52,7 @@ public:
 protected:
     // Each Unit has a view that is attached to the game.
     spActor _view;
+    spSprite _sprite;
     
     // A pointer to the game.
     Game *_game;
@@ -76,4 +77,6 @@ protected:
      * @us is the UpdateStatus sent by Unit's update method.
      */
 	virtual void _update(const UpdateState &us){}
+    
+    void _move(const UpdateState &us);
 };
