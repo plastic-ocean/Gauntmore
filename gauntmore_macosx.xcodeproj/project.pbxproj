@@ -41,6 +41,7 @@
 		534097C81A896C19000434F6 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 534097C51A896C19000434F6 /* images */; };
 		534097C91A896C19000434F6 /* tmx in Resources */ = {isa = PBXBuildFile; fileRef = 534097C61A896C19000434F6 /* tmx */; };
 		534097CA1A896C19000434F6 /* xmls in Resources */ = {isa = PBXBuildFile; fileRef = 534097C71A896C19000434F6 /* xmls */; };
+		71057F4A1A898F58005C8DD4 /* Skeleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 71057F481A898F58005C8DD4 /* Skeleton.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +164,8 @@
 		534097C51A896C19000434F6 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = data/images; sourceTree = "<group>"; };
 		534097C61A896C19000434F6 /* tmx */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tmx; path = data/tmx; sourceTree = "<group>"; };
 		534097C71A896C19000434F6 /* xmls */ = {isa = PBXFileReference; lastKnownFileType = folder; name = xmls; path = data/xmls; sourceTree = "<group>"; };
+		71057F481A898F58005C8DD4 /* Skeleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Skeleton.cpp; sourceTree = "<group>"; };
+		71057F491A898F58005C8DD4 /* Skeleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Skeleton.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +271,8 @@
 				534097CB1A896C3F000434F6 /* tmx */,
 				534097A91A896C0A000434F6 /* Unit.cpp */,
 				534097AA1A896C0A000434F6 /* Unit.h */,
+				71057F481A898F58005C8DD4 /* Skeleton.cpp */,
+				71057F491A898F58005C8DD4 /* Skeleton.h */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -457,6 +462,7 @@
 				534097B91A896C0A000434F6 /* TmxObject.cpp in Sources */,
 				534097B01A896C0A000434F6 /* KeyboardInput.cpp in Sources */,
 				534097AB1A896C0A000434F6 /* base64.cpp in Sources */,
+				71057F4A1A898F58005C8DD4 /* Skeleton.cpp in Sources */,
 				534097C11A896C0A000434F6 /* Unit.cpp in Sources */,
 				534097B41A896C0A000434F6 /* TmxEllipse.cpp in Sources */,
 				534097C01A896C0A000434F6 /* TmxUtil.cpp in Sources */,
