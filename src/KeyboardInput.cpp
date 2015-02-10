@@ -33,7 +33,7 @@ bool KeyboardInput::getDirection(Vector2 &dir) const {
  * 
  * @ev is the event, will be turned into an SDL_Event.
  */
-void KeyboardInput::_onEvent(Event *ev) {
+/*void KeyboardInput::_onEvent(Event *ev) {
     SDL_Event *event = (SDL_Event*) ev->userData;
     
     if (event->type == SDL_KEYDOWN) {
@@ -68,5 +68,53 @@ void KeyboardInput::_onEvent(Event *ev) {
         _pressed = false;
         _dir = Vector2(0,0);
     }
-}
+    
+    
+}*/
 
+void KeyboardInput::_onEvent(Event *ev) {
+    SDL_Event *event = (SDL_Event*) ev->userData;
+//    const Uint8 *state = SDL_GetKeyboardState(NULL);
+    _pressed = true;
+    //if key is pressed:
+    if (event->type == SDL_KEYDOWN && event->key.repeat == 0) {
+        //adjust velocity
+        switch (event->key.keysym.sym ) {
+            case SDLK_UP: _dir += Vector2(0, -1); break;
+            case SDLK_DOWN: _dir += Vector2(0, 1); break;
+            case SDLK_LEFT: _dir += Vector2(-1, 0); break;
+            case SDLK_RIGHT: _dir += Vector2(1, 0); break;
+        }
+    }
+        if (event->type == SDL_KEYUP && event->key.repeat == 0) {
+            _pressed = false;
+            switch (event->key.keysym.sym ) {
+                case SDLK_UP: _dir -= Vector2(0, -1); break;
+                case SDLK_DOWN: _dir -= Vector2(0, 1); break;
+                case SDLK_LEFT: _dir -= Vector2(-1, 0); break;
+                case SDLK_RIGHT: _dir -= Vector2(1, 0); break;
+        }
+    }
+    
+  /*  if (state[SDL_SCANCODE_UP] || state[SDL_SCANCODE_W]) {
+        // Up
+        _dir += Vector2(0, -1);
+    }
+    if (state[SDL_SCANCODE_DOWN] || state[SDL_SCANCODE_S]) {
+        // Up
+        _dir += Vector2(0, 1);
+    }
+    if (state[SDL_SCANCODE_LEFT] || state[SDL_SCANCODE_A]) {
+        // Up
+        _dir += Vector2(-1, 0);
+    }
+    if (state[SDL_SCANCODE_RIGHT] || state[SDL_SCANCODE_D]) {
+        // Up
+        _dir += Vector2(1, 0);
+    }
+    if (event->type == SDL_KEYUP) {
+    _pressed = false;
+    _dir = Vector2(0,0);
+}
+*/
+}

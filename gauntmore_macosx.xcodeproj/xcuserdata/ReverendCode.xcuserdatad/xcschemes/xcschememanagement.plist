@@ -4,15 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>oxygine_macosx.xcscheme</key>
+		<key>gauntmore_macosx.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>5</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>049B52BA1871EDE900EF3C66</key>
+		<key>049B572D1871FBE900EF3C66</key>
 		<dict>
 			<key>primary</key>
 			<true/>

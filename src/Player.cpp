@@ -56,7 +56,7 @@ void Player::_update(const UpdateState &us) {
 	Vector2 dir;
 	if (_game->getMove()->getDirection(dir)) {
 		Vector2 pos = getPosition();
-		pos = pos + dir * (us.dt / 1000.0f) * 5;
+		pos = pos + dir * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
         if (!_game->detectCollision(pos.x, pos.y, 32, 32)) {
             setPosition(pos);
         }
