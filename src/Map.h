@@ -6,26 +6,56 @@ DECLARE_SMART(Map, spMap);
 class Map : public Object {
     
 public:
-    Map();
+    Map(int size);
     
     /**
-     * Adds all walls to list that are adjacent to maze[i][j].
+     * Get map entrance.
+     */
+    Vector2 getEntrance();
+    
+    /**
+     * Set map entrance.
      *
-     * @size is the wall list size.
-     * @walls is the current list of walls.
+     * @x is the entrance's x coordinate on the map.
+     * @y is the entrance's y coordinate on the map.
+     */
+    void setEntrance(int x, int y);
+    
+    /**
+     * Creates a 2D maze array using Prim's algorithm for minimum spanning trees.
+     */
+    void createMaze();
+    
+    /**
+     * Prints the maze.
+     */
+    void printMaze();
+    
+private:
+    const static int _maxMazeSize = 30;
+    const static int _maxListSize = _maxMazeSize * _maxMazeSize;
+    
+    int _size;
+    char _maze[_maxMazeSize][_maxMazeSize];
+    
+    int _wallListSize;
+    int _wallList[_maxListSize][2];
+    
+    int _mazeListSize;
+    int _mazeList[_maxListSize][2];
+    
+    Vector2 _entrance;
+    
+    /**
+     * Adds all walls adjacent to maze[i][j] to the wall list.
+     *
      * @i is the i in maze[i][j].
      * @j is the j in maze[i][j].
      */
-    int addWall(int wallListSize, int maxWallListSize, int wallList[maxWallListSize][2], int mazeSize, char maze[mazeSize][mazeSize], int i, int j);
+    void _addWall(int i, int j);
     
     /**
-     * Creates a 2-D maze array using Prim's algorithm for minimum spanning trees.
-     *
-     * @size is the size of the maze.
-     * @maze is the 2-D maze array.
+     * Creates a tile map (.tmx file) from the 2D maze array.
      */
-    void createMaze(int size, char maze[size][size]);
-    
-private:
-    
+    void _createTileMap();
 };

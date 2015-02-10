@@ -6,6 +6,7 @@
 #include "res.h"
 #include "Tmx.h"
 #include "KeyboardInput.h"
+#include "Map.h"
 
 /**
  * Constructor.
@@ -28,12 +29,20 @@ void Game::init() {
 	setSize(getStage()->getSize());
 
 	// Create map
+    map = new Map(15);
+    map->createMaze();
     _renderMap();
     _createTiles();
     
 	// Create player
+    Vector2 location = map->getEntrance();
+    location.x *= 32;
+    location.y *= 32;
+    
+    std::cout << "location: " << location.x << ", " << location.y << std::endl;
+    
 	_player = new Player;
-	_player->init(getSize() / 2, this);
+	_player->init(location, this);
     
     // TODO Create enemy creatures (with random loot!)
 //    for (int i = 0; i < **large number**; ++i) {
@@ -61,10 +70,10 @@ void Game::init() {
 bool Game::detectCollision(int x, int y, int h, int w) {
     bool isCollision = false;
     SDL_Rect spriteRect;
-    spriteRect.x = x;
-    spriteRect.y = y;
-    spriteRect.h = h;
-    spriteRect.w = w;
+    spriteRect.x = x + 10;
+    spriteRect.y = y + 10;
+    spriteRect.h = h - 10;
+    spriteRect.w = w - 10;
     
     // Iterate through the tiles vector to see if the spriteRect collides with the tile.
     const SDL_Rect *sprite = &spriteRect;
@@ -152,7 +161,7 @@ void _generateTmxFile() {
 void Game::_renderMap() {
     _map = new Tmx::Map();
     
-    _map->ParseFile("data/tmx/room01.tmx");
+    _map->ParseFile("data/tmx/room.tmx");
     
     for (int i = 0; i < _map->GetNumLayers(); ++i) {
         // Get a layer.

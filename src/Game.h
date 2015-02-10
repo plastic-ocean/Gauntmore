@@ -9,6 +9,7 @@ DECLARE_SMART(Player, spPlayer);
 DECLARE_SMART(Creature, spCreature);
 DECLARE_SMART(KeyboardInput, spKeyboardInput)
 DECLARE_SMART(Unit, spUnit);
+DECLARE_SMART(Map, spMap);
 DECLARE_SMART(Game, spGame);
 
 class Game: public Actor {
@@ -61,6 +62,7 @@ public:
     void pushUnit(spUnit unit);
 
 protected:
+    spMap map;
     Tmx::Map *_map;
     std::vector<SDL_Rect> _tiles;
     

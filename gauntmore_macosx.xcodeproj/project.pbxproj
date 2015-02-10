@@ -264,6 +264,8 @@
 				534097831A896C0A000434F6 /* gauntmore.h */,
 				534097841A896C0A000434F6 /* KeyboardInput.cpp */,
 				534097851A896C0A000434F6 /* KeyboardInput.h */,
+				534097D01A898396000434F6 /* Map.cpp */,
+				534097D11A898396000434F6 /* Map.h */,
 				534097861A896C0A000434F6 /* Player.cpp */,
 				534097871A896C0A000434F6 /* Player.h */,
 				534097881A896C0A000434F6 /* res.cpp */,
@@ -271,8 +273,6 @@
 				534097CB1A896C3F000434F6 /* tmx */,
 				534097A91A896C0A000434F6 /* Unit.cpp */,
 				534097AA1A896C0A000434F6 /* Unit.h */,
-				534097D01A898396000434F6 /* Map.cpp */,
-				534097D11A898396000434F6 /* Map.h */,
 			);
 			name = src;
 			sourceTree = "<group>";

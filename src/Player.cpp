@@ -23,13 +23,13 @@ void Player::_init() {
     _defense = 0;
     
     // Sets the initial position in the game scene.
-	_view->setPosition(_game->getSize() / 2);
+//	_view->setPosition(_game->getSize() / 2);
     
     // Add sprite to the game scene.
     _sprite = new Sprite;
     _sprite->setResAnim(res::ui.getResAnim("human"));
     _sprite->attachTo(_view);
-//    _sprite->setAnchor(Vector2(0.5f, 0.5f));
+//    _sprite->setAnchor(Vector2(0.0f, 0.5f));
 }
 
 
