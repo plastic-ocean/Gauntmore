@@ -10,8 +10,7 @@ using namespace oxygine;
  * The main loop method. Called each frame.
  */
 int mainloop() {
-	// Update our stage
-	// Update all actors. Actor::update is called for all children.
+	// Update our stage and all actors. Actor::update is called for all children.
 	getStage()->update();
 	
 	if (core::beginRendering()) {
@@ -23,8 +22,7 @@ int mainloop() {
 		core::swapDisplayBuffers();
 	}
 
-	// Update internal components
-	// All input events are passed to Stage::instance.handleEvent
+	// Update internal components. All input events are passed to Stage::instance.handleEvent.
 	// If done is true then User requests quit from app.
 	bool done = core::update();
 
