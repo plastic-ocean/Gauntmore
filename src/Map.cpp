@@ -3,26 +3,6 @@
 #include "Map.h"
 using namespace std;
 
-/*
- map creation notes:
- 
- Creating dungeon-realistic maps:
- the idea is to have a single hall with 0 to 2 turns and 0 to 2 rooms off the hall, the hall will have the entrance and a random number of exits
- 
- if not coming from another room use the same method to choose the starting location, else choose the same wall as the last room's exit
- randomly decide the number and position of exits
- randomly decide if there are going to be turns in the hall
-     if there are going to be turns, decide how many: 0 to 2 inclusive
-         for each turn:
-             randomly choose a number of cells before the turn between 2 and a max size based on room size
-     connect hallway to the other end of the map
- connect the exists to the hallway
- randomly decide how many rooms will be off to the side of the hall based on the amount of available space
- create a door to each room
- randomly decide how large the rooms will be with max size being the available space
- draw the rooms
- */
-
 
 /**
  * Constructor.
