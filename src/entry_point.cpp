@@ -70,46 +70,21 @@ void run() {
 	// Dump all created objects into log. All created and not freed resources are displayed.
 	ObjectBase::dumpCreatedObjects();
 
-	// Cleanup everything and call ObjectBase::dumpObjects() again.
 	// Free all allocated resources and delete all created actors.
-	// All actors/sprites are smart pointer objects and they don't need to removed by hand
-	// but this does it anyway just to be safe.
-
 	gauntmore_destroy();
 
 	// Releases all internal components and Stage
 	core::release();
 
-	// Dump list should be empty now.
-	// Everything has been deleted and there can't be any memory leaks.
+	// Dump list should be empty now. Everything has been deleted and there can't be any memory leaks.
 	ObjectBase::dumpCreatedObjects();
 
 	ObjectBase::__stopTracingLeaks();
 }
 
-// Main methods depending on context:
 
-#ifdef __S3E__
 int main(int argc, char* argv[]) {
 	run();
 	return 0;
 }
-#endif
 
-
-#ifdef OXYGINE_SDL
-#ifdef __MINGW32__
-int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
-	run();
-	return 0;
-}
-#else
-#include "SDL_main.h"
-extern "C" {
-	int main(int argc, char* argv[]) {
-		run();
-		return 0;
-	}
-};
-#endif
-#endif
