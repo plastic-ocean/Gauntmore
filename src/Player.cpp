@@ -26,7 +26,7 @@ void Player::_init() {
     
     // Add sprite to the game scene.
     _sprite = new Sprite;
-    _sprite->setResAnim(res::ui.getResAnim("hero"));
+    _sprite->setResAnim(res::ui.getResAnim("dhero"));
     _sprite->attachTo(_view);
 //    _sprite->setAnchor(Vector2(0.5f, 0.5f));
 }
@@ -46,6 +46,7 @@ void Player::damage() {
     }
 }
 
+
 void setDirection(Vector2 _dir) {
 
     
@@ -58,7 +59,7 @@ void setDirection(Vector2 _dir) {
 void Player::_update(const UpdateState &us) {
 	Vector2 dir;
 	if (_game->getMove()->getDirection(dir)) {
-        
+    
 		Vector2 pos = getPosition();
 		pos = pos + dir * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
         if (!_game->detectCollision(pos.x, pos.y, 32, 32)) {

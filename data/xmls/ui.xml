@@ -18,7 +18,13 @@
         <image file="floor.png" />
         <image file="wall.png" />
         <image file="human.png" />
+        <image file="uHero.png" cols = "9" />
+        <image file="dHero.png" cols = "9" />
+        <image file="lHero.png" cols = "9" />
+        <image file="rHero.png" cols = "9" />
         <image file="hero.png" cols = "9" rows = "4" />
+
+
     </atlas>
     <set path = "tmx" />
     <atlas>
