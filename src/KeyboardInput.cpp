@@ -5,6 +5,7 @@
 #include "SDL.h"
 #include "SDL_keyboard.h"
 #include "SDL_events.h"
+#include "Player.h"
 
 
 /**
@@ -30,15 +31,16 @@ bool KeyboardInput::getDirection(Vector2 &dir) const {
 
 void KeyboardInput::_onEvent(Event *ev) {
     SDL_Event *event = (SDL_Event*) ev->userData;
-//    const Uint8 *state = SDL_GetKeyboardState(NULL);
     _pressed = true;
     //if key is pressed:
     if (event->type == SDL_KEYDOWN && event->key.repeat == 0) {
         //adjust velocity
         switch (event->key.keysym.sym ) {
             case SDLK_UP:
-            case SDLK_w: _dir += Vector2(0, -1); break;
-            
+            case SDLK_w:{
+                _dir += Vector2(0, -1);
+                break;
+            }
             case SDLK_DOWN:
             case SDLK_s: { //for anim testing
                 _dir += Vector2(0, 1);

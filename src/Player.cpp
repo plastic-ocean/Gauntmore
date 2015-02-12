@@ -31,7 +31,6 @@ void Player::_init() {
 //    _sprite->setAnchor(Vector2(0.5f, 0.5f));
 }
 
-
 /**
  * Reduces the player's hit points.
  */
@@ -45,9 +44,15 @@ void Player::damage() {
         // TODO end the game
     }
 }
+Vector2 correctDirection(Vector2 position, Vector2 direction) {
+    
+    
+    
+    
+    return direction;
+}
 
-
-void setDirection(Vector2 _dir) {
+void setDirection( Vector2 _dir ) {
 
     
 }
@@ -65,5 +70,5 @@ void Player::_update(const UpdateState &us) {
         if (!_game->detectCollision(pos.x, pos.y, 32, 32)) {
             setPosition(pos);
         }
-	}
+    }
 }

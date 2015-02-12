@@ -11,10 +11,10 @@ public:
      * Reduces the player's hit points.
      */
     void damage();
-    
+
 protected:
     spSprite _sprite;
-    
+    Vector2 correctDirection();
     /**
      * Initializes the player's position and sprite. Called by Unit's init() method.
      */
