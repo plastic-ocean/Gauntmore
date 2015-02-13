@@ -19,7 +19,7 @@ protected:
      * Initializes the player's position and sprite. Called by Unit's init() method.
      */
 	void _init();
-    
+    void setFacing( Vector2 dir );
     /**
      * Updates the player every frame.
      *

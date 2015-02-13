@@ -55,7 +55,13 @@ Vector2 Player::correctDirection(Vector2 position, Vector2 direction) {
     return direction;
 }
 
-void setDirection( Vector2 _dir ) {
+void Player::setFacing( Vector2 dir ) {
+    if ( dir.y > 0 ) _sprite->setResAnim(res::ui.getResAnim("dhero"));
+    if ( dir.y < 0 ) _sprite->setResAnim(res::ui.getResAnim("uhero"));
+    if ( dir.x < 0 ) _sprite->setResAnim(res::ui.getResAnim("lhero"));
+    if ( dir.x > 0 ) _sprite->setResAnim(res::ui.getResAnim("rHero"));
+    
+    
 
     
 }
@@ -69,7 +75,7 @@ void Player::_update(const UpdateState &us) {
 	if (_game->getMove()->getDirection(dir)) {
 		Vector2 pos = getPosition();
         dir = correctDirection( pos, dir );
-        
+        setFacing(dir);
 		pos = pos + dir * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
 //        if (!_game->detectCollision(pos.x, pos.y, 32, 32)) {
             setPosition(pos);
