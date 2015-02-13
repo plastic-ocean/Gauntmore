@@ -14,7 +14,7 @@ public:
 
 protected:
     spSprite _sprite;
-    Vector2 correctDirection();
+    Vector2 correctDirection(Vector2, Vector2);
     /**
      * Initializes the player's position and sprite. Called by Unit's init() method.
      */

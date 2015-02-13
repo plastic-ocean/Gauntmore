@@ -44,9 +44,12 @@ void Player::damage() {
         // TODO end the game
     }
 }
-Vector2 correctDirection(Vector2 position, Vector2 direction) {
+Vector2 Player::correctDirection(Vector2 position, Vector2 direction) {
+    int newX = position.x + direction.x * 5;
+    int newY = position.y + direction.y * 5;
     
-    
+    if ( _game->detectCollision(newX, position.y, 32, 32 ) ) direction.x = 0;
+    if ( _game->detectCollision(position.x, newY, 32, 32 ) ) direction.y = 0;
     
     
     return direction;
@@ -64,11 +67,12 @@ void setDirection( Vector2 _dir ) {
 void Player::_update(const UpdateState &us) {
 	Vector2 dir;
 	if (_game->getMove()->getDirection(dir)) {
-    
 		Vector2 pos = getPosition();
+        dir = correctDirection( pos, dir );
+        
 		pos = pos + dir * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
-        if (!_game->detectCollision(pos.x, pos.y, 32, 32)) {
+//        if (!_game->detectCollision(pos.x, pos.y, 32, 32)) {
             setPosition(pos);
-        }
+//        }
     }
 }
