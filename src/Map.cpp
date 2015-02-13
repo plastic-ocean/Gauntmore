@@ -371,22 +371,30 @@ int Map::_getRand(int start, int finish) {
 }
 
 
+/**
+ * Draws a room between row and height, col and width.
+ *
+ * @row is the room's row index.
+ * @col is the room's column index.
+ * @height is the room's height index.
+ * @width is the room's width index.
+ */
 void Map::_drawRoom(int row, int col, int height, int width) {
-    
-    std::printf("row: %d\n", row);
-    std::printf("col: %d\n", col);
-    std::printf("height: %d\n", height);
-    std::printf("width: %d\n", width);
-    
     for (int i = row; i <= height; ++i) {
         for (int j = col; j <= width; ++j) {
-            std::printf("i: %d, j: %d\n", i, j);
             _maze[i][j] = '.';
         }
     }
 }
 
 
+/**
+ * Draws a connecting hall on a column between a room and the main hall.
+ *
+ * @col is the hall's column index.
+ * @begin is the row index to begin on.
+ * @end is the row index to end on.
+ */
 void Map::_drawConnectHallCol(int col, int begin, int end) {
     for (int i = begin; i < end; ++i) {
         _maze[i][col] = '.';
@@ -394,6 +402,13 @@ void Map::_drawConnectHallCol(int col, int begin, int end) {
 }
 
 
+/**
+ * Draws a connecting hall on a row between a room and the main hall.
+ *
+ * @row is the hall's row index.
+ * @begin is the column index to begin on.
+ * @end is the column index to end on.
+ */
 void Map::_drawConnectHallRow(int row, int begin, int end) {
     for (int i = begin; i < end; ++i) {
         _maze[row][i] = '.';
@@ -401,6 +416,11 @@ void Map::_drawConnectHallRow(int row, int begin, int end) {
 }
 
 
+/**
+ * Creates and draws a room on the map. Checks if the main hall is on a row or a column.
+ * Then checks if there is space above or below a row and left or right of a column.
+ * Connects the room(s) to the main hall with connecting halls.
+ */
 void Map::createRoom() {
     // If not coming from another room use the same method to choose the starting location,
     // else choose the same wall as the last room's exit.
@@ -412,8 +432,6 @@ void Map::createRoom() {
     int x = 0;
     int y = 0;
     bool column = false;
-    
-    std::printf("row: %d, col: %d\n", row, col);
     
     // Decide movement direction for adding new cells.
     // #0#
@@ -459,7 +477,6 @@ void Map::createRoom() {
         int connectHallRow = 0;
         if (col > 3) {
             // Left of hall
-            std::printf("Left of hall\n");
             
             // between 1 and col - 3
             randCol = _getRand(1, col - 2);
@@ -480,7 +497,6 @@ void Map::createRoom() {
         }
         if (col < _size - 4) {
             // Right of hall
-            std::printf("Right of hall\n");
             
             // between col + 1 and _size - 2
             randCol = _getRand(col + 1, _size - 3);
@@ -503,7 +519,6 @@ void Map::createRoom() {
         int connectHallCol = 0;
         if (row > 3) {
             // Above hall
-            std::printf("Above hall\n");
             
             // between 1 and row - 1
             randRow = _getRand(1, row - 2);
@@ -524,7 +539,6 @@ void Map::createRoom() {
         }
         if (row < _size - 4) {
             // Below hall
-            std::printf("Below hall\n");
             
             // between 1 and _size - 3
             randCol = _getRand(row + 1, _size - 3);
@@ -544,11 +558,6 @@ void Map::createRoom() {
             _drawConnectHallCol(connectHallCol, row + 1, randRow);
         }
     }
-    
-    
-    
-    
-    
     
 //    int endEdge = _chooseExit(startEdge);
 //    

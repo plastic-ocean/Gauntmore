@@ -26,6 +26,11 @@ public:
      */
     void createMaze();
     
+    /**
+     * Creates and draws a room on the map. Checks if the main hall is on a row or a column.
+     * Then checks if there is space above or below a row and left or right of a column.
+     * Connects the room(s) to the main hall with connecting halls.
+     */
     void createRoom();
     
     /**
@@ -91,9 +96,31 @@ private:
      */
     int _getRand(int start, int finish);
     
+    /**
+     * Draws a room between row and height, col and width.
+     *
+     * @row is the room's row index.
+     * @col is the room's column index.
+     * @height is the room's height index.
+     * @width is the room's width index.
+     */
     void _drawRoom(int row, int col, int height, int width);
     
+    /**
+     * Draws a connecting hall on a column between a room and the main hall.
+     *
+     * @col is the hall's column index.
+     * @begin is the row index to begin on.
+     * @end is the row index to end on.
+     */
     void _drawConnectHallCol(int col, int begin, int end);
     
+    /**
+     * Draws a connecting hall on a row between a room and the main hall.
+     *
+     * @row is the hall's row index.
+     * @begin is the column index to begin on.
+     * @end is the column index to end on.
+     */
     void _drawConnectHallRow(int row, int begin, int end);
 };
