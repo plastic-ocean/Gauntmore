@@ -51,6 +51,20 @@ void Map::setEntrance(int x, int y) {
 
 
 /**
+ * Prints the map.
+ */
+void Map::printMap() {
+    for (int i = 0; i < _size; ++i) {
+        for (int j = 0; j < _size; ++j) {
+            cout << _map[i][j];
+        }
+        cout << endl;
+    }
+    cout << endl;
+}
+
+
+/**
  * Adds all walls adjacent to map[i][j] to the wall list.
  *
  * @i is the i in map[i][j].
@@ -145,7 +159,7 @@ int Map::_chooseEntrance() {
         _addWall(a, b + 1);
     }
     
-    // Add the floor cell to the map list.
+    // Add the floor cell to the floor list.
     _floorList[_floorListSize][0] = a;
     _floorList[_floorListSize][1] = b;
     _floorListSize++;
@@ -417,8 +431,8 @@ void Map::_drawConnectHallRow(int row, int begin, int end) {
 
 
 /**
- * Creates and draws a room on the map. Checks if the main hall is on a row or a column.
- * Then checks if there is space above or below a row and left or right of a column.
+ * Creates and draws a hall-type map with a main hall and one to two rooms off to the side. 
+ * Checks if the main hall is on a row or a column, then checks if there is space above or below a row and left or right of a column.
  * Connects the room(s) to the main hall with connecting halls.
  */
 void Map::createHallMap() {
@@ -595,20 +609,6 @@ void Map::createHallMap() {
 
 
 /**
- * Prints the map.
- */
-void Map::printMap() {
-    for (int i = 0; i < _size; ++i) {
-        for (int j = 0; j < _size; ++j) {
-            cout << _map[i][j];
-        }
-        cout << endl;
-    }
-    cout << endl;
-}
-
-
-/**
  * Creates a tile map (.tmx file) from the 2D map array.
  */
 void Map::_createTileMap() {
@@ -648,285 +648,3 @@ void Map::_createTileMap() {
     
     tmxFile.close();
 }
-
-
-///**
-// * Constructor.
-// */
-//Map::Map(int size):size(size) {
-//    map = vector<vector<char>>();
-//    for (int i = 0; i < size; ++i) {
-//        for (int j = 0; j < size; ++j) {
-//            map[i][j] = '@';
-//        }
-//    }
-//    
-//    walls = vector<vector<int>>();
-//    floorList = vector<vector<int>>();
-//    
-//    createMap();
-//    printMap();
-//}
-//
-//
-///**
-// * Adds all walls to list that are adjacent to map[i][j].
-// *
-// * @i is the i in map[i][j].
-// * @j is the j in map[i][j].
-// */
-//void Map::_addWall(int i, int j) {
-//    bool onList = false;
-//    for (int k = 0; k < size; ++k) {
-//        if (walls[k][0] == i && walls[k][1] == j) {
-//            onList = true;
-//            break;
-//        }
-//    }
-//    
-//    if (!onList && i != 0 && i != size - 1 && j != 0 && j != size - 1 && map[i][j] == '@') {
-//        // Add wall
-//        walls.push_back({i, j});
-//    }
-//}
-//
-//
-///**
-// * Creates a 2D map vector using Prim's algorithm for minimum spanning trees.
-// */
-//void Map::createMap() {
-//    // Randomly choose an entrance, add the first floor cell, and add its walls to the wall list.
-//    int edge = rand() % 3;
-//    int a = 0; // entrance row
-//    int b = 0; // entrance column
-//    if (edge == 0) {
-//        // Top
-//        // #x#
-//        // #.#
-//        // ###
-//        a = 0;
-//        b = rand() % (size - 2) + 1;
-//        map[a + 1][b] = '.';
-//        map[a][b] = 'x';
-//        a++;
-//        
-//        // Add adjacent walls.
-//        _addWall(a + 1, b);
-//        _addWall(a, b + 1);
-//        _addWall(a, b - 1);
-//    } else if (edge == 1) {
-//        // Right
-//        // ###
-//        // #.x
-//        // ###
-//        a = rand() % (size - 2) + 1;
-//        b = size - 1;
-//        map[a][b - 1] = '.';
-//        map[a][b] = 'x';
-//        b--;
-//        
-//        // Add adjacent walls.
-//        _addWall(a - 1, b);
-//        _addWall(a + 1, b);
-//        _addWall(a, b - 1);
-//    } else if (edge == 2) {
-//        // Bottom
-//        // ###
-//        // #.#
-//        // #x#
-//        a = size - 1;
-//        b = rand() % (size - 2) + 1;
-//        map[a - 1][b] = '.';
-//        map[a][b] = 'x';
-//        a--;
-//        
-//        // Add adjacent walls.
-//        _addWall(a - 1, b);
-//        _addWall(a, b + 1);
-//        _addWall(a, b - 1);
-//    } else if (edge == 3) {
-//        // Left
-//        // ###
-//        // x.#
-//        // ###
-//        a = rand() % (size - 2) + 1;
-//        b = 0;
-//        map[a][b + 1] = '.';
-//        map[a][b] = 'x';
-//        b++;
-//        
-//        // Add adjacent walls.
-//        _addWall(a - 1, b);
-//        _addWall(a + 1, b);
-//        _addWall(a, b + 1);
-//    }
-//    
-//    // Add the floor cell to the map list.
-//    floorList.push_back({a, b});
-//    
-//    int index = 0;
-//    int wall[2] = {0, 0};
-//    int n = 0;
-//    int m = 0;
-//    int count = 0;
-//    
-//    // While walls in wall list:
-//    while (walls.size() > 1) {
-//        // Get a random wall from the list.
-//        index = rand() % (walls.size() - 1);
-//        wall[0] = walls[index][0];
-//        wall[1] = walls[index][1];
-//        
-//        // Count adjacent cells already in the map.
-//        count = 0;
-//        size_t floorListSize = floorList.size();
-//        for (int i = 0; i < floorListSize; ++i) {
-//            if ((floorList[i][0] == wall[0] - 1 && floorList[i][1] == wall[1]) ||
-//                (floorList[i][0] == wall[0] && floorList[i][1] == wall[1] + 1) ||
-//                (floorList[i][0] == wall[0] + 1 && floorList[i][1] == wall[1]) ||
-//                (floorList[i][0] == wall[0] && floorList[i][1] == wall[1] - 1)) {
-//                count++;
-//            }
-//        }
-//        
-//        // If only one of the adjacent cells is already in the map, continue.
-//        if (count == 1) {
-//            // Get the cell on the opposite side of the wall.
-//            n = 0; // cell row
-//            m = 0; // cell column
-//            if (map[wall[0] - 1][wall[1]] == '.') {
-//                // Check up
-//                // ###
-//                // #r#
-//                // #.#
-//                n = wall[0] + 1;
-//                m = wall[1];
-//            } else if (map[wall[0]][wall[1] + 1] == '.') {
-//                // Check right
-//                // ###
-//                // .r#
-//                // ###
-//                n = wall[0];
-//                m = wall[1] - 1;
-//            } else if (map[wall[0] + 1][wall[1]] == '.') {
-//                // Check down
-//                // #.#
-//                // #r#
-//                // ###
-//                n = wall[0] - 1;
-//                m = wall[1];
-//            } else if (map[wall[0]][wall[1] - 1] == '.') {
-//                // Check left
-//                // ###
-//                // #r.
-//                // ###
-//                n = wall[0];
-//                m = wall[1] + 1;
-//            }
-//            
-//            // Check if the cell on the opposite side of the chosen cell isn't in the map.
-//            if (map[n][m] == '@') {
-//                // Make the chosen cell part of the map.
-//                map[wall[0]][wall[1]] = '.';
-//                
-//                // Add it to the map list.
-//                floorList.push_back({wall[0], wall[1]});
-//                
-//                // Add its walls.
-//                _addWall(wall[0] - 1, wall[1]);
-//                _addWall(wall[0], wall[1] + 1);
-//                _addWall(wall[0] + 1, wall[1]);
-//                _addWall(wall[0], wall[1] - 1);
-//            }
-//        }
-//        
-//        // Remove the wall from the list.
-//        walls.erase(walls.begin() + index);
-//    }
-//    
-//    // Choose random map edge for the exit.
-//    int edgeList[3] = {0, 0, 0};
-//    if (edge == 0) {
-//        edgeList[0] = 1;
-//        edgeList[1] = 2;
-//        edgeList[2] = 3;
-//    } else if (edge == 1) {
-//        edgeList[0] = 0;
-//        edgeList[1] = 2;
-//        edgeList[2] = 3;
-//    } else if (edge == 2) {
-//        edgeList[0] = 0;
-//        edgeList[1] = 1;
-//        edgeList[2] = 3;
-//    } else if (edge == 3) {
-//        edgeList[0] = 0;
-//        edgeList[1] = 1;
-//        edgeList[2] = 2;
-//    }
-//    index = rand() % 2;
-//    edge = edgeList[index];
-//    
-//    // Choose random exit cell from valid options.
-//    int i = 0;
-//    int j = 0;
-//    int temp = 0;
-//    index = 0;
-//    int exitList[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-//    int exitListSize = 0;
-//    if (edge == 0) {
-//        // Up
-//        i = 0;
-//        // j is random
-//        index = 1;
-//        for (int k = 1; k < size - 2; ++k) {
-//            if (map[index][k] == '.') {
-//                exitList[exitListSize] = k;
-//                exitListSize++;
-//            }
-//        }
-//        temp = rand() % exitListSize;
-//        j = exitList[temp];
-//    } else if (edge == 1) {
-//        // Right
-//        // i is random
-//        j = size - 1;
-//        index = size - 2;
-//        for (int k = 1; k < size - 2; ++k) {
-//            if (map[k][index] == '.') {
-//                exitList[exitListSize] = k;
-//                exitListSize++;
-//            }
-//        }
-//        temp = rand() % exitListSize;
-//        i = exitList[temp];
-//    } else if (edge == 2) {
-//        // Down
-//        i = size - 1;
-//        // j is random
-//        index = size - 2;
-//        for (int k = 1; k < size - 2; ++k) {
-//            if (map[index][k] == '.') {
-//                exitList[exitListSize] = k;
-//                exitListSize++;
-//            }
-//        }
-//        temp = rand() % exitListSize;
-//        j = exitList[temp];
-//    } else if (edge == 3) {
-//        // Left
-//        // i is random
-//        j = 0;
-//        index = size - 2;
-//        for (int k = 1; k < size - 2; ++k) {
-//            if (map[k][index] == '.') {
-//                exitList[exitListSize] = k;
-//                exitListSize++;
-//            }
-//        }
-//        temp = rand() % exitListSize;
-//        i = exitList[temp];
-//    }
-//    
-//    // Create exit
-//    map[i][j] = '.';
-//}
