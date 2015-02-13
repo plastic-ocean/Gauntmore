@@ -26,6 +26,8 @@ public:
      */
     void createMaze();
     
+    void createRoom();
+    
     /**
      * Prints the maze.
      */
@@ -55,7 +57,43 @@ private:
     void _addWall(int i, int j);
     
     /**
+     * Randomly chooses an entrance, adds the first floor cell, and adds its walls to the wall list.
+     *
+     * @return the chosen edge.
+     */
+    int _chooseEntrance();
+    
+    /**
+     * Choose a random maze edge and cell for the exit.
+     *
+     * @edge is the entrance edge.
+     */
+    int _chooseExit(int edge);
+    
+    /**
+     * Return true if the maze exit has been reached, otherwise false.
+     *
+     * @row is the row to check.
+     * @col is the col to check.
+     */
+    bool _atExit(int row, int col);
+    
+    /**
      * Creates a tile map (.tmx file) from the 2D maze array.
      */
     void _createTileMap();
+    
+    /**
+     * Returns a number betweeen start and finish inclusive.
+     *
+     * @start is the beginning of the range.
+     * @finish is the end of the range, inclusive.
+     */
+    int _getRand(int start, int finish);
+    
+    void _drawRoom(int row, int col, int height, int width);
+    
+    void _drawConnectHallCol(int col, int begin, int end);
+    
+    void _drawConnectHallRow(int row, int begin, int end);
 };

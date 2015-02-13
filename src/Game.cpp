@@ -30,7 +30,9 @@ void Game::init() {
 
 	// Create map
     map = new Map(15);
-    map->createMaze();
+//    map->createMaze();
+    map->createRoom();
+    
     _renderMap();
     _createTiles();
     

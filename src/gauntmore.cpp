@@ -58,9 +58,13 @@ int main(int argc, char* argv[]) {
     // Initialize Oxygine's internal stuff.
     core::init_desc desc;
     
-    // Setup initial window size.
+    // Setup the window.
     desc.w = 480;
     desc.h = 480;
+//    desc.fullscreen = true;
+    desc.title = "Gauntmore";
+    desc.appName = "Gauntmore";
+    desc.companyName = "plastic-ocean";
     
     core::init(&desc);
     
