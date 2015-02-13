@@ -31,7 +31,7 @@ void Game::init() {
 	// Create map
     map = new Map(15);
 //    map->createMaze();
-    map->createRoom();
+    map->createHallMap();
     
     _renderMap();
     _createTiles();
@@ -150,7 +150,7 @@ void Game::doUpdate(const UpdateState &us) {
 
 
 /**
- * Generates a maze in a .tmx file.
+ * Generates a map in a .tmx file.
  */
 void _generateTmxFile() {
     

@@ -80,7 +80,7 @@ protected:
 	void doUpdate(const UpdateState &us);
     
     /**
-     * Generates a maze in a .tmx file.
+     * Generates a map in a .tmx file.
      */
     void _generateTmxFile();
     

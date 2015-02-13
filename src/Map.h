@@ -31,33 +31,33 @@ public:
      * Then checks if there is space above or below a row and left or right of a column.
      * Connects the room(s) to the main hall with connecting halls.
      */
-    void createRoom();
+    void createHallMap();
     
     /**
-     * Prints the maze.
+     * Prints the map.
      */
-    void printMaze();
+    void printMap();
     
 private:
-    const static int _maxMazeSize = 30;
-    const static int _maxListSize = _maxMazeSize * _maxMazeSize;
+    const static int _maxSize = 30;
+    const static int _maxListSize = _maxSize * _maxSize;
     
     int _size;
-    char _maze[_maxMazeSize][_maxMazeSize];
+    char _map[_maxSize][_maxSize];
     
     int _wallListSize;
     int _wallList[_maxListSize][2];
     
-    int _mazeListSize;
-    int _mazeList[_maxListSize][2];
+    int _floorListSize;
+    int _floorList[_maxListSize][2];
     
     Vector2 _entrance;
     
     /**
-     * Adds all walls adjacent to maze[i][j] to the wall list.
+     * Adds all walls adjacent to map[i][j] to the wall list.
      *
-     * @i is the i in maze[i][j].
-     * @j is the j in maze[i][j].
+     * @i is the i in map[i][j].
+     * @j is the j in map[i][j].
      */
     void _addWall(int i, int j);
     
@@ -69,14 +69,14 @@ private:
     int _chooseEntrance();
     
     /**
-     * Choose a random maze edge and cell for the exit.
+     * Choose a random map edge and cell for the exit.
      *
      * @edge is the entrance edge.
      */
     int _chooseExit(int edge);
     
     /**
-     * Return true if the maze exit has been reached, otherwise false.
+     * Return true if the map exit has been reached, otherwise false.
      *
      * @row is the row to check.
      * @col is the col to check.
@@ -84,7 +84,7 @@ private:
     bool _atExit(int row, int col);
     
     /**
-     * Creates a tile map (.tmx file) from the 2D maze array.
+     * Creates a tile map (.tmx file) from the 2D map array.
      */
     void _createTileMap();
     

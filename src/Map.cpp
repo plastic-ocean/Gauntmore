@@ -7,14 +7,14 @@ using namespace std;
 /**
  * Constructor.
  */
-Map::Map(int size):_size(size), _wallListSize(0), _mazeListSize(0) {
+Map::Map(int size):_size(size), _wallListSize(0), _floorListSize(0) {
     // Seed rand.
     srand((unsigned int) time(NULL));
     
-    // Initialize the maze.
+    // Initialize the map.
     for (int i = 0; i < _size; ++i) {
         for (int j = 0; j < _size; ++j) {
-            _maze[i][j] = '@';
+            _map[i][j] = '@';
         }
     }
     
@@ -23,8 +23,8 @@ Map::Map(int size):_size(size), _wallListSize(0), _mazeListSize(0) {
         _wallList[i][0] = 0;
         _wallList[i][1] = 0;
         
-        _mazeList[i][0] = 0;
-        _mazeList[i][1] = 0;
+        _floorList[i][0] = 0;
+        _floorList[i][1] = 0;
     }
     
     _entrance = Vector2();
@@ -51,10 +51,10 @@ void Map::setEntrance(int x, int y) {
 
 
 /**
- * Adds all walls adjacent to maze[i][j] to the wall list.
+ * Adds all walls adjacent to map[i][j] to the wall list.
  *
- * @i is the i in maze[i][j].
- * @j is the j in maze[i][j].
+ * @i is the i in map[i][j].
+ * @j is the j in map[i][j].
  */
 void Map::_addWall(int i, int j) {
     bool onList = false;
@@ -65,7 +65,7 @@ void Map::_addWall(int i, int j) {
         }
     }
     
-    if (!onList && i != 0 && i != _size - 1 && j != 0 && j != _size - 1 && _maze[i][j] == '@') {
+    if (!onList && i != 0 && i != _size - 1 && j != 0 && j != _size - 1 && _map[i][j] == '@') {
         // Add wall
         _wallList[_wallListSize][0] = i;
         _wallList[_wallListSize][1] = j;
@@ -75,7 +75,7 @@ void Map::_addWall(int i, int j) {
 
 
 /**
- * Randomly chooses an entrance, adds the first floor cell, and adds its walls to the wall list.
+ * Chooses a random entrance, adds the first floor cell, and adds its walls to the wall list.
  *
  * @return the chosen edge.
  */
@@ -90,8 +90,8 @@ int Map::_chooseEntrance() {
         // ###
         a = 0;
         b = rand() % (_size - 2) + 1;
-        _maze[a + 1][b] = '.';
-        _maze[a][b] = 'x';
+        _map[a + 1][b] = '.';
+        _map[a][b] = 'x';
         a++;
         
         // Add adjacent walls.
@@ -105,8 +105,8 @@ int Map::_chooseEntrance() {
         // ###
         a = rand() % (_size - 2) + 1;
         b = _size - 1;
-        _maze[a][b - 1] = '.';
-        _maze[a][b] = 'x';
+        _map[a][b - 1] = '.';
+        _map[a][b] = 'x';
         b--;
         
         // Add adjacent walls.
@@ -120,8 +120,8 @@ int Map::_chooseEntrance() {
         // #x#
         a = _size - 1;
         b = rand() % (_size - 2) + 1;
-        _maze[a - 1][b] = '.';
-        _maze[a][b] = 'x';
+        _map[a - 1][b] = '.';
+        _map[a][b] = 'x';
         a--;
         
         // Add adjacent walls.
@@ -135,8 +135,8 @@ int Map::_chooseEntrance() {
         // ###
         a = rand() % (_size - 2) + 1;
         b = 0;
-        _maze[a][b + 1] = '.';
-        _maze[a][b] = 'x';
+        _map[a][b + 1] = '.';
+        _map[a][b] = 'x';
         b++;
         
         // Add adjacent walls.
@@ -145,10 +145,10 @@ int Map::_chooseEntrance() {
         _addWall(a, b + 1);
     }
     
-    // Add the floor cell to the maze list.
-    _mazeList[_mazeListSize][0] = a;
-    _mazeList[_mazeListSize][1] = b;
-    _mazeListSize++;
+    // Add the floor cell to the map list.
+    _floorList[_floorListSize][0] = a;
+    _floorList[_floorListSize][1] = b;
+    _floorListSize++;
     
     // Set entrance.
     setEntrance(a, b);
@@ -158,7 +158,7 @@ int Map::_chooseEntrance() {
 
 
 /**
- * Choose a random maze edge and cell for the exit.
+ * Choose a random map edge and cell for the exit.
  *
  * @edge is the entrance edge.
  */
@@ -196,7 +196,7 @@ int Map::_chooseExit(int edge) {
         // j is random
         index = 1;
         for (int k = 1; k < _size - 2; ++k) {
-            if (_maze[index][k] == '.') {
+            if (_map[index][k] == '.') {
                 exitList[exitListSize] = k;
                 exitListSize++;
             }
@@ -209,7 +209,7 @@ int Map::_chooseExit(int edge) {
         j = _size - 1;
         index = _size - 2;
         for (int k = 1; k < _size - 2; ++k) {
-            if (_maze[k][index] == '.') {
+            if (_map[k][index] == '.') {
                 exitList[exitListSize] = k;
                 exitListSize++;
             }
@@ -222,7 +222,7 @@ int Map::_chooseExit(int edge) {
         // j is random
         index = _size - 2;
         for (int k = 1; k < _size - 2; ++k) {
-            if (_maze[index][k] == '.') {
+            if (_map[index][k] == '.') {
                 exitList[exitListSize] = k;
                 exitListSize++;
             }
@@ -235,7 +235,7 @@ int Map::_chooseExit(int edge) {
         j = 0;
         index = _size - 2;
         for (int k = 1; k < _size - 2; ++k) {
-            if (_maze[k][index] == '.') {
+            if (_map[k][index] == '.') {
                 exitList[exitListSize] = k;
                 exitListSize++;
             }
@@ -245,14 +245,14 @@ int Map::_chooseExit(int edge) {
     }
     
     // Create exit
-    _maze[i][j] = '.';
+    _map[i][j] = '.';
     
     return edge;
 }
 
 
 /**
- * Creates a 2D maze array using Prim's algorithm for minimum spanning trees.
+ * Creates a 2D map array using Prim's algorithm for minimum spanning trees.
  */
 void Map::createMaze() {
     int edge = _chooseEntrance();
@@ -270,44 +270,44 @@ void Map::createMaze() {
         wall[0] = _wallList[index][0];
         wall[1] = _wallList[index][1];
         
-        // Count adjacent cells already in the maze.
+        // Count adjacent cells already in the map.
         count = 0;
-        for (int i = 0; i < _mazeListSize; ++i) {
-            if ((_mazeList[i][0] == wall[0] - 1 && _mazeList[i][1] == wall[1]) ||
-                (_mazeList[i][0] == wall[0] && _mazeList[i][1] == wall[1] + 1) ||
-                (_mazeList[i][0] == wall[0] + 1 && _mazeList[i][1] == wall[1]) ||
-                (_mazeList[i][0] == wall[0] && _mazeList[i][1] == wall[1] - 1)) {
+        for (int i = 0; i < _floorListSize; ++i) {
+            if ((_floorList[i][0] == wall[0] - 1 && _floorList[i][1] == wall[1]) ||
+                (_floorList[i][0] == wall[0] && _floorList[i][1] == wall[1] + 1) ||
+                (_floorList[i][0] == wall[0] + 1 && _floorList[i][1] == wall[1]) ||
+                (_floorList[i][0] == wall[0] && _floorList[i][1] == wall[1] - 1)) {
                 count++;
             }
         }
         
-        // If only one of the adjacent cells is already in the maze, continue.
+        // If only one of the adjacent cells is already in the map, continue.
         if (count == 1) {
             // Get the cell on the opposite side of the wall.
             n = 0; // cell row
             m = 0; // cell column
-            if (_maze[wall[0] - 1][wall[1]] == '.') {
+            if (_map[wall[0] - 1][wall[1]] == '.') {
                 // Check up
                 // ###
                 // #r#
                 // #.#
                 n = wall[0] + 1;
                 m = wall[1];
-            } else if (_maze[wall[0]][wall[1] + 1] == '.') {
+            } else if (_map[wall[0]][wall[1] + 1] == '.') {
                 // Check right
                 // ###
                 // .r#
                 // ###
                 n = wall[0];
                 m = wall[1] - 1;
-            } else if (_maze[wall[0] + 1][wall[1]] == '.') {
+            } else if (_map[wall[0] + 1][wall[1]] == '.') {
                 // Check down
                 // #.#
                 // #r#
                 // ###
                 n = wall[0] - 1;
                 m = wall[1];
-            } else if (_maze[wall[0]][wall[1] - 1] == '.') {
+            } else if (_map[wall[0]][wall[1] - 1] == '.') {
                 // Check left
                 // ###
                 // #r.
@@ -316,15 +316,15 @@ void Map::createMaze() {
                 m = wall[1] + 1;
             }
             
-            // Check if the cell on the opposite side of the chosen cell isn't in the maze.
-            if (_maze[n][m] == '@') {
-                // Make the chosen cell part of the maze.
-                _maze[wall[0]][wall[1]] = '.';
+            // Check if the cell on the opposite side of the chosen cell isn't in the map.
+            if (_map[n][m] == '@') {
+                // Make the chosen cell part of the map.
+                _map[wall[0]][wall[1]] = '.';
                 
-                // Add it to the maze list.
-                _mazeList[_mazeListSize][0] = wall[0];
-                _mazeList[_mazeListSize][1] = wall[1];
-                _mazeListSize++;
+                // Add it to the map list.
+                _floorList[_floorListSize][0] = wall[0];
+                _floorList[_floorListSize][1] = wall[1];
+                _floorListSize++;
                 
                 // Add its walls.
                 _addWall(wall[0] - 1, wall[1]);
@@ -349,7 +349,7 @@ void Map::createMaze() {
 
 
 /**
- * Return true if the maze exit has been reached, otherwise false.
+ * Return true if the map exit has been reached, otherwise false.
  *
  * @row is the row to check.
  * @col is the col to check.
@@ -382,7 +382,7 @@ int Map::_getRand(int start, int finish) {
 void Map::_drawRoom(int row, int col, int height, int width) {
     for (int i = row; i <= height; ++i) {
         for (int j = col; j <= width; ++j) {
-            _maze[i][j] = '.';
+            _map[i][j] = '.';
         }
     }
 }
@@ -397,7 +397,7 @@ void Map::_drawRoom(int row, int col, int height, int width) {
  */
 void Map::_drawConnectHallCol(int col, int begin, int end) {
     for (int i = begin; i < end; ++i) {
-        _maze[i][col] = '.';
+        _map[i][col] = '.';
     }
 }
 
@@ -411,7 +411,7 @@ void Map::_drawConnectHallCol(int col, int begin, int end) {
  */
 void Map::_drawConnectHallRow(int row, int begin, int end) {
     for (int i = begin; i < end; ++i) {
-        _maze[row][i] = '.';
+        _map[row][i] = '.';
     }
 }
 
@@ -421,7 +421,7 @@ void Map::_drawConnectHallRow(int row, int begin, int end) {
  * Then checks if there is space above or below a row and left or right of a column.
  * Connects the room(s) to the main hall with connecting halls.
  */
-void Map::createRoom() {
+void Map::createHallMap() {
     // If not coming from another room use the same method to choose the starting location,
     // else choose the same wall as the last room's exit.
     
@@ -464,7 +464,7 @@ void Map::createRoom() {
     while (!_atExit(row, col)) {
         row += x;
         col += y;
-        _maze[row][col] = '.';
+        _map[row][col] = '.';
     }
     
     int randCol = 0;
@@ -590,17 +590,17 @@ void Map::createRoom() {
 //    draw the rooms
     
     _createTileMap();
-    printMaze();
+    printMap();
 }
 
 
 /**
- * Prints the maze.
+ * Prints the map.
  */
-void Map::printMaze() {
+void Map::printMap() {
     for (int i = 0; i < _size; ++i) {
         for (int j = 0; j < _size; ++j) {
-            cout << _maze[i][j];
+            cout << _map[i][j];
         }
         cout << endl;
     }
@@ -609,7 +609,7 @@ void Map::printMaze() {
 
 
 /**
- * Creates a tile map (.tmx file) from the 2D maze array.
+ * Creates a tile map (.tmx file) from the 2D map array.
  */
 void Map::_createTileMap() {
     ofstream tmxFile;
@@ -629,7 +629,7 @@ void Map::_createTileMap() {
         
         for (int i = 0; i < _size; ++i) {
             for (int j = 0; j < _size; ++j) {
-                if (_maze[i][j] == '@') {
+                if (_map[i][j] == '@') {
                     // Add a wall tile.
                     tmxFile << "   <tile gid=\"2\"/>" << endl;
                 } else {
@@ -654,26 +654,26 @@ void Map::_createTileMap() {
 // * Constructor.
 // */
 //Map::Map(int size):size(size) {
-//    maze = vector<vector<char>>();
+//    map = vector<vector<char>>();
 //    for (int i = 0; i < size; ++i) {
 //        for (int j = 0; j < size; ++j) {
-//            maze[i][j] = '@';
+//            map[i][j] = '@';
 //        }
 //    }
 //    
 //    walls = vector<vector<int>>();
-//    mazeList = vector<vector<int>>();
+//    floorList = vector<vector<int>>();
 //    
-//    createMaze();
-//    printMaze();
+//    createMap();
+//    printMap();
 //}
 //
 //
 ///**
-// * Adds all walls to list that are adjacent to maze[i][j].
+// * Adds all walls to list that are adjacent to map[i][j].
 // *
-// * @i is the i in maze[i][j].
-// * @j is the j in maze[i][j].
+// * @i is the i in map[i][j].
+// * @j is the j in map[i][j].
 // */
 //void Map::_addWall(int i, int j) {
 //    bool onList = false;
@@ -684,7 +684,7 @@ void Map::_createTileMap() {
 //        }
 //    }
 //    
-//    if (!onList && i != 0 && i != size - 1 && j != 0 && j != size - 1 && maze[i][j] == '@') {
+//    if (!onList && i != 0 && i != size - 1 && j != 0 && j != size - 1 && map[i][j] == '@') {
 //        // Add wall
 //        walls.push_back({i, j});
 //    }
@@ -692,9 +692,9 @@ void Map::_createTileMap() {
 //
 //
 ///**
-// * Creates a 2D maze vector using Prim's algorithm for minimum spanning trees.
+// * Creates a 2D map vector using Prim's algorithm for minimum spanning trees.
 // */
-//void Map::createMaze() {
+//void Map::createMap() {
 //    // Randomly choose an entrance, add the first floor cell, and add its walls to the wall list.
 //    int edge = rand() % 3;
 //    int a = 0; // entrance row
@@ -706,8 +706,8 @@ void Map::_createTileMap() {
 //        // ###
 //        a = 0;
 //        b = rand() % (size - 2) + 1;
-//        maze[a + 1][b] = '.';
-//        maze[a][b] = 'x';
+//        map[a + 1][b] = '.';
+//        map[a][b] = 'x';
 //        a++;
 //        
 //        // Add adjacent walls.
@@ -721,8 +721,8 @@ void Map::_createTileMap() {
 //        // ###
 //        a = rand() % (size - 2) + 1;
 //        b = size - 1;
-//        maze[a][b - 1] = '.';
-//        maze[a][b] = 'x';
+//        map[a][b - 1] = '.';
+//        map[a][b] = 'x';
 //        b--;
 //        
 //        // Add adjacent walls.
@@ -736,8 +736,8 @@ void Map::_createTileMap() {
 //        // #x#
 //        a = size - 1;
 //        b = rand() % (size - 2) + 1;
-//        maze[a - 1][b] = '.';
-//        maze[a][b] = 'x';
+//        map[a - 1][b] = '.';
+//        map[a][b] = 'x';
 //        a--;
 //        
 //        // Add adjacent walls.
@@ -751,8 +751,8 @@ void Map::_createTileMap() {
 //        // ###
 //        a = rand() % (size - 2) + 1;
 //        b = 0;
-//        maze[a][b + 1] = '.';
-//        maze[a][b] = 'x';
+//        map[a][b + 1] = '.';
+//        map[a][b] = 'x';
 //        b++;
 //        
 //        // Add adjacent walls.
@@ -761,8 +761,8 @@ void Map::_createTileMap() {
 //        _addWall(a, b + 1);
 //    }
 //    
-//    // Add the floor cell to the maze list.
-//    mazeList.push_back({a, b});
+//    // Add the floor cell to the map list.
+//    floorList.push_back({a, b});
 //    
 //    int index = 0;
 //    int wall[2] = {0, 0};
@@ -777,45 +777,45 @@ void Map::_createTileMap() {
 //        wall[0] = walls[index][0];
 //        wall[1] = walls[index][1];
 //        
-//        // Count adjacent cells already in the maze.
+//        // Count adjacent cells already in the map.
 //        count = 0;
-//        size_t mazeListSize = mazeList.size();
-//        for (int i = 0; i < mazeListSize; ++i) {
-//            if ((mazeList[i][0] == wall[0] - 1 && mazeList[i][1] == wall[1]) ||
-//                (mazeList[i][0] == wall[0] && mazeList[i][1] == wall[1] + 1) ||
-//                (mazeList[i][0] == wall[0] + 1 && mazeList[i][1] == wall[1]) ||
-//                (mazeList[i][0] == wall[0] && mazeList[i][1] == wall[1] - 1)) {
+//        size_t floorListSize = floorList.size();
+//        for (int i = 0; i < floorListSize; ++i) {
+//            if ((floorList[i][0] == wall[0] - 1 && floorList[i][1] == wall[1]) ||
+//                (floorList[i][0] == wall[0] && floorList[i][1] == wall[1] + 1) ||
+//                (floorList[i][0] == wall[0] + 1 && floorList[i][1] == wall[1]) ||
+//                (floorList[i][0] == wall[0] && floorList[i][1] == wall[1] - 1)) {
 //                count++;
 //            }
 //        }
 //        
-//        // If only one of the adjacent cells is already in the maze, continue.
+//        // If only one of the adjacent cells is already in the map, continue.
 //        if (count == 1) {
 //            // Get the cell on the opposite side of the wall.
 //            n = 0; // cell row
 //            m = 0; // cell column
-//            if (maze[wall[0] - 1][wall[1]] == '.') {
+//            if (map[wall[0] - 1][wall[1]] == '.') {
 //                // Check up
 //                // ###
 //                // #r#
 //                // #.#
 //                n = wall[0] + 1;
 //                m = wall[1];
-//            } else if (maze[wall[0]][wall[1] + 1] == '.') {
+//            } else if (map[wall[0]][wall[1] + 1] == '.') {
 //                // Check right
 //                // ###
 //                // .r#
 //                // ###
 //                n = wall[0];
 //                m = wall[1] - 1;
-//            } else if (maze[wall[0] + 1][wall[1]] == '.') {
+//            } else if (map[wall[0] + 1][wall[1]] == '.') {
 //                // Check down
 //                // #.#
 //                // #r#
 //                // ###
 //                n = wall[0] - 1;
 //                m = wall[1];
-//            } else if (maze[wall[0]][wall[1] - 1] == '.') {
+//            } else if (map[wall[0]][wall[1] - 1] == '.') {
 //                // Check left
 //                // ###
 //                // #r.
@@ -824,13 +824,13 @@ void Map::_createTileMap() {
 //                m = wall[1] + 1;
 //            }
 //            
-//            // Check if the cell on the opposite side of the chosen cell isn't in the maze.
-//            if (maze[n][m] == '@') {
-//                // Make the chosen cell part of the maze.
-//                maze[wall[0]][wall[1]] = '.';
+//            // Check if the cell on the opposite side of the chosen cell isn't in the map.
+//            if (map[n][m] == '@') {
+//                // Make the chosen cell part of the map.
+//                map[wall[0]][wall[1]] = '.';
 //                
-//                // Add it to the maze list.
-//                mazeList.push_back({wall[0], wall[1]});
+//                // Add it to the map list.
+//                floorList.push_back({wall[0], wall[1]});
 //                
 //                // Add its walls.
 //                _addWall(wall[0] - 1, wall[1]);
@@ -844,7 +844,7 @@ void Map::_createTileMap() {
 //        walls.erase(walls.begin() + index);
 //    }
 //    
-//    // Choose random maze edge for the exit.
+//    // Choose random map edge for the exit.
 //    int edgeList[3] = {0, 0, 0};
 //    if (edge == 0) {
 //        edgeList[0] = 1;
@@ -879,7 +879,7 @@ void Map::_createTileMap() {
 //        // j is random
 //        index = 1;
 //        for (int k = 1; k < size - 2; ++k) {
-//            if (maze[index][k] == '.') {
+//            if (map[index][k] == '.') {
 //                exitList[exitListSize] = k;
 //                exitListSize++;
 //            }
@@ -892,7 +892,7 @@ void Map::_createTileMap() {
 //        j = size - 1;
 //        index = size - 2;
 //        for (int k = 1; k < size - 2; ++k) {
-//            if (maze[k][index] == '.') {
+//            if (map[k][index] == '.') {
 //                exitList[exitListSize] = k;
 //                exitListSize++;
 //            }
@@ -905,7 +905,7 @@ void Map::_createTileMap() {
 //        // j is random
 //        index = size - 2;
 //        for (int k = 1; k < size - 2; ++k) {
-//            if (maze[index][k] == '.') {
+//            if (map[index][k] == '.') {
 //                exitList[exitListSize] = k;
 //                exitListSize++;
 //            }
@@ -918,7 +918,7 @@ void Map::_createTileMap() {
 //        j = 0;
 //        index = size - 2;
 //        for (int k = 1; k < size - 2; ++k) {
-//            if (maze[k][index] == '.') {
+//            if (map[k][index] == '.') {
 //                exitList[exitListSize] = k;
 //                exitListSize++;
 //            }
@@ -928,5 +928,5 @@ void Map::_createTileMap() {
 //    }
 //    
 //    // Create exit
-//    maze[i][j] = '.';
+//    map[i][j] = '.';
 //}
