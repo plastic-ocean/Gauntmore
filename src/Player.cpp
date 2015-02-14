@@ -16,6 +16,7 @@ Player::Player() {
     _hp = 3;
     _attack = 0;
     _defense = 0;
+    _hasTween = false;
 }
 
 
@@ -71,23 +72,34 @@ void Player::setFacing( Vector2 dir ) {
 }
 
 void Player::moveUp() {
-    moveTween = _sprite->addTween(TweenAnim(res::ui.getResAnim("player_move_back")), 300, -1);
+    _checkTween();
+    _moveTween = _sprite->addTween(TweenAnim(res::ui.getResAnim("player_move_back")), 300, -1);
 }
 
 void Player::moveDown() {
-    moveTween = _sprite->addTween(TweenAnim(res::ui.getResAnim("player_move_front")), 300, -1);
+    _checkTween();
+    _moveTween = _sprite->addTween(TweenAnim(res::ui.getResAnim("player_move_front")), 300, -1);
 }
 
 void Player::moveRight() {
-    moveTween = _sprite->addTween(TweenAnim(res::ui.getResAnim("player_move_right")), 300, -1);
+    _checkTween();
+    _moveTween = _sprite->addTween(TweenAnim(res::ui.getResAnim("player_move_right")), 300, -1);
 }
 
 void Player::moveLeft() {
-    moveTween = _sprite->addTween(TweenAnim(res::ui.getResAnim("player_move_left")), 300, -1);
+    _checkTween();
+    _moveTween = _sprite->addTween(TweenAnim(res::ui.getResAnim("player_move_left")), 300, -1);
+}
+
+void Player::_checkTween() {
+    if (_hasTween) {
+        _sprite->removeTween(_moveTween);
+    }
+    _hasTween = true;
 }
 
 void Player::removeTween() {
-    _sprite->removeTween(moveTween);
+    _sprite->removeTween(_moveTween);
 }
 
 

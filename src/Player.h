@@ -26,7 +26,11 @@ public:
     void removeTween();
     
 protected:
-    spTween moveTween;
+    spTween _moveTween;
+    bool _hasTween;
+    
+    void _checkTween();
+    
     Vector2 correctDirection(Vector2 position, Vector2 direction);
     
     /**
