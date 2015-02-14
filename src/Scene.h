@@ -1,3 +1,7 @@
+/**
+ * This class is from an oxygine example progect.
+ */
+
 #pragma once
 #include "oxygine-framework.h"
 

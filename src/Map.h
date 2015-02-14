@@ -31,7 +31,7 @@ public:
      * Then checks if there is space above or below a row and left or right of a column.
      * Connects the room(s) to the main hall with connecting halls.
      */
-    void createHallMap();
+    void createHallMap(int exists);
     
     /**
      * Prints the map.

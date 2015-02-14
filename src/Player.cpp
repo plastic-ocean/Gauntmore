@@ -100,6 +100,7 @@ void Player::_checkTween() {
 
 void Player::removeTween() {
     _sprite->removeTween(_moveTween);
+    _hasTween = false;
 }
 
 

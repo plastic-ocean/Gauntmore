@@ -350,79 +350,11 @@ void Map::createMaze() {
 
 
 /**
- * Return true if the map exit has been reached, otherwise false.
- *
- * @row is the row to check.
- * @col is the col to check.
- */
-bool Map::_atExit(int row, int col) {
-    return row == 0 || row == _size - 1 || col == 0 || col == _size - 1;
-}
-
-
-/**
- * Returns a number betweeen start and finish inclusive.
- *
- * @start is the beginning of the range.
- * @finish is the end of the range, inclusive.
- */
-int Map::_getRand(int start, int finish) {
-    finish = finish - start + 1;
-    return rand() % finish + start;
-}
-
-
-/**
- * Draws a room between row and height, col and width.
- *
- * @row is the room's row index.
- * @col is the room's column index.
- * @height is the room's height index.
- * @width is the room's width index.
- */
-void Map::_drawRoom(int row, int col, int height, int width) {
-    for (int i = row; i <= height; ++i) {
-        for (int j = col; j <= width; ++j) {
-            _map[i][j] = '.';
-        }
-    }
-}
-
-
-/**
- * Draws a connecting hall on a column between a room and the main hall.
- *
- * @col is the hall's column index.
- * @begin is the row index to begin on.
- * @end is the row index to end on.
- */
-void Map::_drawConnectHallCol(int col, int begin, int end) {
-    for (int i = begin; i < end; ++i) {
-        _map[i][col] = '.';
-    }
-}
-
-
-/**
- * Draws a connecting hall on a row between a room and the main hall.
- *
- * @row is the hall's row index.
- * @begin is the column index to begin on.
- * @end is the column index to end on.
- */
-void Map::_drawConnectHallRow(int row, int begin, int end) {
-    for (int i = begin; i < end; ++i) {
-        _map[row][i] = '.';
-    }
-}
-
-
-/**
  * Creates and draws a room on the map. Checks if the main hall is on a row or a column.
  * Then checks if there is space above or below a row and left or right of a column.
  * Connects the room(s) to the main hall with connecting halls.
  */
-void Map::createHallMap() {
+void Map::createHallMap(int exits) {
     // If not coming from another room use the same method to choose the starting location,
     // else choose the same wall as the last room's exit.
     
@@ -434,7 +366,7 @@ void Map::createHallMap() {
     int y = 0;
     bool column = false;
     
-    // Decide movement direction for adding new cells.
+    // Decide direction for adding new cells.
     // #0#
     // 3#1
     // #2#
@@ -516,6 +448,21 @@ void Map::createHallMap() {
             // draw connecting hall on connectHallRow from col + 1 to randCol
             _drawConnectHallRow(connectHallRow, col + 1, randCol);
         }
+        if (exits == 2) {
+            int exitRow = _getRand(1, _size - 2);
+            int exitEdge = _getRand(0, 1);
+            if (exitEdge == 0) {
+                // go left
+                _drawConnectHallRow(exitRow, 0, col);
+            } else {
+                // go right
+                _drawConnectHallRow(exitRow, col, _size);
+            }
+        }
+        if (exits > 2) {
+            int exitRow = _getRand(1, _size - 2);
+            _drawConnectHallRow(exitRow, 0, _size);
+        }
     } else { // if row
         int connectHallCol = 0;
         if (row > 3) {
@@ -525,7 +472,7 @@ void Map::createHallMap() {
             randRow = _getRand(1, row - 2);
             // between randRow + 1 and row - 1
             randHeight = _getRand(randRow + 1, row - 1);
-
+            
             // between 1 and _size - 2
             randCol = _getRand(1, _size - 3);
             // between randCol + 1 and _size - 2
@@ -558,40 +505,93 @@ void Map::createHallMap() {
             // draw connecting hall on connectHallCol from row + 1 to randRow
             _drawConnectHallCol(connectHallCol, row + 1, randRow);
         }
+        if (exits == 2) {
+            int exitCol = _getRand(1, _size - 2);
+            int exitEdge = _getRand(0, 1);
+            if (exitEdge == 0) {
+                // go up
+                _drawConnectHallCol(exitCol, 0, row);
+            } else {
+                // go down
+                _drawConnectHallCol(exitCol, row, _size);
+            }
+        }
+        if (exits > 2) {
+            int exitCol = _getRand(1, _size - 2);
+            _drawConnectHallCol(exitCol, 0, _size);
+        }
     }
-    
-//    int endEdge = _chooseExit(startEdge);
-//    
-////    randomly decide the number and position of exits
-//    int exists = rand() % 3;
-////    randomly decide if there are going to be turns in the hall
-//    int turns = rand() % 3;
-//
-//    if (turns > 0) {
-//        int start = 1;
-//        int end = _size / 2;
-//        for (int i = 0; i < turns; ++i) {
-//            // Determine spacing between turns choose random number between start and end
-//            int space = start + (rand() % end);
-//            // add cells from entrance to first turn
-//            int direction = rand() % 2;
-//            if (direction == 0) {
-//                // turn left
-//            } else {
-//                // turn right
-//            }
-//            // randomly choose a number of cells before the turn between 2 and a max size based on room size
-//        }
-//    }
-//    connect hallway to the other end of the map
-//    connect the exists to the hallway
-//    randomly decide how many rooms will be off to the side of the hall based on the amount of available space
-//    create a door to each room
-//    randomly decide how large the rooms will be with max size being the available space
-//    draw the rooms
     
     _createTileMap();
     printMap();
+}
+
+
+/**
+ * Return true if the map exit has been reached, otherwise false.
+ *
+ * @row is the row to check.
+ * @col is the col to check.
+ */
+bool Map::_atExit(int row, int col) {
+    return row == 0 || row == _size - 1 || col == 0 || col == _size - 1;
+}
+
+
+/**
+ * Returns a number betweeen start and finish inclusive.
+ *
+ * @start is the beginning of the range.
+ * @finish is the end of the range, inclusive.
+ */
+int Map::_getRand(int start, int finish) {
+    finish = finish - start + 1;
+    return rand() % finish + start;
+}
+
+
+/**
+ * Draws a room between row and height, col and width.
+ *
+ * @row is the room's row index.
+ * @col is the room's column index.
+ * @height is the room's height index.
+ * @width is the room's width index.
+ */
+void Map::_drawRoom(int row, int col, int height, int width) {
+    for (int i = row; i <= height; ++i) {
+        for (int j = col; j <= width; ++j) {
+            _map[i][j] = '.';
+        }
+    }
+}
+
+
+/**
+ * Draws a connecting hall on a column between a room and the main hall.
+ *
+ * @col is the hall's column index.
+ * @begin is the row index to begin on.
+ * @end is the row index to end on.
+ */
+void Map::_drawConnectHallCol(int col, int begin, int end) {
+    for (int i = begin; i < end; ++i) {
+        _map[i][col] = '.';
+    }
+}
+
+
+/**
+ * Draws a connecting hall on a row between a room and the main hall.
+ *
+ * @row is the hall's row index.
+ * @begin is the column index to begin on.
+ * @end is the column index to end on.
+ */
+void Map::_drawConnectHallRow(int row, int begin, int end) {
+    for (int i = begin; i < end; ++i) {
+        _map[row][i] = '.';
+    }
 }
 
 
@@ -617,7 +617,6 @@ void Map::_createTileMap() {
     tmxFile.open("data/tmx/room.tmx");
     
     int tileSize = 32;
-    
     
     if (tmxFile.is_open()) {
         tmxFile << "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" << endl;

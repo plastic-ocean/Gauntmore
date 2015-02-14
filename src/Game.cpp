@@ -31,7 +31,7 @@ void Game::init() {
 	// Create map
     _map = new Map(15);
 //    map->createMaze();
-    _map->createHallMap();
+    _map->createHallMap(3);
     
     _renderMap();
     _createTiles();
@@ -209,20 +209,21 @@ void Game::_createTiles() {
 
 
 void Game::switchMap() {
-    // TODO store the old map associate with exit
+    // Create new map
+    // TODO store the old map,
+    // associate with exit of old map and entrance of new
+    // create custom class or struct to hold all three
     _map = new Map(15);
-    //    map->createMaze();
-    _map->createHallMap();
+//    map->createMaze();
+    _map->createHallMap(1);
     _renderMap();
     _createTiles();
-    Vector2 location = _map->getEntrance();
-    location.x *= 32;
-    location.y *= 32;
+    
+    // Setup player
     _player->detachUnit();
     _player->attachUnit();
     _player->addSprite();
-    _player->setPosition(location);
-//    _move = new KeyboardInput(this);
+    _player->setPosition(getEntrance());
 }
 
 
