@@ -1,23 +1,30 @@
 <?xml version="1.0"?>
 <resources>
 	<set path = "images" />
-	<atlas>
-		<image file="joystick.png" />
-		<image file="finger.png" />
-	</atlas>
-
-	<atlas>
-		<image file="sky.jpg" />
-		<image file="ship.png" />
-		<image file="shipengine.png" />
-	</atlas>
-    
+<!--	<atlas>-->
+<!--		<image file="joystick.png" />-->
+<!--		<image file="finger.png" />-->
+<!--	</atlas>-->
+<!---->
+<!--	<atlas>-->
+<!--		<image file="sky.jpg" />-->
+<!--		<image file="ship.png" />-->
+<!--		<image file="shipengine.png" />-->
+<!--	</atlas>-->
+<!--    -->
     <atlas>
         <image file="room01.png" />
         <image file="default_tiles_x.png" />
         <image file="floor.png" />
         <image file="wall.png" />
         <image file="human.png" />
+        <image file="uHero.png" cols = "9" />
+        <image file="dHero.png" cols = "9" />
+        <image file="lHero.png" cols = "9" />
+        <image file="rHero.png" cols = "9" />
+        <image file="hero.png" cols = "9" rows = "4" />
+
+
     </atlas>
     <set path = "tmx" />
     <atlas>

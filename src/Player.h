@@ -18,10 +18,15 @@ public:
     void addSprite();
     
 protected:
+    spSprite _sprite;
+    Vector2 correctDirection(Vector2 position, Vector2 direction);
+    
     /**
      * Initializes the player's position and sprite. Called by Unit's init() method.
      */
 	void _init();
+    
+    void setFacing(Vector2 dir);
     
     /**
      * Updates the player every frame.
