@@ -67,8 +67,8 @@ bool Game::detectCollision(int x, int y, int h, int w) {
     SDL_Rect spriteRect;
     spriteRect.x = x + 10;
     spriteRect.y = y + 10;
-    spriteRect.h = h - 10;
-    spriteRect.w = w - 10;
+    spriteRect.h = h - 12;
+    spriteRect.w = w - 12;
     
     // Iterate through the tiles vector to see if the spriteRect collides with the tile.
     const SDL_Rect *sprite = &spriteRect;
@@ -218,7 +218,10 @@ void Game::switchMap() {
     Vector2 location = _map->getEntrance();
     location.x *= 32;
     location.y *= 32;
-    _player->init(location, this);
+    _player->detachUnit();
+    _player->attachUnit();
+    _player->addSprite();
+    _player->setPosition(location);
 //    _move = new KeyboardInput(this);
 }
 

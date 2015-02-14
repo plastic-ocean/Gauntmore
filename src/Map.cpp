@@ -616,14 +616,17 @@ void Map::_createTileMap() {
     ofstream tmxFile;
     tmxFile.open("data/tmx/room.tmx");
     
+    int tileSize = 32;
+    
+    
     if (tmxFile.is_open()) {
         tmxFile << "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" << endl;
-        tmxFile << "<map version=\"1.0\" orientation=\"orthogonal\" renderorder=\"right-down\" width=\"" << _size << "\" height=\"" << _size << "\" tilewidth=\"32\" tileheight=\"32\" nextobjectid=\"1\">" << endl;
-        tmxFile << " <tileset firstgid=\"1\" name=\"floor\" tilewidth=\"32\" tileheight=\"32\">" << endl;
-        tmxFile << "  <image source=\"data/tmx/floor.png\" width=\"32\" height=\"32\"/>" << endl;
+        tmxFile << "<map version=\"1.0\" orientation=\"orthogonal\" renderorder=\"right-down\" width=\"" << _size << "\" height=\"" << _size << "\" tilewidth=\"" << tileSize << "\" tileheight=\"" << tileSize << "\" nextobjectid=\"1\">" << endl;
+        tmxFile << " <tileset firstgid=\"1\" name=\"floor\" tilewidth=\"" << tileSize << "\" tileheight=\"" << tileSize << "\">" << endl;
+        tmxFile << "  <image source=\"data/tmx/floor.png\" width=\"" << tileSize << "\" height=\"" << tileSize << "\"/>" << endl;
         tmxFile << " </tileset>" << endl;
-        tmxFile << " <tileset firstgid=\"2\" name=\"wall\" tilewidth=\"32\" tileheight=\"32\">" << endl;
-        tmxFile << "  <image source=\"data/tmx/wall.png\" width=\"32\" height=\"32\"/>" << endl;
+        tmxFile << " <tileset firstgid=\"2\" name=\"wall\" tilewidth=\"" << tileSize << "\" tileheight=\"" << tileSize << "\">" << endl;
+        tmxFile << "  <image source=\"data/tmx/wall.png\" width=\"" << tileSize << "\" height=\"" << tileSize << "\"/>" << endl;
         tmxFile << " </tileset>" << endl;
         tmxFile << " <layer name=\"Tile Layer 1\" width=\"" << _size << "\" height=\"" << _size << "\">" << endl;
         tmxFile << "  <data>" << endl;

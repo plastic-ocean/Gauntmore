@@ -18,6 +18,10 @@ public:
      */
     void init(const Vector2 &pos, Game *game);
     
+    void attachUnit();
+    
+    void detachUnit();
+    
     /**
      * Gets the unit's position.
      *
@@ -30,7 +34,7 @@ public:
      *
      * @position the position to set
      */
-    void setPosition(Vector2 position);
+    void setPosition(const Vector2& position);
 
     /**
      * Calls the overloaded _update method in children.

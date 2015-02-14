@@ -17,8 +17,9 @@ public:
      */
     void addSprite();
     
+    void removeSprite();
+    
 protected:
-    spSprite _sprite;
     Vector2 correctDirection(Vector2 position, Vector2 direction);
     
     /**

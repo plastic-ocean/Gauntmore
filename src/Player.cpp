@@ -53,21 +53,21 @@ Vector2 Player::correctDirection(Vector2 position, Vector2 direction) {
 
 
 /**
- * Add sprite to the game scene.
+ * Adds the player sprite to the map.
  */
 void Player::addSprite() {
     _sprite = new Sprite;
-    _sprite->setResAnim(res::ui.getResAnim("human"));
+    _sprite->setResAnim(res::ui.getResAnim("player_front"));
     _sprite->attachTo(_view);
 //    _sprite->setAnchor(Vector2(0.0f, 0.5f));
 }
 
 
 void Player::setFacing( Vector2 dir ) {
-    if ( dir.y > 0 ) _sprite->setResAnim(res::ui.getResAnim("dhero"));
-    if ( dir.y < 0 ) _sprite->setResAnim(res::ui.getResAnim("uhero"));
-    if ( dir.x < 0 ) _sprite->setResAnim(res::ui.getResAnim("lhero"));
-    if ( dir.x > 0 ) _sprite->setResAnim(res::ui.getResAnim("rHero"));
+    if ( dir.y > 0 ) _sprite->setResAnim(res::ui.getResAnim("player_front"));
+    if ( dir.y < 0 ) _sprite->setResAnim(res::ui.getResAnim("player_back"));
+    if ( dir.x < 0 ) _sprite->setResAnim(res::ui.getResAnim("player_left"));
+    if ( dir.x > 0 ) _sprite->setResAnim(res::ui.getResAnim("player_right"));
 }
 
 
@@ -82,7 +82,7 @@ void Player::_update(const UpdateState &us) {
 		Vector2 pos = getPosition();
         dir = correctDirection( pos, dir );
         setFacing(dir);
-		pos = pos + dir * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
+		pos += dir * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
         setPosition(pos);
     }
 }
