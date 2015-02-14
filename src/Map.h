@@ -22,11 +22,6 @@ public:
     void setEntrance(int x, int y);
     
     /**
-     * Prints the map.
-     */
-    void printMap();
-    
-    /**
      * Creates a 2D maze array using Prim's algorithm for minimum spanning trees.
      */
     void createMaze();
@@ -37,6 +32,11 @@ public:
      * Connects the room(s) to the main hall with connecting halls.
      */
     void createHallMap();
+    
+    /**
+     * Prints the map.
+     */
+    void printMap();
     
 private:
     const static int _maxSize = 30;
@@ -84,6 +84,11 @@ private:
     bool _atExit(int row, int col);
     
     /**
+     * Creates a tile map (.tmx file) from the 2D map array.
+     */
+    void _createTileMap();
+    
+    /**
      * Returns a number betweeen start and finish inclusive.
      *
      * @start is the beginning of the range.
@@ -118,9 +123,4 @@ private:
      * @end is the column index to end on.
      */
     void _drawConnectHallRow(int row, int begin, int end);
-    
-    /**
-     * Creates a tile map (.tmx file) from the 2D map array.
-     */
-    void _createTileMap();
 };
