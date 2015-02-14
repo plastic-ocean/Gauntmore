@@ -70,6 +70,26 @@ void Player::setFacing( Vector2 dir ) {
     if ( dir.x > 0 ) _sprite->setResAnim(res::ui.getResAnim("player_right"));
 }
 
+void Player::moveUp() {
+    moveTween = _sprite->addTween(TweenAnim(res::ui.getResAnim("player_move_back")), 300, -1);
+}
+
+void Player::moveDown() {
+    moveTween = _sprite->addTween(TweenAnim(res::ui.getResAnim("player_move_front")), 300, -1);
+}
+
+void Player::moveRight() {
+    moveTween = _sprite->addTween(TweenAnim(res::ui.getResAnim("player_move_right")), 300, -1);
+}
+
+void Player::moveLeft() {
+    moveTween = _sprite->addTween(TweenAnim(res::ui.getResAnim("player_move_left")), 300, -1);
+}
+
+void Player::removeTween() {
+    _sprite->removeTween(moveTween);
+}
+
 
 /**
  * Updates the player every frame.

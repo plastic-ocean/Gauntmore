@@ -10,6 +10,10 @@
         <image file="player_back.png" />
         <image file="player_left.png" />
         <image file="player_right.png" />
+        <image file="player_move_front.png" cols = "3" />
+        <image file="player_move_back.png" cols = "3" />
+        <image file="player_move_left.png" cols = "3" />
+        <image file="player_move_right.png" cols = "3" />
         
         <image file="uHero.png" cols = "9" />
         <image file="dHero.png" cols = "9" />

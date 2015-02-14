@@ -40,32 +40,42 @@ void KeyboardInput::_onEvent(Event *ev) {
             case SDLK_UP:
             case SDLK_w:{
                 _dir += Vector2(0, -1);
+                _game->getPlayer()->moveUp();
                 break;
             }
             case SDLK_DOWN:
             case SDLK_s: { //for anim testing
                 _dir += Vector2(0, 1);
-                
+                _game->getPlayer()->moveDown();
                 break;
             }
             case SDLK_LEFT:
-            case SDLK_a: _dir += Vector2(-1, 0); break;
+            case SDLK_a: {
+                _dir += Vector2(-1, 0);
+                _game->getPlayer()->moveLeft();
+                 break;
+            }
             case SDLK_RIGHT:
-            case SDLK_d: _dir += Vector2(1, 0); break;
+            case SDLK_d: {
+                _dir += Vector2(1, 0);
+                _game->getPlayer()->moveRight();
+                break;
+            }
             case SDLK_SPACE: _game->switchMap();
         }
     }
-        if (event->type == SDL_KEYUP && event->key.repeat == 0) {
+    if (event->type == SDL_KEYUP && event->key.repeat == 0) {
+        _game->getPlayer()->removeTween();
             //_pressed = false;
-            switch (event->key.keysym.sym ) {
-                case SDLK_UP:
-                case SDLK_w: _dir -= Vector2(0, -1); break;
-                case SDLK_DOWN:
-                case SDLK_s: _dir -= Vector2(0, 1); break;
-                case SDLK_LEFT:
-                case SDLK_a: _dir -= Vector2(-1, 0); break;
-                case SDLK_RIGHT:
-                case SDLK_d: _dir -= Vector2(1, 0); break;
+        switch (event->key.keysym.sym ) {
+            case SDLK_UP:
+            case SDLK_w: _dir -= Vector2(0, -1); break;
+            case SDLK_DOWN:
+            case SDLK_s: _dir -= Vector2(0, 1); break;
+            case SDLK_LEFT:
+            case SDLK_a: _dir -= Vector2(-1, 0); break;
+            case SDLK_RIGHT:
+            case SDLK_d: _dir -= Vector2(1, 0); break;
         }
     }
     

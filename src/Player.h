@@ -19,7 +19,14 @@ public:
     
     void removeSprite();
     
+    void moveUp();
+    void moveDown();
+    void moveRight();
+    void moveLeft();
+    void removeTween();
+    
 protected:
+    spTween moveTween;
     Vector2 correctDirection(Vector2 position, Vector2 direction);
     
     /**

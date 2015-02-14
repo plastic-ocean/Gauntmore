@@ -63,6 +63,8 @@ public:
     void pushUnit(spUnit unit);
     
     void switchMap();
+    
+    spPlayer getPlayer();
 
 protected:
     spMap _map;

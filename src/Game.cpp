@@ -233,3 +233,7 @@ Vector2 Game::getEntrance() {
     
     return location;
 }
+
+spPlayer Game::getPlayer() {
+    return _player;
+}
