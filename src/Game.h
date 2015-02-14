@@ -4,6 +4,7 @@
 #include "Tmx.h"
 
 using namespace oxygine;
+using namespace std;
 
 DECLARE_SMART(Player, spPlayer);
 DECLARE_SMART(Creature, spCreature);
@@ -40,7 +41,7 @@ public:
      *
      * @return the tile map.
      */
-    Tmx::Map *getMap();
+    Tmx::Map *getTileMap();
     
     /**
      * Gets tiles.
@@ -60,10 +61,14 @@ public:
      * @unit is the Unit to be added.
      */
     void pushUnit(spUnit unit);
+    
+    void switchMap();
 
 protected:
-    spMap map;
-    Tmx::Map *_map;
+    spMap _map;
+    map<int, spMap> _maps;
+    
+    Tmx::Map *_tileMap;
     std::vector<SDL_Rect> _tiles;
     
     spKeyboardInput _move;
@@ -80,11 +85,6 @@ protected:
 	void doUpdate(const UpdateState &us);
     
     /**
-     * Generates a map in a .tmx file.
-     */
-    void _generateTmxFile();
-    
-    /**
      * Reads the tile map description from the .tmx file and uses it to render the map.
      */
     void _renderMap();
@@ -93,4 +93,6 @@ protected:
      * Creates a vector of rectangles called tiles that is used to detect collisions.
      */
     void _createTiles();
+    
+    Vector2 getEntrance();
 };

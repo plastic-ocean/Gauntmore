@@ -1,14 +1,16 @@
-//
-//  GameScene.h
-//  gauntmore_macosx
-//
-//  Created by Keith Hamm on 2/13/15.
-//  Copyright (c) 2015 oxygine. All rights reserved.
-//
+#pragma once
+#include "Scene.h"
+#include "Game.h"
 
-#ifndef __gauntmore_macosx__GameScene__
-#define __gauntmore_macosx__GameScene__
-
-#include <stdio.h>
-
-#endif /* defined(__gauntmore_macosx__GameScene__) */
+DECLARE_SMART(GameScene, spGameScene);
+class GameScene: public Scene
+{
+public:
+    static spGameScene instance;
+    GameScene();
+    
+    
+private:
+    void onEvent(Event *ev);
+    spGame _game;
+};

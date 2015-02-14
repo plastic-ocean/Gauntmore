@@ -1,14 +1,39 @@
-//
-//  Scene.h
-//  gauntmore_macosx
-//
-//  Created by Keith Hamm on 2/13/15.
-//  Copyright (c) 2015 oxygine. All rights reserved.
-//
+#pragma once
+#include "oxygine-framework.h"
 
-#ifndef __gauntmore_macosx__Scene__
-#define __gauntmore_macosx__Scene__
+using namespace oxygine;
+using namespace std;
 
-#include <stdio.h>
-
-#endif /* defined(__gauntmore_macosx__Scene__) */
+DECLARE_SMART(Scene, spScene);
+class Scene: public EventDispatcher {
+    
+public:
+    Scene();
+    
+    //declare own Event type
+    //it would be fired when scene would completely hidden
+    class HiddenEvent: public Event
+    {
+    public:
+        //define unique int ID with makefourcc 'SHid' = SceneHidden
+        enum {EVENT = makefourcc('S', 'H', 'i', 'd')};
+        
+        HiddenEvent(Scene *scene_):Event(EVENT), scene(scene_){};
+        Scene *scene;
+    };
+    
+    void show();
+    
+    //fires HiddenEvent when scene completed hidden
+    void hide();
+    
+    void changeScene(spScene next);
+    spActor getView() const {return _view;}
+    
+protected:
+    virtual void _show(){}
+    virtual void _hide(){}
+    
+    void hidden(Event *ev);
+    spActor _view;
+};

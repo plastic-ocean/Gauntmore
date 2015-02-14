@@ -51,16 +51,16 @@ void Unit::setPosition(Vector2 position) {
 }
 
 
-void Unit::_move(const UpdateState &us) {
-    Vector2 dir;
-    if (_game->getMove()->getDirection(dir)) {
-        Vector2 pos = getPosition();
-        pos = pos + dir * (us.dt / 1000.0f) * 5;
-        if (!_game->detectCollision(pos.x, pos.y, 32, 32)) {
-            setPosition(pos);
-        }
-    }
-}
+//void Unit::_move(const UpdateState &us) {
+//    Vector2 dir;
+//    if (_game->getMove()->getDirection(dir)) {
+//        Vector2 pos = getPosition();
+//        pos = pos + dir * (us.dt / 1000.0f) * 5;
+//        if (!_game->detectCollision(pos.x, pos.y, 32, 32)) {
+//            setPosition(pos);
+//        }
+//    }
+//}
 
 
 /**

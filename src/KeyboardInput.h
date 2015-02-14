@@ -3,10 +3,11 @@
 
 using namespace oxygine;
 
+class Game;
 class KeyboardInput: public Actor {
     
 public:
-    KeyboardInput();
+    KeyboardInput(Game *game);
     
     /**
      * Gets and sets the direction Vector2 on keyboard input. Used by Player to move the sprite..
@@ -19,6 +20,7 @@ public:
 private:
     bool _pressed;
     Vector2 _dir;
+    Game *_game;
     
     /**
      * Sets the movement direction for the Player on valid keyboard input.

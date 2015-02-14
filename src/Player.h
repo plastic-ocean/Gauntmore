@@ -12,6 +12,11 @@ public:
      */
     void damage();
     
+    /**
+     * Add sprite to the game scene.
+     */
+    void addSprite();
+    
 protected:
     /**
      * Initializes the player's position and sprite. Called by Unit's init() method.

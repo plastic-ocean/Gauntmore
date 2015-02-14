@@ -1,9 +1,11 @@
-//
-//  GameScene.cpp
-//  gauntmore_macosx
-//
-//  Created by Keith Hamm on 2/13/15.
-//  Copyright (c) 2015 oxygine. All rights reserved.
-//
-
 #include "GameScene.h"
+
+spGameScene GameScene::instance;
+
+GameScene::GameScene() {
+    // Create game actor.
+    _game = new Game;
+    _game->init();
+    _game->attachTo(_view);
+    show();
+}

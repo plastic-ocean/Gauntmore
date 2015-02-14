@@ -29,22 +29,16 @@ void Game::init() {
 	setSize(getStage()->getSize());
 
 	// Create map
-    map = new Map(15);
+    _map = new Map(15);
 //    map->createMaze();
-    map->createHallMap();
+    _map->createHallMap();
     
     _renderMap();
     _createTiles();
     
 	// Create player
-    Vector2 location = map->getEntrance();
-    location.x *= 32;
-    location.y *= 32;
-    
-    std::cout << "location: " << location.x << ", " << location.y << std::endl;
-    
 	_player = new Player;
-	_player->init(location, this);
+	_player->init(getEntrance(), this);
     
     // TODO Create enemy creatures (with random loot!)
 //    for (int i = 0; i < **large number**; ++i) {
@@ -55,8 +49,7 @@ void Game::init() {
     // TODO Create chests (with even more random loot!)
 
 	// Handle input
-    _move = new KeyboardInput;
-    _move->attachTo(this);
+    _move = new KeyboardInput(this);
 }
 
 
@@ -95,8 +88,8 @@ bool Game::detectCollision(int x, int y, int h, int w) {
  *
  * @return the tile map.
  */
-Tmx::Map *Game::getMap() {
-    return _map;
+Tmx::Map *Game::getTileMap() {
+    return _tileMap;
 }
 
 
@@ -150,29 +143,21 @@ void Game::doUpdate(const UpdateState &us) {
 
 
 /**
- * Generates a map in a .tmx file.
- */
-void _generateTmxFile() {
-    
-}
-
-
-/**
  * Reads the tile map description from the .tmx file and uses it to render the map.
  */
 void Game::_renderMap() {
-    _map = new Tmx::Map();
+    _tileMap = new Tmx::Map();
     
-    _map->ParseFile("data/tmx/room.tmx");
+    _tileMap->ParseFile("data/tmx/room.tmx");
     
-    for (int i = 0; i < _map->GetNumLayers(); ++i) {
+    for (int i = 0; i < _tileMap->GetNumLayers(); ++i) {
         // Get a layer.
-        const Tmx::Layer *layer = _map->GetLayer(i);
+        const Tmx::Layer *layer = _tileMap->GetLayer(i);
         
         for (int x = 0; x < layer->GetWidth(); ++x) {
             for (int y = 0; y < layer->GetHeight(); ++y) {
                 int tilesetIndex = layer->GetTileTilesetIndex(x, y);
-                const Tmx::Tileset *tileset = _map->GetTileset(tilesetIndex);
+                const Tmx::Tileset *tileset = _tileMap->GetTileset(tilesetIndex);
                 std::string name = tileset->GetName();
                 int tileSize = tileset->GetImage()->GetWidth();
                 int drawX = x * tileSize;
@@ -194,15 +179,16 @@ void Game::_renderMap() {
  * Creates a vector of rectangles called tiles that is used to detect collisions.
  */
 void Game::_createTiles() {
+    _tiles.clear();
     // Build a vector of rectangles to represent the collidable tiles.
-    for (int i = 0; i < _map->GetNumLayers(); ++i) {
+    for (int i = 0; i < _tileMap->GetNumLayers(); ++i) {
         // Get a layer.
-        const Tmx::Layer *layer = _map->GetLayer(i);
+        const Tmx::Layer *layer = _tileMap->GetLayer(i);
         for (int x = 0; x < layer->GetWidth(); ++x) {
             for (int y = 0; y < layer->GetHeight(); ++y) {
                 
                 int tilesetIndex = layer->GetTileTilesetIndex(x, y);
-                const Tmx::Tileset *tileset = _map->GetTileset(tilesetIndex);
+                const Tmx::Tileset *tileset = _tileMap->GetTileset(tilesetIndex);
                 int tileSize = tileset->GetImage()->GetWidth();
                 std::string name = tileset->GetName();
                 
@@ -221,3 +207,26 @@ void Game::_createTiles() {
     }
 }
 
+
+void Game::switchMap() {
+    // TODO store the old map associate with exit
+    _map = new Map(15);
+    //    map->createMaze();
+    _map->createHallMap();
+    _renderMap();
+    _createTiles();
+    Vector2 location = _map->getEntrance();
+    location.x *= 32;
+    location.y *= 32;
+    _player->init(location, this);
+//    _move = new KeyboardInput(this);
+}
+
+
+Vector2 Game::getEntrance() {
+    Vector2 location = _map->getEntrance();
+    location.x *= 32;
+    location.y *= 32;
+    
+    return location;
+}

@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "KeyboardInput.h"
+#include "Game.h"
 #include "Input.h"
 #include "SDL.h"
 #include "SDL_keyboard.h"
@@ -10,7 +11,7 @@
 /**
  * Constructor.
  */
-KeyboardInput::KeyboardInput():_pressed(false), _dir(0,0) {
+KeyboardInput::KeyboardInput(Game *game):_game(game), _pressed(false), _dir(0,0) {
     Input::instance.addEventListener(Input::event_platform, CLOSURE(this, &KeyboardInput::_onEvent));
 }
 
@@ -64,9 +65,14 @@ void KeyboardInput::_onEvent(Event *ev) {
             // Right
             _dir = Vector2(20, 0);
         }
+        
+        if (state[SDL_SCANCODE_SPACE]) {
+            _game->switchMap();
+        }
     } else if (event->type == SDL_KEYUP) {
         _pressed = false;
         _dir = Vector2(0,0);
     }
+    
 }
 

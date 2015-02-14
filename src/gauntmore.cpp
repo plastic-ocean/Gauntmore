@@ -2,7 +2,7 @@
 #include "Stage.h"
 #include "DebugActor.h"
 #include "res.h"
-#include "Game.h"
+#include "GameScene.h"
 using namespace oxygine;
 
 
@@ -38,9 +38,7 @@ void gauntmore_init() {
     res::load();
     
     // Create game scene.
-    spGame game = new Game;
-    game->init();
-    game->attachTo(getStage());
+    GameScene::instance = new GameScene;
 }
 
 
@@ -48,6 +46,7 @@ void gauntmore_init() {
  * Free all allocated resources and delete all created actors.
  */
 void gauntmore_destroy() {
+    GameScene::instance = 0;
     res::free();
 }
 

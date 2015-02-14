@@ -2,6 +2,7 @@
 
 #include "Player.h"
 #include "Game.h"
+#include "KeyboardInput.h"
 #include "res.h"
 #include "Tmx.h"
 #include "SDL.h"
@@ -10,26 +11,19 @@
 /**
  * Constructor
  */
-Player::Player() {}
+Player::Player() {
+    // Initialize stats
+    _hp = 3;
+    _attack = 0;
+    _defense = 0;
+}
 
 
 /**
  * Initializes the player's position and sprite. Called by Unit's init() method.
  */
 void Player::_init() {
-    // Initialize stats
-    _hp = 3;
-    _attack = 0;
-    _defense = 0;
-    
-    // Sets the initial position in the game scene.
-//	_view->setPosition(_game->getSize() / 2);
-    
-    // Add sprite to the game scene.
-    _sprite = new Sprite;
-    _sprite->setResAnim(res::ui.getResAnim("human"));
-    _sprite->attachTo(_view);
-//    _sprite->setAnchor(Vector2(0.0f, 0.5f));
+    addSprite();
 }
 
 
@@ -47,6 +41,16 @@ void Player::damage() {
     }
 }
 
+/**
+ * Add sprite to the game scene.
+ */
+void Player::addSprite() {
+    _sprite = new Sprite;
+    _sprite->setResAnim(res::ui.getResAnim("human"));
+    _sprite->attachTo(_view);
+//    _sprite->setAnchor(Vector2(0.0f, 0.5f));
+}
+
 
 /**
  * Updates the player every frame.
@@ -54,5 +58,12 @@ void Player::damage() {
  * @us is the UpdateStatus sent by Unit's update method.
  */
 void Player::_update(const UpdateState &us) {
-    _move(us);
+    Vector2 dir;
+    if (_game->getMove()->getDirection(dir)) {
+        Vector2 pos = getPosition();
+        pos = pos + dir * (us.dt / 1000.0f) * 5;
+        if (!_game->detectCollision(pos.x, pos.y, 32, 32)) {
+            setPosition(pos);
+        }
+    }
 }
