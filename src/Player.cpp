@@ -61,9 +61,6 @@ void Player::setFacing( Vector2 dir ) {
     if ( dir.x < 0 ) _sprite->setResAnim(res::ui.getResAnim("lhero"));
     if ( dir.x > 0 ) _sprite->setResAnim(res::ui.getResAnim("rHero"));
     
-    
-
-    
 }
 /**
  * Updates the player every frame.
