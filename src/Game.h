@@ -8,6 +8,7 @@ using namespace std;
 
 DECLARE_SMART(Player, spPlayer);
 DECLARE_SMART(Creature, spCreature);
+DECLARE_SMART(Chest, spChest);
 DECLARE_SMART(KeyboardInput, spKeyboardInput)
 DECLARE_SMART(Unit, spUnit);
 DECLARE_SMART(Map, spMap);
@@ -18,6 +19,8 @@ class Game: public Actor {
 public:
 	Game();
     ~Game();
+    
+    spChest _chest;
     
     /**
      * Initialzes the game. Creates the map, the player, the monsters, the static objects
@@ -75,6 +78,9 @@ protected:
     
     spKeyboardInput _move;
     spPlayer _player;
+    
+    
+
     
     typedef std::list<spUnit> units;
     units _units;

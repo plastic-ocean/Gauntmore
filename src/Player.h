@@ -7,10 +7,16 @@ class Player: public Unit {
 public:
 	Player();
     
+    enum Facings {up, right, down, left};
+    Facings facing;
+    
     /**
      * Reduces the player's hit points.
      */
     void damage();
+    
+    
+    void interact();
     
     /**
      * Add sprite to the game scene.

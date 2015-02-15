@@ -7,7 +7,7 @@
 #include "SDL_keyboard.h"
 #include "SDL_events.h"
 #include "Player.h"
-
+#include "chest.h"
 
 /**
  * Constructor.
@@ -61,7 +61,9 @@ void KeyboardInput::_onEvent(Event *ev) {
                 _game->getPlayer()->moveRight();
                 break;
             }
-            case SDLK_SPACE: _game->switchMap();
+            case SDLK_SPACE:
+                _game->_chest->interact();
+                break;
         }
     }
     if (event->type == SDL_KEYUP && event->key.repeat == 0) {

@@ -8,6 +8,8 @@
 #include "SDL.h"
 
 
+
+
 /**
  * Constructor
  */
@@ -17,7 +19,10 @@ Player::Player() {
     _attack = 0;
     _defense = 0;
     _hasTween = false;
+    facing = down;
 }
+
+
 
 
 /**
@@ -41,6 +46,24 @@ void Player::damage() {
     }
 }
 
+void Player::interact(){
+//    typedef std::list<spUnit> units;
+//    
+//    // Iterate through the unit list and call their update method. Then check for death.
+//    for (units::iterator i = _units.begin(); i != _units.end(); ) {
+//        spUnit unit = *i;
+//        unit->update(us);
+//        
+//        if (unit->isDead()) {
+//            // If it is dead remove it from list.
+//            i = _units.erase(i);
+//        } else {
+//            ++i;
+//        }
+//    }
+//    
+    
+}
 
 Vector2 Player::correctDirection(Vector2 position, Vector2 direction) {
     int newX = position.x + direction.x * 5;
@@ -65,10 +88,24 @@ void Player::addSprite() {
 
 
 void Player::setFacing( Vector2 dir ) {
-    if ( dir.y > 0 ) _sprite->setResAnim(res::ui.getResAnim("player_front"));
-    if ( dir.y < 0 ) _sprite->setResAnim(res::ui.getResAnim("player_back"));
-    if ( dir.x < 0 ) _sprite->setResAnim(res::ui.getResAnim("player_left"));
-    if ( dir.x > 0 ) _sprite->setResAnim(res::ui.getResAnim("player_right"));
+    if ( dir.y > 0 ) {
+        facing = down;
+        _sprite->setResAnim(res::ui.getResAnim("player_front"));
+    }
+    if ( dir.y < 0 ) {
+        facing = up;
+        _sprite->setResAnim(res::ui.getResAnim("player_back"));
+    }
+        
+    if ( dir.x < 0 ) {
+        facing = left;
+        _sprite->setResAnim(res::ui.getResAnim("player_left"));
+    }
+        
+    if ( dir.x > 0 ) {
+        facing = right;
+        _sprite->setResAnim(res::ui.getResAnim("player_right"));
+    }
 }
 
 void Player::moveUp() {
@@ -99,7 +136,9 @@ void Player::_checkTween() {
 }
 
 void Player::removeTween() {
-    _sprite->removeTween(_moveTween);
+    if (_hasTween) {
+        _sprite->removeTween(_moveTween);
+    }
     _hasTween = false;
 }
 

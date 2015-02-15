@@ -3,6 +3,7 @@
 #include "Game.h"
 #include "Player.h"
 #include "Creature.h"
+#include "Chest.h"
 #include "res.h"
 #include "Tmx.h"
 #include "KeyboardInput.h"
@@ -39,6 +40,13 @@ void Game::init() {
 	// Create player
 	_player = new Player;
 	_player->init(getEntrance(), this);
+    
+    // Create chest
+    Vector2 chestLocation = Vector2(((32 * 15) / 2) + 1, (32 * 15) / 2);
+    
+    _chest = new Chest;
+    _chest->init(chestLocation, this);
+ //   _chest->interact();
     
     // TODO Create enemy creatures (with random loot!)
 //    for (int i = 0; i < **large number**; ++i) {
@@ -78,7 +86,6 @@ bool Game::detectCollision(int x, int y, int h, int w) {
             isCollision = true;
         }
     }
-    
     return isCollision;
 }
 
@@ -148,7 +155,7 @@ void Game::doUpdate(const UpdateState &us) {
 void Game::_renderMap() {
     _tileMap = new Tmx::Map();
     
-    _tileMap->ParseFile("data/tmx/room.tmx");
+    _tileMap->ParseFile("data/tmx/room01.tmx");
     
     for (int i = 0; i < _tileMap->GetNumLayers(); ++i) {
         // Get a layer.

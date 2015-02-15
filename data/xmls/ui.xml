@@ -8,6 +8,7 @@
         <image file="floor2.png" />
         <image file="wall2.png" />
         <image file="human.png" />
+        <image file="chestClosed.png" />
         
         <image file="player_front.png" />
         <image file="player_back.png" />
