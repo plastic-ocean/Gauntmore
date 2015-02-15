@@ -31,16 +31,6 @@ Room::Room(int type, int size):_size(size), _wallListSize(0), _floorListSize(0) 
 }
 
 /**
-* Set map entrance.
-*
-* @entrance is the map location to set.
-*/
-void Room::setEntrance(int row, int col) {
-    _entrance.x = col;
-    _entrance.y = row;
-}
-
-/**
 * Creates a room map.
 *
 * @type is the room type.
@@ -88,6 +78,17 @@ void Room::printMap() {
     }
     cout << endl;
 }
+
+
+///**
+//* Set map entrance.
+//*
+//* @entrance is the map location to set.
+//*/
+//void Room::setEntrance(int row, int col) {
+//    _entrance.x = col;
+//    _entrance.y = row;
+//}
 
 /**
 * Creates a 2D map array using Prim's algorithm for minimum spanning trees.
@@ -196,8 +197,8 @@ void Room::_createHallMap(int exits) {
 
     int startEdge = _chooseEntrance();
     Vector2 location = getEntrance();
-    int col = static_cast<int>(location.x);
     int row = static_cast<int>(location.y);
+    int col = static_cast<int>(location.x);
     int x = 0;
     int y = 0;
     bool column = false;
@@ -459,13 +460,12 @@ int Room::_chooseEntrance() {
     }
 
     // Add the floor cell to the map list.
-    // Add the floor cell to the map list.
     _floorList[_floorListSize][0] = row;
     _floorList[_floorListSize][1] = col;
     _floorListSize++;
 
     // Set entrance.
-    setEntrance(row, col);
+    setEntrance(Vector2(col, row));
 
     return edge;
 }

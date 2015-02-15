@@ -38,10 +38,9 @@ public:
         return _entrance;
     }
 
-    void setEntrance(int row, int col);
-//    void setEntrance(Vector2 entrance) {
-//        _entrance = entrance;
-//    }
+    void setEntrance(Vector2 entrance) {
+        _entrance = entrance;
+    }
 
     Tmx::Map *getTileMap() {
         return _tileMap;
@@ -58,14 +57,6 @@ public:
     void setTiles(vector<SDL_Rect> tiles) {
         _tiles = tiles;
     }
-
-//    vector<vector<char>> getMap() {
-//        return _map;
-//    }
-
-//    void setMap(vector<vector<char>> map) {
-//        _map = map;
-//    }
 
     Units getUnits() {
         return _units;
