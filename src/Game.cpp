@@ -43,7 +43,7 @@ void Game::init() {
     _createTiles();
     
 	// Create player
-	_player = new Player;
+	_player = new Player(3, 1, 1);
 	_player->init(_getEntrance(), this);
     
     // TODO Create enemy creatures (with random loot!)
@@ -225,10 +225,14 @@ void Game::switchMap() {
     _createTiles();
 
     // Setup player
-    _player->detachUnit();
-    _player->attachUnit();
-    _player->addSprite();
-    _player->setPosition(_getEntrance());
+    spPlayer oldPlayer = _player;
+    _player = new Player(oldPlayer->getHp(), oldPlayer->getAttack(), oldPlayer->getDefense());
+    _player->init(_getEntrance(), this);
+
+//    _player->detachUnit();
+//    _player->attachUnit();
+//    _player->addSprite();
+//    _player->setPosition(_getEntrance());
 }
 
 

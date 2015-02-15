@@ -5,7 +5,7 @@ DECLARE_SMART(Player, spPlayer);
 class Player: public Unit {
     
 public:
-	Player();
+	Player(int hp, int attack, int defense);
     
     // up = 0, right = 1, down = 2, left = 3
     enum Facings {up, right, down, left};
@@ -20,8 +20,6 @@ public:
      * Add sprite to the game scene.
      */
     void addSprite();
-    
-    void removeSprite();
     
     void moveUp();
     void moveDown();

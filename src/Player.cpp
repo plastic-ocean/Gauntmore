@@ -4,17 +4,15 @@
 #include "Game.h"
 #include "KeyboardInput.h"
 #include "res.h"
-#include "tmx/Tmx.h"
-#include "SDL.h"
 
 /**
  * Constructor
  */
-Player::Player() {
+Player::Player(int hp, int attack, int defense) {
     // Initialize stats
-    _hp = 3;
-    _attack = 0;
-    _defense = 0;
+    _hp = hp;
+    _attack = attack;
+    _defense = defense;
     _hasTween = false;
     facing = down;
 }

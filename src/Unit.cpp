@@ -12,7 +12,7 @@ Unit::Unit():_game(0), _dead(false) {}
 /**
  * Initializes a unit.
  *
- * @pos is the units positon
+ * @pos is the units position
  * @game is the game.
  */
 void Unit::init(const Vector2 &pos, Game *game) {

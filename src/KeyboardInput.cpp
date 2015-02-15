@@ -64,6 +64,8 @@ void KeyboardInput::_onEvent(Event *ev) {
             case SDLK_RETURN:
                 _game->switchMap();
                 break;
+            default:
+                break;
         }
     }
     if (event->type == SDL_KEYUP && event->key.repeat == 0) {
@@ -78,6 +80,7 @@ void KeyboardInput::_onEvent(Event *ev) {
             case SDLK_a: _dir -= Vector2(-1, 0); break;
             case SDLK_RIGHT:
             case SDLK_d: _dir -= Vector2(1, 0); break;
+            default: break;
         }
     }
     

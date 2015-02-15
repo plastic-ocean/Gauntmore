@@ -47,6 +47,18 @@ public:
      * @returns true if unit is dead and false if it is not.
      */
     const bool isDead() {return _dead;}
+
+    int getHp() {
+        return _hp;
+    }
+
+    int getAttack() {
+        return _attack;
+    }
+
+    int getDefense() {
+        return _defense;
+    }
     
     /**
      * Reduces the Unit's hit points. Overload this for each child.
@@ -60,8 +72,9 @@ protected:
     
     // A pointer to the game.
     Game *_game;
-    
-    // Stats
+
+protected:
+// Stats
     int _hp;
     int _attack;
     int _defense;
