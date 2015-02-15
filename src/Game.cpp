@@ -35,8 +35,7 @@ void Game::init() {
 
 	// Create map
     _map = new Map(15);
-
-    _units = (list<spUnit>) _map->getRoom()->getUnits();
+    _setUnits();
 //    map->createMaze();
 //    _map->createHallMap(3);
     
@@ -45,7 +44,7 @@ void Game::init() {
     
 	// Create player
 	_player = new Player;
-	_player->init(getEntrance(), this);
+	_player->init(_getEntrance(), this);
     
     // TODO Create enemy creatures (with random loot!)
 //    for (int i = 0; i < **large number**; ++i) {
@@ -115,6 +114,10 @@ std::vector<SDL_Rect> Game::getTiles() {
  */
 spKeyboardInput Game::getMove() {
     return _move;
+}
+
+void Game::_setUnits() {
+    _units = static_cast<list<spUnit>>(_map->getRoom()->getUnits());
 }
 
 
@@ -217,6 +220,7 @@ void Game::switchMap() {
 //    _map->createHallMap(1);
 
     _map->changeRoom(3);
+    _setUnits();
     _renderMap();
     _createTiles();
 
@@ -224,11 +228,11 @@ void Game::switchMap() {
     _player->detachUnit();
     _player->attachUnit();
     _player->addSprite();
-    _player->setPosition(getEntrance());
+    _player->setPosition(_getEntrance());
 }
 
 
-Vector2 Game::getEntrance() {
+Vector2 Game::_getEntrance() {
     Vector2 location = _map->getRoom()->getEntrance();
     location.x *= 32;
     location.y *= 32;

@@ -101,6 +101,8 @@ protected:
      * Creates a vector of rectangles called tiles that is used to detect collisions.
      */
     void _createTiles();
+
+    void _setUnits();
     
-    Vector2 getEntrance();
+    Vector2 _getEntrance();
 };
