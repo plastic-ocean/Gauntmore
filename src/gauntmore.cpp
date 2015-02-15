@@ -35,7 +35,7 @@ int mainloop() {
  */
 void gauntmore_init() {
     // Load resources.
-    res::load();
+    loadResources();
     
     // Create game scene.
     GameScene::instance = new GameScene;
@@ -47,7 +47,7 @@ void gauntmore_init() {
  */
 void gauntmore_destroy() {
     GameScene::instance = 0;
-    res::free();
+    freeResources();
 }
 
 

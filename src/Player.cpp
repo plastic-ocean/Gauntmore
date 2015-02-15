@@ -58,7 +58,7 @@ Vector2 Player::correctDirection(Vector2 position, Vector2 direction) {
  */
 void Player::addSprite() {
     _sprite = new Sprite;
-    _sprite->setResAnim(res::ui.getResAnim("player_front"));
+    _sprite->setResAnim(resources.getResAnim("player_front"));
     _sprite->attachTo(_view);
 //    _sprite->setAnchor(Vector2(0.0f, 0.5f));
 }
@@ -66,41 +66,41 @@ void Player::addSprite() {
 
 void Player::setFacing( Vector2 dir ) {
     if ( dir.y > 0 ) {
-        _sprite->setResAnim(res::ui.getResAnim("player_front"));
+        _sprite->setResAnim(resources.getResAnim("player_front"));
         facing = down;
     }
     if ( dir.y < 0 ) {
-        _sprite->setResAnim(res::ui.getResAnim("player_back"));
+        _sprite->setResAnim(resources.getResAnim("player_back"));
         facing = up;
     }
     if ( dir.x < 0 ) {
-        _sprite->setResAnim(res::ui.getResAnim("player_left"));
+        _sprite->setResAnim(resources.getResAnim("player_left"));
         facing = left;
     }
     if ( dir.x > 0 ) {
-        _sprite->setResAnim(res::ui.getResAnim("player_right"));
+        _sprite->setResAnim(resources.getResAnim("player_right"));
         facing = right;
     }
 }
 
 void Player::moveUp() {
     _checkTween();
-    _moveTween = _sprite->addTween(TweenAnim(res::ui.getResAnim("player_move_back")), 300, -1);
+    _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("player_move_back")), 300, -1);
 }
 
 void Player::moveDown() {
     _checkTween();
-    _moveTween = _sprite->addTween(TweenAnim(res::ui.getResAnim("player_move_front")), 300, -1);
+    _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("player_move_front")), 300, -1);
 }
 
 void Player::moveRight() {
     _checkTween();
-    _moveTween = _sprite->addTween(TweenAnim(res::ui.getResAnim("player_move_right")), 300, -1);
+    _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("player_move_right")), 300, -1);
 }
 
 void Player::moveLeft() {
     _checkTween();
-    _moveTween = _sprite->addTween(TweenAnim(res::ui.getResAnim("player_move_left")), 300, -1);
+    _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("player_move_left")), 300, -1);
 }
 
 void Player::_checkTween() {

@@ -163,7 +163,7 @@ void Game::_renderMap() {
                 int drawY = y * tileSize;
                 // Draw the tile.
                 spSprite sprite = new Sprite;
-                sprite->setResAnim(res::ui.getResAnim(name));
+                sprite->setResAnim(resources.getResAnim(name));
                 sprite->setX(drawX);
                 sprite->setY(drawY);
                 sprite->attachTo(this);

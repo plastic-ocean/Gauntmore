@@ -1,19 +1,17 @@
 #include "res.h"
 
-namespace res {
-	Resources ui;
-    
-    /**
-     * Loads the resources.
-     */
-	void load() {
-		ui.loadXML("xmls/ui.xml");
-	}
-    
-    /**
-     * Unloads the resources.
-     */
-	void free() {
-		ui.free();
-	}
+Resources resources;
+
+/**
+* Loads the resources.
+*/
+void loadResources() {
+	resources.loadXML("xmls/ui.xml");
+}
+
+/**
+* Unloads the resources.
+*/
+void freeResources() {
+	resources.free();
 }
