@@ -1,7 +1,7 @@
 #pragma once
-#include "tinyxml2.h"
 #include "oxygine-framework.h"
-#include "Tmx.h"
+#include "tmx/Tmx.h"
+#include "tmx/tinyxml2.h"
 
 using namespace oxygine;
 using namespace std;
@@ -10,6 +10,7 @@ DECLARE_SMART(Player, spPlayer);
 DECLARE_SMART(Creature, spCreature);
 DECLARE_SMART(KeyboardInput, spKeyboardInput)
 DECLARE_SMART(Unit, spUnit);
+DECLARE_SMART(Room, spRoom)
 DECLARE_SMART(Map, spMap);
 DECLARE_SMART(Game, spGame);
 
@@ -18,7 +19,9 @@ class Game: public Actor {
 public:
 	Game();
     ~Game();
-    
+
+    typedef list<spUnit> Units;
+
     /**
      * Initialzes the game. Creates the map, the player, the monsters, the static objects
      * and puts them in the game world.
@@ -48,7 +51,7 @@ public:
      *
      * @return the tiles vector<SDL_Rect>.
      */
-    std::vector<SDL_Rect> getTiles();
+    vector<SDL_Rect> getTiles();
     
     /**
      * Gets the keyboard input handler.
@@ -66,18 +69,21 @@ public:
     
     spPlayer getPlayer();
 
+    spMap getMap();
+    
+    Units getUnits();
+
 protected:
     spMap _map;
     map<int, spMap> _maps;
     
     Tmx::Map *_tileMap;
-    std::vector<SDL_Rect> _tiles;
+    vector<SDL_Rect> _tiles;
     
     spKeyboardInput _move;
     spPlayer _player;
-    
-    typedef std::list<spUnit> units;
-    units _units;
+
+    Units _units;
     
     /**
      * Updates the player each frame. A virtual method of Actor it is being called each frame.

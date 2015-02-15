@@ -2,11 +2,16 @@
 
 #include "Game.h"
 #include "Player.h"
-#include "Creature.h"
 #include "res.h"
-#include "Tmx.h"
+#include "tmx/Tmx.h"
 #include "KeyboardInput.h"
 #include "Map.h"
+#include "Unit.h"
+#include "Room.h"
+
+
+typedef list<spUnit> Units;
+
 
 /**
  * Constructor.
@@ -30,8 +35,10 @@ void Game::init() {
 
 	// Create map
     _map = new Map(15);
+
+    _units = (list<spUnit>) _map->getRoom()->getUnits();
 //    map->createMaze();
-    _map->createHallMap(3);
+//    _map->createHallMap(3);
     
     _renderMap();
     _createTiles();
@@ -43,7 +50,7 @@ void Game::init() {
     // TODO Create enemy creatures (with random loot!)
 //    for (int i = 0; i < **large number**; ++i) {
 //        spCreature creature = new Creature;
-//        creature->init(Vector2(**calulate starting postion**, this);
+//        creature->init(Vector2(**calculate starting position**, this);
 //    }
     
     // TODO Create chests (with even more random loot!)
@@ -112,23 +119,13 @@ spKeyboardInput Game::getMove() {
 
 
 /**
- * Adds unit to the back of the units list.
- *
- * @unit is the Unit to be added.
- */
-void Game::pushUnit(spUnit unit) {
-    _units.push_back(unit);
-}
-
-
-/**
  * Updates the Units each frame. A virtual method of Actor it is being called each frame.
  *
  * @us is the UpdateStatus sent by the global update method.
  */
 void Game::doUpdate(const UpdateState &us) {
     // Iterate through the unit list and call their update method. Then check for death.
-    for (units::iterator i = _units.begin(); i != _units.end(); ) {
+    for (Units::iterator i = _units.begin(); i != _units.end(); ) {
         spUnit unit = *i;
         unit->update(us);
         
@@ -148,7 +145,9 @@ void Game::doUpdate(const UpdateState &us) {
 void Game::_renderMap() {
     _tileMap = new Tmx::Map();
     
-    _tileMap->ParseFile("data/tmx/room.tmx");
+    _tileMap->ParseFile("tmx/room.tmx");
+
+    _map->getRoom()->setTileMap(_tileMap);
     
     for (int i = 0; i < _tileMap->GetNumLayers(); ++i) {
         // Get a layer.
@@ -213,12 +212,14 @@ void Game::switchMap() {
     // TODO store the old map,
     // associate with exit of old map and entrance of new
     // create custom class or struct to hold all three
-    _map = new Map(15);
-//    map->createMaze();
-    _map->createHallMap(1);
+//    _map = new Map(15);
+////    map->createMaze();
+//    _map->createHallMap(1);
+
+    _map->changeRoom(3);
     _renderMap();
     _createTiles();
-    
+
     // Setup player
     _player->detachUnit();
     _player->attachUnit();
@@ -228,13 +229,31 @@ void Game::switchMap() {
 
 
 Vector2 Game::getEntrance() {
-    Vector2 location = _map->getEntrance();
+    Vector2 location = _map->getRoom()->getEntrance();
     location.x *= 32;
     location.y *= 32;
     
     return location;
 }
 
+
+/**
+ * Adds unit to the back of the units list.
+ *
+ * @unit is the Unit to be added.
+ */
+void Game::pushUnit(spUnit unit) {
+    _units.push_back(unit);
+}
+
 spPlayer Game::getPlayer() {
     return _player;
+}
+
+spMap Game::getMap() {
+    return _map;
+}
+
+list<spUnit> Game::getUnits() {
+    return _units;
 }

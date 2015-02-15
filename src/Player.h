@@ -7,6 +7,10 @@ class Player: public Unit {
 public:
 	Player();
     
+    // up = 0, right = 1, down = 2, left = 3
+    enum Facings {up, right, down, left};
+    Facings facing;
+    
     /**
      * Reduces the player's hit points.
      */

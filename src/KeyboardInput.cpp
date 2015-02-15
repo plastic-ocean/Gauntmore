@@ -33,35 +33,37 @@ bool KeyboardInput::getDirection(Vector2 &dir) const {
 void KeyboardInput::_onEvent(Event *ev) {
     SDL_Event *event = (SDL_Event*) ev->userData;
     _pressed = true;
-    //if key is pressed:
+    // if key is pressed:
     if (event->type == SDL_KEYDOWN && event->key.repeat == 0) {
-        //adjust velocity
+        // adjust velocity
         switch (event->key.keysym.sym ) {
             case SDLK_UP:
-            case SDLK_w:{
+            case SDLK_w:
                 _dir += Vector2(0, -1);
                 _game->getPlayer()->moveUp();
                 break;
-            }
             case SDLK_DOWN:
-            case SDLK_s: { //for anim testing
+            case SDLK_s:
+                // for anim testing
                 _dir += Vector2(0, 1);
                 _game->getPlayer()->moveDown();
                 break;
-            }
             case SDLK_LEFT:
-            case SDLK_a: {
+            case SDLK_a:
                 _dir += Vector2(-1, 0);
                 _game->getPlayer()->moveLeft();
                  break;
-            }
             case SDLK_RIGHT:
-            case SDLK_d: {
+            case SDLK_d:
                 _dir += Vector2(1, 0);
                 _game->getPlayer()->moveRight();
                 break;
-            }
-            case SDLK_SPACE: _game->switchMap();
+            case SDLK_SPACE:
+                _game->switchMap();
+                break;
+            case SDLK_RETURN:
+                _game->switchMap();
+                break;
         }
     }
     if (event->type == SDL_KEYUP && event->key.repeat == 0) {

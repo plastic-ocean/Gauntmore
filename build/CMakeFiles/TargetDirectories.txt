@@ -1,0 +1,2 @@
+/Users/Keith/Desktop/cis330/Gauntmore/build/oxygine-framework/CMakeFiles/oxygine-framework.dir
+/Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles/gauntmore.dir

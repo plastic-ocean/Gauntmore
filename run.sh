@@ -3,14 +3,14 @@
 mkdir build
 cd build
 
-#generate cmake project in the "build" folder
+# Generate cmake project in the "build" folder
 cmake ..
 
-#build it
+# Make it
 make
 
-#move to working data folder with resources
-cd ../../data
+# Copy data folder's contents to build
+cp -rf ../data/*
 
-#run executable
-./../proj.cmake/build/${PROJECT}
+# Run executable
+./gauntmore

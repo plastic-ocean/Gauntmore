@@ -4,9 +4,8 @@
 #include "Game.h"
 #include "KeyboardInput.h"
 #include "res.h"
-#include "Tmx.h"
+#include "tmx/Tmx.h"
 #include "SDL.h"
-
 
 /**
  * Constructor
@@ -17,6 +16,7 @@ Player::Player() {
     _attack = 0;
     _defense = 0;
     _hasTween = false;
+    facing = down;
 }
 
 
@@ -43,11 +43,11 @@ void Player::damage() {
 
 
 Vector2 Player::correctDirection(Vector2 position, Vector2 direction) {
-    int newX = position.x + direction.x * 5;
-    int newY = position.y + direction.y * 5;
+    int newX = static_cast<int>(position.x) + static_cast<int>(direction.x) * 5;
+    int newY = static_cast<int>(position.y) + static_cast<int>(direction.y) * 5;
     
-    if ( _game->detectCollision(newX, position.y, 32, 32 ) ) direction.x = 0;
-    if ( _game->detectCollision(position.x, newY, 32, 32 ) ) direction.y = 0;
+    if ( _game->detectCollision(newX, static_cast<int>(position.y), 32, 32 ) ) direction.x = 0;
+    if ( _game->detectCollision(static_cast<int>(position.x), newY, 32, 32 ) ) direction.y = 0;
     
     return direction;
 }
@@ -65,10 +65,22 @@ void Player::addSprite() {
 
 
 void Player::setFacing( Vector2 dir ) {
-    if ( dir.y > 0 ) _sprite->setResAnim(res::ui.getResAnim("player_front"));
-    if ( dir.y < 0 ) _sprite->setResAnim(res::ui.getResAnim("player_back"));
-    if ( dir.x < 0 ) _sprite->setResAnim(res::ui.getResAnim("player_left"));
-    if ( dir.x > 0 ) _sprite->setResAnim(res::ui.getResAnim("player_right"));
+    if ( dir.y > 0 ) {
+        _sprite->setResAnim(res::ui.getResAnim("player_front"));
+        facing = down;
+    }
+    if ( dir.y < 0 ) {
+        _sprite->setResAnim(res::ui.getResAnim("player_back"));
+        facing = up;
+    }
+    if ( dir.x < 0 ) {
+        _sprite->setResAnim(res::ui.getResAnim("player_left"));
+        facing = left;
+    }
+    if ( dir.x > 0 ) {
+        _sprite->setResAnim(res::ui.getResAnim("player_right"));
+        facing = right;
+    }
 }
 
 void Player::moveUp() {
@@ -99,7 +111,9 @@ void Player::_checkTween() {
 }
 
 void Player::removeTween() {
-    _sprite->removeTween(_moveTween);
+    if (_hasTween) {
+        _sprite->removeTween(_moveTween);
+    }
     _hasTween = false;
 }
 

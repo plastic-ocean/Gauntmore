@@ -4,7 +4,7 @@
 #include "pixel.h"
 
 namespace oxygine
-{	
+{
 	enum TextureFormat
 	{
 		TF_UNDEFINED,
@@ -47,8 +47,6 @@ namespace oxygine
 	TextureFormat string2TextureFormat(const char *str);
 	bool isCompressedFormat(TextureFormat tf);
 
-	
-
 	class ImageData
 	{
 	public:
@@ -56,7 +54,7 @@ namespace oxygine
 		ImageData(int W, int H, int Pitch, TextureFormat Format, void *Data = 0);
 		ImageData(const ImageData &b, void *Data);
 		~ImageData();
-		 
+
 		ImageData getRect(const Rect &r) const;
 		unsigned char *getPixelPtr(int x, int y) const;
 
