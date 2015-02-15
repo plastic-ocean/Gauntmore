@@ -33,7 +33,7 @@ int mainloop() {
 /**
  * Load resources, initialize the game, and attach it to the stage.
  */
-void gauntmore_init() {
+void initGauntmore() {
     // Load resources.
     loadResources();
     
@@ -45,7 +45,7 @@ void gauntmore_init() {
 /**
  * Free all allocated resources and delete all created actors.
  */
-void gauntmore_destroy() {
+void destroyGauntmore() {
     GameScene::instance = 0;
     freeResources();
 }
@@ -74,8 +74,8 @@ int main(int argc, char* argv[]) {
     
     // DebugActor is a helper actor node. It shows FPS, memory usage and other useful stuff.
     //DebugActor::show();
-    
-    gauntmore_init();
+
+    initGauntmore();
     
     // Start the main loop.
     while (1) {
@@ -88,8 +88,8 @@ int main(int argc, char* argv[]) {
     
     // Dump all created objects into log. All created and not freed resources are displayed.
     ObjectBase::dumpCreatedObjects();
-    
-    gauntmore_destroy();
+
+    destroyGauntmore();
     
     // Releases all internal components and Stage
     core::release();
