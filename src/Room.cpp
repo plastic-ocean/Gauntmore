@@ -1,15 +1,20 @@
 #include <iostream>
 #include <fstream>
+#include <random>
+
 #include "Room.h"
-#include "Unit.h"
 
 using namespace std;
 
 enum RoomType {deadend, straight, turn, branch, split, intersection, maze};
 
-Room::Room(int type, int size):_size(size), _wallListSize(0), _floorListSize(0) {
+Room::Room() {}
+
+Room::Room(int type, int size, vector<bool> exitBools):
+        _type(type), _size(size), _wallListSize(0), _floorListSize(0), _exitBools(exitBools) {
     // Seed rand.
-    srand((unsigned int) time(NULL));
+    random_device randomDevice;
+    srand(randomDevice.operator()());
 
     // Initialize the map.
     for (int i = 0; i < _size; ++i) {
@@ -27,7 +32,9 @@ Room::Room(int type, int size):_size(size), _wallListSize(0), _floorListSize(0) 
         _floorList[i][1] = 0;
     }
 
-    createRoom(type);
+    // check exitBools to find out where exits should be located
+
+    createRoom();
 }
 
 /**
@@ -35,23 +42,28 @@ Room::Room(int type, int size):_size(size), _wallListSize(0), _floorListSize(0) 
 *
 * @type is the room type.
 */
-void Room::createRoom(int type) {
-    switch(type) {
+void Room::createRoom() {
+    switch(_type) {
         case deadend:
             //
-            _createHallMap(0);
+            _createDeadEnd();
+            break;
         case straight:
             // |
             _createHallMap(1);
             break;
         case turn:
             // |-
+            _createTurn();
+            break;
         case branch:
             // L
             _createHallMap(2);
             break;
         case split:
             // T
+            _createSplit();
+            break;
         case intersection:
             // +
             _createHallMap(3);
@@ -63,20 +75,9 @@ void Room::createRoom(int type) {
         default:
             break;
     }
-}
 
-
-/**
-* Prints the room map.
-*/
-void Room::printMap() {
-    for (int i = 0; i < _size; ++i) {
-        for (int j = 0; j < _size; ++j) {
-            cout << _map[i][j];
-        }
-        cout << endl;
-    }
-    cout << endl;
+    createTileMap();
+//    printMap();
 }
 
 
@@ -85,7 +86,7 @@ void Room::printMap() {
 //*
 //* @entrance is the map location to set.
 //*/
-//void Room::setEntrance(int row, int col) {
+//void Room::_setEntrance(int row, int col) {
 //    _entrance.x = col;
 //    _entrance.y = row;
 //}
@@ -94,6 +95,7 @@ void Room::printMap() {
 * Creates a 2D map array using Prim's algorithm for minimum spanning trees.
 */
 void Room::_createMaze() {
+    srand(static_cast<unsigned int>(time(0)));
     int edge = _chooseEntrance();
     int index = 0;
     vector<int> wall;
@@ -181,8 +183,6 @@ void Room::_createMaze() {
     }
 
     _chooseExit(edge);
-
-    _createTileMap();
 }
 
 
@@ -194,6 +194,9 @@ void Room::_createMaze() {
 void Room::_createHallMap(int exits) {
     // If not coming from another room use the same method to choose the starting location,
     // else choose the same wall as the last room's exit.
+    // TODO change entrance location for branch vs split
+    // split starts on the hall leading to the T
+    // branch starts on the straight hall with the branch off the side
 
     int startEdge = _chooseEntrance();
     Vector2 location = getEntrance();
@@ -358,9 +361,166 @@ void Room::_createHallMap(int exits) {
             _drawHallCol(exitCol, 0, _size);
         }
     }
+}
 
-    _createTileMap();
-    printMap();
+
+/**
+* Creates a hall ending in a room with no other exits.
+*/
+void Room::_createDeadEnd() {
+    int startEdge = _getRand(0, 3);
+    int column = _getRand(1, _size - 5);
+    int width = _getRand(column + 3, _size - 2);
+    int row = _getRand(1, _size - 5);
+    int height = _getRand(row + 3, _size - 2);
+    int hall = 0;
+
+    // Decide direction for adding new cells.
+    // #0#
+    // 3#1
+    // #2#
+    switch (startEdge) {
+        case 0:
+            // Top
+            hall = _getRand(column, width);
+            _drawHallCol(hall, 0, row);
+            setEntrance(Vector2(hall, 1));
+            break;
+        case 1:
+            // Right
+            hall = _getRand(row, height);
+            _drawHallRow(hall, width, _size);
+            setEntrance(Vector2(_size - 2, hall));
+            break;
+        case 2:
+            // Bottom
+            hall = _getRand(column, width);
+            _drawHallCol(hall, height, _size);
+            setEntrance(Vector2(hall, _size - 2));
+            break;
+        case 3:
+            // Left
+            hall = _getRand(row, height);
+            _drawHallRow(hall, 0, column);
+            setEntrance(Vector2(1, hall));
+            break;
+        default:
+            break;
+    }
+
+    _drawRoom(row, column, height, width);
+}
+
+
+/**
+* Creates a hall ending in a room with no other exits.
+*/
+void Room::_createTurn() {
+    // edges: top 0, right 1, down 2, left 3
+    int startEdge = _getRand(0, 3);
+
+    // turns: top/right 0, bottom/left 1
+    int turnDirection = _getRand(0, 1);
+
+    int column = _getRand(1, _size - 5);
+    int row = _getRand(1, _size - 5);
+
+    switch (startEdge) {
+        case 0: // Top edge
+            switch (turnDirection) {
+                case 0: // turn to right edge
+                    _drawHallRow(row, column, _size);
+                    break;
+                case 1: // turn to left edge
+                    _drawHallRow(row, 0, column);
+                    break;
+                default:
+                    break;
+            }
+            _drawHallCol(column, 0, row + 1);
+            setEntrance(Vector2(column, 1));
+            break;
+        case 1: // Right edge
+            switch (turnDirection) {
+                case 0: // turn to top edge
+                    _drawHallCol(column, 0, row);
+                    break;
+                case 1: // turn to bottom edge
+                    _drawHallCol(column, row, _size);
+                    break;
+                default:
+                    break;
+            }
+            _drawHallRow(row, column, _size);
+            setEntrance(Vector2(_size - 2, row));
+            break;
+        case 2: // Bottom edge
+            switch (turnDirection) {
+                case 0: // turn to right edge
+                    _drawHallRow(row, column, _size);
+                    break;
+                case 1: // turn to left edge
+                    _drawHallRow(row, 0, column);
+                    break;
+                default:
+                    break;
+            }
+            _drawHallCol(column, row, _size);
+            setEntrance(Vector2(column, _size - 2));
+            break;
+        case 3: // Left edge
+            switch (turnDirection) {
+                case 0: // turn to top edge
+                    _drawHallCol(column, 0, row);
+                    break;
+                case 1: // turn to bottom edge
+                    _drawHallCol(column, row, _size);
+                    break;
+                default:
+                    break;
+            }
+            _drawHallRow(row, 0, column + 1);
+            setEntrance(Vector2(1, row));
+            break;
+        default:
+            break;
+    }
+}
+
+
+/**
+* Creates a split in the hall with another hall forming a T with the entrance hall.
+*/
+void Room::_createSplit() {
+    // edges: top 0, right 1, down 2, left 3
+    int startEdge = _getRand(0, 3);
+    int column = _getRand(1, _size - 5);
+    int row = _getRand(1, _size - 5);
+
+    switch (startEdge) {
+        case 0: // Top edge
+            _drawHallRow(row, 0, _size);
+            _drawHallCol(column, 0, row + 1);
+            setEntrance(Vector2(column, 1));
+            break;
+        case 1: // Right edge
+            _drawHallCol(column, 0, _size);
+            _drawHallRow(row, column, _size);
+            setEntrance(Vector2(_size - 2, row));
+            break;
+        case 2: // Bottom edge
+            _drawHallRow(row, 0, _size);
+            _drawHallCol(column, row, _size);
+            setEntrance(Vector2(column, _size - 2));
+            break;
+        case 3: // Left edge
+            _drawHallCol(column, 0, _size);
+            _drawHallRow(row, 0, column);
+            setEntrance(Vector2(1, row));
+            break;
+        default:
+            break;
+    }
 }
 
 
@@ -635,7 +795,7 @@ void Room::_drawHallRow(int row, int begin, int end) {
 /**
 * Creates a tile map (.tmx file) from the 2D map array.
 */
-void Room::_createTileMap() {
+void Room::createTileMap() {
     ofstream tmxFile;
     tmxFile.open("tmx/room.tmx");
 
@@ -673,4 +833,18 @@ void Room::_createTileMap() {
     }
 
     tmxFile.close();
+}
+
+
+/**
+* Prints the room map.
+*/
+void Room::printMap() {
+    cout << endl;
+    for (int i = 0; i < _size; ++i) {
+        for (int j = 0; j < _size; ++j) {
+            cout << _map[i][j];
+        }
+        cout << endl;
+    }
 }

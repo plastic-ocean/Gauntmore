@@ -10,7 +10,8 @@ DECLARE_SMART(Room, spRoom);
 class Room : public Object {
     
 public:
-    Room(int type, int size);
+    Room();
+    Room(int type, int size, vector<bool> exitBools);
 
     typedef list<spUnit> Units;
 
@@ -19,12 +20,7 @@ public:
     *
     * @type is the room type.
     */
-    void createRoom(int exits);
-
-    /**
-    * Prints the map.
-    */
-    void printMap();
+    void createRoom();
 
     int getSize() const {
         return _size;
@@ -62,9 +58,32 @@ public:
         return _units;
     }
 
-    void setUnits(list<spUnit> units) {
+    void setUnits(Units units) {
         _units = units;
     }
+
+    /**
+    * Adds unit to the back of the units list.
+    *
+    * @unit is the Unit to be added.
+    */
+    void pushUnit(spUnit unit) {
+        _units.push_back(unit);
+    }
+
+    int getType() {
+        return _type;
+    }
+
+    /**
+    * Prints the map.
+    */
+    void printMap();
+
+    /**
+    * Creates a tile map (.tmx file) from the 2D map array.
+    */
+    void createTileMap();
 
 private:
     Tmx::Map *_tileMap;
@@ -87,6 +106,10 @@ private:
     
     Vector2 _entrance;
 
+    vector<bool> _exitBools;
+
+    int _type;
+
     /**
     * Creates a 2D maze array using Prim's algorithm for minimum spanning trees.
     */
@@ -98,6 +121,16 @@ private:
     * Connects the room(s) to the main hall with connecting halls.
     */
     void _createHallMap(int exits);
+
+    void _createDeadEnd();
+
+    void _createTurn();
+
+    void _createSplit();
+
+    /**
+    * Creates a tile map (.tmx file) from the 2D map array.
+    */
 
     /**
     * Adds all walls adjacent to map[i][j] to the wall list.
@@ -128,11 +161,6 @@ private:
     * @col is the col to check.
     */
     bool _atExit(int row, int col);
-
-    /**
-    * Creates a tile map (.tmx file) from the 2D map array.
-    */
-    void _createTileMap();
 
     /**
     * Returns a number betweeen start and finish inclusive.

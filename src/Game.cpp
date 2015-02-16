@@ -3,11 +3,9 @@
 #include "Game.h"
 #include "Player.h"
 #include "res.h"
-#include "tmx/Tmx.h"
 #include "KeyboardInput.h"
 #include "Map.h"
-#include "Unit.h"
-#include "Room.h"
+#include "MazeGen.h"
 
 
 typedef list<spUnit> Units;
@@ -33,18 +31,18 @@ void Game::init() {
 	// Set the size of the scene to the size of the display.
 	setSize(getStage()->getSize());
 
+    MazeGen mazeGen = MazeGen(15);
+
 	// Create map
     _map = new Map(15);
-    _setUnits();
-//    map->createMaze();
-//    _map->createHallMap(3);
-    
     _renderMap();
     _createTiles();
     
 	// Create player
 	_player = new Player(3, 1, 1);
-	_player->init(_getEntrance(), this);
+    _player->init(_getEntrance(), this);
+
+    _setUnits();
     
     // TODO Create enemy creatures (with random loot!)
 //    for (int i = 0; i < **large number**; ++i) {
@@ -114,10 +112,6 @@ std::vector<SDL_Rect> Game::getTiles() {
  */
 spKeyboardInput Game::getMove() {
     return _move;
-}
-
-void Game::_setUnits() {
-    _units = static_cast<list<spUnit>>(_map->getRoom()->getUnits());
 }
 
 
@@ -227,7 +221,10 @@ void Game::switchMap() {
     // Setup player
     spPlayer oldPlayer = _player;
     _player = new Player(oldPlayer->getHp(), oldPlayer->getAttack(), oldPlayer->getDefense());
-    _player->init(_getEntrance(), this);
+    Vector2 location = _getEntrance();
+
+    cout << "Game: " << location.x << ", " << location.y << endl;
+    _player->init(Vector2(location.y, location.x), this);
 
 //    _player->detachUnit();
 //    _player->attachUnit();
@@ -251,6 +248,7 @@ Vector2 Game::_getEntrance() {
  * @unit is the Unit to be added.
  */
 void Game::pushUnit(spUnit unit) {
+    _map->getRoom()->pushUnit(unit);
     _units.push_back(unit);
 }
 
@@ -264,4 +262,8 @@ spMap Game::getMap() {
 
 list<spUnit> Game::getUnits() {
     return _units;
+}
+
+void Game::_setUnits() {
+    _units = static_cast<Units>(_map->getRoom()->getUnits());
 }

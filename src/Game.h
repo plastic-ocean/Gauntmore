@@ -75,7 +75,6 @@ public:
 
 protected:
     spMap _map;
-    map<int, spMap> _maps;
     
     Tmx::Map *_tileMap;
     vector<SDL_Rect> _tiles;

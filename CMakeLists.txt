@@ -9,7 +9,7 @@ include_directories(${OXYGINE_INCLUDE_DIRS})
 link_directories(${OXYGINE_LIBRARY_DIRS})
 
 add_executable(gauntmore
-src/Game.cpp src/Game.h src/GameScene.cpp src/GameScene.h src/Map.cpp src/Map.h src/Map.cpp src/Map.h
+src/Game.cpp src/Game.h src/GameScene.cpp src/GameScene.h src/Map.cpp src/Map.h src/MazeGen.cpp src/MazeGen.h
 src/Room.cpp src/Room.h src/Scene.cpp src/Scene.h src/KeyboardInput.cpp src/KeyboardInput.h src/Player.cpp src/Player.h
 src/Creature.cpp src/Creature.h src/Unit.cpp src/Unit.h  src/gauntmore.cpp  src/res.cpp src/res.h
 src/tmx/base64.cpp src/tmx/TmxEllipse.h src/tmx/TmxMapTile.h src/tmx/TmxPropertySet.cpp src/tmx/base64.h

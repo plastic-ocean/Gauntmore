@@ -14,7 +14,7 @@ public:
 
     void changeRoom(int edge);
 
-    spRoom getRoom() const {
+    spRoom getRoom() {
         return _room;
     }
 
@@ -22,19 +22,29 @@ public:
         _room = room;
     }
 
-    vector<spRoom> getRooms() {
-        return _rooms;
+//    vector<spRoom> getRooms() {
+//        return _rooms;
+//    }
+//
+//    void setRooms(vector<spRoom> rooms) {
+//        _rooms = rooms;
+//    }
+//
+//    void addRoom(spRoom room) {
+//        _rooms.push_back(room);
+//    }
+
+    vector<vector<spRoom>> getRoomMap() {
+        return _roomMap;
     }
 
-    void setRooms(vector<spRoom> rooms) {
-        _rooms = rooms;
-    }
-
-    void addRoom(spRoom room) {
-        _rooms.push_back(room);
+    void setRoomMap(vector<vector<spRoom>> roomMap) {
+        _roomMap = roomMap;
     }
 
 private:
     spRoom _room;
-    vector<spRoom> _rooms;
+//    vector<spRoom> _rooms;
+    vector<vector<spRoom>> _roomMap;
+    Vector2 _entrance;
 };
