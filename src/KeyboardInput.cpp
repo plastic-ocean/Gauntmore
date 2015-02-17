@@ -63,6 +63,7 @@ void KeyboardInput::_onEvent(Event *ev) {
             }
             case SDLK_SPACE:
                 _game->_chest->interact();
+ //               _game->getPlayer()->interact();
                 break;
         }
     }

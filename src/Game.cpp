@@ -8,6 +8,7 @@
 #include "Tmx.h"
 #include "KeyboardInput.h"
 #include "Map.h"
+#include "Skeleton.h"
 
 /**
  * Constructor.
@@ -41,12 +42,20 @@ void Game::init() {
 	_player = new Player;
 	_player->init(getEntrance(), this);
     
+
     // Create chest
     Vector2 chestLocation = Vector2(((32 * 15) / 2) + 1, (32 * 15) / 2);
     
     _chest = new Chest;
     _chest->init(chestLocation, this);
- //   _chest->interact();
+//   _chest->interact();
+
+    //location for skeleton
+    Vector2 center = Vector2(_map->getSize()/2, _map->getSize()/2);
+    //std::cout << _map->getSize() << std::endl;
+//    _skeleton = new Skeleton;
+//    _skeleton->init(center, this);
+    
     
     // TODO Create enemy creatures (with random loot!)
 //    for (int i = 0; i < **large number**; ++i) {
@@ -109,13 +118,16 @@ std::vector<SDL_Rect> Game::getTiles() {
     return _tiles;
 }
 
+std::list<spUnit> Game::getUnits(){
+    return _units;
+}
 
 /**
  * Gets the keyboard input handler.
  */
 spKeyboardInput Game::getMove() {
     return _move;
-}
+} 
 
 
 /**
@@ -135,7 +147,7 @@ void Game::pushUnit(spUnit unit) {
  */
 void Game::doUpdate(const UpdateState &us) {
     // Iterate through the unit list and call their update method. Then check for death.
-    for (units::iterator i = _units.begin(); i != _units.end(); ) {
+    for (std::list<spUnit>::iterator i = _units.begin(); i != _units.end(); ) {
         spUnit unit = *i;
         unit->update(us);
         
@@ -232,6 +244,7 @@ void Game::switchMap() {
     _player->addSprite();
     _player->setPosition(getEntrance());
 }
+
 
 
 Vector2 Game::getEntrance() {

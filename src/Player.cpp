@@ -2,6 +2,7 @@
 
 #include "Player.h"
 #include "Game.h"
+#include "Thing.h"
 #include "KeyboardInput.h"
 #include "res.h"
 #include "Tmx.h"
@@ -47,21 +48,34 @@ void Player::damage() {
 }
 
 void Player::interact(){
-//    typedef std::list<spUnit> units;
-//    
-//    // Iterate through the unit list and call their update method. Then check for death.
-//    for (units::iterator i = _units.begin(); i != _units.end(); ) {
-//        spUnit unit = *i;
-//        unit->update(us);
-//        
-//        if (unit->isDead()) {
-//            // If it is dead remove it from list.
-//            i = _units.erase(i);
-//        } else {
-//            ++i;
-//        }
-//    }
-//    
+
+    //typedef std::list<spUnit> units;
+    // Iterate through the unit list and call their update method. Then check for death.
+    //std::cout << "damage" << std::endl;
+    Vector2 playerPosition = getPosition();
+    std::list<spUnit> units = _game->getUnits();
+
+    
+    for (spUnit unit : units) {
+        //spUnit unit = *i;
+        Vector2 unitPosition = unit->getPosition();
+
+        
+        switch(facing){
+            case up:
+                int yDiff = playerPosition.y - unitPosition.y;
+                int xDiff = playerPosition.x - unitPosition.x;
+                if((yDiff > 1 && yDiff < 30) && (xDiff > -50 && xDiff < 50)){
+                    std::cout << "damage " << i << std::endl;
+                    unit->damage();
+                    
+                    i++;
+                }
+                break;
+
+        }
+        
+    }
     
 }
 

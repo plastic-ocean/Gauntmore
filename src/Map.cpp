@@ -39,6 +39,13 @@ Vector2 Map::getEntrance() {
     return _entrance;
 }
 
+/*
+ Gets map size
+ */
+int Map::getSize(){
+    return _size*32;
+}
+
 
 /**
  * Set map entrance.

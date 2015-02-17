@@ -21,6 +21,11 @@ public:
      */
     void setEntrance(int x, int y);
     
+    /*
+     Gets map size
+     */
+    int getSize();
+    
     /**
      * Creates a 2D maze array using Prim's algorithm for minimum spanning trees.
      */

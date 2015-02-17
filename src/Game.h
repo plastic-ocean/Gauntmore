@@ -13,6 +13,7 @@ DECLARE_SMART(KeyboardInput, spKeyboardInput)
 DECLARE_SMART(Unit, spUnit);
 DECLARE_SMART(Map, spMap);
 DECLARE_SMART(Game, spGame);
+DECLARE_SMART(Skeleton, spSkeleton);
 
 class Game: public Actor {
     
@@ -68,6 +69,8 @@ public:
     void switchMap();
     
     spPlayer getPlayer();
+    
+    std::list<spUnit> getUnits();
 
 protected:
     spMap _map;
@@ -78,12 +81,11 @@ protected:
     
     spKeyboardInput _move;
     spPlayer _player;
-    
-    
+    spSkeleton _skeleton;
 
-    
-    typedef std::list<spUnit> units;
-    units _units;
+
+    std::list<spUnit> _units;
+
     
     /**
      * Updates the player each frame. A virtual method of Actor it is being called each frame.
