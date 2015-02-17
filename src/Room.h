@@ -183,41 +183,7 @@ private:
     * Creates two intersecting straight halls.
     */
     void _createIntersection();
-
-    /**
-    * Creates a tile map (.tmx file) from the 2D map array.
-    */
-
-    /**
-    * Adds all walls adjacent to map[i][j] to the wall list.
-    *
-    * @i is the i in map[i][j].
-    * @j is the j in map[i][j].
-    */
-    void _addWall(int i, int j);
-
-    /**
-    * Randomly chooses an entrance, adds the first floor cell, and adds its walls to the wall list.
-    *
-    * @return the chosen edge.
-    */
-    int _chooseEntrance();
-
-    /**
-    * Choose a random map edge and cell for the exit.
-    *
-    * @edge is the entrance edge.
-    */
-    int _chooseExit(int edge);
-
-    /**
-    * Return true if the map exit has been reached, otherwise false.
-    *
-    * @row is the row to check.
-    * @col is the col to check.
-    */
-    bool _atExit(int row, int col);
-
+    
     /**
     * Returns a number betweeen start and finish inclusive.
     *
@@ -225,6 +191,8 @@ private:
     * @finish is the end of the range, inclusive.
     */
     int _getRand(int start, int finish);
+    
+    void _drawOpenSpaces(int row, int column, bool isColumn);
 
     /**
     * Draws a room between row and height, col and width.
@@ -269,3 +237,24 @@ private:
 //* Connects the room(s) to the main hall with connecting halls.
 //*/
 //void _createHallMap(int exits);
+///**
+// * Adds all walls adjacent to map[i][j] to the wall list.
+// *
+// * @i is the i in map[i][j].
+// * @j is the j in map[i][j].
+// */
+//void _addWall(int i, int j);
+//
+///**
+// * Randomly chooses an entrance, adds the first floor cell, and adds its walls to the wall list.
+// *
+// * @return the chosen edge.
+// */
+//int _chooseEntrance();
+//
+///**
+// * Choose a random map edge and cell for the exit.
+// *
+// * @edge is the entrance edge.
+// */
+//int _chooseExit(int edge);

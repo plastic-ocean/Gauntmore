@@ -140,10 +140,12 @@ void Room::_createDeadEnd() {
     int row = _getRand(1, _size - 5);
     int height = _getRand(row + 3, _size - 2);
     int hall = 0;
+    bool isColumn = false;
 
     switch (startEdge) {
         case 0:
             // Top
+            isColumn = true;
             hall = _getRand(column, width);
             _top = hall;
             _drawHallCol(hall, 0, row);
@@ -158,6 +160,7 @@ void Room::_createDeadEnd() {
             break;
         case 2:
             // Bottom
+            isColumn = true;
             hall = _getRand(column, width);
             _bottom = hall;
             _drawHallCol(hall, height, _size);
@@ -175,6 +178,7 @@ void Room::_createDeadEnd() {
     }
 
     _drawRoom(row, column, height, width);
+    _drawOpenSpaces(row, column, true);
 }
 
 
@@ -184,9 +188,12 @@ void Room::_createDeadEnd() {
 void Room::_createStraight() {
     int column = _getRand(1, _size - 2);
     int row = _getRand(1, _size - 2);
-
+    int isColumn = false;
+    
+    // Create main hall
     if (_exitBools[0] && _exitBools[2]) {
         // up/down
+        isColumn = true;
         _top = column;
         _bottom = column;
         _drawHallCol(column, 0, _size);
@@ -199,6 +206,8 @@ void Room::_createStraight() {
         _drawHallRow(row, 0, _size);
         setEntrance(Vector2(1, row));
     }
+    
+    _drawOpenSpaces(row, column, isColumn);
 }
 
 
@@ -206,8 +215,8 @@ void Room::_createStraight() {
 * Creates a hall with a single turn.
 */
 void Room::_createTurn() {
-    int column;
-    int row;
+    int column = 0;
+    int row = 0;
 
     if (_exitBools[0] && _exitBools[1]) {
         // top/right
@@ -250,6 +259,9 @@ void Room::_createTurn() {
         _drawHallRow(row, 0, column);
         setEntrance(Vector2(column, _size - 2));
     }
+    
+    _drawOpenSpaces(row, column, true);
+    _drawOpenSpaces(row, column, false);    
 }
 
 
@@ -293,6 +305,8 @@ void Room::_createBranch() {
             _drawHallCol(column, row, _size);
         }
     }
+    
+    _drawOpenSpaces(row, column, true);
 }
 
 
@@ -310,206 +324,9 @@ void Room::_createIntersection() {
     _drawHallCol(column, 0, _size);
     _drawHallRow(row, 0, _size);
     setEntrance(Vector2(column, _size - 2));
-}
-
-
-/**
-* Adds all walls adjacent to map[i][j] to the wall list.
-*
-* @i is the i in map[i][j].
-* @j is the j in map[i][j].
-*/
-void Room::_addWall(int i, int j) {
-    bool onList = false;
-    for (int k = 0; k < _wallListSize; ++k) {
-        if (_wallList[k][0] == i && _wallList[k][1] == j) {
-            onList = true;
-            break;
-        }
-    }
-
-    if (!onList && i != 0 && i != _size - 1 && j != 0 && j != _size - 1 && _map[i][j] == '@') {
-        // Add wall
-        _wallList[_wallListSize][0] = i;
-        _wallList[_wallListSize][1] = j;
-        _wallListSize++;
-    }
-}
-
-
-/**
- * Chooses a random entrance, adds the first floor cell, and adds its walls to the wall list.
- *
- * @return the chosen edge.
- */
-int Room::_chooseEntrance() {
-    int edge = rand() % 3;
-    int row = 0; // entrance row
-    int col = 0; // entrance column
-    if (edge == 0) {
-        // Top
-        // #x#
-        // #.#
-        // ###
-        row = 0;
-        col = rand() % (_size - 2) + 1;
-        _map[row + 1][col] = '.';
-        _map[row][col] = 'x';
-        row++;
-
-        // Add adjacent walls.
-        _addWall(row + 1, col);
-        _addWall(row, col + 1);
-        _addWall(row, col - 1);
-    } else if (edge == 1) {
-        // Right
-        // ###
-        // #.x
-        // ###
-        row = rand() % (_size - 2) + 1;
-        col = _size - 1;
-        _map[row][col - 1] = '.';
-        _map[row][col] = 'x';
-        col--;
-
-        // Add adjacent walls.
-        _addWall(row - 1, col);
-        _addWall(row + 1, col);
-        _addWall(row, col - 1);
-    } else if (edge == 2) {
-        // Bottom
-        // ###
-        // #.#
-        // #x#
-        row = _size - 1;
-        col = rand() % (_size - 2) + 1;
-        _map[row - 1][col] = '.';
-        _map[row][col] = 'x';
-        row--;
-
-        // Add adjacent walls.
-        _addWall(row - 1, col);
-        _addWall(row, col + 1);
-        _addWall(row, col - 1);
-    } else if (edge == 3) {
-        // Left
-        // ###
-        // x.#
-        // ###
-        row = rand() % (_size - 2) + 1;
-        col = 0;
-        _map[row][col + 1] = '.';
-        _map[row][col] = 'x';
-        col++;
-
-        // Add adjacent walls.
-        _addWall(row - 1, col);
-        _addWall(row + 1, col);
-        _addWall(row, col + 1);
-    }
-
-    // Add the floor cell to the map list.
-    _floorList[_floorListSize][0] = row;
-    _floorList[_floorListSize][1] = col;
-    _floorListSize++;
-
-    // Set entrance.
-    setEntrance(Vector2(col, row));
-
-    return edge;
-}
-
-
-/**
-* Choose a random map edge and cell for the exit.
-*
-* @edge is the entrance edge.
-*/
-int Room::_chooseExit(int edge) {
-    int edgeList[3] = {0, 0, 0};
-    if (edge == 0) {
-        edgeList[0] = 1;
-        edgeList[1] = 2;
-        edgeList[2] = 3;
-    } else if (edge == 1) {
-        edgeList[0] = 0;
-        edgeList[1] = 2;
-        edgeList[2] = 3;
-    } else if (edge == 2) {
-        edgeList[0] = 0;
-        edgeList[1] = 1;
-        edgeList[2] = 3;
-    } else if (edge == 3) {
-        edgeList[0] = 0;
-        edgeList[1] = 1;
-        edgeList[2] = 2;
-    }
-    int index = rand() % 2;
-    edge = edgeList[index];
-
-    int i = 0;
-    int j = 0;
-    int temp = 0;
-    int exitList[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    int exitListSize = 0;
-    if (edge == 0) {
-        // Up
-        i = 0;
-        // j is random
-        index = 1;
-        for (int k = 1; k < _size - 2; ++k) {
-            if (_map[index][k] == '.') {
-                exitList[exitListSize] = k;
-                exitListSize++;
-            }
-        }
-        temp = rand() % exitListSize;
-        j = exitList[temp];
-    } else if (edge == 1) {
-        // Right
-        // i is random
-        j = _size - 1;
-        index = _size - 2;
-        for (int k = 1; k < _size - 2; ++k) {
-            if (_map[k][index] == '.') {
-                exitList[exitListSize] = k;
-                exitListSize++;
-            }
-        }
-        temp = rand() % exitListSize;
-        i = exitList[temp];
-    } else if (edge == 2) {
-        // Down
-        i = _size - 1;
-        // j is random
-        index = _size - 2;
-        for (int k = 1; k < _size - 2; ++k) {
-            if (_map[index][k] == '.') {
-                exitList[exitListSize] = k;
-                exitListSize++;
-            }
-        }
-        temp = rand() % exitListSize;
-        j = exitList[temp];
-    } else if (edge == 3) {
-        // Left
-        // i is random
-        j = 0;
-        index = _size - 2;
-        for (int k = 1; k < _size - 2; ++k) {
-            if (_map[k][index] == '.') {
-                exitList[exitListSize] = k;
-                exitListSize++;
-            }
-        }
-        temp = rand() % exitListSize;
-        i = exitList[temp];
-    }
-
-    // Create exit
-    _map[i][j] = '.';
-
-    return edge;
+    
+    _drawOpenSpaces(row, column, true);
+    _drawOpenSpaces(row, column, false);
 }
 
 
@@ -522,6 +339,101 @@ int Room::_chooseExit(int edge) {
 int Room::_getRand(int start, int finish) {
     finish = finish - start + 1;
     return rand() % finish + start;
+}
+
+
+void Room::_drawOpenSpaces(int row, int column, bool isColumn) {
+    int roomCol = _getRand(1, _size / 2);
+    int roomWidth = _getRand(roomCol, _size - 2);
+    int roomRow = _getRand(1, _size / 2);
+    int roomHeight = _getRand(roomRow, _size - 2);
+//    _drawRoom(roomRow, roomCol, roomHeight, roomWidth);
+    
+    // Draw the rooms.
+    if (isColumn) {
+        int connectHallRow = 0;
+        if (column > 3) {
+            // Left of hall
+            
+            // between 1 and col - 3
+            roomCol = _getRand(1, column - 2);
+            // between randCol + 1 and col - 1
+            roomWidth = _getRand(roomCol + 1, column - 1);
+            
+            // between 1 and _size - 3
+            roomRow = _getRand(1, _size - 3);
+            // between randRow + 1 and _size - 2
+            roomHeight = _getRand(roomRow + 1, _size - 2);
+            
+            _drawRoom(roomRow, roomCol, roomHeight, roomWidth);
+            
+            connectHallRow = _getRand(roomRow, roomHeight);
+            
+            // draw connecting hall on connectHallRow from randWidth + 1 to col
+            _drawHallRow(connectHallRow, roomWidth + 1, column);
+        }
+        if (column < _size - 4) {
+            // Right of hall
+            
+            // between col + 1 and _size - 2
+            roomRow = _getRand(column + 1, _size - 3);
+            // between randCol + 1 and _size - 2
+            roomWidth = _getRand(roomCol + 1, _size - 2);
+            
+            // between 1 and _size - 2
+            roomRow = _getRand(1, _size - 3);
+            // between randRow + 1 and _size - 2
+            roomHeight = _getRand(roomRow + 1, _size - 2);
+            
+            _drawRoom(roomRow, roomCol, roomHeight, roomWidth);
+            
+            connectHallRow = _getRand(roomRow, roomHeight);
+            
+            // draw connecting hall on connectHallRow from col + 1 to randCol
+            _drawHallRow(connectHallRow, column + 1, roomCol);
+        }
+    } else { // if row
+        int connectHallCol = 0;
+        if (row > 3) {
+            // Above hall
+            
+            // between 1 and row - 1
+            roomRow = _getRand(1, row - 2);
+            // between randRow + 1 and row - 1
+            roomWidth = _getRand(roomRow + 1, row - 1);
+            
+            // between 1 and _size - 2
+            roomCol = _getRand(1, _size - 3);
+            // between randCol + 1 and _size - 2
+            roomWidth = _getRand(roomCol + 1, _size - 2);
+            
+            _drawRoom(roomRow, roomCol, roomHeight, roomWidth);
+            
+            connectHallCol = _getRand(roomCol, roomWidth);
+            
+            // draw connecting hall on connectHallCol from randHeight + 1 to row
+            _drawHallCol(connectHallCol, roomHeight + 1, row);
+        }
+        if (row < _size - 4) {
+            // Below hall
+            
+            // between 1 and _size - 3
+            roomCol = _getRand(row + 1, _size - 3);
+            // between randCol + 1 and _size - 2
+            roomWidth = _getRand(roomCol + 1, _size - 2);
+            
+            // between row + 1 and _size - 3
+            roomRow = _getRand(row + 1, _size - 3);
+            // between randRow + 1 and _size - 2
+            roomHeight = _getRand(roomRow + 1, _size - 2);
+            
+            _drawRoom(roomRow, roomCol, roomHeight, roomWidth);
+            
+            connectHallCol = _getRand(roomCol, roomWidth);
+            // draw connecting hall on connectHallCol from row + 1 to randRow
+            _drawHallCol(connectHallCol, row + 1, roomRow);
+        }
+    }
 }
 
 
@@ -862,4 +774,204 @@ void Room::_drawHallRow(int row, int begin, int end) {
 //            }
 //        }
 //    }
+//}
+
+
+///**
+//* Adds all walls adjacent to map[i][j] to the wall list.
+//*
+//* @i is the i in map[i][j].
+//* @j is the j in map[i][j].
+//*/
+//void Room::_addWall(int i, int j) {
+//    bool onList = false;
+//    for (int k = 0; k < _wallListSize; ++k) {
+//        if (_wallList[k][0] == i && _wallList[k][1] == j) {
+//            onList = true;
+//            break;
+//        }
+//    }
+//
+//    if (!onList && i != 0 && i != _size - 1 && j != 0 && j != _size - 1 && _map[i][j] == '@') {
+//        // Add wall
+//        _wallList[_wallListSize][0] = i;
+//        _wallList[_wallListSize][1] = j;
+//        _wallListSize++;
+//    }
+//}
+//
+//
+///**
+// * Chooses a random entrance, adds the first floor cell, and adds its walls to the wall list.
+// *
+// * @return the chosen edge.
+// */
+//int Room::_chooseEntrance() {
+//    int edge = rand() % 3;
+//    int row = 0; // entrance row
+//    int col = 0; // entrance column
+//    if (edge == 0) {
+//        // Top
+//        // #x#
+//        // #.#
+//        // ###
+//        row = 0;
+//        col = rand() % (_size - 2) + 1;
+//        _map[row + 1][col] = '.';
+//        _map[row][col] = 'x';
+//        row++;
+//
+//        // Add adjacent walls.
+//        _addWall(row + 1, col);
+//        _addWall(row, col + 1);
+//        _addWall(row, col - 1);
+//    } else if (edge == 1) {
+//        // Right
+//        // ###
+//        // #.x
+//        // ###
+//        row = rand() % (_size - 2) + 1;
+//        col = _size - 1;
+//        _map[row][col - 1] = '.';
+//        _map[row][col] = 'x';
+//        col--;
+//
+//        // Add adjacent walls.
+//        _addWall(row - 1, col);
+//        _addWall(row + 1, col);
+//        _addWall(row, col - 1);
+//    } else if (edge == 2) {
+//        // Bottom
+//        // ###
+//        // #.#
+//        // #x#
+//        row = _size - 1;
+//        col = rand() % (_size - 2) + 1;
+//        _map[row - 1][col] = '.';
+//        _map[row][col] = 'x';
+//        row--;
+//
+//        // Add adjacent walls.
+//        _addWall(row - 1, col);
+//        _addWall(row, col + 1);
+//        _addWall(row, col - 1);
+//    } else if (edge == 3) {
+//        // Left
+//        // ###
+//        // x.#
+//        // ###
+//        row = rand() % (_size - 2) + 1;
+//        col = 0;
+//        _map[row][col + 1] = '.';
+//        _map[row][col] = 'x';
+//        col++;
+//
+//        // Add adjacent walls.
+//        _addWall(row - 1, col);
+//        _addWall(row + 1, col);
+//        _addWall(row, col + 1);
+//    }
+//
+//    // Add the floor cell to the map list.
+//    _floorList[_floorListSize][0] = row;
+//    _floorList[_floorListSize][1] = col;
+//    _floorListSize++;
+//
+//    // Set entrance.
+//    setEntrance(Vector2(col, row));
+//
+//    return edge;
+//}
+//
+//
+///**
+//* Choose a random map edge and cell for the exit.
+//*
+//* @edge is the entrance edge.
+//*/
+//int Room::_chooseExit(int edge) {
+//    int edgeList[3] = {0, 0, 0};
+//    if (edge == 0) {
+//        edgeList[0] = 1;
+//        edgeList[1] = 2;
+//        edgeList[2] = 3;
+//    } else if (edge == 1) {
+//        edgeList[0] = 0;
+//        edgeList[1] = 2;
+//        edgeList[2] = 3;
+//    } else if (edge == 2) {
+//        edgeList[0] = 0;
+//        edgeList[1] = 1;
+//        edgeList[2] = 3;
+//    } else if (edge == 3) {
+//        edgeList[0] = 0;
+//        edgeList[1] = 1;
+//        edgeList[2] = 2;
+//    }
+//    int index = rand() % 2;
+//    edge = edgeList[index];
+//
+//    int i = 0;
+//    int j = 0;
+//    int temp = 0;
+//    int exitList[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+//    int exitListSize = 0;
+//    if (edge == 0) {
+//        // Up
+//        i = 0;
+//        // j is random
+//        index = 1;
+//        for (int k = 1; k < _size - 2; ++k) {
+//            if (_map[index][k] == '.') {
+//                exitList[exitListSize] = k;
+//                exitListSize++;
+//            }
+//        }
+//        temp = rand() % exitListSize;
+//        j = exitList[temp];
+//    } else if (edge == 1) {
+//        // Right
+//        // i is random
+//        j = _size - 1;
+//        index = _size - 2;
+//        for (int k = 1; k < _size - 2; ++k) {
+//            if (_map[k][index] == '.') {
+//                exitList[exitListSize] = k;
+//                exitListSize++;
+//            }
+//        }
+//        temp = rand() % exitListSize;
+//        i = exitList[temp];
+//    } else if (edge == 2) {
+//        // Down
+//        i = _size - 1;
+//        // j is random
+//        index = _size - 2;
+//        for (int k = 1; k < _size - 2; ++k) {
+//            if (_map[index][k] == '.') {
+//                exitList[exitListSize] = k;
+//                exitListSize++;
+//            }
+//        }
+//        temp = rand() % exitListSize;
+//        j = exitList[temp];
+//    } else if (edge == 3) {
+//        // Left
+//        // i is random
+//        j = 0;
+//        index = _size - 2;
+//        for (int k = 1; k < _size - 2; ++k) {
+//            if (_map[k][index] == '.') {
+//                exitList[exitListSize] = k;
+//                exitListSize++;
+//            }
+//        }
+//        temp = rand() % exitListSize;
+//        i = exitList[temp];
+//    }
+//
+//    // Create exit
+//    _map[i][j] = '.';
+//
+//    return edge;
 //}
