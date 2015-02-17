@@ -85,6 +85,48 @@ public:
     */
     void createTileMap();
 
+
+    vector<Vector2> getExits() {
+        return _exits;
+    }
+
+    void setExits(vector<Vector2> exits) {
+        _exits = exits;
+    }
+
+    int getTop() {
+        return _top;
+    }
+
+    void setTop(int _top) {
+        Room::_top = _top;
+    }
+
+    int getRight() {
+        return _right;
+    }
+
+    void setRight(int right) {
+        _right = right;
+    }
+
+    int getBottom() {
+        return _bottom;
+    }
+
+    void setBottom(int bottom) {
+        _bottom = bottom;
+    }
+
+    int getLeft() {
+        return _left;
+    }
+
+    void setLeft(int left) {
+        _left = left;
+    }
+
+
 private:
     Tmx::Map *_tileMap;
     vector<SDL_Rect> _tiles;
@@ -107,26 +149,40 @@ private:
     Vector2 _entrance;
 
     vector<bool> _exitBools;
+    vector<Vector2> _exits;
 
     int _type;
 
-    /**
-    * Creates a 2D maze array using Prim's algorithm for minimum spanning trees.
-    */
-    void _createMaze();
+// exit cells
+    int _top;
+    int _right;
+    int _bottom;
+    int _left;
 
     /**
-    * Creates and draws a room on the map. Checks if the main hall is on a row or a column.
-    * Then checks if there is space above or below a row and left or right of a column.
-    * Connects the room(s) to the main hall with connecting halls.
+    * Creates a straight hall.
     */
-    void _createHallMap(int exits);
+    void _createStraight();
 
+    /**
+    * Creates a hall ending in a room with no other exits.
+    */
     void _createDeadEnd();
 
+    /**
+    * Creates a hall with a single turn.
+    */
     void _createTurn();
 
-    void _createSplit();
+    /**
+    * Creates a straight hall with a single branch.
+    */
+    void _createBranch();
+
+    /**
+    * Creates two intersecting straight halls.
+    */
+    void _createIntersection();
 
     /**
     * Creates a tile map (.tmx file) from the 2D map array.
@@ -198,3 +254,18 @@ private:
     */
     void _drawHallRow(int row, int begin, int end);
 };
+
+
+
+
+///**
+//* Creates a 2D maze array using Prim's algorithm for minimum spanning trees.
+//*/
+//void _createMaze();
+//
+///**
+//* Creates and draws a room on the map. Checks if the main hall is on a row or a column.
+//* Then checks if there is space above or below a row and left or right of a column.
+//* Connects the room(s) to the main hall with connecting halls.
+//*/
+//void _createHallMap(int exits);

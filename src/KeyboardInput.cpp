@@ -36,7 +36,7 @@ void KeyboardInput::_onEvent(Event *ev) {
     // if key is pressed:
     if (event->type == SDL_KEYDOWN && event->key.repeat == 0) {
         // adjust velocity
-        switch (event->key.keysym.sym ) {
+        switch (event->key.keysym.sym) {
             case SDLK_UP:
             case SDLK_w:
                 _dir += Vector2(0, -1);
@@ -57,12 +57,6 @@ void KeyboardInput::_onEvent(Event *ev) {
             case SDLK_d:
                 _dir += Vector2(1, 0);
                 _game->getPlayer()->moveRight();
-                break;
-            case SDLK_SPACE:
-                _game->switchMap();
-                break;
-            case SDLK_RETURN:
-                _game->switchMap();
                 break;
             default:
                 break;

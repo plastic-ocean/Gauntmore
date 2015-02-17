@@ -42,6 +42,7 @@
 		534097C91A896C19000434F6 /* tmx in Resources */ = {isa = PBXBuildFile; fileRef = 534097C61A896C19000434F6 /* tmx */; };
 		534097CA1A896C19000434F6 /* xmls in Resources */ = {isa = PBXBuildFile; fileRef = 534097C71A896C19000434F6 /* xmls */; };
 		534097D21A898396000434F6 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 534097D01A898396000434F6 /* Map.cpp */; };
+		5365DD881A93BE28000A7893 /* MazeGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5365DD861A93BE28000A7893 /* MazeGen.cpp */; };
 		53BCF11B1A8ED99F00BD6288 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53BCF1171A8ED99F00BD6288 /* GameScene.cpp */; };
 		53BCF11C1A8ED99F00BD6288 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53BCF1191A8ED99F00BD6288 /* Scene.cpp */; };
 /* End PBXBuildFile section */
@@ -168,6 +169,8 @@
 		534097C71A896C19000434F6 /* xmls */ = {isa = PBXFileReference; lastKnownFileType = folder; name = xmls; path = data/xmls; sourceTree = "<group>"; };
 		534097D01A898396000434F6 /* Map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Map.cpp; path = src/Map.cpp; sourceTree = "<group>"; };
 		534097D11A898396000434F6 /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Map.h; path = src/Map.h; sourceTree = "<group>"; };
+		5365DD861A93BE28000A7893 /* MazeGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MazeGen.cpp; path = ../gauntmore/src/MazeGen.cpp; sourceTree = "<group>"; };
+		5365DD871A93BE28000A7893 /* MazeGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MazeGen.h; path = ../gauntmore/src/MazeGen.h; sourceTree = "<group>"; };
 		53BCF1171A8ED99F00BD6288 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameScene.cpp; path = src/GameScene.cpp; sourceTree = "<group>"; };
 		53BCF1181A8ED99F00BD6288 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = src/GameScene.h; sourceTree = "<group>"; };
 		53BCF1191A8ED99F00BD6288 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Scene.cpp; path = src/Scene.cpp; sourceTree = "<group>"; };
@@ -272,6 +275,8 @@
 				534097851A896C0A000434F6 /* KeyboardInput.h */,
 				534097D01A898396000434F6 /* Map.cpp */,
 				534097D11A898396000434F6 /* Map.h */,
+				5365DD861A93BE28000A7893 /* MazeGen.cpp */,
+				5365DD871A93BE28000A7893 /* MazeGen.h */,
 				534097861A896C0A000434F6 /* Player.cpp */,
 				534097871A896C0A000434F6 /* Player.h */,
 				534097881A896C0A000434F6 /* res.cpp */,
@@ -480,6 +485,7 @@
 				53BCF11B1A8ED99F00BD6288 /* GameScene.cpp in Sources */,
 				53BCF11C1A8ED99F00BD6288 /* Scene.cpp in Sources */,
 				534097AE1A896C0A000434F6 /* Game.cpp in Sources */,
+				5365DD881A93BE28000A7893 /* MazeGen.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

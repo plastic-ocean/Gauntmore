@@ -1,17 +1,16 @@
 #include <iostream>
 #include <fstream>
 #include <random>
-
 #include "Room.h"
 
 using namespace std;
 
-enum RoomType {deadend, straight, turn, branch, split, intersection, maze};
+enum RoomType {deadend, straight, turn, branch, intersection};
 
 Room::Room() {}
 
 Room::Room(int type, int size, vector<bool> exitBools):
-        _type(type), _size(size), _wallListSize(0), _floorListSize(0), _exitBools(exitBools) {
+        _type(type), _size(size), _wallListSize(0), _floorListSize(0), _top(0), _right(0), _bottom(0), _left(0), _exitBools(exitBools) {
     // Seed rand.
     random_device randomDevice;
     srand(randomDevice.operator()());
@@ -32,10 +31,9 @@ Room::Room(int type, int size, vector<bool> exitBools):
         _floorList[i][1] = 0;
     }
 
-    // check exitBools to find out where exits should be located
-
     createRoom();
 }
+
 
 /**
 * Creates a room map.
@@ -45,32 +43,19 @@ Room::Room(int type, int size, vector<bool> exitBools):
 void Room::createRoom() {
     switch(_type) {
         case deadend:
-            //
             _createDeadEnd();
             break;
         case straight:
-            // |
-            _createHallMap(1);
+            _createStraight();
             break;
         case turn:
-            // |-
             _createTurn();
             break;
         case branch:
-            // L
-            _createHallMap(2);
-            break;
-        case split:
-            // T
-            _createSplit();
+            _createBranch();
             break;
         case intersection:
-            // +
-            _createHallMap(3);
-            break;
-        case maze:
-            // #
-            _createMaze();
+            _createIntersection();
             break;
         default:
             break;
@@ -81,285 +66,60 @@ void Room::createRoom() {
 }
 
 
-///**
-//* Set map entrance.
-//*
-//* @entrance is the map location to set.
-//*/
-//void Room::_setEntrance(int row, int col) {
-//    _entrance.x = col;
-//    _entrance.y = row;
-//}
-
 /**
-* Creates a 2D map array using Prim's algorithm for minimum spanning trees.
+* Creates a tile map (.tmx file) from the 2D map array.
 */
-void Room::_createMaze() {
-    srand(static_cast<unsigned int>(time(0)));
-    int edge = _chooseEntrance();
-    int index = 0;
-    vector<int> wall;
-    int count = 0;
+void Room::createTileMap() {
+    ofstream tmxFile;
+    tmxFile.open("tmx/room.tmx");
 
-    // While walls in wall list:
-    while (_wallListSize > 1) {
-        // Get a random wall from the list.
-        index = rand() % (_wallListSize - 1);
-        wall[0] = _wallList[index][0];
-        wall[1] = _wallList[index][1];
+    int tileSize = 32;
 
-        // Count adjacent cells already in the map.
-        count = 0;
-        for (int i = 0; i < _floorListSize; ++i) {
-            if ((_floorList[i][0] == wall[0] - 1 && _floorList[i][1] == wall[1]) ||
-                    (_floorList[i][0] == wall[0] && _floorList[i][1] == wall[1] + 1) ||
-                    (_floorList[i][0] == wall[0] + 1 && _floorList[i][1] == wall[1]) ||
-                    (_floorList[i][0] == wall[0] && _floorList[i][1] == wall[1] - 1)) {
-                count++;
+    if (tmxFile.is_open()) {
+        tmxFile << "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" << endl;
+        tmxFile << "<map version=\"1.0\" orientation=\"orthogonal\" renderorder=\"right-down\" width=\"" << _size << "\" height=\"" << _size << "\" tilewidth=\"" << tileSize << "\" tileheight=\"" << tileSize << "\" nextobjectid=\"1\">" << endl;
+        tmxFile << " <tileset firstgid=\"1\" name=\"floor\" tilewidth=\"" << tileSize << "\" tileheight=\"" << tileSize << "\">" << endl;
+        tmxFile << "  <image source=\"data/tmx/floor.png\" width=\"" << tileSize << "\" height=\"" << tileSize << "\"/>" << endl;
+        tmxFile << " </tileset>" << endl;
+        tmxFile << " <tileset firstgid=\"2\" name=\"wall\" tilewidth=\"" << tileSize << "\" tileheight=\"" << tileSize << "\">" << endl;
+        tmxFile << "  <image source=\"data/tmx/wall.png\" width=\"" << tileSize << "\" height=\"" << tileSize << "\"/>" << endl;
+        tmxFile << " </tileset>" << endl;
+        tmxFile << " <layer name=\"Tile Layer 1\" width=\"" << _size << "\" height=\"" << _size << "\">" << endl;
+        tmxFile << "  <data>" << endl;
+
+        for (int i = 0; i < _size; ++i) {
+            for (int j = 0; j < _size; ++j) {
+                if (_map[i][j] == '@') {
+                    // Add a wall tile.
+                    tmxFile << "   <tile gid=\"2\"/>" << endl;
+                } else {
+                    // Add a floor tile.
+                    tmxFile << "   <tile gid=\"1\"/>" << endl;
+                }
             }
         }
 
-        int row = 0;
-        int col = 0;
-        // If only one of the adjacent cells is already in the map, continue.
-        if (count == 1) {
-            // Get the cell on the opposite side of the wall.
-            row = 0; // cell row
-            col = 0; // cell column
-            if (_map[wall[0] - 1][wall[1]] == '.') {
-                // Check up
-                // ###
-                // #r#
-                // #.#
-                row = wall[0] + 1;
-                col = wall[1];
-            } else if (_map[wall[0]][wall[1] + 1] == '.') {
-                // Check right
-                // ###
-                // .r#
-                // ###
-                row = wall[0];
-                col = wall[1] - 1;
-            } else if (_map[wall[0] + 1][wall[1]] == '.') {
-                // Check down
-                // #.#
-                // #r#
-                // ###
-                row = wall[0] - 1;
-                col = wall[1];
-            } else if (_map[wall[0]][wall[1] - 1] == '.') {
-                // Check left
-                // ###
-                // #r.
-                // ###
-                row = wall[0];
-                col = wall[1] + 1;
-            }
-
-            // Check if the cell on the opposite side of the chosen cell isn't in the map.
-            if (_map[row][col] == '@') {
-                // Make the chosen cell part of the map.
-                _map[wall[0]][wall[1]] = '.';
-
-                // Add it to the map list.
-                _floorList[_floorListSize][0] = wall[0];
-                _floorList[_floorListSize][1] = wall[1];
-                _floorListSize++;
-
-                // Add its walls.
-                _addWall(wall[0] - 1, wall[1]);
-                _addWall(wall[0], wall[1] + 1);
-                _addWall(wall[0] + 1, wall[1]);
-                _addWall(wall[0], wall[1] - 1);
-            }
-        }
-
-        // Remove the wall from the list.
-        for (int k = index; k < _wallListSize; ++k) {
-            _wallList[k][0] = _wallList[k + 1][0];
-            _wallList[k][1] = _wallList[k + 1][1];
-        }
-        _wallListSize--;
+        tmxFile << "  </data>" << endl;
+        tmxFile << " </layer>" << endl;
+        tmxFile << "</map>" << endl;
+    } else {
+        cerr << "Unable to open tmx file." << endl;
     }
 
-    _chooseExit(edge);
+    tmxFile.close();
 }
 
 
 /**
-* Creates and draws a room on the map. Checks if the main hall is on a row or a column.
-* Then checks if there is space above or below a row and left or right of a column.
-* Connects the room(s) to the main hall with connecting halls.
+* Prints the room map.
 */
-void Room::_createHallMap(int exits) {
-    // If not coming from another room use the same method to choose the starting location,
-    // else choose the same wall as the last room's exit.
-    // TODO change entrance location for branch vs split
-    // split starts on the hall leading to the T
-    // branch starts on the straight hall with the branch off the side
-
-    int startEdge = _chooseEntrance();
-    Vector2 location = getEntrance();
-    int row = static_cast<int>(location.y);
-    int col = static_cast<int>(location.x);
-    int x = 0;
-    int y = 0;
-    bool column = false;
-
-    // Decide direction for adding new cells.
-    // #0#
-    // 3#1
-    // #2#
-    switch (startEdge) {
-        case 0:
-            // Top
-            x = 1;
-            column = true;
-            break;
-        case 1:
-            // Right
-            y = -1;
-            break;
-        case 2:
-            // Bottom
-            x = -1;
-            column = true;
-            break;
-        case 3:
-            // Left
-            y = 1;
-            break;
-        default:
-            break;
-    }
-
-    // Draw the hall.
-    while (!_atExit(row, col)) {
-        row += x;
-        col += y;
-        _map[row][col] = '.';
-    }
-
-    int randCol = 0;
-    int randRow = 0;
-    int randWidth = 0;
-    int randHeight = 0;
-
-    // Draw the rooms.
-    if (column) {
-        int connectHallRow = 0;
-        if (col > 3) {
-            // Left of hall
-
-            // between 1 and col - 3
-            randCol = _getRand(1, col - 2);
-            // between randCol + 1 and col - 1
-            randWidth = _getRand(randCol + 1, col - 1);
-
-            // between 1 and _size - 3
-            randRow = _getRand(1, _size - 3);
-            // between randRow + 1 and _size - 2
-            randHeight = _getRand(randRow + 1, _size - 2);
-
-            _drawRoom(randRow, randCol, randHeight, randWidth);
-
-            connectHallRow = _getRand(randRow, randHeight);
-
-            // draw connecting hall on connectHallRow from randWidth + 1 to col
-            _drawHallRow(connectHallRow, randWidth + 1, col);
+void Room::printMap() {
+    cout << endl;
+    for (int i = 0; i < _size; ++i) {
+        for (int j = 0; j < _size; ++j) {
+            cout << _map[i][j];
         }
-        if (col < _size - 4) {
-            // Right of hall
-
-            // between col + 1 and _size - 2
-            randCol = _getRand(col + 1, _size - 3);
-            // between randCol + 1 and _size - 2
-            randWidth = _getRand(randCol + 1, _size - 2);
-
-            // between 1 and _size - 2
-            randRow = _getRand(1, _size - 3);
-            // between randRow + 1 and _size - 2
-            randHeight = _getRand(randRow + 1, _size - 2);
-
-            _drawRoom(randRow, randCol, randHeight, randWidth);
-
-            connectHallRow = _getRand(randRow, randHeight);
-
-            // draw connecting hall on connectHallRow from col + 1 to randCol
-            _drawHallRow(connectHallRow, col + 1, randCol);
-        }
-        if (exits == 2) {
-            int exitRow = _getRand(1, _size - 2);
-            int exitEdge = _getRand(0, 1);
-            if (exitEdge == 0) {
-                // go left
-                _drawHallRow(exitRow, 0, col);
-            } else {
-                // go right
-                _drawHallRow(exitRow, col, _size);
-            }
-        }
-        if (exits > 2) {
-            int exitRow = _getRand(1, _size - 2);
-            _drawHallRow(exitRow, 0, _size);
-        }
-    } else { // if row
-        int connectHallCol = 0;
-        if (row > 3) {
-            // Above hall
-
-            // between 1 and row - 1
-            randRow = _getRand(1, row - 2);
-            // between randRow + 1 and row - 1
-            randHeight = _getRand(randRow + 1, row - 1);
-
-            // between 1 and _size - 2
-            randCol = _getRand(1, _size - 3);
-            // between randCol + 1 and _size - 2
-            randWidth = _getRand(randCol + 1, _size - 2);
-
-            _drawRoom(randRow, randCol, randHeight, randWidth);
-
-            connectHallCol = _getRand(randCol, randWidth);
-
-            // draw connecting hall on connectHallCol from randHeight + 1 to row
-            _drawHallCol(connectHallCol, randHeight + 1, row);
-        }
-        if (row < _size - 4) {
-            // Below hall
-
-            // between 1 and _size - 3
-            randCol = _getRand(row + 1, _size - 3);
-            // between randCol + 1 and _size - 2
-            randWidth = _getRand(randCol + 1, _size - 2);
-
-            // between row + 1 and _size - 3
-            randRow = _getRand(row + 1, _size - 3);
-            // between randRow + 1 and _size - 2
-            randHeight = _getRand(randRow + 1, _size - 2);
-
-            _drawRoom(randRow, randCol, randHeight, randWidth);
-
-            connectHallCol = _getRand(randCol, randWidth);
-
-            // draw connecting hall on connectHallCol from row + 1 to randRow
-            _drawHallCol(connectHallCol, row + 1, randRow);
-        }
-        if (exits == 2) {
-            int exitCol = _getRand(1, _size - 2);
-            int exitEdge = _getRand(0, 1);
-            if (exitEdge == 0) {
-                // go up
-                _drawHallCol(exitCol, 0, row);
-            } else {
-                // go down
-                _drawHallCol(exitCol, row, _size);
-            }
-        }
-        if (exits > 2) {
-            int exitCol = _getRand(1, _size - 2);
-            _drawHallCol(exitCol, 0, _size);
-        }
+        cout << endl;
     }
 }
 
@@ -368,39 +128,45 @@ void Room::_createHallMap(int exits) {
 * Creates a hall ending in a room with no other exits.
 */
 void Room::_createDeadEnd() {
-    int startEdge = _getRand(0, 3);
+    int startEdge = 0;
+    for (int i = 0; i < 4; ++i) {
+        if (_exitBools[i] == true) {
+            startEdge = i;
+        }
+    }
+
     int column = _getRand(1, _size - 5);
     int width = _getRand(column + 3, _size - 2);
     int row = _getRand(1, _size - 5);
     int height = _getRand(row + 3, _size - 2);
     int hall = 0;
 
-    // Decide direction for adding new cells.
-    // #0#
-    // 3#1
-    // #2#
     switch (startEdge) {
         case 0:
             // Top
             hall = _getRand(column, width);
+            _top = hall;
             _drawHallCol(hall, 0, row);
-            setEntrance(Vector2(hall, 1));
+            setEntrance(Vector2(hall, 0));
             break;
         case 1:
             // Right
             hall = _getRand(row, height);
+            _right = hall;
             _drawHallRow(hall, width, _size);
             setEntrance(Vector2(_size - 2, hall));
             break;
         case 2:
             // Bottom
             hall = _getRand(column, width);
+            _bottom = hall;
             _drawHallCol(hall, height, _size);
             setEntrance(Vector2(hall, _size - 2));
             break;
         case 3:
             // Left
             hall = _getRand(row, height);
+            _left = hall;
             _drawHallRow(hall, 0, column);
             setEntrance(Vector2(1, hall));
             break;
@@ -413,114 +179,137 @@ void Room::_createDeadEnd() {
 
 
 /**
-* Creates a hall ending in a room with no other exits.
+* Creates a straight hall.
 */
-void Room::_createTurn() {
-    // edges: top 0, right 1, down 2, left 3
-    int startEdge = _getRand(0, 3);
+void Room::_createStraight() {
+    int column = _getRand(1, _size - 2);
+    int row = _getRand(1, _size - 2);
 
-    // turns: top/right 0, bottom/left 1
-    int turnDirection = _getRand(0, 1);
+    if (_exitBools[0] && _exitBools[2]) {
+        // up/down
+        _top = column;
+        _bottom = column;
+        _drawHallCol(column, 0, _size);
+        setEntrance(Vector2(column, _size - 2));
 
-    int column = _getRand(1, _size - 5);
-    int row = _getRand(1, _size - 5);
-
-    switch (startEdge) {
-        case 0: // Top edge
-            switch (turnDirection) {
-                case 0: // turn to right edge
-                    _drawHallRow(row, column, _size);
-                    break;
-                case 1: // turn to left edge
-                    _drawHallRow(row, 0, column);
-                    break;
-                default:
-                    break;
-            }
-            _drawHallCol(column, 0, row + 1);
-            setEntrance(Vector2(column, 1));
-            break;
-        case 1: // Right edge
-            switch (turnDirection) {
-                case 0: // turn to top edge
-                    _drawHallCol(column, 0, row);
-                    break;
-                case 1: // turn to bottom edge
-                    _drawHallCol(column, row, _size);
-                    break;
-                default:
-                    break;
-            }
-            _drawHallRow(row, column, _size);
-            setEntrance(Vector2(_size - 2, row));
-            break;
-        case 2: // Bottom edge
-            switch (turnDirection) {
-                case 0: // turn to right edge
-                    _drawHallRow(row, column, _size);
-                    break;
-                case 1: // turn to left edge
-                    _drawHallRow(row, 0, column);
-                    break;
-                default:
-                    break;
-            }
-            _drawHallCol(column, row, _size);
-            setEntrance(Vector2(column, _size - 2));
-            break;
-        case 3: // Left edge
-            switch (turnDirection) {
-                case 0: // turn to top edge
-                    _drawHallCol(column, 0, row);
-                    break;
-                case 1: // turn to bottom edge
-                    _drawHallCol(column, row, _size);
-                    break;
-                default:
-                    break;
-            }
-            _drawHallRow(row, 0, column + 1);
-            setEntrance(Vector2(1, row));
-            break;
-        default:
-            break;
+    } else if (_exitBools[1] && _exitBools[3]) {
+        // left/right
+        _right = row;
+        _left = row;
+        _drawHallRow(row, 0, _size);
+        setEntrance(Vector2(1, row));
     }
 }
 
 
 /**
-* Creates a split in the hall with another hall forming a T with the entrance hall.
+* Creates a hall with a single turn.
 */
-void Room::_createSplit() {
-    // edges: top 0, right 1, down 2, left 3
-    int startEdge = _getRand(0, 3);
-    int column = _getRand(1, _size - 5);
-    int row = _getRand(1, _size - 5);
+void Room::_createTurn() {
+    int column;
+    int row;
 
-    switch (startEdge) {
-        case 0: // Top edge
-            _drawHallRow(row, 0, _size);
-            _drawHallCol(column, 0, row + 1);
-            setEntrance(Vector2(column, 1));
-            break;
-        case 1: // Right edge
-            _drawHallCol(column, 0, _size);
-            _drawHallRow(row, column, _size);
-            setEntrance(Vector2(_size - 2, row));
-            break;
-        case 2: // Bottom edge
-            _drawHallRow(row, 0, _size);
-            _drawHallCol(column, row, _size);
-            setEntrance(Vector2(column, _size - 2));
-            break;
-        case 3: // Left edge
-            _drawHallCol(column, 0, _size);
-            _drawHallRow(row, 0, column);
-            setEntrance(Vector2(1, row));
-            break;
-        default:
-            break;
+    if (_exitBools[0] && _exitBools[1]) {
+        // top/right
+        column = _getRand(1, _size - 2);
+        row = _getRand(column, _size - 2);
+        _top = column;
+        _right = row;
+
+        _drawHallCol(column, 0, row + 1);
+        _drawHallRow(row, column, _size);
+        setEntrance(Vector2(column, 1));
+    } else if (_exitBools[0] && _exitBools[3]) {
+        // top/left
+        column = _getRand(1, _size - 2);
+        row = _getRand(1, column);
+        _top = column;
+        _left = row;
+
+        _drawHallCol(column, 0, row + 1);
+        _drawHallRow(row, 0, column);
+        setEntrance(Vector2(column, 1));
+    } else if (_exitBools[2] && _exitBools[1]) {
+        // bottom/right
+        column = _getRand(1, _size - 2);
+        row = _getRand(column, _size - 2);
+        _bottom = column;
+        _right = row;
+
+        _drawHallCol(column, row, _size);
+        _drawHallRow(row, column, _size);
+        setEntrance(Vector2(column, _size - 2));
+    } else if (_exitBools[2] && _exitBools[3]) {
+        // bottom/left
+        column = _getRand(1, _size - 2);
+        row = _getRand(1, column);
+        _bottom = column;
+        _left = row;
+
+        _drawHallCol(column, row, _size);
+        _drawHallRow(row, 0, column);
+        setEntrance(Vector2(column, _size - 2));
     }
+}
+
+
+/**
+* Creates a straight hall with a single branch.
+*/
+void Room::_createBranch() {
+    int column = _getRand(1, _size - 2);
+    int row = _getRand(1, _size - 2);
+
+    if (_exitBools[0] && _exitBools[2]) {
+        // up/down
+        _top = column;
+        _bottom = column;
+        _drawHallCol(column, 0, _size);
+        setEntrance(Vector2(column, _size - 2));
+        row = _getRand(1, _size - 2);
+        if (_exitBools[1]) {
+            // right
+            _right = row;
+            _drawHallRow(row, column, _size);
+        } else if (_exitBools[3]) {
+            // left
+            _left = row;
+            _drawHallRow(row, 0, column);
+        }
+    } else if (_exitBools[1] && _exitBools[3]) {
+        // right/left
+        _right = row;
+        _left = row;
+        _drawHallRow(row, 0, _size);
+        setEntrance(Vector2(1, row));
+        column = _getRand(1, _size - 2);
+        if (_exitBools[0]) {
+            // up
+            _top = column;
+            _drawHallCol(column, 0, row);
+        } else if (_exitBools[2]) {
+            // down
+            _bottom = column;
+            _drawHallCol(column, row, _size);
+        }
+    }
+}
+
+
+/**
+* Creates two intersecting straight halls.
+*/
+void Room::_createIntersection() {
+    int column = _getRand(1, _size - 2);
+    int row = _getRand(1, _size - 2);
+    _top = column;
+    _right = row;
+    _bottom = column;
+    _left = row;
+
+    _drawHallCol(column, 0, _size);
+    _drawHallRow(row, 0, _size);
+    setEntrance(Vector2(column, _size - 2));
 }
 
 
@@ -725,17 +514,6 @@ int Room::_chooseExit(int edge) {
 
 
 /**
-* Return true if the map exit has been reached, otherwise false.
-*
-* @row is the row to check.
-* @col is the col to check.
-*/
-bool Room::_atExit(int row, int col) {
-    return row == 0 || row == _size - 1 || col == 0 || col == _size - 1;
-}
-
-
-/**
 * Returns a number between start and finish inclusive.
 *
 * @start is the beginning of the range.
@@ -792,59 +570,296 @@ void Room::_drawHallRow(int row, int begin, int end) {
 }
 
 
-/**
-* Creates a tile map (.tmx file) from the 2D map array.
-*/
-void Room::createTileMap() {
-    ofstream tmxFile;
-    tmxFile.open("tmx/room.tmx");
+///**
+//* Set map entrance.
+//*
+//* @entrance is the map location to set.
+//*/
+//void Room::_setEntrance(int row, int col) {
+//    _entrance.x = col;
+//    _entrance.y = row;
+//}
 
-    int tileSize = 32;
-
-    if (tmxFile.is_open()) {
-        tmxFile << "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" << endl;
-        tmxFile << "<map version=\"1.0\" orientation=\"orthogonal\" renderorder=\"right-down\" width=\"" << _size << "\" height=\"" << _size << "\" tilewidth=\"" << tileSize << "\" tileheight=\"" << tileSize << "\" nextobjectid=\"1\">" << endl;
-        tmxFile << " <tileset firstgid=\"1\" name=\"floor\" tilewidth=\"" << tileSize << "\" tileheight=\"" << tileSize << "\">" << endl;
-        tmxFile << "  <image source=\"data/tmx/floor.png\" width=\"" << tileSize << "\" height=\"" << tileSize << "\"/>" << endl;
-        tmxFile << " </tileset>" << endl;
-        tmxFile << " <tileset firstgid=\"2\" name=\"wall\" tilewidth=\"" << tileSize << "\" tileheight=\"" << tileSize << "\">" << endl;
-        tmxFile << "  <image source=\"data/tmx/wall.png\" width=\"" << tileSize << "\" height=\"" << tileSize << "\"/>" << endl;
-        tmxFile << " </tileset>" << endl;
-        tmxFile << " <layer name=\"Tile Layer 1\" width=\"" << _size << "\" height=\"" << _size << "\">" << endl;
-        tmxFile << "  <data>" << endl;
-
-        for (int i = 0; i < _size; ++i) {
-            for (int j = 0; j < _size; ++j) {
-                if (_map[i][j] == '@') {
-                    // Add a wall tile.
-                    tmxFile << "   <tile gid=\"2\"/>" << endl;
-                } else {
-                    // Add a floor tile.
-                    tmxFile << "   <tile gid=\"1\"/>" << endl;
-                }
-            }
-        }
-
-        tmxFile << "  </data>" << endl;
-        tmxFile << " </layer>" << endl;
-        tmxFile << "</map>" << endl;
-    } else {
-        cerr << "Unable to open tmx file." << endl;
-    }
-
-    tmxFile.close();
-}
-
-
-/**
-* Prints the room map.
-*/
-void Room::printMap() {
-    cout << endl;
-    for (int i = 0; i < _size; ++i) {
-        for (int j = 0; j < _size; ++j) {
-            cout << _map[i][j];
-        }
-        cout << endl;
-    }
-}
+///**
+//* Creates a 2D map array using Prim's algorithm for minimum spanning trees.
+//*/
+//void Room::_createMaze() {
+//    srand(static_cast<unsigned int>(time(0)));
+//    int edge = _chooseEntrance();
+//    int index = 0;
+//    vector<int> wall;
+//    int count = 0;
+//
+//    // While walls in wall list:
+//    while (_wallListSize > 1) {
+//        // Get a random wall from the list.
+//        index = rand() % (_wallListSize - 1);
+//        wall[0] = _wallList[index][0];
+//        wall[1] = _wallList[index][1];
+//
+//        // Count adjacent cells already in the map.
+//        count = 0;
+//        for (int i = 0; i < _floorListSize; ++i) {
+//            if ((_floorList[i][0] == wall[0] - 1 && _floorList[i][1] == wall[1]) ||
+//                    (_floorList[i][0] == wall[0] && _floorList[i][1] == wall[1] + 1) ||
+//                    (_floorList[i][0] == wall[0] + 1 && _floorList[i][1] == wall[1]) ||
+//                    (_floorList[i][0] == wall[0] && _floorList[i][1] == wall[1] - 1)) {
+//                count++;
+//            }
+//        }
+//
+//        int row = 0;
+//        int col = 0;
+//        // If only one of the adjacent cells is already in the map, continue.
+//        if (count == 1) {
+//            // Get the cell on the opposite side of the wall.
+//            row = 0; // cell row
+//            col = 0; // cell column
+//            if (_map[wall[0] - 1][wall[1]] == '.') {
+//                // Check up
+//                // ###
+//                // #r#
+//                // #.#
+//                row = wall[0] + 1;
+//                col = wall[1];
+//            } else if (_map[wall[0]][wall[1] + 1] == '.') {
+//                // Check right
+//                // ###
+//                // .r#
+//                // ###
+//                row = wall[0];
+//                col = wall[1] - 1;
+//            } else if (_map[wall[0] + 1][wall[1]] == '.') {
+//                // Check down
+//                // #.#
+//                // #r#
+//                // ###
+//                row = wall[0] - 1;
+//                col = wall[1];
+//            } else if (_map[wall[0]][wall[1] - 1] == '.') {
+//                // Check left
+//                // ###
+//                // #r.
+//                // ###
+//                row = wall[0];
+//                col = wall[1] + 1;
+//            }
+//
+//            // Check if the cell on the opposite side of the chosen cell isn't in the map.
+//            if (_map[row][col] == '@') {
+//                // Make the chosen cell part of the map.
+//                _map[wall[0]][wall[1]] = '.';
+//
+//                // Add it to the map list.
+//                _floorList[_floorListSize][0] = wall[0];
+//                _floorList[_floorListSize][1] = wall[1];
+//                _floorListSize++;
+//
+//                // Add its walls.
+//                _addWall(wall[0] - 1, wall[1]);
+//                _addWall(wall[0], wall[1] + 1);
+//                _addWall(wall[0] + 1, wall[1]);
+//                _addWall(wall[0], wall[1] - 1);
+//            }
+//        }
+//
+//        // Remove the wall from the list.
+//        for (int k = index; k < _wallListSize; ++k) {
+//            _wallList[k][0] = _wallList[k + 1][0];
+//            _wallList[k][1] = _wallList[k + 1][1];
+//        }
+//        _wallListSize--;
+//    }
+//
+//    _chooseExit(edge);
+//}
+//
+//
+//
+//
+//
+///**
+//* Creates and draws a room on the map. Checks if the main hall is on a row or a column.
+//* Then checks if there is space above or below a row and left or right of a column.
+//* Connects the room(s) to the main hall with connecting halls.
+//*/
+//void Room::_createHallMap(int exits) {
+//    // If not coming from another room use the same method to choose the starting location,
+//    // else choose the same wall as the last room's exit.
+//    // TODO change entrance location for branch vs split
+//    // split starts on the hall leading to the T
+//    // branch starts on the straight hall with the branch off the side
+//
+////    int startEdge = _chooseEntrance();
+//
+//    // edges: top 0, right 1, down 2, left 3
+//    int startEdge = 0;
+//    int row = 0;
+//    int col = 0;
+//    int column = false;
+//
+//    if (_exitBools[0] == true && _exitBools[2] == true) {
+//        // Top/down main hall
+//        startEdge = 2;
+//        row = _getRand(1, _size - 2);
+//        col = _size - 1;
+//        column = true;
+//
+//    } else if (_exitBools[1] == true && _exitBools[2] == true) {
+//        // Left/Right main hall
+//        startEdge = 1;
+//        row = 1;
+//        col = _getRand(1, _size - 2);
+//    }
+//
+//    setEntrance(Vector2(col, row));
+//
+//    // Decide direction for adding new cells.
+//    int x = 0;
+//    int y = 0;
+//    switch (startEdge) {
+//        case 0:
+//            // Top
+//            x = 1;
+//            column = true;
+//            break;
+//        case 1:
+//            // Right
+//            y = -1;
+//            break;
+//        case 2:
+//            // Bottom
+//            x = -1;
+//            column = true;
+//            break;
+//        case 3:
+//            // Left
+//            y = 1;
+//            break;
+//        default:
+//            break;
+//    }
+//
+//    // Draw the hall.
+//    while (!_atExit(row, col)) {
+//        row += x;
+//        col += y;
+//        _map[row][col] = '.';
+//    }
+//
+//    int randCol = 0;
+//    int randRow = 0;
+//    int randWidth = 0;
+//    int randHeight = 0;
+//
+//    // Draw the rooms.
+//    if (column) {
+//        int connectHallRow = 0;
+//        if (col > 3) {
+//            // Left of hall
+//
+//            // between 1 and col - 3
+//            randCol = _getRand(1, col - 2);
+//            // between randCol + 1 and col - 1
+//            randWidth = _getRand(randCol + 1, col - 1);
+//
+//            // between 1 and _size - 3
+//            randRow = _getRand(1, _size - 3);
+//            // between randRow + 1 and _size - 2
+//            randHeight = _getRand(randRow + 1, _size - 2);
+//
+//            _drawRoom(randRow, randCol, randHeight, randWidth);
+//
+//            connectHallRow = _getRand(randRow, randHeight);
+//
+//            // draw connecting hall on connectHallRow from randWidth + 1 to col
+//            _drawHallRow(connectHallRow, randWidth + 1, col);
+//        }
+//        if (col < _size - 4) {
+//            // Right of hall
+//
+//            // between col + 1 and _size - 2
+//            randCol = _getRand(col + 1, _size - 3);
+//            // between randCol + 1 and _size - 2
+//            randWidth = _getRand(randCol + 1, _size - 2);
+//
+//            // between 1 and _size - 2
+//            randRow = _getRand(1, _size - 3);
+//            // between randRow + 1 and _size - 2
+//            randHeight = _getRand(randRow + 1, _size - 2);
+//
+//            _drawRoom(randRow, randCol, randHeight, randWidth);
+//
+//            connectHallRow = _getRand(randRow, randHeight);
+//
+//            // draw connecting hall on connectHallRow from col + 1 to randCol
+//            _drawHallRow(connectHallRow, col + 1, randCol);
+//        }
+//        if (exits > 1) {
+//            int exitRow = _getRand(1, _size - 2);
+//            if (_exitBools[1] == true) {
+//                // go right
+//                _drawHallRow(exitRow, col, _size);
+//            }
+//            exitRow = _getRand(1, _size - 2);
+//            if (_exitBools[3] == true) {
+//                // go left
+//                _drawHallRow(exitRow, 0, col);
+//            }
+//        }
+//    } else { // if row
+//        int connectHallCol = 0;
+//        if (row > 3) {
+//            // Above hall
+//
+//            // between 1 and row - 1
+//            randRow = _getRand(1, row - 2);
+//            // between randRow + 1 and row - 1
+//            randHeight = _getRand(randRow + 1, row - 1);
+//
+//            // between 1 and _size - 2
+//            randCol = _getRand(1, _size - 3);
+//            // between randCol + 1 and _size - 2
+//            randWidth = _getRand(randCol + 1, _size - 2);
+//
+//            _drawRoom(randRow, randCol, randHeight, randWidth);
+//
+//            connectHallCol = _getRand(randCol, randWidth);
+//
+//            // draw connecting hall on connectHallCol from randHeight + 1 to row
+//            _drawHallCol(connectHallCol, randHeight + 1, row);
+//        }
+//        if (row < _size - 4) {
+//            // Below hall
+//
+//            // between 1 and _size - 3
+//            randCol = _getRand(row + 1, _size - 3);
+//            // between randCol + 1 and _size - 2
+//            randWidth = _getRand(randCol + 1, _size - 2);
+//
+//            // between row + 1 and _size - 3
+//            randRow = _getRand(row + 1, _size - 3);
+//            // between randRow + 1 and _size - 2
+//            randHeight = _getRand(randRow + 1, _size - 2);
+//
+//            _drawRoom(randRow, randCol, randHeight, randWidth);
+//
+//            connectHallCol = _getRand(randCol, randWidth);
+//
+//            // draw connecting hall on connectHallCol from row + 1 to randRow
+//            _drawHallCol(connectHallCol, row + 1, randRow);
+//        }
+//        if (exits > 1) {
+//            int exitCol = _getRand(1, _size - 2);
+//            if (_exitBools[0] == true) {
+//                // go up
+//                _drawHallCol(exitCol, 0, row);
+//            }
+//            exitCol = _getRand(1, _size - 2);
+//            if (_exitBools[2] == true) {
+//                // go down
+//                _drawHallCol(exitCol, row, _size);
+//            }
+//        }
+//    }
+//}

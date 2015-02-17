@@ -4,7 +4,9 @@
 
 using namespace std;
 
-enum RoomType {deadend, straight, turn, branch, split, intersection, maze};
+
+enum RoomType {deadend, straight, turn, branch, intersection};
+
 
 MazeGen::MazeGen(int size):_size(size), _wallListSize(0), _floorListSize(0) {
     // Seed rand.
@@ -26,10 +28,8 @@ MazeGen::MazeGen(int size):_size(size), _wallListSize(0), _floorListSize(0) {
         _floorList[i][0] = 0;
         _floorList[i][1] = 0;
     }
-
-
-//    _printMap();
 }
+
 
 /**
 * Generates and returns a 2D matrix of Rooms.
@@ -56,21 +56,21 @@ vector<vector<spRoom>> MazeGen::generate() {
             down = false;
             left = false;
 
-            if (_maze[i][j] != '@') {
+            if (_maze[i][j] != '@' && _maze[i][j] != 'x') {
                 // See if there are surrounding rooms.
-                if (i - 1 > 0 && _maze[i - 1][j] != '@') {
+                if (i - 1 > 0 && _maze[i - 1][j] != '@' && _maze[i - 1][j] != 'x') {
                     // Look up
                     up = true;
                 }
-                if (j + 1 < _size && _maze[i][j + 1] != '@') {
+                if (j + 1 < _size && _maze[i][j + 1] != '@' && _maze[i][j + 1] != 'x') {
                     // Look right
                     right = true;
                 }
-                if (i + 1 < _size && _maze[i + 1][j] != '@') {
+                if (i + 1 < _size && _maze[i + 1][j] != '@' && _maze[i + 1][j] != 'x') {
                     // Look down
                     down = true;
                 }
-                if (j - 1 > 0 && _maze[i][j - 1] != '@') {
+                if (j - 1 > 0 && _maze[i][j - 1] != '@' && _maze[i][j - 1] != 'x') {
                     // Look left
                     left = true;
                 }
@@ -98,19 +98,17 @@ vector<vector<spRoom>> MazeGen::generate() {
                     // turn
                     type = turn;
                     room = new Room(turn, _size, exitBools);
-
                 } else if ((!up && right && down && left) || (up && !right && down && left) ||
                         (up && right && !down && left) || (up && right && down && !left)) {
-                    // branch/split
+                    // branch
                     type = branch;
                     room = new Room(branch, _size, exitBools);
-
                 } else if (up && right && down && left) {
                     // intersection
                     type = intersection;
                     room = new Room(intersection, _size, exitBools);
                 }
-//                cout << "maze room: " << i << ", " << j << " : " << type << " entrance: " << room->getEntrance().x << ", " << room->getEntrance().y << endl;
+//                cout << "maze room: " << i << ", " << j << "; type: " << type << endl;
 
                 roomMap[i][j] = room;
             }
@@ -119,6 +117,7 @@ vector<vector<spRoom>> MazeGen::generate() {
 
     return roomMap;
 }
+
 
 /**
 * Creates a 2D map array using Prim's algorithm for minimum spanning trees.
@@ -316,7 +315,6 @@ int MazeGen::_chooseEntrance() {
 
     // Set entrance.
     setEntrance(Vector2(i, j));
-    cout << "chooseExit: " << i << ", " << j << endl;
 
     return edge;
 }
@@ -416,7 +414,7 @@ int MazeGen::_chooseExit(int edge) {
 
 
 /**
-* Prints the MazeGen map.
+* Prints the maze.
 */
 void MazeGen::_printMap() {
     cout << endl;

@@ -4,6 +4,7 @@
 #include "Game.h"
 #include "KeyboardInput.h"
 #include "res.h"
+#include "Map.h"
 
 /**
  * Constructor
@@ -62,7 +63,7 @@ void Player::addSprite() {
 }
 
 
-void Player::setFacing( Vector2 dir ) {
+void Player::_setFacing(Vector2 dir) {
     if ( dir.y > 0 ) {
         _sprite->setResAnim(resources.getResAnim("player_front"));
         facing = down;
@@ -115,6 +116,34 @@ void Player::removeTween() {
     _hasTween = false;
 }
 
+bool Player::_isExit(Vector2 position) {
+    bool exit = false;
+    int size = _game->getMap()->getRoom()->getSize() * 32;
+
+    if (!(position.x > 0 && position.x < size - 32 && position.y > 0 && position.y < size - 32)) {
+        exit = true;
+        int edge = 0;
+
+        if (position.y <= 0) {
+            // top
+            edge = 0;
+        } else if (position.x >= size - 32) {
+            // right
+            edge = 1;
+        } else if (position.y >= size - 32) {
+            // bottom
+            edge = 2;
+        } else if (position.x <= 0) {
+            // left
+            edge = 3;
+        }
+
+        _game->switchRoom(edge);
+    }
+
+    return exit;
+}
+
 
 /**
  * Updates the player every frame.
@@ -122,12 +151,15 @@ void Player::removeTween() {
  * @us is the UpdateStatus sent by Unit's update method.
  */
 void Player::_update(const UpdateState &us) {
-	Vector2 dir;
-	if (_game->getMove()->getDirection(dir)) {
-		Vector2 pos = getPosition();
-        dir = correctDirection( pos, dir );
-        setFacing(dir);
-		pos += dir * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
-        setPosition(pos);
+	Vector2 direction;
+	if (_game->getMove()->getDirection(direction)) {
+		Vector2 position = getPosition();
+        direction = correctDirection( position, direction );
+        _setFacing(direction);
+		position += direction * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
+
+        if (!_isExit(position)) {
+            setPosition(position);
+        }
     }
 }

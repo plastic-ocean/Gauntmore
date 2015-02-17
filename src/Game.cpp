@@ -24,7 +24,7 @@ Game::~Game() {}
 
 
 /**
- * Initialzes the game. Creates the map, the player, the monsters, the static objects 
+ * Initializes the game. Creates the map, the player, the monsters, the static objects
  * and puts them in the game world.
  */
 void Game::init() {
@@ -73,17 +73,100 @@ bool Game::detectCollision(int x, int y, int h, int w) {
     spriteRect.y = y + 10;
     spriteRect.h = h - 12;
     spriteRect.w = w - 12;
-    
-    // Iterate through the tiles vector to see if the spriteRect collides with the tile.
     const SDL_Rect *sprite = &spriteRect;
+    
+    // Check for collision between the sprite and each tile
     for (SDL_Rect tileRect : _tiles) {
         const SDL_Rect *tile = &tileRect;
         if (SDL_HasIntersection(sprite, tile)) {
             isCollision = true;
         }
     }
+
+    // Check for collision between the sprite and each exit
+//    vector<Vector2> exits = static_cast<vector<Vector2>>(_map->getRoom()->getExits());
+//    for (Vector2 exit : exits) {
+//        SDL_Rect exitRect;
+//        exitRect.x = static_cast<int>(exit.x);
+//        exitRect.y = static_cast<int>(exit.y);
+//        exitRect.h = 32;
+//        exitRect.w = 32;
+//        const SDL_Rect *constExitRect = &exitRect;
+//        if (SDL_HasIntersection(sprite, constExitRect)) {
+//            cout << "hit exit" << endl;
+//            isCollision = true;
+//        }
+//    }
     
     return isCollision;
+}
+
+
+/**
+* Switches viewable map to the room in the direction of the given edge in the maze.
+*/
+void Game::switchRoom(int edge) {
+    // Change to a new room in the maze.
+    _map->changeRoom(edge);
+    _renderMap();
+    _createTiles();
+//    _setUnits();
+
+    // Get player entrance position
+    int playerCol = 1;
+    int playerRow = 1;
+    int spriteSize = 32;
+
+    switch (edge) {
+        case 0: // top
+            playerCol = _map->getRoom()->getBottom() * spriteSize;
+            // size - 2
+            playerRow = (_map->getRoom()->getSize() - 2) * spriteSize;
+            break;
+        case 1: // right
+            playerCol = spriteSize;
+            playerRow = _map->getRoom()->getLeft() * spriteSize;
+            break;
+        case 2: // bottom
+            playerCol = _map->getRoom()->getTop() * spriteSize;
+            playerRow = spriteSize;
+            break;
+        case 3: // left
+            playerCol = (_map->getRoom()->getSize() - 2) * spriteSize;
+            playerRow = _map->getRoom()->getRight() * spriteSize;
+            break;
+        default:
+            break;
+    }
+
+//    cout << "switch position: " << playerCol << ", " << playerRow << endl;
+
+    // Setup player
+    _player->detachUnit();
+    _player->attachUnit();
+    _player->addSprite();
+    _player->setPosition(Vector2(playerCol, playerRow));
+}
+
+
+void Game::pushUnit(spUnit unit) {
+    _map->getRoom()->pushUnit(unit);
+    _units.push_back(unit);
+}
+
+
+spPlayer Game::getPlayer() {
+    return _player;
+}
+
+
+spMap Game::getMap() {
+    return _map;
+}
+
+
+list<spUnit> Game::getUnits() {
+    return _units;
 }
 
 
@@ -204,64 +287,12 @@ void Game::_createTiles() {
 }
 
 
-void Game::switchMap() {
-    // Create new map
-    // TODO store the old map,
-    // associate with exit of old map and entrance of new
-    // create custom class or struct to hold all three
-//    _map = new Map(15);
-////    map->createMaze();
-//    _map->createHallMap(1);
-
-    _map->changeRoom(3);
-    _setUnits();
-    _renderMap();
-    _createTiles();
-
-    // Setup player
-    spPlayer oldPlayer = _player;
-    _player = new Player(oldPlayer->getHp(), oldPlayer->getAttack(), oldPlayer->getDefense());
-    Vector2 location = _getEntrance();
-
-    cout << "Game: " << location.x << ", " << location.y << endl;
-    _player->init(Vector2(location.y, location.x), this);
-
-//    _player->detachUnit();
-//    _player->attachUnit();
-//    _player->addSprite();
-//    _player->setPosition(_getEntrance());
-}
-
-
 Vector2 Game::_getEntrance() {
     Vector2 location = _map->getRoom()->getEntrance();
     location.x *= 32;
     location.y *= 32;
     
     return location;
-}
-
-
-/**
- * Adds unit to the back of the units list.
- *
- * @unit is the Unit to be added.
- */
-void Game::pushUnit(spUnit unit) {
-    _map->getRoom()->pushUnit(unit);
-    _units.push_back(unit);
-}
-
-spPlayer Game::getPlayer() {
-    return _player;
-}
-
-spMap Game::getMap() {
-    return _map;
-}
-
-list<spUnit> Game::getUnits() {
-    return _units;
 }
 
 void Game::_setUnits() {

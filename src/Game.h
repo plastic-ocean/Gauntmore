@@ -65,7 +65,7 @@ public:
      */
     void pushUnit(spUnit unit);
     
-    void switchMap();
+    void switchRoom(int edge);
     
     spPlayer getPlayer();
 

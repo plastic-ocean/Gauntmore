@@ -40,7 +40,9 @@ protected:
      */
 	void _init();
     
-    void setFacing(Vector2 dir);
+    void _setFacing(Vector2 dir);
+
+    bool _isExit(Vector2 position);
     
     /**
      * Updates the player every frame.
@@ -48,4 +50,6 @@ protected:
      * @us is the UpdateStatus sent by the global update method.
      */
 	void _update(const UpdateState &us);
+
+
 };
