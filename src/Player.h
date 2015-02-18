@@ -11,6 +11,8 @@ public:
     enum Facings {up, right, down, left};
     Facings facing;
     
+    Facings getFacing();
+    
     /**
      * Reduces the player's hit points.
      */
@@ -21,14 +23,23 @@ public:
      */
     void addSprite();
     
+    void attack();
+    void attackDown();
+    void attackUp();
+    void attackLeft();
+    void attackRight();
+    
     void moveUp();
     void moveDown();
     void moveRight();
     void moveLeft();
+    
     void removeTween();
     
 protected:
+    const int tileSize = 64;
     spTween _moveTween;
+    spTween _attackTween;
     bool _hasTween;
     
     void _checkTween();

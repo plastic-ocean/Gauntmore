@@ -30,11 +30,12 @@ Game::~Game() {}
 void Game::init() {
 	// Set the size of the scene to the size of the display.
 	setSize(getStage()->getSize());
-
-    MazeGen mazeGen = MazeGen(15);
+    
+    // Size is the number of tiles (with 32 px tiles; 15 tiles = 480 px; 20 tiles = 640 px)
+    int size = 12;
 
 	// Create map
-    _map = new Map(15);
+    _map = new Map(size);
     _renderMap();
     _createTiles();
     
@@ -69,8 +70,8 @@ void Game::init() {
 bool Game::detectCollision(int x, int y, int h, int w) {
     bool isCollision = false;
     SDL_Rect spriteRect;
-    spriteRect.x = x + 10;
-    spriteRect.y = y + 10;
+    spriteRect.x = x + 12;
+    spriteRect.y = y + 12;
     spriteRect.h = h - 12;
     spriteRect.w = w - 12;
     const SDL_Rect *sprite = &spriteRect;
@@ -82,21 +83,6 @@ bool Game::detectCollision(int x, int y, int h, int w) {
             isCollision = true;
         }
     }
-
-    // Check for collision between the sprite and each exit
-//    vector<Vector2> exits = static_cast<vector<Vector2>>(_map->getRoom()->getExits());
-//    for (Vector2 exit : exits) {
-//        SDL_Rect exitRect;
-//        exitRect.x = static_cast<int>(exit.x);
-//        exitRect.y = static_cast<int>(exit.y);
-//        exitRect.h = 32;
-//        exitRect.w = 32;
-//        const SDL_Rect *constExitRect = &exitRect;
-//        if (SDL_HasIntersection(sprite, constExitRect)) {
-//            cout << "hit exit" << endl;
-//            isCollision = true;
-//        }
-//    }
     
     return isCollision;
 }
@@ -115,25 +101,23 @@ void Game::switchRoom(int edge) {
     // Get player entrance position
     int playerCol = 1;
     int playerRow = 1;
-    int spriteSize = 32;
 
     switch (edge) {
         case 0: // top
-            playerCol = _map->getRoom()->getBottom() * spriteSize;
-            // size - 2
-            playerRow = (_map->getRoom()->getSize() - 2) * spriteSize;
+            playerCol = _map->getRoom()->getBottom() * tileSize;
+            playerRow = (_map->getRoom()->getSize() - 2) * tileSize;
             break;
         case 1: // right
-            playerCol = spriteSize;
-            playerRow = _map->getRoom()->getLeft() * spriteSize;
+            playerCol = tileSize;
+            playerRow = _map->getRoom()->getLeft() * tileSize;
             break;
         case 2: // bottom
-            playerCol = _map->getRoom()->getTop() * spriteSize;
-            playerRow = spriteSize;
+            playerCol = _map->getRoom()->getTop() * tileSize;
+            playerRow = tileSize;
             break;
         case 3: // left
-            playerCol = (_map->getRoom()->getSize() - 2) * spriteSize;
-            playerRow = _map->getRoom()->getRight() * spriteSize;
+            playerCol = (_map->getRoom()->getSize() - 2) * tileSize;
+            playerRow = _map->getRoom()->getRight() * tileSize;
             break;
         default:
             break;
@@ -244,6 +228,7 @@ void Game::_renderMap() {
                 // Draw the tile.
                 spSprite sprite = new Sprite;
                 sprite->setResAnim(resources.getResAnim(name));
+//                sprite->setScale(1.25f);
                 sprite->setX(drawX);
                 sprite->setY(drawY);
                 sprite->attachTo(this);
@@ -289,8 +274,8 @@ void Game::_createTiles() {
 
 Vector2 Game::_getEntrance() {
     Vector2 location = _map->getRoom()->getEntrance();
-    location.x *= 32;
-    location.y *= 32;
+    location.x *= tileSize;
+    location.y *= tileSize;
     
     return location;
 }

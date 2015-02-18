@@ -73,8 +73,6 @@ void Room::createTileMap() {
     ofstream tmxFile;
     tmxFile.open("tmx/room.tmx");
 
-    int tileSize = 32;
-
     if (tmxFile.is_open()) {
         tmxFile << "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" << endl;
         tmxFile << "<map version=\"1.0\" orientation=\"orthogonal\" renderorder=\"right-down\" width=\"" << _size << "\" height=\"" << _size << "\" tilewidth=\"" << tileSize << "\" tileheight=\"" << tileSize << "\" nextobjectid=\"1\">" << endl;
@@ -261,7 +259,7 @@ void Room::_createTurn() {
     }
     
     _drawOpenSpaces(row, column, true);
-    _drawOpenSpaces(row, column, false);    
+    _drawOpenSpaces(row, column, false);
 }
 
 
@@ -347,6 +345,7 @@ void Room::_drawOpenSpaces(int row, int column, bool isColumn) {
     int roomWidth = _getRand(roomCol, _size - 2);
     int roomRow = _getRand(1, _size / 2);
     int roomHeight = _getRand(roomRow, _size - 2);
+
 //    _drawRoom(roomRow, roomCol, roomHeight, roomWidth);
     
     // Draw the rooms.

@@ -58,6 +58,8 @@ void KeyboardInput::_onEvent(Event *ev) {
                 _dir += Vector2(1, 0);
                 _game->getPlayer()->moveRight();
                 break;
+            case SDLK_SPACE:
+                _game->getPlayer()->attack();
             default:
                 break;
         }

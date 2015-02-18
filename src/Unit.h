@@ -78,7 +78,7 @@ protected:
     int _hp;
     int _attack;
     int _defense;
-    int _speed = 200;//****FIX ME******
+    int _speed = 300;//****FIX ME******
     
     // Indicates if unit is dead. Set by damage() and retrieved with isDead().
     // Used to remove unit from game's units list.

@@ -128,6 +128,8 @@ public:
 
 
 private:
+    const int tileSize = 64;
+    
     Tmx::Map *_tileMap;
     vector<SDL_Rect> _tiles;
 

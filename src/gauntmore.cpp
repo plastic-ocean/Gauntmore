@@ -58,8 +58,8 @@ int main(int argc, char* argv[]) {
     core::init_desc desc;
     
     // Setup the window.
-    desc.w = 480;
-    desc.h = 480;
+    desc.w = 768;
+    desc.h = 768;
 //    desc.fullscreen = true;
     desc.title = "Gauntmore";
     desc.appName = "Gauntmore";

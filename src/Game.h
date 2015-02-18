@@ -74,8 +74,8 @@ public:
     Units getUnits();
 
 protected:
+    const int tileSize = 64;
     spMap _map;
-    
     Tmx::Map *_tileMap;
     vector<SDL_Rect> _tiles;
     

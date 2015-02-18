@@ -13,10 +13,26 @@
         <image file="player_back.png" />
         <image file="player_left.png" />
         <image file="player_right.png" />
+        
         <image file="player_move_front.png" cols = "3" />
         <image file="player_move_back.png" cols = "3" />
         <image file="player_move_left.png" cols = "3" />
         <image file="player_move_right.png" cols = "3" />
+        
+        <image file="link_down.png" />
+        <image file="link_up.png" />
+        <image file="link_left.png" />
+        <image file="link_right.png" />
+        
+        <image file="link_move_down.png" cols = "7" />
+        <image file="link_move_up.png" cols = "7" />
+        <image file="link_move_left.png" cols = "7" />
+        <image file="link_move_right.png" cols = "7" />
+        
+        <image file="link_attack_down.png" cols = "7" />
+        <image file="link_attack_up.png" cols = "10" />
+        <image file="link_attack_right.png" cols = "10" />
+        <image file="link_attack_left.png" cols = "10" />
         
         <image file="uHero.png" cols = "9" />
         <image file="dHero.png" cols = "9" />
