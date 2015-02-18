@@ -4,6 +4,8 @@
 #include "Player.h"
 #include "Creature.h"
 #include "Chest.h"
+#include "Gold.h"
+#include "Potion.h"
 #include "res.h"
 #include "Tmx.h"
 #include "KeyboardInput.h"
@@ -42,20 +44,25 @@ void Game::init() {
 	_player = new Player;
 	_player->init(getEntrance(), this);
     
-
     // Create chest
     Vector2 chestLocation = Vector2(((32 * 15) / 2) + 1, (32 * 15) / 2);
     
-    _chest = new Chest;
-    _chest->init(chestLocation, this);
+//    _chest = new Chest;
+//    _chest->init(chestLocation, this);
 //   _chest->interact();
 
+    _chest = new Chest;
+     _gold = new Gold;
+    _potion = new Potion;
+    _chest->init(chestLocation, this);
+//    _unit = new Unit;
+//    _potion->init(chestLocation, this);
+    
     //location for skeleton
-    Vector2 center = Vector2(_map->getSize()/2, _map->getSize()/2);
+//    Vector2 center = Vector2(_map->getSize()/2, _map->getSize()/2);
     //std::cout << _map->getSize() << std::endl;
 //    _skeleton = new Skeleton;
 //    _skeleton->init(center, this);
-    
     
     // TODO Create enemy creatures (with random loot!)
 //    for (int i = 0; i < **large number**; ++i) {
@@ -89,12 +96,33 @@ bool Game::detectCollision(int x, int y, int h, int w) {
     
     // Iterate through the tiles vector to see if the spriteRect collides with the tile.
     const SDL_Rect *sprite = &spriteRect;
+    
     for (SDL_Rect tileRect : _tiles) {
         const SDL_Rect *tile = &tileRect;
         if (SDL_HasIntersection(sprite, tile)) {
             isCollision = true;
         }
     }
+    
+    for (spUnit unit : _units){
+        Vector2 unitPosition = unit->getPosition();
+        SDL_Rect unitRect;
+        // these are adjusted for a skeleton sprite, we will need to make different ones for
+        // different sprites
+        unitRect.x = unitPosition.x-3 ;
+        unitRect.y = unitPosition.y-3 ;
+        unitRect.h = 13;
+        unitRect.w = 13;
+
+        
+        const SDL_Rect *constUnitRect = &unitRect;
+        // we also make sure that we are not collecting a collision with outself by doing a type check
+        if (SDL_HasIntersection(sprite, constUnitRect) && typeid(*unit).name() != "6Player") {
+            isCollision = true;
+            std::cout << "collision with unit: " << typeid(*unit).name() << std::endl;
+        }
+    }
+    
     return isCollision;
 }
 
@@ -167,7 +195,7 @@ void Game::doUpdate(const UpdateState &us) {
 void Game::_renderMap() {
     _tileMap = new Tmx::Map();
     
-    _tileMap->ParseFile("data/tmx/room01.tmx");
+    _tileMap->ParseFile("data/tmx/room.tmx");
     
     for (int i = 0; i < _tileMap->GetNumLayers(); ++i) {
         // Get a layer.

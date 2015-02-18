@@ -45,6 +45,7 @@
 		53BCF11C1A8ED99F00BD6288 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53BCF1191A8ED99F00BD6288 /* Scene.cpp */; };
 		902FB53E1A90051C0042C72B /* Thing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 902FB53C1A90051C0042C72B /* Thing.cpp */; };
 		902FB5441A90053A0042C72B /* Chest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 902FB5421A90053A0042C72B /* Chest.cpp */; };
+		90DAFA731A92C84100C4D6BA /* Skeleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90DAFA711A92C84100C4D6BA /* Skeleton.cpp */; };
 		90F7DF3D1A92BDE60047D209 /* Gold.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90F7DF3B1A92BDE60047D209 /* Gold.cpp */; };
 		90F7DF431A92BE680047D209 /* Potion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90F7DF411A92BE680047D209 /* Potion.cpp */; };
 /* End PBXBuildFile section */
@@ -177,6 +178,8 @@
 		902FB53D1A90051C0042C72B /* Thing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Thing.h; path = src/Thing.h; sourceTree = "<group>"; };
 		902FB5421A90053A0042C72B /* Chest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Chest.cpp; path = src/Chest.cpp; sourceTree = "<group>"; };
 		902FB5431A90053A0042C72B /* Chest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Chest.h; path = src/Chest.h; sourceTree = "<group>"; };
+		90DAFA711A92C84100C4D6BA /* Skeleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Skeleton.cpp; path = src/Skeleton.cpp; sourceTree = "<group>"; };
+		90DAFA721A92C84100C4D6BA /* Skeleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Skeleton.h; path = src/Skeleton.h; sourceTree = "<group>"; };
 		90F7DF3B1A92BDE60047D209 /* Gold.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Gold.cpp; path = src/Gold.cpp; sourceTree = "<group>"; };
 		90F7DF3C1A92BDE60047D209 /* Gold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gold.h; path = src/Gold.h; sourceTree = "<group>"; };
 		90F7DF411A92BE680047D209 /* Potion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Potion.cpp; path = src/Potion.cpp; sourceTree = "<group>"; };
@@ -270,6 +273,8 @@
 		04A57D391871FF8B0068B1E5 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				90DAFA711A92C84100C4D6BA /* Skeleton.cpp */,
+				90DAFA721A92C84100C4D6BA /* Skeleton.h */,
 				5340977D1A896C0A000434F6 /* Creature.cpp */,
 				5340977E1A896C0A000434F6 /* Creature.h */,
 				534097801A896C0A000434F6 /* Game.cpp */,
@@ -475,6 +480,7 @@
 				90F7DF3D1A92BDE60047D209 /* Gold.cpp in Sources */,
 				534097BE1A896C0A000434F6 /* TmxTile.cpp in Sources */,
 				534097AD1A896C0A000434F6 /* gauntmore.cpp in Sources */,
+				90DAFA731A92C84100C4D6BA /* Skeleton.cpp in Sources */,
 				534097B71A896C0A000434F6 /* TmxLayer.cpp in Sources */,
 				534097D21A898396000434F6 /* Map.cpp in Sources */,
 				534097BF1A896C0A000434F6 /* TmxTileset.cpp in Sources */,

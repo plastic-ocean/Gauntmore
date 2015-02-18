@@ -7,7 +7,10 @@
 #include "SDL_keyboard.h"
 #include "SDL_events.h"
 #include "Player.h"
-#include "chest.h"
+#include "Unit.h"
+#include "Chest.h"
+#include "Gold.h"
+#include "Potion.h"
 
 /**
  * Constructor.
@@ -63,8 +66,12 @@ void KeyboardInput::_onEvent(Event *ev) {
             }
             case SDLK_SPACE:
                 _game->_chest->interact();
- //               _game->getPlayer()->interact();
-                break;
+//                _game->_unit->interact();
+                 break;
+                
+//                _game->_chest->interact();
+    //            _game->getPlayer()->interact();
+               
         }
     }
     if (event->type == SDL_KEYUP && event->key.repeat == 0) {

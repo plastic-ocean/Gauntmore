@@ -48,31 +48,52 @@ void Player::damage() {
 }
 
 void Player::interact(){
-
-    //typedef std::list<spUnit> units;
-    // Iterate through the unit list and call their update method. Then check for death.
-    //std::cout << "damage" << std::endl;
+    /*
+     A method that goes through every unit on the map and sees if the user
+     is in interacting distance with it based off what direction they are facing. 
+     Depending on what the unit is infront of us (monster, chest, etc) we will
+     call a different method (damage, open, etc)
+     
+     We basically get the position of the user and the unit, take the difference of
+     their positions and based off that determine if we are in interacting distance.
+    */
+    
     Vector2 playerPosition = getPosition();
     std::list<spUnit> units = _game->getUnits();
 
-    
     for (spUnit unit : units) {
-        //spUnit unit = *i;
         Vector2 unitPosition = unit->getPosition();
+        int yDiff = playerPosition.y - unitPosition.y;
+        int xDiff = playerPosition.x - unitPosition.x;
+        //std::cout << "yDiff: " << yDiff << std::endl;
+        //std::cout << "xDiff: " << xDiff << std::endl;
 
-        
         switch(facing){
             case up:
-                int yDiff = playerPosition.y - unitPosition.y;
-                int xDiff = playerPosition.x - unitPosition.x;
-                if((yDiff > 1 && yDiff < 30) && (xDiff > -50 && xDiff < 50)){
-                    std::cout << "damage " << i << std::endl;
-                    unit->damage();
-                    
+                if((yDiff > -5 && yDiff < 15) && (xDiff > -26 && xDiff < 0)){
+                    std::cout << "interact facing up " << i << std::endl;
+                    //unit->damage();
                     i++;
                 }
                 break;
-
+            case right:
+                if((yDiff > -30 && yDiff < 0) && (xDiff < -30 && xDiff > -50)){
+                    std::cout << "interact facing right " << i << std::endl;
+                    i++;
+                }
+                break;
+            case down:
+                if((yDiff > -50 && yDiff < -25) && (xDiff > -26 && xDiff < 0)){
+                    std::cout << "interact facing down " << i << std::endl;
+                    i++;
+                }
+                break;
+            case left:
+                if((xDiff < 25 && xDiff > 0) && (yDiff > -30 && yDiff < 0)){
+                    std::cout << "interact facing left " << i << std::endl;
+                    i++;
+                }
+                break;
         }
         
     }
@@ -102,23 +123,21 @@ void Player::addSprite() {
 
 
 void Player::setFacing( Vector2 dir ) {
-    if ( dir.y > 0 ) {
-        facing = down;
+    if ( dir.y > 0 ){
         _sprite->setResAnim(res::ui.getResAnim("player_front"));
+        facing = down;
     }
-    if ( dir.y < 0 ) {
-        facing = up;
+    if ( dir.y < 0 ){
         _sprite->setResAnim(res::ui.getResAnim("player_back"));
+        facing = up;
     }
-        
-    if ( dir.x < 0 ) {
-        facing = left;
+    if ( dir.x < 0 ){
         _sprite->setResAnim(res::ui.getResAnim("player_left"));
+        facing = left;
     }
-        
-    if ( dir.x > 0 ) {
-        facing = right;
+    if ( dir.x > 0 ){
         _sprite->setResAnim(res::ui.getResAnim("player_right"));
+        facing = right;
     }
 }
 

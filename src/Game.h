@@ -8,7 +8,10 @@ using namespace std;
 
 DECLARE_SMART(Player, spPlayer);
 DECLARE_SMART(Creature, spCreature);
+DECLARE_SMART(Unit, spUnit);
 DECLARE_SMART(Chest, spChest);
+DECLARE_SMART(Gold, spGold);
+DECLARE_SMART(Potion, spPotion);
 DECLARE_SMART(KeyboardInput, spKeyboardInput)
 DECLARE_SMART(Unit, spUnit);
 DECLARE_SMART(Map, spMap);
@@ -22,6 +25,9 @@ public:
     ~Game();
     
     spChest _chest;
+    spGold _gold;
+    spPotion _potion;
+    spUnit _unit;
     
     /**
      * Initialzes the game. Creates the map, the player, the monsters, the static objects
@@ -82,10 +88,8 @@ protected:
     spKeyboardInput _move;
     spPlayer _player;
     spSkeleton _skeleton;
-
-
+    
     std::list<spUnit> _units;
-
     
     /**
      * Updates the player each frame. A virtual method of Actor it is being called each frame.

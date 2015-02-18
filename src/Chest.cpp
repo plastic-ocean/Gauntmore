@@ -7,6 +7,7 @@
 //
 
 #include "Chest.h"
+#include "Gold.h"
 #include "Game.h"
 #include "KeyboardInput.h"
 #include "res.h"
@@ -31,6 +32,9 @@ void Chest::interact(){
     
     // The chest is open, hide it with an alpha tween.
     _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
+    
+    
+   
     
     // TODO end the game
 }
@@ -60,6 +64,7 @@ void Chest::_init() {
  */
 void Chest::_update(const UpdateState &us){
     Vector2 isOpen;
+    
 //    if (_game->getMove()->getDirection(dir)) {
 //        Vector2 pos = getPosition();
 //        dir = correctDirection( pos, dir );

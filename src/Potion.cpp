@@ -32,6 +32,13 @@ void Potion::interact(){
  * Initializes position and sprite of Potion. Called by Unit's init() method.
  */
 void Potion::_init(){
+    // Initialize the stats.
+    
+    // Add sprite to the game scene view.
+    _sprite = new Sprite;
+    _sprite->setResAnim(res::ui.getResAnim("potion"));
+    _sprite->attachTo(_view);
+    _sprite->setAnchor(Vector2(0.5f, 0.5f));
     
 }
 
