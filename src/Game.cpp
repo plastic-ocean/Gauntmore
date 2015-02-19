@@ -2,25 +2,22 @@
 
 #include "Game.h"
 #include "Player.h"
-<<<<<<< HEAD
-=======
+
 #include "Creature.h"
 #include "Chest.h"
 #include "Gold.h"
 #include "Potion.h"
->>>>>>> origin/stevenOffKeith
+
 #include "res.h"
 #include "KeyboardInput.h"
 #include "Map.h"
-<<<<<<< HEAD
+
 #include "MazeGen.h"
 
+#include "Skeleton.h"
 
 typedef list<spUnit> Units;
 
-=======
-#include "Skeleton.h"
->>>>>>> origin/stevenOffKeith
 
 /**
  * Constructor.
@@ -56,24 +53,21 @@ void Game::init() {
 
     _setUnits();
     
-<<<<<<< HEAD
+
     // TODO Create enemy creatures (with random loot!)
 //    for (int i = 0; i < **large number**; ++i) {
 //        spCreature creature = new Creature;
 //        creature->init(Vector2(**calculate starting position**, this);
 //    }
-=======
+
     // Create chest
     Vector2 chestLocation = Vector2(((32 * 15) / 2) + 1, (32 * 15) / 2);
-    
-
 
     _chest = new Chest;
 
     _chest->init(chestLocation, this);
    
     //location for skeleton
->>>>>>> origin/stevenOffKeith
     
     // TODO Create enemy creatures (with random loot!)
 
@@ -103,10 +97,8 @@ bool Game::detectCollision(int x, int y, int h, int w) {
     spriteRect.w = w - 12;
     const SDL_Rect *sprite = &spriteRect;
     
-<<<<<<< HEAD
     // Check for collision between the sprite and each tile
-=======
->>>>>>> origin/stevenOffKeith
+
     for (SDL_Rect tileRect : _tiles) {
         const SDL_Rect *tile = &tileRect;
         if (SDL_HasIntersection(sprite, tile)) {
@@ -222,9 +214,9 @@ std::vector<SDL_Rect> Game::getTiles() {
     return _tiles;
 }
 
-std::list<spUnit> Game::getUnits(){
-    return _units;
-}
+//std::list<spUnit> Game::getUnits(){
+//    return _units;
+//}
 
 /**
  * Gets the keyboard input handler.
@@ -241,11 +233,7 @@ spKeyboardInput Game::getMove() {
  */
 void Game::doUpdate(const UpdateState &us) {
     // Iterate through the unit list and call their update method. Then check for death.
-<<<<<<< HEAD
     for (Units::iterator i = _units.begin(); i != _units.end(); ) {
-=======
-    for (std::list<spUnit>::iterator i = _units.begin(); i != _units.end(); ) {
->>>>>>> origin/stevenOffKeith
         spUnit unit = *i;
         unit->update(us);
         
@@ -328,37 +316,11 @@ void Game::_createTiles() {
 }
 
 
-<<<<<<< HEAD
+
 Vector2 Game::_getEntrance() {
     Vector2 location = _map->getRoom()->getEntrance();
     location.x *= tileSize;
     location.y *= tileSize;
-=======
-void Game::switchMap() {
-    // Create new map
-    // TODO store the old map,
-    // associate with exit of old map and entrance of new
-    // create custom class or struct to hold all three
-    _map = new Map(15);
-//    map->createMaze();
-    _map->createHallMap(1);
-    _renderMap();
-    _createTiles();
-    
-    // Setup player
-    _player->detachUnit();
-    _player->attachUnit();
-    _player->addSprite();
-    _player->setPosition(getEntrance());
-}
-
-
-
-Vector2 Game::getEntrance() {
-    Vector2 location = _map->getEntrance();
-    location.x *= 32;
-    location.y *= 32;
->>>>>>> origin/stevenOffKeith
     
     return location;
 }

@@ -36,7 +36,7 @@ void Skeleton::_init() {
     
     // Add sprite to the game scene view.
     _sprite = new Sprite;
-    _sprite->setResAnim(res::ui.getResAnim("human"));
+    _sprite->setResAnim(resources.getResAnim("human"));
     _sprite->attachTo(_view);
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
 }

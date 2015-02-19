@@ -36,10 +36,10 @@ pathFinder::pathFinder(Vector2 start, Vector2 finish ) {
 void pathFinder::aStar() {
     pathNode start = *new pathNode( location, 0, findHeuristic(location) );
     
-    openList.push(start);
-    while ( !openList.empty() ) {
-        //do things here
-    }
+//    openList.push(start);
+//    while ( !openList.empty() ) {
+//        //do things here
+//    }
     
     
 }

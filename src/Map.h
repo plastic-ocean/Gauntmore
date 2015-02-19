@@ -12,9 +12,6 @@ class Map : public Object {
 
 public:
     Map(int size);
-<<<<<<< HEAD
-
-=======
     
     /**
      * Get map entrance.
@@ -46,7 +43,6 @@ public:
      */
     void createHallMap(int exists);
     
->>>>>>> origin/stevenOffKeith
     /**
     * Change to another room in on the map.
     */

@@ -5,7 +5,6 @@ DECLARE_SMART(Player, spPlayer);
 class Player: public Unit {
     
 public:
-<<<<<<< HEAD
 	Player(int hp, int attack, int defense);
     
     // up = 0, right = 1, down = 2, left = 3
@@ -13,11 +12,6 @@ public:
     Facings facing;
     
     Facings getFacing();
-=======
-	Player();
-    enum Facing {up, right, down, left};
-    Facing facing;
->>>>>>> origin/stevenOffKeith
     
     int i = 0;
 
@@ -31,17 +25,15 @@ public:
      */
     void addSprite();
     
-<<<<<<< HEAD
     void attack();
     void attackDown();
     void attackUp();
     void attackLeft();
     void attackRight();
-=======
+
     void interact();
     
     void removeSprite();
->>>>>>> origin/stevenOffKeith
     
     void moveUp();
     void moveDown();

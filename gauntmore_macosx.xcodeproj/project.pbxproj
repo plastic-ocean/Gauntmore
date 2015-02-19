@@ -15,10 +15,6 @@
 		0405A00118720D2200BA6557 /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04059FF11872031A00BA6557 /* libpng.a */; };
 		049B57321871FBE900EF3C66 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049B57311871FBE900EF3C66 /* Cocoa.framework */; };
 		049B574A1871FBE900EF3C66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049B57491871FBE900EF3C66 /* Images.xcassets */; };
-		4889D1651A95680D00EDA615 /* MazeGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4889D1631A95680D00EDA615 /* MazeGen.cpp */; };
-		4889D16D1A95685A00EDA615 /* pathFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4889D1691A95685A00EDA615 /* pathFinder.cpp */; };
-		4889D16E1A95685A00EDA615 /* pathNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4889D16B1A95685A00EDA615 /* pathNode.cpp */; };
-		4889D1711A95774C00EDA615 /* GreaterThan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4889D16F1A95774C00EDA615 /* GreaterThan.cpp */; };
 		530CFA6A1A90547100B4CD51 /* Room.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA681A90547100B4CD51 /* Room.cpp */; };
 		530CFA8F1A906FED00B4CD51 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA6E1A906FED00B4CD51 /* base64.cpp */; };
 		530CFA901A906FED00B4CD51 /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA701A906FED00B4CD51 /* tinyxml2.cpp */; };
@@ -46,13 +42,17 @@
 		534097C91A896C19000434F6 /* tmx in Resources */ = {isa = PBXBuildFile; fileRef = 534097C61A896C19000434F6 /* tmx */; };
 		534097CA1A896C19000434F6 /* xmls in Resources */ = {isa = PBXBuildFile; fileRef = 534097C71A896C19000434F6 /* xmls */; };
 		534097D21A898396000434F6 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 534097D01A898396000434F6 /* Map.cpp */; };
+		5359D5721A96A90F00AE6365 /* Chest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5621A96A90F00AE6365 /* Chest.cpp */; };
+		5359D5731A96A90F00AE6365 /* Gold.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5641A96A90F00AE6365 /* Gold.cpp */; };
+		5359D5741A96A90F00AE6365 /* GreaterThan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5661A96A90F00AE6365 /* GreaterThan.cpp */; };
+		5359D5751A96A90F00AE6365 /* pathFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5681A96A90F00AE6365 /* pathFinder.cpp */; };
+		5359D5761A96A90F00AE6365 /* pathNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D56A1A96A90F00AE6365 /* pathNode.cpp */; };
+		5359D5771A96A90F00AE6365 /* Potion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D56C1A96A90F00AE6365 /* Potion.cpp */; };
+		5359D5781A96A90F00AE6365 /* Skeleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D56E1A96A90F00AE6365 /* Skeleton.cpp */; };
+		5359D5791A96A90F00AE6365 /* Thing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5701A96A90F00AE6365 /* Thing.cpp */; };
+		5365DD881A93BE28000A7893 /* MazeGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5365DD861A93BE28000A7893 /* MazeGen.cpp */; };
 		53BCF11B1A8ED99F00BD6288 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53BCF1171A8ED99F00BD6288 /* GameScene.cpp */; };
 		53BCF11C1A8ED99F00BD6288 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53BCF1191A8ED99F00BD6288 /* Scene.cpp */; };
-		902FB53E1A90051C0042C72B /* Thing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 902FB53C1A90051C0042C72B /* Thing.cpp */; };
-		902FB5441A90053A0042C72B /* Chest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 902FB5421A90053A0042C72B /* Chest.cpp */; };
-		90DAFA731A92C84100C4D6BA /* Skeleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90DAFA711A92C84100C4D6BA /* Skeleton.cpp */; };
-		90F7DF3D1A92BDE60047D209 /* Gold.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90F7DF3B1A92BDE60047D209 /* Gold.cpp */; };
-		90F7DF431A92BE680047D209 /* Potion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90F7DF411A92BE680047D209 /* Potion.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,14 +124,6 @@
 		049B57501871FBE900EF3C66 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		04A57D761871FFEB0068B1E5 /* oxygine_macosx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = oxygine_macosx.xcodeproj; path = "oxygine-framework//oxygine/SDL/macosx/oxygine_macosx/oxygine_macosx.xcodeproj"; sourceTree = "<group>"; };
 		04A57D7E1872012A0068B1E5 /* SDL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL.xcodeproj; path = ".//SDL/Xcode/SDL/SDL.xcodeproj"; sourceTree = "<group>"; };
-		4889D1631A95680D00EDA615 /* MazeGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MazeGen.cpp; path = src/MazeGen.cpp; sourceTree = "<group>"; };
-		4889D1641A95680D00EDA615 /* MazeGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MazeGen.h; path = src/MazeGen.h; sourceTree = "<group>"; };
-		4889D1691A95685A00EDA615 /* pathFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pathFinder.cpp; path = src/pathFinder.cpp; sourceTree = "<group>"; };
-		4889D16A1A95685A00EDA615 /* pathFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pathFinder.h; path = src/pathFinder.h; sourceTree = "<group>"; };
-		4889D16B1A95685A00EDA615 /* pathNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pathNode.cpp; path = src/pathNode.cpp; sourceTree = "<group>"; };
-		4889D16C1A95685A00EDA615 /* pathNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pathNode.h; path = src/pathNode.h; sourceTree = "<group>"; };
-		4889D16F1A95774C00EDA615 /* GreaterThan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GreaterThan.cpp; path = src/GreaterThan.cpp; sourceTree = "<group>"; };
-		4889D1701A95774C00EDA615 /* GreaterThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GreaterThan.h; path = src/GreaterThan.h; sourceTree = "<group>"; };
 		530CFA681A90547100B4CD51 /* Room.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Room.cpp; path = src/Room.cpp; sourceTree = "<group>"; };
 		530CFA691A90547100B4CD51 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Room.h; path = src/Room.h; sourceTree = "<group>"; };
 		530CFA6E1A906FED00B4CD51 /* base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = base64.cpp; path = src/tmx/base64.cpp; sourceTree = "<group>"; };
@@ -185,20 +177,28 @@
 		534097C71A896C19000434F6 /* xmls */ = {isa = PBXFileReference; lastKnownFileType = folder; name = xmls; path = data/xmls; sourceTree = "<group>"; };
 		534097D01A898396000434F6 /* Map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Map.cpp; path = src/Map.cpp; sourceTree = "<group>"; };
 		534097D11A898396000434F6 /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Map.h; path = src/Map.h; sourceTree = "<group>"; };
+		5359D5621A96A90F00AE6365 /* Chest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Chest.cpp; path = src/Chest.cpp; sourceTree = "<group>"; };
+		5359D5631A96A90F00AE6365 /* Chest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Chest.h; path = src/Chest.h; sourceTree = "<group>"; };
+		5359D5641A96A90F00AE6365 /* Gold.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Gold.cpp; path = src/Gold.cpp; sourceTree = "<group>"; };
+		5359D5651A96A90F00AE6365 /* Gold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gold.h; path = src/Gold.h; sourceTree = "<group>"; };
+		5359D5661A96A90F00AE6365 /* GreaterThan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GreaterThan.cpp; path = src/GreaterThan.cpp; sourceTree = "<group>"; };
+		5359D5671A96A90F00AE6365 /* GreaterThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GreaterThan.h; path = src/GreaterThan.h; sourceTree = "<group>"; };
+		5359D5681A96A90F00AE6365 /* pathFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pathFinder.cpp; path = src/pathFinder.cpp; sourceTree = "<group>"; };
+		5359D5691A96A90F00AE6365 /* pathFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pathFinder.h; path = src/pathFinder.h; sourceTree = "<group>"; };
+		5359D56A1A96A90F00AE6365 /* pathNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pathNode.cpp; path = src/pathNode.cpp; sourceTree = "<group>"; };
+		5359D56B1A96A90F00AE6365 /* pathNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pathNode.h; path = src/pathNode.h; sourceTree = "<group>"; };
+		5359D56C1A96A90F00AE6365 /* Potion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Potion.cpp; path = src/Potion.cpp; sourceTree = "<group>"; };
+		5359D56D1A96A90F00AE6365 /* Potion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Potion.h; path = src/Potion.h; sourceTree = "<group>"; };
+		5359D56E1A96A90F00AE6365 /* Skeleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Skeleton.cpp; path = src/Skeleton.cpp; sourceTree = "<group>"; };
+		5359D56F1A96A90F00AE6365 /* Skeleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Skeleton.h; path = src/Skeleton.h; sourceTree = "<group>"; };
+		5359D5701A96A90F00AE6365 /* Thing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Thing.cpp; path = src/Thing.cpp; sourceTree = "<group>"; };
+		5359D5711A96A90F00AE6365 /* Thing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Thing.h; path = src/Thing.h; sourceTree = "<group>"; };
+		5365DD861A93BE28000A7893 /* MazeGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MazeGen.cpp; path = ../gauntmore/src/MazeGen.cpp; sourceTree = "<group>"; };
+		5365DD871A93BE28000A7893 /* MazeGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MazeGen.h; path = ../gauntmore/src/MazeGen.h; sourceTree = "<group>"; };
 		53BCF1171A8ED99F00BD6288 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameScene.cpp; path = src/GameScene.cpp; sourceTree = "<group>"; };
 		53BCF1181A8ED99F00BD6288 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = src/GameScene.h; sourceTree = "<group>"; };
 		53BCF1191A8ED99F00BD6288 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Scene.cpp; path = src/Scene.cpp; sourceTree = "<group>"; };
 		53BCF11A1A8ED99F00BD6288 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Scene.h; path = src/Scene.h; sourceTree = "<group>"; };
-		902FB53C1A90051C0042C72B /* Thing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Thing.cpp; path = src/Thing.cpp; sourceTree = "<group>"; };
-		902FB53D1A90051C0042C72B /* Thing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Thing.h; path = src/Thing.h; sourceTree = "<group>"; };
-		902FB5421A90053A0042C72B /* Chest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Chest.cpp; path = src/Chest.cpp; sourceTree = "<group>"; };
-		902FB5431A90053A0042C72B /* Chest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Chest.h; path = src/Chest.h; sourceTree = "<group>"; };
-		90DAFA711A92C84100C4D6BA /* Skeleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Skeleton.cpp; path = src/Skeleton.cpp; sourceTree = "<group>"; };
-		90DAFA721A92C84100C4D6BA /* Skeleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Skeleton.h; path = src/Skeleton.h; sourceTree = "<group>"; };
-		90F7DF3B1A92BDE60047D209 /* Gold.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Gold.cpp; path = src/Gold.cpp; sourceTree = "<group>"; };
-		90F7DF3C1A92BDE60047D209 /* Gold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gold.h; path = src/Gold.h; sourceTree = "<group>"; };
-		90F7DF411A92BE680047D209 /* Potion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Potion.cpp; path = src/Potion.cpp; sourceTree = "<group>"; };
-		90F7DF421A92BE680047D209 /* Potion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Potion.h; path = src/Potion.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,17 +288,8 @@
 		04A57D391871FF8B0068B1E5 /* src */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-				4889D1691A95685A00EDA615 /* pathFinder.cpp */,
-				4889D16A1A95685A00EDA615 /* pathFinder.h */,
-				4889D16B1A95685A00EDA615 /* pathNode.cpp */,
-				4889D16C1A95685A00EDA615 /* pathNode.h */,
-				4889D1631A95680D00EDA615 /* MazeGen.cpp */,
-				4889D1641A95680D00EDA615 /* MazeGen.h */,
-=======
-				90DAFA711A92C84100C4D6BA /* Skeleton.cpp */,
-				90DAFA721A92C84100C4D6BA /* Skeleton.h */,
->>>>>>> origin/stevenOffKeith
+				5359D5621A96A90F00AE6365 /* Chest.cpp */,
+				5359D5631A96A90F00AE6365 /* Chest.h */,
 				5340977D1A896C0A000434F6 /* Creature.cpp */,
 				5340977E1A896C0A000434F6 /* Creature.h */,
 				534097801A896C0A000434F6 /* Game.cpp */,
@@ -306,34 +297,37 @@
 				53BCF1171A8ED99F00BD6288 /* GameScene.cpp */,
 				53BCF1181A8ED99F00BD6288 /* GameScene.h */,
 				5340977F1A896C0A000434F6 /* gauntmore.cpp */,
+				5359D5641A96A90F00AE6365 /* Gold.cpp */,
+				5359D5651A96A90F00AE6365 /* Gold.h */,
+				5359D5661A96A90F00AE6365 /* GreaterThan.cpp */,
+				5359D5671A96A90F00AE6365 /* GreaterThan.h */,
 				534097841A896C0A000434F6 /* KeyboardInput.cpp */,
 				534097851A896C0A000434F6 /* KeyboardInput.h */,
 				534097D01A898396000434F6 /* Map.cpp */,
 				534097D11A898396000434F6 /* Map.h */,
+				5365DD861A93BE28000A7893 /* MazeGen.cpp */,
+				5365DD871A93BE28000A7893 /* MazeGen.h */,
+				5359D5681A96A90F00AE6365 /* pathFinder.cpp */,
+				5359D5691A96A90F00AE6365 /* pathFinder.h */,
+				5359D56A1A96A90F00AE6365 /* pathNode.cpp */,
+				5359D56B1A96A90F00AE6365 /* pathNode.h */,
 				534097861A896C0A000434F6 /* Player.cpp */,
 				534097871A896C0A000434F6 /* Player.h */,
+				5359D56C1A96A90F00AE6365 /* Potion.cpp */,
+				5359D56D1A96A90F00AE6365 /* Potion.h */,
 				534097881A896C0A000434F6 /* res.cpp */,
 				534097891A896C0A000434F6 /* res.h */,
 				530CFA681A90547100B4CD51 /* Room.cpp */,
 				530CFA691A90547100B4CD51 /* Room.h */,
 				53BCF1191A8ED99F00BD6288 /* Scene.cpp */,
 				53BCF11A1A8ED99F00BD6288 /* Scene.h */,
+				5359D56E1A96A90F00AE6365 /* Skeleton.cpp */,
+				5359D56F1A96A90F00AE6365 /* Skeleton.h */,
+				5359D5701A96A90F00AE6365 /* Thing.cpp */,
+				5359D5711A96A90F00AE6365 /* Thing.h */,
 				534097CB1A896C3F000434F6 /* tmx */,
 				534097A91A896C0A000434F6 /* Unit.cpp */,
 				534097AA1A896C0A000434F6 /* Unit.h */,
-<<<<<<< HEAD
-				4889D16F1A95774C00EDA615 /* GreaterThan.cpp */,
-				4889D1701A95774C00EDA615 /* GreaterThan.h */,
-=======
-				902FB53C1A90051C0042C72B /* Thing.cpp */,
-				902FB53D1A90051C0042C72B /* Thing.h */,
-				902FB5421A90053A0042C72B /* Chest.cpp */,
-				902FB5431A90053A0042C72B /* Chest.h */,
-				90F7DF3B1A92BDE60047D209 /* Gold.cpp */,
-				90F7DF3C1A92BDE60047D209 /* Gold.h */,
-				90F7DF411A92BE680047D209 /* Potion.cpp */,
-				90F7DF421A92BE680047D209 /* Potion.h */,
->>>>>>> origin/stevenOffKeith
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -505,57 +499,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
-				4889D16D1A95685A00EDA615 /* pathFinder.cpp in Sources */,
 				530CFA9D1A906FED00B4CD51 /* TmxUtil.cpp in Sources */,
 				530CFA9C1A906FED00B4CD51 /* TmxTileset.cpp in Sources */,
-				4889D1711A95774C00EDA615 /* GreaterThan.cpp in Sources */,
+				5359D5771A96A90F00AE6365 /* Potion.cpp in Sources */,
 				530CFA961A906FED00B4CD51 /* TmxObject.cpp in Sources */,
+				5359D5741A96A90F00AE6365 /* GreaterThan.cpp in Sources */,
 				534097AD1A896C0A000434F6 /* gauntmore.cpp in Sources */,
 				530CFA911A906FED00B4CD51 /* TmxEllipse.cpp in Sources */,
+				5359D5731A96A90F00AE6365 /* Gold.cpp in Sources */,
+				5359D5781A96A90F00AE6365 /* Skeleton.cpp in Sources */,
+				5359D5751A96A90F00AE6365 /* pathFinder.cpp in Sources */,
+				5359D5721A96A90F00AE6365 /* Chest.cpp in Sources */,
 				534097D21A898396000434F6 /* Map.cpp in Sources */,
-				4889D16E1A95685A00EDA615 /* pathNode.cpp in Sources */,
 				530CFA971A906FED00B4CD51 /* TmxObjectGroup.cpp in Sources */,
 				530CFA921A906FED00B4CD51 /* TmxImage.cpp in Sources */,
-=======
-				534097BA1A896C0A000434F6 /* TmxObjectGroup.cpp in Sources */,
-				534097BB1A896C0A000434F6 /* TmxPolygon.cpp in Sources */,
-				534097B31A896C0A000434F6 /* tinyxml2.cpp in Sources */,
-				90F7DF3D1A92BDE60047D209 /* Gold.cpp in Sources */,
-				534097BE1A896C0A000434F6 /* TmxTile.cpp in Sources */,
-				534097AD1A896C0A000434F6 /* gauntmore.cpp in Sources */,
-				90DAFA731A92C84100C4D6BA /* Skeleton.cpp in Sources */,
-				534097B71A896C0A000434F6 /* TmxLayer.cpp in Sources */,
-				534097D21A898396000434F6 /* Map.cpp in Sources */,
-				534097BF1A896C0A000434F6 /* TmxTileset.cpp in Sources */,
-				902FB53E1A90051C0042C72B /* Thing.cpp in Sources */,
-				90F7DF431A92BE680047D209 /* Potion.cpp in Sources */,
-				534097BC1A896C0A000434F6 /* TmxPolyline.cpp in Sources */,
->>>>>>> origin/stevenOffKeith
 				534097B11A896C0A000434F6 /* Player.cpp in Sources */,
 				534097B21A896C0A000434F6 /* res.cpp in Sources */,
 				530CFA8F1A906FED00B4CD51 /* base64.cpp in Sources */,
 				530CFA991A906FED00B4CD51 /* TmxPolyline.cpp in Sources */,
+				5359D5761A96A90F00AE6365 /* pathNode.cpp in Sources */,
 				534097AC1A896C0A000434F6 /* Creature.cpp in Sources */,
-<<<<<<< HEAD
 				530CFA951A906FED00B4CD51 /* TmxMap.cpp in Sources */,
 				530CFA931A906FED00B4CD51 /* TmxImageLayer.cpp in Sources */,
 				530CFA941A906FED00B4CD51 /* TmxLayer.cpp in Sources */,
 				530CFA981A906FED00B4CD51 /* TmxPolygon.cpp in Sources */,
-=======
-				902FB5441A90053A0042C72B /* Chest.cpp in Sources */,
-				534097B91A896C0A000434F6 /* TmxObject.cpp in Sources */,
->>>>>>> origin/stevenOffKeith
 				534097B01A896C0A000434F6 /* KeyboardInput.cpp in Sources */,
 				530CFA9A1A906FED00B4CD51 /* TmxPropertySet.cpp in Sources */,
 				534097C11A896C0A000434F6 /* Unit.cpp in Sources */,
 				530CFA901A906FED00B4CD51 /* tinyxml2.cpp in Sources */,
 				530CFA9B1A906FED00B4CD51 /* TmxTile.cpp in Sources */,
 				530CFA6A1A90547100B4CD51 /* Room.cpp in Sources */,
+				5359D5791A96A90F00AE6365 /* Thing.cpp in Sources */,
 				53BCF11B1A8ED99F00BD6288 /* GameScene.cpp in Sources */,
 				53BCF11C1A8ED99F00BD6288 /* Scene.cpp in Sources */,
 				534097AE1A896C0A000434F6 /* Game.cpp in Sources */,
-				4889D1651A95680D00EDA615 /* MazeGen.cpp in Sources */,
+				5365DD881A93BE28000A7893 /* MazeGen.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

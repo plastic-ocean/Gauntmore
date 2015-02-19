@@ -24,18 +24,15 @@ class Game: public Actor {
 public:
 	Game();
     ~Game();
-<<<<<<< HEAD
-
-    typedef list<spUnit> Units;
-
-=======
     
+    typedef list<spUnit> Units;
+  
     spChest _chest;
     spGold _gold;
     spPotion _potion;
     spUnit _unit;
     
->>>>>>> origin/stevenOffKeith
+    
     /**
      * Initialzes the game. Creates the map, the player, the monsters, the static objects
      * and puts them in the game world.
@@ -86,8 +83,6 @@ public:
     std::list<spUnit> getUnits();
 
     spMap getMap();
-    
-    Units getUnits();
 
 protected:
     const int tileSize = 64;
@@ -97,14 +92,9 @@ protected:
     
     spKeyboardInput _move;
     spPlayer _player;
-<<<<<<< HEAD
 
     Units _units;
-=======
     spSkeleton _skeleton;
-    
-    std::list<spUnit> _units;
->>>>>>> origin/stevenOffKeith
     
     /**
      * Updates the player each frame. A virtual method of Actor it is being called each frame.

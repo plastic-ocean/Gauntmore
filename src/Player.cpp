@@ -129,7 +129,7 @@ void Player::addSprite() {
 }
 
 
-<<<<<<< HEAD
+
 void Player::_setFacing(Vector2 dir) {
     if ( dir.y > 0 ) {
         _sprite->setResAnim(resources.getResAnim("adventurer_down"));
@@ -145,23 +145,6 @@ void Player::_setFacing(Vector2 dir) {
     }
     if ( dir.x > 0 ) {
         _sprite->setResAnim(resources.getResAnim("adventurer_right"));
-=======
-void Player::setFacing( Vector2 dir ) {
-    if ( dir.y > 0 ){
-        _sprite->setResAnim(res::ui.getResAnim("player_front"));
-        facing = down;
-    }
-    if ( dir.y < 0 ){
-        _sprite->setResAnim(res::ui.getResAnim("player_back"));
-        facing = up;
-    }
-    if ( dir.x < 0 ){
-        _sprite->setResAnim(res::ui.getResAnim("player_left"));
-        facing = left;
-    }
-    if ( dir.x > 0 ){
-        _sprite->setResAnim(res::ui.getResAnim("player_right"));
->>>>>>> origin/stevenOffKeith
         facing = right;
     }
 }
@@ -243,10 +226,6 @@ void Player::_checkTween() {
 void Player::removeTween() {
     if (_hasTween) {
         _sprite->removeTween(_moveTween);
-<<<<<<< HEAD
-//        _sprite->removeTween(_attackTween);
-=======
->>>>>>> origin/stevenOffKeith
     }
     _hasTween = false;
 }

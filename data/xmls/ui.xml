@@ -8,9 +8,7 @@
         <image file="floor2.png" />
         <image file="wall2.png" />
         <image file="human.png" />
-        <image file="chestClosed.png" />
-        <image file="gold.png" />
-        <image file="potion.png" />
+        <image file="chest.png" />
         
         <image file="player_front.png" />
         <image file="player_back.png" />
@@ -52,5 +50,7 @@
         <image file="lHero.png" cols = "9" />
         <image file="rHero.png" cols = "9" />
         <image file="hero.png" cols = "9" rows = "4" />
+        
+        <image file="adventurer_down.png" />
     </atlas>
 </resources>
