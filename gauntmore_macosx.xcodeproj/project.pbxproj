@@ -18,6 +18,7 @@
 		4889D1651A95680D00EDA615 /* MazeGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4889D1631A95680D00EDA615 /* MazeGen.cpp */; };
 		4889D16D1A95685A00EDA615 /* pathFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4889D1691A95685A00EDA615 /* pathFinder.cpp */; };
 		4889D16E1A95685A00EDA615 /* pathNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4889D16B1A95685A00EDA615 /* pathNode.cpp */; };
+		4889D1711A95774C00EDA615 /* GreaterThan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4889D16F1A95774C00EDA615 /* GreaterThan.cpp */; };
 		530CFA6A1A90547100B4CD51 /* Room.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA681A90547100B4CD51 /* Room.cpp */; };
 		530CFA8F1A906FED00B4CD51 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA6E1A906FED00B4CD51 /* base64.cpp */; };
 		530CFA901A906FED00B4CD51 /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA701A906FED00B4CD51 /* tinyxml2.cpp */; };
@@ -124,6 +125,8 @@
 		4889D16A1A95685A00EDA615 /* pathFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pathFinder.h; path = src/pathFinder.h; sourceTree = "<group>"; };
 		4889D16B1A95685A00EDA615 /* pathNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pathNode.cpp; path = src/pathNode.cpp; sourceTree = "<group>"; };
 		4889D16C1A95685A00EDA615 /* pathNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pathNode.h; path = src/pathNode.h; sourceTree = "<group>"; };
+		4889D16F1A95774C00EDA615 /* GreaterThan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GreaterThan.cpp; path = src/GreaterThan.cpp; sourceTree = "<group>"; };
+		4889D1701A95774C00EDA615 /* GreaterThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GreaterThan.h; path = src/GreaterThan.h; sourceTree = "<group>"; };
 		530CFA681A90547100B4CD51 /* Room.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Room.cpp; path = src/Room.cpp; sourceTree = "<group>"; };
 		530CFA691A90547100B4CD51 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Room.h; path = src/Room.h; sourceTree = "<group>"; };
 		530CFA6E1A906FED00B4CD51 /* base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = base64.cpp; path = src/tmx/base64.cpp; sourceTree = "<group>"; };
@@ -298,6 +301,8 @@
 				534097CB1A896C3F000434F6 /* tmx */,
 				534097A91A896C0A000434F6 /* Unit.cpp */,
 				534097AA1A896C0A000434F6 /* Unit.h */,
+				4889D16F1A95774C00EDA615 /* GreaterThan.cpp */,
+				4889D1701A95774C00EDA615 /* GreaterThan.h */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -472,6 +477,7 @@
 				4889D16D1A95685A00EDA615 /* pathFinder.cpp in Sources */,
 				530CFA9D1A906FED00B4CD51 /* TmxUtil.cpp in Sources */,
 				530CFA9C1A906FED00B4CD51 /* TmxTileset.cpp in Sources */,
+				4889D1711A95774C00EDA615 /* GreaterThan.cpp in Sources */,
 				530CFA961A906FED00B4CD51 /* TmxObject.cpp in Sources */,
 				534097AD1A896C0A000434F6 /* gauntmore.cpp in Sources */,
 				530CFA911A906FED00B4CD51 /* TmxEllipse.cpp in Sources */,

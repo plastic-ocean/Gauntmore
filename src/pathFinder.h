@@ -14,14 +14,16 @@
 #include "Game.h"
 #include "Map.h"
 #include "pathNode.h"
+#include "GreaterThan.h"
 
-#endif /* defined(__gauntmore_macosx__pathFinder__) */
 
 class pathFinder {
-public:
-    pathFinder(Vector2 location, Vector2 target);
     
-    int findHeuristic( pathNode curNode );
+    
+public:
+    pathFinder( Vector2, Vector2 );
+    ~pathFinder();
+    int findHeuristic( Vector2 );
     void aStar();                       //***  what should this return?  ***
     
     
@@ -30,8 +32,11 @@ public:
 private:
     Vector2 target;
     Vector2 location;
-    std::priority_queue<pathNode, vector<pathNode>, std::greater<pathNode> > openList;
+    std::priority_queue<pathNode,vector<pathNode>, GreaterThan> openList;
     vector<pathNode> closedList;
-
+    int mapSize = 64;   //*** FIX ME ***
+    
     
 };
+
+#endif /* defined(__gauntmore_macosx__pathFinder__) */

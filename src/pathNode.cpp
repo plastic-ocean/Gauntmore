@@ -8,6 +8,13 @@
 
 #include "pathNode.h"
 
+pathNode::pathNode( Vector2 location, int cost, int heuristic ) {
+    this->location = location;
+    this->cost = cost;
+    this->heuristic = heuristic;
+}
+pathNode::~pathNode(){}
+
 Vector2 pathNode::getLocation(){
     return this->location;
 }
@@ -17,7 +24,7 @@ int pathNode::getHeuristic() {
 int pathNode::getCost() {
     return this->cost;
 }
-int pathNode::getTotal() {
+const int pathNode::getTotal()  {
     return this->total;
 }
 void pathNode::setCost( int cost ) {
@@ -44,8 +51,3 @@ void pathNode::setParent( pathNode parent ) {
 }
 
 
-
-
-bool pathNode::operator>( pathNode &node) {//overload for minheap
-    return ( this->cost > node.getCost() );
-}

@@ -27,8 +27,26 @@
  
  
  */
+pathFinder::pathFinder(Vector2 start, Vector2 finish ) {
+    this->location = start;
+    this->target = finish;
+    
+}
 
-int pathFinder::findHeuristic( pathNode curNode ) {
-    Vector2 curLoc = curNode.getLocation();
+void pathFinder::aStar() {
+    pathNode start = *new pathNode( location, 0, findHeuristic(location) );
+    
+    openList.push(start);
+    while ( !openList.empty() ) {
+        //do things here
+    }
+    
+    
+}
+
+int pathFinder::findHeuristic( Vector2 curLoc ) {
     return abs( curLoc.x - this->target.x ) + abs( curLoc.y - this->target.y );
 }
+
+
+

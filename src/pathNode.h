@@ -21,12 +21,12 @@ public:
     Vector2 getLocation();
     int getHeuristic();
     int getCost();
-    int getTotal();
+    const int getTotal();
     void setHeuristic(int);
     void setCost(int);
     void calculateTotal();
     void setLocation(Vector2);
-    bool operator>(  pathNode& node );
+//    bool operator >(  pathNode& node );
     pathNode getParent();
     void setParent(pathNode);
     
