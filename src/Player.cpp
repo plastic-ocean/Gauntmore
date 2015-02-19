@@ -135,7 +135,6 @@ void Player::attackRight() {
 void Player::moveUp() {
     _checkTween();
     _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("link_move_up")), 400, -1);
->>>>>>> origin/keith
 }
 
 

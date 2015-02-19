@@ -15,6 +15,9 @@
 		0405A00118720D2200BA6557 /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04059FF11872031A00BA6557 /* libpng.a */; };
 		049B57321871FBE900EF3C66 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049B57311871FBE900EF3C66 /* Cocoa.framework */; };
 		049B574A1871FBE900EF3C66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049B57491871FBE900EF3C66 /* Images.xcassets */; };
+		4889D1651A95680D00EDA615 /* MazeGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4889D1631A95680D00EDA615 /* MazeGen.cpp */; };
+		4889D16D1A95685A00EDA615 /* pathFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4889D1691A95685A00EDA615 /* pathFinder.cpp */; };
+		4889D16E1A95685A00EDA615 /* pathNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4889D16B1A95685A00EDA615 /* pathNode.cpp */; };
 		530CFA6A1A90547100B4CD51 /* Room.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA681A90547100B4CD51 /* Room.cpp */; };
 		530CFA8F1A906FED00B4CD51 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA6E1A906FED00B4CD51 /* base64.cpp */; };
 		530CFA901A906FED00B4CD51 /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA701A906FED00B4CD51 /* tinyxml2.cpp */; };
@@ -42,7 +45,6 @@
 		534097C91A896C19000434F6 /* tmx in Resources */ = {isa = PBXBuildFile; fileRef = 534097C61A896C19000434F6 /* tmx */; };
 		534097CA1A896C19000434F6 /* xmls in Resources */ = {isa = PBXBuildFile; fileRef = 534097C71A896C19000434F6 /* xmls */; };
 		534097D21A898396000434F6 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 534097D01A898396000434F6 /* Map.cpp */; };
-		5365DD881A93BE28000A7893 /* MazeGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5365DD861A93BE28000A7893 /* MazeGen.cpp */; };
 		53BCF11B1A8ED99F00BD6288 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53BCF1171A8ED99F00BD6288 /* GameScene.cpp */; };
 		53BCF11C1A8ED99F00BD6288 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53BCF1191A8ED99F00BD6288 /* Scene.cpp */; };
 /* End PBXBuildFile section */
@@ -116,6 +118,12 @@
 		049B57501871FBE900EF3C66 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		04A57D761871FFEB0068B1E5 /* oxygine_macosx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = oxygine_macosx.xcodeproj; path = "oxygine-framework//oxygine/SDL/macosx/oxygine_macosx/oxygine_macosx.xcodeproj"; sourceTree = "<group>"; };
 		04A57D7E1872012A0068B1E5 /* SDL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL.xcodeproj; path = ".//SDL/Xcode/SDL/SDL.xcodeproj"; sourceTree = "<group>"; };
+		4889D1631A95680D00EDA615 /* MazeGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MazeGen.cpp; path = src/MazeGen.cpp; sourceTree = "<group>"; };
+		4889D1641A95680D00EDA615 /* MazeGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MazeGen.h; path = src/MazeGen.h; sourceTree = "<group>"; };
+		4889D1691A95685A00EDA615 /* pathFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pathFinder.cpp; path = src/pathFinder.cpp; sourceTree = "<group>"; };
+		4889D16A1A95685A00EDA615 /* pathFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pathFinder.h; path = src/pathFinder.h; sourceTree = "<group>"; };
+		4889D16B1A95685A00EDA615 /* pathNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pathNode.cpp; path = src/pathNode.cpp; sourceTree = "<group>"; };
+		4889D16C1A95685A00EDA615 /* pathNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pathNode.h; path = src/pathNode.h; sourceTree = "<group>"; };
 		530CFA681A90547100B4CD51 /* Room.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Room.cpp; path = src/Room.cpp; sourceTree = "<group>"; };
 		530CFA691A90547100B4CD51 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Room.h; path = src/Room.h; sourceTree = "<group>"; };
 		530CFA6E1A906FED00B4CD51 /* base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = base64.cpp; path = src/tmx/base64.cpp; sourceTree = "<group>"; };
@@ -169,8 +177,6 @@
 		534097C71A896C19000434F6 /* xmls */ = {isa = PBXFileReference; lastKnownFileType = folder; name = xmls; path = data/xmls; sourceTree = "<group>"; };
 		534097D01A898396000434F6 /* Map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Map.cpp; path = src/Map.cpp; sourceTree = "<group>"; };
 		534097D11A898396000434F6 /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Map.h; path = src/Map.h; sourceTree = "<group>"; };
-		5365DD861A93BE28000A7893 /* MazeGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MazeGen.cpp; path = ../gauntmore/src/MazeGen.cpp; sourceTree = "<group>"; };
-		5365DD871A93BE28000A7893 /* MazeGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MazeGen.h; path = ../gauntmore/src/MazeGen.h; sourceTree = "<group>"; };
 		53BCF1171A8ED99F00BD6288 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameScene.cpp; path = src/GameScene.cpp; sourceTree = "<group>"; };
 		53BCF1181A8ED99F00BD6288 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = src/GameScene.h; sourceTree = "<group>"; };
 		53BCF1191A8ED99F00BD6288 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Scene.cpp; path = src/Scene.cpp; sourceTree = "<group>"; };
@@ -264,6 +270,12 @@
 		04A57D391871FF8B0068B1E5 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				4889D1691A95685A00EDA615 /* pathFinder.cpp */,
+				4889D16A1A95685A00EDA615 /* pathFinder.h */,
+				4889D16B1A95685A00EDA615 /* pathNode.cpp */,
+				4889D16C1A95685A00EDA615 /* pathNode.h */,
+				4889D1631A95680D00EDA615 /* MazeGen.cpp */,
+				4889D1641A95680D00EDA615 /* MazeGen.h */,
 				5340977D1A896C0A000434F6 /* Creature.cpp */,
 				5340977E1A896C0A000434F6 /* Creature.h */,
 				534097801A896C0A000434F6 /* Game.cpp */,
@@ -275,8 +287,6 @@
 				534097851A896C0A000434F6 /* KeyboardInput.h */,
 				534097D01A898396000434F6 /* Map.cpp */,
 				534097D11A898396000434F6 /* Map.h */,
-				5365DD861A93BE28000A7893 /* MazeGen.cpp */,
-				5365DD871A93BE28000A7893 /* MazeGen.h */,
 				534097861A896C0A000434F6 /* Player.cpp */,
 				534097871A896C0A000434F6 /* Player.h */,
 				534097881A896C0A000434F6 /* res.cpp */,
@@ -459,12 +469,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4889D16D1A95685A00EDA615 /* pathFinder.cpp in Sources */,
 				530CFA9D1A906FED00B4CD51 /* TmxUtil.cpp in Sources */,
 				530CFA9C1A906FED00B4CD51 /* TmxTileset.cpp in Sources */,
 				530CFA961A906FED00B4CD51 /* TmxObject.cpp in Sources */,
 				534097AD1A896C0A000434F6 /* gauntmore.cpp in Sources */,
 				530CFA911A906FED00B4CD51 /* TmxEllipse.cpp in Sources */,
 				534097D21A898396000434F6 /* Map.cpp in Sources */,
+				4889D16E1A95685A00EDA615 /* pathNode.cpp in Sources */,
 				530CFA971A906FED00B4CD51 /* TmxObjectGroup.cpp in Sources */,
 				530CFA921A906FED00B4CD51 /* TmxImage.cpp in Sources */,
 				534097B11A896C0A000434F6 /* Player.cpp in Sources */,
@@ -485,7 +497,7 @@
 				53BCF11B1A8ED99F00BD6288 /* GameScene.cpp in Sources */,
 				53BCF11C1A8ED99F00BD6288 /* Scene.cpp in Sources */,
 				534097AE1A896C0A000434F6 /* Game.cpp in Sources */,
-				5365DD881A93BE28000A7893 /* MazeGen.cpp in Sources */,
+				4889D1651A95680D00EDA615 /* MazeGen.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
