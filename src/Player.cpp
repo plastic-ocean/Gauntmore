@@ -2,9 +2,12 @@
 
 #include "Player.h"
 #include "Game.h"
+#include "Thing.h"
 #include "KeyboardInput.h"
 #include "res.h"
 #include "Map.h"
+
+
 
 
 
@@ -19,6 +22,8 @@ Player::Player(int hp, int attack, int defense) {
     _hasTween = false;
     facing = down;
 }
+
+
 
 
 /**
@@ -48,6 +53,58 @@ void Player::damage() {
     }
 }
 
+void Player::interact(){
+    /*
+     A method that goes through every unit on the map and sees if the user
+     is in interacting distance with it based off what direction they are facing. 
+     Depending on what the unit is infront of us (monster, chest, etc) we will
+     call a different method (damage, open, etc)
+     
+     We basically get the position of the user and the unit, take the difference of
+     their positions and based off that determine if we are in interacting distance.
+    */
+    
+    Vector2 playerPosition = getPosition();
+    std::list<spUnit> units = _game->getUnits();
+
+    for (spUnit unit : units) {
+        Vector2 unitPosition = unit->getPosition();
+        int yDiff = playerPosition.y - unitPosition.y;
+        int xDiff = playerPosition.x - unitPosition.x;
+        //std::cout << "yDiff: " << yDiff << std::endl;
+        //std::cout << "xDiff: " << xDiff << std::endl;
+
+        switch(facing){
+            case up:
+                if((yDiff > -5 && yDiff < 15) && (xDiff > -26 && xDiff < 0)){
+                    std::cout << "interact facing up " << i << std::endl;
+                    //unit->damage();
+                    i++;
+                }
+                break;
+            case right:
+                if((yDiff > -30 && yDiff < 0) && (xDiff < -30 && xDiff > -50)){
+                    std::cout << "interact facing right " << i << std::endl;
+                    i++;
+                }
+                break;
+            case down:
+                if((yDiff > -50 && yDiff < -25) && (xDiff > -26 && xDiff < 0)){
+                    std::cout << "interact facing down " << i << std::endl;
+                    i++;
+                }
+                break;
+            case left:
+                if((xDiff < 25 && xDiff > 0) && (yDiff > -30 && yDiff < 0)){
+                    std::cout << "interact facing left " << i << std::endl;
+                    i++;
+                }
+                break;
+        }
+        
+    }
+    
+}
 
 Vector2 Player::correctDirection(Vector2 position, Vector2 direction) {
     int newX = static_cast<int>(position.x) + static_cast<int>(direction.x) * 5;
@@ -72,6 +129,7 @@ void Player::addSprite() {
 }
 
 
+<<<<<<< HEAD
 void Player::_setFacing(Vector2 dir) {
     if ( dir.y > 0 ) {
         _sprite->setResAnim(resources.getResAnim("adventurer_down"));
@@ -87,6 +145,23 @@ void Player::_setFacing(Vector2 dir) {
     }
     if ( dir.x > 0 ) {
         _sprite->setResAnim(resources.getResAnim("adventurer_right"));
+=======
+void Player::setFacing( Vector2 dir ) {
+    if ( dir.y > 0 ){
+        _sprite->setResAnim(res::ui.getResAnim("player_front"));
+        facing = down;
+    }
+    if ( dir.y < 0 ){
+        _sprite->setResAnim(res::ui.getResAnim("player_back"));
+        facing = up;
+    }
+    if ( dir.x < 0 ){
+        _sprite->setResAnim(res::ui.getResAnim("player_left"));
+        facing = left;
+    }
+    if ( dir.x > 0 ){
+        _sprite->setResAnim(res::ui.getResAnim("player_right"));
+>>>>>>> origin/stevenOffKeith
         facing = right;
     }
 }
@@ -168,7 +243,10 @@ void Player::_checkTween() {
 void Player::removeTween() {
     if (_hasTween) {
         _sprite->removeTween(_moveTween);
+<<<<<<< HEAD
 //        _sprite->removeTween(_attackTween);
+=======
+>>>>>>> origin/stevenOffKeith
     }
     _hasTween = false;
 }

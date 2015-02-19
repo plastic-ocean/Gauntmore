@@ -23,6 +23,12 @@ public:
     void detachUnit();
     
     /**
+     *  Interaction method for Unit
+     *
+     */
+//    void interact();
+    
+    /**
      * Gets the unit's position.
      *
      * @return the unit's position.

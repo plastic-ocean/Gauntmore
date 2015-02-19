@@ -20,7 +20,17 @@ Map::Map(int size) {
 
 //    _room = new Room(turn, 15, {true, true, false, false});
 
+<<<<<<< HEAD
     _room->createTileMap();
+=======
+/*
+ Gets map size
+ */
+int Map::getSize(){
+    return _size*32;
+}
+
+>>>>>>> origin/stevenOffKeith
 
 //    _room->printMap();
 //    cout << "entrance: " << _row << ", " << _col << endl;

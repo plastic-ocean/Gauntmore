@@ -44,6 +44,17 @@ void Unit::detachUnit() {
 }
 
 /**
+ *  Interaction method for Unit:
+ *  Iterates thru list of units and determines which the player is facing.
+ *  Then calls that objects interact method. 
+ *
+ */
+//void interact(){
+//    
+//    
+//}
+
+/**
  * Gets the unit's position.
  *
  * @return the unit's position

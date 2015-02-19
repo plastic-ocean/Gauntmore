@@ -12,7 +12,41 @@ class Map : public Object {
 
 public:
     Map(int size);
+<<<<<<< HEAD
 
+=======
+    
+    /**
+     * Get map entrance.
+     */
+    Vector2 getEntrance();
+    
+    /**
+     * Set map entrance.
+     *
+     * @x is the entrance's x coordinate on the map.
+     * @y is the entrance's y coordinate on the map.
+     */
+    void setEntrance(int x, int y);
+    
+    /*
+     Gets map size
+     */
+    int getSize();
+    
+    /**
+     * Creates a 2D maze array using Prim's algorithm for minimum spanning trees.
+     */
+    void createMaze();
+    
+    /**
+     * Creates and draws a room on the map. Checks if the main hall is on a row or a column.
+     * Then checks if there is space above or below a row and left or right of a column.
+     * Connects the room(s) to the main hall with connecting halls.
+     */
+    void createHallMap(int exists);
+    
+>>>>>>> origin/stevenOffKeith
     /**
     * Change to another room in on the map.
     */

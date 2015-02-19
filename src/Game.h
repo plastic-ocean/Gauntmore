@@ -8,20 +8,34 @@ using namespace std;
 
 DECLARE_SMART(Player, spPlayer);
 DECLARE_SMART(Creature, spCreature);
+DECLARE_SMART(Unit, spUnit);
+DECLARE_SMART(Chest, spChest);
+DECLARE_SMART(Gold, spGold);
+DECLARE_SMART(Potion, spPotion);
 DECLARE_SMART(KeyboardInput, spKeyboardInput)
 DECLARE_SMART(Unit, spUnit);
 DECLARE_SMART(Room, spRoom)
 DECLARE_SMART(Map, spMap);
 DECLARE_SMART(Game, spGame);
+DECLARE_SMART(Skeleton, spSkeleton);
 
 class Game: public Actor {
     
 public:
 	Game();
     ~Game();
+<<<<<<< HEAD
 
     typedef list<spUnit> Units;
 
+=======
+    
+    spChest _chest;
+    spGold _gold;
+    spPotion _potion;
+    spUnit _unit;
+    
+>>>>>>> origin/stevenOffKeith
     /**
      * Initialzes the game. Creates the map, the player, the monsters, the static objects
      * and puts them in the game world.
@@ -68,6 +82,8 @@ public:
     void switchRoom(int edge);
     
     spPlayer getPlayer();
+    
+    std::list<spUnit> getUnits();
 
     spMap getMap();
     
@@ -81,8 +97,14 @@ protected:
     
     spKeyboardInput _move;
     spPlayer _player;
+<<<<<<< HEAD
 
     Units _units;
+=======
+    spSkeleton _skeleton;
+    
+    std::list<spUnit> _units;
+>>>>>>> origin/stevenOffKeith
     
     /**
      * Updates the player each frame. A virtual method of Actor it is being called each frame.

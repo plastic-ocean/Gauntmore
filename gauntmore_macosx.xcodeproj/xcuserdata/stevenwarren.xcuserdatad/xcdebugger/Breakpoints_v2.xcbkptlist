@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+            timestampString = "445934270.889983"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "class intrusive_ptr"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;Gold&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.507549"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;Gold&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.507679"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::Tween&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.507779"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::Tween&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.507874"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::Actor&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.508017"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::Sprite&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.50811"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::Sprite&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.508199"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::Actor&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.508289"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;GameScene&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.508379"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;Game&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.508468"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;Game&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.508558"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;GameScene&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.508649"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::Object&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.50874"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::EventDispatcher&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.508883"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::EventDispatcher&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.509024"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::Object&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.509136"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;Chest&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.509239"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;Potion&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.50934"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;Unit&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.50949"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;Map&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.509588"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;KeyboardInput&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.509682"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;Player&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.509777"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;Skeleton&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.509872"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;Skeleton&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.509964"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;Player&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.510053"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;KeyboardInput&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.510142"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;Map&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.510242"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;Unit&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.51033"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;Potion&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.51042"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;Chest&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/src/core/intrusive_ptr.h"
+                  timestampString = "445934448.510507"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::TreeInspectorPreview&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/SDL/macosx/oxygine_macosx/../../../src/core/intrusive_ptr.h"
+                  timestampString = "445934448.510606"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::TreeInspectorPreview&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/SDL/macosx/oxygine_macosx/../../../src/core/intrusive_ptr.h"
+                  timestampString = "445934448.5107"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::DebugActor&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/SDL/macosx/oxygine_macosx/../../../src/core/intrusive_ptr.h"
+                  timestampString = "445934448.51079"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::Button&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/SDL/macosx/oxygine_macosx/../../../src/core/intrusive_ptr.h"
+                  timestampString = "445934448.510886"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::ColorRectSprite&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/SDL/macosx/oxygine_macosx/../../../src/core/intrusive_ptr.h"
+                  timestampString = "445934448.51098"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::TextField&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/SDL/macosx/oxygine_macosx/../../../src/core/intrusive_ptr.h"
+                  timestampString = "445934448.511069"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::TextField&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/SDL/macosx/oxygine_macosx/../../../src/core/intrusive_ptr.h"
+                  timestampString = "445934448.511163"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::ColorRectSprite&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/SDL/macosx/oxygine_macosx/../../../src/core/intrusive_ptr.h"
+                  timestampString = "445934448.511255"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::Button&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/SDL/macosx/oxygine_macosx/../../../src/core/intrusive_ptr.h"
+                  timestampString = "445934448.511347"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::DebugActor&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/SDL/macosx/oxygine_macosx/../../../src/core/intrusive_ptr.h"
+                  timestampString = "445934448.511436"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::TreeInspectorLine&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/SDL/macosx/oxygine_macosx/../../../src/core/intrusive_ptr.h"
+                  timestampString = "445934448.511532"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::TreeInspectorLine&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/SDL/macosx/oxygine_macosx/../../../src/core/intrusive_ptr.h"
+                  timestampString = "445934448.511624"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::TreeInspectorPage&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/SDL/macosx/oxygine_macosx/../../../src/core/intrusive_ptr.h"
+                  timestampString = "445934448.511725"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::SlidingActor&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/SDL/macosx/oxygine_macosx/../../../src/core/intrusive_ptr.h"
+                  timestampString = "445934448.511823"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::SlidingActor&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/SDL/macosx/oxygine_macosx/../../../src/core/intrusive_ptr.h"
+                  timestampString = "445934448.511916"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::TreeInspectorPage&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/SDL/macosx/oxygine_macosx/../../../src/core/intrusive_ptr.h"
+                  timestampString = "445934448.51201"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::ClipRectActor&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/SDL/macosx/oxygine_macosx/../../../src/core/intrusive_ptr.h"
+                  timestampString = "445934448.512105"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::ClipRectActor&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/SDL/macosx/oxygine_macosx/../../../src/core/intrusive_ptr.h"
+                  timestampString = "445934448.512198"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::Stage&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/SDL/macosx/oxygine_macosx/../../../src/core/intrusive_ptr.h"
+                  timestampString = "445934448.512296"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::Stage&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/SDL/macosx/oxygine_macosx/../../../src/core/intrusive_ptr.h"
+                  timestampString = "445934448.512395"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::NativeTexture&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/SDL/macosx/oxygine_macosx/../../../src/core/intrusive_ptr.h"
+                  timestampString = "445934448.512498"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::NativeTexture&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/SDL/macosx/oxygine_macosx/../../../src/core/intrusive_ptr.h"
+                  timestampString = "445934448.512593"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::Clock&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/SDL/macosx/oxygine_macosx/../../../src/core/intrusive_ptr.h"
+                  timestampString = "445934448.512695"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "oxygine::intrusive_ptr&lt;oxygine::Clock&gt;::intrusive_ptr()"
+                  moduleName = "gauntmore_macosx"
+                  urlString = "file:///Users/stevenwarren/UofO/plastic-ocean/gauntmore/oxygine-framework/oxygine/SDL/macosx/oxygine_macosx/../../../src/core/intrusive_ptr.h"
+                  timestampString = "445934448.512794"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
