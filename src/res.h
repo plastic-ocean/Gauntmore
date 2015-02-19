@@ -2,17 +2,14 @@
 #include "oxygine-framework.h"
 using namespace oxygine;
 
-namespace res {
-    
-	extern Resources ui;
-    
-    /**
-     * Loads the resources.
-     */
-	void load();
-    
-    /**
-     * Unloads the resources.
-     */
-	void free();
-}
+extern Resources resources;
+
+/**
+* Loads the resources.
+*/
+void loadResources();
+
+/**
+* Unloads the resources.
+*/
+void freeResources();

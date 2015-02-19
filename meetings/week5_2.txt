@@ -1,0 +1,13 @@
+Date: 2/5
+
+Attendance:
+
+Keith Hamm
+David Wenzel
+Steven Warren
+Benjamin Barnes
+
+
+Minutes:
+
+Created a TODO list and gave people the opportunity to choose their initial tasks. We will be using TinyXML2 and TMXParser to build the tile based maps. Keith's maze generation code is going be used with these libraries to dynamically build at least some of the maps.

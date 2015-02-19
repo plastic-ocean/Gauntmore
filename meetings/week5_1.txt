@@ -1,0 +1,13 @@
+Date: 2/3
+
+Attendance:
+
+Keith Hamm
+David Wenzel
+Steven Warren
+Benjamin Barnes
+
+
+Minutes:
+
+Discussed and decided on the team name, project, and project name. We will be creating Gauntmore. Gauntmore is a 2D, top down, hack-and-slash, real-time, roguelike, with procedural tile-based map generation, and permanent death. We decided to use SDL2 and the oxygine-framework (http://oxygine.org/).

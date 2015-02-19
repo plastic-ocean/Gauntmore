@@ -2,10 +2,14 @@
 
 #include "Game.h"
 #include "Player.h"
-#include "Creature.h"
 #include "res.h"
-#include "Tmx.h"
 #include "KeyboardInput.h"
+#include "Map.h"
+#include "MazeGen.h"
+
+
+typedef list<spUnit> Units;
+
 
 /**
  * Constructor.
@@ -20,32 +24,37 @@ Game::~Game() {}
 
 
 /**
- * Initialzes the game. Creates the map, the player, the monsters, the static objects 
+ * Initializes the game. Creates the map, the player, the monsters, the static objects
  * and puts them in the game world.
  */
 void Game::init() {
 	// Set the size of the scene to the size of the display.
 	setSize(getStage()->getSize());
+    
+    // Size is the number of tiles (with 32 px tiles; 15 tiles = 480 px; 20 tiles = 640 px)
+    int size = 12;
 
 	// Create map
+    _map = new Map(size);
     _renderMap();
     _createTiles();
     
 	// Create player
-	_player = new Player;
-	_player->init(getSize() / 2, this);
+	_player = new Player(3, 1, 1);
+    _player->init(_getEntrance(), this);
+
+    _setUnits();
     
     // TODO Create enemy creatures (with random loot!)
 //    for (int i = 0; i < **large number**; ++i) {
 //        spCreature creature = new Creature;
-//        creature->init(Vector2(**calulate starting postion**, this);
+//        creature->init(Vector2(**calculate starting position**, this);
 //    }
     
     // TODO Create chests (with even more random loot!)
 
 	// Handle input
-    _move = new KeyboardInput;
-    _move->attachTo(this);
+    _move = new KeyboardInput(this);
 }
 
 
@@ -61,13 +70,13 @@ void Game::init() {
 bool Game::detectCollision(int x, int y, int h, int w) {
     bool isCollision = false;
     SDL_Rect spriteRect;
-    spriteRect.x = x;
-    spriteRect.y = y;
-    spriteRect.h = h;
-    spriteRect.w = w;
-    
-    // Iterate through the tiles vector to see if the spriteRect collides with the tile.
+    spriteRect.x = x + 12;
+    spriteRect.y = y + 12;
+    spriteRect.h = h - 12;
+    spriteRect.w = w - 12;
     const SDL_Rect *sprite = &spriteRect;
+    
+    // Check for collision between the sprite and each tile
     for (SDL_Rect tileRect : _tiles) {
         const SDL_Rect *tile = &tileRect;
         if (SDL_HasIntersection(sprite, tile)) {
@@ -80,12 +89,78 @@ bool Game::detectCollision(int x, int y, int h, int w) {
 
 
 /**
+* Switches viewable map to the room in the direction of the given edge in the maze.
+*/
+void Game::switchRoom(int edge) {
+    // Change to a new room in the maze.
+    _map->changeRoom(edge);
+    _renderMap();
+    _createTiles();
+//    _setUnits();
+
+    // Get player entrance position
+    int playerCol = 1;
+    int playerRow = 1;
+
+    switch (edge) {
+        case 0: // top
+            playerCol = _map->getRoom()->getBottom() * tileSize;
+            playerRow = (_map->getRoom()->getSize() - 2) * tileSize;
+            break;
+        case 1: // right
+            playerCol = tileSize;
+            playerRow = _map->getRoom()->getLeft() * tileSize;
+            break;
+        case 2: // bottom
+            playerCol = _map->getRoom()->getTop() * tileSize;
+            playerRow = tileSize;
+            break;
+        case 3: // left
+            playerCol = (_map->getRoom()->getSize() - 2) * tileSize;
+            playerRow = _map->getRoom()->getRight() * tileSize;
+            break;
+        default:
+            break;
+    }
+
+//    cout << "switch position: " << playerCol << ", " << playerRow << endl;
+
+    // Setup player
+    _player->detachUnit();
+    _player->attachUnit();
+    _player->addSprite();
+    _player->setPosition(Vector2(playerCol, playerRow));
+}
+
+
+void Game::pushUnit(spUnit unit) {
+    _map->getRoom()->pushUnit(unit);
+    _units.push_back(unit);
+}
+
+
+spPlayer Game::getPlayer() {
+    return _player;
+}
+
+
+spMap Game::getMap() {
+    return _map;
+}
+
+
+list<spUnit> Game::getUnits() {
+    return _units;
+}
+
+
+/**
  * Gets the tile map.
  *
  * @return the tile map.
  */
-Tmx::Map *Game::getMap() {
-    return _map;
+Tmx::Map *Game::getTileMap() {
+    return _tileMap;
 }
 
 
@@ -108,23 +183,13 @@ spKeyboardInput Game::getMove() {
 
 
 /**
- * Adds unit to the back of the units list.
- *
- * @unit is the Unit to be added.
- */
-void Game::pushUnit(spUnit unit) {
-    _units.push_back(unit);
-}
-
-
-/**
  * Updates the Units each frame. A virtual method of Actor it is being called each frame.
  *
  * @us is the UpdateStatus sent by the global update method.
  */
 void Game::doUpdate(const UpdateState &us) {
     // Iterate through the unit list and call their update method. Then check for death.
-    for (units::iterator i = _units.begin(); i != _units.end(); ) {
+    for (Units::iterator i = _units.begin(); i != _units.end(); ) {
         spUnit unit = *i;
         unit->update(us);
         
@@ -142,25 +207,28 @@ void Game::doUpdate(const UpdateState &us) {
  * Reads the tile map description from the .tmx file and uses it to render the map.
  */
 void Game::_renderMap() {
-    _map = new Tmx::Map();
+    _tileMap = new Tmx::Map();
     
-    _map->ParseFile("data/tmx/room01.tmx");
+    _tileMap->ParseFile("tmx/room.tmx");
+
+    _map->getRoom()->setTileMap(_tileMap);
     
-    for (int i = 0; i < _map->GetNumLayers(); ++i) {
+    for (int i = 0; i < _tileMap->GetNumLayers(); ++i) {
         // Get a layer.
-        const Tmx::Layer *layer = _map->GetLayer(i);
+        const Tmx::Layer *layer = _tileMap->GetLayer(i);
         
         for (int x = 0; x < layer->GetWidth(); ++x) {
             for (int y = 0; y < layer->GetHeight(); ++y) {
                 int tilesetIndex = layer->GetTileTilesetIndex(x, y);
-                const Tmx::Tileset *tileset = _map->GetTileset(tilesetIndex);
+                const Tmx::Tileset *tileset = _tileMap->GetTileset(tilesetIndex);
                 std::string name = tileset->GetName();
                 int tileSize = tileset->GetImage()->GetWidth();
                 int drawX = x * tileSize;
                 int drawY = y * tileSize;
                 // Draw the tile.
                 spSprite sprite = new Sprite;
-                sprite->setResAnim(res::ui.getResAnim(name));
+                sprite->setResAnim(resources.getResAnim(name));
+//                sprite->setScale(1.25f);
                 sprite->setX(drawX);
                 sprite->setY(drawY);
                 sprite->attachTo(this);
@@ -175,15 +243,16 @@ void Game::_renderMap() {
  * Creates a vector of rectangles called tiles that is used to detect collisions.
  */
 void Game::_createTiles() {
+    _tiles.clear();
     // Build a vector of rectangles to represent the collidable tiles.
-    for (int i = 0; i < _map->GetNumLayers(); ++i) {
+    for (int i = 0; i < _tileMap->GetNumLayers(); ++i) {
         // Get a layer.
-        const Tmx::Layer *layer = _map->GetLayer(i);
+        const Tmx::Layer *layer = _tileMap->GetLayer(i);
         for (int x = 0; x < layer->GetWidth(); ++x) {
             for (int y = 0; y < layer->GetHeight(); ++y) {
                 
                 int tilesetIndex = layer->GetTileTilesetIndex(x, y);
-                const Tmx::Tileset *tileset = _map->GetTileset(tilesetIndex);
+                const Tmx::Tileset *tileset = _tileMap->GetTileset(tilesetIndex);
                 int tileSize = tileset->GetImage()->GetWidth();
                 std::string name = tileset->GetName();
                 
@@ -202,3 +271,15 @@ void Game::_createTiles() {
     }
 }
 
+
+Vector2 Game::_getEntrance() {
+    Vector2 location = _map->getRoom()->getEntrance();
+    location.x *= tileSize;
+    location.y *= tileSize;
+    
+    return location;
+}
+
+void Game::_setUnits() {
+    _units = static_cast<Units>(_map->getRoom()->getUnits());
+}

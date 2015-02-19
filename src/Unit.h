@@ -18,6 +18,10 @@ public:
      */
     void init(const Vector2 &pos, Game *game);
     
+    void attachUnit();
+    
+    void detachUnit();
+    
     /**
      * Gets the unit's position.
      *
@@ -30,7 +34,7 @@ public:
      *
      * @position the position to set
      */
-    void setPosition(Vector2 position);
+    void setPosition(const Vector2& position);
 
     /**
      * Calls the overloaded _update method in children.
@@ -43,6 +47,18 @@ public:
      * @returns true if unit is dead and false if it is not.
      */
     const bool isDead() {return _dead;}
+
+    int getHp() {
+        return _hp;
+    }
+
+    int getAttack() {
+        return _attack;
+    }
+
+    int getDefense() {
+        return _defense;
+    }
     
     /**
      * Reduces the Unit's hit points. Overload this for each child.
@@ -52,15 +68,17 @@ public:
 protected:
     // Each Unit has a view that is attached to the game.
     spActor _view;
+    spSprite _sprite;
     
     // A pointer to the game.
     Game *_game;
-    
-    // Stats
+
+protected:
+// Stats
     int _hp;
     int _attack;
     int _defense;
-    int _speed = 200;//****FIX ME******
+    int _speed = 300;//****FIX ME******
     
     // Indicates if unit is dead. Set by damage() and retrieved with isDead().
     // Used to remove unit from game's units list.
@@ -77,4 +95,6 @@ protected:
      * @us is the UpdateStatus sent by Unit's update method.
      */
 	virtual void _update(const UpdateState &us){}
+    
+    void _move(const UpdateState &us);
 };

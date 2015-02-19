@@ -1,13 +1,17 @@
 #pragma once
 #include "oxygine-framework.h"
-#include "Tmx.h"
+#include "tmx/Tmx.h"
+#include "tmx/tinyxml2.h"
 
 using namespace oxygine;
+using namespace std;
 
 DECLARE_SMART(Player, spPlayer);
 DECLARE_SMART(Creature, spCreature);
 DECLARE_SMART(KeyboardInput, spKeyboardInput)
 DECLARE_SMART(Unit, spUnit);
+DECLARE_SMART(Room, spRoom)
+DECLARE_SMART(Map, spMap);
 DECLARE_SMART(Game, spGame);
 
 class Game: public Actor {
@@ -15,7 +19,9 @@ class Game: public Actor {
 public:
 	Game();
     ~Game();
-    
+
+    typedef list<spUnit> Units;
+
     /**
      * Initialzes the game. Creates the map, the player, the monsters, the static objects
      * and puts them in the game world.
@@ -38,14 +44,14 @@ public:
      *
      * @return the tile map.
      */
-    Tmx::Map *getMap();
+    Tmx::Map *getTileMap();
     
     /**
      * Gets tiles.
      *
      * @return the tiles vector<SDL_Rect>.
      */
-    std::vector<SDL_Rect> getTiles();
+    vector<SDL_Rect> getTiles();
     
     /**
      * Gets the keyboard input handler.
@@ -58,16 +64,25 @@ public:
      * @unit is the Unit to be added.
      */
     void pushUnit(spUnit unit);
+    
+    void switchRoom(int edge);
+    
+    spPlayer getPlayer();
+
+    spMap getMap();
+    
+    Units getUnits();
 
 protected:
-    Tmx::Map *_map;
-    std::vector<SDL_Rect> _tiles;
+    const int tileSize = 64;
+    spMap _map;
+    Tmx::Map *_tileMap;
+    vector<SDL_Rect> _tiles;
     
     spKeyboardInput _move;
     spPlayer _player;
-    
-    typedef std::list<spUnit> units;
-    units _units;
+
+    Units _units;
     
     /**
      * Updates the player each frame. A virtual method of Actor it is being called each frame.
@@ -85,4 +100,8 @@ protected:
      * Creates a vector of rectangles called tiles that is used to detect collisions.
      */
     void _createTiles();
+
+    void _setUnits();
+    
+    Vector2 _getEntrance();
 };

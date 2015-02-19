@@ -1,33 +1,43 @@
 <?xml version="1.0"?>
 <resources>
 	<set path = "images" />
-<!--	<atlas>-->
-<!--		<image file="joystick.png" />-->
-<!--		<image file="finger.png" />-->
-<!--	</atlas>-->
-<!---->
-<!--	<atlas>-->
-<!--		<image file="sky.jpg" />-->
-<!--		<image file="ship.png" />-->
-<!--		<image file="shipengine.png" />-->
-<!--	</atlas>-->
-<!--    -->
     <atlas>
-        <image file="room01.png" />
-	<image file="default_tiles_x.png" />
+        <image file="default_tiles_x.png" cols = "7" rows = "2" />
         <image file="floor.png" />
         <image file="wall.png" />
+        <image file="floor2.png" />
+        <image file="wall2.png" />
         <image file="human.png" />
+        
+        <image file="player_front.png" />
+        <image file="player_back.png" />
+        <image file="player_left.png" />
+        <image file="player_right.png" />
+        
+        <image file="player_move_front.png" cols = "3" />
+        <image file="player_move_back.png" cols = "3" />
+        <image file="player_move_left.png" cols = "3" />
+        <image file="player_move_right.png" cols = "3" />
+        
+        <image file="link_down.png" />
+        <image file="link_up.png" />
+        <image file="link_left.png" />
+        <image file="link_right.png" />
+        
+        <image file="link_move_down.png" cols = "7" />
+        <image file="link_move_up.png" cols = "7" />
+        <image file="link_move_left.png" cols = "7" />
+        <image file="link_move_right.png" cols = "7" />
+        
+        <image file="link_attack_down.png" cols = "7" />
+        <image file="link_attack_up.png" cols = "10" />
+        <image file="link_attack_right.png" cols = "10" />
+        <image file="link_attack_left.png" cols = "10" />
+        
         <image file="uHero.png" cols = "9" />
         <image file="dHero.png" cols = "9" />
         <image file="lHero.png" cols = "9" />
         <image file="rHero.png" cols = "9" />
         <image file="hero.png" cols = "9" rows = "4" />
-
-
-    </atlas>
-    <set path = "tmx" />
-    <atlas>
-        <tmx file="room01.tmx" />
     </atlas>
 </resources>

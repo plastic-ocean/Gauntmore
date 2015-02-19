@@ -7,6 +7,7 @@
  */
 Creature::Creature() {}
 
+
 /**
  * Reduces the creatures hit points.
  */
@@ -19,6 +20,7 @@ void Creature::damage() {
     }
 }
 
+
 /**
  * Initializes a creatures position and sprite. Called by Unit's init() method.
  */
@@ -29,10 +31,10 @@ void Creature::_init() {
     _defense = 0;
     
     // Add sprite to the game scene view.
-    spSprite sprite = new Sprite;
-    sprite->setResAnim(res::ui.getResAnim("asteroid"));
-    sprite->attachTo(_view);
-    sprite->setAnchor(Vector2(0.5f, 0.5f));
+    _sprite = new Sprite;
+    _sprite->setResAnim(resources.getResAnim(""));
+    _sprite->attachTo(_view);
+    _sprite->setAnchor(Vector2(0.5f, 0.5f));
 }
 
 
