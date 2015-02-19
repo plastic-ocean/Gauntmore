@@ -47,33 +47,21 @@ void Game::init() {
     // Create chest
     Vector2 chestLocation = Vector2(((32 * 15) / 2) + 1, (32 * 15) / 2);
     
-//    _chest = new Chest;
-//    _chest->init(chestLocation, this);
-//   _chest->interact();
+
 
     _chest = new Chest;
-     _gold = new Gold;
-    _potion = new Potion;
+
     _chest->init(chestLocation, this);
-//    _unit = new Unit;
-//    _potion->init(chestLocation, this);
-    
+   
     //location for skeleton
-//    Vector2 center = Vector2(_map->getSize()/2, _map->getSize()/2);
-    //std::cout << _map->getSize() << std::endl;
-//    _skeleton = new Skeleton;
-//    _skeleton->init(center, this);
     
     // TODO Create enemy creatures (with random loot!)
-//    for (int i = 0; i < **large number**; ++i) {
-//        spCreature creature = new Creature;
-//        creature->init(Vector2(**calulate starting postion**, this);
-//    }
-    
+
     // TODO Create chests (with even more random loot!)
 
 	// Handle input
     _move = new KeyboardInput(this);
+    
 }
 
 
