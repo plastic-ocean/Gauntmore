@@ -34,6 +34,16 @@
         <image file="link_attack_right.png" cols = "10" />
         <image file="link_attack_left.png" cols = "10" />
         
+        <image file="adventurer_down.png" />
+        <image file="adventurer_up.png" />
+        <image file="adventurer_left.png" />
+        <image file="adventurer_right.png" />
+        
+        <image file="adventurer_move_down.png" cols = "9" />
+        <image file="adventurer_move_up.png" cols = "9" />
+        <image file="adventurer_move_left.png" cols = "9" />
+        <image file="adventurer_move_right.png" cols = "9" />
+        
         <image file="uHero.png" cols = "9" />
         <image file="dHero.png" cols = "9" />
         <image file="lHero.png" cols = "9" />

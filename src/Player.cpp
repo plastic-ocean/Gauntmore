@@ -66,7 +66,7 @@ Vector2 Player::correctDirection(Vector2 position, Vector2 direction) {
 void Player::addSprite() { 
     _sprite = new Sprite;
 //    _sprite->setScale(1.25f);
-    _sprite->setResAnim(resources.getResAnim("link_down"));
+    _sprite->setResAnim(resources.getResAnim("adventurer_down"));
     _sprite->attachTo(_view);
 //    _sprite->setAnchor(Vector2(0.0f, 0.5f));
 }
@@ -74,19 +74,19 @@ void Player::addSprite() {
 
 void Player::_setFacing(Vector2 dir) {
     if ( dir.y > 0 ) {
-        _sprite->setResAnim(resources.getResAnim("link_down"));
+        _sprite->setResAnim(resources.getResAnim("adventurer_down"));
         facing = down;
     }
     if ( dir.y < 0 ) {
-        _sprite->setResAnim(resources.getResAnim("link_up"));
+        _sprite->setResAnim(resources.getResAnim("adventurer_up"));
         facing = up;
     }
     if ( dir.x < 0 ) {
-        _sprite->setResAnim(resources.getResAnim("link_left"));
+        _sprite->setResAnim(resources.getResAnim("adventurer_left"));
         facing = left;
     }
     if ( dir.x > 0 ) {
-        _sprite->setResAnim(resources.getResAnim("link_right"));
+        _sprite->setResAnim(resources.getResAnim("adventurer_right"));
         facing = right;
     }
 }
@@ -113,46 +113,46 @@ void Player::attack() {
 
 
 void Player::attackDown() {
-    _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("link_attack_down")), 300);
+    _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_attack_down")), 300);
 }
 
 
 void Player::attackUp() {
-    _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("link_attack_up")), 300);
+    _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_attack_up")), 300);
 }
 
 
 void Player::attackLeft() {
-    _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("link_attack_left")), 300);
+    _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_attack_left")), 300);
 }
 
 
 void Player::attackRight() {
-    _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("link_attack_right")), 300);
+    _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_attack_right")), 300);
 }
 
 
 void Player::moveUp() {
     _checkTween();
-    _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("link_move_up")), 400, -1);
+    _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_move_up")), 500, -1);
 }
 
 
 void Player::moveDown() {
     _checkTween();
-    _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("link_move_down")), 400, -1);
+    _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_move_down")), 500, -1);
 }
 
 
 void Player::moveRight() {
     _checkTween();
-    _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("link_move_right")), 400, -1);
+    _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_move_right")), 500, -1);
 }
 
 
 void Player::moveLeft() {
     _checkTween();
-    _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("link_move_left")), 400, -1);
+    _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_move_left")), 500, -1);
 }
 
 

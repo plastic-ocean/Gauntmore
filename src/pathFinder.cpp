@@ -18,11 +18,11 @@
  but we are more concerned with fast pathfinding, not the shortest possible path
  
  
- 3. build a min-heap of adjacent nodes using the Total Expected cost (distance travelled from start point + estimated remaining distance via heuristic)
+ 2. build a min-heap of adjacent nodes using the Total Expected cost (distance travelled from start point + estimated remaining distance via heuristic)
  
- 4. Once target is hit, follow chain of pointers back to start, storing each location in a stack.
+ 3. Once target is hit, follow chain of pointers back to start, storing each location in a stack.
  
- 5. Pop stack into tweenQueue and fire animation
+ 4. Pop stack into tweenQueue and fire animation
  
  
  
