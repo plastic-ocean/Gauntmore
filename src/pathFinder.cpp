@@ -5,11 +5,12 @@
 //  Created by David Wenzel on 2/17/15.
 //  Copyright (c) 2015 oxygine. All rights reserved.
 //
-
+#include <queue>
 #include <cmath>
 #include "pathFinder.h"
 #include "game.h"
 #include "pathNode.h"
+#include "Collision.h"
 
 /*
         basic implementation of A* pathfinding algorithm
@@ -36,10 +37,13 @@ pathFinder::pathFinder(Vector2 start, Vector2 finish ) {
 void pathFinder::aStar() {
     pathNode start = *new pathNode( location, 0, findHeuristic(location) );
     
-//    openList.push(start);
-//    while ( !openList.empty() ) {
-//        //do things here
-//    }
+    openList.push(start);
+    while ( !openList.empty() ) {
+        //do things here
+        closedList.push_back(openList.top() );
+        openList.pop();
+        scanSurround( closedList.back() );
+    }
     
     
 }
@@ -48,5 +52,16 @@ int pathFinder::findHeuristic( Vector2 curLoc ) {
     return abs( curLoc.x - this->target.x ) + abs( curLoc.y - this->target.y );
 }
 
-
+void pathFinder::scanSurround( pathNode node ) {
+    Vector2 temp = node.getLocation() ;
+    temp.x -= 64;
+    temp.y -= 64;
+    for (int i = 0; i<2;i++ ) {
+        if (!Collision::detectCollision( temp.x, temp.y, 64, 64 ) ) {
+        
+        }
+    }
+    
+    
+}
 

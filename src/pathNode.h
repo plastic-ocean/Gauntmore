@@ -18,15 +18,15 @@ class pathNode {
 public:
     pathNode( Vector2, int, int );
     ~pathNode();
-    Vector2 getLocation();
-    int getHeuristic();
-    int getCost();
+    const Vector2 getLocation();
+    const int getHeuristic();
+    const int getCost();
     const int getTotal();
     void setHeuristic(int);
     void setCost(int);
     void calculateTotal();
     void setLocation(Vector2);
-//    bool operator >(  pathNode& node );
+    bool operator>(  pathNode& node );
     pathNode getParent();
     void setParent(pathNode);
     

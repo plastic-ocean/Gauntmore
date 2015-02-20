@@ -15,13 +15,13 @@ pathNode::pathNode( Vector2 location, int cost, int heuristic ) {
 }
 pathNode::~pathNode(){}
 
-Vector2 pathNode::getLocation(){
+const Vector2 pathNode::getLocation(){
     return this->location;
 }
-int pathNode::getHeuristic() {
+const int pathNode::getHeuristic() {
     return this->heuristic;
 }
-int pathNode::getCost() {
+const int pathNode::getCost() {
     return this->cost;
 }
 const int pathNode::getTotal()  {
@@ -49,5 +49,7 @@ pathNode pathNode::getParent() {
 void pathNode::setParent( pathNode parent ) {
     this->parent = &parent;
 }
-
+bool pathNode::operator>(pathNode &node ) {
+    return this->cost > node.cost;
+}
 

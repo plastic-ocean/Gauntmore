@@ -12,7 +12,6 @@
 #include "pathFinder.h"
 #include "Game.h"
 
-#include <stdio.h>
 
 class GreaterThan {
 public:

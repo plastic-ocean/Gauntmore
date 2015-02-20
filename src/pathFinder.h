@@ -14,7 +14,7 @@
 #include "Game.h"
 #include "Map.h"
 #include "pathNode.h"
-//#include "GreaterThan.h"
+#include "GreaterThan.h"
 
 
 class pathFinder {
@@ -32,10 +32,10 @@ public:
 private:
     Vector2 target;
     Vector2 location;
-//    std::priority_queue<pathNode,vector<pathNode>, GreaterThan> openList;
+    std::priority_queue< pathNode, vector<pathNode>, GreaterThan > openList;
     vector<pathNode> closedList;
     int mapSize = 64;   //*** FIX ME ***
-    
+    void scanSurround( pathNode node );
     
 };
 
