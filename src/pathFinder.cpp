@@ -35,9 +35,10 @@ pathFinder::pathFinder(Vector2 start, Vector2 finish ) {
 }
 
 void pathFinder::aStar() {
-    pathNode start = *new pathNode( location, 0, findHeuristic(location) );
-    
+    pathNode start = *new pathNode( location, 0, findHeuristic(location), start );
     openList.push(start);
+    
+    
     while ( !openList.empty() ) {
         //do things here
         closedList.push_back(openList.top() );
@@ -54,14 +55,37 @@ int pathFinder::findHeuristic( Vector2 curLoc ) {
 
 void pathFinder::scanSurround( pathNode node ) {
     Vector2 temp = node.getLocation() ;
-    temp.x -= 64;
-    temp.y -= 64;
-    for (int i = 0; i<2;i++ ) {
-        if (!Collision::detectCollision( temp.x, temp.y, 64, 64 ) ) {
-        
-        }
-    }
+    temp.x -= mapSize;
+    temp.y -= mapSize;
+    int summ = 12;//something more clever goes here
+    int flip = -2;
     
+        //check for collision
+        //check for existence in closedList
+    for ( int i = 0; i < 2; i++ ) {
+        for ( int j = 0; j < 2; j++ ) {
+            flip *= (-1);
+            if (!inClosedList(node) ) {
+                openList.push(*new pathNode(temp,node.getTotal()+(summ+flip),findHeuristic(temp), node ) );
+            }
+            temp.x += mapSize;
+        }
+        temp.x -= 3*mapSize;
+        temp.y += mapSize;
+    }
+
     
 }
+
+bool pathFinder::inClosedList( pathNode node ) {
+    int size = closedList.size();
+    for (int i = 0; i<size;i++ ) {
+        if ( closedList[i].getLocation() == node.getLocation() ) return true;
+    }
+    return false;
+    
+}
+
+
+
 

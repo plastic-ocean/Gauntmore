@@ -8,10 +8,11 @@
 
 #include "pathNode.h"
 
-pathNode::pathNode( Vector2 location, int cost, int heuristic ) {
+pathNode::pathNode( Vector2 location, int cost, int heuristic, pathNode parent ) {
     this->location = location;
     this->cost = cost;
     this->heuristic = heuristic;
+    this->parent = &parent;
 }
 pathNode::~pathNode(){}
 

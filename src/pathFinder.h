@@ -36,6 +36,7 @@ private:
     vector<pathNode> closedList;
     int mapSize = 64;   //*** FIX ME ***
     void scanSurround( pathNode node );
+    bool inClosedList( pathNode node );
     
 };
 
