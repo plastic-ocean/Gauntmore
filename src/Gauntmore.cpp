@@ -1,13 +1,16 @@
 #include "Gauntmore.h"
 
 
-
+/**
+ * Constructor.
+ */
 Gauntmore::Gauntmore() {}
+
 
 /**
  * Load resources, initialize the game, and attach it to the stage.
  */
-void Gauntmore::initGauntmore() {
+void Gauntmore::init() {
     // Initialize sound system
     SoundSystem::instance = SoundSystem::create();
     SoundSystem::instance->init(16);
@@ -24,7 +27,7 @@ void Gauntmore::initGauntmore() {
 }
 
 
-void Gauntmore::updateGauntmore() {
+void Gauntmore::update() {
     SoundSystem::instance->update();
     _musicPlayer.update();
 }
@@ -33,7 +36,7 @@ void Gauntmore::updateGauntmore() {
 /**
  * Free all allocated resources and delete all created actors.
  */
-void Gauntmore::destroyGauntmore() {
+void Gauntmore::destroy() {
     _musicPlayer.stop();
     SoundSystem::instance->stop();
     GameScene::instance = 0;
@@ -46,7 +49,7 @@ void Gauntmore::destroyGauntmore() {
  * The main loop method. Called each frame.
  */
 int Gauntmore::mainLoop() {
-    updateGauntmore();
+    update();
     // Update our stage and all actors. Actor::update is called for all children.
     getStage()->update();
     

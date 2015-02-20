@@ -32,7 +32,7 @@ int main(int argc, char* argv[]) {
     // DebugActor is a helper actor node. It shows FPS, memory usage and other useful stuff.
     //DebugActor::show();
 
-    gauntmore.initGauntmore();
+    gauntmore.init();
     
     // Start the main loop.
     while (1) {
@@ -41,12 +41,12 @@ int main(int argc, char* argv[]) {
             break;
         }
     }
-    // If the user wants to leave application...
+    // If the user wants to leave the game...
     
     // Dump all created objects into log. All created and not freed resources are displayed.
     ObjectBase::dumpCreatedObjects();
 
-    gauntmore.destroyGauntmore();
+    gauntmore.destroy();
     
     // Releases all internal components and Stage
     core::release();

@@ -7,8 +7,8 @@ Resources resSounds;
 * Loads the resources.
 */
 void loadResources() {
-	resources.loadXML("xmls/ui.xml");
-    resSounds.loadXML("sounds.xml");
+	resources.loadXML("xmls/sprites.xml");
+    resSounds.loadXML("xmls/sounds.xml");
 }
 
 /**

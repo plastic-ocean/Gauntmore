@@ -1,0 +1,11 @@
+Date: 2/19
+
+Attendance:
+
+Keith Hamm
+David Wenzel
+Steven Warren
+
+Minutes:
+
+We did a merge today to get the master updated from everyone branches. Keith finished up map generation, added music and a system for sound FX, found some new sprites, and is going to integrate the additions from Ben and Steven into map generation. Steven is still working on Things and is going to help integrating them into the map generation. Ben wasn't able to make it.

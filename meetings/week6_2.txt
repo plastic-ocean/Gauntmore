@@ -1,0 +1,12 @@
+Date: 2/9
+
+Attendance:
+
+Keith Hamm
+David Wenzel
+Steven Warren
+Benjamin Barnes
+
+Minutes:
+
+Keith's procedural map generation is coming along nicely. David is going to start working on monster pathfinding. Ben is going to work on creating the Creature subclasses and implementing the combat system. Steven is going to work on creating the Thing class, its subclasses, and work on interacting with Things.
