@@ -52,7 +52,6 @@
 		5359D5791A96A90F00AE6365 /* Thing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5701A96A90F00AE6365 /* Thing.cpp */; };
 		5359D58B1A96BB3B00AE6365 /* liboxygine-sound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5359D5871A96BAE000AE6365 /* liboxygine-sound.a */; };
 		5359D58D1A96BB4900AE6365 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5359D58C1A96BB4900AE6365 /* OpenAL.framework */; };
-		5359D5911A96BD6A00AE6365 /* sounds.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5359D5901A96BD6A00AE6365 /* sounds.xml */; };
 		5359D5961A96C4CC00AE6365 /* sounds in Resources */ = {isa = PBXBuildFile; fileRef = 5359D5951A96C4CC00AE6365 /* sounds */; };
 		5359D5991A96C6E600AE6365 /* Gauntmore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5971A96C6E600AE6365 /* Gauntmore.cpp */; };
 		5365DD881A93BE28000A7893 /* MazeGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5365DD861A93BE28000A7893 /* MazeGen.cpp */; };
@@ -214,7 +213,6 @@
 		5359D5711A96A90F00AE6365 /* Thing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Thing.h; path = src/Thing.h; sourceTree = "<group>"; };
 		5359D5821A96BAE000AE6365 /* oxygine-sound.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "oxygine-sound.xcodeproj"; path = "oxygine-sound/proj.macosx/oxygine-sound.xcodeproj"; sourceTree = "<group>"; };
 		5359D58C1A96BB4900AE6365 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
-		5359D5901A96BD6A00AE6365 /* sounds.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = sounds.xml; path = data/xmls/sounds.xml; sourceTree = "<group>"; };
 		5359D5951A96C4CC00AE6365 /* sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = sounds; path = data/sounds; sourceTree = "<group>"; };
 		5359D5971A96C6E600AE6365 /* Gauntmore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Gauntmore.cpp; path = src/Gauntmore.cpp; sourceTree = "<group>"; };
 		5359D5981A96C6E600AE6365 /* Gauntmore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gauntmore.h; path = src/Gauntmore.h; sourceTree = "<group>"; };
@@ -257,7 +255,6 @@
 		049B57251871FBE900EF3C66 = {
 			isa = PBXGroup;
 			children = (
-				5359D5901A96BD6A00AE6365 /* sounds.xml */,
 				049B57491871FBE900EF3C66 /* Images.xcassets */,
 				049B57381871FBE900EF3C66 /* Supporting Files */,
 				04A57D391871FF8B0068B1E5 /* src */,
@@ -538,7 +535,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5359D5911A96BD6A00AE6365 /* sounds.xml in Resources */,
 				534097CA1A896C19000434F6 /* xmls in Resources */,
 				5359D5961A96C4CC00AE6365 /* sounds in Resources */,
 				534097C91A896C19000434F6 /* tmx in Resources */,

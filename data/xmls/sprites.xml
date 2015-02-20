@@ -18,9 +18,9 @@
         <image file="adventurer_move_left.png" cols = "9" />
         <image file="adventurer_move_right.png" cols = "9" />
         
-        <image file="adventurer_attack_down.png" cols = "6" />
-        <image file="adventurer_attack_up.png" cols = "6" />
-        <image file="adventurer_attack_left.png" cols = "6" />
-        <image file="adventurer_attack_right.png" cols = "6" />
+        <image file="adventurer_attack_down.png" cols = "7" />
+        <image file="adventurer_attack_up.png" cols = "7" />
+        <image file="adventurer_attack_left.png" cols = "7" />
+        <image file="adventurer_attack_right.png" cols = "7" />
     </atlas>
 </resources>

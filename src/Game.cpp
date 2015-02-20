@@ -40,7 +40,7 @@ void Game::init() {
 	setSize(getStage()->getSize());
     
     // Size is the number of tiles (with 32 px tiles; 15 tiles = 480 px; 20 tiles = 640 px)
-    int size = 12;
+    int size = 13;
 
 	// Create map
     _map = new Map(size);
@@ -275,6 +275,7 @@ void Game::_renderMap() {
                 sprite->setX(drawX);
                 sprite->setY(drawY);
                 sprite->attachTo(this);
+                sprite->setAnchor(Vector2(0.5f, 0.5f));
             }
         }
     }

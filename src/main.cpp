@@ -7,9 +7,9 @@ using namespace oxygine;
 
 
 int main(int argc, char* argv[]) {
-    Gauntmore gauntmore = Gauntmore();
-    
     ObjectBase::__startTracingLeaks();
+    
+    Gauntmore gauntmore = Gauntmore();
     
     // Initialize Oxygine's internal stuff.
     core::init_desc desc;

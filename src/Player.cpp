@@ -125,7 +125,7 @@ void Player::addSprite() {
 //    _sprite->setScale(1.25f);
     _sprite->setResAnim(resources.getResAnim("adventurer_down"));
     _sprite->attachTo(_view);
-//    _sprite->setAnchor(Vector2(0.0f, 0.5f));
+    _sprite->setAnchor(Vector2(0.5f, 0.5f));
 }
 
 

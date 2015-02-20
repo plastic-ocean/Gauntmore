@@ -27,6 +27,9 @@ void Gauntmore::init() {
 }
 
 
+/**
+ * Global update method. Called every frame.
+ */
 void Gauntmore::update() {
     SoundSystem::instance->update();
     _musicPlayer.update();
