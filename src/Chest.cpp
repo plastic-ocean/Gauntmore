@@ -40,6 +40,14 @@ void Chest::interact(){
 }
 
 
+void _chooseContents() {
+    // choose a random # (0-1)
+    // if potion:
+    //    _contests = potion;
+    // else:
+    //    _contents = gold;
+}
+
 
 /**
  * Initializes a Chest position and sprite. Called by Unit's init() method.

@@ -3,13 +3,60 @@
 #include "DebugActor.h"
 #include "res.h"
 #include "GameScene.h"
+
+#include "SoundPlayer.h"
+#include "SoundSystem.h"
+#include "SoundInstance.h"
+
 using namespace oxygine;
+
+
+SoundPlayer musicPlayer;
+
+
+/**
+ * Load resources, initialize the game, and attach it to the stage.
+ */
+void initGauntmore() {
+    // Initialize sound system
+    SoundSystem::instance = SoundSystem::create();
+    SoundSystem::instance->init(16);
+    SoundPlayer::initialize();
+    
+    // Load resources.
+    loadResources();
+    
+    // Create game scene.
+    GameScene::instance = new GameScene;
+    
+    // Setup music player and play music.
+    musicPlayer.play(resSounds.get("music"));
+}
+
+
+void updateGauntmore() {
+    SoundSystem::instance->update();
+    musicPlayer.update();
+}
+
+
+/**
+ * Free all allocated resources and delete all created actors.
+ */
+void destroyGauntmore() {
+    musicPlayer.stop();
+    SoundSystem::instance->stop();
+    GameScene::instance = 0;
+    freeResources();
+    SoundSystem::instance->release();
+}
 
 
 /**
  * The main loop method. Called each frame.
  */
 int mainloop() {
+    updateGauntmore();
 	// Update our stage and all actors. Actor::update is called for all children.
 	getStage()->update();
 	
@@ -27,27 +74,6 @@ int mainloop() {
 	bool done = core::update();
 
 	return done ? 1 : 0;
-}
-
-
-/**
- * Load resources, initialize the game, and attach it to the stage.
- */
-void initGauntmore() {
-    // Load resources.
-    loadResources();
-    
-    // Create game scene.
-    GameScene::instance = new GameScene;
-}
-
-
-/**
- * Free all allocated resources and delete all created actors.
- */
-void destroyGauntmore() {
-    GameScene::instance = 0;
-    freeResources();
 }
 
 

@@ -45,12 +45,15 @@
         <image file="adventurer_move_left.png" cols = "9" />
         <image file="adventurer_move_right.png" cols = "9" />
         
+        <image file="adventurer_attack_down.png" cols = "6" />
+        <image file="adventurer_attack_up.png" cols = "6" />
+        <image file="adventurer_attack_left.png" cols = "6" />
+        <image file="adventurer_attack_right.png" cols = "6" />
+        
         <image file="uHero.png" cols = "9" />
         <image file="dHero.png" cols = "9" />
         <image file="lHero.png" cols = "9" />
         <image file="rHero.png" cols = "9" />
         <image file="hero.png" cols = "9" rows = "4" />
-        
-        <image file="adventurer_down.png" />
     </atlas>
 </resources>

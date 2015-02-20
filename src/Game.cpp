@@ -91,10 +91,10 @@ void Game::init() {
 bool Game::detectCollision(int x, int y, int h, int w) {
     bool isCollision = false;
     SDL_Rect spriteRect;
-    spriteRect.x = x + 12;
+    spriteRect.x = x + 10;
     spriteRect.y = y + 12;
-    spriteRect.h = h - 12;
-    spriteRect.w = w - 12;
+    spriteRect.h = h - 14;
+    spriteRect.w = w - 24;
     const SDL_Rect *sprite = &spriteRect;
     
     // Check for collision between the sprite and each tile
@@ -116,7 +116,6 @@ bool Game::detectCollision(int x, int y, int h, int w) {
         unitRect.h = 13;
         unitRect.w = 13;
 
-        
         const SDL_Rect *constUnitRect = &unitRect;
         // we also make sure that we are not collecting a collision with outself by doing a type check
         if (SDL_HasIntersection(sprite, constUnitRect) && typeid(*unit).name() != "6Player") {

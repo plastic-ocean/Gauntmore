@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<resources>
+    <set path = "sounds" />
+    
+    <sound file="music.ogg" streaming="true"/>
+    
+</resources>

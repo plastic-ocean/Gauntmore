@@ -94,11 +94,10 @@ public:
 
 private:
     spRoom _room;
-//    vector<spRoom> _rooms;
     vector<vector<spRoom>> _roomMap;
     Vector2 _entrance;
 
-// Current location in the map (the maze)
+    // Current location in the map (the maze)
     int _col;
     int _row;
 

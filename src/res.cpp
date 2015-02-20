@@ -1,12 +1,14 @@
 #include "res.h"
 
 Resources resources;
+Resources resSounds;
 
 /**
 * Loads the resources.
 */
 void loadResources() {
 	resources.loadXML("xmls/ui.xml");
+    resSounds.loadXML("sounds.xml");
 }
 
 /**
@@ -14,4 +16,5 @@ void loadResources() {
 */
 void freeResources() {
 	resources.free();
+    resSounds.free();
 }
