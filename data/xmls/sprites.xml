@@ -7,6 +7,9 @@
         <image file="chest.png" />
         <image file="potion.png" />
         <image file="gold.png" cols = "8" />
+                
+        <image file="health.png" />
+        <image file="health_border.png" />
         
         <image file="adventurer_down.png" />
         <image file="adventurer_up.png" />

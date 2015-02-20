@@ -54,6 +54,7 @@
 		5359D58D1A96BB4900AE6365 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5359D58C1A96BB4900AE6365 /* OpenAL.framework */; };
 		5359D5961A96C4CC00AE6365 /* sounds in Resources */ = {isa = PBXBuildFile; fileRef = 5359D5951A96C4CC00AE6365 /* sounds */; };
 		5359D5991A96C6E600AE6365 /* Gauntmore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5971A96C6E600AE6365 /* Gauntmore.cpp */; };
+		5359D5C21A97F77B00AE6365 /* HealthBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5C01A97F77B00AE6365 /* HealthBar.cpp */; };
 		5365DD881A93BE28000A7893 /* MazeGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5365DD861A93BE28000A7893 /* MazeGen.cpp */; };
 		53BCF11B1A8ED99F00BD6288 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53BCF1171A8ED99F00BD6288 /* GameScene.cpp */; };
 		53BCF11C1A8ED99F00BD6288 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53BCF1191A8ED99F00BD6288 /* Scene.cpp */; };
@@ -216,6 +217,8 @@
 		5359D5951A96C4CC00AE6365 /* sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = sounds; path = data/sounds; sourceTree = "<group>"; };
 		5359D5971A96C6E600AE6365 /* Gauntmore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Gauntmore.cpp; path = src/Gauntmore.cpp; sourceTree = "<group>"; };
 		5359D5981A96C6E600AE6365 /* Gauntmore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gauntmore.h; path = src/Gauntmore.h; sourceTree = "<group>"; };
+		5359D5C01A97F77B00AE6365 /* HealthBar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HealthBar.cpp; path = src/HealthBar.cpp; sourceTree = "<group>"; };
+		5359D5C11A97F77B00AE6365 /* HealthBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HealthBar.h; path = src/HealthBar.h; sourceTree = "<group>"; };
 		5365DD861A93BE28000A7893 /* MazeGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MazeGen.cpp; path = ../gauntmore/src/MazeGen.cpp; sourceTree = "<group>"; };
 		5365DD871A93BE28000A7893 /* MazeGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MazeGen.h; path = ../gauntmore/src/MazeGen.h; sourceTree = "<group>"; };
 		53BCF1171A8ED99F00BD6288 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameScene.cpp; path = src/GameScene.cpp; sourceTree = "<group>"; };
@@ -330,6 +333,8 @@
 				5359D5651A96A90F00AE6365 /* Gold.h */,
 				5359D5661A96A90F00AE6365 /* GreaterThan.cpp */,
 				5359D5671A96A90F00AE6365 /* GreaterThan.h */,
+				5359D5C01A97F77B00AE6365 /* HealthBar.cpp */,
+				5359D5C11A97F77B00AE6365 /* HealthBar.h */,
 				534097841A896C0A000434F6 /* KeyboardInput.cpp */,
 				534097851A896C0A000434F6 /* KeyboardInput.h */,
 				5340977F1A896C0A000434F6 /* main.cpp */,
@@ -570,6 +575,7 @@
 				530CFA991A906FED00B4CD51 /* TmxPolyline.cpp in Sources */,
 				5359D5761A96A90F00AE6365 /* pathNode.cpp in Sources */,
 				534097AC1A896C0A000434F6 /* Creature.cpp in Sources */,
+				5359D5C21A97F77B00AE6365 /* HealthBar.cpp in Sources */,
 				530CFA951A906FED00B4CD51 /* TmxMap.cpp in Sources */,
 				530CFA931A906FED00B4CD51 /* TmxImageLayer.cpp in Sources */,
 				530CFA941A906FED00B4CD51 /* TmxLayer.cpp in Sources */,

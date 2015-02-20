@@ -1,2 +1,0 @@
-/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/CMakeFiles/Gauntmore.dir
-/home/hkhamm/Gauntmore/oxygine-framework/game/proj.cmake/build/oxygine-framework/CMakeFiles/oxygine-framework.dir

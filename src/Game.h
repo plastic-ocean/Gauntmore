@@ -8,6 +8,8 @@ using namespace std;
 
 DECLARE_SMART(Player, spPlayer);
 DECLARE_SMART(Creature, spCreature);
+DECLARE_SMART(Skeleton, spSkeleton);
+DECLARE_SMART(HealthBar, spHealthBar);
 DECLARE_SMART(Unit, spUnit);
 DECLARE_SMART(Chest, spChest);
 DECLARE_SMART(Gold, spGold);
@@ -17,7 +19,6 @@ DECLARE_SMART(Unit, spUnit);
 DECLARE_SMART(Room, spRoom)
 DECLARE_SMART(Map, spMap);
 DECLARE_SMART(Game, spGame);
-DECLARE_SMART(Skeleton, spSkeleton);
 
 class Game: public Actor {
     
@@ -26,12 +27,6 @@ public:
     ~Game();
     
     typedef list<spUnit> Units;
-  
-    spChest _chest;
-    spGold _gold;
-    spPotion _potion;
-    spUnit _unit;
-    
     
     /**
      * Initialzes the game. Creates the map, the player, the monsters, the static objects
@@ -83,6 +78,8 @@ public:
     std::list<spUnit> getUnits();
 
     spMap getMap();
+    
+    void updateHealth(float num);
 
 protected:
     const int tileSize = 64;
@@ -94,7 +91,15 @@ protected:
     spPlayer _player;
 
     Units _units;
+    
     spSkeleton _skeleton;
+    
+    spChest _chest;
+    spGold _gold;
+    spPotion _potion;
+    spUnit _unit;
+    
+    spHealthBar _healthBar;
     
     /**
      * Updates the player each frame. A virtual method of Actor it is being called each frame.
