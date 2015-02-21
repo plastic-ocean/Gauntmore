@@ -15,7 +15,6 @@
 		0405A00118720D2200BA6557 /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04059FF11872031A00BA6557 /* libpng.a */; };
 		049B57321871FBE900EF3C66 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049B57311871FBE900EF3C66 /* Cocoa.framework */; };
 		049B574A1871FBE900EF3C66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049B57491871FBE900EF3C66 /* Images.xcassets */; };
-		48855E151A96C0D00094FC15 /* Collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48855E131A96C0D00094FC15 /* Collision.cpp */; };
 		530CFA6A1A90547100B4CD51 /* Room.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA681A90547100B4CD51 /* Room.cpp */; };
 		530CFA8F1A906FED00B4CD51 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA6E1A906FED00B4CD51 /* base64.cpp */; };
 		530CFA901A906FED00B4CD51 /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA701A906FED00B4CD51 /* tinyxml2.cpp */; };
@@ -124,8 +123,6 @@
 		049B57501871FBE900EF3C66 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		04A57D761871FFEB0068B1E5 /* oxygine_macosx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = oxygine_macosx.xcodeproj; path = "oxygine-framework//oxygine/SDL/macosx/oxygine_macosx/oxygine_macosx.xcodeproj"; sourceTree = "<group>"; };
 		04A57D7E1872012A0068B1E5 /* SDL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL.xcodeproj; path = ".//SDL/Xcode/SDL/SDL.xcodeproj"; sourceTree = "<group>"; };
-		48855E131A96C0D00094FC15 /* Collision.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Collision.cpp; path = src/Collision.cpp; sourceTree = "<group>"; };
-		48855E141A96C0D00094FC15 /* Collision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Collision.h; path = src/Collision.h; sourceTree = "<group>"; };
 		530CFA681A90547100B4CD51 /* Room.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Room.cpp; path = src/Room.cpp; sourceTree = "<group>"; };
 		530CFA691A90547100B4CD51 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Room.h; path = src/Room.h; sourceTree = "<group>"; };
 		530CFA6E1A906FED00B4CD51 /* base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = base64.cpp; path = src/tmx/base64.cpp; sourceTree = "<group>"; };
@@ -328,8 +325,6 @@
 				534097CB1A896C3F000434F6 /* tmx */,
 				534097A91A896C0A000434F6 /* Unit.cpp */,
 				534097AA1A896C0A000434F6 /* Unit.h */,
-				48855E131A96C0D00094FC15 /* Collision.cpp */,
-				48855E141A96C0D00094FC15 /* Collision.h */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -515,7 +510,6 @@
 				530CFA971A906FED00B4CD51 /* TmxObjectGroup.cpp in Sources */,
 				530CFA921A906FED00B4CD51 /* TmxImage.cpp in Sources */,
 				534097B11A896C0A000434F6 /* Player.cpp in Sources */,
-				48855E151A96C0D00094FC15 /* Collision.cpp in Sources */,
 				534097B21A896C0A000434F6 /* res.cpp in Sources */,
 				530CFA8F1A906FED00B4CD51 /* base64.cpp in Sources */,
 				530CFA991A906FED00B4CD51 /* TmxPolyline.cpp in Sources */,
