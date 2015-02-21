@@ -7,10 +7,9 @@
 //
 #include <queue>
 #include <cmath>
-#include "pathFinder.h"
+#include "PathFinder.h"
 #include "game.h"
 #include "pathNode.h"
-#include "Collision.h"
 
 /*
         basic implementation of A* pathfinding algorithm
@@ -28,32 +27,39 @@
  
  
  */
-pathFinder::pathFinder(Vector2 start, Vector2 finish ) {
-    this->location = start;
-    this->target = finish;
+PathFinder::PathFinder() {
     
 }
 
-void pathFinder::aStar() {
-    pathNode start = *new pathNode( location, 0, findHeuristic(location), start );
-    openList.push(start);
+vector<Vector2> PathFinder::aStar(Vector2 start, Vector2 finish ) {
+    pathNode first = *new pathNode( start, 0, findHeuristic(start) );
+    this->target = finish;
+    this->source = start;
+    openList.push(first);
     
     
     while ( !openList.empty() ) {
         //do things here
-        closedList.push_back(openList.top() );
+        if ( atExit(openList.top() ) ) {
+           return makePath( openList.top() );
+            
+        }
+        closedList.push_back( openList.top() );
         openList.pop();
         scanSurround( closedList.back() );
     }
-    
+    //if you got here, there is no path to the target.
+    vector<Vector2> nullVector;
+    return nullVector;
     
 }
 
-int pathFinder::findHeuristic( Vector2 curLoc ) {
+int PathFinder::findHeuristic( Vector2 curLoc ) {
     return abs( curLoc.x - this->target.x ) + abs( curLoc.y - this->target.y );
 }
 
-void pathFinder::scanSurround( pathNode node ) {
+
+void PathFinder::scanSurround( pathNode node ) {
     Vector2 temp = node.getLocation() ;
     temp.x -= mapSize;
     temp.y -= mapSize;
@@ -66,7 +72,7 @@ void pathFinder::scanSurround( pathNode node ) {
         for ( int j = 0; j < 2; j++ ) {
             flip *= (-1);
             if (!inClosedList(node) ) {
-                openList.push(*new pathNode(temp,node.getTotal()+(summ+flip),findHeuristic(temp), node ) );
+                openList.push(*new pathNode( temp,node.getTotal()+(summ+flip), findHeuristic(temp), node ) );
             }
             temp.x += mapSize;
         }
@@ -76,14 +82,35 @@ void pathFinder::scanSurround( pathNode node ) {
 
     
 }
+bool PathFinder::atExit( pathNode node ) {
+    Vector2 location = node.getLocation();
+    int fudge = 64;
+    int diffX = abs( location.x - target.x );
+    int diffY = abs( location.y - target.y );
+    
+    if (diffX <= fudge && diffY <= fudge ) return true;
+    return false;
+}
 
-bool pathFinder::inClosedList( pathNode node ) {
+
+
+bool PathFinder::inClosedList( pathNode node ) {
     int size = closedList.size();
     for (int i = 0; i<size;i++ ) {
         if ( closedList[i].getLocation() == node.getLocation() ) return true;
     }
     return false;
     
+}
+
+vector<Vector2> PathFinder::makePath(pathNode node ) {
+    vector<Vector2> tempVect;
+
+    while (node.getLocation() != source ) {
+        tempVect.push_back( node.getLocation() );
+        node = node.getParent();
+        }
+    return tempVect;
 }
 
 

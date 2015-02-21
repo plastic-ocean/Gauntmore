@@ -16,6 +16,7 @@
 
 class pathNode {
 public:
+    pathNode( Vector2, int, int );
     pathNode( Vector2, int, int, pathNode );
     ~pathNode();
     const Vector2 getLocation();
