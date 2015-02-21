@@ -13,6 +13,10 @@
 #include "Thing.h"
 #include "Unit.h"
 
+using namespace std;
+
+enum Things {potion, gold};
+
 DECLARE_SMART(Chest, spChest);
 class Chest: public Thing {
     
@@ -24,13 +28,24 @@ public:
      */
     void interact();
     
+//    vector<spThing> getContents() {
+//        return _contents;
+//    }s
+//    
+//    void pushContents(spThing thing) {
+//        _contents.push_back(thing);
+//    }
+    
 private:
+//    vector<spThing> _contents;
+    int _contents;
+    
+    void _chooseContents();
+    
     /**
      * Initializes position and sprite of Chest. Called by Unit's init() method.
      */
     void _init();
-    
-    
     
     /**
      * Updates the Chest every frame. Called by Units update() method.

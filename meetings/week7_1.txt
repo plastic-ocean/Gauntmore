@@ -1,0 +1,12 @@
+Date: 2/17
+
+Attendance:
+
+Keith Hamm
+David Wenzel
+Steven Warren
+Benjamin Barnes
+
+Minutes:
+
+Keith's procedural map generation is nearly finished. We now have a world map, which is a maze and a 2D vector of Rooms. The player only sees one Room at a time, but can navigate between the rooms in the maze. David is still working on Creature pathfinding, probably using A*. Ben has created the Creature subclasses and implemented the combat system. Steven has created the Thing class, its subclasses, and is still working on interacting with Things.

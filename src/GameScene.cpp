@@ -7,5 +7,6 @@ GameScene::GameScene() {
     _game = new Game;
     _game->init();
     _game->attachTo(_view);
-    show();
+    
+    _game->setClock(new Clock);
 }

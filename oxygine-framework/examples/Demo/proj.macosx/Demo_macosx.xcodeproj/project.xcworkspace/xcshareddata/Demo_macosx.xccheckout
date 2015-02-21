@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7A5EFBDF-EABA-488B-95E8-B4C27066420C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Demo_macosx</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9922882CE13A2ACB9D3E40D9F6424FA95127B993</key>
+		<string>https://bitbucket.org/plastic-ocean/gauntmore.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>oxygine-framework/examples/Demo/proj.macosx/Demo_macosx.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9922882CE13A2ACB9D3E40D9F6424FA95127B993</key>
+		<string>../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/plastic-ocean/gauntmore.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9922882CE13A2ACB9D3E40D9F6424FA95127B993</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9922882CE13A2ACB9D3E40D9F6424FA95127B993</string>
+			<key>IDESourceControlWCCName</key>
+			<string>gauntmore</string>
+		</dict>
+	</array>
+</dict>
+</plist>

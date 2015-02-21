@@ -27,18 +27,20 @@ Chest::Chest(){
  * Sets _open to true and removes chest from game.
  */
 void Chest::interact(){
-    
     _open = true;
     
     // The chest is open, hide it with an alpha tween.
     _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-    
-    
-   
-    
-    // TODO end the game
 }
 
+
+void _chooseContents() {
+    // choose a random # (0-1)
+    // if potion:
+    //    _contests = potion;
+    // else:
+    //    _contents = gold;
+}
 
 
 /**

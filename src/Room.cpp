@@ -433,6 +433,11 @@ void Room::_drawOpenSpaces(int row, int column, bool isColumn) {
             _drawHallCol(connectHallCol, row + 1, roomRow);
         }
     }
+    // spChest chest = new Chest;
+    // chestCol = random between roomCol and roomWidth
+    // chestRow = random between roomRow and roomHeight
+    // place chest at chestCol, chestRow
+    // set contents
 }
 
 

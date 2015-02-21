@@ -6,9 +6,7 @@
 #include "KeyboardInput.h"
 #include "res.h"
 #include "Map.h"
-
-
-
+#include "HealthBar.h"
 
 
 /**
@@ -22,8 +20,6 @@ Player::Player(int hp, int attack, int defense) {
     _hasTween = false;
     facing = down;
 }
-
-
 
 
 /**
@@ -44,6 +40,7 @@ Player::Facings Player::getFacing() {
  */
 void Player::damage() {
     _hp--;
+    _game->updateHealth(0.2f); // TODO this float needs to reflect the percentage of total health that a single hit inflicts
     if (_hp == 0) {
         // The create is dead, hide it with an alpha tween.
         _dead = true;
@@ -52,6 +49,7 @@ void Player::damage() {
         // TODO end the game
     }
 }
+
 
 void Player::interact(){
     /*
@@ -106,6 +104,7 @@ void Player::interact(){
     
 }
 
+
 Vector2 Player::correctDirection(Vector2 position, Vector2 direction) {
     int newX = static_cast<int>(position.x) + static_cast<int>(direction.x) * 5;
     int newY = static_cast<int>(position.y) + static_cast<int>(direction.y) * 5;
@@ -125,7 +124,7 @@ void Player::addSprite() {
 //    _sprite->setScale(1.25f);
     _sprite->setResAnim(resources.getResAnim("adventurer_down"));
     _sprite->attachTo(_view);
-//    _sprite->setAnchor(Vector2(0.0f, 0.5f));
+    _sprite->setAnchor(Vector2(0.5f, 0.5f));
 }
 
 

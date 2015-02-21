@@ -2,19 +2,16 @@
 
 #include "Game.h"
 #include "Player.h"
-
 #include "Creature.h"
 #include "Chest.h"
 #include "Gold.h"
 #include "Potion.h"
-
 #include "res.h"
 #include "KeyboardInput.h"
 #include "Map.h"
-
 #include "MazeGen.h"
-
 #include "Skeleton.h"
+#include "HealthBar.h"
 
 typedef list<spUnit> Units;
 
@@ -40,7 +37,7 @@ void Game::init() {
 	setSize(getStage()->getSize());
     
     // Size is the number of tiles (with 32 px tiles; 15 tiles = 480 px; 20 tiles = 640 px)
-    int size = 12;
+    int size = 13;
 
 	// Create map
     _map = new Map(size);
@@ -48,7 +45,7 @@ void Game::init() {
     _createTiles();
     
 	// Create player
-	_player = new Player(3, 1, 1);
+	_player = new Player(5, 1, 1);
     _player->init(_getEntrance(), this);
 
     _setUnits();
@@ -76,6 +73,8 @@ void Game::init() {
 	// Handle input
     _move = new KeyboardInput(this);
     
+    // Health bar
+    _healthBar = new HealthBar(this);
 }
 
 
@@ -91,10 +90,10 @@ void Game::init() {
 bool Game::detectCollision(int x, int y, int h, int w) {
     bool isCollision = false;
     SDL_Rect spriteRect;
-    spriteRect.x = x + 12;
+    spriteRect.x = x + 10;
     spriteRect.y = y + 12;
-    spriteRect.h = h - 12;
-    spriteRect.w = w - 12;
+    spriteRect.h = h - 14;
+    spriteRect.w = w - 24;
     const SDL_Rect *sprite = &spriteRect;
     
     // Check for collision between the sprite and each tile
@@ -116,7 +115,6 @@ bool Game::detectCollision(int x, int y, int h, int w) {
         unitRect.h = 13;
         unitRect.w = 13;
 
-        
         const SDL_Rect *constUnitRect = &unitRect;
         // we also make sure that we are not collecting a collision with outself by doing a type check
         if (SDL_HasIntersection(sprite, constUnitRect) && typeid(*unit).name() != "6Player") {
@@ -171,6 +169,9 @@ void Game::switchRoom(int edge) {
     _player->attachUnit();
     _player->addSprite();
     _player->setPosition(Vector2(playerCol, playerRow));
+    
+    // Update health bar
+    _healthBar->render();
 }
 
 
@@ -223,7 +224,11 @@ std::vector<SDL_Rect> Game::getTiles() {
  */
 spKeyboardInput Game::getMove() {
     return _move;
-} 
+}
+
+void Game::updateHealth(float num) {
+    _healthBar->updateHealth(num);
+}
 
 
 /**
@@ -276,6 +281,7 @@ void Game::_renderMap() {
                 sprite->setX(drawX);
                 sprite->setY(drawY);
                 sprite->attachTo(this);
+                sprite->setAnchor(Vector2(0.5f, 0.5f));
             }
         }
     }

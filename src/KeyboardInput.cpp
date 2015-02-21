@@ -63,6 +63,8 @@ void KeyboardInput::_onEvent(Event *ev) {
                 break;
             case SDLK_SPACE:
                 _game->getPlayer()->attack();
+            case SDLK_RETURN:
+                _game->getPlayer()->damage();
             default:
                 break;
             }
