@@ -77,7 +77,7 @@ public:
     
     void updateHealth(float num);
     
-    void updateGoldCount(int count);
+    void updateGoldCount(int value);
     
     bool isExit(Vector2 position);
     

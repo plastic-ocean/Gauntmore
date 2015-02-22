@@ -177,10 +177,6 @@ std::vector<SDL_Rect> Game::getTiles() {
     return _tiles;
 }
 
-//std::list<spUnit> Game::getUnits(){
-//    return _units;
-//}
-
 /**
  * Gets the keyboard input handler.
  */
@@ -188,13 +184,14 @@ spKeyboardInput Game::getMove() {
     return _move;
 }
 
+
 void Game::updateHealth(float num) {
     _healthBar->updateHealth(num);
 }
 
 
-void Game::updateGoldCount(int count) {
-    _goldCount->updateGoldCount(count);
+void Game::updateGoldCount(int value) {
+    _goldCount->updateGoldCount(value);
 }
 
 
@@ -258,7 +255,7 @@ void Game::doUpdate(const UpdateState &us) {
 void Game::_renderMap() {
     _tileMap = new Tmx::Map();
     
-    _tileMap->ParseFile("tmx/room01.tmx");
+    _tileMap->ParseFile("tmx/room.tmx");
 
     _map->getRoom()->setTileMap(_tileMap);
     

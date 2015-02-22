@@ -69,14 +69,13 @@ void Player::interact() {
 
     for (spUnit unit : units) {
         Vector2 unitPosition = unit->getPosition();
-        int yDiff = playerPosition.y - unitPosition.y;
-        int xDiff = playerPosition.x - unitPosition.x;
-        std::cout << "yDiff: " << yDiff << std::endl;
-        std::cout << "xDiff: " << xDiff << std::endl;
+//        int yDiff = playerPosition.y - unitPosition.y;
+//        int xDiff = playerPosition.x - unitPosition.x;
+//        std::cout << "yDiff: " << yDiff << std::endl;
+//        std::cout << "xDiff: " << xDiff << std::endl;
         
         SDL_Rect rect;
         SDL_Rect otherRect = unit->getBounds();
-        const SDL_Rect *unitRect = &otherRect;
 
         switch(_facing){
             case up:

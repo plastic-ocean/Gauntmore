@@ -3,7 +3,7 @@
 /**
  * Constructor.
  */
-GoldCount::GoldCount(Game *game):_game(game) {
+GoldCount::GoldCount(Game *game):_game(game), _count(0) {
     _coin = new Sprite;
     _coin->setResAnim(resources.getResAnim("coin"));
     _coin->setAnchor(Vector2(0.5f, 0.5f));
@@ -21,7 +21,7 @@ GoldCount::GoldCount(Game *game):_game(game) {
     style.hAlign = TextStyle::HALIGN_CENTER;
     
     _goldCount->setStyle(style);
-    _goldCount->setText("0000");
+    _goldCount->setText("0");
 }
 
 
