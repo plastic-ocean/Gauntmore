@@ -47,7 +47,7 @@ Game::Game() {
     _player = new Player(20, 1, 1);
     _player->init(_getEntrance(), this);
     
-    _setUnits();
+//    _setUnits();
     
     
     // TODO Create enemy creatures (with random loot!)
@@ -139,7 +139,7 @@ void Game::switchRoom(int edge) {
 
 void Game::pushUnit(spUnit unit) {
     _map->getRoom()->pushUnit(unit);
-    _units.push_back(unit);
+//    _units.push_back(unit);
 }
 
 
@@ -153,9 +153,14 @@ spMap Game::getMap() {
 }
 
 
-list<spUnit> Game::getUnits() {
-    return _map->getRoom()->getUnits();
-}
+//list<spUnit> Game::getUnits() {
+//    return _map->getRoom()->getUnits();
+//}
+
+
+//void Game::removeUnit(Units::iterator i) {
+//    _map->getRoom()->removeUnit(i);
+//}
 
 
 /**
@@ -235,14 +240,13 @@ int Game::getTileSize() {
  */
 void Game::doUpdate(const UpdateState &us) {
     // Iterate through the unit list and call their update method. Then check for death.
-    for (Units::iterator i = _units.begin(); i != _units.end(); ) {
+    for (Units::iterator i = _map->getRoom()->getUnits()->begin(); i != _map->getRoom()->getUnits()->end(); ) {
         spUnit unit = *i;
         unit->update(us);
         
         if (unit->isDead()) {
             // If it is dead remove it from list.
-            cout << "Kill unit " << unit->getType() << endl;
-            i = _units.erase(i);
+            i = _map->getRoom()->getUnits()->erase(i);
         } else {
             ++i;
         }
@@ -329,9 +333,9 @@ Vector2 Game::_getEntrance() {
     return location;
 }
 
-void Game::_setUnits() {
-    _units = static_cast<Units>(_map->getRoom()->getUnits());
-}
+//void Game::_setUnits() {
+//    _units = static_cast<Units>(_map->getRoom()->getUnits());
+//}
 
 
 

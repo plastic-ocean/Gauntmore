@@ -71,7 +71,7 @@ public:
     
     spPlayer getPlayer();
     
-    std::list<spUnit> getUnits();
+//    std::list<spUnit> getUnits();
 
     spMap getMap();
     
@@ -121,7 +121,7 @@ protected:
      */
     void _createTiles();
 
-    void _setUnits();
+//    void _setUnits();
     
     Vector2 _getEntrance();
 };

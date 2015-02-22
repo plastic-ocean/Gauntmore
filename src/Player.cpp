@@ -24,7 +24,6 @@ Player::Player(int hp, int attack, int defense):_hasTween(false), _facing(down) 
 
 
 SDL_Rect Player::getBounds() {
-    
     SDL_Rect spriteRect;
     spriteRect.x += 10;
     spriteRect.y += 12;
@@ -75,13 +74,14 @@ void Player::interact() {
     attack();
     
     Vector2 playerPosition = getPosition();
-    std::list<spUnit> units = _game->getUnits();
+    std::list<spUnit> *units = _game->getMap()->getRoom()->getUnits();
 
-    for (spUnit unit : units) {
+    for (spUnit unit : *units) {
         SDL_Rect rect;
 
         switch(_facing) {
             case up:
+                std::cout << "check interact up" << std::endl;
                 rect.x = playerPosition.x;
                 rect.y = playerPosition.y + 16;
                 rect.h = 16;
@@ -93,6 +93,7 @@ void Player::interact() {
                 }
                 break;
             case right:
+                std::cout << "check interact right" << std::endl;
                 rect.x = playerPosition.x + 80;
                 rect.y = playerPosition.y;
                 rect.h = 64;
@@ -104,6 +105,7 @@ void Player::interact() {
                 }
                 break;
             case down:
+                std::cout << "check interact down" << std::endl;
                 rect.x = playerPosition.x;
                 rect.y = playerPosition.y - 80;
                 rect.h = 16;
@@ -115,6 +117,7 @@ void Player::interact() {
                 }
                 break;
             case left:
+                std::cout << "check interact left" << std::endl;
                 rect.x = playerPosition.x - 16;
                 rect.y = playerPosition.y;
                 rect.h = 64;
@@ -230,6 +233,60 @@ bool Player::_isCollision(SDL_Rect thisRect, spUnit unit) {
 }
 
 
+/**
+ * Corrects the movement direction by checking for collision with wall tiles or other Units and adjusting the 
+ * direction vector's x and y values.
+ *
+ * @postion is the player's current position.
+ * @directions is the player's current movement direction.
+ */
+Vector2 Player::_correctDirection(Vector2 position, Vector2 direction) {
+    int newX = static_cast<int>(position.x) + static_cast<int>(direction.x) * 5;
+    int newY = static_cast<int>(position.y) + static_cast<int>(direction.y) * 5;
+    
+    SDL_Rect spriteRect;
+    spriteRect.x = newX + 10;
+    spriteRect.y = newY + 12;
+    spriteRect.h = tileSize - 14;
+    spriteRect.w = tileSize - 24;
+    
+    std::list<spUnit> *units = _game->getMap()->getRoom()->getUnits();
+    
+    if (_collisionDetector->detectWalls(_game->getTiles(), spriteRect) ||
+        _collisionDetector->detectUnits(units, spriteRect)) {
+        direction.x = 0;
+    }
+    if (_collisionDetector->detectWalls(_game->getTiles(), spriteRect) ||
+        _collisionDetector->detectUnits(units, spriteRect)) {
+        direction.y = 0;
+    }
+    
+    return direction;
+}
+
+
+/**
+ * Updates the player every frame.
+ *
+ * @us is the UpdateStatus sent by Unit's update method.
+ */
+void Player::_update(const UpdateState &us) {
+	Vector2 direction;
+	if (_game->getMove()->getDirection(direction)) {
+		Vector2 position = getPosition();
+        direction = _correctDirection( position, direction );
+		position += direction * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
+
+        if (!_game->isExit(position)) {
+            setPosition(position);
+        }
+    }
+}
+
+
+
+
+
 //void Player::_setFacing(Vector2 dir) {
 //    if ( dir.y > 0 ) {
 //        _sprite->setResAnim(resources.getResAnim("adventurer_move_down"));
@@ -248,55 +305,5 @@ bool Player::_isCollision(SDL_Rect thisRect, spUnit unit) {
 //        _facing = right;
 //    }
 //}
-
-
-/**
- * Corrects the movement direction by checking for collision with wall tiles or other Units and adjusting the 
- * direction vector's x and y values.
- *
- * @postion is the player's current position.
- * @directions is the player's current movement direction.
- */
-Vector2 Player::_correctDirection(Vector2 position, Vector2 direction) {
-    int newX = static_cast<int>(position.x) + static_cast<int>(direction.x) * 5;
-    int newY = static_cast<int>(position.y) + static_cast<int>(direction.y) * 5;
-    
-    SDL_Rect spriteRect;
-    spriteRect.x = newX + 10;
-    spriteRect.y = newY + 12;
-    spriteRect.h = tileSize - 14;
-    spriteRect.w = tileSize - 24;
-    
-    if (_collisionDetector->detectWalls(_game->getTiles(), spriteRect) ||
-        _collisionDetector->detectUnits(_game->getUnits(), spriteRect)) {
-        direction.x = 0;
-    }
-    if (_collisionDetector->detectWalls(_game->getTiles(), spriteRect) ||
-        _collisionDetector->detectUnits(_game->getUnits(), spriteRect)) {
-        direction.y = 0;
-    }
-    
-    return direction;
-}
-
-
-/**
- * Updates the player every frame.
- *
- * @us is the UpdateStatus sent by Unit's update method.
- */
-void Player::_update(const UpdateState &us) {
-	Vector2 direction;
-	if (_game->getMove()->getDirection(direction)) {
-		Vector2 position = getPosition();
-        direction = _correctDirection( position, direction );
-//        _setFacing(direction);
-		position += direction * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
-
-        if (!_game->isExit(position)) {
-            setPosition(position);
-        }
-    }
-}
 
 

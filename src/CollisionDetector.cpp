@@ -25,12 +25,15 @@ bool CollisionDetector::detectWalls(std::vector<SDL_Rect> tiles, SDL_Rect sprite
     return isCollision;
 }
 
-bool CollisionDetector::detectUnits(list<spUnit> units, SDL_Rect spriteRect) {
+bool CollisionDetector::detectUnits(list<spUnit> *units, SDL_Rect spriteRect) {
     bool isCollision = false;
     const SDL_Rect *sprite = &spriteRect;
-    
-    for (spUnit unit : units) {
+    int count = 0;
+    for (spUnit unit : *units) {
         if (unit->getType() != "player") {
+            
+            ++count;
+            cout << count << unit->getType() << endl;
             
             SDL_Rect unitRect = unit->getBounds();
             // these are adjusted for a skeleton sprite, we will need to make different ones for

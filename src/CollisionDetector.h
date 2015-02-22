@@ -15,7 +15,7 @@ public:
     CollisionDetector(Game *game);
     
     bool detectWalls(std::vector<SDL_Rect> tiles, SDL_Rect spriteRect);
-    bool detectUnits(std::list<spUnit> units, SDL_Rect spriteRect);
+    bool detectUnits(std::list<spUnit> *units, SDL_Rect spriteRect);
     
 private:
     Game *_game;
