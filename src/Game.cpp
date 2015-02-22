@@ -10,6 +10,7 @@
 
 #include "Creature.h"
 #include "Skeleton.h"
+#include "Slime.h"
 
 #include "Chest.h"
 #include "Gold.h"
@@ -41,22 +42,15 @@ Game::Game() {
     // Create chest
     Vector2 chestLocation = Vector2((64 * 6), (64 * 6));
     _chest = new Chest;
-    _chest->init(chestLocation, this);
+    _chest->init(chestLocation, this);    
+    
+    Vector2 location = Vector2((64 * 7), (64 * 7));
+    _slime = new Slime;
+    _slime->init(location, this);
     
     // Create player
     _player = new Player(20, 1, 1);
     _player->init(_getEntrance(), this);
-    
-//    _setUnits();
-    
-    
-    // TODO Create enemy creatures (with random loot!)
-    //    for (int i = 0; i < **large number**; ++i) {
-    //        spCreature creature = new Creature;
-    //        creature->init(Vector2(**calculate starting position**, this);
-    //    }
-    
-    //location for skeleton
     
     // TODO Create enemy creatures (with random loot!)
     

@@ -10,6 +10,7 @@ using namespace std;
 DECLARE_SMART(Player, spPlayer);
 DECLARE_SMART(Creature, spCreature);
 DECLARE_SMART(Skeleton, spSkeleton);
+DECLARE_SMART(Slime, spSlime);
 DECLARE_SMART(HealthBar, spHealthBar);
 DECLARE_SMART(GoldCount, spGoldCount);
 DECLARE_SMART(Unit, spUnit);
@@ -95,6 +96,7 @@ protected:
     Units _units;
     
     spSkeleton _skeleton;
+    spSlime _slime;
     
     spChest _chest;
     spGold _gold;

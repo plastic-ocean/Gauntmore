@@ -13,7 +13,7 @@ src/Game.cpp src/Game.h src/GameScene.cpp src/GameScene.h src/Map.cpp src/Map.h 
 src/Room.cpp src/Room.h src/Scene.cpp src/Scene.h src/KeyboardInput.cpp src/KeyboardInput.h src/Player.cpp src/Player.h
 src/Chest.cpp src/Chest.h src/CollisionDetector.cpp src/CollisionDetector.h src/Gold.cpp src/Gold.h
 src/GoldCount.cpp src/GoldCount.h src/HealthBar.cpp src/HealthBar.h src/Potion.cpp src/Potion.h
-src/Creature.cpp src/Creature.h src/Skeleton.cpp src/Skeleton.h src/Thing.cpp src/Thing.h
+src/Creature.cpp src/Creature.h src/Skeleton.cpp src/Skeleton.h src/Thing.cpp src/Thing.h src/Slime.cpp src/Slime.h
 src/Unit.cpp src/Unit.h src/PathFinder.cpp src/PathFinder.h src/PathNode.cpp src/PathNode.h src/Greaterthan.h
 src/Gauntmore.cpp src/Gauntmore.h src/res.cpp src/res.h src/main.cpp
 src/tmx/base64.cpp src/tmx/TmxEllipse.h src/tmx/TmxMapTile.h src/tmx/TmxPropertySet.cpp src/tmx/base64.h

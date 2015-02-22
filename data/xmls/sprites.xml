@@ -12,6 +12,11 @@
         <image file="health.png" />
         <image file="health_border.png" />
         
+        <image file="slime_down.png" cols = "3" />
+        <image file="slime_up.png" cols = "3" />
+        <image file="slime_left.png" cols = "3" />
+        <image file="slime_right.png" cols = "3" />
+        
         <image file="adventurer_down.png" />
         <image file="adventurer_up.png" />
         <image file="adventurer_left.png" />

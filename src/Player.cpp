@@ -194,7 +194,6 @@ void Player::move(int facing) {
         default:
             break;
     }
-    
 }
 
 

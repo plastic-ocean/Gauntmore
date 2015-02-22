@@ -6,7 +6,6 @@
 #include "res.h"
 
 
-
 /**
  * Constructor
  */

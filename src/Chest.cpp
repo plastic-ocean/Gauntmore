@@ -1,11 +1,3 @@
-//
-//  Chest.cpp
-//  gauntmore_macosx
-//
-//  Created by Steven Warren on 2/13/15.
-//  Copyright (c) 2015 oxygine. All rights reserved.
-//
-
 #include "Chest.h"
 #include "Gold.h"
 #include "Potion.h"
@@ -22,13 +14,21 @@
 Chest::Chest():_isOpen(false), _contents(0) {}
 
 
+SDL_Rect Chest::getBounds(){
+    Vector2 unitPosition = getPosition();
+    _bounds.x = unitPosition.x + 20;
+    _bounds.y = unitPosition.y + 15;
+    _bounds.h = 30;
+    _bounds.w = 20;
+    
+    return _bounds;
+}
+
+
 /**
  * Initializes a Chest position and sprite. Called by Unit's init() method.
  */
 void Chest::_init() {
-    // Initialize the stats.
-    
-    // Add sprite to the game scene view.
     _sprite = new Sprite;
     _sprite->setResAnim(resources.getResAnim("chest"));
     _sprite->attachTo(_view);
@@ -42,17 +42,6 @@ void Chest::_init() {
         _contents = new Gold();
     }
 
-}
-
-
-SDL_Rect Chest::getBounds(){
-    Vector2 unitPosition = getPosition();
-    _bounds.x = unitPosition.x + 20;
-    _bounds.y = unitPosition.y + 15;
-    _bounds.h = 30;
-    _bounds.w = 20;
-    
-    return _bounds;
 }
 
 

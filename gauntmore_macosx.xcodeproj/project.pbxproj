@@ -30,6 +30,7 @@
 		532878A91A99A6EB00228299 /* TmxTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 532878971A99A6EB00228299 /* TmxTile.cpp */; };
 		532878AA1A99A6EB00228299 /* TmxTileset.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 532878991A99A6EB00228299 /* TmxTileset.cpp */; };
 		532878AB1A99A6EB00228299 /* TmxUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5328789B1A99A6EB00228299 /* TmxUtil.cpp */; };
+		532878BA1A9A6AA700228299 /* Slime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 532878B81A9A6AA700228299 /* Slime.cpp */; };
 		534097AD1A896C0A000434F6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5340977F1A896C0A000434F6 /* main.cpp */; };
 		534097AE1A896C0A000434F6 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 534097801A896C0A000434F6 /* Game.cpp */; };
 		534097B01A896C0A000434F6 /* KeyboardInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 534097841A896C0A000434F6 /* KeyboardInput.cpp */; };
@@ -179,6 +180,8 @@
 		5328789A1A99A6EB00228299 /* TmxTileset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmxTileset.h; sourceTree = "<group>"; };
 		5328789B1A99A6EB00228299 /* TmxUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TmxUtil.cpp; sourceTree = "<group>"; };
 		5328789C1A99A6EB00228299 /* TmxUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmxUtil.h; sourceTree = "<group>"; };
+		532878B81A9A6AA700228299 /* Slime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Slime.cpp; path = src/Slime.cpp; sourceTree = "<group>"; };
+		532878B91A9A6AA700228299 /* Slime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Slime.h; path = src/Slime.h; sourceTree = "<group>"; };
 		5340977F1A896C0A000434F6 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = "<group>"; };
 		534097801A896C0A000434F6 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Game.cpp; path = src/Game.cpp; sourceTree = "<group>"; };
 		534097811A896C0A000434F6 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = src/Game.h; sourceTree = "<group>"; };
@@ -371,6 +374,8 @@
 				53BCF11A1A8ED99F00BD6288 /* Scene.h */,
 				539584541A99A42D0080A994 /* Skeleton.cpp */,
 				539584551A99A42D0080A994 /* Skeleton.h */,
+				532878B81A9A6AA700228299 /* Slime.cpp */,
+				532878B91A9A6AA700228299 /* Slime.h */,
 				539584561A99A42D0080A994 /* Thing.cpp */,
 				539584571A99A42D0080A994 /* Thing.h */,
 				5328787B1A99A6EB00228299 /* tmx */,
@@ -582,6 +587,7 @@
 				5328789F1A99A6EB00228299 /* TmxEllipse.cpp in Sources */,
 				532878AA1A99A6EB00228299 /* TmxTileset.cpp in Sources */,
 				539584661A99A42D0080A994 /* Potion.cpp in Sources */,
+				532878BA1A9A6AA700228299 /* Slime.cpp in Sources */,
 				532878A21A99A6EB00228299 /* TmxLayer.cpp in Sources */,
 				539584681A99A42D0080A994 /* Skeleton.cpp in Sources */,
 				534097B21A896C0A000434F6 /* res.cpp in Sources */,

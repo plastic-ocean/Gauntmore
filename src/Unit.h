@@ -1,5 +1,6 @@
 #pragma once
 #include "oxygine-framework.h"
+
 using namespace oxygine;
 using namespace std;
 
@@ -82,7 +83,6 @@ public:
 
 protected:
     // Each Unit has a view that is attached to the game.
-    
     SDL_Rect _bounds;
     spActor _view;
     spSprite _sprite;

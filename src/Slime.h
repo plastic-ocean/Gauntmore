@@ -1,16 +1,16 @@
-#ifndef __gauntmore__Skeleton__
-#define __gauntmore__Skeleton__
+#ifndef __gauntmore__Slime__
+#define __gauntmore__Slime__
 
 #include "Creature.h"
 #include "Thing.h"
 
 using namespace std;
 
-DECLARE_SMART(Skeleton, spSkeleton);
-class Skeleton : public Creature {
+DECLARE_SMART(Slime, spSlime);
+class Slime : public Creature {
     
 public:
-    Skeleton();
+    Slime();
     
     virtual SDL_Rect getBounds();
     
@@ -35,4 +35,4 @@ private:
     void _update(const UpdateState &us);
 };
 
-#endif /* defined(__gauntmore__Skeleton__) */
+#endif /* defined(__gauntmore__Slime__) */

@@ -1,7 +1,9 @@
-#include "Unit.h"
-
 #ifndef __gauntmore__Thing__
 #define __gauntmore__Thing__
+
+#include "Unit.h"
+
+using namespace oxygine;
 
 DECLARE_SMART(Thing, spThing);
 class Thing: public Unit {
@@ -16,14 +18,13 @@ public:
     virtual void interact();
     
 protected:
-    
+    spThing _contents;
     bool _open;
     
     /**
      * Initializes position and sprite of Thing. Called by Unit's init() method.
      */
     void _init();
-    
     
     
     /**

@@ -5,7 +5,18 @@
 /**
  * Constructor
  */
-Skeleton::Skeleton(){}
+Skeleton::Skeleton():_contents(0) {}
+
+
+SDL_Rect Skeleton::getBounds(){
+    Vector2 unitPosition = getPosition();
+    _bounds.x = unitPosition.x + 20;
+    _bounds.y = unitPosition.y + 15;
+    _bounds.h = 30;
+    _bounds.w = 20;
+    
+    return _bounds;
+}
 
 
 /**
@@ -20,14 +31,22 @@ void Skeleton::_init() {
     
     // Add sprite to the game scene view.
     _sprite = new Sprite;
-    _sprite->setResAnim(resources.getResAnim("human"));
+    _sprite->setResAnim(resources.getResAnim("skeleton"));
     _sprite->attachTo(_view);
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
+    
+    _setContents();
 }
 
 
 void Skeleton::_interact() {
-    
+    _hp--;
+    if (_hp == 0) {
+        // The creature is dead, hide it with an alpha tween.
+        _dead = true;
+        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
+        _dropContents();
+    }
 }
 
 
