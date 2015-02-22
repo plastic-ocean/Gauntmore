@@ -40,6 +40,8 @@ public:
 
     void removeTween();
     
+    virtual SDL_Rect getBounds();
+    
 protected:
     Facing _facing;
     

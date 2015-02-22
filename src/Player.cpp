@@ -23,17 +23,27 @@ Player::Player(int hp, int attack, int defense):_hasTween(false), _facing(down) 
 }
 
 
+SDL_Rect Player::getBounds() {
+    
+    SDL_Rect spriteRect;
+    spriteRect.x += 10;
+    spriteRect.y += 12;
+    spriteRect.h = tileSize - 14;
+    spriteRect.w = tileSize - 24;
+    return spriteRect;
+}
+
+
+Player::Facing Player::getFacing() {
+    return _facing;
+}
+
 
 /**
  * Initializes the player's position and sprite. Called by Unit's init() method.
  */
 void Player::_init() {
     addSprite();
-}
-
-
-Player::Facing Player::getFacing() {
-    return _facing;
 }
 
 
@@ -68,15 +78,9 @@ void Player::interact() {
     std::list<spUnit> units = _game->getUnits();
 
     for (spUnit unit : units) {
-//        Vector2 unitPosition = unit->getPosition();
-//        int yDiff = playerPosition.y - unitPosition.y;
-//        int xDiff = playerPosition.x - unitPosition.x;
-//        std::cout << "yDiff: " << yDiff << std::endl;
-//        std::cout << "xDiff: " << xDiff << std::endl;
-        
         SDL_Rect rect;
 
-        switch(_facing){
+        switch(_facing) {
             case up:
                 rect.x = playerPosition.x;
                 rect.y = playerPosition.y + 16;
@@ -212,8 +216,11 @@ bool Player::_isCollision(SDL_Rect thisRect, spUnit unit) {
     SDL_Rect otherRect = unit->getBounds();
     const SDL_Rect *playerRect = &thisRect;
     const SDL_Rect *unitRect = &otherRect;
+    
+    cout << "player: x: " << playerRect->x << ", y:" << playerRect->y << ", h: " << playerRect->h << ", w: " << playerRect->w << endl;
+    cout << "unit: x: " << unitRect->x << ", y:" << unitRect->y << ", h: " << unitRect->h << ", w: " << unitRect->w << endl;
+    
     if (SDL_HasIntersection(playerRect, unitRect)) {
-        std::cout << "interact facing up " << i << std::endl;
         unit->interact();
         i++;
         isCollision = true;

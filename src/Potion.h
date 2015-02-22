@@ -9,10 +9,7 @@ class Potion: public Thing {
 public:
     Potion();
     
-    /**
-     * Interaction method for Potion.
-     */
-    void interact();
+    SDL_Rect getBounds();
     
 private:
     /**
@@ -20,7 +17,10 @@ private:
      */
     void _init();
     
-    
+    /**
+     * Interaction method for Potion.
+     */
+    void _interact();
     
     /**
      * Updates the Potion every frame. Called by Units update() method.

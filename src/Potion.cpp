@@ -9,24 +9,24 @@
 /**
  * Constructor.
  */
-Potion::Potion(){
+Potion::Potion() {}
+
+
+SDL_Rect Potion::getBounds() {
+    Vector2 unitPosition = getPosition();
+    _bounds.x = unitPosition.x + 20;
+    _bounds.y = unitPosition.y + 15;
+    _bounds.h = 30;
+    _bounds.w = 20;
     
+    return _bounds;
 }
 
-/**
- * Interaction method for Potion.
- */
-void Potion::interact(){
-    
-}
 
 /**
  * Initializes position and sprite of Potion. Called by Unit's init() method.
  */
-void Potion::_init(){
-    // Initialize the stats.
-    
-    // Add sprite to the game scene view.
+void Potion::_init() {
     _sprite = new Sprite;
     _sprite->setResAnim(resources.getResAnim("potion"));
     _sprite->attachTo(_view);
@@ -34,11 +34,26 @@ void Potion::_init(){
     
 }
 
+
+/**
+ * Interaction method for Potion.
+ */
+void Potion::_interact() {
+    // add health to player
+    
+    // stop collision detection
+    _dead = true;
+    
+    // hide it with an alpha tween.
+    _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
+}
+
+
 /**
  * Updates the Potion every frame. Called by Units update() method.
  *
  * @us is the UpdateStatus sent by Unit's update method.
  */
-void Potion::_update(const UpdateState &us){
+void Potion::_update(const UpdateState &us) {
     
 }

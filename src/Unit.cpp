@@ -43,6 +43,7 @@ void Unit::detachUnit() {
     _view = 0;
 }
 
+
 /**
  *  Interaction method for Unit:
  *  Iterates thru list of units and determines which the player is facing.
@@ -53,6 +54,7 @@ void Unit::interact() {
     _interact();
 }
 
+
 /**
  * Gets the unit's position.
  *
@@ -62,9 +64,9 @@ const Vector2& Unit::getPosition() {
     return _view->getPosition();
 }
 
-SDL_Rect Unit::getBounds(){
-    return _bounds;
-}
+//SDL_Rect Unit::getBounds() {
+//    return _bounds;
+//}
 
 
 /**

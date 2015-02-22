@@ -1,35 +1,33 @@
 #include "Gold.h"
-#include "Game.h"
-#include "KeyboardInput.h"
 #include "res.h"
-#include "Tmx.h"
-#include "SDL.h"
 
 
-Gold::Gold(){
+Gold::Gold() {}
+
+SDL_Rect Gold::getBounds() {
+    Vector2 unitPosition = getPosition();
+    _bounds.x = unitPosition.x + 20;
+    _bounds.y = unitPosition.y + 15;
+    _bounds.h = 30;
+    _bounds.w = 20;
     
-       spGold _gold;
-    
+    return _bounds;
 }
 
-void Gold::_init(){
-    // Initialize the stats.
-    
-    // Add sprite to the game scene view.
+void Gold::_init() {
     _sprite = new Sprite;
     _sprite->addTween(TweenAnim(resources.getResAnim("gold")), 500, -1);;
     _sprite->attachTo(_view);
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
-    
 }
 
 
-void Gold::_interact(){
+void Gold::_interact() {
+    // add gold to gold count
     _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-    
+    _dead = true;
 }
 
 
-void Gold::_update(const UpdateState &us){
-    
+void Gold::_update(const UpdateState &us) {
 }

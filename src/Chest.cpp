@@ -34,12 +34,6 @@ void Chest::_init() {
     _sprite->attachTo(_view);
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
     
-    Vector2 unitPosition = getPosition();
-    _bounds.x = unitPosition.x + 20;
-    _bounds.y = unitPosition.y + 15;
-    _bounds.h = 30;
-    _bounds.w = 20;
-    
     int randContents = rand() % 2;
     if (randContents == 0) {
         _contents = new Potion();
@@ -50,17 +44,32 @@ void Chest::_init() {
 
 }
 
+
+SDL_Rect Chest::getBounds(){
+    Vector2 unitPosition = getPosition();
+    _bounds.x = unitPosition.x + 20;
+    _bounds.y = unitPosition.y + 15;
+    _bounds.h = 30;
+    _bounds.w = 20;
+    
+    return _bounds;
+}
+
+
 /**
  * Interaction method for Chest.
  * Sets _open to true and removes chest from game.
  */
 void Chest::_interact() {
-    _isOpen = true;
-    
-    // The chest is open, hide it with an alpha tween.
-    _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-    
-    _contents->init(getPosition(), _game);
+    if (!_isOpen) {
+        _isOpen = true;
+        _dead = true;
+        
+        // The chest is open, hide it with an alpha tween.
+        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
+        
+        _contents->init(getPosition(), _game);
+    }
 }
 
 

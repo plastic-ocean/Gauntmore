@@ -40,7 +40,7 @@ bool CollisionDetector::detectUnits(list<spUnit> units, SDL_Rect spriteRect) {
             // we also make sure that we are not collecting a collision with outself by doing a type check
             if (SDL_HasIntersection(sprite, constUnitRect)) {
                 isCollision = true;
-                std::cout << "collision with unit: " << unit->getType() << std::endl;
+//                std::cout << "collision with unit: " << unit->getType() << std::endl;
             }
             //std::cout << "no collision with unit: " << typeid(*unit).name() << std::endl;
         }

@@ -9,6 +9,8 @@ class Gold: public Thing {
 public:
     Gold();
     
+    SDL_Rect getBounds();
+    
 private:
     /**
      * Initializes position and sprite of Gold. Called by Unit's init() method.

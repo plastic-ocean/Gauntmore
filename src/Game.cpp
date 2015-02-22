@@ -241,6 +241,7 @@ void Game::doUpdate(const UpdateState &us) {
         
         if (unit->isDead()) {
             // If it is dead remove it from list.
+            cout << "Kill unit " << unit->getType() << endl;
             i = _units.erase(i);
         } else {
             ++i;

@@ -13,6 +13,7 @@ class Chest: public Thing {
 public:
     Chest();
     
+    virtual SDL_Rect getBounds();
     
 private:
     spThing _contents;
