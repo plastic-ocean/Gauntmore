@@ -1,45 +1,52 @@
+//
+//  pathNode.cpp
+//  gauntmore_macosx
+//
+//  Created by David Wenzel on 2/17/15.
+//  Copyright (c) 2015 oxygine. All rights reserved.
+//
+
 #include "pathNode.h"
 
-PathNode::PathNode( Vector2 location, int cost, int heuristic ) {
+pathNode::pathNode( Vector2 location, int cost, int heuristic ) {
     this->location = location;
     this->cost = cost;
     this->heuristic = heuristic;
 }
-PathNode::~PathNode(){}
+pathNode::~pathNode(){}
 
-Vector2 PathNode::getLocation(){
+Vector2 pathNode::getLocation(){
     return this->location;
 }
-int PathNode::getHeuristic() {
+int pathNode::getHeuristic() {
     return this->heuristic;
 }
-int PathNode::getCost() {
+int pathNode::getCost() {
     return this->cost;
 }
-const int PathNode::getTotal()  {
+const int pathNode::getTotal()  {
     return this->total;
 }
-void PathNode::setCost( int cost ) {
+void pathNode::setCost( int cost ) {
     this->cost = cost; //I still dont like this much
 }
 
-void PathNode::setLocation( Vector2 location ) {
+void pathNode::setLocation( Vector2 location ) {
     this->location = location;
 }
 
-void PathNode::setHeuristic( int heuristic ) {
+void pathNode::setHeuristic( int heuristic ) {
     this->heuristic = heuristic;
 }
 
-void PathNode::calculateTotal() {
+void pathNode::calculateTotal() {
     this->total = cost + heuristic;
 }
-
-PathNode PathNode::getParent() {
+pathNode pathNode::getParent() {
     return *parent;
 }
 
-void PathNode::setParent( PathNode parent ) {
+void pathNode::setParent( pathNode parent ) {
     this->parent = &parent;
 }
 
