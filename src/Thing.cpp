@@ -18,7 +18,7 @@
  * Constructor
  */
 Thing::Thing(){
-    
+    setType("thing");    
 }
 
 /**

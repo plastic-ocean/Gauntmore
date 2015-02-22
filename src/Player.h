@@ -1,5 +1,6 @@
 #pragma once
 #include "Unit.h"
+#include "CollisionDetector.h"
 
 DECLARE_SMART(Player, spPlayer);
 class Player: public Unit {
@@ -43,6 +44,7 @@ public:
     void removeTween();
     
 protected:
+    spCollisionDetector _collisionDetector;
     const int tileSize = 64;
     spTween _moveTween;
     spTween _attackTween;

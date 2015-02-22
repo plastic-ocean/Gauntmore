@@ -63,6 +63,10 @@ const Vector2& Unit::getPosition() {
     return _view->getPosition();
 }
 
+SDL_Rect Unit::getBounds(){
+    return _bounds;
+}
+
 
 /**
  * Sets the unit's position.
@@ -71,6 +75,15 @@ const Vector2& Unit::getPosition() {
  */
 void Unit::setPosition(const Vector2& position) {
     _view->setPosition(position);
+}
+
+
+string Unit::getType() {
+    return _type;
+}
+
+void Unit::setType(string type) {
+    _type = type;
 }
 
 

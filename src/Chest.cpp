@@ -20,6 +20,7 @@
  */
 Chest::Chest(){
     _open = false;
+    
 }
 
 /**
@@ -55,7 +56,13 @@ void Chest::_init() {
     _sprite->attachTo(_view);
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
     
-    
+    Vector2 unitPosition = getPosition();
+    // these are adjusted for a skeleton sprite, we will need to make different ones for
+    // different sprites
+    _bounds.x = unitPosition.x + 15;
+    _bounds.y = unitPosition.y + 15;
+    _bounds.h = 15;
+    _bounds.w = 15;
 }
 
 

@@ -14,6 +14,7 @@ DECLARE_SMART(GoldCount, spGoldCount);
 DECLARE_SMART(Unit, spUnit);
 DECLARE_SMART(Chest, spChest);
 DECLARE_SMART(Gold, spGold);
+DECLARE_SMART(CollisionDetector, spCollisionDetector);
 DECLARE_SMART(Potion, spPotion);
 DECLARE_SMART(KeyboardInput, spKeyboardInput)
 DECLARE_SMART(Unit, spUnit);
@@ -44,7 +45,7 @@ public:
      * @w is the width coordinate to check.
      * @return true is there is a collision and false if there is not
      */
-    bool detectCollision(int x, int y, int h, int w);
+    //bool detectCollision(int x, int y, int h, int w);
     
     /**
      * Gets the tile map.

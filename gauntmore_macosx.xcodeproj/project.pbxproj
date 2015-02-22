@@ -60,6 +60,7 @@
 		5365DD881A93BE28000A7893 /* MazeGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5365DD861A93BE28000A7893 /* MazeGen.cpp */; };
 		53BCF11B1A8ED99F00BD6288 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53BCF1171A8ED99F00BD6288 /* GameScene.cpp */; };
 		53BCF11C1A8ED99F00BD6288 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53BCF1191A8ED99F00BD6288 /* Scene.cpp */; };
+		71910A141A9943CF002BAA60 /* CollisionDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 71910A121A9943CF002BAA60 /* CollisionDetector.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,6 +231,8 @@
 		53BCF1181A8ED99F00BD6288 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = src/GameScene.h; sourceTree = "<group>"; };
 		53BCF1191A8ED99F00BD6288 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Scene.cpp; path = src/Scene.cpp; sourceTree = "<group>"; };
 		53BCF11A1A8ED99F00BD6288 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Scene.h; path = src/Scene.h; sourceTree = "<group>"; };
+		71910A121A9943CF002BAA60 /* CollisionDetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CollisionDetector.cpp; sourceTree = "<group>"; };
+		71910A131A9943CF002BAA60 /* CollisionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionDetector.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +330,8 @@
 			children = (
 				5359D5621A96A90F00AE6365 /* Chest.cpp */,
 				5359D5631A96A90F00AE6365 /* Chest.h */,
+				71910A121A9943CF002BAA60 /* CollisionDetector.cpp */,
+				71910A131A9943CF002BAA60 /* CollisionDetector.h */,
 				5340977D1A896C0A000434F6 /* Creature.cpp */,
 				5340977E1A896C0A000434F6 /* Creature.h */,
 				534097801A896C0A000434F6 /* Game.cpp */,
@@ -577,6 +582,7 @@
 				5359D5751A96A90F00AE6365 /* pathFinder.cpp in Sources */,
 				5359D5721A96A90F00AE6365 /* Chest.cpp in Sources */,
 				534097D21A898396000434F6 /* Map.cpp in Sources */,
+				71910A141A9943CF002BAA60 /* CollisionDetector.cpp in Sources */,
 				530CFA971A906FED00B4CD51 /* TmxObjectGroup.cpp in Sources */,
 				530CFA921A906FED00B4CD51 /* TmxImage.cpp in Sources */,
 				534097B11A896C0A000434F6 /* Player.cpp in Sources */,
