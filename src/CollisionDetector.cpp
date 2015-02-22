@@ -1,5 +1,3 @@
-
-
 #include <iostream>
 #include "CollisionDetector.h"
 #include "Player.h"
@@ -28,24 +26,15 @@ bool CollisionDetector::detectWalls(std::vector<SDL_Rect> tiles, SDL_Rect sprite
 bool CollisionDetector::detectUnits(list<spUnit> *units, SDL_Rect spriteRect) {
     bool isCollision = false;
     const SDL_Rect *sprite = &spriteRect;
-    int count = 0;
     for (spUnit unit : *units) {
         if (unit->getType() != "player") {
-            
-            ++count;
-            cout << count << unit->getType() << endl;
-            
             SDL_Rect unitRect = unit->getBounds();
-            // these are adjusted for a skeleton sprite, we will need to make different ones for
-            // different sprites
-            
             const SDL_Rect *constUnitRect = &unitRect;
-            // we also make sure that we are not collecting a collision with outself by doing a type check
             if (SDL_HasIntersection(sprite, constUnitRect)) {
                 isCollision = true;
 //                std::cout << "collision with unit: " << unit->getType() << std::endl;
             }
-            //std::cout << "no collision with unit: " << typeid(*unit).name() << std::endl;
+//            std::cout << "no collision with unit: " << typeid(*unit).name() << std::endl;
         }
         
     }

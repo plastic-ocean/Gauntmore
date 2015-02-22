@@ -83,7 +83,7 @@ void Player::interact() {
             case up:
                 std::cout << "check interact up" << std::endl;
                 rect.x = playerPosition.x;
-                rect.y = playerPosition.y + 16;
+                rect.y = playerPosition.y - 16;
                 rect.h = 16;
                 rect.w = 64;
                 if (_isCollision(rect, unit)) {
@@ -94,7 +94,7 @@ void Player::interact() {
                 break;
             case right:
                 std::cout << "check interact right" << std::endl;
-                rect.x = playerPosition.x + 80;
+                rect.x = playerPosition.x + 64;
                 rect.y = playerPosition.y;
                 rect.h = 64;
                 rect.w = 64;
@@ -107,7 +107,7 @@ void Player::interact() {
             case down:
                 std::cout << "check interact down" << std::endl;
                 rect.x = playerPosition.x;
-                rect.y = playerPosition.y - 80;
+                rect.y = playerPosition.y + 64;
                 rect.h = 16;
                 rect.w = 64;
                 if (_isCollision(rect, unit)) {
