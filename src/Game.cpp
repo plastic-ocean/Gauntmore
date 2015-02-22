@@ -12,6 +12,7 @@
 #include "MazeGen.h"
 #include "Skeleton.h"
 #include "HealthBar.h"
+#include "GoldCount.h"
 
 typedef list<spUnit> Units;
 
@@ -58,10 +59,8 @@ void Game::init() {
 //    }
 
     // Create chest
-    Vector2 chestLocation = Vector2(((32 * 15) / 2) + 1, (32 * 15) / 2);
-
+    Vector2 chestLocation = Vector2(((64 * 15) / 2) + 1, (64 * 15) / 2);
     _chest = new Chest;
-
     _chest->init(chestLocation, this);
    
     //location for skeleton
@@ -75,6 +74,9 @@ void Game::init() {
     
     // Health bar
     _healthBar = new HealthBar(this);
+    
+    // Gold count
+    _goldCount = new GoldCount(this);
 }
 
 
@@ -170,8 +172,9 @@ void Game::switchRoom(int edge) {
     _player->addSprite();
     _player->setPosition(Vector2(playerCol, playerRow));
     
-    // Update health bar
+    // Update UI
     _healthBar->render();
+    _goldCount->render();
 }
 
 
@@ -228,6 +231,11 @@ spKeyboardInput Game::getMove() {
 
 void Game::updateHealth(float num) {
     _healthBar->updateHealth(num);
+}
+
+
+void Game::updateGoldCount(string count) {
+    _goldCount->updateGoldCount(count);
 }
 
 

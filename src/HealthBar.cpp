@@ -37,8 +37,8 @@ void HealthBar::render() {
  * 
  * @num value in range [0.0f, 1.0f]
  */
-void HealthBar::updateHealth(float num) {
-    _health -= num;
+void HealthBar::updateHealth(float damage) {
+    _health -= damage;
     _healthBar->setProgress(_health);
 //    _health->addTween(ProgressBar::TweenProgress(num), 1000);
 }

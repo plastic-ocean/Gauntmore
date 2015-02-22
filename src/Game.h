@@ -10,6 +10,7 @@ DECLARE_SMART(Player, spPlayer);
 DECLARE_SMART(Creature, spCreature);
 DECLARE_SMART(Skeleton, spSkeleton);
 DECLARE_SMART(HealthBar, spHealthBar);
+DECLARE_SMART(GoldCount, spGoldCount);
 DECLARE_SMART(Unit, spUnit);
 DECLARE_SMART(Chest, spChest);
 DECLARE_SMART(Gold, spGold);
@@ -80,6 +81,8 @@ public:
     spMap getMap();
     
     void updateHealth(float num);
+    
+    void updateGoldCount(string count);
 
 protected:
     const int tileSize = 64;
@@ -100,6 +103,7 @@ protected:
     spUnit _unit;
     
     spHealthBar _healthBar;
+    spGoldCount _goldCount;
     
     /**
      * Updates the player each frame. A virtual method of Actor it is being called each frame.

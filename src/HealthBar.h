@@ -13,11 +13,12 @@ class HealthBar : public Object {
 public:
     HealthBar(Game *game);
     void render();
-    void updateHealth(float num);
+    void updateHealth(float damage);
     
 private:
     Game *_game;
     spProgressBar _healthBar;
     spSprite _healthBorder;
     float _health;
+    
 };

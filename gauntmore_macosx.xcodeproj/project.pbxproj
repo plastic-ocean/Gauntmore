@@ -55,6 +55,8 @@
 		5359D5961A96C4CC00AE6365 /* sounds in Resources */ = {isa = PBXBuildFile; fileRef = 5359D5951A96C4CC00AE6365 /* sounds */; };
 		5359D5991A96C6E600AE6365 /* Gauntmore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5971A96C6E600AE6365 /* Gauntmore.cpp */; };
 		5359D5C21A97F77B00AE6365 /* HealthBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5C01A97F77B00AE6365 /* HealthBar.cpp */; };
+		5359D5C71A9807AC00AE6365 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 5359D5C61A9807AC00AE6365 /* fonts */; };
+		5359D5D11A993C4300AE6365 /* GoldCount.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5CF1A993C4300AE6365 /* GoldCount.cpp */; };
 		5365DD881A93BE28000A7893 /* MazeGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5365DD861A93BE28000A7893 /* MazeGen.cpp */; };
 		53BCF11B1A8ED99F00BD6288 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53BCF1171A8ED99F00BD6288 /* GameScene.cpp */; };
 		53BCF11C1A8ED99F00BD6288 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53BCF1191A8ED99F00BD6288 /* Scene.cpp */; };
@@ -219,6 +221,9 @@
 		5359D5981A96C6E600AE6365 /* Gauntmore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gauntmore.h; path = src/Gauntmore.h; sourceTree = "<group>"; };
 		5359D5C01A97F77B00AE6365 /* HealthBar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HealthBar.cpp; path = src/HealthBar.cpp; sourceTree = "<group>"; };
 		5359D5C11A97F77B00AE6365 /* HealthBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HealthBar.h; path = src/HealthBar.h; sourceTree = "<group>"; };
+		5359D5C61A9807AC00AE6365 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fonts; path = data/fonts; sourceTree = "<group>"; };
+		5359D5CF1A993C4300AE6365 /* GoldCount.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GoldCount.cpp; path = src/GoldCount.cpp; sourceTree = "<group>"; };
+		5359D5D01A993C4300AE6365 /* GoldCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoldCount.h; path = src/GoldCount.h; sourceTree = "<group>"; };
 		5365DD861A93BE28000A7893 /* MazeGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MazeGen.cpp; path = ../gauntmore/src/MazeGen.cpp; sourceTree = "<group>"; };
 		5365DD871A93BE28000A7893 /* MazeGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MazeGen.h; path = ../gauntmore/src/MazeGen.h; sourceTree = "<group>"; };
 		53BCF1171A8ED99F00BD6288 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameScene.cpp; path = src/GameScene.cpp; sourceTree = "<group>"; };
@@ -307,6 +312,7 @@
 		049B57381871FBE900EF3C66 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5359D5C61A9807AC00AE6365 /* fonts */,
 				5359D5951A96C4CC00AE6365 /* sounds */,
 				534097C51A896C19000434F6 /* images */,
 				534097C61A896C19000434F6 /* tmx */,
@@ -331,6 +337,8 @@
 				5359D5981A96C6E600AE6365 /* Gauntmore.h */,
 				5359D5641A96A90F00AE6365 /* Gold.cpp */,
 				5359D5651A96A90F00AE6365 /* Gold.h */,
+				5359D5CF1A993C4300AE6365 /* GoldCount.cpp */,
+				5359D5D01A993C4300AE6365 /* GoldCount.h */,
 				5359D5661A96A90F00AE6365 /* GreaterThan.cpp */,
 				5359D5671A96A90F00AE6365 /* GreaterThan.h */,
 				5359D5C01A97F77B00AE6365 /* HealthBar.cpp */,
@@ -543,6 +551,7 @@
 				534097CA1A896C19000434F6 /* xmls in Resources */,
 				5359D5961A96C4CC00AE6365 /* sounds in Resources */,
 				534097C91A896C19000434F6 /* tmx in Resources */,
+				5359D5C71A9807AC00AE6365 /* fonts in Resources */,
 				534097C81A896C19000434F6 /* images in Resources */,
 				049B574A1871FBE900EF3C66 /* Images.xcassets in Resources */,
 			);
@@ -560,6 +569,7 @@
 				5359D5771A96A90F00AE6365 /* Potion.cpp in Sources */,
 				530CFA961A906FED00B4CD51 /* TmxObject.cpp in Sources */,
 				5359D5741A96A90F00AE6365 /* GreaterThan.cpp in Sources */,
+				5359D5D11A993C4300AE6365 /* GoldCount.cpp in Sources */,
 				534097AD1A896C0A000434F6 /* main.cpp in Sources */,
 				530CFA911A906FED00B4CD51 /* TmxEllipse.cpp in Sources */,
 				5359D5731A96A90F00AE6365 /* Gold.cpp in Sources */,

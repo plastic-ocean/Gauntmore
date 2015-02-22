@@ -51,7 +51,7 @@ void Player::damage() {
 }
 
 
-void Player::interact(){
+void Player::interact() {
     /*
      A method that goes through every unit on the map and sees if the user
      is in interacting distance with it based off what direction they are facing. 
@@ -122,28 +122,28 @@ Vector2 Player::correctDirection(Vector2 position, Vector2 direction) {
 void Player::addSprite() { 
     _sprite = new Sprite;
 //    _sprite->setScale(1.25f);
-    _sprite->setResAnim(resources.getResAnim("adventurer_down"));
-    _sprite->attachTo(_view);
+    _sprite->setResAnim(resources.getResAnim("adventurer_move_down"));
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
+    _sprite->attachTo(_view);
 }
 
 
 
 void Player::_setFacing(Vector2 dir) {
     if ( dir.y > 0 ) {
-        _sprite->setResAnim(resources.getResAnim("adventurer_down"));
+        _sprite->setResAnim(resources.getResAnim("adventurer_move_down"));
         facing = down;
     }
     if ( dir.y < 0 ) {
-        _sprite->setResAnim(resources.getResAnim("adventurer_up"));
+        _sprite->setResAnim(resources.getResAnim("adventurer_move_up"));
         facing = up;
     }
     if ( dir.x < 0 ) {
-        _sprite->setResAnim(resources.getResAnim("adventurer_left"));
+        _sprite->setResAnim(resources.getResAnim("adventurer_move_left"));
         facing = left;
     }
     if ( dir.x > 0 ) {
-        _sprite->setResAnim(resources.getResAnim("adventurer_right"));
+        _sprite->setResAnim(resources.getResAnim("adventurer_move_right"));
         facing = right;
     }
 }
@@ -216,7 +216,6 @@ void Player::moveLeft() {
 void Player::_checkTween() {
     if (_hasTween) {
         _sprite->removeTween(_moveTween);
-//        _sprite->removeTween(_attackTween);
     }
     _hasTween = true;
 }

@@ -4,6 +4,7 @@ using namespace oxygine;
 
 extern Resources resources;
 extern Resources resSounds;
+extern Resources resFonts;
 
 /**
 * Loads the resources.
