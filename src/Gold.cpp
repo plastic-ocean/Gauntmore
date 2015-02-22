@@ -1,11 +1,3 @@
-//
-//  Gold.cpp
-//  gauntmore_macosx
-//
-//  Created by Steven Warren on 2/16/15.
-//  Copyright (c) 2015 oxygine. All rights reserved.
-//
-
 #include "Gold.h"
 #include "Game.h"
 #include "KeyboardInput.h"
@@ -20,11 +12,6 @@ Gold::Gold(){
     
 }
 
-void Gold::interact(){
-        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-    
-}
-
 void Gold::_init(){
     // Initialize the stats.
     
@@ -35,6 +22,13 @@ void Gold::_init(){
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
     
 }
+
+
+void Gold::_interact(){
+    _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
+    
+}
+
 
 void Gold::_update(const UpdateState &us){
     

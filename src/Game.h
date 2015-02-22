@@ -2,6 +2,7 @@
 #include "oxygine-framework.h"
 #include "tmx/Tmx.h"
 #include "tmx/tinyxml2.h"
+#include "Player.h"
 
 using namespace oxygine;
 using namespace std;
@@ -36,16 +37,9 @@ public:
      */
     void init();
     
-    /**
-     * Detects collisions between the Units and the walls.
-     *
-     * @x is the x coordinate to check.
-     * @y is the y coordinate to check.
-     * @h is the height coordinate to check.
-     * @w is the width coordinate to check.
-     * @return true is there is a collision and false if there is not
-     */
-    //bool detectCollision(int x, int y, int h, int w);
+    void movePlayer(int facing);
+    
+    void stopPlayer();
     
     /**
      * Gets the tile map.
@@ -83,7 +77,11 @@ public:
     
     void updateHealth(float num);
     
-    void updateGoldCount(string count);
+    void updateGoldCount(int count);
+    
+    bool isExit(Vector2 position);
+    
+    int getTileSize();
 
 protected:
     const int tileSize = 64;
@@ -101,7 +99,7 @@ protected:
     spChest _chest;
     spGold _gold;
     spPotion _potion;
-    spUnit _unit;
+//    spUnit _unit;
     
     spHealthBar _healthBar;
     spGoldCount _goldCount;

@@ -1,16 +1,22 @@
 #include <iostream>
 
+#include "tmx/Tmx.h"
+
 #include "Game.h"
+#include "res.h"
+#include "KeyboardInput.h"
+
 #include "Player.h"
+
 #include "Creature.h"
+#include "Skeleton.h"
+
 #include "Chest.h"
 #include "Gold.h"
 #include "Potion.h"
-#include "res.h"
-#include "KeyboardInput.h"
+
 #include "Map.h"
-#include "MazeGen.h"
-#include "Skeleton.h"
+
 #include "HealthBar.h"
 #include "GoldCount.h"
 
@@ -20,57 +26,43 @@ typedef list<spUnit> Units;
 /**
  * Constructor.
  */
-Game::Game() {}
-
-
-/**
- * Destructor.
- */
-Game::~Game() {}
-
-
-/**
- * Initializes the game. Creates the map, the player, the monsters, the static objects
- * and puts them in the game world.
- */
-void Game::init() {
-	// Set the size of the scene to the size of the display.
-	setSize(getStage()->getSize());
+Game::Game() {
+    // Set the size of the scene to the size of the display.
+    setSize(getStage()->getSize());
     
     // Size is the number of tiles (with 32 px tiles; 15 tiles = 480 px; 20 tiles = 640 px)
     int size = 13;
-
-	// Create map
+    
+    // Create map
     _map = new Map(size);
     _renderMap();
     _createTiles();
     
-	// Create player
-	_player = new Player(5, 1, 1);
-    _player->init(_getEntrance(), this);
-
-    _setUnits();
-    
-
-    // TODO Create enemy creatures (with random loot!)
-//    for (int i = 0; i < **large number**; ++i) {
-//        spCreature creature = new Creature;
-//        creature->init(Vector2(**calculate starting position**, this);
-//    }
-
     // Create chest
-    Vector2 chestLocation = Vector2((64 * 4), (64*6));
-
+    Vector2 chestLocation = Vector2((64 * 6), (64 * 6));
     _chest = new Chest;
     _chest->init(chestLocation, this);
-   
+    
+    // Create player
+    _player = new Player(20, 1, 1);
+    _player->init(_getEntrance(), this);
+    
+    _setUnits();
+    
+    
+    // TODO Create enemy creatures (with random loot!)
+    //    for (int i = 0; i < **large number**; ++i) {
+    //        spCreature creature = new Creature;
+    //        creature->init(Vector2(**calculate starting position**, this);
+    //    }
+    
     //location for skeleton
     
     // TODO Create enemy creatures (with random loot!)
-
+    
     // TODO Create chests (with even more random loot!)
-
-	// Handle input
+    
+    // Handle input
     _move = new KeyboardInput(this);
     
     // Health bar
@@ -82,15 +74,18 @@ void Game::init() {
 
 
 /**
- * Detects collisions between a sprite and the walls.
- *
- * @x is the x coordinate to check.
- * @y is the y coordinate to check.
- * @h is the height coordinate to check.
- * @w is the width coordinate to check.
- * @return true if there is a collision and false if there is not
+ * Destructor.
  */
-// method moved to CollisionDetector Class
+Game::~Game() {}
+
+
+void Game::movePlayer(int facing) {
+    getPlayer()->move(facing);
+}
+
+void Game::stopPlayer() {
+    getPlayer()->removeTween();
+}
 
 
 /**
@@ -198,8 +193,41 @@ void Game::updateHealth(float num) {
 }
 
 
-void Game::updateGoldCount(string count) {
+void Game::updateGoldCount(int count) {
     _goldCount->updateGoldCount(count);
+}
+
+
+bool Game::isExit(Vector2 position) {
+    bool isExit = false;
+    int size = getMap()->getRoom()->getSize() * tileSize;
+    
+    if (!(position.x > 0 && position.x < size - tileSize && position.y > 0 && position.y < size - tileSize)) {
+        isExit = true;
+        int edge = 0;
+        
+        if (position.y <= 0) {
+            // top
+            edge = 0;
+        } else if (position.x >= size - tileSize) {
+            // right
+            edge = 1;
+        } else if (position.y >= size - tileSize) {
+            // bottom
+            edge = 2;
+        } else if (position.x <= 0) {
+            // left
+            edge = 3;
+        }
+        
+        switchRoom(edge);
+    }
+    
+    return isExit;
+}
+
+int Game::getTileSize() {
+    return tileSize;
 }
 
 
@@ -306,3 +334,59 @@ Vector2 Game::_getEntrance() {
 void Game::_setUnits() {
     _units = static_cast<Units>(_map->getRoom()->getUnits());
 }
+
+
+
+
+/**
+ * Detects collisions between a sprite and the walls.
+ *
+ * @x is the x coordinate to check.
+ * @y is the y coordinate to check.
+ * @h is the height coordinate to check.
+ * @w is the width coordinate to check.
+ * @return true if there is a collision and false if there is not
+ */
+
+//// method moved to CollisionDetector Class
+//
+//bool Game::detectCollision(int x, int y, int h, int w) {
+//    bool isCollision = false;
+//    SDL_Rect spriteRect;
+//    spriteRect.x = x + 10;
+//    spriteRect.y = y + 12;
+//    spriteRect.h = h - 14;
+//    spriteRect.w = w - 24;
+//    const SDL_Rect *sprite = &spriteRect;
+//
+//    // Check for collision between the sprite and each tile
+//
+//    for (SDL_Rect tileRect : _tiles) {
+//        const SDL_Rect *tile = &tileRect;
+//        if (SDL_HasIntersection(sprite, tile)) {
+//            isCollision = true;
+//        }
+//    }
+//
+//    for (spUnit unit : _units){
+//        Vector2 unitPosition = unit->getPosition();
+//        SDL_Rect unitRect;
+//        // these are adjusted for a skeleton sprite, we will need to make different ones for
+//        // different sprites
+//        unitRect.x = unitPosition.x - 32;
+//        unitRect.y = unitPosition.y - 32;
+//        cout << "Unit Pos.x: " << unitPosition.x << endl;
+//        cout << "Unit Pos.y: " << unitPosition.y << endl;
+//        unitRect.h = 1;
+//        unitRect.w = 1;
+//
+//        const SDL_Rect *constUnitRect = &unitRect;
+//        // we also make sure that we are not collecting a collision with outself by doing a type check
+//        if (SDL_HasIntersection(sprite, constUnitRect) && typeid(*unit).name() != "6Player") {
+//            isCollision = true;
+//            std::cout << "collision with unit: " << typeid(*unit).name() << std::endl;
+//        }
+//    }
+//
+//    return isCollision;
+//}

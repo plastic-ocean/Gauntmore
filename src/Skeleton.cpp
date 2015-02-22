@@ -1,27 +1,11 @@
-//
-//  Skeleton.cpp
-//  gauntmore_macosx
-//
-//  Created by benjamin barnes on 2/14/15.
-//  Copyright (c) 2015 oxygine. All rights reserved.
-//
-
-#include "Skeleton.h"
-
-#include "Creature.h"
 #include "res.h"
+#include "Skeleton.h"
 
 
 /**
  * Constructor
  */
 Skeleton::Skeleton(){}
-
-
-/**
- * Reduces the creatures hit points.
- */
-
 
 
 /**
@@ -39,6 +23,11 @@ void Skeleton::_init() {
     _sprite->setResAnim(resources.getResAnim("human"));
     _sprite->attachTo(_view);
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
+}
+
+
+void Skeleton::_interact() {
+    
 }
 
 

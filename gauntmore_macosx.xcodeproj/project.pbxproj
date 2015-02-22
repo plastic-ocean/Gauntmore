@@ -15,52 +15,52 @@
 		0405A00118720D2200BA6557 /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04059FF11872031A00BA6557 /* libpng.a */; };
 		049B57321871FBE900EF3C66 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049B57311871FBE900EF3C66 /* Cocoa.framework */; };
 		049B574A1871FBE900EF3C66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049B57491871FBE900EF3C66 /* Images.xcassets */; };
-		530CFA6A1A90547100B4CD51 /* Room.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA681A90547100B4CD51 /* Room.cpp */; };
-		530CFA8F1A906FED00B4CD51 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA6E1A906FED00B4CD51 /* base64.cpp */; };
-		530CFA901A906FED00B4CD51 /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA701A906FED00B4CD51 /* tinyxml2.cpp */; };
-		530CFA911A906FED00B4CD51 /* TmxEllipse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA731A906FED00B4CD51 /* TmxEllipse.cpp */; };
-		530CFA921A906FED00B4CD51 /* TmxImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA751A906FED00B4CD51 /* TmxImage.cpp */; };
-		530CFA931A906FED00B4CD51 /* TmxImageLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA771A906FED00B4CD51 /* TmxImageLayer.cpp */; };
-		530CFA941A906FED00B4CD51 /* TmxLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA791A906FED00B4CD51 /* TmxLayer.cpp */; };
-		530CFA951A906FED00B4CD51 /* TmxMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA7B1A906FED00B4CD51 /* TmxMap.cpp */; };
-		530CFA961A906FED00B4CD51 /* TmxObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA7E1A906FED00B4CD51 /* TmxObject.cpp */; };
-		530CFA971A906FED00B4CD51 /* TmxObjectGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA801A906FED00B4CD51 /* TmxObjectGroup.cpp */; };
-		530CFA981A906FED00B4CD51 /* TmxPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA831A906FED00B4CD51 /* TmxPolygon.cpp */; };
-		530CFA991A906FED00B4CD51 /* TmxPolyline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA851A906FED00B4CD51 /* TmxPolyline.cpp */; };
-		530CFA9A1A906FED00B4CD51 /* TmxPropertySet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA871A906FED00B4CD51 /* TmxPropertySet.cpp */; };
-		530CFA9B1A906FED00B4CD51 /* TmxTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA891A906FED00B4CD51 /* TmxTile.cpp */; };
-		530CFA9C1A906FED00B4CD51 /* TmxTileset.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA8B1A906FED00B4CD51 /* TmxTileset.cpp */; };
-		530CFA9D1A906FED00B4CD51 /* TmxUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA8D1A906FED00B4CD51 /* TmxUtil.cpp */; };
-		534097AC1A896C0A000434F6 /* Creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5340977D1A896C0A000434F6 /* Creature.cpp */; };
+		5328789D1A99A6EB00228299 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5328787C1A99A6EB00228299 /* base64.cpp */; };
+		5328789E1A99A6EB00228299 /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5328787E1A99A6EB00228299 /* tinyxml2.cpp */; };
+		5328789F1A99A6EB00228299 /* TmxEllipse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 532878811A99A6EB00228299 /* TmxEllipse.cpp */; };
+		532878A01A99A6EB00228299 /* TmxImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 532878831A99A6EB00228299 /* TmxImage.cpp */; };
+		532878A11A99A6EB00228299 /* TmxImageLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 532878851A99A6EB00228299 /* TmxImageLayer.cpp */; };
+		532878A21A99A6EB00228299 /* TmxLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 532878871A99A6EB00228299 /* TmxLayer.cpp */; };
+		532878A31A99A6EB00228299 /* TmxMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 532878891A99A6EB00228299 /* TmxMap.cpp */; };
+		532878A41A99A6EB00228299 /* TmxObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5328788C1A99A6EB00228299 /* TmxObject.cpp */; };
+		532878A51A99A6EB00228299 /* TmxObjectGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5328788E1A99A6EB00228299 /* TmxObjectGroup.cpp */; };
+		532878A61A99A6EB00228299 /* TmxPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 532878911A99A6EB00228299 /* TmxPolygon.cpp */; };
+		532878A71A99A6EB00228299 /* TmxPolyline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 532878931A99A6EB00228299 /* TmxPolyline.cpp */; };
+		532878A81A99A6EB00228299 /* TmxPropertySet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 532878951A99A6EB00228299 /* TmxPropertySet.cpp */; };
+		532878A91A99A6EB00228299 /* TmxTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 532878971A99A6EB00228299 /* TmxTile.cpp */; };
+		532878AA1A99A6EB00228299 /* TmxTileset.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 532878991A99A6EB00228299 /* TmxTileset.cpp */; };
+		532878AB1A99A6EB00228299 /* TmxUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5328789B1A99A6EB00228299 /* TmxUtil.cpp */; };
 		534097AD1A896C0A000434F6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5340977F1A896C0A000434F6 /* main.cpp */; };
 		534097AE1A896C0A000434F6 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 534097801A896C0A000434F6 /* Game.cpp */; };
 		534097B01A896C0A000434F6 /* KeyboardInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 534097841A896C0A000434F6 /* KeyboardInput.cpp */; };
-		534097B11A896C0A000434F6 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 534097861A896C0A000434F6 /* Player.cpp */; };
 		534097B21A896C0A000434F6 /* res.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 534097881A896C0A000434F6 /* res.cpp */; };
-		534097C11A896C0A000434F6 /* Unit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 534097A91A896C0A000434F6 /* Unit.cpp */; };
 		534097C81A896C19000434F6 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 534097C51A896C19000434F6 /* images */; };
 		534097C91A896C19000434F6 /* tmx in Resources */ = {isa = PBXBuildFile; fileRef = 534097C61A896C19000434F6 /* tmx */; };
 		534097CA1A896C19000434F6 /* xmls in Resources */ = {isa = PBXBuildFile; fileRef = 534097C71A896C19000434F6 /* xmls */; };
-		534097D21A898396000434F6 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 534097D01A898396000434F6 /* Map.cpp */; };
-		5359D5721A96A90F00AE6365 /* Chest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5621A96A90F00AE6365 /* Chest.cpp */; };
-		5359D5731A96A90F00AE6365 /* Gold.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5641A96A90F00AE6365 /* Gold.cpp */; };
-		5359D5741A96A90F00AE6365 /* GreaterThan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5661A96A90F00AE6365 /* GreaterThan.cpp */; };
-		5359D5751A96A90F00AE6365 /* pathFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5681A96A90F00AE6365 /* pathFinder.cpp */; };
-		5359D5761A96A90F00AE6365 /* pathNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D56A1A96A90F00AE6365 /* pathNode.cpp */; };
-		5359D5771A96A90F00AE6365 /* Potion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D56C1A96A90F00AE6365 /* Potion.cpp */; };
-		5359D5781A96A90F00AE6365 /* Skeleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D56E1A96A90F00AE6365 /* Skeleton.cpp */; };
-		5359D5791A96A90F00AE6365 /* Thing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5701A96A90F00AE6365 /* Thing.cpp */; };
 		5359D58B1A96BB3B00AE6365 /* liboxygine-sound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5359D5871A96BAE000AE6365 /* liboxygine-sound.a */; };
 		5359D58D1A96BB4900AE6365 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5359D58C1A96BB4900AE6365 /* OpenAL.framework */; };
 		5359D5961A96C4CC00AE6365 /* sounds in Resources */ = {isa = PBXBuildFile; fileRef = 5359D5951A96C4CC00AE6365 /* sounds */; };
 		5359D5991A96C6E600AE6365 /* Gauntmore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5971A96C6E600AE6365 /* Gauntmore.cpp */; };
-		5359D5C21A97F77B00AE6365 /* HealthBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5C01A97F77B00AE6365 /* HealthBar.cpp */; };
 		5359D5C71A9807AC00AE6365 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 5359D5C61A9807AC00AE6365 /* fonts */; };
-		5359D5D11A993C4300AE6365 /* GoldCount.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5CF1A993C4300AE6365 /* GoldCount.cpp */; };
-		5365DD881A93BE28000A7893 /* MazeGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5365DD861A93BE28000A7893 /* MazeGen.cpp */; };
+		539584391A999D000080A994 /* CollisionDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584371A999D000080A994 /* CollisionDetector.cpp */; };
+		5395845B1A99A42D0080A994 /* Chest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5395843A1A99A42D0080A994 /* Chest.cpp */; };
+		5395845C1A99A42D0080A994 /* Creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5395843C1A99A42D0080A994 /* Creature.cpp */; };
+		5395845D1A99A42D0080A994 /* Gold.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5395843E1A99A42D0080A994 /* Gold.cpp */; };
+		5395845E1A99A42D0080A994 /* GoldCount.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584401A99A42D0080A994 /* GoldCount.cpp */; };
+		5395845F1A99A42D0080A994 /* GreaterThan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584421A99A42D0080A994 /* GreaterThan.cpp */; };
+		539584601A99A42D0080A994 /* HealthBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584441A99A42D0080A994 /* HealthBar.cpp */; };
+		539584611A99A42D0080A994 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584461A99A42D0080A994 /* Map.cpp */; };
+		539584621A99A42D0080A994 /* MazeGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584481A99A42D0080A994 /* MazeGen.cpp */; };
+		539584631A99A42D0080A994 /* PathFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5395844A1A99A42D0080A994 /* PathFinder.cpp */; };
+		539584641A99A42D0080A994 /* PathNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5395844C1A99A42D0080A994 /* PathNode.cpp */; };
+		539584651A99A42D0080A994 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5395844E1A99A42D0080A994 /* Player.cpp */; };
+		539584661A99A42D0080A994 /* Potion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584501A99A42D0080A994 /* Potion.cpp */; };
+		539584671A99A42D0080A994 /* Room.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584521A99A42D0080A994 /* Room.cpp */; };
+		539584681A99A42D0080A994 /* Skeleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584541A99A42D0080A994 /* Skeleton.cpp */; };
+		539584691A99A42D0080A994 /* Thing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584561A99A42D0080A994 /* Thing.cpp */; };
+		5395846B1A99A42D0080A994 /* Unit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584591A99A42D0080A994 /* Unit.cpp */; };
 		53BCF11B1A8ED99F00BD6288 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53BCF1171A8ED99F00BD6288 /* GameScene.cpp */; };
 		53BCF11C1A8ED99F00BD6288 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53BCF1191A8ED99F00BD6288 /* Scene.cpp */; };
-		71910A141A9943CF002BAA60 /* CollisionDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 71910A121A9943CF002BAA60 /* CollisionDetector.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,93 +146,93 @@
 		049B57501871FBE900EF3C66 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		04A57D761871FFEB0068B1E5 /* oxygine_macosx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = oxygine_macosx.xcodeproj; path = "oxygine-framework//oxygine/SDL/macosx/oxygine_macosx/oxygine_macosx.xcodeproj"; sourceTree = "<group>"; };
 		04A57D7E1872012A0068B1E5 /* SDL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL.xcodeproj; path = ".//SDL/Xcode/SDL/SDL.xcodeproj"; sourceTree = "<group>"; };
-		530CFA681A90547100B4CD51 /* Room.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Room.cpp; path = src/Room.cpp; sourceTree = "<group>"; };
-		530CFA691A90547100B4CD51 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Room.h; path = src/Room.h; sourceTree = "<group>"; };
-		530CFA6E1A906FED00B4CD51 /* base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = base64.cpp; path = src/tmx/base64.cpp; sourceTree = "<group>"; };
-		530CFA6F1A906FED00B4CD51 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = base64.h; path = src/tmx/base64.h; sourceTree = "<group>"; };
-		530CFA701A906FED00B4CD51 /* tinyxml2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxml2.cpp; path = src/tmx/tinyxml2.cpp; sourceTree = "<group>"; };
-		530CFA711A906FED00B4CD51 /* tinyxml2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tinyxml2.h; path = src/tmx/tinyxml2.h; sourceTree = "<group>"; };
-		530CFA721A906FED00B4CD51 /* Tmx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tmx.h; path = src/tmx/Tmx.h; sourceTree = "<group>"; };
-		530CFA731A906FED00B4CD51 /* TmxEllipse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TmxEllipse.cpp; path = src/tmx/TmxEllipse.cpp; sourceTree = "<group>"; };
-		530CFA741A906FED00B4CD51 /* TmxEllipse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TmxEllipse.h; path = src/tmx/TmxEllipse.h; sourceTree = "<group>"; };
-		530CFA751A906FED00B4CD51 /* TmxImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TmxImage.cpp; path = src/tmx/TmxImage.cpp; sourceTree = "<group>"; };
-		530CFA761A906FED00B4CD51 /* TmxImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TmxImage.h; path = src/tmx/TmxImage.h; sourceTree = "<group>"; };
-		530CFA771A906FED00B4CD51 /* TmxImageLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TmxImageLayer.cpp; path = src/tmx/TmxImageLayer.cpp; sourceTree = "<group>"; };
-		530CFA781A906FED00B4CD51 /* TmxImageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TmxImageLayer.h; path = src/tmx/TmxImageLayer.h; sourceTree = "<group>"; };
-		530CFA791A906FED00B4CD51 /* TmxLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TmxLayer.cpp; path = src/tmx/TmxLayer.cpp; sourceTree = "<group>"; };
-		530CFA7A1A906FED00B4CD51 /* TmxLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TmxLayer.h; path = src/tmx/TmxLayer.h; sourceTree = "<group>"; };
-		530CFA7B1A906FED00B4CD51 /* TmxMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TmxMap.cpp; path = src/tmx/TmxMap.cpp; sourceTree = "<group>"; };
-		530CFA7C1A906FED00B4CD51 /* TmxMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TmxMap.h; path = src/tmx/TmxMap.h; sourceTree = "<group>"; };
-		530CFA7D1A906FED00B4CD51 /* TmxMapTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TmxMapTile.h; path = src/tmx/TmxMapTile.h; sourceTree = "<group>"; };
-		530CFA7E1A906FED00B4CD51 /* TmxObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TmxObject.cpp; path = src/tmx/TmxObject.cpp; sourceTree = "<group>"; };
-		530CFA7F1A906FED00B4CD51 /* TmxObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TmxObject.h; path = src/tmx/TmxObject.h; sourceTree = "<group>"; };
-		530CFA801A906FED00B4CD51 /* TmxObjectGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TmxObjectGroup.cpp; path = src/tmx/TmxObjectGroup.cpp; sourceTree = "<group>"; };
-		530CFA811A906FED00B4CD51 /* TmxObjectGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TmxObjectGroup.h; path = src/tmx/TmxObjectGroup.h; sourceTree = "<group>"; };
-		530CFA821A906FED00B4CD51 /* TmxPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TmxPoint.h; path = src/tmx/TmxPoint.h; sourceTree = "<group>"; };
-		530CFA831A906FED00B4CD51 /* TmxPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TmxPolygon.cpp; path = src/tmx/TmxPolygon.cpp; sourceTree = "<group>"; };
-		530CFA841A906FED00B4CD51 /* TmxPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TmxPolygon.h; path = src/tmx/TmxPolygon.h; sourceTree = "<group>"; };
-		530CFA851A906FED00B4CD51 /* TmxPolyline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TmxPolyline.cpp; path = src/tmx/TmxPolyline.cpp; sourceTree = "<group>"; };
-		530CFA861A906FED00B4CD51 /* TmxPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TmxPolyline.h; path = src/tmx/TmxPolyline.h; sourceTree = "<group>"; };
-		530CFA871A906FED00B4CD51 /* TmxPropertySet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TmxPropertySet.cpp; path = src/tmx/TmxPropertySet.cpp; sourceTree = "<group>"; };
-		530CFA881A906FED00B4CD51 /* TmxPropertySet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TmxPropertySet.h; path = src/tmx/TmxPropertySet.h; sourceTree = "<group>"; };
-		530CFA891A906FED00B4CD51 /* TmxTile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TmxTile.cpp; path = src/tmx/TmxTile.cpp; sourceTree = "<group>"; };
-		530CFA8A1A906FED00B4CD51 /* TmxTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TmxTile.h; path = src/tmx/TmxTile.h; sourceTree = "<group>"; };
-		530CFA8B1A906FED00B4CD51 /* TmxTileset.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TmxTileset.cpp; path = src/tmx/TmxTileset.cpp; sourceTree = "<group>"; };
-		530CFA8C1A906FED00B4CD51 /* TmxTileset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TmxTileset.h; path = src/tmx/TmxTileset.h; sourceTree = "<group>"; };
-		530CFA8D1A906FED00B4CD51 /* TmxUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TmxUtil.cpp; path = src/tmx/TmxUtil.cpp; sourceTree = "<group>"; };
-		530CFA8E1A906FED00B4CD51 /* TmxUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TmxUtil.h; path = src/tmx/TmxUtil.h; sourceTree = "<group>"; };
-		5340977D1A896C0A000434F6 /* Creature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Creature.cpp; path = src/Creature.cpp; sourceTree = "<group>"; };
-		5340977E1A896C0A000434F6 /* Creature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Creature.h; path = src/Creature.h; sourceTree = "<group>"; };
+		5328787C1A99A6EB00228299 /* base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = base64.cpp; sourceTree = "<group>"; };
+		5328787D1A99A6EB00228299 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		5328787E1A99A6EB00228299 /* tinyxml2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml2.cpp; sourceTree = "<group>"; };
+		5328787F1A99A6EB00228299 /* tinyxml2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml2.h; sourceTree = "<group>"; };
+		532878801A99A6EB00228299 /* Tmx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tmx.h; sourceTree = "<group>"; };
+		532878811A99A6EB00228299 /* TmxEllipse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TmxEllipse.cpp; sourceTree = "<group>"; };
+		532878821A99A6EB00228299 /* TmxEllipse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmxEllipse.h; sourceTree = "<group>"; };
+		532878831A99A6EB00228299 /* TmxImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TmxImage.cpp; sourceTree = "<group>"; };
+		532878841A99A6EB00228299 /* TmxImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmxImage.h; sourceTree = "<group>"; };
+		532878851A99A6EB00228299 /* TmxImageLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TmxImageLayer.cpp; sourceTree = "<group>"; };
+		532878861A99A6EB00228299 /* TmxImageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmxImageLayer.h; sourceTree = "<group>"; };
+		532878871A99A6EB00228299 /* TmxLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TmxLayer.cpp; sourceTree = "<group>"; };
+		532878881A99A6EB00228299 /* TmxLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmxLayer.h; sourceTree = "<group>"; };
+		532878891A99A6EB00228299 /* TmxMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TmxMap.cpp; sourceTree = "<group>"; };
+		5328788A1A99A6EB00228299 /* TmxMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmxMap.h; sourceTree = "<group>"; };
+		5328788B1A99A6EB00228299 /* TmxMapTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmxMapTile.h; sourceTree = "<group>"; };
+		5328788C1A99A6EB00228299 /* TmxObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TmxObject.cpp; sourceTree = "<group>"; };
+		5328788D1A99A6EB00228299 /* TmxObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmxObject.h; sourceTree = "<group>"; };
+		5328788E1A99A6EB00228299 /* TmxObjectGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TmxObjectGroup.cpp; sourceTree = "<group>"; };
+		5328788F1A99A6EB00228299 /* TmxObjectGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmxObjectGroup.h; sourceTree = "<group>"; };
+		532878901A99A6EB00228299 /* TmxPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmxPoint.h; sourceTree = "<group>"; };
+		532878911A99A6EB00228299 /* TmxPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TmxPolygon.cpp; sourceTree = "<group>"; };
+		532878921A99A6EB00228299 /* TmxPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmxPolygon.h; sourceTree = "<group>"; };
+		532878931A99A6EB00228299 /* TmxPolyline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TmxPolyline.cpp; sourceTree = "<group>"; };
+		532878941A99A6EB00228299 /* TmxPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmxPolyline.h; sourceTree = "<group>"; };
+		532878951A99A6EB00228299 /* TmxPropertySet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TmxPropertySet.cpp; sourceTree = "<group>"; };
+		532878961A99A6EB00228299 /* TmxPropertySet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmxPropertySet.h; sourceTree = "<group>"; };
+		532878971A99A6EB00228299 /* TmxTile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TmxTile.cpp; sourceTree = "<group>"; };
+		532878981A99A6EB00228299 /* TmxTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmxTile.h; sourceTree = "<group>"; };
+		532878991A99A6EB00228299 /* TmxTileset.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TmxTileset.cpp; sourceTree = "<group>"; };
+		5328789A1A99A6EB00228299 /* TmxTileset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmxTileset.h; sourceTree = "<group>"; };
+		5328789B1A99A6EB00228299 /* TmxUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TmxUtil.cpp; sourceTree = "<group>"; };
+		5328789C1A99A6EB00228299 /* TmxUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmxUtil.h; sourceTree = "<group>"; };
 		5340977F1A896C0A000434F6 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = "<group>"; };
 		534097801A896C0A000434F6 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Game.cpp; path = src/Game.cpp; sourceTree = "<group>"; };
 		534097811A896C0A000434F6 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = src/Game.h; sourceTree = "<group>"; };
 		534097841A896C0A000434F6 /* KeyboardInput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = KeyboardInput.cpp; path = src/KeyboardInput.cpp; sourceTree = "<group>"; };
 		534097851A896C0A000434F6 /* KeyboardInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyboardInput.h; path = src/KeyboardInput.h; sourceTree = "<group>"; };
-		534097861A896C0A000434F6 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = src/Player.cpp; sourceTree = "<group>"; };
-		534097871A896C0A000434F6 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = src/Player.h; sourceTree = "<group>"; };
 		534097881A896C0A000434F6 /* res.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = res.cpp; path = src/res.cpp; sourceTree = "<group>"; };
 		534097891A896C0A000434F6 /* res.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = res.h; path = src/res.h; sourceTree = "<group>"; };
-		534097A91A896C0A000434F6 /* Unit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Unit.cpp; path = src/Unit.cpp; sourceTree = "<group>"; };
-		534097AA1A896C0A000434F6 /* Unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Unit.h; path = src/Unit.h; sourceTree = "<group>"; };
 		534097C51A896C19000434F6 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = data/images; sourceTree = "<group>"; };
 		534097C61A896C19000434F6 /* tmx */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tmx; path = data/tmx; sourceTree = "<group>"; };
 		534097C71A896C19000434F6 /* xmls */ = {isa = PBXFileReference; lastKnownFileType = folder; name = xmls; path = data/xmls; sourceTree = "<group>"; };
-		534097D01A898396000434F6 /* Map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Map.cpp; path = src/Map.cpp; sourceTree = "<group>"; };
-		534097D11A898396000434F6 /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Map.h; path = src/Map.h; sourceTree = "<group>"; };
-		5359D5621A96A90F00AE6365 /* Chest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Chest.cpp; path = src/Chest.cpp; sourceTree = "<group>"; };
-		5359D5631A96A90F00AE6365 /* Chest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Chest.h; path = src/Chest.h; sourceTree = "<group>"; };
-		5359D5641A96A90F00AE6365 /* Gold.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Gold.cpp; path = src/Gold.cpp; sourceTree = "<group>"; };
-		5359D5651A96A90F00AE6365 /* Gold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gold.h; path = src/Gold.h; sourceTree = "<group>"; };
-		5359D5661A96A90F00AE6365 /* GreaterThan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GreaterThan.cpp; path = src/GreaterThan.cpp; sourceTree = "<group>"; };
-		5359D5671A96A90F00AE6365 /* GreaterThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GreaterThan.h; path = src/GreaterThan.h; sourceTree = "<group>"; };
-		5359D5681A96A90F00AE6365 /* pathFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pathFinder.cpp; path = src/pathFinder.cpp; sourceTree = "<group>"; };
-		5359D5691A96A90F00AE6365 /* pathFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pathFinder.h; path = src/pathFinder.h; sourceTree = "<group>"; };
-		5359D56A1A96A90F00AE6365 /* pathNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pathNode.cpp; path = src/pathNode.cpp; sourceTree = "<group>"; };
-		5359D56B1A96A90F00AE6365 /* pathNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pathNode.h; path = src/pathNode.h; sourceTree = "<group>"; };
-		5359D56C1A96A90F00AE6365 /* Potion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Potion.cpp; path = src/Potion.cpp; sourceTree = "<group>"; };
-		5359D56D1A96A90F00AE6365 /* Potion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Potion.h; path = src/Potion.h; sourceTree = "<group>"; };
-		5359D56E1A96A90F00AE6365 /* Skeleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Skeleton.cpp; path = src/Skeleton.cpp; sourceTree = "<group>"; };
-		5359D56F1A96A90F00AE6365 /* Skeleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Skeleton.h; path = src/Skeleton.h; sourceTree = "<group>"; };
-		5359D5701A96A90F00AE6365 /* Thing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Thing.cpp; path = src/Thing.cpp; sourceTree = "<group>"; };
-		5359D5711A96A90F00AE6365 /* Thing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Thing.h; path = src/Thing.h; sourceTree = "<group>"; };
 		5359D5821A96BAE000AE6365 /* oxygine-sound.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "oxygine-sound.xcodeproj"; path = "oxygine-sound/proj.macosx/oxygine-sound.xcodeproj"; sourceTree = "<group>"; };
 		5359D58C1A96BB4900AE6365 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		5359D5951A96C4CC00AE6365 /* sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = sounds; path = data/sounds; sourceTree = "<group>"; };
 		5359D5971A96C6E600AE6365 /* Gauntmore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Gauntmore.cpp; path = src/Gauntmore.cpp; sourceTree = "<group>"; };
 		5359D5981A96C6E600AE6365 /* Gauntmore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gauntmore.h; path = src/Gauntmore.h; sourceTree = "<group>"; };
-		5359D5C01A97F77B00AE6365 /* HealthBar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HealthBar.cpp; path = src/HealthBar.cpp; sourceTree = "<group>"; };
-		5359D5C11A97F77B00AE6365 /* HealthBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HealthBar.h; path = src/HealthBar.h; sourceTree = "<group>"; };
 		5359D5C61A9807AC00AE6365 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fonts; path = data/fonts; sourceTree = "<group>"; };
-		5359D5CF1A993C4300AE6365 /* GoldCount.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GoldCount.cpp; path = src/GoldCount.cpp; sourceTree = "<group>"; };
-		5359D5D01A993C4300AE6365 /* GoldCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoldCount.h; path = src/GoldCount.h; sourceTree = "<group>"; };
-		5365DD861A93BE28000A7893 /* MazeGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MazeGen.cpp; path = ../gauntmore/src/MazeGen.cpp; sourceTree = "<group>"; };
-		5365DD871A93BE28000A7893 /* MazeGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MazeGen.h; path = ../gauntmore/src/MazeGen.h; sourceTree = "<group>"; };
+		539584371A999D000080A994 /* CollisionDetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CollisionDetector.cpp; path = src/CollisionDetector.cpp; sourceTree = "<group>"; };
+		539584381A999D000080A994 /* CollisionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollisionDetector.h; path = src/CollisionDetector.h; sourceTree = "<group>"; };
+		5395843A1A99A42D0080A994 /* Chest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Chest.cpp; path = src/Chest.cpp; sourceTree = "<group>"; };
+		5395843B1A99A42D0080A994 /* Chest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Chest.h; path = src/Chest.h; sourceTree = "<group>"; };
+		5395843C1A99A42D0080A994 /* Creature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Creature.cpp; path = src/Creature.cpp; sourceTree = "<group>"; };
+		5395843D1A99A42D0080A994 /* Creature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Creature.h; path = src/Creature.h; sourceTree = "<group>"; };
+		5395843E1A99A42D0080A994 /* Gold.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Gold.cpp; path = src/Gold.cpp; sourceTree = "<group>"; };
+		5395843F1A99A42D0080A994 /* Gold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gold.h; path = src/Gold.h; sourceTree = "<group>"; };
+		539584401A99A42D0080A994 /* GoldCount.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GoldCount.cpp; path = src/GoldCount.cpp; sourceTree = "<group>"; };
+		539584411A99A42D0080A994 /* GoldCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoldCount.h; path = src/GoldCount.h; sourceTree = "<group>"; };
+		539584421A99A42D0080A994 /* GreaterThan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GreaterThan.cpp; path = src/GreaterThan.cpp; sourceTree = "<group>"; };
+		539584431A99A42D0080A994 /* GreaterThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GreaterThan.h; path = src/GreaterThan.h; sourceTree = "<group>"; };
+		539584441A99A42D0080A994 /* HealthBar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HealthBar.cpp; path = src/HealthBar.cpp; sourceTree = "<group>"; };
+		539584451A99A42D0080A994 /* HealthBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HealthBar.h; path = src/HealthBar.h; sourceTree = "<group>"; };
+		539584461A99A42D0080A994 /* Map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Map.cpp; path = src/Map.cpp; sourceTree = "<group>"; };
+		539584471A99A42D0080A994 /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Map.h; path = src/Map.h; sourceTree = "<group>"; };
+		539584481A99A42D0080A994 /* MazeGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MazeGen.cpp; path = src/MazeGen.cpp; sourceTree = "<group>"; };
+		539584491A99A42D0080A994 /* MazeGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MazeGen.h; path = src/MazeGen.h; sourceTree = "<group>"; };
+		5395844A1A99A42D0080A994 /* PathFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PathFinder.cpp; path = src/PathFinder.cpp; sourceTree = "<group>"; };
+		5395844B1A99A42D0080A994 /* PathFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PathFinder.h; path = src/PathFinder.h; sourceTree = "<group>"; };
+		5395844C1A99A42D0080A994 /* PathNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PathNode.cpp; path = src/PathNode.cpp; sourceTree = "<group>"; };
+		5395844D1A99A42D0080A994 /* PathNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PathNode.h; path = src/PathNode.h; sourceTree = "<group>"; };
+		5395844E1A99A42D0080A994 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = src/Player.cpp; sourceTree = "<group>"; };
+		5395844F1A99A42D0080A994 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = src/Player.h; sourceTree = "<group>"; };
+		539584501A99A42D0080A994 /* Potion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Potion.cpp; path = src/Potion.cpp; sourceTree = "<group>"; };
+		539584511A99A42D0080A994 /* Potion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Potion.h; path = src/Potion.h; sourceTree = "<group>"; };
+		539584521A99A42D0080A994 /* Room.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Room.cpp; path = src/Room.cpp; sourceTree = "<group>"; };
+		539584531A99A42D0080A994 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Room.h; path = src/Room.h; sourceTree = "<group>"; };
+		539584541A99A42D0080A994 /* Skeleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Skeleton.cpp; path = src/Skeleton.cpp; sourceTree = "<group>"; };
+		539584551A99A42D0080A994 /* Skeleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Skeleton.h; path = src/Skeleton.h; sourceTree = "<group>"; };
+		539584561A99A42D0080A994 /* Thing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Thing.cpp; path = src/Thing.cpp; sourceTree = "<group>"; };
+		539584571A99A42D0080A994 /* Thing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Thing.h; path = src/Thing.h; sourceTree = "<group>"; };
+		539584591A99A42D0080A994 /* Unit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Unit.cpp; path = src/Unit.cpp; sourceTree = "<group>"; };
+		5395845A1A99A42D0080A994 /* Unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Unit.h; path = src/Unit.h; sourceTree = "<group>"; };
 		53BCF1171A8ED99F00BD6288 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameScene.cpp; path = src/GameScene.cpp; sourceTree = "<group>"; };
 		53BCF1181A8ED99F00BD6288 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = src/GameScene.h; sourceTree = "<group>"; };
 		53BCF1191A8ED99F00BD6288 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Scene.cpp; path = src/Scene.cpp; sourceTree = "<group>"; };
 		53BCF11A1A8ED99F00BD6288 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Scene.h; path = src/Scene.h; sourceTree = "<group>"; };
-		71910A121A9943CF002BAA60 /* CollisionDetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CollisionDetector.cpp; sourceTree = "<group>"; };
-		71910A131A9943CF002BAA60 /* CollisionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionDetector.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,54 +328,54 @@
 		04A57D391871FF8B0068B1E5 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				5359D5621A96A90F00AE6365 /* Chest.cpp */,
-				5359D5631A96A90F00AE6365 /* Chest.h */,
-				71910A121A9943CF002BAA60 /* CollisionDetector.cpp */,
-				71910A131A9943CF002BAA60 /* CollisionDetector.h */,
-				5340977D1A896C0A000434F6 /* Creature.cpp */,
-				5340977E1A896C0A000434F6 /* Creature.h */,
+				5395843A1A99A42D0080A994 /* Chest.cpp */,
+				5395843B1A99A42D0080A994 /* Chest.h */,
+				539584371A999D000080A994 /* CollisionDetector.cpp */,
+				539584381A999D000080A994 /* CollisionDetector.h */,
+				5395843C1A99A42D0080A994 /* Creature.cpp */,
+				5395843D1A99A42D0080A994 /* Creature.h */,
 				534097801A896C0A000434F6 /* Game.cpp */,
 				534097811A896C0A000434F6 /* Game.h */,
 				53BCF1171A8ED99F00BD6288 /* GameScene.cpp */,
 				53BCF1181A8ED99F00BD6288 /* GameScene.h */,
 				5359D5971A96C6E600AE6365 /* Gauntmore.cpp */,
 				5359D5981A96C6E600AE6365 /* Gauntmore.h */,
-				5359D5641A96A90F00AE6365 /* Gold.cpp */,
-				5359D5651A96A90F00AE6365 /* Gold.h */,
-				5359D5CF1A993C4300AE6365 /* GoldCount.cpp */,
-				5359D5D01A993C4300AE6365 /* GoldCount.h */,
-				5359D5661A96A90F00AE6365 /* GreaterThan.cpp */,
-				5359D5671A96A90F00AE6365 /* GreaterThan.h */,
-				5359D5C01A97F77B00AE6365 /* HealthBar.cpp */,
-				5359D5C11A97F77B00AE6365 /* HealthBar.h */,
+				5395843E1A99A42D0080A994 /* Gold.cpp */,
+				5395843F1A99A42D0080A994 /* Gold.h */,
+				539584401A99A42D0080A994 /* GoldCount.cpp */,
+				539584411A99A42D0080A994 /* GoldCount.h */,
+				539584421A99A42D0080A994 /* GreaterThan.cpp */,
+				539584431A99A42D0080A994 /* GreaterThan.h */,
+				539584441A99A42D0080A994 /* HealthBar.cpp */,
+				539584451A99A42D0080A994 /* HealthBar.h */,
 				534097841A896C0A000434F6 /* KeyboardInput.cpp */,
 				534097851A896C0A000434F6 /* KeyboardInput.h */,
 				5340977F1A896C0A000434F6 /* main.cpp */,
-				534097D01A898396000434F6 /* Map.cpp */,
-				534097D11A898396000434F6 /* Map.h */,
-				5365DD861A93BE28000A7893 /* MazeGen.cpp */,
-				5365DD871A93BE28000A7893 /* MazeGen.h */,
-				5359D5681A96A90F00AE6365 /* pathFinder.cpp */,
-				5359D5691A96A90F00AE6365 /* pathFinder.h */,
-				5359D56A1A96A90F00AE6365 /* pathNode.cpp */,
-				5359D56B1A96A90F00AE6365 /* pathNode.h */,
-				534097861A896C0A000434F6 /* Player.cpp */,
-				534097871A896C0A000434F6 /* Player.h */,
-				5359D56C1A96A90F00AE6365 /* Potion.cpp */,
-				5359D56D1A96A90F00AE6365 /* Potion.h */,
+				539584461A99A42D0080A994 /* Map.cpp */,
+				539584471A99A42D0080A994 /* Map.h */,
+				539584481A99A42D0080A994 /* MazeGen.cpp */,
+				539584491A99A42D0080A994 /* MazeGen.h */,
+				5395844A1A99A42D0080A994 /* PathFinder.cpp */,
+				5395844B1A99A42D0080A994 /* PathFinder.h */,
+				5395844C1A99A42D0080A994 /* PathNode.cpp */,
+				5395844D1A99A42D0080A994 /* PathNode.h */,
+				5395844E1A99A42D0080A994 /* Player.cpp */,
+				5395844F1A99A42D0080A994 /* Player.h */,
+				539584501A99A42D0080A994 /* Potion.cpp */,
+				539584511A99A42D0080A994 /* Potion.h */,
 				534097881A896C0A000434F6 /* res.cpp */,
 				534097891A896C0A000434F6 /* res.h */,
-				530CFA681A90547100B4CD51 /* Room.cpp */,
-				530CFA691A90547100B4CD51 /* Room.h */,
+				539584521A99A42D0080A994 /* Room.cpp */,
+				539584531A99A42D0080A994 /* Room.h */,
 				53BCF1191A8ED99F00BD6288 /* Scene.cpp */,
 				53BCF11A1A8ED99F00BD6288 /* Scene.h */,
-				5359D56E1A96A90F00AE6365 /* Skeleton.cpp */,
-				5359D56F1A96A90F00AE6365 /* Skeleton.h */,
-				5359D5701A96A90F00AE6365 /* Thing.cpp */,
-				5359D5711A96A90F00AE6365 /* Thing.h */,
-				534097CB1A896C3F000434F6 /* tmx */,
-				534097A91A896C0A000434F6 /* Unit.cpp */,
-				534097AA1A896C0A000434F6 /* Unit.h */,
+				539584541A99A42D0080A994 /* Skeleton.cpp */,
+				539584551A99A42D0080A994 /* Skeleton.h */,
+				539584561A99A42D0080A994 /* Thing.cpp */,
+				539584571A99A42D0080A994 /* Thing.h */,
+				5328787B1A99A6EB00228299 /* tmx */,
+				539584591A99A42D0080A994 /* Unit.cpp */,
+				5395845A1A99A42D0080A994 /* Unit.h */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -391,44 +391,45 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		534097CB1A896C3F000434F6 /* tmx */ = {
+		5328787B1A99A6EB00228299 /* tmx */ = {
 			isa = PBXGroup;
 			children = (
-				530CFA6E1A906FED00B4CD51 /* base64.cpp */,
-				530CFA6F1A906FED00B4CD51 /* base64.h */,
-				530CFA701A906FED00B4CD51 /* tinyxml2.cpp */,
-				530CFA711A906FED00B4CD51 /* tinyxml2.h */,
-				530CFA721A906FED00B4CD51 /* Tmx.h */,
-				530CFA731A906FED00B4CD51 /* TmxEllipse.cpp */,
-				530CFA741A906FED00B4CD51 /* TmxEllipse.h */,
-				530CFA751A906FED00B4CD51 /* TmxImage.cpp */,
-				530CFA761A906FED00B4CD51 /* TmxImage.h */,
-				530CFA771A906FED00B4CD51 /* TmxImageLayer.cpp */,
-				530CFA781A906FED00B4CD51 /* TmxImageLayer.h */,
-				530CFA791A906FED00B4CD51 /* TmxLayer.cpp */,
-				530CFA7A1A906FED00B4CD51 /* TmxLayer.h */,
-				530CFA7B1A906FED00B4CD51 /* TmxMap.cpp */,
-				530CFA7C1A906FED00B4CD51 /* TmxMap.h */,
-				530CFA7D1A906FED00B4CD51 /* TmxMapTile.h */,
-				530CFA7E1A906FED00B4CD51 /* TmxObject.cpp */,
-				530CFA7F1A906FED00B4CD51 /* TmxObject.h */,
-				530CFA801A906FED00B4CD51 /* TmxObjectGroup.cpp */,
-				530CFA811A906FED00B4CD51 /* TmxObjectGroup.h */,
-				530CFA821A906FED00B4CD51 /* TmxPoint.h */,
-				530CFA831A906FED00B4CD51 /* TmxPolygon.cpp */,
-				530CFA841A906FED00B4CD51 /* TmxPolygon.h */,
-				530CFA851A906FED00B4CD51 /* TmxPolyline.cpp */,
-				530CFA861A906FED00B4CD51 /* TmxPolyline.h */,
-				530CFA871A906FED00B4CD51 /* TmxPropertySet.cpp */,
-				530CFA881A906FED00B4CD51 /* TmxPropertySet.h */,
-				530CFA891A906FED00B4CD51 /* TmxTile.cpp */,
-				530CFA8A1A906FED00B4CD51 /* TmxTile.h */,
-				530CFA8B1A906FED00B4CD51 /* TmxTileset.cpp */,
-				530CFA8C1A906FED00B4CD51 /* TmxTileset.h */,
-				530CFA8D1A906FED00B4CD51 /* TmxUtil.cpp */,
-				530CFA8E1A906FED00B4CD51 /* TmxUtil.h */,
+				5328787C1A99A6EB00228299 /* base64.cpp */,
+				5328787D1A99A6EB00228299 /* base64.h */,
+				5328787E1A99A6EB00228299 /* tinyxml2.cpp */,
+				5328787F1A99A6EB00228299 /* tinyxml2.h */,
+				532878801A99A6EB00228299 /* Tmx.h */,
+				532878811A99A6EB00228299 /* TmxEllipse.cpp */,
+				532878821A99A6EB00228299 /* TmxEllipse.h */,
+				532878831A99A6EB00228299 /* TmxImage.cpp */,
+				532878841A99A6EB00228299 /* TmxImage.h */,
+				532878851A99A6EB00228299 /* TmxImageLayer.cpp */,
+				532878861A99A6EB00228299 /* TmxImageLayer.h */,
+				532878871A99A6EB00228299 /* TmxLayer.cpp */,
+				532878881A99A6EB00228299 /* TmxLayer.h */,
+				532878891A99A6EB00228299 /* TmxMap.cpp */,
+				5328788A1A99A6EB00228299 /* TmxMap.h */,
+				5328788B1A99A6EB00228299 /* TmxMapTile.h */,
+				5328788C1A99A6EB00228299 /* TmxObject.cpp */,
+				5328788D1A99A6EB00228299 /* TmxObject.h */,
+				5328788E1A99A6EB00228299 /* TmxObjectGroup.cpp */,
+				5328788F1A99A6EB00228299 /* TmxObjectGroup.h */,
+				532878901A99A6EB00228299 /* TmxPoint.h */,
+				532878911A99A6EB00228299 /* TmxPolygon.cpp */,
+				532878921A99A6EB00228299 /* TmxPolygon.h */,
+				532878931A99A6EB00228299 /* TmxPolyline.cpp */,
+				532878941A99A6EB00228299 /* TmxPolyline.h */,
+				532878951A99A6EB00228299 /* TmxPropertySet.cpp */,
+				532878961A99A6EB00228299 /* TmxPropertySet.h */,
+				532878971A99A6EB00228299 /* TmxTile.cpp */,
+				532878981A99A6EB00228299 /* TmxTile.h */,
+				532878991A99A6EB00228299 /* TmxTileset.cpp */,
+				5328789A1A99A6EB00228299 /* TmxTileset.h */,
+				5328789B1A99A6EB00228299 /* TmxUtil.cpp */,
+				5328789C1A99A6EB00228299 /* TmxUtil.h */,
 			);
 			name = tmx;
+			path = src/tmx;
 			sourceTree = "<group>";
 		};
 		5359D5831A96BAE000AE6365 /* Products */ = {
@@ -569,45 +570,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				530CFA9D1A906FED00B4CD51 /* TmxUtil.cpp in Sources */,
-				530CFA9C1A906FED00B4CD51 /* TmxTileset.cpp in Sources */,
-				5359D5771A96A90F00AE6365 /* Potion.cpp in Sources */,
-				530CFA961A906FED00B4CD51 /* TmxObject.cpp in Sources */,
-				5359D5741A96A90F00AE6365 /* GreaterThan.cpp in Sources */,
-				5359D5D11A993C4300AE6365 /* GoldCount.cpp in Sources */,
+				5395845F1A99A42D0080A994 /* GreaterThan.cpp in Sources */,
+				539584641A99A42D0080A994 /* PathNode.cpp in Sources */,
+				5395845B1A99A42D0080A994 /* Chest.cpp in Sources */,
+				532878A51A99A6EB00228299 /* TmxObjectGroup.cpp in Sources */,
+				5328789D1A99A6EB00228299 /* base64.cpp in Sources */,
+				539584631A99A42D0080A994 /* PathFinder.cpp in Sources */,
 				534097AD1A896C0A000434F6 /* main.cpp in Sources */,
-				530CFA911A906FED00B4CD51 /* TmxEllipse.cpp in Sources */,
-				5359D5731A96A90F00AE6365 /* Gold.cpp in Sources */,
-				5359D5781A96A90F00AE6365 /* Skeleton.cpp in Sources */,
-				5359D5751A96A90F00AE6365 /* pathFinder.cpp in Sources */,
-				5359D5721A96A90F00AE6365 /* Chest.cpp in Sources */,
-				534097D21A898396000434F6 /* Map.cpp in Sources */,
-				71910A141A9943CF002BAA60 /* CollisionDetector.cpp in Sources */,
-				530CFA971A906FED00B4CD51 /* TmxObjectGroup.cpp in Sources */,
-				530CFA921A906FED00B4CD51 /* TmxImage.cpp in Sources */,
-				534097B11A896C0A000434F6 /* Player.cpp in Sources */,
+				532878A31A99A6EB00228299 /* TmxMap.cpp in Sources */,
+				539584611A99A42D0080A994 /* Map.cpp in Sources */,
+				5328789F1A99A6EB00228299 /* TmxEllipse.cpp in Sources */,
+				532878AA1A99A6EB00228299 /* TmxTileset.cpp in Sources */,
+				539584661A99A42D0080A994 /* Potion.cpp in Sources */,
+				532878A21A99A6EB00228299 /* TmxLayer.cpp in Sources */,
+				539584681A99A42D0080A994 /* Skeleton.cpp in Sources */,
 				534097B21A896C0A000434F6 /* res.cpp in Sources */,
-				530CFA8F1A906FED00B4CD51 /* base64.cpp in Sources */,
-				530CFA991A906FED00B4CD51 /* TmxPolyline.cpp in Sources */,
-				5359D5761A96A90F00AE6365 /* pathNode.cpp in Sources */,
-				534097AC1A896C0A000434F6 /* Creature.cpp in Sources */,
-				5359D5C21A97F77B00AE6365 /* HealthBar.cpp in Sources */,
-				530CFA951A906FED00B4CD51 /* TmxMap.cpp in Sources */,
-				530CFA931A906FED00B4CD51 /* TmxImageLayer.cpp in Sources */,
-				530CFA941A906FED00B4CD51 /* TmxLayer.cpp in Sources */,
-				530CFA981A906FED00B4CD51 /* TmxPolygon.cpp in Sources */,
+				532878AB1A99A6EB00228299 /* TmxUtil.cpp in Sources */,
+				539584391A999D000080A994 /* CollisionDetector.cpp in Sources */,
+				532878A41A99A6EB00228299 /* TmxObject.cpp in Sources */,
+				539584671A99A42D0080A994 /* Room.cpp in Sources */,
+				539584621A99A42D0080A994 /* MazeGen.cpp in Sources */,
+				532878A61A99A6EB00228299 /* TmxPolygon.cpp in Sources */,
+				539584651A99A42D0080A994 /* Player.cpp in Sources */,
+				5395845C1A99A42D0080A994 /* Creature.cpp in Sources */,
+				5395845E1A99A42D0080A994 /* GoldCount.cpp in Sources */,
+				532878A71A99A6EB00228299 /* TmxPolyline.cpp in Sources */,
+				532878A01A99A6EB00228299 /* TmxImage.cpp in Sources */,
 				534097B01A896C0A000434F6 /* KeyboardInput.cpp in Sources */,
-				530CFA9A1A906FED00B4CD51 /* TmxPropertySet.cpp in Sources */,
-				534097C11A896C0A000434F6 /* Unit.cpp in Sources */,
-				530CFA901A906FED00B4CD51 /* tinyxml2.cpp in Sources */,
-				530CFA9B1A906FED00B4CD51 /* TmxTile.cpp in Sources */,
-				530CFA6A1A90547100B4CD51 /* Room.cpp in Sources */,
-				5359D5791A96A90F00AE6365 /* Thing.cpp in Sources */,
+				532878A81A99A6EB00228299 /* TmxPropertySet.cpp in Sources */,
+				539584691A99A42D0080A994 /* Thing.cpp in Sources */,
 				53BCF11B1A8ED99F00BD6288 /* GameScene.cpp in Sources */,
+				532878A11A99A6EB00228299 /* TmxImageLayer.cpp in Sources */,
+				5395846B1A99A42D0080A994 /* Unit.cpp in Sources */,
 				5359D5991A96C6E600AE6365 /* Gauntmore.cpp in Sources */,
+				5395845D1A99A42D0080A994 /* Gold.cpp in Sources */,
+				5328789E1A99A6EB00228299 /* tinyxml2.cpp in Sources */,
 				53BCF11C1A8ED99F00BD6288 /* Scene.cpp in Sources */,
+				532878A91A99A6EB00228299 /* TmxTile.cpp in Sources */,
+				539584601A99A42D0080A994 /* HealthBar.cpp in Sources */,
 				534097AE1A896C0A000434F6 /* Game.cpp in Sources */,
-				5365DD881A93BE28000A7893 /* MazeGen.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

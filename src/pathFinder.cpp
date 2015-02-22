@@ -1,11 +1,3 @@
-//
-//  pathFinding.cpp
-//  gauntmore_macosx
-//
-//  Created by David Wenzel on 2/17/15.
-//  Copyright (c) 2015 oxygine. All rights reserved.
-//
-
 #include <cmath>
 #include "pathFinder.h"
 #include "game.h"
@@ -27,14 +19,14 @@
  
  
  */
-pathFinder::pathFinder(Vector2 start, Vector2 finish ) {
+PathFinder::PathFinder(Vector2 start, Vector2 finish ) {
     this->location = start;
     this->target = finish;
     
 }
 
-void pathFinder::aStar() {
-    pathNode start = *new pathNode( location, 0, findHeuristic(location) );
+void PathFinder::aStar() {
+    PathNode start = *new PathNode( location, 0, findHeuristic(location) );
     
 //    openList.push(start);
 //    while ( !openList.empty() ) {
@@ -44,7 +36,7 @@ void pathFinder::aStar() {
     
 }
 
-int pathFinder::findHeuristic( Vector2 curLoc ) {
+int PathFinder::findHeuristic( Vector2 curLoc ) {
     return abs( curLoc.x - this->target.x ) + abs( curLoc.y - this->target.y );
 }
 

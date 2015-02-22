@@ -7,23 +7,21 @@
 #include "res.h"
 #include "Map.h"
 #include "HealthBar.h"
-//#include "CollisionDetector.h"
 #include "Room.h"
 
 
 /**
- * Constructor
+ * Constructor.
  */
-Player::Player(int hp, int attack, int defense) {
-    // Initialize stats
-    _collisionDetector = new CollisionDetector();
+Player::Player(int hp, int attack, int defense):_hasTween(false), _facing(down) {
+    _collisionDetector = new CollisionDetector(_game);
+    setType("player");
+    
     _hp = hp;
     _attack = attack;
     _defense = defense;
-    _hasTween = false;
-    facing = down;
-    setType("player");
 }
+
 
 
 /**
@@ -34,8 +32,8 @@ void Player::_init() {
 }
 
 
-Player::Facings Player::getFacing() {
-    return facing;
+Player::Facing Player::getFacing() {
+    return _facing;
 }
 
 
@@ -44,27 +42,27 @@ Player::Facings Player::getFacing() {
  */
 void Player::damage() {
     _hp--;
-    _game->updateHealth(0.2f); // TODO this float needs to reflect the percentage of total health that a single hit inflicts
+    _game->updateHealth(0.05f); // TODO this float needs to reflect the percentage of total health that a single hit inflicts
     if (_hp == 0) {
         // The create is dead, hide it with an alpha tween.
         _dead = true;
         _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-        
-        // TODO end the game
     }
 }
 
 
+/**
+ * Interacts with Things or Creatures.
+ * Iterates through every unit on the current map and sees if the user
+ * is in interacting distance with it based off what direction they are facing.
+ * Depending on what the unit is infront of us (monster, chest, etc) we will
+ * call a different method (damage, open, etc)
+ *
+ * Gets the position of the user and the unit, takes the difference of
+ * their positions and determines if we are in interacting distance.
+ */
 void Player::interact() {
-    /*
-     A method that goes through every unit on the map and sees if the user
-     is in interacting distance with it based off what direction they are facing. 
-     Depending on what the unit is infront of us (monster, chest, etc) we will
-     call a different method (damage, open, etc)
-     
-     We basically get the position of the user and the unit, take the difference of
-     their positions and based off that determine if we are in interacting distance.
-    */
+    attack();
     
     Vector2 playerPosition = getPosition();
     std::list<spUnit> units = _game->getUnits();
@@ -75,36 +73,57 @@ void Player::interact() {
         int xDiff = playerPosition.x - unitPosition.x;
         std::cout << "yDiff: " << yDiff << std::endl;
         std::cout << "xDiff: " << xDiff << std::endl;
+        
+        SDL_Rect rect;
+        SDL_Rect otherRect = unit->getBounds();
+        const SDL_Rect *unitRect = &otherRect;
 
-        switch(facing){
+        switch(_facing){
             case up:
-                if((yDiff > -5 && yDiff < 15) && (xDiff > -26 && xDiff < 0)){
-                    attackUp();
+                rect.x = playerPosition.x;
+                rect.y = playerPosition.y + 16;
+                rect.h = 16;
+                rect.w = 64;
+                if (_isCollision(rect, unit)) {
                     std::cout << "interact facing up " << i << std::endl;
-                    //unit->damage();
+                    unit->interact();
                     i++;
                 }
                 break;
             case right:
-                if((yDiff > -30 && yDiff < 0) && (xDiff < -30 && xDiff > -50)){
-                    attackRight();
+                rect.x = playerPosition.x + 80;
+                rect.y = playerPosition.y;
+                rect.h = 64;
+                rect.w = 64;
+                if (_isCollision(rect, unit)) {
                     std::cout << "interact facing right " << i << std::endl;
+                    unit->interact();
                     i++;
                 }
                 break;
             case down:
-                if((yDiff > -50 && yDiff < -25) && (xDiff > -26 && xDiff < 0)){
-                    attackDown();
+                rect.x = playerPosition.x;
+                rect.y = playerPosition.y - 80;
+                rect.h = 16;
+                rect.w = 64;
+                if (_isCollision(rect, unit)) {
                     std::cout << "interact facing down " << i << std::endl;
+                    unit->interact();
                     i++;
                 }
                 break;
             case left:
-                if((xDiff < 25 && xDiff > 0) && (yDiff > -30 && yDiff < 0)){
-                    attackLeft();
+                rect.x = playerPosition.x - 16;
+                rect.y = playerPosition.y;
+                rect.h = 64;
+                rect.w = 16;
+                if (_isCollision(rect, unit)) {
                     std::cout << "interact facing left " << i << std::endl;
+                    unit->interact();
                     i++;
                 }
+                break;
+            default:
                 break;
         }
         
@@ -113,31 +132,10 @@ void Player::interact() {
 }
 
 
-Vector2 Player::correctDirection(Vector2 position, Vector2 direction) {
-    int newX = static_cast<int>(position.x) + static_cast<int>(direction.x) * 5;
-    int newY = static_cast<int>(position.y) + static_cast<int>(direction.y) * 5;
-    
-    if ( _collisionDetector->detectWalls(_game->getTiles(), newX, static_cast<int>(position.y), tileSize, tileSize)
-        ||
-        _collisionDetector->detectUnits(_game->getUnits(), newX, static_cast<int>(position.y), tileSize, tileSize)
-        ){
-        direction.x = 0;
-    }
-    if ( _collisionDetector->detectWalls(_game->getTiles(), static_cast<int>(position.x), newY, tileSize, tileSize)
-        || _collisionDetector->detectUnits(_game->getUnits(), static_cast<int>(position.x), newY, tileSize, tileSize)
-        ){
-        direction.y = 0;
-    }
-    //_collisionDetector->detectUnits(_game->getUnits(), newX, static_cast<int>(position.y), tileSize, tileSize)
-    
-    return direction;
-}
-
-
 /**
  * Adds the player sprite to the map.
  */
-void Player::addSprite() { 
+void Player::addSprite() {
     _sprite = new Sprite;
 //    _sprite->setScale(1.25f);
     _sprite->setResAnim(resources.getResAnim("adventurer_move_down"));
@@ -146,40 +144,22 @@ void Player::addSprite() {
 }
 
 
-
-void Player::_setFacing(Vector2 dir) {
-    if ( dir.y > 0 ) {
-        _sprite->setResAnim(resources.getResAnim("adventurer_move_down"));
-        facing = down;
-    }
-    if ( dir.y < 0 ) {
-        _sprite->setResAnim(resources.getResAnim("adventurer_move_up"));
-        facing = up;
-    }
-    if ( dir.x < 0 ) {
-        _sprite->setResAnim(resources.getResAnim("adventurer_move_left"));
-        facing = left;
-    }
-    if ( dir.x > 0 ) {
-        _sprite->setResAnim(resources.getResAnim("adventurer_move_right"));
-        facing = right;
-    }
-}
-
-
+/**
+ * Plays the attack animation.
+ */
 void Player::attack() {
-    switch (facing) {
-        case down:
-            attackDown();
-            break;
+    switch (_facing) {
         case up:
-            attackUp();
-            break;
-        case left:
-            attackLeft();
+            _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_attack_up")), 300);
             break;
         case right:
-            attackRight();
+            _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_attack_right")), 300);
+            break;
+        case down:
+            _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_attack_down")), 300);
+            break;
+        case left:
+            _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_attack_left")), 300);
             break;
         default:
             break;
@@ -187,55 +167,29 @@ void Player::attack() {
 }
 
 
-void Player::attackDown() {
-    _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_attack_down")), 300);
-}
-
-
-void Player::attackUp() {
-    _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_attack_up")), 300);
-}
-
-
-void Player::attackLeft() {
-    _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_attack_left")), 300);
-}
-
-
-void Player::attackRight() {
-    _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_attack_right")), 300);
-}
-
-
-void Player::moveUp() {
+/**
+ * Plays the move animation.
+ */
+void Player::move(int facing) {
+    _facing = static_cast<Facing>(facing);
     _checkTween();
-    _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_move_up")), 500, -1);
-}
-
-
-void Player::moveDown() {
-    _checkTween();
-    _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_move_down")), 500, -1);
-}
-
-
-void Player::moveRight() {
-    _checkTween();
-    _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_move_right")), 500, -1);
-}
-
-
-void Player::moveLeft() {
-    _checkTween();
-    _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_move_left")), 500, -1);
-}
-
-
-void Player::_checkTween() {
-    if (_hasTween) {
-        _sprite->removeTween(_moveTween);
+    switch (_facing) {
+        case up:
+            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_move_up")), 500, -1);
+            break;
+        case right:
+            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_move_right")), 500, -1);
+            break;
+        case down:
+            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_move_down")), 500, -1);
+            break;
+        case left:
+            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_move_left")), 500, -1);
+            break;
+        default:
+            break;
     }
-    _hasTween = true;
+    
 }
 
 
@@ -247,32 +201,77 @@ void Player::removeTween() {
 }
 
 
-bool Player::_isExit(Vector2 position) {
-    bool isExit = false;
-    int size = _game->getMap()->getRoom()->getSize() * tileSize;
-
-    if (!(position.x > 0 && position.x < size - tileSize && position.y > 0 && position.y < size - tileSize)) {
-        isExit = true;
-        int edge = 0;
-
-        if (position.y <= 0) {
-            // top
-            edge = 0;
-        } else if (position.x >= size - tileSize) {
-            // right
-            edge = 1;
-        } else if (position.y >= size - tileSize) {
-            // bottom
-            edge = 2;
-        } else if (position.x <= 0) {
-            // left
-            edge = 3;
-        }
-
-        _game->switchRoom(edge);
+void Player::_checkTween() {
+    if (_hasTween) {
+        _sprite->removeTween(_moveTween);
     }
+    _hasTween = true;
+}
 
-    return isExit;
+
+//void Player::_setFacing(Vector2 dir) {
+//    if ( dir.y > 0 ) {
+//        _sprite->setResAnim(resources.getResAnim("adventurer_move_down"));
+//        _facing = down;
+//    }
+//    if ( dir.y < 0 ) {
+//        _sprite->setResAnim(resources.getResAnim("adventurer_move_up"));
+//        _facing = up;
+//    }
+//    if ( dir.x < 0 ) {
+//        _sprite->setResAnim(resources.getResAnim("adventurer_move_left"));
+//        _facing = left;
+//    }
+//    if ( dir.x > 0 ) {
+//        _sprite->setResAnim(resources.getResAnim("adventurer_move_right"));
+//        _facing = right;
+//    }
+//}
+
+
+/**
+ * Corrects the movement direction by checking for collision with wall tiles or other Units and adjusting the 
+ * direction vector's x and y values.
+ *
+ * @postion is the player's current position.
+ * @directions is the player's current movement direction.
+ */
+Vector2 Player::_correctDirection(Vector2 position, Vector2 direction) {
+    int newX = static_cast<int>(position.x) + static_cast<int>(direction.x) * 5;
+    int newY = static_cast<int>(position.y) + static_cast<int>(direction.y) * 5;
+    
+    SDL_Rect spriteRect;
+    spriteRect.x = newX + 10;
+    spriteRect.y = newY + 12;
+    spriteRect.h = tileSize - 14;
+    spriteRect.w = tileSize - 24;
+    
+    if (_collisionDetector->detectWalls(_game->getTiles(), spriteRect) ||
+        _collisionDetector->detectUnits(_game->getUnits(), spriteRect)) {
+        direction.x = 0;
+    }
+    if (_collisionDetector->detectWalls(_game->getTiles(), spriteRect) ||
+        _collisionDetector->detectUnits(_game->getUnits(), spriteRect)) {
+        direction.y = 0;
+    }
+    
+    return direction;
+}
+
+
+bool Player::_isCollision(SDL_Rect thisRect, spUnit unit) {
+    bool isCollision = false;
+    SDL_Rect otherRect = unit->getBounds();
+    const SDL_Rect *playerRect = &thisRect;
+    const SDL_Rect *unitRect = &otherRect;
+    if (SDL_HasIntersection(playerRect, unitRect)) {
+        std::cout << "interact facing up " << i << std::endl;
+        unit->interact();
+        i++;
+        isCollision = true;
+    }
+    
+    return isCollision;
 }
 
 
@@ -285,11 +284,11 @@ void Player::_update(const UpdateState &us) {
 	Vector2 direction;
 	if (_game->getMove()->getDirection(direction)) {
 		Vector2 position = getPosition();
-        direction = correctDirection( position, direction );
-        _setFacing(direction);
+        direction = _correctDirection( position, direction );
+//        _setFacing(direction);
 		position += direction * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
 
-        if (!_isExit(position)) {
+        if (!_game->isExit(position)) {
             setPosition(position);
         }
     }

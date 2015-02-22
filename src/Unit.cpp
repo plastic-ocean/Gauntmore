@@ -49,10 +49,9 @@ void Unit::detachUnit() {
  *  Then calls that objects interact method. 
  *
  */
-//void interact(){
-//    
-//    
-//}
+void Unit::interact() {
+    _interact();
+}
 
 /**
  * Gets the unit's position.

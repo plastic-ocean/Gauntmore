@@ -20,5 +20,4 @@ private:
     spProgressBar _healthBar;
     spSprite _healthBorder;
     float _health;
-    
 };

@@ -7,16 +7,17 @@ class Creature: public Unit {
 public:
     Creature();
     
-    /**
-     * Reduces the creatures hit points.
-     */
-    void damage();
-    
 private:
     /**
      * Initializes a creatures position and sprite. Called by Unit's init() method.
      */
     void _init();
+    
+    
+    /**
+     * Reduces the creature's hit points.
+     */
+    void _interact();
     
     /**
      * Updates the creature every frame. Called by Units update() method.

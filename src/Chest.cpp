@@ -8,6 +8,7 @@
 
 #include "Chest.h"
 #include "Gold.h"
+#include "Potion.h"
 #include "Game.h"
 #include "KeyboardInput.h"
 #include "res.h"
@@ -18,30 +19,7 @@
 /**
  * Constructor
  */
-Chest::Chest(){
-    _open = false;
-    
-}
-
-/**
- * Interaction method for Chest.
- * Sets _open to true and removes chest from game.
- */
-void Chest::interact(){
-    _open = true;
-    
-    // The chest is open, hide it with an alpha tween.
-    _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-}
-
-
-void _chooseContents() {
-    // choose a random # (0-1)
-    // if potion:
-    //    _contests = potion;
-    // else:
-    //    _contents = gold;
-}
+Chest::Chest():_isOpen(false), _contents(0) {}
 
 
 /**
@@ -57,13 +35,34 @@ void Chest::_init() {
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
     
     Vector2 unitPosition = getPosition();
-    // these are adjusted for a skeleton sprite, we will need to make different ones for
-    // different sprites
-    _bounds.x = unitPosition.x + 15;
+    _bounds.x = unitPosition.x + 20;
     _bounds.y = unitPosition.y + 15;
-    _bounds.h = 15;
-    _bounds.w = 15;
+    _bounds.h = 30;
+    _bounds.w = 20;
+    
+    int randContents = rand() % 2;
+    if (randContents == 0) {
+        _contents = new Potion();
+    }
+    else{
+        _contents = new Gold();
+    }
+
 }
+
+/**
+ * Interaction method for Chest.
+ * Sets _open to true and removes chest from game.
+ */
+void Chest::_interact() {
+    _isOpen = true;
+    
+    // The chest is open, hide it with an alpha tween.
+    _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
+    
+    _contents->init(getPosition(), _game);
+}
+
 
 
 /**
@@ -71,15 +70,7 @@ void Chest::_init() {
  *
  * @us is the UpdateStatus sent by Unit's update method.
  */
-void Chest::_update(const UpdateState &us){
-    Vector2 isOpen;
-    
-//    if (_game->getMove()->getDirection(dir)) {
-//        Vector2 pos = getPosition();
-//        dir = correctDirection( pos, dir );
-//        setFacing(dir);
-//        pos += dir * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
-//        setPosition(pos);
-//    }
+void Chest::_update(const UpdateState &us) {
+//    Vector2 isOpen;
     
 }

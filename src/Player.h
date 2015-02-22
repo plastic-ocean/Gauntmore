@@ -8,13 +8,9 @@ class Player: public Unit {
 public:
 	Player(int hp, int attack, int defense);
     
-    // up = 0, right = 1, down = 2, left = 3
-    enum Facings {up, right, down, left};
-    Facings facing;
+    enum Facing {up, right, down, left};
     
-    Facings getFacing();
-    
-    int i = 0;
+    Facing getFacing();
 
     /**
      * Reduces the player's hit points.
@@ -25,25 +21,29 @@ public:
      * Add sprite to the game scene.
      */
     void addSprite();
-    
-    void attack();
-    void attackDown();
-    void attackUp();
-    void attackLeft();
-    void attackRight();
-
-    void interact();
-    
     void removeSprite();
     
-    void moveUp();
-    void moveDown();
-    void moveRight();
-    void moveLeft();
+    /**
+     * Interacts with Things or Creatures.
+     */
+    void interact();
     
+    /**
+     * Plays the attack animation.
+     */
+    void attack();
+    
+    /**
+     * Plays the move animation.
+     */
+    void move(int facing);
+
     void removeTween();
     
 protected:
+    Facing _facing;
+    
+    int i = 0;
     spCollisionDetector _collisionDetector;
     const int tileSize = 64;
     spTween _moveTween;
@@ -52,7 +52,14 @@ protected:
     
     void _checkTween();
     
-    Vector2 correctDirection(Vector2 position, Vector2 direction);
+    /**
+     * Corrects the movement direction by checking for collision with wall tiles or other Units and adjusting the
+     * direction vector's x and y values.
+     *
+     * @postion is the player's current position.
+     * @directions is the player's current movement direction.
+     */
+    Vector2 _correctDirection(Vector2 position, Vector2 direction);
     
     /**
      * Initializes the player's position and sprite. Called by Unit's init() method.
@@ -62,6 +69,8 @@ protected:
     void _setFacing(Vector2 dir);
 
     bool _isExit(Vector2 position);
+    
+    bool _isCollision(SDL_Rect rect, spUnit unit);
     
     /**
      * Updates the player every frame.

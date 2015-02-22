@@ -13,7 +13,7 @@ Creature::Creature() {
 /**
  * Reduces the creatures hit points.
  */
-void Creature::damage() {
+void Creature::_interact() {
     _hp--;
     if (_hp == 0) {
         // The creature is dead, hide it with an alpha tween.

@@ -1,16 +1,7 @@
-//
-//  Thing.h
-//  gauntmore_macosx
-//
-//  Created by Steven Warren on 2/12/15.
-//  Copyright (c) 2015 oxygine. All rights reserved.
-//
-
-#ifndef __gauntmore_macosx__Thing__
-#define __gauntmore_macosx__Thing__
-
-#include <stdio.h>
 #include "Unit.h"
+
+#ifndef __gauntmore__Thing__
+#define __gauntmore__Thing__
 
 DECLARE_SMART(Thing, spThing);
 class Thing: public Unit {
@@ -43,4 +34,4 @@ protected:
     void _update(const UpdateState &us);
 };
 
-#endif /* defined(__gauntmore_macosx__Thing__) */
+#endif /* defined(__gauntmore__Thing__) */

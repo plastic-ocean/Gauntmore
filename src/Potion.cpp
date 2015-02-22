@@ -1,11 +1,3 @@
-//
-//  Potion.cpp
-//  gauntmore_macosx
-//
-//  Created by Steven Warren on 2/16/15.
-//  Copyright (c) 2015 oxygine. All rights reserved.
-//
-
 #include "Potion.h"
 #include "Game.h"
 #include "KeyboardInput.h"

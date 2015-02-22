@@ -1,6 +1,8 @@
 #include "GoldCount.h"
-#include "res.h"
 
+/**
+ * Constructor.
+ */
 GoldCount::GoldCount(Game *game):_game(game) {
     _coin = new Sprite;
     _coin->setResAnim(resources.getResAnim("coin"));
@@ -23,12 +25,21 @@ GoldCount::GoldCount(Game *game):_game(game) {
 }
 
 
+/**
+ * Renders the on screen gold counter on room changes.
+ */
 void GoldCount::render() {
     _coin->attachTo(_game);
     _goldCount->attachTo(_game);
 }
 
 
-void GoldCount::updateGoldCount(string count) {
-    _goldCount->setText(count);
+/**
+ * Updates the string count and sets the on screen gold count.
+ *
+ * @count is the value to add to the count.
+ */
+void GoldCount::updateGoldCount(int value) {
+    _count += value;
+    _goldCount->setText(to_string(_count));
 }
