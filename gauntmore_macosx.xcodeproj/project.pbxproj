@@ -15,6 +15,10 @@
 		0405A00118720D2200BA6557 /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04059FF11872031A00BA6557 /* libpng.a */; };
 		049B57321871FBE900EF3C66 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049B57311871FBE900EF3C66 /* Cocoa.framework */; };
 		049B574A1871FBE900EF3C66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049B57491871FBE900EF3C66 /* Images.xcassets */; };
+		483D59101A996572000CECE0 /* liboxygine-sound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 483D590D1A996559000CECE0 /* liboxygine-sound.a */; };
+		483D59121A996581000CECE0 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 483D59111A996581000CECE0 /* OpenAL.framework */; };
+		483D59191A9965D9000CECE0 /* HealthBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 483D59141A9965D9000CECE0 /* HealthBar.cpp */; };
+		483D591A1A9965D9000CECE0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 483D59161A9965D9000CECE0 /* main.cpp */; };
 		530CFA6A1A90547100B4CD51 /* Room.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA681A90547100B4CD51 /* Room.cpp */; };
 		530CFA8F1A906FED00B4CD51 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA6E1A906FED00B4CD51 /* base64.cpp */; };
 		530CFA901A906FED00B4CD51 /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA701A906FED00B4CD51 /* tinyxml2.cpp */; };
@@ -104,6 +108,20 @@
 			remoteGlobalIDString = BECDF5FE0761BA81005FE872;
 			remoteInfo = Framework;
 		};
+		483D590C1A996559000CECE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 483D59081A996559000CECE0 /* oxygine-sound.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 92AF25E919C637F80026E2CE;
+			remoteInfo = "oxygine-sound";
+		};
+		483D590E1A99656D000CECE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 483D59081A996559000CECE0 /* oxygine-sound.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 92AF25E819C637F80026E2CE;
+			remoteInfo = "oxygine-sound";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +141,12 @@
 		049B57501871FBE900EF3C66 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		04A57D761871FFEB0068B1E5 /* oxygine_macosx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = oxygine_macosx.xcodeproj; path = "oxygine-framework//oxygine/SDL/macosx/oxygine_macosx/oxygine_macosx.xcodeproj"; sourceTree = "<group>"; };
 		04A57D7E1872012A0068B1E5 /* SDL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL.xcodeproj; path = ".//SDL/Xcode/SDL/SDL.xcodeproj"; sourceTree = "<group>"; };
+		483D59081A996559000CECE0 /* oxygine-sound.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "oxygine-sound.xcodeproj"; path = "oxygine-sound/proj.macosx/oxygine-sound.xcodeproj"; sourceTree = "<group>"; };
+		483D59111A996581000CECE0 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		483D59131A9965D9000CECE0 /* Gauntmore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gauntmore.h; path = src/Gauntmore.h; sourceTree = "<group>"; };
+		483D59141A9965D9000CECE0 /* HealthBar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HealthBar.cpp; path = src/HealthBar.cpp; sourceTree = "<group>"; };
+		483D59151A9965D9000CECE0 /* HealthBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HealthBar.h; path = src/HealthBar.h; sourceTree = "<group>"; };
+		483D59161A9965D9000CECE0 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = "<group>"; };
 		530CFA681A90547100B4CD51 /* Room.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Room.cpp; path = src/Room.cpp; sourceTree = "<group>"; };
 		530CFA691A90547100B4CD51 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Room.h; path = src/Room.h; sourceTree = "<group>"; };
 		530CFA6E1A906FED00B4CD51 /* base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = base64.cpp; path = src/tmx/base64.cpp; sourceTree = "<group>"; };
@@ -204,6 +228,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				483D59121A996581000CECE0 /* OpenAL.framework in Frameworks */,
+				483D59101A996572000CECE0 /* liboxygine-sound.a in Frameworks */,
 				0405A00018720D2200BA6557 /* libjpeg.a in Frameworks */,
 				0405A00118720D2200BA6557 /* libpng.a in Frameworks */,
 				04059FEF187202AC00BA6557 /* OpenGL.framework in Frameworks */,
@@ -228,6 +254,7 @@
 		049B57251871FBE900EF3C66 = {
 			isa = PBXGroup;
 			children = (
+				483D59081A996559000CECE0 /* oxygine-sound.xcodeproj */,
 				049B57491871FBE900EF3C66 /* Images.xcassets */,
 				049B57381871FBE900EF3C66 /* Supporting Files */,
 				04A57D391871FF8B0068B1E5 /* src */,
@@ -249,6 +276,7 @@
 		049B57301871FBE900EF3C66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				483D59111A996581000CECE0 /* OpenAL.framework */,
 				04059FF4187203A600BA6557 /* libjpeg.a */,
 				04059FF5187203A600BA6557 /* libpng.a */,
 				04059FF01872031A00BA6557 /* libjpeg.a */,
@@ -295,11 +323,15 @@
 				53BCF1171A8ED99F00BD6288 /* GameScene.cpp */,
 				53BCF1181A8ED99F00BD6288 /* GameScene.h */,
 				5340977F1A896C0A000434F6 /* gauntmore.cpp */,
+				483D59131A9965D9000CECE0 /* Gauntmore.h */,
 				5359D5641A96A90F00AE6365 /* Gold.cpp */,
 				5359D5651A96A90F00AE6365 /* Gold.h */,
 				5359D5671A96A90F00AE6365 /* GreaterThan.h */,
+				483D59141A9965D9000CECE0 /* HealthBar.cpp */,
+				483D59151A9965D9000CECE0 /* HealthBar.h */,
 				534097841A896C0A000434F6 /* KeyboardInput.cpp */,
 				534097851A896C0A000434F6 /* KeyboardInput.h */,
+				483D59161A9965D9000CECE0 /* main.cpp */,
 				534097D01A898396000434F6 /* Map.cpp */,
 				534097D11A898396000434F6 /* Map.h */,
 				5365DD861A93BE28000A7893 /* MazeGen.cpp */,
@@ -336,6 +368,14 @@
 				04A57D881872012D0068B1E5 /* libSDL2.a */,
 				04A57D8A1872012D0068B1E5 /* libSDL2.dylib */,
 				04A57D8C1872012D0068B1E5 /* Standard DMG */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		483D59091A996559000CECE0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				483D590D1A996559000CECE0 /* liboxygine-sound.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -394,6 +434,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				483D590F1A99656D000CECE0 /* PBXTargetDependency */,
 				04059FE91872027200BA6557 /* PBXTargetDependency */,
 				04A57D8F187201EF0068B1E5 /* PBXTargetDependency */,
 			);
@@ -418,11 +459,16 @@
 			knownRegions = (
 				en,
 				Base,
+				English,
 			);
 			mainGroup = 049B57251871FBE900EF3C66;
 			productRefGroup = 049B572F1871FBE900EF3C66 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 483D59091A996559000CECE0 /* Products */;
+					ProjectRef = 483D59081A996559000CECE0 /* oxygine-sound.xcodeproj */;
+				},
 				{
 					ProductGroup = 04059FE01872026200BA6557 /* Products */;
 					ProjectRef = 04A57D761871FFEB0068B1E5 /* oxygine_macosx.xcodeproj */;
@@ -475,6 +521,13 @@
 			remoteRef = 04A57D8B1872012D0068B1E5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		483D590D1A996559000CECE0 /* liboxygine-sound.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "liboxygine-sound.a";
+			remoteRef = 483D590C1A996559000CECE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -498,7 +551,9 @@
 			files = (
 				530CFA9D1A906FED00B4CD51 /* TmxUtil.cpp in Sources */,
 				530CFA9C1A906FED00B4CD51 /* TmxTileset.cpp in Sources */,
+				483D591A1A9965D9000CECE0 /* main.cpp in Sources */,
 				5359D5771A96A90F00AE6365 /* Potion.cpp in Sources */,
+				483D59191A9965D9000CECE0 /* HealthBar.cpp in Sources */,
 				530CFA961A906FED00B4CD51 /* TmxObject.cpp in Sources */,
 				534097AD1A896C0A000434F6 /* gauntmore.cpp in Sources */,
 				530CFA911A906FED00B4CD51 /* TmxEllipse.cpp in Sources */,
@@ -545,6 +600,11 @@
 			isa = PBXTargetDependency;
 			name = Framework;
 			targetProxy = 04A57D8E187201EF0068B1E5 /* PBXContainerItemProxy */;
+		};
+		483D590F1A99656D000CECE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "oxygine-sound";
+			targetProxy = 483D590E1A99656D000CECE0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -634,8 +694,16 @@
 					"$(inherited)",
 					"oxygine-framework//oxygine/third_party/macosx/libraries",
 					"oxygine-framework//oxygine/third_party/ios/libraries",
+					"$(PROJECT_DIR)/oxygine-sound/dependencies/libvorbis/lib/x86",
+					"$(PROJECT_DIR)/oxygine-sound/dependencies/openal/obj/local/armeabi-v7a",
+					"$(PROJECT_DIR)/oxygine-sound/dependencies/openal-android/obj/local/armeabi-v7a",
+					"$(PROJECT_DIR)/oxygine-sound/dependencies/openalext/lib/android",
+					"$(PROJECT_DIR)/oxygine-sound/dependencies/openalext/lib/iphone",
+					"$(PROJECT_DIR)/oxygine-sound/dependencies/openalext/lib/win32",
+					"$(PROJECT_DIR)/oxygine-sound/libs/win32",
 				);
 				PRODUCT_NAME = gauntmore_macosx;
+				USER_HEADER_SEARCH_PATHS = "oxygine-framework//oxygine/src .//SDL/include ./oxygine-sound/src";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -652,8 +720,16 @@
 					"$(inherited)",
 					"oxygine-framework//oxygine/third_party/macosx/libraries",
 					"oxygine-framework//oxygine/third_party/ios/libraries",
+					"$(PROJECT_DIR)/oxygine-sound/dependencies/libvorbis/lib/x86",
+					"$(PROJECT_DIR)/oxygine-sound/dependencies/openal/obj/local/armeabi-v7a",
+					"$(PROJECT_DIR)/oxygine-sound/dependencies/openal-android/obj/local/armeabi-v7a",
+					"$(PROJECT_DIR)/oxygine-sound/dependencies/openalext/lib/android",
+					"$(PROJECT_DIR)/oxygine-sound/dependencies/openalext/lib/iphone",
+					"$(PROJECT_DIR)/oxygine-sound/dependencies/openalext/lib/win32",
+					"$(PROJECT_DIR)/oxygine-sound/libs/win32",
 				);
 				PRODUCT_NAME = gauntmore_macosx;
+				USER_HEADER_SEARCH_PATHS = "oxygine-framework//oxygine/src .//SDL/include ./oxygine-sound/src";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
