@@ -26,7 +26,7 @@ public:
      *  Interaction method for Unit
      *
      */
-//    void interact();
+    void interact();
     
     /**
      * Gets the unit's position.
@@ -94,6 +94,8 @@ protected:
      * Initializes a child of Unit. Called by Unit::init() for all children.
      */
 	virtual void _init(){}
+    
+    virtual void _interact(){}
     
     /**
      * Updates a child of Unit every frame. Called by Unit::update() for all children.

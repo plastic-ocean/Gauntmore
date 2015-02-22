@@ -62,9 +62,11 @@ void KeyboardInput::_onEvent(Event *ev) {
                 _game->getPlayer()->moveRight();
                 break;
             case SDLK_SPACE:
-                _game->getPlayer()->attack();
+                _game->getPlayer()->interact();
+                break;
             case SDLK_RETURN:
                 _game->getPlayer()->damage();
+                break;
             default:
                 break;
             }

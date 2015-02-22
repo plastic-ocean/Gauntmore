@@ -6,8 +6,11 @@
 //  Copyright (c) 2015 oxygine. All rights reserved.
 //
 
+#include <cstdlib>
+
 #include "Chest.h"
 #include "Gold.h"
+#include "Potion.h"
 #include "Game.h"
 #include "KeyboardInput.h"
 #include "res.h"
@@ -20,26 +23,15 @@
  */
 Chest::Chest(){
     _open = false;
-}
-
-/**
- * Interaction method for Chest.
- * Sets _open to true and removes chest from game.
- */
-void Chest::interact(){
-    _open = true;
     
-    // The chest is open, hide it with an alpha tween.
-    _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-}
-
-
-void _chooseContents() {
-    // choose a random # (0-1)
-    // if potion:
-    //    _contests = potion;
-    // else:
-    //    _contents = gold;
+    int randContents = rand() % 2;
+    if (randContents == 0) {
+        _contents = new Potion();
+    }
+    else{
+        _contents = new Gold();
+    }
+    
 }
 
 
@@ -55,8 +47,22 @@ void Chest::_init() {
     _sprite->attachTo(_view);
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
     
+}
+
+/**
+ * Interaction method for Chest.
+ * Sets _open to true and removes chest from game.
+ */
+void Chest::_interact(){
+    _open = true;
+    
+    // The chest is open, hide it with an alpha tween.
+    _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
+    
+    _contents->init(getPosition(), _game);
     
 }
+
 
 
 /**

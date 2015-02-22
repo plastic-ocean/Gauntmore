@@ -40,7 +40,7 @@ Player::Facings Player::getFacing() {
  */
 void Player::damage() {
     _hp--;
-    _game->updateHealth(0.2f); // TODO this float needs to reflect the percentage of total health that a single hit inflicts
+    _game->updateHealth(0.05f); // TODO this float needs to reflect the percentage of total health that a single hit inflicts
     if (_hp == 0) {
         // The create is dead, hide it with an alpha tween.
         _dead = true;
@@ -64,6 +64,8 @@ void Player::interact(){
     
     Vector2 playerPosition = getPosition();
     std::list<spUnit> units = _game->getUnits();
+    
+
 
     for (spUnit unit : units) {
         Vector2 unitPosition = unit->getPosition();
@@ -76,25 +78,28 @@ void Player::interact(){
             case up:
                 if((yDiff > -5 && yDiff < 15) && (xDiff > -26 && xDiff < 0)){
                     std::cout << "interact facing up " << i << std::endl;
-                    //unit->damage();
+                    unit->interact();
                     i++;
                 }
                 break;
             case right:
                 if((yDiff > -30 && yDiff < 0) && (xDiff < -30 && xDiff > -50)){
                     std::cout << "interact facing right " << i << std::endl;
+                    unit->interact();
                     i++;
                 }
                 break;
             case down:
                 if((yDiff > -50 && yDiff < -25) && (xDiff > -26 && xDiff < 0)){
                     std::cout << "interact facing down " << i << std::endl;
+                    unit->interact();
                     i++;
                 }
                 break;
             case left:
                 if((xDiff < 25 && xDiff > 0) && (yDiff > -30 && yDiff < 0)){
                     std::cout << "interact facing left " << i << std::endl;
+                    unit->interact();
                     i++;
                 }
                 break;

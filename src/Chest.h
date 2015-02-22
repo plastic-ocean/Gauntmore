@@ -11,11 +11,13 @@
 
 #include <stdio.h>
 #include "Thing.h"
+#include "Potion.h"
+#include "Gold.h"
 #include "Unit.h"
 
 using namespace std;
 
-enum Things {potion, gold};
+//enum Things {potion, gold};
 
 DECLARE_SMART(Chest, spChest);
 class Chest: public Thing {
@@ -23,24 +25,29 @@ class Chest: public Thing {
 public:
     Chest();
     
-    /**
-     * Interaction method for Chest.
-     */
-    void interact();
-    
-//    vector<spThing> getContents() {
+//    int getContents() {
 //        return _contents;
-//    }s
-//    
+//    }
+//
 //    void pushContents(spThing thing) {
 //        _contents.push_back(thing);
 //    }
     
 private:
-//    vector<spThing> _contents;
-    int _contents;
+ //   vector<spThing> _contents;
+    spThing _contents;
     
-    void _chooseContents();
+//    spPotion _potion;
+//    spGold _gold;
+//    spThing cont
+    
+    
+    
+    /**
+     * Interaction method for Chest.
+     */
+    void _interact();
+
     
     /**
      * Initializes position and sprite of Chest. Called by Unit's init() method.

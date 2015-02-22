@@ -3,5 +3,6 @@
     <set path = "sounds" />
     
     <sound file="music.ogg" streaming="true"/>
+    <sound file="44.ogg" streaming="true"/>
     
 </resources>

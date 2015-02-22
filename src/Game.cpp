@@ -45,7 +45,7 @@ void Game::init() {
     _createTiles();
     
 	// Create player
-	_player = new Player(5, 1, 1);
+	_player = new Player(20, 1, 1);
     _player->init(_getEntrance(), this);
 
     _setUnits();

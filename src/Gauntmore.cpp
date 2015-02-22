@@ -23,7 +23,7 @@ void Gauntmore::init() {
     GameScene::instance = new GameScene;
     
     // Setup music player and play music.
-//    _musicPlayer.play(resSounds.get("music"));
+    _musicPlayer.play(resSounds.get("44"));
     
     GameScene::instance->show();
 }
