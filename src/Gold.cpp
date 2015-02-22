@@ -17,7 +17,7 @@ void Gold::_init(){
     
     // Add sprite to the game scene view.
     _sprite = new Sprite;
-    _sprite->setResAnim(resources.getResAnim("gold"));
+    _sprite->addTween(TweenAnim(resources.getResAnim("gold")), 500, -1);;
     _sprite->attachTo(_view);
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
     

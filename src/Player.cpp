@@ -68,14 +68,13 @@ void Player::interact() {
     std::list<spUnit> units = _game->getUnits();
 
     for (spUnit unit : units) {
-        Vector2 unitPosition = unit->getPosition();
+//        Vector2 unitPosition = unit->getPosition();
 //        int yDiff = playerPosition.y - unitPosition.y;
 //        int xDiff = playerPosition.x - unitPosition.x;
 //        std::cout << "yDiff: " << yDiff << std::endl;
 //        std::cout << "xDiff: " << xDiff << std::endl;
         
         SDL_Rect rect;
-        SDL_Rect otherRect = unit->getBounds();
 
         switch(_facing){
             case up:
@@ -208,6 +207,22 @@ void Player::_checkTween() {
 }
 
 
+bool Player::_isCollision(SDL_Rect thisRect, spUnit unit) {
+    bool isCollision = false;
+    SDL_Rect otherRect = unit->getBounds();
+    const SDL_Rect *playerRect = &thisRect;
+    const SDL_Rect *unitRect = &otherRect;
+    if (SDL_HasIntersection(playerRect, unitRect)) {
+        std::cout << "interact facing up " << i << std::endl;
+        unit->interact();
+        i++;
+        isCollision = true;
+    }
+    
+    return isCollision;
+}
+
+
 //void Player::_setFacing(Vector2 dir) {
 //    if ( dir.y > 0 ) {
 //        _sprite->setResAnim(resources.getResAnim("adventurer_move_down"));
@@ -255,22 +270,6 @@ Vector2 Player::_correctDirection(Vector2 position, Vector2 direction) {
     }
     
     return direction;
-}
-
-
-bool Player::_isCollision(SDL_Rect thisRect, spUnit unit) {
-    bool isCollision = false;
-    SDL_Rect otherRect = unit->getBounds();
-    const SDL_Rect *playerRect = &thisRect;
-    const SDL_Rect *unitRect = &otherRect;
-    if (SDL_HasIntersection(playerRect, unitRect)) {
-        std::cout << "interact facing up " << i << std::endl;
-        unit->interact();
-        i++;
-        isCollision = true;
-    }
-    
-    return isCollision;
 }
 
 

@@ -11,6 +11,7 @@ GoldCount::GoldCount(Game *game):_game(game), _count(0) {
     _coin->attachTo(_game);
     
     _goldCount = new TextField();
+    _goldCount->setAnchor(Vector2(0.5f, 0.5f));
     _goldCount->setPosition(196, 22);
     _goldCount->attachTo(_game);
     

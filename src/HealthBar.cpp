@@ -32,7 +32,7 @@ void HealthBar::render() {
 /**
  * Update the health bar to a new position. 
  * 
- * @num value in range [0.0f, 1.0f]
+ * @damage value in range [0.0f, 1.0f]
  */
 void HealthBar::updateHealth(float damage) {
     _health -= damage;

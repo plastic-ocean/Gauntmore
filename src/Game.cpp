@@ -255,7 +255,7 @@ void Game::doUpdate(const UpdateState &us) {
 void Game::_renderMap() {
     _tileMap = new Tmx::Map();
     
-    _tileMap->ParseFile("tmx/room.tmx");
+    _tileMap->ParseFile("tmx/room01.tmx");
 
     _map->getRoom()->setTileMap(_tileMap);
     
