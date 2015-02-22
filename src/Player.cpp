@@ -7,6 +7,8 @@
 #include "res.h"
 #include "Map.h"
 #include "HealthBar.h"
+//#include "CollisionDetector.h"
+#include "Room.h"
 
 
 /**
@@ -14,11 +16,13 @@
  */
 Player::Player(int hp, int attack, int defense) {
     // Initialize stats
+    _collisionDetector = new CollisionDetector();
     _hp = hp;
     _attack = attack;
     _defense = defense;
     _hasTween = false;
     facing = down;
+    setType("player");
 }
 
 
@@ -69,12 +73,13 @@ void Player::interact(){
         Vector2 unitPosition = unit->getPosition();
         int yDiff = playerPosition.y - unitPosition.y;
         int xDiff = playerPosition.x - unitPosition.x;
-        //std::cout << "yDiff: " << yDiff << std::endl;
-        //std::cout << "xDiff: " << xDiff << std::endl;
+        std::cout << "yDiff: " << yDiff << std::endl;
+        std::cout << "xDiff: " << xDiff << std::endl;
 
         switch(facing){
             case up:
                 if((yDiff > -5 && yDiff < 15) && (xDiff > -26 && xDiff < 0)){
+                    attackUp();
                     std::cout << "interact facing up " << i << std::endl;
                     //unit->damage();
                     i++;
@@ -82,18 +87,21 @@ void Player::interact(){
                 break;
             case right:
                 if((yDiff > -30 && yDiff < 0) && (xDiff < -30 && xDiff > -50)){
+                    attackRight();
                     std::cout << "interact facing right " << i << std::endl;
                     i++;
                 }
                 break;
             case down:
                 if((yDiff > -50 && yDiff < -25) && (xDiff > -26 && xDiff < 0)){
+                    attackDown();
                     std::cout << "interact facing down " << i << std::endl;
                     i++;
                 }
                 break;
             case left:
                 if((xDiff < 25 && xDiff > 0) && (yDiff > -30 && yDiff < 0)){
+                    attackLeft();
                     std::cout << "interact facing left " << i << std::endl;
                     i++;
                 }
@@ -109,8 +117,18 @@ Vector2 Player::correctDirection(Vector2 position, Vector2 direction) {
     int newX = static_cast<int>(position.x) + static_cast<int>(direction.x) * 5;
     int newY = static_cast<int>(position.y) + static_cast<int>(direction.y) * 5;
     
-    if ( _game->detectCollision(newX, static_cast<int>(position.y), tileSize, tileSize ) ) direction.x = 0;
-    if ( _game->detectCollision(static_cast<int>(position.x), newY, tileSize, tileSize ) ) direction.y = 0;
+    if ( _collisionDetector->detectWalls(_game->getTiles(), newX, static_cast<int>(position.y), tileSize, tileSize)
+        ||
+        _collisionDetector->detectUnits(_game->getUnits(), newX, static_cast<int>(position.y), tileSize, tileSize)
+        ){
+        direction.x = 0;
+    }
+    if ( _collisionDetector->detectWalls(_game->getTiles(), static_cast<int>(position.x), newY, tileSize, tileSize)
+        || _collisionDetector->detectUnits(_game->getUnits(), static_cast<int>(position.x), newY, tileSize, tileSize)
+        ){
+        direction.y = 0;
+    }
+    //_collisionDetector->detectUnits(_game->getUnits(), newX, static_cast<int>(position.y), tileSize, tileSize)
     
     return direction;
 }

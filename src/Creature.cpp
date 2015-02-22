@@ -5,7 +5,9 @@
 /**
  * Constructor
  */
-Creature::Creature() {}
+Creature::Creature() {
+    setType("creature");
+}
 
 
 /**

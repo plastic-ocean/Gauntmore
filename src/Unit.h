@@ -1,6 +1,7 @@
 #pragma once
 #include "oxygine-framework.h"
 using namespace oxygine;
+using namespace std;
 
 class Game;
 DECLARE_SMART(Unit, spUnit);
@@ -70,16 +71,24 @@ public:
      * Reduces the Unit's hit points. Overload this for each child.
      */
     virtual void damage(){}
+    
+    string getType();
+    
+    void setType(string type);
+    
+    SDL_Rect getBounds();
 
 protected:
     // Each Unit has a view that is attached to the game.
+    
+    SDL_Rect _bounds;
     spActor _view;
     spSprite _sprite;
     
+    string _type;
+    
     // A pointer to the game.
     Game *_game;
-
-protected:
 // Stats
     int _hp;
     int _attack;

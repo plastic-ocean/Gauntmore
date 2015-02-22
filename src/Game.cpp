@@ -58,7 +58,7 @@ void Game::init() {
 //    }
 
     // Create chest
-    Vector2 chestLocation = Vector2(((32 * 15) / 2) + 1, (32 * 15) / 2);
+    Vector2 chestLocation = Vector2((64 * 4), (64*6));
 
     _chest = new Chest;
 
@@ -87,44 +87,7 @@ void Game::init() {
  * @w is the width coordinate to check.
  * @return true if there is a collision and false if there is not
  */
-bool Game::detectCollision(int x, int y, int h, int w) {
-    bool isCollision = false;
-    SDL_Rect spriteRect;
-    spriteRect.x = x + 10;
-    spriteRect.y = y + 12;
-    spriteRect.h = h - 14;
-    spriteRect.w = w - 24;
-    const SDL_Rect *sprite = &spriteRect;
-    
-    // Check for collision between the sprite and each tile
-
-    for (SDL_Rect tileRect : _tiles) {
-        const SDL_Rect *tile = &tileRect;
-        if (SDL_HasIntersection(sprite, tile)) {
-            isCollision = true;
-        }
-    }
-    
-    for (spUnit unit : _units){
-        Vector2 unitPosition = unit->getPosition();
-        SDL_Rect unitRect;
-        // these are adjusted for a skeleton sprite, we will need to make different ones for
-        // different sprites
-        unitRect.x = unitPosition.x-3 ;
-        unitRect.y = unitPosition.y-3 ;
-        unitRect.h = 13;
-        unitRect.w = 13;
-
-        const SDL_Rect *constUnitRect = &unitRect;
-        // we also make sure that we are not collecting a collision with outself by doing a type check
-        if (SDL_HasIntersection(sprite, constUnitRect) && typeid(*unit).name() != "6Player") {
-            isCollision = true;
-            std::cout << "collision with unit: " << typeid(*unit).name() << std::endl;
-        }
-    }
-    
-    return isCollision;
-}
+// method moved to CollisionDetector Class
 
 
 /**
@@ -192,7 +155,7 @@ spMap Game::getMap() {
 
 
 list<spUnit> Game::getUnits() {
-    return _units;
+    return _map->getRoom()->getUnits();
 }
 
 
@@ -258,7 +221,7 @@ void Game::doUpdate(const UpdateState &us) {
 void Game::_renderMap() {
     _tileMap = new Tmx::Map();
     
-    _tileMap->ParseFile("tmx/room.tmx");
+    _tileMap->ParseFile("tmx/room01.tmx");
 
     _map->getRoom()->setTileMap(_tileMap);
     
