@@ -1,8 +1,10 @@
 #include "Gold.h"
 #include "res.h"
+#include "Game.h"
 
 
-Gold::Gold() {}
+Gold::Gold():_value(10) {
+}
 
 SDL_Rect Gold::getBounds() {
     Vector2 unitPosition = getPosition();
@@ -23,9 +25,14 @@ void Gold::_init() {
 
 
 void Gold::_interact() {
-    // add gold to gold count
-    _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-    _dead = true;
+    if (!isDead()) {        
+        // add gold to gold count
+        _game->updateGoldCount(_value);
+        
+        // remove sprite
+        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
+        _dead = true;
+    }
 }
 
 

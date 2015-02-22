@@ -39,13 +39,16 @@ void Potion::_init() {
  * Interaction method for Potion.
  */
 void Potion::_interact() {
-    // add health to player
-    
-    // stop collision detection
-    _dead = true;
-    
-    // hide it with an alpha tween.
-    _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
+    if (!isDead()) {
+        // add health to player
+        _game->updateHealth(0.1f);
+        
+        // stop collision detection
+        _dead = true;
+        
+        // hide it with an alpha tween.
+        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);        
+    }
 }
 
 

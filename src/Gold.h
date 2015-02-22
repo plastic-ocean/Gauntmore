@@ -12,6 +12,7 @@ public:
     SDL_Rect getBounds();
     
 private:
+    int _value;
     /**
      * Initializes position and sprite of Gold. Called by Unit's init() method.
      */

@@ -10,8 +10,8 @@
 /**
  * Constructor
  */
-Thing::Thing(){
-    setType("thing");    
+Thing::Thing() {
+    setType("thing");
 }
 
 /**
