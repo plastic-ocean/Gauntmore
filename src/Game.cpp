@@ -58,7 +58,7 @@ void Game::init() {
 //    }
 
     // Create chest
-    Vector2 chestLocation = Vector2(((32 * 15) / 2) + 1, (32 * 15) / 2);
+    Vector2 chestLocation = Vector2((64 * 6), (64 * 6));
 
     _chest = new Chest;
 
@@ -110,10 +110,12 @@ bool Game::detectCollision(int x, int y, int h, int w) {
         SDL_Rect unitRect;
         // these are adjusted for a skeleton sprite, we will need to make different ones for
         // different sprites
-        unitRect.x = unitPosition.x-3 ;
-        unitRect.y = unitPosition.y-3 ;
-        unitRect.h = 13;
-        unitRect.w = 13;
+        unitRect.x = unitPosition.x - 32;
+        unitRect.y = unitPosition.y - 32;
+        cout << "Unit Pos.x: " << unitPosition.x << endl;
+        cout << "Unit Pos.y: " << unitPosition.y << endl;
+        unitRect.h = 1;
+        unitRect.w = 1;
 
         const SDL_Rect *constUnitRect = &unitRect;
         // we also make sure that we are not collecting a collision with outself by doing a type check

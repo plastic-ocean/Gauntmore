@@ -73,12 +73,4 @@ void Chest::_interact(){
 void Chest::_update(const UpdateState &us){
     Vector2 isOpen;
     
-//    if (_game->getMove()->getDirection(dir)) {
-//        Vector2 pos = getPosition();
-//        dir = correctDirection( pos, dir );
-//        setFacing(dir);
-//        pos += dir * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
-//        setPosition(pos);
-//    }
-    
 }

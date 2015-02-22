@@ -62,6 +62,7 @@ void Player::interact(){
      their positions and based off that determine if we are in interacting distance.
     */
     
+    
     Vector2 playerPosition = getPosition();
     std::list<spUnit> units = _game->getUnits();
     

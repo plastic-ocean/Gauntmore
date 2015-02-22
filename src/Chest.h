@@ -17,31 +17,15 @@
 
 using namespace std;
 
-//enum Things {potion, gold};
-
 DECLARE_SMART(Chest, spChest);
 class Chest: public Thing {
     
 public:
     Chest();
     
-//    int getContents() {
-//        return _contents;
-//    }
-//
-//    void pushContents(spThing thing) {
-//        _contents.push_back(thing);
-//    }
     
 private:
- //   vector<spThing> _contents;
     spThing _contents;
-    
-//    spPotion _potion;
-//    spGold _gold;
-//    spThing cont
-    
-    
     
     /**
      * Interaction method for Chest.
