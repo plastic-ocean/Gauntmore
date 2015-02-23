@@ -8,14 +8,14 @@ HealthBar::HealthBar(Game *game) :_game(game), _health(1.0f) {
     _healthBar = new ProgressBar();
     _healthBar->setResAnim(resources.getResAnim("health"));
     _healthBar->setAnchor(Vector2(0.5f, 0.5f));
-    _healthBar->setPosition(74, 26);
+    _healthBar->setPosition(74, 20);
     _healthBar->setDirection(ProgressBar::dir_0);
     _healthBar->attachTo(_game);
     
     _healthBorder = new Sprite;
     _healthBorder->setResAnim(resources.getResAnim("health_border"));
     _healthBorder->setAnchor(Vector2(0.5f, 0.5f));
-    _healthBorder->setPosition(74, 26);
+    _healthBorder->setPosition(74, 20);
     _healthBorder->attachTo(_game);
 }
 

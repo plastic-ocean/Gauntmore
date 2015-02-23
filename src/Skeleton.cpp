@@ -23,10 +23,9 @@ SDL_Rect Skeleton::getBounds(){
  * Initializes a creatures position and sprite. Called by Unit's init() method.
  */
 void Skeleton::_init() {
-    
     // Initialize the stats.
     _hp = 3;
-    _attack = 0;
+    _attack = 2;
     _defense = 0;
     
     // Add sprite to the game scene view.

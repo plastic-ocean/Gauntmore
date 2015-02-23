@@ -7,12 +7,12 @@ GoldCount::GoldCount(Game *game):_game(game), _count(0) {
     _coin = new Sprite;
     _coin->setResAnim(resources.getResAnim("coin"));
     _coin->setAnchor(Vector2(0.5f, 0.5f));
-    _coin->setPosition(156, 26);
+    _coin->setPosition(156, 20);
     _coin->attachTo(_game);
     
     _goldCount = new TextField();
     _goldCount->setAnchor(Vector2(0.5f, 0.5f));
-    _goldCount->setPosition(196, 22);
+    _goldCount->setPosition(196, 18);
     _goldCount->attachTo(_game);
     
     TextStyle style;
