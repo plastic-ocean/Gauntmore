@@ -4,7 +4,7 @@
 /**
  * Constructor.
  */
-HealthBar::HealthBar(Game *game) :_game(game), _health(1.0f) {
+HealthBar::HealthBar(Game *game):_game(game), _health(1.0f) {
     _healthBar = new ProgressBar();
     _healthBar->setResAnim(resources.getResAnim("health"));
     _healthBar->setAnchor(Vector2(0.5f, 0.5f));

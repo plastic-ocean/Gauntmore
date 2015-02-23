@@ -331,56 +331,26 @@
 		04A57D391871FF8B0068B1E5 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				5395843A1A99A42D0080A994 /* Chest.cpp */,
-				5395843B1A99A42D0080A994 /* Chest.h */,
 				539584371A999D000080A994 /* CollisionDetector.cpp */,
 				539584381A999D000080A994 /* CollisionDetector.h */,
-				5395843C1A99A42D0080A994 /* Creature.cpp */,
-				5395843D1A99A42D0080A994 /* Creature.h */,
 				534097801A896C0A000434F6 /* Game.cpp */,
 				534097811A896C0A000434F6 /* Game.h */,
 				53BCF1171A8ED99F00BD6288 /* GameScene.cpp */,
 				53BCF1181A8ED99F00BD6288 /* GameScene.h */,
 				5359D5971A96C6E600AE6365 /* Gauntmore.cpp */,
 				5359D5981A96C6E600AE6365 /* Gauntmore.h */,
-				5395843E1A99A42D0080A994 /* Gold.cpp */,
-				5395843F1A99A42D0080A994 /* Gold.h */,
-				539584401A99A42D0080A994 /* GoldCount.cpp */,
-				539584411A99A42D0080A994 /* GoldCount.h */,
-				539584421A99A42D0080A994 /* GreaterThan.cpp */,
-				539584431A99A42D0080A994 /* GreaterThan.h */,
-				539584441A99A42D0080A994 /* HealthBar.cpp */,
-				539584451A99A42D0080A994 /* HealthBar.h */,
+				532878BC1A9BA07900228299 /* hud */,
 				534097841A896C0A000434F6 /* KeyboardInput.cpp */,
 				534097851A896C0A000434F6 /* KeyboardInput.h */,
 				5340977F1A896C0A000434F6 /* main.cpp */,
-				539584461A99A42D0080A994 /* Map.cpp */,
-				539584471A99A42D0080A994 /* Map.h */,
-				539584481A99A42D0080A994 /* MazeGen.cpp */,
-				539584491A99A42D0080A994 /* MazeGen.h */,
-				5395844A1A99A42D0080A994 /* PathFinder.cpp */,
-				5395844B1A99A42D0080A994 /* PathFinder.h */,
-				5395844C1A99A42D0080A994 /* PathNode.cpp */,
-				5395844D1A99A42D0080A994 /* PathNode.h */,
-				5395844E1A99A42D0080A994 /* Player.cpp */,
-				5395844F1A99A42D0080A994 /* Player.h */,
-				539584501A99A42D0080A994 /* Potion.cpp */,
-				539584511A99A42D0080A994 /* Potion.h */,
+				532878BD1A9BA09000228299 /* map */,
+				532878BB1A9BA06200228299 /* pathfinder */,
 				534097881A896C0A000434F6 /* res.cpp */,
 				534097891A896C0A000434F6 /* res.h */,
-				539584521A99A42D0080A994 /* Room.cpp */,
-				539584531A99A42D0080A994 /* Room.h */,
 				53BCF1191A8ED99F00BD6288 /* Scene.cpp */,
 				53BCF11A1A8ED99F00BD6288 /* Scene.h */,
-				539584541A99A42D0080A994 /* Skeleton.cpp */,
-				539584551A99A42D0080A994 /* Skeleton.h */,
-				532878B81A9A6AA700228299 /* Slime.cpp */,
-				532878B91A9A6AA700228299 /* Slime.h */,
-				539584561A99A42D0080A994 /* Thing.cpp */,
-				539584571A99A42D0080A994 /* Thing.h */,
 				5328787B1A99A6EB00228299 /* tmx */,
-				539584591A99A42D0080A994 /* Unit.cpp */,
-				5395845A1A99A42D0080A994 /* Unit.h */,
+				532878BE1A9BA15500228299 /* units */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -435,6 +405,68 @@
 			);
 			name = tmx;
 			path = src/tmx;
+			sourceTree = "<group>";
+		};
+		532878BB1A9BA06200228299 /* pathfinder */ = {
+			isa = PBXGroup;
+			children = (
+				539584421A99A42D0080A994 /* GreaterThan.cpp */,
+				539584431A99A42D0080A994 /* GreaterThan.h */,
+				5395844A1A99A42D0080A994 /* PathFinder.cpp */,
+				5395844B1A99A42D0080A994 /* PathFinder.h */,
+				5395844C1A99A42D0080A994 /* PathNode.cpp */,
+				5395844D1A99A42D0080A994 /* PathNode.h */,
+			);
+			name = pathfinder;
+			sourceTree = "<group>";
+		};
+		532878BC1A9BA07900228299 /* hud */ = {
+			isa = PBXGroup;
+			children = (
+				539584401A99A42D0080A994 /* GoldCount.cpp */,
+				539584411A99A42D0080A994 /* GoldCount.h */,
+				539584441A99A42D0080A994 /* HealthBar.cpp */,
+				539584451A99A42D0080A994 /* HealthBar.h */,
+			);
+			name = hud;
+			sourceTree = "<group>";
+		};
+		532878BD1A9BA09000228299 /* map */ = {
+			isa = PBXGroup;
+			children = (
+				539584461A99A42D0080A994 /* Map.cpp */,
+				539584471A99A42D0080A994 /* Map.h */,
+				539584481A99A42D0080A994 /* MazeGen.cpp */,
+				539584491A99A42D0080A994 /* MazeGen.h */,
+				539584521A99A42D0080A994 /* Room.cpp */,
+				539584531A99A42D0080A994 /* Room.h */,
+			);
+			name = map;
+			sourceTree = "<group>";
+		};
+		532878BE1A9BA15500228299 /* units */ = {
+			isa = PBXGroup;
+			children = (
+				5395843A1A99A42D0080A994 /* Chest.cpp */,
+				5395843B1A99A42D0080A994 /* Chest.h */,
+				5395843C1A99A42D0080A994 /* Creature.cpp */,
+				5395843D1A99A42D0080A994 /* Creature.h */,
+				5395843E1A99A42D0080A994 /* Gold.cpp */,
+				5395843F1A99A42D0080A994 /* Gold.h */,
+				5395844E1A99A42D0080A994 /* Player.cpp */,
+				5395844F1A99A42D0080A994 /* Player.h */,
+				539584501A99A42D0080A994 /* Potion.cpp */,
+				539584511A99A42D0080A994 /* Potion.h */,
+				539584541A99A42D0080A994 /* Skeleton.cpp */,
+				539584551A99A42D0080A994 /* Skeleton.h */,
+				532878B81A9A6AA700228299 /* Slime.cpp */,
+				532878B91A9A6AA700228299 /* Slime.h */,
+				539584561A99A42D0080A994 /* Thing.cpp */,
+				539584571A99A42D0080A994 /* Thing.h */,
+				539584591A99A42D0080A994 /* Unit.cpp */,
+				5395845A1A99A42D0080A994 /* Unit.h */,
+			);
+			name = units;
 			sourceTree = "<group>";
 		};
 		5359D5831A96BAE000AE6365 /* Products */ = {

@@ -51,8 +51,8 @@ void Player::_init() {
  */
 void Player::damage() {
     _hp--;
-    _game->updateHealth(0.05f); // TODO this float needs to reflect the percentage of total health that a single hit inflicts
-    if (_hp == 0) {
+    _game->updateHealth(-0.1f); // TODO this float needs to reflect the percentage of total health that a single hit inflicts
+    if (_hp <= 0) {
         // The create is dead, hide it with an alpha tween.
         _dead = true;
         _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);

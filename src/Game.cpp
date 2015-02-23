@@ -49,7 +49,7 @@ Game::Game() {
     _slime->init(location, this);
     
     // Create player
-    _player = new Player(20, 1, 1);
+    _player = new Player(10, 1, 1);
     _player->init(_getEntrance(), this);
     
     // TODO Create enemy creatures (with random loot!)
