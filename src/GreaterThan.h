@@ -1,22 +1,22 @@
+////
+////  GreaterThan.h
+////  gauntmore_macosx
+////
+////  Created by David Wenzel on 2/18/15.
+////  Copyright (c) 2015 oxygine. All rights reserved.
+////
 //
-//  GreaterThan.h
-//  gauntmore_macosx
+//#ifndef __gauntmore_macosx__GreaterThan__
+//#define __gauntmore_macosx__GreaterThan__
+//#include "PathNode.h"
+//#include "PathFinder.h"
+//#include "Game.h"
 //
-//  Created by David Wenzel on 2/18/15.
-//  Copyright (c) 2015 oxygine. All rights reserved.
+//class PathNode;
+//class GreaterThan {
+//public:
+//    bool operator()( PathNode &a, PathNode &b ){return a.getCost() > b.getCost(); }
+//    
+//};
 //
-
-#ifndef __gauntmore_macosx__GreaterThan__
-#define __gauntmore_macosx__GreaterThan__
-#include "PathNode.h"
-#include "PathFinder.h"
-#include "Game.h"
-
-class PathNode;
-class GreaterThan {
-public:
-    bool operator()( PathNode &a, PathNode &b ){return a.getCost() > b.getCost(); }
-    
-};
-
-#endif /* defined(__gauntmore_macosx__GreaterThan__) */
+//#endif /* defined(__gauntmore_macosx__GreaterThan__) */

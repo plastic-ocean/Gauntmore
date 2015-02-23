@@ -339,6 +339,8 @@
 				534097D11A898396000434F6 /* Map.h */,
 				5365DD861A93BE28000A7893 /* MazeGen.cpp */,
 				5365DD871A93BE28000A7893 /* MazeGen.h */,
+				48A142A81A9BAE8C00BCE447 /* NodeMinHeap.cpp */,
+				48A142A91A9BAE8C00BCE447 /* NodeMinHeap.h */,
 				5359D5681A96A90F00AE6365 /* PathFinder.cpp */,
 				5359D5691A96A90F00AE6365 /* PathFinder.h */,
 				5359D56A1A96A90F00AE6365 /* PathNode.cpp */,
@@ -360,8 +362,6 @@
 				534097CB1A896C3F000434F6 /* tmx */,
 				534097A91A896C0A000434F6 /* Unit.cpp */,
 				534097AA1A896C0A000434F6 /* Unit.h */,
-				48A142A81A9BAE8C00BCE447 /* NodeMinHeap.cpp */,
-				48A142A91A9BAE8C00BCE447 /* NodeMinHeap.h */,
 			);
 			name = src;
 			sourceTree = "<group>";

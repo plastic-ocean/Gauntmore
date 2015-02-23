@@ -9,10 +9,12 @@
 #include "NodeMinHeap.h"
 
 NodeMinHeap::NodeMinHeap() {
+    theHeap = *new vector<PathNode>;
     //default constructor, do nothing
 }
 
 NodeMinHeap::NodeMinHeap( PathNode head ) {
+    theHeap = *new vector<PathNode>;
     this->theHeap.push_back(head);
 }
 NodeMinHeap::~NodeMinHeap(){}
@@ -47,6 +49,10 @@ void NodeMinHeap::bubbleUp(int pos) {
         swap(parent, pos);
     }
     bubbleUp(parent);
+}
+
+bool NodeMinHeap::empty() {
+    return theHeap.empty();
 }
 
 void NodeMinHeap::filterDown(int pos) {

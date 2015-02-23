@@ -11,11 +11,13 @@
 
 #include <stdio.h>
 #include <queue>
+#include "NodeMinHeap.h"
 #include "Game.h"
 #include "Map.h"
 #include "PathNode.h"
 #include "GreaterThan.h"
 
+class NodeMinHeap;
 class PathNode;
 DECLARE_SMART(PathFinder, spPathFinder);
 class PathFinder : public Object {
@@ -33,13 +35,14 @@ public:
 private:
     Vector2 target;
     Vector2 source;
-    std::priority_queue< PathNode, vector<PathNode>, GreaterThan > openList;
+    NodeMinHeap* openList;
     vector<PathNode> closedList;
     int mapSize = 64;   //*** FIX ME ***
     void scanSurround( PathNode node );
     bool inClosedList( PathNode node );
     bool atExit( PathNode );
     vector<Vector2> makePath(PathNode);
+    
     
 };
 

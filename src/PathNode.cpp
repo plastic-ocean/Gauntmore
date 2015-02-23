@@ -60,7 +60,7 @@ PathNode PathNode::getParent() {
 void PathNode::setParent( PathNode parent ) {
     this->parent = &parent;
 }
-bool PathNode::operator>(PathNode &node ) {
-    return this->cost > node.cost;
-}
+//bool PathNode::operator>(PathNode &node ) {
+//    return this->cost > node.cost;
+//}
 

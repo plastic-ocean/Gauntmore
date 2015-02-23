@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include "PathNode.h"
 #include "Game.h"
-
+class PathNode;
 class NodeMinHeap {
 public:
     NodeMinHeap();
@@ -20,13 +20,14 @@ public:
     ~NodeMinHeap();
     void insertNode(PathNode);
     PathNode getMinNode();
+    bool empty();
+
     
 private:
-    vector<PathNode> theHeap;
+    std::vector<PathNode> theHeap;
     void bubbleUp(int);
     void filterDown(int);
     void swap(int,int);
-    
     
     
     
