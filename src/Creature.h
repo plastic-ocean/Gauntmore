@@ -1,5 +1,11 @@
 #pragma once
 #include "Unit.h"
+#include "PathFinder.h"
+#include "Game.h"
+#include "Player.h"
+
+
+DECLARE_SMART(PathFinder, spPathFinder);
 
 DECLARE_SMART(Creature, spCreature);
 class Creature: public Unit {
@@ -13,6 +19,9 @@ public:
     void damage();
     
 private:
+    spPathFinder findPath;
+    
+    
     /**
      * Initializes a creatures position and sprite. Called by Unit's init() method.
      */

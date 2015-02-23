@@ -9,7 +9,7 @@
 #include <cmath>
 #include "PathFinder.h"
 #include "game.h"
-#include "pathNode.h"
+#include "PathNode.h"
 
 /*
         basic implementation of A* pathfinding algorithm
@@ -32,7 +32,7 @@ PathFinder::PathFinder() {
 }
 
 vector<Vector2> PathFinder::aStar(Vector2 start, Vector2 finish ) {
-    pathNode first = *new pathNode( start, 0, findHeuristic(start) );
+    PathNode first = *new PathNode( start, 0, findHeuristic(start) );
     this->target = finish;
     this->source = start;
     openList.push(first);
@@ -59,7 +59,7 @@ int PathFinder::findHeuristic( Vector2 curLoc ) {
 }
 
 
-void PathFinder::scanSurround( pathNode node ) {
+void PathFinder::scanSurround( PathNode node ) {
     Vector2 temp = node.getLocation() ;
     temp.x -= mapSize;
     temp.y -= mapSize;
@@ -72,7 +72,7 @@ void PathFinder::scanSurround( pathNode node ) {
         for ( int j = 0; j < 2; j++ ) {
             flip *= (-1);
             if (!inClosedList(node) ) {
-                openList.push(*new pathNode( temp,node.getTotal()+(summ+flip), findHeuristic(temp), node ) );
+                openList.push(*new PathNode( temp,node.getTotal()+(summ+flip), findHeuristic(temp), node ) );
             }
             temp.x += mapSize;
         }
@@ -82,7 +82,7 @@ void PathFinder::scanSurround( pathNode node ) {
 
     
 }
-bool PathFinder::atExit( pathNode node ) {
+bool PathFinder::atExit( PathNode node ) {
     Vector2 location = node.getLocation();
     int fudge = 64;
     int diffX = abs( location.x - target.x );
@@ -94,7 +94,7 @@ bool PathFinder::atExit( pathNode node ) {
 
 
 
-bool PathFinder::inClosedList( pathNode node ) {
+bool PathFinder::inClosedList( PathNode node ) {
     int size = closedList.size();
     for (int i = 0; i<size;i++ ) {
         if ( closedList[i].getLocation() == node.getLocation() ) return true;
@@ -103,7 +103,7 @@ bool PathFinder::inClosedList( pathNode node ) {
     
 }
 
-vector<Vector2> PathFinder::makePath(pathNode node ) {
+vector<Vector2> PathFinder::makePath(PathNode node ) {
     vector<Vector2> tempVect;
 
     while (node.getLocation() != source ) {

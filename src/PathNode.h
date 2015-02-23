@@ -1,24 +1,25 @@
 //
-//  pathNode.h
+//  PathNode.h
 //  gauntmore_macosx
 //
 //  Created by David Wenzel on 2/17/15.
 //  Copyright (c) 2015 oxygine. All rights reserved.
 //
 
-#ifndef __gauntmore_macosx__pathNode__
-#define __gauntmore_macosx__pathNode__
+#ifndef __gauntmore_macosx__PathNode__
+#define __gauntmore_macosx__PathNode__
 
 #include <stdio.h>
 #include "Map.h"
 #include "Creature.h"
 #include "Game.h"
 
-class pathNode {
+class PathNode {
 public:
-    pathNode( Vector2, int, int );
-    pathNode( Vector2, int, int, pathNode );
-    ~pathNode();
+    PathNode();
+    PathNode( Vector2, int, int );
+    PathNode( Vector2, int, int, PathNode );
+    ~PathNode();
     const Vector2 getLocation();
     const int getHeuristic();
     const int getCost();
@@ -27,16 +28,16 @@ public:
     void setCost(int);
     void calculateTotal();
     void setLocation(Vector2);
-    bool operator>(  pathNode& node );
-    pathNode getParent();
-    void setParent(pathNode);
+    bool operator>(  PathNode& node );
+    PathNode getParent();
+    void setParent(PathNode);
     
 private:
     Vector2 location;
     int heuristic; //estimated cost from current to target
     int cost; //current cost from start to target
     int total; //cost + heuristic
-    pathNode *parent;//not Java, pointers are not universal
+    PathNode *parent;//not Java, pointers are not universal
     
     
     
@@ -46,4 +47,4 @@ private:
 
 
 
-#endif /* defined(__gauntmore_macosx__pathNode__) */
+#endif /* defined(__gauntmore_macosx__PathNode__) */

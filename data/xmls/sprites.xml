@@ -15,7 +15,9 @@
         <image file="adventurer_up.png" />
         <image file="adventurer_left.png" />
         <image file="adventurer_right.png" />
-        
+
+<image file="skeleton.png" rows = "21" cols = "13" />
+
         <image file="adventurer_move_down.png" cols = "9" />
         <image file="adventurer_move_up.png" cols = "9" />
         <image file="adventurer_move_left.png" cols = "9" />

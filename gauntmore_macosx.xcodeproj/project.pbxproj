@@ -19,6 +19,7 @@
 		483D59121A996581000CECE0 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 483D59111A996581000CECE0 /* OpenAL.framework */; };
 		483D59191A9965D9000CECE0 /* HealthBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 483D59141A9965D9000CECE0 /* HealthBar.cpp */; };
 		483D591A1A9965D9000CECE0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 483D59161A9965D9000CECE0 /* main.cpp */; };
+		48A142AA1A9BAE8C00BCE447 /* NodeMinHeap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48A142A81A9BAE8C00BCE447 /* NodeMinHeap.cpp */; };
 		530CFA6A1A90547100B4CD51 /* Room.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA681A90547100B4CD51 /* Room.cpp */; };
 		530CFA8F1A906FED00B4CD51 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA6E1A906FED00B4CD51 /* base64.cpp */; };
 		530CFA901A906FED00B4CD51 /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA701A906FED00B4CD51 /* tinyxml2.cpp */; };
@@ -48,8 +49,8 @@
 		534097D21A898396000434F6 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 534097D01A898396000434F6 /* Map.cpp */; };
 		5359D5721A96A90F00AE6365 /* Chest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5621A96A90F00AE6365 /* Chest.cpp */; };
 		5359D5731A96A90F00AE6365 /* Gold.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5641A96A90F00AE6365 /* Gold.cpp */; };
-		5359D5751A96A90F00AE6365 /* pathFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5681A96A90F00AE6365 /* pathFinder.cpp */; };
-		5359D5761A96A90F00AE6365 /* pathNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D56A1A96A90F00AE6365 /* pathNode.cpp */; };
+		5359D5751A96A90F00AE6365 /* PathFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5681A96A90F00AE6365 /* PathFinder.cpp */; };
+		5359D5761A96A90F00AE6365 /* PathNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D56A1A96A90F00AE6365 /* PathNode.cpp */; };
 		5359D5771A96A90F00AE6365 /* Potion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D56C1A96A90F00AE6365 /* Potion.cpp */; };
 		5359D5781A96A90F00AE6365 /* Skeleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D56E1A96A90F00AE6365 /* Skeleton.cpp */; };
 		5359D5791A96A90F00AE6365 /* Thing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5701A96A90F00AE6365 /* Thing.cpp */; };
@@ -147,6 +148,8 @@
 		483D59141A9965D9000CECE0 /* HealthBar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HealthBar.cpp; path = src/HealthBar.cpp; sourceTree = "<group>"; };
 		483D59151A9965D9000CECE0 /* HealthBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HealthBar.h; path = src/HealthBar.h; sourceTree = "<group>"; };
 		483D59161A9965D9000CECE0 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = "<group>"; };
+		48A142A81A9BAE8C00BCE447 /* NodeMinHeap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NodeMinHeap.cpp; path = src/NodeMinHeap.cpp; sourceTree = "<group>"; };
+		48A142A91A9BAE8C00BCE447 /* NodeMinHeap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NodeMinHeap.h; path = src/NodeMinHeap.h; sourceTree = "<group>"; };
 		530CFA681A90547100B4CD51 /* Room.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Room.cpp; path = src/Room.cpp; sourceTree = "<group>"; };
 		530CFA691A90547100B4CD51 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Room.h; path = src/Room.h; sourceTree = "<group>"; };
 		530CFA6E1A906FED00B4CD51 /* base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = base64.cpp; path = src/tmx/base64.cpp; sourceTree = "<group>"; };
@@ -205,10 +208,10 @@
 		5359D5641A96A90F00AE6365 /* Gold.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Gold.cpp; path = src/Gold.cpp; sourceTree = "<group>"; };
 		5359D5651A96A90F00AE6365 /* Gold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gold.h; path = src/Gold.h; sourceTree = "<group>"; };
 		5359D5671A96A90F00AE6365 /* GreaterThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GreaterThan.h; path = src/GreaterThan.h; sourceTree = "<group>"; };
-		5359D5681A96A90F00AE6365 /* pathFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pathFinder.cpp; path = src/pathFinder.cpp; sourceTree = "<group>"; };
-		5359D5691A96A90F00AE6365 /* pathFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pathFinder.h; path = src/pathFinder.h; sourceTree = "<group>"; };
-		5359D56A1A96A90F00AE6365 /* pathNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pathNode.cpp; path = src/pathNode.cpp; sourceTree = "<group>"; };
-		5359D56B1A96A90F00AE6365 /* pathNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pathNode.h; path = src/pathNode.h; sourceTree = "<group>"; };
+		5359D5681A96A90F00AE6365 /* PathFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PathFinder.cpp; path = src/PathFinder.cpp; sourceTree = "<group>"; };
+		5359D5691A96A90F00AE6365 /* PathFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PathFinder.h; path = src/PathFinder.h; sourceTree = "<group>"; };
+		5359D56A1A96A90F00AE6365 /* PathNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PathNode.cpp; path = src/PathNode.cpp; sourceTree = "<group>"; };
+		5359D56B1A96A90F00AE6365 /* PathNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PathNode.h; path = src/PathNode.h; sourceTree = "<group>"; };
 		5359D56C1A96A90F00AE6365 /* Potion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Potion.cpp; path = src/Potion.cpp; sourceTree = "<group>"; };
 		5359D56D1A96A90F00AE6365 /* Potion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Potion.h; path = src/Potion.h; sourceTree = "<group>"; };
 		5359D56E1A96A90F00AE6365 /* Skeleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Skeleton.cpp; path = src/Skeleton.cpp; sourceTree = "<group>"; };
@@ -336,10 +339,10 @@
 				534097D11A898396000434F6 /* Map.h */,
 				5365DD861A93BE28000A7893 /* MazeGen.cpp */,
 				5365DD871A93BE28000A7893 /* MazeGen.h */,
-				5359D5681A96A90F00AE6365 /* pathFinder.cpp */,
-				5359D5691A96A90F00AE6365 /* pathFinder.h */,
-				5359D56A1A96A90F00AE6365 /* pathNode.cpp */,
-				5359D56B1A96A90F00AE6365 /* pathNode.h */,
+				5359D5681A96A90F00AE6365 /* PathFinder.cpp */,
+				5359D5691A96A90F00AE6365 /* PathFinder.h */,
+				5359D56A1A96A90F00AE6365 /* PathNode.cpp */,
+				5359D56B1A96A90F00AE6365 /* PathNode.h */,
 				534097861A896C0A000434F6 /* Player.cpp */,
 				534097871A896C0A000434F6 /* Player.h */,
 				5359D56C1A96A90F00AE6365 /* Potion.cpp */,
@@ -357,6 +360,8 @@
 				534097CB1A896C3F000434F6 /* tmx */,
 				534097A91A896C0A000434F6 /* Unit.cpp */,
 				534097AA1A896C0A000434F6 /* Unit.h */,
+				48A142A81A9BAE8C00BCE447 /* NodeMinHeap.cpp */,
+				48A142A91A9BAE8C00BCE447 /* NodeMinHeap.h */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -559,7 +564,7 @@
 				530CFA911A906FED00B4CD51 /* TmxEllipse.cpp in Sources */,
 				5359D5731A96A90F00AE6365 /* Gold.cpp in Sources */,
 				5359D5781A96A90F00AE6365 /* Skeleton.cpp in Sources */,
-				5359D5751A96A90F00AE6365 /* pathFinder.cpp in Sources */,
+				5359D5751A96A90F00AE6365 /* PathFinder.cpp in Sources */,
 				5359D5721A96A90F00AE6365 /* Chest.cpp in Sources */,
 				534097D21A898396000434F6 /* Map.cpp in Sources */,
 				530CFA971A906FED00B4CD51 /* TmxObjectGroup.cpp in Sources */,
@@ -568,7 +573,7 @@
 				534097B21A896C0A000434F6 /* res.cpp in Sources */,
 				530CFA8F1A906FED00B4CD51 /* base64.cpp in Sources */,
 				530CFA991A906FED00B4CD51 /* TmxPolyline.cpp in Sources */,
-				5359D5761A96A90F00AE6365 /* pathNode.cpp in Sources */,
+				5359D5761A96A90F00AE6365 /* PathNode.cpp in Sources */,
 				534097AC1A896C0A000434F6 /* Creature.cpp in Sources */,
 				530CFA951A906FED00B4CD51 /* TmxMap.cpp in Sources */,
 				530CFA931A906FED00B4CD51 /* TmxImageLayer.cpp in Sources */,
@@ -583,6 +588,7 @@
 				5359D5791A96A90F00AE6365 /* Thing.cpp in Sources */,
 				53BCF11B1A8ED99F00BD6288 /* GameScene.cpp in Sources */,
 				53BCF11C1A8ED99F00BD6288 /* Scene.cpp in Sources */,
+				48A142AA1A9BAE8C00BCE447 /* NodeMinHeap.cpp in Sources */,
 				534097AE1A896C0A000434F6 /* Game.cpp in Sources */,
 				5365DD881A93BE28000A7893 /* MazeGen.cpp in Sources */,
 			);

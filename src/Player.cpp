@@ -216,7 +216,6 @@ void Player::moveLeft() {
 void Player::_checkTween() {
     if (_hasTween) {
         _sprite->removeTween(_moveTween);
-//        _sprite->removeTween(_attackTween);
     }
     _hasTween = true;
 }

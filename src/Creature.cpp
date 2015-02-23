@@ -45,6 +45,8 @@ void Creature::_init() {
  */
 void Creature::_update(const UpdateState &us) {
     // move the creature toward the player
+    findPath->aStar(this->getPosition(), _game->getPlayer()->getPosition() );
+    
 }
 
 

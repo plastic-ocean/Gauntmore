@@ -63,6 +63,11 @@ void Game::init() {
     _chest = new Chest;
 
     _chest->init(chestLocation, this);
+    
+    _skeleton = new Skeleton();
+    _skeleton->init(Vector2(64*5,64*5), this );
+    
+    
    
     //location for skeleton
     

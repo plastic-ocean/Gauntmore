@@ -13,11 +13,12 @@
 #include <queue>
 #include "Game.h"
 #include "Map.h"
-#include "pathNode.h"
+#include "PathNode.h"
 #include "GreaterThan.h"
 
-
-class PathFinder {
+class PathNode;
+DECLARE_SMART(PathFinder, spPathFinder);
+class PathFinder : public Object {
     
     
 public:
@@ -32,13 +33,13 @@ public:
 private:
     Vector2 target;
     Vector2 source;
-    std::priority_queue< pathNode, vector<pathNode>, GreaterThan > openList;
-    vector<pathNode> closedList;
+    std::priority_queue< PathNode, vector<PathNode>, GreaterThan > openList;
+    vector<PathNode> closedList;
     int mapSize = 64;   //*** FIX ME ***
-    void scanSurround( pathNode node );
-    bool inClosedList( pathNode node );
-    bool atExit( pathNode );
-    vector<Vector2> makePath(pathNode);
+    void scanSurround( PathNode node );
+    bool inClosedList( PathNode node );
+    bool atExit( PathNode );
+    vector<Vector2> makePath(PathNode);
     
 };
 
