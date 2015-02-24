@@ -44,7 +44,8 @@ void Potion::_init() {
 void Potion::_interact() {
     if (!isDead() && _game->getPlayer()->isDamaged()) {
         // add health to player
-        _game->updateHealth(0.1f);
+//        _game->updateHealth(0.1f);
+        _game->getPlayer()->updateHealth(2);
         
         // stop collision detection
         _dead = true;
