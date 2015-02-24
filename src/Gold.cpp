@@ -16,11 +16,15 @@ SDL_Rect Gold::getBounds() {
     return _bounds;
 }
 
-void Gold::_init() {
+void Gold::addSprite() {
     _sprite = new Sprite;
     _sprite->addTween(TweenAnim(resources.getResAnim("gold")), 500, -1);;
     _sprite->attachTo(_view);
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
+}
+
+void Gold::_init() {
+    addSprite();
 }
 
 

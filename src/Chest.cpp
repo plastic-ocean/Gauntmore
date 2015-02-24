@@ -2,6 +2,7 @@
 #include "Gold.h"
 #include "Potion.h"
 #include "Game.h"
+#include "Map.h"
 #include "KeyboardInput.h"
 #include "res.h"
 #include "Tmx.h"
@@ -29,10 +30,7 @@ SDL_Rect Chest::getBounds(){
  * Initializes a Chest position and sprite. Called by Unit's init() method.
  */
 void Chest::_init() {
-    _sprite = new Sprite;
-    _sprite->setResAnim(resources.getResAnim("chest"));
-    _sprite->attachTo(_view);
-    _sprite->setAnchor(Vector2(0.5f, 0.5f));
+    addSprite();
     
     int randContents = rand() % 2;
     if (randContents == 0) {
@@ -44,6 +42,12 @@ void Chest::_init() {
 
 }
 
+void Chest::addSprite() {
+    _sprite = new Sprite;
+    _sprite->setResAnim(resources.getResAnim("chest"));
+    _sprite->attachTo(_view);
+    _sprite->setAnchor(Vector2(0.5f, 0.5f));
+}
 
 /**
  * Interaction method for Chest.
@@ -58,6 +62,7 @@ void Chest::_interact() {
         _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
         
         _contents->init(getPosition(), _game);
+        _game->getMap()->getRoom()->getUnits()->push_back(_contents);
     }
 }
 

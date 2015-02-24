@@ -52,6 +52,7 @@ void Player::_init() {
 void Player::damage() {
     _hp--;
     _game->updateHealth(-0.1f); // TODO this float needs to reflect the percentage of total health that a single hit inflicts
+    cout << "hp " << _hp << endl;
     if (_hp <= 0) {
         // The create is dead, hide it with an alpha tween.
         _dead = true;
@@ -249,14 +250,14 @@ Vector2 Player::_correctDirection(Vector2 position, Vector2 direction) {
     spriteRect.h = tileSize - 14;
     spriteRect.w = tileSize - 24;
     
-    std::list<spUnit> *units = _game->getMap()->getRoom()->getUnits();
+//    std::list<spUnit> *units = _game->getMap()->getRoom()->getUnits();
     
     if (_collisionDetector->detectWalls(_game->getTiles(), spriteRect) ||
-        _collisionDetector->detectUnits(units, spriteRect)) {
+        _collisionDetector->detectUnits(_game->getMap()->getRoom()->getUnits(), spriteRect)) {
         direction.x = 0;
     }
     if (_collisionDetector->detectWalls(_game->getTiles(), spriteRect) ||
-        _collisionDetector->detectUnits(units, spriteRect)) {
+        _collisionDetector->detectUnits(_game->getMap()->getRoom()->getUnits(), spriteRect)) {
         direction.y = 0;
     }
     

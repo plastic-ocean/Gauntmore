@@ -22,16 +22,19 @@ SDL_Rect Potion::getBounds() {
     return _bounds;
 }
 
+void Potion::addSprite() {
+    _sprite = new Sprite;
+    _sprite->setResAnim(resources.getResAnim("potion"));
+    _sprite->attachTo(_view);
+    _sprite->setAnchor(Vector2(0.5f, 0.5f));
+}
+
 
 /**
  * Initializes position and sprite of Potion. Called by Unit's init() method.
  */
 void Potion::_init() {
-    _sprite = new Sprite;
-    _sprite->setResAnim(resources.getResAnim("potion"));
-    _sprite->attachTo(_view);
-    _sprite->setAnchor(Vector2(0.5f, 0.5f));
-    
+    addSprite();
 }
 
 

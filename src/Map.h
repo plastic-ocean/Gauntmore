@@ -12,7 +12,7 @@ DECLARE_SMART(Map, spMap);
 class Map : public Object {
 
 public:
-    Map(int size);
+    Map(Game *game, int size);
     
     /**
      * Get map entrance.
@@ -94,6 +94,7 @@ public:
     }
 
 private:
+    Game *_game;
     spRoom _room;
     vector<vector<spRoom>> _roomMap;
     Vector2 _entrance;

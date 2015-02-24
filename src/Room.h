@@ -11,7 +11,7 @@ class Room : public Object {
     
 public:
     Room();
-    Room(int type, int size, vector<bool> exitBools);
+    Room(Game *game, int type, int size, vector<bool> exitBools);
 
     typedef list<spUnit> Units;
 
@@ -133,6 +133,8 @@ public:
 
 private:
     const int tileSize = 64;
+    
+    Game *_game;
     
     Tmx::Map *_tileMap;
     vector<SDL_Rect> _tiles;

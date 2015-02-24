@@ -2,6 +2,7 @@
 #include <fstream>
 #include <random>
 #include "Room.h"
+#include "Chest.h"
 
 using namespace std;
 
@@ -9,8 +10,9 @@ enum RoomType {deadend, straight, turn, branch, intersection};
 
 Room::Room() {}
 
-Room::Room(int type, int size, vector<bool> exitBools):
-        _type(type), _size(size), _wallListSize(0), _floorListSize(0), _top(0), _right(0), _bottom(0), _left(0), _exitBools(exitBools) {
+Room::Room(Game *game, int type, int size, vector<bool> exitBools):
+           _game(game), _type(type), _size(size), _wallListSize(0), _floorListSize(0),
+           _top(0), _right(0), _bottom(0), _left(0), _exitBools(exitBools) {
     // Seed rand.
     random_device randomDevice;
     srand(randomDevice.operator()());
@@ -375,7 +377,7 @@ void Room::_drawOpenSpaces(int row, int column, bool isColumn) {
             // Right of hall
             
             // between col + 1 and _size - 2
-            roomRow = _getRand(column + 1, _size - 3);
+            roomCol = _getRand(column + 1, _size - 3);
             // between randCol + 1 and _size - 2
             roomWidth = _getRand(roomCol + 1, _size - 2);
             
@@ -399,7 +401,7 @@ void Room::_drawOpenSpaces(int row, int column, bool isColumn) {
             // between 1 and row - 1
             roomRow = _getRand(1, row - 2);
             // between randRow + 1 and row - 1
-            roomWidth = _getRand(roomRow + 1, row - 1);
+            roomHeight = _getRand(roomRow + 1, row - 1);
             
             // between 1 and _size - 2
             roomCol = _getRand(1, _size - 3);
@@ -433,11 +435,19 @@ void Room::_drawOpenSpaces(int row, int column, bool isColumn) {
             _drawHallCol(connectHallCol, row + 1, roomRow);
         }
     }
-    // spChest chest = new Chest;
-    // chestCol = random between roomCol and roomWidth
-    // chestRow = random between roomRow and roomHeight
-    // place chest at chestCol, chestRow
-    // set contents
+    
+    // Create a chest 1/3 of the time
+    int randChoice = _getRand(0, 2);
+    if (randChoice == 0) {
+        int chestRow = _getRand(roomRow, roomHeight) * 64;
+        int chestCol = _getRand(roomCol, roomWidth) * 64;
+        spChest chest = new Chest;
+        chest->init(Vector2(chestRow, chestCol), _game);
+        chest->setLocation(Vector2(chestRow, chestCol));
+        _units.push_back(chest);
+    }
+    
+    
 }
 
 

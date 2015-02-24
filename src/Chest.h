@@ -15,6 +15,8 @@ public:
     
     virtual SDL_Rect getBounds();
     
+    virtual void addSprite();
+    
 private:
     spThing _contents;
     bool _isOpen;

@@ -10,7 +10,7 @@ Slime::Slime() {
 }
 
 
-SDL_Rect Slime::getBounds(){
+SDL_Rect Slime::getBounds() {
     Vector2 unitPosition = getPosition();
     _bounds.x = unitPosition.x + 20;
     _bounds.y = unitPosition.y + 15;
@@ -46,16 +46,16 @@ void Slime::_init() {
 //void Slime::attack() {
 //    switch (_facing) {
 //        case up:
-//            _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_attack_up")), 300);
+//            _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("slime_up")), 500);
 //            break;
 //        case right:
-//            _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_attack_right")), 300);
+//            _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("slime_right")), 500);
 //            break;
 //        case down:
-//            _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_attack_down")), 300);
+//            _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("slime_down")), 500);
 //            break;
 //        case left:
-//            _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_attack_left")), 300);
+//            _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("slime_left")), 500);
 //            break;
 //        default:
 //            break;
@@ -66,7 +66,7 @@ void Slime::_init() {
 /**
  * Plays the move animation.
  */
-//void Slime::move(Facing facing) {
+//void Slime::move() {
 //    _checkTween();
 //    switch (_facing) {
 //        case up:
@@ -99,10 +99,15 @@ void Slime::_interact() {
 
 
 /**
- * Updates the creature every frame. Called by Units update() method.
+ * Updates the creature every frame. Called by Unit::update.
  *
  * @us is the UpdateStatus sent by Unit's update method.
  */
 void Slime::_update(const UpdateState &us) {
-    // move the creature toward the player
+    // look around
+    // if player is adjacent to creature:
+    //     turn to face player
+    //     attack player
+    // else:
+    //     move toward player
 }

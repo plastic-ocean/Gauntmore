@@ -11,6 +11,8 @@ public:
     
     SDL_Rect getBounds();
     
+    virtual void addSprite();
+    
 private:
     /**
      * Initializes position and sprite of Potion. Called by Unit's init() method.

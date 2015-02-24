@@ -16,12 +16,14 @@ bool CollisionDetector::detectWalls(std::vector<SDL_Rect> tiles, SDL_Rect sprite
     for (SDL_Rect tileRect : tiles) {
         const SDL_Rect *tile = &tileRect;
         if (SDL_HasIntersection(sprite, tile)) {
+//            cout << "tile collision" << endl;
             isCollision = true;
         }
     }
     
     return isCollision;
 }
+
 
 bool CollisionDetector::detectUnits(list<spUnit> *units, SDL_Rect spriteRect) {
     bool isCollision = false;
@@ -31,6 +33,7 @@ bool CollisionDetector::detectUnits(list<spUnit> *units, SDL_Rect spriteRect) {
             SDL_Rect unitRect = unit->getBounds();
             const SDL_Rect *constUnitRect = &unitRect;
             if (SDL_HasIntersection(sprite, constUnitRect)) {
+//                cout << "unit collision" << endl;
                 isCollision = true;
 //                std::cout << "collision with unit: " << unit->getType() << std::endl;
             }

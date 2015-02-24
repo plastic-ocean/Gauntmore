@@ -11,6 +11,8 @@ public:
     
     SDL_Rect getBounds();
     
+    virtual void addSprite();
+    
 private:
     int _value;
     /**

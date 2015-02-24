@@ -80,9 +80,19 @@ public:
     void setType(string type);
     
     virtual SDL_Rect getBounds() = 0;
+    
+    virtual void addSprite() = 0;
+    
+    void setLocation(Vector2 location) {
+        _location = location;
+    }
+    
+    Vector2 getLocation() {
+        return _location;
+    }
 
 protected:
-    // Each Unit has a view that is attached to the game.
+    Vector2 _location;
     SDL_Rect _bounds;
     spActor _view;
     spSprite _sprite;

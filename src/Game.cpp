@@ -31,26 +31,30 @@ Game::Game() {
     // Set the size of the scene to the size of the display.
     setSize(getStage()->getSize());
     
-    // Size is the number of tiles (with 32 px tiles; 15 tiles = 480 px; 20 tiles = 640 px)
+    // Size is the number of tiles
     int size = 13;
     
     // Create map
-    _map = new Map(size);
+    _map = new Map(this, size);
     _renderMap();
     _createTiles();
     
-    // Create chest
-    Vector2 chestLocation = Vector2((64 * 6), (64 * 6));
-    _chest = new Chest;
-    _chest->init(chestLocation, this);    
-    
-    Vector2 location = Vector2((64 * 7), (64 * 7));
-    _slime = new Slime;
-    _slime->init(location, this);
-    
+    list<spUnit> *units = _map->getRoom()->getUnits();
+    for (Units::iterator i = units->begin(); i != units->end(); ) {
+        spUnit unit = *i;
+        if (unit->getType() != "player") {
+            unit->attachUnit();
+            unit->setPosition(unit->getLocation());
+            unit->addSprite();
+            //            cout << unit->getType() << " x: " << unit->getPosition().x << " y: " <<  unit->getPosition().y << endl;
+            ++i;
+        }
+    }
+ 
     // Create player
     _player = new Player(10, 1, 1);
     _player->init(_getEntrance(), this);
+    _map->getRoom()->getUnits()->push_back(_player);
     
     // TODO Create enemy creatures (with random loot!)
     
@@ -86,6 +90,7 @@ void Game::stopPlayer() {
 * Switches viewable map to the room in the direction of the given edge in the maze.
 */
 void Game::switchRoom(int edge) {
+    
     // Change to a new room in the maze.
     _map->changeRoom(edge);
     _renderMap();
@@ -119,11 +124,27 @@ void Game::switchRoom(int edge) {
 
 //    cout << "switch position: " << playerCol << ", " << playerRow << endl;
 
+    // Setup units
+    list<spUnit> *units = _map->getRoom()->getUnits();
+    for (Units::iterator i = units->begin(); i != units->end(); ) {
+        spUnit unit = *i;
+        if (unit->getType() == "player") {
+            i = units->erase(i);
+        } else {
+            unit->attachUnit();
+            unit->setPosition(unit->getLocation());
+            unit->addSprite();
+//            cout << unit->getType() << " x: " << unit->getPosition().x << " y: " <<  unit->getPosition().y << endl;
+            ++i;
+        }
+    }
+    
     // Setup player
-    _player->detachUnit();
+//    _player->detachUnit();
     _player->attachUnit();
     _player->addSprite();
     _player->setPosition(Vector2(playerCol, playerRow));
+    _map->getRoom()->getUnits()->push_back(_player);
     
     // Update UI
     _healthBar->render();
@@ -133,7 +154,7 @@ void Game::switchRoom(int edge) {
 
 void Game::pushUnit(spUnit unit) {
     _map->getRoom()->pushUnit(unit);
-//    _units.push_back(unit);
+//    _units->push_back(unit);
 }
 
 
@@ -147,11 +168,12 @@ spMap Game::getMap() {
 }
 
 
-//list<spUnit> Game::getUnits() {
-//    return _map->getRoom()->getUnits();
+//list<spUnit>* Game::getUnits() {
+//    return _units;
+////    return _map->getRoom()->getUnits();
 //}
-
-
+//
+//
 //void Game::removeUnit(Units::iterator i) {
 //    _map->getRoom()->removeUnit(i);
 //}
@@ -233,14 +255,16 @@ int Game::getTileSize() {
  * @us is the UpdateStatus sent by the global update method.
  */
 void Game::doUpdate(const UpdateState &us) {
+    list<spUnit> *units = _map->getRoom()->getUnits();
     // Iterate through the unit list and call their update method. Then check for death.
-    for (Units::iterator i = _map->getRoom()->getUnits()->begin(); i != _map->getRoom()->getUnits()->end(); ) {
+    for (Units::iterator i = units->begin(); i != units->end(); ) {
         spUnit unit = *i;
         unit->update(us);
-        
+//        cout << "update " << unit->getType() << endl;
         if (unit->isDead()) {
+//            cout << "erase " << unit->getType() << endl;
             // If it is dead remove it from list.
-            i = _map->getRoom()->getUnits()->erase(i);
+            i = units->erase(i);
         } else {
             ++i;
         }
@@ -254,7 +278,7 @@ void Game::doUpdate(const UpdateState &us) {
 void Game::_renderMap() {
     _tileMap = new Tmx::Map();
     
-    _tileMap->ParseFile("tmx/room01.tmx");
+    _tileMap->ParseFile("tmx/room.tmx");
 
     _map->getRoom()->setTileMap(_tileMap);
     
@@ -327,8 +351,9 @@ Vector2 Game::_getEntrance() {
     return location;
 }
 
+
 //void Game::_setUnits() {
-//    _units = static_cast<Units>(_map->getRoom()->getUnits());
+//    _units = _map->getRoom()->getUnits();
 //}
 
 

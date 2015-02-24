@@ -23,7 +23,7 @@ void Unit::init(const Vector2 &pos, Game *game) {
     setPosition(pos);
     
     // Add to Game's units list.
-    _game->pushUnit(this);
+//    _game->pushUnit(this);
 
 	// Virtual method that is overload by children.
 	_init();
