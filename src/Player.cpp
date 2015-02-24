@@ -212,6 +212,10 @@ void Player::addSprite() {
     _sprite->attachTo(_view);
 }
 
+bool Player::isDamaged() {
+    return  _hp != _maxHealth;
+}
+
 
 /**
  * Initializes the player's position and sprite. Called by Unit's init() method.
