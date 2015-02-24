@@ -53,12 +53,14 @@ void Chest::_interact() {
         // The chest is open, hide it with an alpha tween.
         _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
         
-        _contents->init(getPosition(), _game);
+        
+        _contents->init(getLocation(), _game);
+        _contents->setLocation(getLocation());
         _game->getMap()->getRoom()->getUnits()->push_back(_contents);
     }
 }
 
-
+//
 void Chest::_setContents() {
     int randContents = rand() % 2;
     if (randContents == 0) {

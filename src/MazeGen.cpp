@@ -57,21 +57,21 @@ vector<vector<spRoom>> MazeGen::generate() {
             down = false;
             left = false;
 
-            if (_maze[i][j] != '@' && _maze[i][j] != 'x') {
+            if (_maze[i][j] != '@' ) {
                 // See if there are surrounding rooms.
-                if (i - 1 > 0 && _maze[i - 1][j] != '@' && _maze[i - 1][j] != 'x') {
+                if (i - 1 > 0 && _maze[i - 1][j] != '@' ) {
                     // Look up
                     up = true;
                 }
-                if (j + 1 < _size && _maze[i][j + 1] != '@' && _maze[i][j + 1] != 'x') {
+                if (j + 1 < _size && _maze[i][j + 1] != '@' ) {
                     // Look right
                     right = true;
                 }
-                if (i + 1 < _size && _maze[i + 1][j] != '@' && _maze[i + 1][j] != 'x') {
+                if (i + 1 < _size && _maze[i + 1][j] != '@' ) {
                     // Look down
                     down = true;
                 }
-                if (j - 1 > 0 && _maze[i][j - 1] != '@' && _maze[i][j - 1] != 'x') {
+                if (j - 1 > 0 && _maze[i][j - 1] != '@' ) {
                     // Look left
                     left = true;
                 }

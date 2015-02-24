@@ -55,6 +55,8 @@ public:
      */
     void addSprite();
     
+    bool isDamaged();
+    
 protected:
     const int tileSize = 64;
     
