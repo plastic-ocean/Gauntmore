@@ -14,10 +14,11 @@
  * Constructor.
  */
 Player::Player(int hp, int attack, int defense):_hasTween(false), _facing(down) {
-    _collisionDetector = new CollisionDetector(_game);
+    _collisionDetector = new CollisionDetector();
     setType("player");
     
     _hp = hp;
+    _maxHealth = hp;
     _attack = attack;
     _defense = defense;
 }
@@ -45,17 +46,35 @@ Player::Facing Player::getFacing() {
 
 
 /**
- * Reduces the player's hit points.
+ * Updates the player's health.
+ *
+ * @health is the number to add to _hp.
+ * @return true if it was updated, false if it was not.
  */
-void Player::damage() {
-    _hp--;
-    _game->updateHealth(-0.1f); // TODO this float needs to reflect the percentage of total health that a single hit inflicts
-    cout << "hp " << _hp << endl;
+bool Player::updateHealth(int health) {
+    bool isUpdated = false;
+    
+    if (_hp + health < _maxHealth) {
+        _hp += health;
+        
+        // Convert health to a decimal percentage for the health bar.
+        float healthPercent = health * 0.1;
+        if (healthPercent > 1.0) {
+            healthPercent = 1.0;
+        }
+        
+        _game->updateHealth(healthPercent);
+        
+        isUpdated = true;
+    }
+    
     if (_hp <= 0) {
         // The player is dead, hide it with an alpha tween.
         _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
         _dead = true;
     }
+    
+    return isUpdated;
 }
 
 

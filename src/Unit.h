@@ -103,6 +103,7 @@ protected:
     Game *_game;
     
     // Stats
+    int _maxHealth;
     int _hp;
     int _attack;
     int _defense;

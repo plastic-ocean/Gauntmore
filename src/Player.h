@@ -19,11 +19,14 @@ public:
      * Get the current facing.
      */
     Facing getFacing();
-
+    
     /**
-     * Reduces the player's hit points.
+     * Updates the player's health.
+     *
+     * @health is the number to add to _hp.
+     * @return true if it was updated, false if it was not.
      */
-    void damage();
+    bool updateHealth(int health);
     
     /**
      * Interacts with Things or Creatures.

@@ -3,7 +3,7 @@
 #include "Player.h"
 #include "Unit.h"
 
-CollisionDetector::CollisionDetector(Game *game):_game(game) {}
+CollisionDetector::CollisionDetector() {}
 
 
 bool CollisionDetector::detectWalls(std::vector<SDL_Rect> tiles, SDL_Rect spriteRect) {

@@ -44,10 +44,6 @@ Game::Game() {
         spUnit unit = *i;
         if (unit->getType() != "player") {
             unit->init(unit->getLocation(), this);
-//            unit->attachUnit();
-//            unit->setPosition(unit->getLocation());
-//            unit->addSprite();
-//            cout << unit->getType() << " x: " << unit->getPosition().x << " y: " <<  unit->getPosition().y << endl;
         }
     }
  
@@ -124,9 +120,6 @@ void Game::switchRoom(int edge) {
             i = units->erase(i);
         } else {
             unit->init(unit->getLocation(), this);
-//            unit->attachUnit();
-//            unit->setPosition(unit->getLocation());
-//            unit->addSprite();
             ++i;
         }
     }
