@@ -10,18 +10,20 @@ public:
     
     enum Facing {up, right, down, left};
     
+    /**
+     * Get the bounds used for collision detection.
+     */
+    virtual SDL_Rect getBounds();
+    
+    /**
+     * Get the current facing.
+     */
     Facing getFacing();
 
     /**
      * Reduces the player's hit points.
      */
     void damage();
-    
-    /**
-     * Add sprite to the game scene.
-     */
-    void addSprite();
-    void removeSprite();
     
     /**
      * Interacts with Things or Creatures.
@@ -35,24 +37,54 @@ public:
     
     /**
      * Plays the move animation.
+     *
+     * @facing is a int. 0: up, 1: right, 2: down, 3: left
      */
     void move(int facing);
-
+    
+    /**
+     * Remove the tween from the sprite.
+     */
     void removeTween();
     
-    virtual SDL_Rect getBounds();
+    /**
+     * Add sprite to the game scene.
+     */
+    void addSprite();
     
 protected:
-    Facing _facing;
-    
-    int i = 0;
-    spCollisionDetector _collisionDetector;
     const int tileSize = 64;
+    
+    Facing _facing;
+    spCollisionDetector _collisionDetector;
     spTween _moveTween;
     spTween _attackTween;
     bool _hasTween;
     
+    /**
+     * Initializes the player's position and sprite. Called by Unit::init.
+     */
+    void _init();
+    
+    /**
+     * Updates the player every frame.
+     *
+     * @us is the UpdateStatus sent by the global update method.
+     */
+    void _update(const UpdateState &us);
+    
+    /**
+     * Checks whether the sprite already has a tween before trying to removing it.
+     */
     void _checkTween();
+    
+    /**
+     * Checks for a collision between the players rect and the unit's rect.
+     *
+     * @rect is an SDL_Rect for the player.
+     * @unit is the unit to check against.
+     */
+    bool _isCollision(SDL_Rect rect, spUnit unit);
     
     /**
      * Corrects the movement direction by checking for collision with wall tiles or other Units and adjusting the
@@ -63,23 +95,5 @@ protected:
      */
     Vector2 _correctDirection(Vector2 position, Vector2 direction);
     
-    /**
-     * Initializes the player's position and sprite. Called by Unit's init() method.
-     */
-	void _init();
-    
-    void _setFacing(Vector2 dir);
-
-    bool _isExit(Vector2 position);
-    
-    bool _isCollision(SDL_Rect rect, spUnit unit);
-    
-    /**
-     * Updates the player every frame.
-     *
-     * @us is the UpdateStatus sent by the global update method.
-     */
-	void _update(const UpdateState &us);
-
-
+//    void _setFacing(Vector2 dir);
 };

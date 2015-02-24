@@ -40,14 +40,13 @@ Game::Game() {
     _createTiles();
     
     list<spUnit> *units = _map->getRoom()->getUnits();
-    for (Units::iterator i = units->begin(); i != units->end(); ) {
+    for (Units::iterator i = units->begin(); i != units->end(); ++i) {
         spUnit unit = *i;
         if (unit->getType() != "player") {
             unit->attachUnit();
             unit->setPosition(unit->getLocation());
             unit->addSprite();
-            //            cout << unit->getType() << " x: " << unit->getPosition().x << " y: " <<  unit->getPosition().y << endl;
-            ++i;
+//            cout << unit->getType() << " x: " << unit->getPosition().x << " y: " <<  unit->getPosition().y << endl;
         }
     }
  
@@ -55,10 +54,6 @@ Game::Game() {
     _player = new Player(10, 1, 1);
     _player->init(_getEntrance(), this);
     _map->getRoom()->getUnits()->push_back(_player);
-    
-    // TODO Create enemy creatures (with random loot!)
-    
-    // TODO Create chests (with even more random loot!)
     
     // Handle input
     _move = new KeyboardInput(this);
@@ -90,12 +85,10 @@ void Game::stopPlayer() {
 * Switches viewable map to the room in the direction of the given edge in the maze.
 */
 void Game::switchRoom(int edge) {
-    
     // Change to a new room in the maze.
     _map->changeRoom(edge);
     _renderMap();
     _createTiles();
-//    _setUnits();
 
     // Get player entrance position
     int playerCol = 1;
@@ -122,8 +115,6 @@ void Game::switchRoom(int edge) {
             break;
     }
 
-//    cout << "switch position: " << playerCol << ", " << playerRow << endl;
-
     // Setup units
     list<spUnit> *units = _map->getRoom()->getUnits();
     for (Units::iterator i = units->begin(); i != units->end(); ) {
@@ -134,7 +125,6 @@ void Game::switchRoom(int edge) {
             unit->attachUnit();
             unit->setPosition(unit->getLocation());
             unit->addSprite();
-//            cout << unit->getType() << " x: " << unit->getPosition().x << " y: " <<  unit->getPosition().y << endl;
             ++i;
         }
     }
@@ -154,7 +144,6 @@ void Game::switchRoom(int edge) {
 
 void Game::pushUnit(spUnit unit) {
     _map->getRoom()->pushUnit(unit);
-//    _units->push_back(unit);
 }
 
 
@@ -166,17 +155,6 @@ spPlayer Game::getPlayer() {
 spMap Game::getMap() {
     return _map;
 }
-
-
-//list<spUnit>* Game::getUnits() {
-//    return _units;
-////    return _map->getRoom()->getUnits();
-//}
-//
-//
-//void Game::removeUnit(Units::iterator i) {
-//    _map->getRoom()->removeUnit(i);
-//}
 
 
 /**
@@ -297,7 +275,6 @@ void Game::_renderMap() {
                 // Draw the tile.
                 spSprite sprite = new Sprite;
                 sprite->setResAnim(resources.getResAnim(name));
-//                sprite->setScale(1.25f);
                 sprite->setX(drawX);
                 sprite->setY(drawY);
                 sprite->attachTo(this);
@@ -342,7 +319,6 @@ void Game::_createTiles() {
 }
 
 
-
 Vector2 Game::_getEntrance() {
     Vector2 location = _map->getRoom()->getEntrance();
     location.x *= tileSize;
@@ -350,64 +326,3 @@ Vector2 Game::_getEntrance() {
     
     return location;
 }
-
-
-//void Game::_setUnits() {
-//    _units = _map->getRoom()->getUnits();
-//}
-
-
-
-
-/**
- * Detects collisions between a sprite and the walls.
- *
- * @x is the x coordinate to check.
- * @y is the y coordinate to check.
- * @h is the height coordinate to check.
- * @w is the width coordinate to check.
- * @return true if there is a collision and false if there is not
- */
-
-//// method moved to CollisionDetector Class
-//
-//bool Game::detectCollision(int x, int y, int h, int w) {
-//    bool isCollision = false;
-//    SDL_Rect spriteRect;
-//    spriteRect.x = x + 10;
-//    spriteRect.y = y + 12;
-//    spriteRect.h = h - 14;
-//    spriteRect.w = w - 24;
-//    const SDL_Rect *sprite = &spriteRect;
-//
-//    // Check for collision between the sprite and each tile
-//
-//    for (SDL_Rect tileRect : _tiles) {
-//        const SDL_Rect *tile = &tileRect;
-//        if (SDL_HasIntersection(sprite, tile)) {
-//            isCollision = true;
-//        }
-//    }
-//
-//    for (spUnit unit : _units){
-//        Vector2 unitPosition = unit->getPosition();
-//        SDL_Rect unitRect;
-//        // these are adjusted for a skeleton sprite, we will need to make different ones for
-//        // different sprites
-//        unitRect.x = unitPosition.x - 32;
-//        unitRect.y = unitPosition.y - 32;
-//        cout << "Unit Pos.x: " << unitPosition.x << endl;
-//        cout << "Unit Pos.y: " << unitPosition.y << endl;
-//        unitRect.h = 1;
-//        unitRect.w = 1;
-//
-//        const SDL_Rect *constUnitRect = &unitRect;
-//        // we also make sure that we are not collecting a collision with outself by doing a type check
-//        if (SDL_HasIntersection(sprite, constUnitRect) && typeid(*unit).name() != "6Player") {
-//            isCollision = true;
-//            std::cout << "collision with unit: " << typeid(*unit).name() << std::endl;
-//        }
-//    }
-//
-//    return isCollision;
-//}

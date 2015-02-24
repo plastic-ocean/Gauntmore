@@ -23,6 +23,9 @@ Player::Player(int hp, int attack, int defense):_hasTween(false), _facing(down) 
 }
 
 
+/**
+ * Get the bounds used for collision detection.
+ */
 SDL_Rect Player::getBounds() {
     SDL_Rect spriteRect;
     spriteRect.x += 10;
@@ -33,16 +36,11 @@ SDL_Rect Player::getBounds() {
 }
 
 
+/**
+ * Get the current facing.
+ */
 Player::Facing Player::getFacing() {
     return _facing;
-}
-
-
-/**
- * Initializes the player's position and sprite. Called by Unit's init() method.
- */
-void Player::_init() {
-    addSprite();
 }
 
 
@@ -54,9 +52,9 @@ void Player::damage() {
     _game->updateHealth(-0.1f); // TODO this float needs to reflect the percentage of total health that a single hit inflicts
     cout << "hp " << _hp << endl;
     if (_hp <= 0) {
-        // The create is dead, hide it with an alpha tween.
-        _dead = true;
+        // The player is dead, hide it with an alpha tween.
         _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
+        _dead = true;
     }
 }
 
@@ -82,51 +80,39 @@ void Player::interact() {
 
         switch(_facing) {
             case up:
-                std::cout << "check interact up" << std::endl;
                 rect.x = playerPosition.x;
                 rect.y = playerPosition.y - 16;
                 rect.h = 16;
                 rect.w = 64;
                 if (_isCollision(rect, unit)) {
-                    std::cout << "interact facing up " << i << std::endl;
                     unit->interact();
-                    i++;
                 }
                 break;
             case right:
-                std::cout << "check interact right" << std::endl;
                 rect.x = playerPosition.x + 64;
                 rect.y = playerPosition.y;
                 rect.h = 64;
                 rect.w = 64;
                 if (_isCollision(rect, unit)) {
-                    std::cout << "interact facing right " << i << std::endl;
                     unit->interact();
-                    i++;
                 }
                 break;
             case down:
-                std::cout << "check interact down" << std::endl;
                 rect.x = playerPosition.x;
                 rect.y = playerPosition.y + 64;
                 rect.h = 16;
                 rect.w = 64;
                 if (_isCollision(rect, unit)) {
-                    std::cout << "interact facing down " << i << std::endl;
                     unit->interact();
-                    i++;
                 }
                 break;
             case left:
-                std::cout << "check interact left" << std::endl;
                 rect.x = playerPosition.x - 16;
                 rect.y = playerPosition.y;
                 rect.h = 64;
                 rect.w = 16;
                 if (_isCollision(rect, unit)) {
-                    std::cout << "interact facing left " << i << std::endl;
                     unit->interact();
-                    i++;
                 }
                 break;
             default:
@@ -135,18 +121,6 @@ void Player::interact() {
         
     }
     
-}
-
-
-/**
- * Adds the player sprite to the map.
- */
-void Player::addSprite() {
-    _sprite = new Sprite;
-//    _sprite->setScale(1.25f);
-    _sprite->setResAnim(resources.getResAnim("adventurer_move_down"));
-    _sprite->setAnchor(Vector2(0.5f, 0.5f));
-    _sprite->attachTo(_view);
 }
 
 
@@ -198,6 +172,9 @@ void Player::move(int facing) {
 }
 
 
+/**
+ * Remove the tween from the sprite.
+ */
 void Player::removeTween() {
     if (_hasTween) {
         _sprite->removeTween(_moveTween);
@@ -206,6 +183,47 @@ void Player::removeTween() {
 }
 
 
+/**
+ * Adds the player sprite to the map.
+ */
+void Player::addSprite() {
+    _sprite = new Sprite;
+    _sprite->setResAnim(resources.getResAnim("adventurer_move_down"));
+    _sprite->setAnchor(Vector2(0.5f, 0.5f));
+    _sprite->attachTo(_view);
+}
+
+
+/**
+ * Initializes the player's position and sprite. Called by Unit's init() method.
+ */
+void Player::_init() {
+    addSprite();
+}
+
+
+/**
+ * Updates the player every frame.
+ *
+ * @us is the UpdateStatus sent by Unit's update method.
+ */
+void Player::_update(const UpdateState &us) {
+    Vector2 direction;
+    if (_game->getMove()->getDirection(direction)) {
+        Vector2 position = getPosition();
+        direction = _correctDirection(position, direction);
+        position += direction * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
+        
+        if (!_game->isExit(position)) {
+            setPosition(position);
+        }
+    }
+}
+
+
+/**
+ * Checks whether the sprite already has a tween before trying to removing it.
+ */
 void Player::_checkTween() {
     if (_hasTween) {
         _sprite->removeTween(_moveTween);
@@ -214,18 +232,20 @@ void Player::_checkTween() {
 }
 
 
+/**
+ * Checks for a collision between the players rect and the unit's rect.
+ *
+ * @rect is an SDL_Rect for the player.
+ * @unit is the unit to check against.
+ */
 bool Player::_isCollision(SDL_Rect thisRect, spUnit unit) {
     bool isCollision = false;
     SDL_Rect otherRect = unit->getBounds();
     const SDL_Rect *playerRect = &thisRect;
     const SDL_Rect *unitRect = &otherRect;
     
-    cout << "player: x: " << playerRect->x << ", y:" << playerRect->y << ", h: " << playerRect->h << ", w: " << playerRect->w << endl;
-    cout << "unit: x: " << unitRect->x << ", y:" << unitRect->y << ", h: " << unitRect->h << ", w: " << unitRect->w << endl;
-    
     if (SDL_HasIntersection(playerRect, unitRect)) {
         unit->interact();
-        i++;
         isCollision = true;
     }
     
@@ -250,8 +270,6 @@ Vector2 Player::_correctDirection(Vector2 position, Vector2 direction) {
     spriteRect.h = tileSize - 14;
     spriteRect.w = tileSize - 24;
     
-//    std::list<spUnit> *units = _game->getMap()->getRoom()->getUnits();
-    
     if (_collisionDetector->detectWalls(_game->getTiles(), spriteRect) ||
         _collisionDetector->detectUnits(_game->getMap()->getRoom()->getUnits(), spriteRect)) {
         direction.x = 0;
@@ -263,28 +281,6 @@ Vector2 Player::_correctDirection(Vector2 position, Vector2 direction) {
     
     return direction;
 }
-
-
-/**
- * Updates the player every frame.
- *
- * @us is the UpdateStatus sent by Unit's update method.
- */
-void Player::_update(const UpdateState &us) {
-	Vector2 direction;
-	if (_game->getMove()->getDirection(direction)) {
-		Vector2 position = getPosition();
-        direction = _correctDirection( position, direction );
-		position += direction * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
-
-        if (!_game->isExit(position)) {
-            setPosition(position);
-        }
-    }
-}
-
-
-
 
 
 //void Player::_setFacing(Vector2 dir) {

@@ -443,11 +443,9 @@ void Room::_drawOpenSpaces(int row, int column, bool isColumn) {
         int chestCol = _getRand(roomCol, roomWidth) * 64;
         spChest chest = new Chest;
         chest->init(Vector2(chestRow, chestCol), _game);
-        chest->setLocation(Vector2(chestRow, chestCol));
+        chest->setLocation(Vector2(chestCol, chestRow));
         _units.push_back(chest);
     }
-    
-    
 }
 
 
