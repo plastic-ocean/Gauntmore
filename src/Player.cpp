@@ -13,7 +13,7 @@
 /**
  * Constructor.
  */
-Player::Player(int hp, int attack, int defense):_hasTween(false), _facing(down) {
+Player::Player(int hp, int attack, int defense):_hasTween(false), _facing(down), _isMoving(false) {
     _collisionDetector = new CollisionDetector();
     setType("player");
     
@@ -170,6 +170,7 @@ void Player::attack() {
  * Plays the move animation.
  */
 void Player::move(int facing) {
+    _isMoving = true;
     _facing = static_cast<Facing>(facing);
     _checkTween();
     switch (_facing) {
@@ -192,11 +193,35 @@ void Player::move(int facing) {
 
 
 /**
+ * Sets the sprite's standing image.
+ */
+void Player::stand() {
+    switch (_facing) {
+        case up:
+            _sprite->setResAnim(resources.getResAnim("adventurer_move_up"));
+            break;
+        case right:
+            _sprite->setResAnim(resources.getResAnim("adventurer_move_right"));
+            break;
+        case down:
+            _sprite->setResAnim(resources.getResAnim("adventurer_move_down"));
+            break;
+        case left:
+            _sprite->setResAnim(resources.getResAnim("adventurer_move_left"));
+            break;
+        default:
+            break;
+    }
+}
+
+
+/**
  * Remove the tween from the sprite.
  */
 void Player::removeTween() {
     if (_hasTween) {
         _sprite->removeTween(_moveTween);
+        _isMoving = false;
     }
     _hasTween = false;
 }
@@ -207,7 +232,13 @@ void Player::removeTween() {
  */
 void Player::addSprite() {
     _sprite = new Sprite;
-    _sprite->setResAnim(resources.getResAnim("adventurer_move_down"));
+    
+    if (_isMoving) {
+        move(_facing);
+    } else {
+        stand();
+    }
+
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
     _sprite->attachTo(_view);
 }

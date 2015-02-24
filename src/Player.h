@@ -46,6 +46,11 @@ public:
     void move(int facing);
     
     /**
+     * Sets the sprite's standing image.
+     */
+    void stand();
+    
+    /**
      * Remove the tween from the sprite.
      */
     void removeTween();
@@ -65,6 +70,7 @@ protected:
     spTween _moveTween;
     spTween _attackTween;
     bool _hasTween;
+    bool _isMoving;
     
     /**
      * Initializes the player's position and sprite. Called by Unit::init.
