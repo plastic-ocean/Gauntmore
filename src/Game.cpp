@@ -35,7 +35,7 @@ Game::Game() {
     int size = 13;
     
     // Create map
-    _map = new Map(this, size);
+    _map = new Map(size);
     _renderMap();
     _createTiles();
     
@@ -43,9 +43,10 @@ Game::Game() {
     for (Units::iterator i = units->begin(); i != units->end(); ++i) {
         spUnit unit = *i;
         if (unit->getType() != "player") {
-            unit->attachUnit();
-            unit->setPosition(unit->getLocation());
-            unit->addSprite();
+            unit->init(unit->getLocation(), this);
+//            unit->attachUnit();
+//            unit->setPosition(unit->getLocation());
+//            unit->addSprite();
 //            cout << unit->getType() << " x: " << unit->getPosition().x << " y: " <<  unit->getPosition().y << endl;
         }
     }
@@ -122,9 +123,10 @@ void Game::switchRoom(int edge) {
         if (unit->getType() == "player") {
             i = units->erase(i);
         } else {
-            unit->attachUnit();
-            unit->setPosition(unit->getLocation());
-            unit->addSprite();
+            unit->init(unit->getLocation(), this);
+//            unit->attachUnit();
+//            unit->setPosition(unit->getLocation());
+//            unit->addSprite();
             ++i;
         }
     }

@@ -9,9 +9,9 @@ using namespace std;
 /**
  * Constructor.
  */
-Map::Map(Game *game, int size):_game(game) {
+Map::Map(int size) {
     // TODO mini-map: store two copies of maze matrix and change all tiles in one to "explored" only when visited by player
-    spMazeGen mazeGen = new MazeGen(game, size);
+    spMazeGen mazeGen = new MazeGen(size);
     _roomMap = mazeGen->generate();
     
     _entrance = mazeGen->getEntrance();
@@ -27,11 +27,6 @@ Map::Map(Game *game, int size):_game(game) {
 //    _room->printMap();
 //    cout << "entrance: " << _row << ", " << _col << endl;
 }
-
-
-//int Map::getSize(){
-//    return _size * 32;
-//}
 
 
 void Map::changeRoom(int edge) {

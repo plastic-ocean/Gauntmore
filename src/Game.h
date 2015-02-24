@@ -93,7 +93,7 @@ protected:
     spKeyboardInput _move;
     spPlayer _player;
 
-    Units _units;
+//    Units _units;
     
     spSkeleton _skeleton;
     spSlime _slime;

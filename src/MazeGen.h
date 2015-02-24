@@ -10,7 +10,7 @@ DECLARE_SMART(MazeGen, spMazeGen);
 class MazeGen : public Object {
 
 public:
-    MazeGen(Game *game, int size);
+    MazeGen(int size);
 
     vector<vector<spRoom>> generate();
 

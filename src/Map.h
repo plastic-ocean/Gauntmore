@@ -12,7 +12,7 @@ DECLARE_SMART(Map, spMap);
 class Map : public Object {
 
 public:
-    Map(Game *game, int size);
+    Map(int size);
     
     /**
      * Get map entrance.

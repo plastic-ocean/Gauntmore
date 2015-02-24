@@ -31,15 +31,7 @@ SDL_Rect Chest::getBounds(){
  */
 void Chest::_init() {
     addSprite();
-    
-    int randContents = rand() % 2;
-    if (randContents == 0) {
-        _contents = new Potion();
-    }
-    else{
-        _contents = new Gold();
-    }
-
+    _setContents();
 }
 
 void Chest::addSprite() {
@@ -67,6 +59,15 @@ void Chest::_interact() {
 }
 
 
+void Chest::_setContents() {
+    int randContents = rand() % 2;
+    if (randContents == 0) {
+        _contents = new Potion();
+    }
+    else{
+        _contents = new Gold();
+    }
+}
 
 /**
  * Updates the Chest every frame. Called by Units update() method.

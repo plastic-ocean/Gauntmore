@@ -11,7 +11,7 @@ class Room : public Object {
     
 public:
     Room();
-    Room(Game *game, int type, int size, vector<bool> exitBools);
+    Room(int type, int size, vector<bool> exitBools);
 
     typedef list<spUnit> Units;
 

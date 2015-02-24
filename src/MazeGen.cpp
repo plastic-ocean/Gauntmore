@@ -9,7 +9,7 @@ using namespace std;
 enum RoomType {deadend, straight, turn, branch, intersection};
 
 
-MazeGen::MazeGen(Game *game, int size):_game(game), _size(size), _wallListSize(0), _floorListSize(0) {
+MazeGen::MazeGen(int size):_size(size), _wallListSize(0), _floorListSize(0) {
     // Seed rand.
     random_device randomDevice;
     srand(randomDevice.operator()());
@@ -89,25 +89,25 @@ vector<vector<spRoom>> MazeGen::generate() {
                         (!up && !right && down && !left) || (!up && !right && !down && left)) {
                     // dead end
                     type = deadend;
-                    room = new Room(_game, deadend, _size, exitBools);
+                    room = new Room(deadend, _size, exitBools);
                 } else if ((up && !right && down && !left) || (!up && right && !down && left)) {
                     // straight
                     type = straight;
-                    room = new Room(_game, straight, _size, exitBools);
+                    room = new Room(straight, _size, exitBools);
                 } else if ((up && right && !down && !left) || (up && !right && !down && left) ||
                         (!up && right && down && !left) || (!up && !right && down && left)) {
                     // turn
                     type = turn;
-                    room = new Room(_game, turn, _size, exitBools);
+                    room = new Room(turn, _size, exitBools);
                 } else if ((!up && right && down && left) || (up && !right && down && left) ||
                         (up && right && !down && left) || (up && right && down && !left)) {
                     // branch
                     type = branch;
-                    room = new Room(_game, branch, _size, exitBools);
+                    room = new Room(branch, _size, exitBools);
                 } else if (up && right && down && left) {
                     // intersection
                     type = intersection;
-                    room = new Room(_game, intersection, _size, exitBools);
+                    room = new Room(intersection, _size, exitBools);
                 }
 //                cout << "maze room: " << i << ", " << j << "; type: " << type << endl;
 

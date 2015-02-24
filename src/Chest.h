@@ -31,6 +31,8 @@ private:
      */
     void _interact();
     
+    void _setContents();
+    
     /**
      * Updates the Chest every frame. Called by Units update() method.
      *

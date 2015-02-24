@@ -10,8 +10,8 @@ enum RoomType {deadend, straight, turn, branch, intersection};
 
 Room::Room() {}
 
-Room::Room(Game *game, int type, int size, vector<bool> exitBools):
-           _game(game), _type(type), _size(size), _wallListSize(0), _floorListSize(0),
+Room::Room(int type, int size, vector<bool> exitBools):
+           _type(type), _size(size), _wallListSize(0), _floorListSize(0),
            _top(0), _right(0), _bottom(0), _left(0), _exitBools(exitBools) {
     // Seed rand.
     random_device randomDevice;
@@ -442,7 +442,7 @@ void Room::_drawOpenSpaces(int row, int column, bool isColumn) {
         int chestRow = _getRand(roomRow, roomHeight) * 64;
         int chestCol = _getRand(roomCol, roomWidth) * 64;
         spChest chest = new Chest;
-        chest->init(Vector2(chestRow, chestCol), _game);
+//        chest->init(Vector2(chestRow, chestCol), _game);
         chest->setLocation(Vector2(chestCol, chestRow));
         _units.push_back(chest);
     }
