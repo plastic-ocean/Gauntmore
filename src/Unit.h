@@ -1,6 +1,8 @@
 #pragma once
 #include "oxygine-framework.h"
+
 using namespace oxygine;
+using namespace std;
 
 class Game;
 DECLARE_SMART(Unit, spUnit);
@@ -26,7 +28,7 @@ public:
      *  Interaction method for Unit
      *
      */
-//    void interact();
+    void interact();
     
     /**
      * Gets the unit's position.
@@ -52,7 +54,9 @@ public:
      *
      * @returns true if unit is dead and false if it is not.
      */
-    const bool isDead() {return _dead;}
+    const bool isDead() {
+        return _dead;
+    }
 
     int getHp() {
         return _hp;
@@ -70,17 +74,36 @@ public:
      * Reduces the Unit's hit points. Overload this for each child.
      */
     virtual void damage(){}
+    
+    string getType();
+    
+    void setType(string type);
+    
+    virtual SDL_Rect getBounds() = 0;
+    
+    virtual void addSprite() = 0;
+    
+    void setLocation(Vector2 location) {
+        _location = location;
+    }
+    
+    Vector2 getLocation() {
+        return _location;
+    }
 
 protected:
-    // Each Unit has a view that is attached to the game.
+    Vector2 _location;
+    SDL_Rect _bounds;
     spActor _view;
     spSprite _sprite;
     
+    string _type;
+    
     // A pointer to the game.
     Game *_game;
-
-protected:
-// Stats
+    
+    // Stats
+    int _maxHealth;
     int _hp;
     int _attack;
     int _defense;
@@ -93,14 +116,16 @@ protected:
     /**
      * Initializes a child of Unit. Called by Unit::init() for all children.
      */
-	virtual void _init(){}
+	virtual void _init() {}
+    
+    virtual void _interact() {}
     
     /**
      * Updates a child of Unit every frame. Called by Unit::update() for all children.
      *
      * @us is the UpdateStatus sent by Unit's update method.
      */
-	virtual void _update(const UpdateState &us){}
+	virtual void _update(const UpdateState &us) {}
     
     void _move(const UpdateState &us);
 };

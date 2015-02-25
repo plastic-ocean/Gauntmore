@@ -1,12 +1,14 @@
 #include <iostream>
 #include "Map.h"
 #include "MazeGen.h"
+#include "Game.h"
 
 using namespace std;
 
+
 /**
-* Constructor.
-*/
+ * Constructor.
+ */
 Map::Map(int size) {
     // TODO mini-map: store two copies of maze matrix and change all tiles in one to "explored" only when visited by player
     spMazeGen mazeGen = new MazeGen(size);
@@ -25,11 +27,6 @@ Map::Map(int size) {
 //    _room->printMap();
 //    cout << "entrance: " << _row << ", " << _col << endl;
 }
-
-
-//int Map::getSize(){
-//    return _size * 32;
-//}
 
 
 void Map::changeRoom(int edge) {

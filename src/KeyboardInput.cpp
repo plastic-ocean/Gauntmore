@@ -1,16 +1,17 @@
-#include <iostream>
-
 #include "KeyboardInput.h"
 #include "Game.h"
 #include "Input.h"
 #include "SDL.h"
 #include "SDL_keyboard.h"
 #include "SDL_events.h"
+
 #include "Player.h"
 #include "Unit.h"
+
 #include "Chest.h"
 #include "Gold.h"
 #include "Potion.h"
+
 
 /**
  * Constructor.
@@ -33,55 +34,70 @@ bool KeyboardInput::getDirection(Vector2 &dir) const {
 }
 
 
+/**
+ * Sets the movement direction and interactino for the Player on valid keyboard input.
+ *
+ * @ev is the event, will be turned into an SDL_Event.
+ */
 void KeyboardInput::_onEvent(Event *ev) {
     SDL_Event *event = (SDL_Event*) ev->userData;
     _pressed = true;
-    // if key is pressed:
+    
     if (event->type == SDL_KEYDOWN && event->key.repeat == 0) {
-        // adjust velocity
         switch (event->key.keysym.sym) {
             case SDLK_UP:
             case SDLK_w:
                 _dir += Vector2(0, -1);
-                _game->getPlayer()->moveUp();
+                _game->movePlayer(Player::up);
                 break;
             case SDLK_DOWN:
             case SDLK_s:
-                // for anim testing
                 _dir += Vector2(0, 1);
-                _game->getPlayer()->moveDown();
+                _game->movePlayer(Player::down);
                 break;
             case SDLK_LEFT:
             case SDLK_a:
                 _dir += Vector2(-1, 0);
-                _game->getPlayer()->moveLeft();
+                _game->movePlayer(Player::left);
                  break;
             case SDLK_RIGHT:
             case SDLK_d:
                 _dir += Vector2(1, 0);
-                _game->getPlayer()->moveRight();
+                _game->movePlayer(Player::right);
                 break;
             case SDLK_SPACE:
-                _game->getPlayer()->attack();
+                _game->getPlayer()->interact();
+                break;
             case SDLK_RETURN:
-                _game->getPlayer()->damage();
+                _game->getPlayer()->updateHealth(-1);
+                _game->updateGoldCount(250);
+                break;
             default:
                 break;
             }
         }
 
     if (event->type == SDL_KEYUP && event->key.repeat == 0) {
-        _game->getPlayer()->removeTween();
-            //_pressed = false;
+        _game->stopPlayer();
+//        _pressed = false;
+        
         switch (event->key.keysym.sym ) {
             case SDLK_UP:
-            case SDLK_w: _dir -= Vector2(0, -1); break;
+            case SDLK_w:
+                _dir -= Vector2(0, -1);
+                break;
             case SDLK_DOWN:
-            case SDLK_s: _dir -= Vector2(0, 1); break;
+            case SDLK_s:
+                _dir -= Vector2(0, 1);
+                break;
             case SDLK_LEFT:
-            case SDLK_a: _dir -= Vector2(-1, 0); break;
+            case SDLK_a:
+                _dir -= Vector2(-1, 0);
+                break;
             case SDLK_RIGHT:
-            case SDLK_d: _dir -= Vector2(1, 0); break;
+            case SDLK_d:
+                _dir -= Vector2(1, 0);
+                break;
             default: break;
         }
     }

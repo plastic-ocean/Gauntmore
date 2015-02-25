@@ -1,37 +1,31 @@
-//
-//  Skeleton.cpp
-//  gauntmore_macosx
-//
-//  Created by benjamin barnes on 2/14/15.
-//  Copyright (c) 2015 oxygine. All rights reserved.
-//
-
-#include "Skeleton.h"
-
-#include "Creature.h"
 #include "res.h"
+#include "Skeleton.h"
 
 
 /**
  * Constructor
  */
-Skeleton::Skeleton(){}
+Skeleton::Skeleton():_contents(0) {}
 
 
-/**
- * Reduces the creatures hit points.
- */
-
+SDL_Rect Skeleton::getBounds(){
+    Vector2 unitPosition = getPosition();
+    _bounds.x = unitPosition.x + 20;
+    _bounds.y = unitPosition.y + 15;
+    _bounds.h = 30;
+    _bounds.w = 20;
+    
+    return _bounds;
+}
 
 
 /**
  * Initializes a creatures position and sprite. Called by Unit's init() method.
  */
 void Skeleton::_init() {
-    
     // Initialize the stats.
     _hp = 3;
-    _attack = 0;
+    _attack = 2;
     _defense = 0;
     
     // Add sprite to the game scene view.
@@ -39,6 +33,19 @@ void Skeleton::_init() {
     _sprite->setResAnim(resources.getResAnim("skeleton"));
     _sprite->attachTo(_view);
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
+    
+    _setContents();
+}
+
+
+void Skeleton::_interact() {
+    _hp--;
+    if (_hp == 0) {
+        // The creature is dead, hide it with an alpha tween.
+        _dead = true;
+        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
+        _dropContents();
+    }
 }
 
 

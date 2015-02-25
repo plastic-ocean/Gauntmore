@@ -1,6 +1,7 @@
 #pragma once
 #include "oxygine-framework.h"
 #include "Room.h"
+#include "Game.h"
 
 using namespace oxygine;
 using namespace std;
@@ -32,7 +33,8 @@ public:
 private:
     const static int _maxSize = 30;
     const static int _maxListSize = _maxSize * _maxSize;
-
+    
+    Game *_game;
     int _size;
     char _maze[_maxSize][_maxSize];
 //    vector<vector<int>> _map;

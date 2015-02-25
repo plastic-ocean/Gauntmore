@@ -1,17 +1,7 @@
-//
-//  Gold.h
-//  gauntmore_macosx
-//
-//  Created by Steven Warren on 2/16/15.
-//  Copyright (c) 2015 oxygine. All rights reserved.
-//
+#ifndef __gauntmore__Gold__
+#define __gauntmore__Gold__
 
-#ifndef __gauntmore_macosx__Gold__
-#define __gauntmore_macosx__Gold__
-
-#include <stdio.h>
 #include "Thing.h"
-#include "Unit.h"
 
 DECLARE_SMART(Gold, spGold);
 class Gold: public Thing {
@@ -19,19 +9,22 @@ class Gold: public Thing {
 public:
     Gold();
     
-    /**
-     * Interaction method for Gold.
-     */
-    void interact();
+    SDL_Rect getBounds();
+    
+    virtual void addSprite();
     
 private:
+    int _value;
     /**
      * Initializes position and sprite of Gold. Called by Unit's init() method.
      */
     void _init();
     
-    
-    
+    /**
+     * Interaction method for Gold.
+     */
+    void _interact();
+        
     /**
      * Updates the Gold every frame. Called by Units update() method.
      *
@@ -40,4 +33,4 @@ private:
     void _update(const UpdateState &us);
 };
 
-#endif /* defined(__gauntmore_macosx__Gold__) */
+#endif /* defined(__gauntmore__Gold__) */

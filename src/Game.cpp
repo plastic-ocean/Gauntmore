@@ -1,17 +1,25 @@
 #include <iostream>
 
+#include "tmx/Tmx.h"
+
 #include "Game.h"
+#include "res.h"
+#include "KeyboardInput.h"
+
 #include "Player.h"
+
 #include "Creature.h"
+#include "Skeleton.h"
+#include "Slime.h"
+
 #include "Chest.h"
 #include "Gold.h"
 #include "Potion.h"
-#include "res.h"
-#include "KeyboardInput.h"
+
 #include "Map.h"
-#include "MazeGen.h"
-#include "Skeleton.h"
+
 #include "HealthBar.h"
+#include "GoldCount.h"
 
 typedef list<spUnit> Units;
 
@@ -19,37 +27,32 @@ typedef list<spUnit> Units;
 /**
  * Constructor.
  */
-Game::Game() {}
-
-
-/**
- * Destructor.
- */
-Game::~Game() {}
-
-
-/**
- * Initializes the game. Creates the map, the player, the monsters, the static objects
- * and puts them in the game world.
- */
-void Game::init() {
-	// Set the size of the scene to the size of the display.
-	setSize(getStage()->getSize());
+Game::Game() {
+    // Set the size of the scene to the size of the display.
+    setSize(getStage()->getSize());
     
-    // Size is the number of tiles (with 32 px tiles; 15 tiles = 480 px; 20 tiles = 640 px)
+    // Size is the number of tiles
     int size = 13;
-
-	// Create map
+    
+    // Create map
     _map = new Map(size);
     _renderMap();
     _createTiles();
     
-	// Create player
-	_player = new Player(5, 1, 1);
+    list<spUnit> *units = _map->getRoom()->getUnits();
+    for (Units::iterator i = units->begin(); i != units->end(); ++i) {
+        spUnit unit = *i;
+        if (unit->getType() != "player") {
+            unit->init(unit->getLocation(), this);
+        }
+    }
+ 
+    // Create player
+    _player = new Player(10, 1, 1);
     _player->init(_getEntrance(), this);
-
-    _setUnits();
+    _map->getRoom()->getUnits()->push_back(_player);
     
+<<<<<<< HEAD
 
     // TODO Create enemy creatures (with random loot!)
 //    for (int i = 0; i < **large number**; ++i) {
@@ -76,59 +79,31 @@ void Game::init() {
     // TODO Create chests (with even more random loot!)
 
 	// Handle input
+=======
+    // Handle input
+>>>>>>> origin/keith
     _move = new KeyboardInput(this);
     
     // Health bar
     _healthBar = new HealthBar(this);
+    
+    // Gold count
+    _goldCount = new GoldCount(this);
 }
 
 
 /**
- * Detects collisions between a sprite and the walls.
- *
- * @x is the x coordinate to check.
- * @y is the y coordinate to check.
- * @h is the height coordinate to check.
- * @w is the width coordinate to check.
- * @return true if there is a collision and false if there is not
+ * Destructor.
  */
-bool Game::detectCollision(int x, int y, int h, int w) {
-    bool isCollision = false;
-    SDL_Rect spriteRect;
-    spriteRect.x = x + 10;
-    spriteRect.y = y + 12;
-    spriteRect.h = h - 14;
-    spriteRect.w = w - 24;
-    const SDL_Rect *sprite = &spriteRect;
-    
-    // Check for collision between the sprite and each tile
+Game::~Game() {}
 
-    for (SDL_Rect tileRect : _tiles) {
-        const SDL_Rect *tile = &tileRect;
-        if (SDL_HasIntersection(sprite, tile)) {
-            isCollision = true;
-        }
-    }
-    
-    for (spUnit unit : _units){
-        Vector2 unitPosition = unit->getPosition();
-        SDL_Rect unitRect;
-        // these are adjusted for a skeleton sprite, we will need to make different ones for
-        // different sprites
-        unitRect.x = unitPosition.x-3 ;
-        unitRect.y = unitPosition.y-3 ;
-        unitRect.h = 13;
-        unitRect.w = 13;
 
-        const SDL_Rect *constUnitRect = &unitRect;
-        // we also make sure that we are not collecting a collision with outself by doing a type check
-        if (SDL_HasIntersection(sprite, constUnitRect) && typeid(*unit).name() != "6Player") {
-            isCollision = true;
-            std::cout << "collision with unit: " << typeid(*unit).name() << std::endl;
-        }
-    }
-    
-    return isCollision;
+void Game::movePlayer(int facing) {
+    getPlayer()->move(facing);
+}
+
+void Game::stopPlayer() {
+    getPlayer()->removeTween();
 }
 
 
@@ -140,7 +115,6 @@ void Game::switchRoom(int edge) {
     _map->changeRoom(edge);
     _renderMap();
     _createTiles();
-//    _setUnits();
 
     // Get player entrance position
     int playerCol = 1;
@@ -167,22 +141,33 @@ void Game::switchRoom(int edge) {
             break;
     }
 
-//    cout << "switch position: " << playerCol << ", " << playerRow << endl;
-
+    // Setup units
+    list<spUnit> *units = _map->getRoom()->getUnits();
+    for (Units::iterator i = units->begin(); i != units->end(); ) {
+        spUnit unit = *i;
+        if (unit->getType() == "player") {
+            i = units->erase(i);
+        } else {
+            unit->init(unit->getLocation(), this);
+            ++i;
+        }
+    }
+    
     // Setup player
-    _player->detachUnit();
+//    _player->detachUnit();
     _player->attachUnit();
     _player->addSprite();
     _player->setPosition(Vector2(playerCol, playerRow));
+    _map->getRoom()->getUnits()->push_back(_player);
     
-    // Update health bar
+    // Update UI
     _healthBar->render();
+    _goldCount->render();
 }
 
 
 void Game::pushUnit(spUnit unit) {
     _map->getRoom()->pushUnit(unit);
-    _units.push_back(unit);
 }
 
 
@@ -193,11 +178,6 @@ spPlayer Game::getPlayer() {
 
 spMap Game::getMap() {
     return _map;
-}
-
-
-list<spUnit> Game::getUnits() {
-    return _units;
 }
 
 
@@ -220,10 +200,6 @@ std::vector<SDL_Rect> Game::getTiles() {
     return _tiles;
 }
 
-//std::list<spUnit> Game::getUnits(){
-//    return _units;
-//}
-
 /**
  * Gets the keyboard input handler.
  */
@@ -231,8 +207,47 @@ spKeyboardInput Game::getMove() {
     return _move;
 }
 
+
 void Game::updateHealth(float num) {
     _healthBar->updateHealth(num);
+}
+
+
+void Game::updateGoldCount(int value) {
+    _goldCount->updateGoldCount(value);
+}
+
+
+bool Game::isExit(Vector2 position) {
+    bool isExit = false;
+    int size = getMap()->getRoom()->getSize() * tileSize;
+    
+    if (!(position.x > 0 && position.x < size - tileSize && position.y > 0 && position.y < size - tileSize)) {
+        isExit = true;
+        int edge = 0;
+        
+        if (position.y <= 0) {
+            // top
+            edge = 0;
+        } else if (position.x >= size - tileSize) {
+            // right
+            edge = 1;
+        } else if (position.y >= size - tileSize) {
+            // bottom
+            edge = 2;
+        } else if (position.x <= 0) {
+            // left
+            edge = 3;
+        }
+        
+        switchRoom(edge);
+    }
+    
+    return isExit;
+}
+
+int Game::getTileSize() {
+    return tileSize;
 }
 
 
@@ -242,14 +257,16 @@ void Game::updateHealth(float num) {
  * @us is the UpdateStatus sent by the global update method.
  */
 void Game::doUpdate(const UpdateState &us) {
+    list<spUnit> *units = _map->getRoom()->getUnits();
     // Iterate through the unit list and call their update method. Then check for death.
-    for (Units::iterator i = _units.begin(); i != _units.end(); ) {
+    for (Units::iterator i = units->begin(); i != units->end(); ) {
         spUnit unit = *i;
         unit->update(us);
-        
+//        cout << "update " << unit->getType() << endl;
         if (unit->isDead()) {
+//            cout << "erase " << unit->getType() << endl;
             // If it is dead remove it from list.
-            i = _units.erase(i);
+            i = units->erase(i);
         } else {
             ++i;
         }
@@ -282,7 +299,6 @@ void Game::_renderMap() {
                 // Draw the tile.
                 spSprite sprite = new Sprite;
                 sprite->setResAnim(resources.getResAnim(name));
-//                sprite->setScale(1.25f);
                 sprite->setX(drawX);
                 sprite->setY(drawY);
                 sprite->attachTo(this);
@@ -327,15 +343,10 @@ void Game::_createTiles() {
 }
 
 
-
 Vector2 Game::_getEntrance() {
     Vector2 location = _map->getRoom()->getEntrance();
     location.x *= tileSize;
     location.y *= tileSize;
     
     return location;
-}
-
-void Game::_setUnits() {
-    _units = static_cast<Units>(_map->getRoom()->getUnits());
 }

@@ -1,5 +1,6 @@
 #pragma once
 #include "oxygine-framework.h"
+
 #include "Unit.h"
 #include "Room.h"
 #include "Game.h"
@@ -93,6 +94,7 @@ public:
     }
 
 private:
+    Game *_game;
     spRoom _room;
     vector<vector<spRoom>> _roomMap;
     Vector2 _entrance;

@@ -54,8 +54,8 @@ public:
         _tiles = tiles;
     }
 
-    Units getUnits() {
-        return _units;
+    Units* getUnits() {
+        return &_units;
     }
 
     void setUnits(Units units) {
@@ -69,6 +69,10 @@ public:
     */
     void pushUnit(spUnit unit) {
         _units.push_back(unit);
+    }
+    
+    void removeUnit(Units::iterator i) {
+        _units.erase(i);
     }
 
     int getType() {
@@ -129,6 +133,8 @@ public:
 
 private:
     const int tileSize = 64;
+    
+    Game *_game;
     
     Tmx::Map *_tileMap;
     vector<SDL_Rect> _tiles;

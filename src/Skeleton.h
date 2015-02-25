@@ -1,25 +1,38 @@
-//
-//  Skeleton.h
-//  gauntmore_macosx
-//
-//  Created by benjamin barnes on 2/14/15.
-//  Copyright (c) 2015 oxygine. All rights reserved.
-//
+#ifndef __gauntmore__Skeleton__
+#define __gauntmore__Skeleton__
 
-//#ifndef __gauntmore_macosx__Skeleton__
-//#define __gauntmore_macosx__Skeleton__
-
-#include <stdio.h>
 #include "Creature.h"
+#include "Thing.h"
 
-DECLARE_SMART(Skeleton, spSkeleton)
-class Skeleton : public Creature{
+using namespace std;
+
+DECLARE_SMART(Skeleton, spSkeleton);
+class Skeleton : public Creature {
+    
 public:
     Skeleton();
-
+    
+    virtual SDL_Rect getBounds();
+    
 private:
+    spThing _contents;
+    
+    /**
+     * Initializes position and sprite of Chest. Called by Unit's init() method.
+     */
     void _init();
+    
+    /**
+     * Interaction method for Chest.
+     */
+    void _interact();
+    
+    /**
+     * Updates the Chest every frame. Called by Units update() method.
+     *
+     * @us is the UpdateStatus sent by Unit's update method.
+     */
     void _update(const UpdateState &us);
 };
 
-//#endif /* defined(__gauntmore_macosx__Skeleton__) */
+#endif /* defined(__gauntmore__Skeleton__) */

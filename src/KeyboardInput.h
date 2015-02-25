@@ -23,7 +23,7 @@ private:
     Game *_game;
     
     /**
-     * Sets the movement direction for the Player on valid keyboard input.
+     * Sets the movement direction and interactino for the Player on valid keyboard input.
      *
      * @ev is the event, will be turned into an SDL_Event.
      */

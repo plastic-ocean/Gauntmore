@@ -1,5 +1,6 @@
 #pragma once
 #include "Unit.h"
+#include "CollisionDetector.h"
 
 DECLARE_SMART(Player, spPlayer);
 class Player: public Unit {
@@ -7,66 +8,108 @@ class Player: public Unit {
 public:
 	Player(int hp, int attack, int defense);
     
-    // up = 0, right = 1, down = 2, left = 3
-    enum Facings {up, right, down, left};
-    Facings facing;
+    enum Facing {up, right, down, left};
     
-    Facings getFacing();
-    
-    int i = 0;
-
     /**
-     * Reduces the player's hit points.
+     * Get the bounds used for collision detection.
      */
-    void damage();
+    virtual SDL_Rect getBounds();
+    
+    /**
+     * Get the current facing.
+     */
+    Facing getFacing();
+    
+    /**
+     * Updates the player's health.
+     *
+     * @health is the number to add to _hp.
+     * @return true if it was updated, false if it was not.
+     */
+    bool updateHealth(int health);
+    
+    /**
+     * Interacts with Things or Creatures.
+     */
+    void interact();
+    
+    /**
+     * Plays the attack animation.
+     */
+    void attack();
+    
+    /**
+     * Plays the move animation.
+     *
+     * @facing is a int. 0: up, 1: right, 2: down, 3: left
+     */
+    void move(int facing);
+    
+    /**
+     * Sets the sprite's standing image.
+     */
+    void stand();
+    
+    /**
+     * Remove the tween from the sprite.
+     */
+    void removeTween();
     
     /**
      * Add sprite to the game scene.
      */
     void addSprite();
     
-    void attack();
-    void attackDown();
-    void attackUp();
-    void attackLeft();
-    void attackRight();
-
-    void interact();
-    
-    void removeSprite();
-    
-    void moveUp();
-    void moveDown();
-    void moveRight();
-    void moveLeft();
-    
-    void removeTween();
+    /**
+     * Checks if the player is damaged by comparing _hp to maxHealth.
+     */
+    bool isDamaged();
     
 protected:
     const int tileSize = 64;
+    
+    Facing _facing;
+    spCollisionDetector _collisionDetector;
     spTween _moveTween;
     spTween _attackTween;
     bool _hasTween;
-    
-    void _checkTween();
-    
-    Vector2 correctDirection(Vector2 position, Vector2 direction);
+    bool _isMoving;
     
     /**
-     * Initializes the player's position and sprite. Called by Unit's init() method.
+     * Initializes the player's position and sprite. Called by Unit::init.
      */
-	void _init();
-    
-    void _setFacing(Vector2 dir);
-
-    bool _isExit(Vector2 position);
+    void _init();
     
     /**
      * Updates the player every frame.
      *
      * @us is the UpdateStatus sent by the global update method.
      */
-	void _update(const UpdateState &us);
-
-
+    void _update(const UpdateState &us);
+    
+    /**
+     * Checks whether the sprite already has a tween before trying to removing it.
+     */
+    void _checkTween();
+    
+    /**
+     * Checks for a collision between the players rect and the unit's rect.
+     *
+     * @rect is an SDL_Rect for the player.
+     * @unit is the unit to check against.
+     */
+    bool _isCollision(SDL_Rect rect, spUnit unit);
+    
+    /**
+     * Corrects the movement direction by checking for collision with wall tiles or other Units and adjusting the
+     * direction vector's x and y values.
+     *
+     * @postion is the player's current position.
+     * @directions is the player's current movement direction.
+     */
+    Vector2 _correctDirection(Vector2 position, Vector2 direction);
+    
+    Vector2 correctDirection(Vector2 position, Vector2 direction);
+    
+//    void _setFacing(Vector2 dir);
 };

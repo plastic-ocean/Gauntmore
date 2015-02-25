@@ -1,21 +1,11 @@
-//
-//  Chest.h
-//  gauntmore_macosx
-//
-//  Created by Steven Warren on 2/13/15.
-//  Copyright (c) 2015 oxygine. All rights reserved.
-//
+#ifndef __gauntmore__Chest__
+#define __gauntmore__Chest__
 
-#ifndef __gauntmore_macosx__Chest__
-#define __gauntmore_macosx__Chest__
-
-#include <stdio.h>
 #include "Thing.h"
-#include "Unit.h"
+#include "Potion.h"
+#include "Gold.h"
 
 using namespace std;
-
-enum Things {potion, gold};
 
 DECLARE_SMART(Chest, spChest);
 class Chest: public Thing {
@@ -23,29 +13,25 @@ class Chest: public Thing {
 public:
     Chest();
     
-    /**
-     * Interaction method for Chest.
-     */
-    void interact();
+    virtual SDL_Rect getBounds();
     
-//    vector<spThing> getContents() {
-//        return _contents;
-//    }s
-//    
-//    void pushContents(spThing thing) {
-//        _contents.push_back(thing);
-//    }
+    virtual void addSprite();
     
 private:
-//    vector<spThing> _contents;
-    int _contents;
-    
-    void _chooseContents();
-    
+    spThing _contents;
+    bool _isOpen;
+
     /**
      * Initializes position and sprite of Chest. Called by Unit's init() method.
      */
     void _init();
+    
+    /**
+     * Interaction method for Chest.
+     */
+    void _interact();
+    
+    void _setContents();
     
     /**
      * Updates the Chest every frame. Called by Units update() method.
@@ -55,4 +41,4 @@ private:
     void _update(const UpdateState &us);
 };
 
-#endif /* defined(__gauntmore_macosx__Chest__) */
+#endif /* defined(__gauntmore__Chest__) */

@@ -1,24 +1,16 @@
-//
-//  Thing.cpp
-//  gauntmore_macosx
-//
-//  Created by Steven Warren on 2/12/15.
-//  Copyright (c) 2015 oxygine. All rights reserved.
-//
+#include "SDL.h"
+#include "Tmx.h"
 
 #include "Thing.h"
 #include "Game.h"
 #include "res.h"
-#include "Tmx.h"
-#include "SDL.h"
-
 
 
 /**
  * Constructor
  */
-Thing::Thing(){
-    
+Thing::Thing() {
+    setType("thing");
 }
 
 /**

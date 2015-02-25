@@ -23,7 +23,7 @@ void Unit::init(const Vector2 &pos, Game *game) {
     setPosition(pos);
     
     // Add to Game's units list.
-    _game->pushUnit(this);
+//    _game->pushUnit(this);
 
 	// Virtual method that is overload by children.
 	_init();
@@ -43,16 +43,17 @@ void Unit::detachUnit() {
     _view = 0;
 }
 
+
 /**
  *  Interaction method for Unit:
  *  Iterates thru list of units and determines which the player is facing.
  *  Then calls that objects interact method. 
  *
  */
-//void interact(){
-//    
-//    
-//}
+void Unit::interact() {
+    _interact();
+}
+
 
 /**
  * Gets the unit's position.
@@ -63,6 +64,10 @@ const Vector2& Unit::getPosition() {
     return _view->getPosition();
 }
 
+//SDL_Rect Unit::getBounds() {
+//    return _bounds;
+//}
+
 
 /**
  * Sets the unit's position.
@@ -71,6 +76,15 @@ const Vector2& Unit::getPosition() {
  */
 void Unit::setPosition(const Vector2& position) {
     _view->setPosition(position);
+}
+
+
+string Unit::getType() {
+    return _type;
+}
+
+void Unit::setType(string type) {
+    _type = type;
 }
 
 

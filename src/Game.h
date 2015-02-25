@@ -2,6 +2,7 @@
 #include "oxygine-framework.h"
 #include "tmx/Tmx.h"
 #include "tmx/tinyxml2.h"
+#include "Player.h"
 
 using namespace oxygine;
 using namespace std;
@@ -9,10 +10,13 @@ using namespace std;
 DECLARE_SMART(Player, spPlayer);
 DECLARE_SMART(Creature, spCreature);
 DECLARE_SMART(Skeleton, spSkeleton);
+DECLARE_SMART(Slime, spSlime);
 DECLARE_SMART(HealthBar, spHealthBar);
+DECLARE_SMART(GoldCount, spGoldCount);
 DECLARE_SMART(Unit, spUnit);
 DECLARE_SMART(Chest, spChest);
 DECLARE_SMART(Gold, spGold);
+DECLARE_SMART(CollisionDetector, spCollisionDetector);
 DECLARE_SMART(Potion, spPotion);
 DECLARE_SMART(KeyboardInput, spKeyboardInput)
 DECLARE_SMART(Unit, spUnit);
@@ -34,16 +38,9 @@ public:
      */
     void init();
     
-    /**
-     * Detects collisions between the Units and the walls.
-     *
-     * @x is the x coordinate to check.
-     * @y is the y coordinate to check.
-     * @h is the height coordinate to check.
-     * @w is the width coordinate to check.
-     * @return true is there is a collision and false if there is not
-     */
-    bool detectCollision(int x, int y, int h, int w);
+    void movePlayer(int facing);
+    
+    void stopPlayer();
     
     /**
      * Gets the tile map.
@@ -75,11 +72,17 @@ public:
     
     spPlayer getPlayer();
     
-    std::list<spUnit> getUnits();
+//    std::list<spUnit> getUnits();
 
     spMap getMap();
     
     void updateHealth(float num);
+    
+    void updateGoldCount(int value);
+    
+    bool isExit(Vector2 position);
+    
+    int getTileSize();
 
 protected:
     const int tileSize = 64;
@@ -90,16 +93,18 @@ protected:
     spKeyboardInput _move;
     spPlayer _player;
 
-    Units _units;
+//    Units _units;
     
     spSkeleton _skeleton;
+    spSlime _slime;
     
     spChest _chest;
     spGold _gold;
     spPotion _potion;
-    spUnit _unit;
+//    spUnit _unit;
     
     spHealthBar _healthBar;
+    spGoldCount _goldCount;
     
     /**
      * Updates the player each frame. A virtual method of Actor it is being called each frame.
@@ -118,7 +123,7 @@ protected:
      */
     void _createTiles();
 
-    void _setUnits();
+//    void _setUnits();
     
     Vector2 _getEntrance();
 };

@@ -2,6 +2,7 @@
 
 Resources resources;
 Resources resSounds;
+Resources resFonts;
 
 /**
 * Loads the resources.
@@ -9,6 +10,7 @@ Resources resSounds;
 void loadResources() {
 	resources.loadXML("xmls/sprites.xml");
     resSounds.loadXML("xmls/sounds.xml");
+    resFonts.loadXML("xmls/fonts.xml");
 }
 
 /**
@@ -17,4 +19,5 @@ void loadResources() {
 void freeResources() {
 	resources.free();
     resSounds.free();
+    resFonts.free();
 }
