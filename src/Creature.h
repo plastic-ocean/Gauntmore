@@ -3,10 +3,10 @@
 #include "PathFinder.h"
 #include "Game.h"
 #include "Player.h"
-
+#include "CreatureMover.h"
 
 DECLARE_SMART(PathFinder, spPathFinder);
-
+DECLARE_SMART(CreatureMover, spCreatureMover);
 DECLARE_SMART(Creature, spCreature);
 class Creature: public Unit {
     
@@ -20,7 +20,7 @@ public:
     
 private:
     spPathFinder findPath;
-    
+    spCreatureMover moveQ;
     
     /**
      * Initializes a creatures position and sprite. Called by Unit's init() method.

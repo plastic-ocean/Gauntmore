@@ -7,3 +7,32 @@
 //
 
 #include "CreatureMover.h"
+
+
+CreatureMover::CreatureMover() {
+    
+}
+
+CreatureMover::~CreatureMover() {
+    
+}
+bool CreatureMover::updatePath(vector<Vector2> newPath) {
+//    if (thePath.size() == 0 ) {
+        this->thePath = newPath; //maybe add some clever stuff here later
+        return true;
+//    }
+//    else {
+//        
+//    }
+//    return false;
+}
+
+Vector2 CreatureMover::nextMove() {
+    Vector2 temp = thePath.back();
+    thePath.pop_back();
+    return temp;
+
+}
+
+
+

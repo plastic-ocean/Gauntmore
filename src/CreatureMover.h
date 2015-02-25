@@ -18,7 +18,7 @@ class CreatureMover {
 public:
     CreatureMover();
     ~CreatureMover();
-    void updatePath(vector<Vector2>);
+    bool updatePath(vector<Vector2>);
     Vector2 nextMove();
     
 private:
