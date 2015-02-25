@@ -16,6 +16,10 @@ CreatureMover::CreatureMover() {
 CreatureMover::~CreatureMover() {
     
 }
+bool CreatureMover::isEmpty() {
+    return thePath.empty();
+}
+
 bool CreatureMover::updatePath(vector<Vector2> newPath) {
 //    if (thePath.size() == 0 ) {
         this->thePath = newPath; //maybe add some clever stuff here later
@@ -27,7 +31,11 @@ bool CreatureMover::updatePath(vector<Vector2> newPath) {
 //    return false;
 }
 
-Vector2 CreatureMover::nextMove() {
+Vector2 CreatureMover::peekNext() {
+    return thePath.back();
+}
+
+Vector2 CreatureMover::popNext() {
     Vector2 temp = thePath.back();
     thePath.pop_back();
     return temp;

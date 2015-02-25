@@ -11,7 +11,6 @@
 
 #include <stdio.h>
 #include "Game.h"
-#include "PathFinder.h"
 
 
 class CreatureMover {
@@ -19,7 +18,9 @@ public:
     CreatureMover();
     ~CreatureMover();
     bool updatePath(vector<Vector2>);
-    Vector2 nextMove();
+    Vector2 popNext();
+    Vector2 peekNext();
+    bool isEmpty();
     
 private:
     vector<Vector2> thePath;
