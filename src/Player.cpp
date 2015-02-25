@@ -170,9 +170,8 @@ void Player::attack() {
  * Plays the move animation.
  */
 void Player::move(int facing) {
-    _isMoving = true;
+    cout << "move" << endl;
     _facing = static_cast<Facing>(facing);
-    _checkTween();
     switch (_facing) {
         case up:
             _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_move_up")), 500, -1);
@@ -196,6 +195,8 @@ void Player::move(int facing) {
  * Sets the sprite's standing image.
  */
 void Player::stand() {
+    cout << "stand" << endl;
+    _sprite->removeTweens();
     switch (_facing) {
         case up:
             _sprite->setResAnim(resources.getResAnim("adventurer_move_up"));
@@ -212,18 +213,6 @@ void Player::stand() {
         default:
             break;
     }
-}
-
-
-/**
- * Remove the tween from the sprite.
- */
-void Player::removeTween() {
-    if (_hasTween) {
-        _sprite->removeTween(_moveTween);
-        _isMoving = false;
-    }
-    _hasTween = false;
 }
 
 
@@ -266,8 +255,10 @@ void Player::_init() {
  * @us is the UpdateStatus sent by Unit's update method.
  */
 void Player::_update(const UpdateState &us) {
+    _isMoving = false;
     Vector2 direction;
     if (_game->getMove()->getDirection(direction)) {
+        _isMoving = true;
         Vector2 position = getPosition();
         direction = _correctDirection(position, direction);
         position += direction * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
@@ -276,17 +267,6 @@ void Player::_update(const UpdateState &us) {
             setPosition(position);
         }
     }
-}
-
-
-/**
- * Checks whether the sprite already has a tween before trying to removing it.
- */
-void Player::_checkTween() {
-    if (_hasTween) {
-        _sprite->removeTween(_moveTween);
-    }
-    _hasTween = true;
 }
 
 
@@ -316,7 +296,7 @@ bool Player::_isCollision(SDL_Rect thisRect, spUnit unit) {
  * direction vector's x and y values.
  *
  * @postion is the player's current position.
- * @directions is the player's current movement direction.
+ * @direction is the player's current movement direction.
  */
 Vector2 Player::_correctDirection(Vector2 position, Vector2 direction) {
     int newX = position.x + direction.x * 5;

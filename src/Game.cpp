@@ -69,15 +69,6 @@ Game::Game() {
 Game::~Game() {}
 
 
-void Game::movePlayer(int facing) {
-    getPlayer()->move(facing);
-}
-
-void Game::stopPlayer() {
-    getPlayer()->removeTween();
-}
-
-
 /**
 * Switches viewable map to the room in the direction of the given edge in the maze.
 */

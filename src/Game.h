@@ -38,10 +38,6 @@ public:
      */
     void init();
     
-    void movePlayer(int facing);
-    
-    void stopPlayer();
-    
     /**
      * Gets the tile map.
      *
