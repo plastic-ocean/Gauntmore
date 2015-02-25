@@ -60,6 +60,9 @@ public:
      */
     void addSprite();
     
+    /**
+     * Checks if the player is damaged by comparing _hp to maxHealth.
+     */
     bool isDamaged();
     
 protected:
@@ -105,6 +108,8 @@ protected:
      * @directions is the player's current movement direction.
      */
     Vector2 _correctDirection(Vector2 position, Vector2 direction);
+    
+    Vector2 correctDirection(Vector2 position, Vector2 direction);
     
 //    void _setFacing(Vector2 dir);
 };

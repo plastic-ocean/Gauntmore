@@ -243,6 +243,10 @@ void Player::addSprite() {
     _sprite->attachTo(_view);
 }
 
+
+/**
+ * Checks if the player is damaged by comparing _hp to maxHealth.
+ */
 bool Player::isDamaged() {
     return  _hp != _maxHealth;
 }
@@ -315,26 +319,52 @@ bool Player::_isCollision(SDL_Rect thisRect, spUnit unit) {
  * @directions is the player's current movement direction.
  */
 Vector2 Player::_correctDirection(Vector2 position, Vector2 direction) {
-    int newX = static_cast<int>(position.x) + static_cast<int>(direction.x) * 5;
-    int newY = static_cast<int>(position.y) + static_cast<int>(direction.y) * 5;
+    int newX = position.x + direction.x * 5;
+    int newY = position.y + direction.y * 5;
     
-    SDL_Rect spriteRect;
-    spriteRect.x = newX + 10;
-    spriteRect.y = newY + 12;
-    spriteRect.h = tileSize - 14;
-    spriteRect.w = tileSize - 24;
-    
-    if (_collisionDetector->detectWalls(_game->getTiles(), spriteRect) ||
-        _collisionDetector->detectUnits(_game->getMap()->getRoom()->getUnits(), spriteRect)) {
+    if (_collisionDetector->detectWalls(_game->getTiles(), newX, position.y, tileSize, tileSize) ||
+            _collisionDetector->detectUnits(_game->getMap()->getRoom()->getUnits(), newX, position.y, tileSize, tileSize)) {
         direction.x = 0;
     }
-    if (_collisionDetector->detectWalls(_game->getTiles(), spriteRect) ||
-        _collisionDetector->detectUnits(_game->getMap()->getRoom()->getUnits(), spriteRect)) {
+    if (_collisionDetector->detectWalls(_game->getTiles(), position.x, newY, tileSize, tileSize) ||
+            _collisionDetector->detectUnits(_game->getMap()->getRoom()->getUnits(), newX, position.y, tileSize, tileSize)) {
         direction.y = 0;
-    }
+    }    
     
     return direction;
 }
+
+
+// OLD
+
+//Vector2 Player::_correctDirection(Vector2 position, Vector2 direction) {
+//    int newX = static_cast<int>(position.x) + static_cast<int>(direction.x) * 5;
+//    int newY = static_cast<int>(position.y) + static_cast<int>(direction.y) * 5;
+//    
+//    SDL_Rect spriteRect;
+//    spriteRect.x = newX + 10;
+//    spriteRect.y = newY + 12;
+//    spriteRect.h = tileSize - 14;
+//    spriteRect.w = tileSize - 24;
+//    
+////    cout << "x: " << spriteRect.x << " y: " << spriteRect.y << " h: " << spriteRect.h << " w: " << spriteRect.w << endl;
+//    
+//    if (_collisionDetector->detectWalls(_game->getTiles(), spriteRect) ||
+//        _collisionDetector->detectUnits(_game->getMap()->getRoom()->getUnits(), spriteRect)) {
+//        direction.x = 0;
+//        cout << "x collision" << endl;
+//    }
+//    if (_collisionDetector->detectWalls(_game->getTiles(), spriteRect) ||
+//        _collisionDetector->detectUnits(_game->getMap()->getRoom()->getUnits(), spriteRect)) {
+//        direction.y = 0;
+//        cout << "y collision" << endl;
+//    }
+//    
+//    return direction;
+//}
+
+
+
 
 
 //void Player::_setFacing(Vector2 dir) {

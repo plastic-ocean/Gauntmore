@@ -14,8 +14,10 @@ class CollisionDetector : public Object {
 public:
     CollisionDetector();
     
-    bool detectWalls(std::vector<SDL_Rect> tiles, SDL_Rect spriteRect);
-    bool detectUnits(std::list<spUnit> *units, SDL_Rect spriteRect);
+    bool detectWalls(std::vector<SDL_Rect> tiles, int x, int y, int h, int w);
+    
+//    bool detectWalls(std::vector<SDL_Rect> tiles, SDL_Rect spriteRect);
+    bool detectUnits(std::list<spUnit> *units, int x, int y, int h, int w);
     
 private:
 };
