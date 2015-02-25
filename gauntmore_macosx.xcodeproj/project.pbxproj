@@ -48,12 +48,9 @@
 		5395845C1A99A42D0080A994 /* Creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5395843C1A99A42D0080A994 /* Creature.cpp */; };
 		5395845D1A99A42D0080A994 /* Gold.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5395843E1A99A42D0080A994 /* Gold.cpp */; };
 		5395845E1A99A42D0080A994 /* GoldCount.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584401A99A42D0080A994 /* GoldCount.cpp */; };
-		5395845F1A99A42D0080A994 /* GreaterThan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584421A99A42D0080A994 /* GreaterThan.cpp */; };
 		539584601A99A42D0080A994 /* HealthBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584441A99A42D0080A994 /* HealthBar.cpp */; };
 		539584611A99A42D0080A994 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584461A99A42D0080A994 /* Map.cpp */; };
 		539584621A99A42D0080A994 /* MazeGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584481A99A42D0080A994 /* MazeGen.cpp */; };
-		539584631A99A42D0080A994 /* PathFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5395844A1A99A42D0080A994 /* PathFinder.cpp */; };
-		539584641A99A42D0080A994 /* PathNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5395844C1A99A42D0080A994 /* PathNode.cpp */; };
 		539584651A99A42D0080A994 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5395844E1A99A42D0080A994 /* Player.cpp */; };
 		539584661A99A42D0080A994 /* Potion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584501A99A42D0080A994 /* Potion.cpp */; };
 		539584671A99A42D0080A994 /* Room.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584521A99A42D0080A994 /* Room.cpp */; };
@@ -208,18 +205,12 @@
 		5395843F1A99A42D0080A994 /* Gold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gold.h; path = src/Gold.h; sourceTree = "<group>"; };
 		539584401A99A42D0080A994 /* GoldCount.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GoldCount.cpp; path = src/GoldCount.cpp; sourceTree = "<group>"; };
 		539584411A99A42D0080A994 /* GoldCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoldCount.h; path = src/GoldCount.h; sourceTree = "<group>"; };
-		539584421A99A42D0080A994 /* GreaterThan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GreaterThan.cpp; path = src/GreaterThan.cpp; sourceTree = "<group>"; };
-		539584431A99A42D0080A994 /* GreaterThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GreaterThan.h; path = src/GreaterThan.h; sourceTree = "<group>"; };
 		539584441A99A42D0080A994 /* HealthBar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HealthBar.cpp; path = src/HealthBar.cpp; sourceTree = "<group>"; };
 		539584451A99A42D0080A994 /* HealthBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HealthBar.h; path = src/HealthBar.h; sourceTree = "<group>"; };
 		539584461A99A42D0080A994 /* Map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Map.cpp; path = src/Map.cpp; sourceTree = "<group>"; };
 		539584471A99A42D0080A994 /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Map.h; path = src/Map.h; sourceTree = "<group>"; };
 		539584481A99A42D0080A994 /* MazeGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MazeGen.cpp; path = src/MazeGen.cpp; sourceTree = "<group>"; };
 		539584491A99A42D0080A994 /* MazeGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MazeGen.h; path = src/MazeGen.h; sourceTree = "<group>"; };
-		5395844A1A99A42D0080A994 /* PathFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PathFinder.cpp; path = src/PathFinder.cpp; sourceTree = "<group>"; };
-		5395844B1A99A42D0080A994 /* PathFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PathFinder.h; path = src/PathFinder.h; sourceTree = "<group>"; };
-		5395844C1A99A42D0080A994 /* PathNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PathNode.cpp; path = src/PathNode.cpp; sourceTree = "<group>"; };
-		5395844D1A99A42D0080A994 /* PathNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PathNode.h; path = src/PathNode.h; sourceTree = "<group>"; };
 		5395844E1A99A42D0080A994 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = src/Player.cpp; sourceTree = "<group>"; };
 		5395844F1A99A42D0080A994 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = src/Player.h; sourceTree = "<group>"; };
 		539584501A99A42D0080A994 /* Potion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Potion.cpp; path = src/Potion.cpp; sourceTree = "<group>"; };
@@ -344,7 +335,6 @@
 				534097851A896C0A000434F6 /* KeyboardInput.h */,
 				5340977F1A896C0A000434F6 /* main.cpp */,
 				532878BD1A9BA09000228299 /* map */,
-				532878BB1A9BA06200228299 /* pathfinder */,
 				534097881A896C0A000434F6 /* res.cpp */,
 				534097891A896C0A000434F6 /* res.h */,
 				53BCF1191A8ED99F00BD6288 /* Scene.cpp */,
@@ -405,19 +395,6 @@
 			);
 			name = tmx;
 			path = src/tmx;
-			sourceTree = "<group>";
-		};
-		532878BB1A9BA06200228299 /* pathfinder */ = {
-			isa = PBXGroup;
-			children = (
-				539584421A99A42D0080A994 /* GreaterThan.cpp */,
-				539584431A99A42D0080A994 /* GreaterThan.h */,
-				5395844A1A99A42D0080A994 /* PathFinder.cpp */,
-				5395844B1A99A42D0080A994 /* PathFinder.h */,
-				5395844C1A99A42D0080A994 /* PathNode.cpp */,
-				5395844D1A99A42D0080A994 /* PathNode.h */,
-			);
-			name = pathfinder;
 			sourceTree = "<group>";
 		};
 		532878BC1A9BA07900228299 /* hud */ = {
@@ -607,12 +584,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5395845F1A99A42D0080A994 /* GreaterThan.cpp in Sources */,
-				539584641A99A42D0080A994 /* PathNode.cpp in Sources */,
 				5395845B1A99A42D0080A994 /* Chest.cpp in Sources */,
 				532878A51A99A6EB00228299 /* TmxObjectGroup.cpp in Sources */,
 				5328789D1A99A6EB00228299 /* base64.cpp in Sources */,
-				539584631A99A42D0080A994 /* PathFinder.cpp in Sources */,
 				534097AD1A896C0A000434F6 /* main.cpp in Sources */,
 				532878A31A99A6EB00228299 /* TmxMap.cpp in Sources */,
 				539584611A99A42D0080A994 /* Map.cpp in Sources */,
