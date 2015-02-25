@@ -59,7 +59,7 @@ void NodeMinHeap::filterDown(int pos) {
     
     //check if you are out of scope
     int child = (pos*2);
-    if (theHeap.size() - 1 < child ) return;
+    if ( theHeap.size() - 1 < child ) return;
     else if ( theHeap.size() - 1 < (child+1) ) {
         if ( theHeap[pos].getTotal() > theHeap[child].getTotal() ) {
             swap(pos, child);

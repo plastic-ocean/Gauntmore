@@ -19,6 +19,7 @@
 		483D59121A996581000CECE0 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 483D59111A996581000CECE0 /* OpenAL.framework */; };
 		483D59191A9965D9000CECE0 /* HealthBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 483D59141A9965D9000CECE0 /* HealthBar.cpp */; };
 		483D591A1A9965D9000CECE0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 483D59161A9965D9000CECE0 /* main.cpp */; };
+		4896E9331A9D34B50088FAD9 /* CreatureMover.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4896E9311A9D34B50088FAD9 /* CreatureMover.cpp */; };
 		48A142AA1A9BAE8C00BCE447 /* NodeMinHeap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48A142A81A9BAE8C00BCE447 /* NodeMinHeap.cpp */; };
 		530CFA6A1A90547100B4CD51 /* Room.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA681A90547100B4CD51 /* Room.cpp */; };
 		530CFA8F1A906FED00B4CD51 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530CFA6E1A906FED00B4CD51 /* base64.cpp */; };
@@ -148,6 +149,8 @@
 		483D59141A9965D9000CECE0 /* HealthBar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HealthBar.cpp; path = src/HealthBar.cpp; sourceTree = "<group>"; };
 		483D59151A9965D9000CECE0 /* HealthBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HealthBar.h; path = src/HealthBar.h; sourceTree = "<group>"; };
 		483D59161A9965D9000CECE0 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = "<group>"; };
+		4896E9311A9D34B50088FAD9 /* CreatureMover.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CreatureMover.cpp; path = src/CreatureMover.cpp; sourceTree = "<group>"; };
+		4896E9321A9D34B50088FAD9 /* CreatureMover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreatureMover.h; path = src/CreatureMover.h; sourceTree = "<group>"; };
 		48A142A81A9BAE8C00BCE447 /* NodeMinHeap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NodeMinHeap.cpp; path = src/NodeMinHeap.cpp; sourceTree = "<group>"; };
 		48A142A91A9BAE8C00BCE447 /* NodeMinHeap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NodeMinHeap.h; path = src/NodeMinHeap.h; sourceTree = "<group>"; };
 		530CFA681A90547100B4CD51 /* Room.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Room.cpp; path = src/Room.cpp; sourceTree = "<group>"; };
@@ -321,6 +324,8 @@
 				5359D5631A96A90F00AE6365 /* Chest.h */,
 				5340977D1A896C0A000434F6 /* Creature.cpp */,
 				5340977E1A896C0A000434F6 /* Creature.h */,
+				4896E9311A9D34B50088FAD9 /* CreatureMover.cpp */,
+				4896E9321A9D34B50088FAD9 /* CreatureMover.h */,
 				534097801A896C0A000434F6 /* Game.cpp */,
 				534097811A896C0A000434F6 /* Game.h */,
 				53BCF1171A8ED99F00BD6288 /* GameScene.cpp */,
@@ -582,6 +587,7 @@
 				534097B01A896C0A000434F6 /* KeyboardInput.cpp in Sources */,
 				530CFA9A1A906FED00B4CD51 /* TmxPropertySet.cpp in Sources */,
 				534097C11A896C0A000434F6 /* Unit.cpp in Sources */,
+				4896E9331A9D34B50088FAD9 /* CreatureMover.cpp in Sources */,
 				530CFA901A906FED00B4CD51 /* tinyxml2.cpp in Sources */,
 				530CFA9B1A906FED00B4CD51 /* TmxTile.cpp in Sources */,
 				530CFA6A1A90547100B4CD51 /* Room.cpp in Sources */,

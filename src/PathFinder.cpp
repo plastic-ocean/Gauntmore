@@ -39,19 +39,18 @@ vector<Vector2> PathFinder::aStar(Vector2 start, Vector2 finish ) {
     PathNode first = *new PathNode( start, 0, findHeuristic(start) );
     this->target = finish;
     this->source = start;
-    openList->insertNode(first);
+    openList->insertNode(first);//add start to heap
     
     
     while ( !openList->empty() ) {
-        //do things here
-        PathNode temp = openList->getMinNode();
-        if ( atExit(temp) ) {
+        
+        PathNode temp = openList->getMinNode();//pop smallest from heap
+        if ( atExit(temp) ) {//are we at the exit?
            return makePath( temp );
             
         }
-        closedList.push_back( temp );
-//        openList.pop();
-        scanSurround( closedList.back() );
+        closedList.push_back( temp );//put node in closed list
+        scanSurround( closedList.back() );//add surrounding nodes to open list
     }
     //if you got here, there is no path to the target.
     vector<Vector2> nullVector;
