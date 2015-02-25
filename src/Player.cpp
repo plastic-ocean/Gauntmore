@@ -170,20 +170,23 @@ void Player::attack() {
  * Plays the move animation.
  */
 void Player::move(int facing) {
-    cout << "move" << endl;
     _facing = static_cast<Facing>(facing);
     switch (_facing) {
         case up:
-            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_move_up")), 500, -1);
+            _moveUpTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_move_up")), 500, -1);
+            _moveUpTween->setName("moveUp");
             break;
         case right:
-            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_move_right")), 500, -1);
+            _moveRightTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_move_right")), 500, -1);
+            _moveRightTween->setName("moveRight");
             break;
         case down:
-            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_move_down")), 500, -1);
+            _moveDownTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_move_down")), 500, -1);
+            _moveDownTween->setName("moveDown");
             break;
         case left:
-            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_move_left")), 500, -1);
+            _moveLeftTween = _sprite->addTween(TweenAnim(resources.getResAnim("adventurer_move_left")), 500, -1);
+            _moveLeftTween->setName("moveLeft");
             break;
         default:
             break;
@@ -195,8 +198,6 @@ void Player::move(int facing) {
  * Sets the sprite's standing image.
  */
 void Player::stand() {
-    cout << "stand" << endl;
-    _sprite->removeTweens();
     switch (_facing) {
         case up:
             _sprite->setResAnim(resources.getResAnim("adventurer_move_up"));
@@ -209,6 +210,31 @@ void Player::stand() {
             break;
         case left:
             _sprite->setResAnim(resources.getResAnim("adventurer_move_left"));
+            break;
+        default:
+            break;
+    }
+}
+
+
+/**
+ * Removes the current move tween.
+ *
+ * @facing is the current facing.
+ */
+void Player::removeTween(int facing) {
+    switch (facing) {
+        case up:
+            _sprite->removeTweensByName(_moveUpTween->getName());
+            break;
+        case right:
+            _sprite->removeTweensByName(_moveRightTween->getName());
+            break;
+        case down:
+            _sprite->removeTweensByName(_moveDownTween->getName());
+            break;
+        case left:
+            _sprite->removeTweensByName(_moveLeftTween->getName());
             break;
         default:
             break;
@@ -313,57 +339,5 @@ Vector2 Player::_correctDirection(Vector2 position, Vector2 direction) {
     
     return direction;
 }
-
-
-// OLD
-
-//Vector2 Player::_correctDirection(Vector2 position, Vector2 direction) {
-//    int newX = static_cast<int>(position.x) + static_cast<int>(direction.x) * 5;
-//    int newY = static_cast<int>(position.y) + static_cast<int>(direction.y) * 5;
-//    
-//    SDL_Rect spriteRect;
-//    spriteRect.x = newX + 10;
-//    spriteRect.y = newY + 12;
-//    spriteRect.h = tileSize - 14;
-//    spriteRect.w = tileSize - 24;
-//    
-////    cout << "x: " << spriteRect.x << " y: " << spriteRect.y << " h: " << spriteRect.h << " w: " << spriteRect.w << endl;
-//    
-//    if (_collisionDetector->detectWalls(_game->getTiles(), spriteRect) ||
-//        _collisionDetector->detectUnits(_game->getMap()->getRoom()->getUnits(), spriteRect)) {
-//        direction.x = 0;
-//        cout << "x collision" << endl;
-//    }
-//    if (_collisionDetector->detectWalls(_game->getTiles(), spriteRect) ||
-//        _collisionDetector->detectUnits(_game->getMap()->getRoom()->getUnits(), spriteRect)) {
-//        direction.y = 0;
-//        cout << "y collision" << endl;
-//    }
-//    
-//    return direction;
-//}
-
-
-
-
-
-//void Player::_setFacing(Vector2 dir) {
-//    if ( dir.y > 0 ) {
-//        _sprite->setResAnim(resources.getResAnim("adventurer_move_down"));
-//        _facing = down;
-//    }
-//    if ( dir.y < 0 ) {
-//        _sprite->setResAnim(resources.getResAnim("adventurer_move_up"));
-//        _facing = up;
-//    }
-//    if ( dir.x < 0 ) {
-//        _sprite->setResAnim(resources.getResAnim("adventurer_move_left"));
-//        _facing = left;
-//    }
-//    if ( dir.x > 0 ) {
-//        _sprite->setResAnim(resources.getResAnim("adventurer_move_right"));
-//        _facing = right;
-//    }
-//}
 
 

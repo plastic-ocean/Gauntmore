@@ -1,6 +1,7 @@
 #pragma once
 #include "Unit.h"
 #include "CollisionDetector.h"
+#include "res.h"
 
 DECLARE_SMART(Player, spPlayer);
 class Player: public Unit {
@@ -53,7 +54,7 @@ public:
     /**
      * Remove the tween from the sprite.
      */
-    void removeTween();
+    void removeTween(int facing);
     
     /**
      * Add sprite to the game scene.
@@ -70,7 +71,12 @@ protected:
     
     Facing _facing;
     spCollisionDetector _collisionDetector;
-    spTween _moveTween;
+    
+    spTween _moveUpTween;
+    spTween _moveRightTween;
+    spTween _moveDownTween;
+    spTween _moveLeftTween;
+    
     spTween _attackTween;
     bool _hasTween;
     bool _isMoving;
@@ -108,8 +114,4 @@ protected:
      * @directions is the player's current movement direction.
      */
     Vector2 _correctDirection(Vector2 position, Vector2 direction);
-    
-    Vector2 correctDirection(Vector2 position, Vector2 direction);
-    
-//    void _setFacing(Vector2 dir);
 };

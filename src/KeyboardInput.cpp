@@ -78,24 +78,26 @@ void KeyboardInput::_onEvent(Event *ev) {
         }
 
     if (event->type == SDL_KEYUP && event->key.repeat == 0) {
-        _game->getPlayer()->stand();
-        
         switch (event->key.keysym.sym ) {
             case SDLK_UP:
             case SDLK_w:
                 _dir -= Vector2(0, -1);
+                _game->getPlayer()->removeTween(Player::up);
                 break;
             case SDLK_DOWN:
             case SDLK_s:
                 _dir -= Vector2(0, 1);
+                _game->getPlayer()->removeTween(Player::down);
                 break;
             case SDLK_LEFT:
             case SDLK_a:
                 _dir -= Vector2(-1, 0);
+                _game->getPlayer()->removeTween(Player::left);
                 break;
             case SDLK_RIGHT:
             case SDLK_d:
                 _dir -= Vector2(1, 0);
+                _game->getPlayer()->removeTween(Player::right);
                 break;
             default: break;
         }

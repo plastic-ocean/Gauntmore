@@ -79,8 +79,7 @@ Vector2 Creature::moveMe() {
         std::cout << "moveQ is empty, attempting to fill it" << std::endl;
         moveQ.updatePath(findPath->aStar(pPos, cPos) );
     }
-    
-    
+        
     //if the Q is NOT empty
         Vector2 nextSpot = moveQ.peekNext();//look at where you are going
         if ( abs(pPos.x - nextSpot.x) <= 10 && abs(pPos.y - nextSpot.y) <= 10) {
