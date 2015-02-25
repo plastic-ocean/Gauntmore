@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "049B572D1871FBE900EF3C66"
-               BuildableName = "gauntmore_macosx.app"
-               BlueprintName = "gauntmore_macosx"
-               ReferencedContainer = "container:gauntmore_macosx.xcodeproj">
+               BuildableName = "example_macosx.app"
+               BlueprintName = "example_macosx"
+               ReferencedContainer = "container:example_macosx.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "049B572D1871FBE900EF3C66"
-            BuildableName = "gauntmore_macosx.app"
-            BlueprintName = "gauntmore_macosx"
-            ReferencedContainer = "container:gauntmore_macosx.xcodeproj">
+            BuildableName = "example_macosx.app"
+            BlueprintName = "example_macosx"
+            ReferencedContainer = "container:example_macosx.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -43,8 +43,7 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
-      useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/ReverendCode/Documents/gauntmore/data"
+      useCustomWorkingDirectory = "NO"
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
@@ -53,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "049B572D1871FBE900EF3C66"
-            BuildableName = "gauntmore_macosx.app"
-            BlueprintName = "gauntmore_macosx"
-            ReferencedContainer = "container:gauntmore_macosx.xcodeproj">
+            BuildableName = "example_macosx.app"
+            BlueprintName = "example_macosx"
+            ReferencedContainer = "container:example_macosx.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "049B572D1871FBE900EF3C66"
-            BuildableName = "gauntmore_macosx.app"
-            BlueprintName = "gauntmore_macosx"
-            ReferencedContainer = "container:gauntmore_macosx.xcodeproj">
+            BuildableName = "example_macosx.app"
+            BlueprintName = "example_macosx"
+            ReferencedContainer = "container:example_macosx.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "049B572D1871FBE900EF3C66"
-               BuildableName = "gauntmore_macosx.app"
-               BlueprintName = "gauntmore_macosx"
-               ReferencedContainer = "container:gauntmore_macosx.xcodeproj">
+               BlueprintIdentifier = "92AF25E819C637F80026E2CE"
+               BuildableName = "liboxygine-sound.a"
+               BlueprintName = "oxygine-sound"
+               ReferencedContainer = "container:oxygine-sound.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,35 +29,25 @@
       buildConfiguration = "Debug">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "049B572D1871FBE900EF3C66"
-            BuildableName = "gauntmore_macosx.app"
-            BlueprintName = "gauntmore_macosx"
-            ReferencedContainer = "container:gauntmore_macosx.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
-      useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/ReverendCode/Documents/gauntmore/data"
+      useCustomWorkingDirectory = "NO"
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "049B572D1871FBE900EF3C66"
-            BuildableName = "gauntmore_macosx.app"
-            BlueprintName = "gauntmore_macosx"
-            ReferencedContainer = "container:gauntmore_macosx.xcodeproj">
+            BlueprintIdentifier = "92AF25E819C637F80026E2CE"
+            BuildableName = "liboxygine-sound.a"
+            BlueprintName = "oxygine-sound"
+            ReferencedContainer = "container:oxygine-sound.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -67,15 +57,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "049B572D1871FBE900EF3C66"
-            BuildableName = "gauntmore_macosx.app"
-            BlueprintName = "gauntmore_macosx"
-            ReferencedContainer = "container:gauntmore_macosx.xcodeproj">
+            BlueprintIdentifier = "92AF25E819C637F80026E2CE"
+            BuildableName = "liboxygine-sound.a"
+            BlueprintName = "oxygine-sound"
+            ReferencedContainer = "container:oxygine-sound.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -52,7 +52,6 @@ Game::Game() {
     _player->init(_getEntrance(), this);
     _map->getRoom()->getUnits()->push_back(_player);
     
-    // Handle input
     _move = new KeyboardInput(this);
     
     // Health bar
