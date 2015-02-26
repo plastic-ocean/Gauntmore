@@ -10,7 +10,7 @@ cmake ..
 make
 
 # Copy data folder's contents to build
-cp -rf ../data/*
+cp -rf ../data/* .
 
 # Run executable
 ./gauntmore

@@ -1,5 +1,5 @@
 #include "SDL.h"
-#include "Tmx.h"
+#include "tmx/Tmx.h"
 
 #include "Thing.h"
 #include "Game.h"

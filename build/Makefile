@@ -43,10 +43,10 @@ RM = /usr/local/Cellar/cmake/3.1.1_1/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/Keith/Desktop/cis330/Gauntmore
+CMAKE_SOURCE_DIR = /Users/Keith/Desktop/cis330/gauntmore
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/Keith/Desktop/cis330/Gauntmore/build
+CMAKE_BINARY_DIR = /Users/Keith/Desktop/cis330/gauntmore/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -114,9 +114,9 @@ install/local/fast: install/local
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -169,6 +169,80 @@ oxygine-framework/fast:
 	$(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/build
 .PHONY : oxygine-framework/fast
 
+#=============================================================================
+# Target rules for targets named oxygine-sound
+
+# Build rule for target.
+oxygine-sound: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 oxygine-sound
+.PHONY : oxygine-sound
+
+# fast build rule for target.
+oxygine-sound/fast:
+	$(MAKE) -f oxygine-sound/CMakeFiles/oxygine-sound.dir/build.make oxygine-sound/CMakeFiles/oxygine-sound.dir/build
+.PHONY : oxygine-sound/fast
+
+#=============================================================================
+# Target rules for targets named tremor
+
+# Build rule for target.
+tremor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tremor
+.PHONY : tremor
+
+# fast build rule for target.
+tremor/fast:
+	$(MAKE) -f oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir/build.make oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir/build
+.PHONY : tremor/fast
+
+src/Chest.o: src/Chest.cpp.o
+.PHONY : src/Chest.o
+
+# target to build an object file
+src/Chest.cpp.o:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Chest.cpp.o
+.PHONY : src/Chest.cpp.o
+
+src/Chest.i: src/Chest.cpp.i
+.PHONY : src/Chest.i
+
+# target to preprocess a source file
+src/Chest.cpp.i:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Chest.cpp.i
+.PHONY : src/Chest.cpp.i
+
+src/Chest.s: src/Chest.cpp.s
+.PHONY : src/Chest.s
+
+# target to generate assembly for a file
+src/Chest.cpp.s:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Chest.cpp.s
+.PHONY : src/Chest.cpp.s
+
+src/CollisionDetector.o: src/CollisionDetector.cpp.o
+.PHONY : src/CollisionDetector.o
+
+# target to build an object file
+src/CollisionDetector.cpp.o:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.o
+.PHONY : src/CollisionDetector.cpp.o
+
+src/CollisionDetector.i: src/CollisionDetector.cpp.i
+.PHONY : src/CollisionDetector.i
+
+# target to preprocess a source file
+src/CollisionDetector.cpp.i:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.i
+.PHONY : src/CollisionDetector.cpp.i
+
+src/CollisionDetector.s: src/CollisionDetector.cpp.s
+.PHONY : src/CollisionDetector.s
+
+# target to generate assembly for a file
+src/CollisionDetector.cpp.s:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.s
+.PHONY : src/CollisionDetector.cpp.s
+
 src/Creature.o: src/Creature.cpp.o
 .PHONY : src/Creature.o
 
@@ -192,6 +266,30 @@ src/Creature.s: src/Creature.cpp.s
 src/Creature.cpp.s:
 	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Creature.cpp.s
 .PHONY : src/Creature.cpp.s
+
+src/CreatureMover.o: src/CreatureMover.cpp.o
+.PHONY : src/CreatureMover.o
+
+# target to build an object file
+src/CreatureMover.cpp.o:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.o
+.PHONY : src/CreatureMover.cpp.o
+
+src/CreatureMover.i: src/CreatureMover.cpp.i
+.PHONY : src/CreatureMover.i
+
+# target to preprocess a source file
+src/CreatureMover.cpp.i:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.i
+.PHONY : src/CreatureMover.cpp.i
+
+src/CreatureMover.s: src/CreatureMover.cpp.s
+.PHONY : src/CreatureMover.s
+
+# target to generate assembly for a file
+src/CreatureMover.cpp.s:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.s
+.PHONY : src/CreatureMover.cpp.s
 
 src/Game.o: src/Game.cpp.o
 .PHONY : src/Game.o
@@ -241,6 +339,102 @@ src/GameScene.cpp.s:
 	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/GameScene.cpp.s
 .PHONY : src/GameScene.cpp.s
 
+src/Gauntmore.o: src/Gauntmore.cpp.o
+.PHONY : src/Gauntmore.o
+
+# target to build an object file
+src/Gauntmore.cpp.o:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.o
+.PHONY : src/Gauntmore.cpp.o
+
+src/Gauntmore.i: src/Gauntmore.cpp.i
+.PHONY : src/Gauntmore.i
+
+# target to preprocess a source file
+src/Gauntmore.cpp.i:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.i
+.PHONY : src/Gauntmore.cpp.i
+
+src/Gauntmore.s: src/Gauntmore.cpp.s
+.PHONY : src/Gauntmore.s
+
+# target to generate assembly for a file
+src/Gauntmore.cpp.s:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.s
+.PHONY : src/Gauntmore.cpp.s
+
+src/Gold.o: src/Gold.cpp.o
+.PHONY : src/Gold.o
+
+# target to build an object file
+src/Gold.cpp.o:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Gold.cpp.o
+.PHONY : src/Gold.cpp.o
+
+src/Gold.i: src/Gold.cpp.i
+.PHONY : src/Gold.i
+
+# target to preprocess a source file
+src/Gold.cpp.i:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Gold.cpp.i
+.PHONY : src/Gold.cpp.i
+
+src/Gold.s: src/Gold.cpp.s
+.PHONY : src/Gold.s
+
+# target to generate assembly for a file
+src/Gold.cpp.s:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Gold.cpp.s
+.PHONY : src/Gold.cpp.s
+
+src/GoldCount.o: src/GoldCount.cpp.o
+.PHONY : src/GoldCount.o
+
+# target to build an object file
+src/GoldCount.cpp.o:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/GoldCount.cpp.o
+.PHONY : src/GoldCount.cpp.o
+
+src/GoldCount.i: src/GoldCount.cpp.i
+.PHONY : src/GoldCount.i
+
+# target to preprocess a source file
+src/GoldCount.cpp.i:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/GoldCount.cpp.i
+.PHONY : src/GoldCount.cpp.i
+
+src/GoldCount.s: src/GoldCount.cpp.s
+.PHONY : src/GoldCount.s
+
+# target to generate assembly for a file
+src/GoldCount.cpp.s:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/GoldCount.cpp.s
+.PHONY : src/GoldCount.cpp.s
+
+src/HealthBar.o: src/HealthBar.cpp.o
+.PHONY : src/HealthBar.o
+
+# target to build an object file
+src/HealthBar.cpp.o:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/HealthBar.cpp.o
+.PHONY : src/HealthBar.cpp.o
+
+src/HealthBar.i: src/HealthBar.cpp.i
+.PHONY : src/HealthBar.i
+
+# target to preprocess a source file
+src/HealthBar.cpp.i:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/HealthBar.cpp.i
+.PHONY : src/HealthBar.cpp.i
+
+src/HealthBar.s: src/HealthBar.cpp.s
+.PHONY : src/HealthBar.s
+
+# target to generate assembly for a file
+src/HealthBar.cpp.s:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/HealthBar.cpp.s
+.PHONY : src/HealthBar.cpp.s
+
 src/KeyboardInput.o: src/KeyboardInput.cpp.o
 .PHONY : src/KeyboardInput.o
 
@@ -289,6 +483,102 @@ src/Map.cpp.s:
 	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Map.cpp.s
 .PHONY : src/Map.cpp.s
 
+src/MazeGen.o: src/MazeGen.cpp.o
+.PHONY : src/MazeGen.o
+
+# target to build an object file
+src/MazeGen.cpp.o:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/MazeGen.cpp.o
+.PHONY : src/MazeGen.cpp.o
+
+src/MazeGen.i: src/MazeGen.cpp.i
+.PHONY : src/MazeGen.i
+
+# target to preprocess a source file
+src/MazeGen.cpp.i:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/MazeGen.cpp.i
+.PHONY : src/MazeGen.cpp.i
+
+src/MazeGen.s: src/MazeGen.cpp.s
+.PHONY : src/MazeGen.s
+
+# target to generate assembly for a file
+src/MazeGen.cpp.s:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/MazeGen.cpp.s
+.PHONY : src/MazeGen.cpp.s
+
+src/NodeMinHeap.o: src/NodeMinHeap.cpp.o
+.PHONY : src/NodeMinHeap.o
+
+# target to build an object file
+src/NodeMinHeap.cpp.o:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.o
+.PHONY : src/NodeMinHeap.cpp.o
+
+src/NodeMinHeap.i: src/NodeMinHeap.cpp.i
+.PHONY : src/NodeMinHeap.i
+
+# target to preprocess a source file
+src/NodeMinHeap.cpp.i:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.i
+.PHONY : src/NodeMinHeap.cpp.i
+
+src/NodeMinHeap.s: src/NodeMinHeap.cpp.s
+.PHONY : src/NodeMinHeap.s
+
+# target to generate assembly for a file
+src/NodeMinHeap.cpp.s:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.s
+.PHONY : src/NodeMinHeap.cpp.s
+
+src/PathFinder.o: src/PathFinder.cpp.o
+.PHONY : src/PathFinder.o
+
+# target to build an object file
+src/PathFinder.cpp.o:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/PathFinder.cpp.o
+.PHONY : src/PathFinder.cpp.o
+
+src/PathFinder.i: src/PathFinder.cpp.i
+.PHONY : src/PathFinder.i
+
+# target to preprocess a source file
+src/PathFinder.cpp.i:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/PathFinder.cpp.i
+.PHONY : src/PathFinder.cpp.i
+
+src/PathFinder.s: src/PathFinder.cpp.s
+.PHONY : src/PathFinder.s
+
+# target to generate assembly for a file
+src/PathFinder.cpp.s:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/PathFinder.cpp.s
+.PHONY : src/PathFinder.cpp.s
+
+src/PathNode.o: src/PathNode.cpp.o
+.PHONY : src/PathNode.o
+
+# target to build an object file
+src/PathNode.cpp.o:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/PathNode.cpp.o
+.PHONY : src/PathNode.cpp.o
+
+src/PathNode.i: src/PathNode.cpp.i
+.PHONY : src/PathNode.i
+
+# target to preprocess a source file
+src/PathNode.cpp.i:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/PathNode.cpp.i
+.PHONY : src/PathNode.cpp.i
+
+src/PathNode.s: src/PathNode.cpp.s
+.PHONY : src/PathNode.s
+
+# target to generate assembly for a file
+src/PathNode.cpp.s:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/PathNode.cpp.s
+.PHONY : src/PathNode.cpp.s
+
 src/Player.o: src/Player.cpp.o
 .PHONY : src/Player.o
 
@@ -312,6 +602,30 @@ src/Player.s: src/Player.cpp.s
 src/Player.cpp.s:
 	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Player.cpp.s
 .PHONY : src/Player.cpp.s
+
+src/Potion.o: src/Potion.cpp.o
+.PHONY : src/Potion.o
+
+# target to build an object file
+src/Potion.cpp.o:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Potion.cpp.o
+.PHONY : src/Potion.cpp.o
+
+src/Potion.i: src/Potion.cpp.i
+.PHONY : src/Potion.i
+
+# target to preprocess a source file
+src/Potion.cpp.i:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Potion.cpp.i
+.PHONY : src/Potion.cpp.i
+
+src/Potion.s: src/Potion.cpp.s
+.PHONY : src/Potion.s
+
+# target to generate assembly for a file
+src/Potion.cpp.s:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Potion.cpp.s
+.PHONY : src/Potion.cpp.s
 
 src/Room.o: src/Room.cpp.o
 .PHONY : src/Room.o
@@ -361,6 +675,78 @@ src/Scene.cpp.s:
 	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Scene.cpp.s
 .PHONY : src/Scene.cpp.s
 
+src/Skeleton.o: src/Skeleton.cpp.o
+.PHONY : src/Skeleton.o
+
+# target to build an object file
+src/Skeleton.cpp.o:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Skeleton.cpp.o
+.PHONY : src/Skeleton.cpp.o
+
+src/Skeleton.i: src/Skeleton.cpp.i
+.PHONY : src/Skeleton.i
+
+# target to preprocess a source file
+src/Skeleton.cpp.i:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Skeleton.cpp.i
+.PHONY : src/Skeleton.cpp.i
+
+src/Skeleton.s: src/Skeleton.cpp.s
+.PHONY : src/Skeleton.s
+
+# target to generate assembly for a file
+src/Skeleton.cpp.s:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Skeleton.cpp.s
+.PHONY : src/Skeleton.cpp.s
+
+src/Slime.o: src/Slime.cpp.o
+.PHONY : src/Slime.o
+
+# target to build an object file
+src/Slime.cpp.o:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Slime.cpp.o
+.PHONY : src/Slime.cpp.o
+
+src/Slime.i: src/Slime.cpp.i
+.PHONY : src/Slime.i
+
+# target to preprocess a source file
+src/Slime.cpp.i:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Slime.cpp.i
+.PHONY : src/Slime.cpp.i
+
+src/Slime.s: src/Slime.cpp.s
+.PHONY : src/Slime.s
+
+# target to generate assembly for a file
+src/Slime.cpp.s:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Slime.cpp.s
+.PHONY : src/Slime.cpp.s
+
+src/Thing.o: src/Thing.cpp.o
+.PHONY : src/Thing.o
+
+# target to build an object file
+src/Thing.cpp.o:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Thing.cpp.o
+.PHONY : src/Thing.cpp.o
+
+src/Thing.i: src/Thing.cpp.i
+.PHONY : src/Thing.i
+
+# target to preprocess a source file
+src/Thing.cpp.i:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Thing.cpp.i
+.PHONY : src/Thing.cpp.i
+
+src/Thing.s: src/Thing.cpp.s
+.PHONY : src/Thing.s
+
+# target to generate assembly for a file
+src/Thing.cpp.s:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Thing.cpp.s
+.PHONY : src/Thing.cpp.s
+
 src/Unit.o: src/Unit.cpp.o
 .PHONY : src/Unit.o
 
@@ -385,29 +771,29 @@ src/Unit.cpp.s:
 	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Unit.cpp.s
 .PHONY : src/Unit.cpp.s
 
-src/gauntmore.o: src/gauntmore.cpp.o
-.PHONY : src/gauntmore.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-src/gauntmore.cpp.o:
-	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/gauntmore.cpp.o
-.PHONY : src/gauntmore.cpp.o
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-src/gauntmore.i: src/gauntmore.cpp.i
-.PHONY : src/gauntmore.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-src/gauntmore.cpp.i:
-	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/gauntmore.cpp.i
-.PHONY : src/gauntmore.cpp.i
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-src/gauntmore.s: src/gauntmore.cpp.s
-.PHONY : src/gauntmore.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-src/gauntmore.cpp.s:
-	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/gauntmore.cpp.s
-.PHONY : src/gauntmore.cpp.s
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 src/res.o: src/res.cpp.o
 .PHONY : src/res.o
@@ -807,36 +1193,83 @@ help:
 	@echo "... list_install_components"
 	@echo "... install/local"
 	@echo "... oxygine-framework"
+	@echo "... oxygine-sound"
+	@echo "... tremor"
+	@echo "... src/Chest.o"
+	@echo "... src/Chest.i"
+	@echo "... src/Chest.s"
+	@echo "... src/CollisionDetector.o"
+	@echo "... src/CollisionDetector.i"
+	@echo "... src/CollisionDetector.s"
 	@echo "... src/Creature.o"
 	@echo "... src/Creature.i"
 	@echo "... src/Creature.s"
+	@echo "... src/CreatureMover.o"
+	@echo "... src/CreatureMover.i"
+	@echo "... src/CreatureMover.s"
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"
 	@echo "... src/GameScene.o"
 	@echo "... src/GameScene.i"
 	@echo "... src/GameScene.s"
+	@echo "... src/Gauntmore.o"
+	@echo "... src/Gauntmore.i"
+	@echo "... src/Gauntmore.s"
+	@echo "... src/Gold.o"
+	@echo "... src/Gold.i"
+	@echo "... src/Gold.s"
+	@echo "... src/GoldCount.o"
+	@echo "... src/GoldCount.i"
+	@echo "... src/GoldCount.s"
+	@echo "... src/HealthBar.o"
+	@echo "... src/HealthBar.i"
+	@echo "... src/HealthBar.s"
 	@echo "... src/KeyboardInput.o"
 	@echo "... src/KeyboardInput.i"
 	@echo "... src/KeyboardInput.s"
 	@echo "... src/Map.o"
 	@echo "... src/Map.i"
 	@echo "... src/Map.s"
+	@echo "... src/MazeGen.o"
+	@echo "... src/MazeGen.i"
+	@echo "... src/MazeGen.s"
+	@echo "... src/NodeMinHeap.o"
+	@echo "... src/NodeMinHeap.i"
+	@echo "... src/NodeMinHeap.s"
+	@echo "... src/PathFinder.o"
+	@echo "... src/PathFinder.i"
+	@echo "... src/PathFinder.s"
+	@echo "... src/PathNode.o"
+	@echo "... src/PathNode.i"
+	@echo "... src/PathNode.s"
 	@echo "... src/Player.o"
 	@echo "... src/Player.i"
 	@echo "... src/Player.s"
+	@echo "... src/Potion.o"
+	@echo "... src/Potion.i"
+	@echo "... src/Potion.s"
 	@echo "... src/Room.o"
 	@echo "... src/Room.i"
 	@echo "... src/Room.s"
 	@echo "... src/Scene.o"
 	@echo "... src/Scene.i"
 	@echo "... src/Scene.s"
+	@echo "... src/Skeleton.o"
+	@echo "... src/Skeleton.i"
+	@echo "... src/Skeleton.s"
+	@echo "... src/Slime.o"
+	@echo "... src/Slime.i"
+	@echo "... src/Slime.s"
+	@echo "... src/Thing.o"
+	@echo "... src/Thing.i"
+	@echo "... src/Thing.s"
 	@echo "... src/Unit.o"
 	@echo "... src/Unit.i"
 	@echo "... src/Unit.s"
-	@echo "... src/gauntmore.o"
-	@echo "... src/gauntmore.i"
-	@echo "... src/gauntmore.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 	@echo "... src/res.o"
 	@echo "... src/res.i"
 	@echo "... src/res.s"

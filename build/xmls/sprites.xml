@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<resources>
+	<set path = "images" />
+    <atlas>
+        <image file="floor.png" />
+        <image file="wall.png" />
+        <image file="chest.png" />
+        <image file="potion.png" />
+        <image file="gold.png" cols = "8" />
+        <image file="coin.png" />
+                
+        <image file="health.png" />
+        <image file="health_border.png" />
+        
+        <image file="slime_down.png" cols = "3" />
+        <image file="slime_up.png" cols = "3" />
+        <image file="slime_left.png" cols = "3" />
+        <image file="slime_right.png" cols = "3" />
+        
+        <image file="adventurer_down.png" />
+        <image file="adventurer_up.png" />
+        <image file="adventurer_left.png" />
+        <image file="adventurer_right.png" />
+
+<image file="skeleton.png" rows = "21" cols = "13" />
+
+        <image file="adventurer_move_down.png" cols = "9" />
+        <image file="adventurer_move_up.png" cols = "9" />
+        <image file="adventurer_move_left.png" cols = "9" />
+        <image file="adventurer_move_right.png" cols = "9" />
+        
+        <image file="adventurer_attack_down.png" cols = "7" />
+        <image file="adventurer_attack_up.png" cols = "7" />
+        <image file="adventurer_attack_left.png" cols = "7" />
+        <image file="adventurer_attack_right.png" cols = "7" />
+    </atlas>
+</resources>

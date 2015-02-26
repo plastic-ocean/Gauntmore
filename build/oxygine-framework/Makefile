@@ -43,10 +43,10 @@ RM = /usr/local/Cellar/cmake/3.1.1_1/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/Keith/Desktop/cis330/Gauntmore
+CMAKE_SOURCE_DIR = /Users/Keith/Desktop/cis330/gauntmore
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/Keith/Desktop/cis330/Gauntmore/build
+CMAKE_BINARY_DIR = /Users/Keith/Desktop/cis330/gauntmore/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -114,14 +114,14 @@ install/local/fast: install/local
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles /Users/Keith/Desktop/cis330/Gauntmore/build/oxygine-framework/CMakeFiles/progress.marks
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f CMakeFiles/Makefile2 oxygine-framework/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles 0
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles /Users/Keith/Desktop/cis330/gauntmore/build/oxygine-framework/CMakeFiles/progress.marks
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f CMakeFiles/Makefile2 oxygine-framework/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f CMakeFiles/Makefile2 oxygine-framework/clean
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f CMakeFiles/Makefile2 oxygine-framework/clean
 .PHONY : clean
 
 # The main clean target
@@ -130,22 +130,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f CMakeFiles/Makefile2 oxygine-framework/preinstall
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f CMakeFiles/Makefile2 oxygine-framework/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f CMakeFiles/Makefile2 oxygine-framework/preinstall
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f CMakeFiles/Makefile2 oxygine-framework/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 oxygine-framework/CMakeFiles/oxygine-framework.dir/rule:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f CMakeFiles/Makefile2 oxygine-framework/CMakeFiles/oxygine-framework.dir/rule
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f CMakeFiles/Makefile2 oxygine-framework/CMakeFiles/oxygine-framework.dir/rule
 .PHONY : oxygine-framework/CMakeFiles/oxygine-framework.dir/rule
 
 # Convenience name for target.
@@ -154,7 +154,7 @@ oxygine-framework: oxygine-framework/CMakeFiles/oxygine-framework.dir/rule
 
 # fast build rule for target.
 oxygine-framework/fast:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/build
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/build
 .PHONY : oxygine-framework/fast
 
 oxygine/greenlets/src/greenlet.o: oxygine/greenlets/src/greenlet.c.o
@@ -162,7 +162,7 @@ oxygine/greenlets/src/greenlet.o: oxygine/greenlets/src/greenlet.c.o
 
 # target to build an object file
 oxygine/greenlets/src/greenlet.c.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/greenlets/src/greenlet.c.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/greenlets/src/greenlet.c.o
 .PHONY : oxygine/greenlets/src/greenlet.c.o
 
 oxygine/greenlets/src/greenlet.i: oxygine/greenlets/src/greenlet.c.i
@@ -170,7 +170,7 @@ oxygine/greenlets/src/greenlet.i: oxygine/greenlets/src/greenlet.c.i
 
 # target to preprocess a source file
 oxygine/greenlets/src/greenlet.c.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/greenlets/src/greenlet.c.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/greenlets/src/greenlet.c.i
 .PHONY : oxygine/greenlets/src/greenlet.c.i
 
 oxygine/greenlets/src/greenlet.s: oxygine/greenlets/src/greenlet.c.s
@@ -178,7 +178,7 @@ oxygine/greenlets/src/greenlet.s: oxygine/greenlets/src/greenlet.c.s
 
 # target to generate assembly for a file
 oxygine/greenlets/src/greenlet.c.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/greenlets/src/greenlet.c.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/greenlets/src/greenlet.c.s
 .PHONY : oxygine/greenlets/src/greenlet.c.s
 
 oxygine/src/Actor.o: oxygine/src/Actor.cpp.o
@@ -186,7 +186,7 @@ oxygine/src/Actor.o: oxygine/src/Actor.cpp.o
 
 # target to build an object file
 oxygine/src/Actor.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Actor.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Actor.cpp.o
 .PHONY : oxygine/src/Actor.cpp.o
 
 oxygine/src/Actor.i: oxygine/src/Actor.cpp.i
@@ -194,7 +194,7 @@ oxygine/src/Actor.i: oxygine/src/Actor.cpp.i
 
 # target to preprocess a source file
 oxygine/src/Actor.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Actor.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Actor.cpp.i
 .PHONY : oxygine/src/Actor.cpp.i
 
 oxygine/src/Actor.s: oxygine/src/Actor.cpp.s
@@ -202,7 +202,7 @@ oxygine/src/Actor.s: oxygine/src/Actor.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/Actor.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Actor.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Actor.cpp.s
 .PHONY : oxygine/src/Actor.cpp.s
 
 oxygine/src/AnimationFrame.o: oxygine/src/AnimationFrame.cpp.o
@@ -210,7 +210,7 @@ oxygine/src/AnimationFrame.o: oxygine/src/AnimationFrame.cpp.o
 
 # target to build an object file
 oxygine/src/AnimationFrame.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/AnimationFrame.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/AnimationFrame.cpp.o
 .PHONY : oxygine/src/AnimationFrame.cpp.o
 
 oxygine/src/AnimationFrame.i: oxygine/src/AnimationFrame.cpp.i
@@ -218,7 +218,7 @@ oxygine/src/AnimationFrame.i: oxygine/src/AnimationFrame.cpp.i
 
 # target to preprocess a source file
 oxygine/src/AnimationFrame.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/AnimationFrame.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/AnimationFrame.cpp.i
 .PHONY : oxygine/src/AnimationFrame.cpp.i
 
 oxygine/src/AnimationFrame.s: oxygine/src/AnimationFrame.cpp.s
@@ -226,7 +226,7 @@ oxygine/src/AnimationFrame.s: oxygine/src/AnimationFrame.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/AnimationFrame.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/AnimationFrame.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/AnimationFrame.cpp.s
 .PHONY : oxygine/src/AnimationFrame.cpp.s
 
 oxygine/src/AsyncTask.o: oxygine/src/AsyncTask.cpp.o
@@ -234,7 +234,7 @@ oxygine/src/AsyncTask.o: oxygine/src/AsyncTask.cpp.o
 
 # target to build an object file
 oxygine/src/AsyncTask.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/AsyncTask.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/AsyncTask.cpp.o
 .PHONY : oxygine/src/AsyncTask.cpp.o
 
 oxygine/src/AsyncTask.i: oxygine/src/AsyncTask.cpp.i
@@ -242,7 +242,7 @@ oxygine/src/AsyncTask.i: oxygine/src/AsyncTask.cpp.i
 
 # target to preprocess a source file
 oxygine/src/AsyncTask.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/AsyncTask.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/AsyncTask.cpp.i
 .PHONY : oxygine/src/AsyncTask.cpp.i
 
 oxygine/src/AsyncTask.s: oxygine/src/AsyncTask.cpp.s
@@ -250,7 +250,7 @@ oxygine/src/AsyncTask.s: oxygine/src/AsyncTask.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/AsyncTask.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/AsyncTask.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/AsyncTask.cpp.s
 .PHONY : oxygine/src/AsyncTask.cpp.s
 
 oxygine/src/Box9Sprite.o: oxygine/src/Box9Sprite.cpp.o
@@ -258,7 +258,7 @@ oxygine/src/Box9Sprite.o: oxygine/src/Box9Sprite.cpp.o
 
 # target to build an object file
 oxygine/src/Box9Sprite.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Box9Sprite.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Box9Sprite.cpp.o
 .PHONY : oxygine/src/Box9Sprite.cpp.o
 
 oxygine/src/Box9Sprite.i: oxygine/src/Box9Sprite.cpp.i
@@ -266,7 +266,7 @@ oxygine/src/Box9Sprite.i: oxygine/src/Box9Sprite.cpp.i
 
 # target to preprocess a source file
 oxygine/src/Box9Sprite.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Box9Sprite.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Box9Sprite.cpp.i
 .PHONY : oxygine/src/Box9Sprite.cpp.i
 
 oxygine/src/Box9Sprite.s: oxygine/src/Box9Sprite.cpp.s
@@ -274,7 +274,7 @@ oxygine/src/Box9Sprite.s: oxygine/src/Box9Sprite.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/Box9Sprite.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Box9Sprite.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Box9Sprite.cpp.s
 .PHONY : oxygine/src/Box9Sprite.cpp.s
 
 oxygine/src/Button.o: oxygine/src/Button.cpp.o
@@ -282,7 +282,7 @@ oxygine/src/Button.o: oxygine/src/Button.cpp.o
 
 # target to build an object file
 oxygine/src/Button.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Button.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Button.cpp.o
 .PHONY : oxygine/src/Button.cpp.o
 
 oxygine/src/Button.i: oxygine/src/Button.cpp.i
@@ -290,7 +290,7 @@ oxygine/src/Button.i: oxygine/src/Button.cpp.i
 
 # target to preprocess a source file
 oxygine/src/Button.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Button.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Button.cpp.i
 .PHONY : oxygine/src/Button.cpp.i
 
 oxygine/src/Button.s: oxygine/src/Button.cpp.s
@@ -298,7 +298,7 @@ oxygine/src/Button.s: oxygine/src/Button.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/Button.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Button.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Button.cpp.s
 .PHONY : oxygine/src/Button.cpp.s
 
 oxygine/src/ClipRectActor.o: oxygine/src/ClipRectActor.cpp.o
@@ -306,7 +306,7 @@ oxygine/src/ClipRectActor.o: oxygine/src/ClipRectActor.cpp.o
 
 # target to build an object file
 oxygine/src/ClipRectActor.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/ClipRectActor.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/ClipRectActor.cpp.o
 .PHONY : oxygine/src/ClipRectActor.cpp.o
 
 oxygine/src/ClipRectActor.i: oxygine/src/ClipRectActor.cpp.i
@@ -314,7 +314,7 @@ oxygine/src/ClipRectActor.i: oxygine/src/ClipRectActor.cpp.i
 
 # target to preprocess a source file
 oxygine/src/ClipRectActor.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/ClipRectActor.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/ClipRectActor.cpp.i
 .PHONY : oxygine/src/ClipRectActor.cpp.i
 
 oxygine/src/ClipRectActor.s: oxygine/src/ClipRectActor.cpp.s
@@ -322,7 +322,7 @@ oxygine/src/ClipRectActor.s: oxygine/src/ClipRectActor.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/ClipRectActor.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/ClipRectActor.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/ClipRectActor.cpp.s
 .PHONY : oxygine/src/ClipRectActor.cpp.s
 
 oxygine/src/Clock.o: oxygine/src/Clock.cpp.o
@@ -330,7 +330,7 @@ oxygine/src/Clock.o: oxygine/src/Clock.cpp.o
 
 # target to build an object file
 oxygine/src/Clock.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Clock.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Clock.cpp.o
 .PHONY : oxygine/src/Clock.cpp.o
 
 oxygine/src/Clock.i: oxygine/src/Clock.cpp.i
@@ -338,7 +338,7 @@ oxygine/src/Clock.i: oxygine/src/Clock.cpp.i
 
 # target to preprocess a source file
 oxygine/src/Clock.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Clock.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Clock.cpp.i
 .PHONY : oxygine/src/Clock.cpp.i
 
 oxygine/src/Clock.s: oxygine/src/Clock.cpp.s
@@ -346,7 +346,7 @@ oxygine/src/Clock.s: oxygine/src/Clock.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/Clock.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Clock.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Clock.cpp.s
 .PHONY : oxygine/src/Clock.cpp.s
 
 oxygine/src/ColorRectSprite.o: oxygine/src/ColorRectSprite.cpp.o
@@ -354,7 +354,7 @@ oxygine/src/ColorRectSprite.o: oxygine/src/ColorRectSprite.cpp.o
 
 # target to build an object file
 oxygine/src/ColorRectSprite.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/ColorRectSprite.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/ColorRectSprite.cpp.o
 .PHONY : oxygine/src/ColorRectSprite.cpp.o
 
 oxygine/src/ColorRectSprite.i: oxygine/src/ColorRectSprite.cpp.i
@@ -362,7 +362,7 @@ oxygine/src/ColorRectSprite.i: oxygine/src/ColorRectSprite.cpp.i
 
 # target to preprocess a source file
 oxygine/src/ColorRectSprite.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/ColorRectSprite.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/ColorRectSprite.cpp.i
 .PHONY : oxygine/src/ColorRectSprite.cpp.i
 
 oxygine/src/ColorRectSprite.s: oxygine/src/ColorRectSprite.cpp.s
@@ -370,7 +370,7 @@ oxygine/src/ColorRectSprite.s: oxygine/src/ColorRectSprite.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/ColorRectSprite.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/ColorRectSprite.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/ColorRectSprite.cpp.s
 .PHONY : oxygine/src/ColorRectSprite.cpp.s
 
 oxygine/src/DebugActor.o: oxygine/src/DebugActor.cpp.o
@@ -378,7 +378,7 @@ oxygine/src/DebugActor.o: oxygine/src/DebugActor.cpp.o
 
 # target to build an object file
 oxygine/src/DebugActor.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/DebugActor.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/DebugActor.cpp.o
 .PHONY : oxygine/src/DebugActor.cpp.o
 
 oxygine/src/DebugActor.i: oxygine/src/DebugActor.cpp.i
@@ -386,7 +386,7 @@ oxygine/src/DebugActor.i: oxygine/src/DebugActor.cpp.i
 
 # target to preprocess a source file
 oxygine/src/DebugActor.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/DebugActor.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/DebugActor.cpp.i
 .PHONY : oxygine/src/DebugActor.cpp.i
 
 oxygine/src/DebugActor.s: oxygine/src/DebugActor.cpp.s
@@ -394,7 +394,7 @@ oxygine/src/DebugActor.s: oxygine/src/DebugActor.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/DebugActor.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/DebugActor.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/DebugActor.cpp.s
 .PHONY : oxygine/src/DebugActor.cpp.s
 
 oxygine/src/Draggable.o: oxygine/src/Draggable.cpp.o
@@ -402,7 +402,7 @@ oxygine/src/Draggable.o: oxygine/src/Draggable.cpp.o
 
 # target to build an object file
 oxygine/src/Draggable.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Draggable.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Draggable.cpp.o
 .PHONY : oxygine/src/Draggable.cpp.o
 
 oxygine/src/Draggable.i: oxygine/src/Draggable.cpp.i
@@ -410,7 +410,7 @@ oxygine/src/Draggable.i: oxygine/src/Draggable.cpp.i
 
 # target to preprocess a source file
 oxygine/src/Draggable.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Draggable.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Draggable.cpp.i
 .PHONY : oxygine/src/Draggable.cpp.i
 
 oxygine/src/Draggable.s: oxygine/src/Draggable.cpp.s
@@ -418,7 +418,7 @@ oxygine/src/Draggable.s: oxygine/src/Draggable.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/Draggable.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Draggable.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Draggable.cpp.s
 .PHONY : oxygine/src/Draggable.cpp.s
 
 oxygine/src/EventDispatcher.o: oxygine/src/EventDispatcher.cpp.o
@@ -426,7 +426,7 @@ oxygine/src/EventDispatcher.o: oxygine/src/EventDispatcher.cpp.o
 
 # target to build an object file
 oxygine/src/EventDispatcher.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/EventDispatcher.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/EventDispatcher.cpp.o
 .PHONY : oxygine/src/EventDispatcher.cpp.o
 
 oxygine/src/EventDispatcher.i: oxygine/src/EventDispatcher.cpp.i
@@ -434,7 +434,7 @@ oxygine/src/EventDispatcher.i: oxygine/src/EventDispatcher.cpp.i
 
 # target to preprocess a source file
 oxygine/src/EventDispatcher.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/EventDispatcher.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/EventDispatcher.cpp.i
 .PHONY : oxygine/src/EventDispatcher.cpp.i
 
 oxygine/src/EventDispatcher.s: oxygine/src/EventDispatcher.cpp.s
@@ -442,7 +442,7 @@ oxygine/src/EventDispatcher.s: oxygine/src/EventDispatcher.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/EventDispatcher.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/EventDispatcher.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/EventDispatcher.cpp.s
 .PHONY : oxygine/src/EventDispatcher.cpp.s
 
 oxygine/src/Font.o: oxygine/src/Font.cpp.o
@@ -450,7 +450,7 @@ oxygine/src/Font.o: oxygine/src/Font.cpp.o
 
 # target to build an object file
 oxygine/src/Font.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Font.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Font.cpp.o
 .PHONY : oxygine/src/Font.cpp.o
 
 oxygine/src/Font.i: oxygine/src/Font.cpp.i
@@ -458,7 +458,7 @@ oxygine/src/Font.i: oxygine/src/Font.cpp.i
 
 # target to preprocess a source file
 oxygine/src/Font.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Font.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Font.cpp.i
 .PHONY : oxygine/src/Font.cpp.i
 
 oxygine/src/Font.s: oxygine/src/Font.cpp.s
@@ -466,7 +466,7 @@ oxygine/src/Font.s: oxygine/src/Font.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/Font.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Font.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Font.cpp.s
 .PHONY : oxygine/src/Font.cpp.s
 
 oxygine/src/HttpRequestTask.o: oxygine/src/HttpRequestTask.cpp.o
@@ -474,7 +474,7 @@ oxygine/src/HttpRequestTask.o: oxygine/src/HttpRequestTask.cpp.o
 
 # target to build an object file
 oxygine/src/HttpRequestTask.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/HttpRequestTask.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/HttpRequestTask.cpp.o
 .PHONY : oxygine/src/HttpRequestTask.cpp.o
 
 oxygine/src/HttpRequestTask.i: oxygine/src/HttpRequestTask.cpp.i
@@ -482,7 +482,7 @@ oxygine/src/HttpRequestTask.i: oxygine/src/HttpRequestTask.cpp.i
 
 # target to preprocess a source file
 oxygine/src/HttpRequestTask.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/HttpRequestTask.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/HttpRequestTask.cpp.i
 .PHONY : oxygine/src/HttpRequestTask.cpp.i
 
 oxygine/src/HttpRequestTask.s: oxygine/src/HttpRequestTask.cpp.s
@@ -490,7 +490,7 @@ oxygine/src/HttpRequestTask.s: oxygine/src/HttpRequestTask.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/HttpRequestTask.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/HttpRequestTask.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/HttpRequestTask.cpp.s
 .PHONY : oxygine/src/HttpRequestTask.cpp.s
 
 oxygine/src/Input.o: oxygine/src/Input.cpp.o
@@ -498,7 +498,7 @@ oxygine/src/Input.o: oxygine/src/Input.cpp.o
 
 # target to build an object file
 oxygine/src/Input.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Input.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Input.cpp.o
 .PHONY : oxygine/src/Input.cpp.o
 
 oxygine/src/Input.i: oxygine/src/Input.cpp.i
@@ -506,7 +506,7 @@ oxygine/src/Input.i: oxygine/src/Input.cpp.i
 
 # target to preprocess a source file
 oxygine/src/Input.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Input.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Input.cpp.i
 .PHONY : oxygine/src/Input.cpp.i
 
 oxygine/src/Input.s: oxygine/src/Input.cpp.s
@@ -514,7 +514,7 @@ oxygine/src/Input.s: oxygine/src/Input.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/Input.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Input.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Input.cpp.s
 .PHONY : oxygine/src/Input.cpp.s
 
 oxygine/src/InputText.o: oxygine/src/InputText.cpp.o
@@ -522,7 +522,7 @@ oxygine/src/InputText.o: oxygine/src/InputText.cpp.o
 
 # target to build an object file
 oxygine/src/InputText.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/InputText.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/InputText.cpp.o
 .PHONY : oxygine/src/InputText.cpp.o
 
 oxygine/src/InputText.i: oxygine/src/InputText.cpp.i
@@ -530,7 +530,7 @@ oxygine/src/InputText.i: oxygine/src/InputText.cpp.i
 
 # target to preprocess a source file
 oxygine/src/InputText.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/InputText.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/InputText.cpp.i
 .PHONY : oxygine/src/InputText.cpp.i
 
 oxygine/src/InputText.s: oxygine/src/InputText.cpp.s
@@ -538,7 +538,7 @@ oxygine/src/InputText.s: oxygine/src/InputText.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/InputText.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/InputText.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/InputText.cpp.s
 .PHONY : oxygine/src/InputText.cpp.s
 
 oxygine/src/MaskedRenderer.o: oxygine/src/MaskedRenderer.cpp.o
@@ -546,7 +546,7 @@ oxygine/src/MaskedRenderer.o: oxygine/src/MaskedRenderer.cpp.o
 
 # target to build an object file
 oxygine/src/MaskedRenderer.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/MaskedRenderer.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/MaskedRenderer.cpp.o
 .PHONY : oxygine/src/MaskedRenderer.cpp.o
 
 oxygine/src/MaskedRenderer.i: oxygine/src/MaskedRenderer.cpp.i
@@ -554,7 +554,7 @@ oxygine/src/MaskedRenderer.i: oxygine/src/MaskedRenderer.cpp.i
 
 # target to preprocess a source file
 oxygine/src/MaskedRenderer.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/MaskedRenderer.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/MaskedRenderer.cpp.i
 .PHONY : oxygine/src/MaskedRenderer.cpp.i
 
 oxygine/src/MaskedRenderer.s: oxygine/src/MaskedRenderer.cpp.s
@@ -562,7 +562,7 @@ oxygine/src/MaskedRenderer.s: oxygine/src/MaskedRenderer.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/MaskedRenderer.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/MaskedRenderer.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/MaskedRenderer.cpp.s
 .PHONY : oxygine/src/MaskedRenderer.cpp.s
 
 oxygine/src/MaskedSprite.o: oxygine/src/MaskedSprite.cpp.o
@@ -570,7 +570,7 @@ oxygine/src/MaskedSprite.o: oxygine/src/MaskedSprite.cpp.o
 
 # target to build an object file
 oxygine/src/MaskedSprite.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/MaskedSprite.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/MaskedSprite.cpp.o
 .PHONY : oxygine/src/MaskedSprite.cpp.o
 
 oxygine/src/MaskedSprite.i: oxygine/src/MaskedSprite.cpp.i
@@ -578,7 +578,7 @@ oxygine/src/MaskedSprite.i: oxygine/src/MaskedSprite.cpp.i
 
 # target to preprocess a source file
 oxygine/src/MaskedSprite.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/MaskedSprite.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/MaskedSprite.cpp.i
 .PHONY : oxygine/src/MaskedSprite.cpp.i
 
 oxygine/src/MaskedSprite.s: oxygine/src/MaskedSprite.cpp.s
@@ -586,7 +586,7 @@ oxygine/src/MaskedSprite.s: oxygine/src/MaskedSprite.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/MaskedSprite.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/MaskedSprite.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/MaskedSprite.cpp.s
 .PHONY : oxygine/src/MaskedSprite.cpp.s
 
 oxygine/src/MemoryTexture.o: oxygine/src/MemoryTexture.cpp.o
@@ -594,7 +594,7 @@ oxygine/src/MemoryTexture.o: oxygine/src/MemoryTexture.cpp.o
 
 # target to build an object file
 oxygine/src/MemoryTexture.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/MemoryTexture.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/MemoryTexture.cpp.o
 .PHONY : oxygine/src/MemoryTexture.cpp.o
 
 oxygine/src/MemoryTexture.i: oxygine/src/MemoryTexture.cpp.i
@@ -602,7 +602,7 @@ oxygine/src/MemoryTexture.i: oxygine/src/MemoryTexture.cpp.i
 
 # target to preprocess a source file
 oxygine/src/MemoryTexture.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/MemoryTexture.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/MemoryTexture.cpp.i
 .PHONY : oxygine/src/MemoryTexture.cpp.i
 
 oxygine/src/MemoryTexture.s: oxygine/src/MemoryTexture.cpp.s
@@ -610,7 +610,7 @@ oxygine/src/MemoryTexture.s: oxygine/src/MemoryTexture.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/MemoryTexture.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/MemoryTexture.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/MemoryTexture.cpp.s
 .PHONY : oxygine/src/MemoryTexture.cpp.s
 
 oxygine/src/Multithreading.o: oxygine/src/Multithreading.cpp.o
@@ -618,7 +618,7 @@ oxygine/src/Multithreading.o: oxygine/src/Multithreading.cpp.o
 
 # target to build an object file
 oxygine/src/Multithreading.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Multithreading.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Multithreading.cpp.o
 .PHONY : oxygine/src/Multithreading.cpp.o
 
 oxygine/src/Multithreading.i: oxygine/src/Multithreading.cpp.i
@@ -626,7 +626,7 @@ oxygine/src/Multithreading.i: oxygine/src/Multithreading.cpp.i
 
 # target to preprocess a source file
 oxygine/src/Multithreading.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Multithreading.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Multithreading.cpp.i
 .PHONY : oxygine/src/Multithreading.cpp.i
 
 oxygine/src/Multithreading.s: oxygine/src/Multithreading.cpp.s
@@ -634,7 +634,7 @@ oxygine/src/Multithreading.s: oxygine/src/Multithreading.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/Multithreading.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Multithreading.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Multithreading.cpp.s
 .PHONY : oxygine/src/Multithreading.cpp.s
 
 oxygine/src/PointerState.o: oxygine/src/PointerState.cpp.o
@@ -642,7 +642,7 @@ oxygine/src/PointerState.o: oxygine/src/PointerState.cpp.o
 
 # target to build an object file
 oxygine/src/PointerState.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/PointerState.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/PointerState.cpp.o
 .PHONY : oxygine/src/PointerState.cpp.o
 
 oxygine/src/PointerState.i: oxygine/src/PointerState.cpp.i
@@ -650,7 +650,7 @@ oxygine/src/PointerState.i: oxygine/src/PointerState.cpp.i
 
 # target to preprocess a source file
 oxygine/src/PointerState.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/PointerState.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/PointerState.cpp.i
 .PHONY : oxygine/src/PointerState.cpp.i
 
 oxygine/src/PointerState.s: oxygine/src/PointerState.cpp.s
@@ -658,7 +658,7 @@ oxygine/src/PointerState.s: oxygine/src/PointerState.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/PointerState.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/PointerState.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/PointerState.cpp.s
 .PHONY : oxygine/src/PointerState.cpp.s
 
 oxygine/src/Polygon.o: oxygine/src/Polygon.cpp.o
@@ -666,7 +666,7 @@ oxygine/src/Polygon.o: oxygine/src/Polygon.cpp.o
 
 # target to build an object file
 oxygine/src/Polygon.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Polygon.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Polygon.cpp.o
 .PHONY : oxygine/src/Polygon.cpp.o
 
 oxygine/src/Polygon.i: oxygine/src/Polygon.cpp.i
@@ -674,7 +674,7 @@ oxygine/src/Polygon.i: oxygine/src/Polygon.cpp.i
 
 # target to preprocess a source file
 oxygine/src/Polygon.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Polygon.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Polygon.cpp.i
 .PHONY : oxygine/src/Polygon.cpp.i
 
 oxygine/src/Polygon.s: oxygine/src/Polygon.cpp.s
@@ -682,7 +682,7 @@ oxygine/src/Polygon.s: oxygine/src/Polygon.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/Polygon.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Polygon.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Polygon.cpp.s
 .PHONY : oxygine/src/Polygon.cpp.s
 
 oxygine/src/ProgressBar.o: oxygine/src/ProgressBar.cpp.o
@@ -690,7 +690,7 @@ oxygine/src/ProgressBar.o: oxygine/src/ProgressBar.cpp.o
 
 # target to build an object file
 oxygine/src/ProgressBar.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/ProgressBar.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/ProgressBar.cpp.o
 .PHONY : oxygine/src/ProgressBar.cpp.o
 
 oxygine/src/ProgressBar.i: oxygine/src/ProgressBar.cpp.i
@@ -698,7 +698,7 @@ oxygine/src/ProgressBar.i: oxygine/src/ProgressBar.cpp.i
 
 # target to preprocess a source file
 oxygine/src/ProgressBar.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/ProgressBar.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/ProgressBar.cpp.i
 .PHONY : oxygine/src/ProgressBar.cpp.i
 
 oxygine/src/ProgressBar.s: oxygine/src/ProgressBar.cpp.s
@@ -706,7 +706,7 @@ oxygine/src/ProgressBar.s: oxygine/src/ProgressBar.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/ProgressBar.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/ProgressBar.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/ProgressBar.cpp.s
 .PHONY : oxygine/src/ProgressBar.cpp.s
 
 oxygine/src/STDRenderer.o: oxygine/src/STDRenderer.cpp.o
@@ -714,7 +714,7 @@ oxygine/src/STDRenderer.o: oxygine/src/STDRenderer.cpp.o
 
 # target to build an object file
 oxygine/src/STDRenderer.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/STDRenderer.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/STDRenderer.cpp.o
 .PHONY : oxygine/src/STDRenderer.cpp.o
 
 oxygine/src/STDRenderer.i: oxygine/src/STDRenderer.cpp.i
@@ -722,7 +722,7 @@ oxygine/src/STDRenderer.i: oxygine/src/STDRenderer.cpp.i
 
 # target to preprocess a source file
 oxygine/src/STDRenderer.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/STDRenderer.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/STDRenderer.cpp.i
 .PHONY : oxygine/src/STDRenderer.cpp.i
 
 oxygine/src/STDRenderer.s: oxygine/src/STDRenderer.cpp.s
@@ -730,7 +730,7 @@ oxygine/src/STDRenderer.s: oxygine/src/STDRenderer.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/STDRenderer.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/STDRenderer.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/STDRenderer.cpp.s
 .PHONY : oxygine/src/STDRenderer.cpp.s
 
 oxygine/src/Serializable.o: oxygine/src/Serializable.cpp.o
@@ -738,7 +738,7 @@ oxygine/src/Serializable.o: oxygine/src/Serializable.cpp.o
 
 # target to build an object file
 oxygine/src/Serializable.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Serializable.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Serializable.cpp.o
 .PHONY : oxygine/src/Serializable.cpp.o
 
 oxygine/src/Serializable.i: oxygine/src/Serializable.cpp.i
@@ -746,7 +746,7 @@ oxygine/src/Serializable.i: oxygine/src/Serializable.cpp.i
 
 # target to preprocess a source file
 oxygine/src/Serializable.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Serializable.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Serializable.cpp.i
 .PHONY : oxygine/src/Serializable.cpp.i
 
 oxygine/src/Serializable.s: oxygine/src/Serializable.cpp.s
@@ -754,7 +754,7 @@ oxygine/src/Serializable.s: oxygine/src/Serializable.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/Serializable.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Serializable.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Serializable.cpp.s
 .PHONY : oxygine/src/Serializable.cpp.s
 
 oxygine/src/Serialize.o: oxygine/src/Serialize.cpp.o
@@ -762,7 +762,7 @@ oxygine/src/Serialize.o: oxygine/src/Serialize.cpp.o
 
 # target to build an object file
 oxygine/src/Serialize.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Serialize.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Serialize.cpp.o
 .PHONY : oxygine/src/Serialize.cpp.o
 
 oxygine/src/Serialize.i: oxygine/src/Serialize.cpp.i
@@ -770,7 +770,7 @@ oxygine/src/Serialize.i: oxygine/src/Serialize.cpp.i
 
 # target to preprocess a source file
 oxygine/src/Serialize.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Serialize.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Serialize.cpp.i
 .PHONY : oxygine/src/Serialize.cpp.i
 
 oxygine/src/Serialize.s: oxygine/src/Serialize.cpp.s
@@ -778,7 +778,7 @@ oxygine/src/Serialize.s: oxygine/src/Serialize.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/Serialize.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Serialize.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Serialize.cpp.s
 .PHONY : oxygine/src/Serialize.cpp.s
 
 oxygine/src/SlidingActor.o: oxygine/src/SlidingActor.cpp.o
@@ -786,7 +786,7 @@ oxygine/src/SlidingActor.o: oxygine/src/SlidingActor.cpp.o
 
 # target to build an object file
 oxygine/src/SlidingActor.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/SlidingActor.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/SlidingActor.cpp.o
 .PHONY : oxygine/src/SlidingActor.cpp.o
 
 oxygine/src/SlidingActor.i: oxygine/src/SlidingActor.cpp.i
@@ -794,7 +794,7 @@ oxygine/src/SlidingActor.i: oxygine/src/SlidingActor.cpp.i
 
 # target to preprocess a source file
 oxygine/src/SlidingActor.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/SlidingActor.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/SlidingActor.cpp.i
 .PHONY : oxygine/src/SlidingActor.cpp.i
 
 oxygine/src/SlidingActor.s: oxygine/src/SlidingActor.cpp.s
@@ -802,7 +802,7 @@ oxygine/src/SlidingActor.s: oxygine/src/SlidingActor.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/SlidingActor.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/SlidingActor.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/SlidingActor.cpp.s
 .PHONY : oxygine/src/SlidingActor.cpp.s
 
 oxygine/src/Sprite.o: oxygine/src/Sprite.cpp.o
@@ -810,7 +810,7 @@ oxygine/src/Sprite.o: oxygine/src/Sprite.cpp.o
 
 # target to build an object file
 oxygine/src/Sprite.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Sprite.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Sprite.cpp.o
 .PHONY : oxygine/src/Sprite.cpp.o
 
 oxygine/src/Sprite.i: oxygine/src/Sprite.cpp.i
@@ -818,7 +818,7 @@ oxygine/src/Sprite.i: oxygine/src/Sprite.cpp.i
 
 # target to preprocess a source file
 oxygine/src/Sprite.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Sprite.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Sprite.cpp.i
 .PHONY : oxygine/src/Sprite.cpp.i
 
 oxygine/src/Sprite.s: oxygine/src/Sprite.cpp.s
@@ -826,7 +826,7 @@ oxygine/src/Sprite.s: oxygine/src/Sprite.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/Sprite.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Sprite.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Sprite.cpp.s
 .PHONY : oxygine/src/Sprite.cpp.s
 
 oxygine/src/Stage.o: oxygine/src/Stage.cpp.o
@@ -834,7 +834,7 @@ oxygine/src/Stage.o: oxygine/src/Stage.cpp.o
 
 # target to build an object file
 oxygine/src/Stage.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Stage.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Stage.cpp.o
 .PHONY : oxygine/src/Stage.cpp.o
 
 oxygine/src/Stage.i: oxygine/src/Stage.cpp.i
@@ -842,7 +842,7 @@ oxygine/src/Stage.i: oxygine/src/Stage.cpp.i
 
 # target to preprocess a source file
 oxygine/src/Stage.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Stage.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Stage.cpp.i
 .PHONY : oxygine/src/Stage.cpp.i
 
 oxygine/src/Stage.s: oxygine/src/Stage.cpp.s
@@ -850,7 +850,7 @@ oxygine/src/Stage.s: oxygine/src/Stage.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/Stage.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Stage.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Stage.cpp.s
 .PHONY : oxygine/src/Stage.cpp.s
 
 oxygine/src/TextField.o: oxygine/src/TextField.cpp.o
@@ -858,7 +858,7 @@ oxygine/src/TextField.o: oxygine/src/TextField.cpp.o
 
 # target to build an object file
 oxygine/src/TextField.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/TextField.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/TextField.cpp.o
 .PHONY : oxygine/src/TextField.cpp.o
 
 oxygine/src/TextField.i: oxygine/src/TextField.cpp.i
@@ -866,7 +866,7 @@ oxygine/src/TextField.i: oxygine/src/TextField.cpp.i
 
 # target to preprocess a source file
 oxygine/src/TextField.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/TextField.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/TextField.cpp.i
 .PHONY : oxygine/src/TextField.cpp.i
 
 oxygine/src/TextField.s: oxygine/src/TextField.cpp.s
@@ -874,7 +874,7 @@ oxygine/src/TextField.s: oxygine/src/TextField.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/TextField.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/TextField.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/TextField.cpp.s
 .PHONY : oxygine/src/TextField.cpp.s
 
 oxygine/src/Tween.o: oxygine/src/Tween.cpp.o
@@ -882,7 +882,7 @@ oxygine/src/Tween.o: oxygine/src/Tween.cpp.o
 
 # target to build an object file
 oxygine/src/Tween.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Tween.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Tween.cpp.o
 .PHONY : oxygine/src/Tween.cpp.o
 
 oxygine/src/Tween.i: oxygine/src/Tween.cpp.i
@@ -890,7 +890,7 @@ oxygine/src/Tween.i: oxygine/src/Tween.cpp.i
 
 # target to preprocess a source file
 oxygine/src/Tween.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Tween.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Tween.cpp.i
 .PHONY : oxygine/src/Tween.cpp.i
 
 oxygine/src/Tween.s: oxygine/src/Tween.cpp.s
@@ -898,7 +898,7 @@ oxygine/src/Tween.s: oxygine/src/Tween.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/Tween.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Tween.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/Tween.cpp.s
 .PHONY : oxygine/src/Tween.cpp.s
 
 oxygine/src/TweenQueue.o: oxygine/src/TweenQueue.cpp.o
@@ -906,7 +906,7 @@ oxygine/src/TweenQueue.o: oxygine/src/TweenQueue.cpp.o
 
 # target to build an object file
 oxygine/src/TweenQueue.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/TweenQueue.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/TweenQueue.cpp.o
 .PHONY : oxygine/src/TweenQueue.cpp.o
 
 oxygine/src/TweenQueue.i: oxygine/src/TweenQueue.cpp.i
@@ -914,7 +914,7 @@ oxygine/src/TweenQueue.i: oxygine/src/TweenQueue.cpp.i
 
 # target to preprocess a source file
 oxygine/src/TweenQueue.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/TweenQueue.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/TweenQueue.cpp.i
 .PHONY : oxygine/src/TweenQueue.cpp.i
 
 oxygine/src/TweenQueue.s: oxygine/src/TweenQueue.cpp.s
@@ -922,7 +922,7 @@ oxygine/src/TweenQueue.s: oxygine/src/TweenQueue.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/TweenQueue.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/TweenQueue.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/TweenQueue.cpp.s
 .PHONY : oxygine/src/TweenQueue.cpp.s
 
 oxygine/src/VisualStyle.o: oxygine/src/VisualStyle.cpp.o
@@ -930,7 +930,7 @@ oxygine/src/VisualStyle.o: oxygine/src/VisualStyle.cpp.o
 
 # target to build an object file
 oxygine/src/VisualStyle.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/VisualStyle.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/VisualStyle.cpp.o
 .PHONY : oxygine/src/VisualStyle.cpp.o
 
 oxygine/src/VisualStyle.i: oxygine/src/VisualStyle.cpp.i
@@ -938,7 +938,7 @@ oxygine/src/VisualStyle.i: oxygine/src/VisualStyle.cpp.i
 
 # target to preprocess a source file
 oxygine/src/VisualStyle.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/VisualStyle.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/VisualStyle.cpp.i
 .PHONY : oxygine/src/VisualStyle.cpp.i
 
 oxygine/src/VisualStyle.s: oxygine/src/VisualStyle.cpp.s
@@ -946,7 +946,7 @@ oxygine/src/VisualStyle.s: oxygine/src/VisualStyle.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/VisualStyle.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/VisualStyle.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/VisualStyle.cpp.s
 .PHONY : oxygine/src/VisualStyle.cpp.s
 
 oxygine/src/WebImage.o: oxygine/src/WebImage.cpp.o
@@ -954,7 +954,7 @@ oxygine/src/WebImage.o: oxygine/src/WebImage.cpp.o
 
 # target to build an object file
 oxygine/src/WebImage.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/WebImage.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/WebImage.cpp.o
 .PHONY : oxygine/src/WebImage.cpp.o
 
 oxygine/src/WebImage.i: oxygine/src/WebImage.cpp.i
@@ -962,7 +962,7 @@ oxygine/src/WebImage.i: oxygine/src/WebImage.cpp.i
 
 # target to preprocess a source file
 oxygine/src/WebImage.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/WebImage.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/WebImage.cpp.i
 .PHONY : oxygine/src/WebImage.cpp.i
 
 oxygine/src/WebImage.s: oxygine/src/WebImage.cpp.s
@@ -970,7 +970,7 @@ oxygine/src/WebImage.s: oxygine/src/WebImage.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/WebImage.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/WebImage.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/WebImage.cpp.s
 .PHONY : oxygine/src/WebImage.cpp.s
 
 oxygine/src/blocking.o: oxygine/src/blocking.cpp.o
@@ -978,7 +978,7 @@ oxygine/src/blocking.o: oxygine/src/blocking.cpp.o
 
 # target to build an object file
 oxygine/src/blocking.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/blocking.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/blocking.cpp.o
 .PHONY : oxygine/src/blocking.cpp.o
 
 oxygine/src/blocking.i: oxygine/src/blocking.cpp.i
@@ -986,7 +986,7 @@ oxygine/src/blocking.i: oxygine/src/blocking.cpp.i
 
 # target to preprocess a source file
 oxygine/src/blocking.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/blocking.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/blocking.cpp.i
 .PHONY : oxygine/src/blocking.cpp.i
 
 oxygine/src/blocking.s: oxygine/src/blocking.cpp.s
@@ -994,7 +994,7 @@ oxygine/src/blocking.s: oxygine/src/blocking.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/blocking.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/blocking.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/blocking.cpp.s
 .PHONY : oxygine/src/blocking.cpp.s
 
 oxygine/src/core/FileSystem.o: oxygine/src/core/FileSystem.cpp.o
@@ -1002,7 +1002,7 @@ oxygine/src/core/FileSystem.o: oxygine/src/core/FileSystem.cpp.o
 
 # target to build an object file
 oxygine/src/core/FileSystem.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/FileSystem.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/FileSystem.cpp.o
 .PHONY : oxygine/src/core/FileSystem.cpp.o
 
 oxygine/src/core/FileSystem.i: oxygine/src/core/FileSystem.cpp.i
@@ -1010,7 +1010,7 @@ oxygine/src/core/FileSystem.i: oxygine/src/core/FileSystem.cpp.i
 
 # target to preprocess a source file
 oxygine/src/core/FileSystem.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/FileSystem.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/FileSystem.cpp.i
 .PHONY : oxygine/src/core/FileSystem.cpp.i
 
 oxygine/src/core/FileSystem.s: oxygine/src/core/FileSystem.cpp.s
@@ -1018,7 +1018,7 @@ oxygine/src/core/FileSystem.s: oxygine/src/core/FileSystem.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/core/FileSystem.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/FileSystem.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/FileSystem.cpp.s
 .PHONY : oxygine/src/core/FileSystem.cpp.s
 
 oxygine/src/core/ImageData.o: oxygine/src/core/ImageData.cpp.o
@@ -1026,7 +1026,7 @@ oxygine/src/core/ImageData.o: oxygine/src/core/ImageData.cpp.o
 
 # target to build an object file
 oxygine/src/core/ImageData.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/ImageData.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/ImageData.cpp.o
 .PHONY : oxygine/src/core/ImageData.cpp.o
 
 oxygine/src/core/ImageData.i: oxygine/src/core/ImageData.cpp.i
@@ -1034,7 +1034,7 @@ oxygine/src/core/ImageData.i: oxygine/src/core/ImageData.cpp.i
 
 # target to preprocess a source file
 oxygine/src/core/ImageData.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/ImageData.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/ImageData.cpp.i
 .PHONY : oxygine/src/core/ImageData.cpp.i
 
 oxygine/src/core/ImageData.s: oxygine/src/core/ImageData.cpp.s
@@ -1042,7 +1042,7 @@ oxygine/src/core/ImageData.s: oxygine/src/core/ImageData.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/core/ImageData.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/ImageData.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/ImageData.cpp.s
 .PHONY : oxygine/src/core/ImageData.cpp.s
 
 oxygine/src/core/ImageDataOperations.o: oxygine/src/core/ImageDataOperations.cpp.o
@@ -1050,7 +1050,7 @@ oxygine/src/core/ImageDataOperations.o: oxygine/src/core/ImageDataOperations.cpp
 
 # target to build an object file
 oxygine/src/core/ImageDataOperations.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/ImageDataOperations.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/ImageDataOperations.cpp.o
 .PHONY : oxygine/src/core/ImageDataOperations.cpp.o
 
 oxygine/src/core/ImageDataOperations.i: oxygine/src/core/ImageDataOperations.cpp.i
@@ -1058,7 +1058,7 @@ oxygine/src/core/ImageDataOperations.i: oxygine/src/core/ImageDataOperations.cpp
 
 # target to preprocess a source file
 oxygine/src/core/ImageDataOperations.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/ImageDataOperations.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/ImageDataOperations.cpp.i
 .PHONY : oxygine/src/core/ImageDataOperations.cpp.i
 
 oxygine/src/core/ImageDataOperations.s: oxygine/src/core/ImageDataOperations.cpp.s
@@ -1066,7 +1066,7 @@ oxygine/src/core/ImageDataOperations.s: oxygine/src/core/ImageDataOperations.cpp
 
 # target to generate assembly for a file
 oxygine/src/core/ImageDataOperations.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/ImageDataOperations.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/ImageDataOperations.cpp.s
 .PHONY : oxygine/src/core/ImageDataOperations.cpp.s
 
 oxygine/src/core/Mem2Native.o: oxygine/src/core/Mem2Native.cpp.o
@@ -1074,7 +1074,7 @@ oxygine/src/core/Mem2Native.o: oxygine/src/core/Mem2Native.cpp.o
 
 # target to build an object file
 oxygine/src/core/Mem2Native.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Mem2Native.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Mem2Native.cpp.o
 .PHONY : oxygine/src/core/Mem2Native.cpp.o
 
 oxygine/src/core/Mem2Native.i: oxygine/src/core/Mem2Native.cpp.i
@@ -1082,7 +1082,7 @@ oxygine/src/core/Mem2Native.i: oxygine/src/core/Mem2Native.cpp.i
 
 # target to preprocess a source file
 oxygine/src/core/Mem2Native.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Mem2Native.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Mem2Native.cpp.i
 .PHONY : oxygine/src/core/Mem2Native.cpp.i
 
 oxygine/src/core/Mem2Native.s: oxygine/src/core/Mem2Native.cpp.s
@@ -1090,7 +1090,7 @@ oxygine/src/core/Mem2Native.s: oxygine/src/core/Mem2Native.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/core/Mem2Native.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Mem2Native.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Mem2Native.cpp.s
 .PHONY : oxygine/src/core/Mem2Native.cpp.s
 
 oxygine/src/core/Mutex.o: oxygine/src/core/Mutex.cpp.o
@@ -1098,7 +1098,7 @@ oxygine/src/core/Mutex.o: oxygine/src/core/Mutex.cpp.o
 
 # target to build an object file
 oxygine/src/core/Mutex.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Mutex.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Mutex.cpp.o
 .PHONY : oxygine/src/core/Mutex.cpp.o
 
 oxygine/src/core/Mutex.i: oxygine/src/core/Mutex.cpp.i
@@ -1106,7 +1106,7 @@ oxygine/src/core/Mutex.i: oxygine/src/core/Mutex.cpp.i
 
 # target to preprocess a source file
 oxygine/src/core/Mutex.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Mutex.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Mutex.cpp.i
 .PHONY : oxygine/src/core/Mutex.cpp.i
 
 oxygine/src/core/Mutex.s: oxygine/src/core/Mutex.cpp.s
@@ -1114,7 +1114,7 @@ oxygine/src/core/Mutex.s: oxygine/src/core/Mutex.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/core/Mutex.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Mutex.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Mutex.cpp.s
 .PHONY : oxygine/src/core/Mutex.cpp.s
 
 oxygine/src/core/NativeTexture.o: oxygine/src/core/NativeTexture.cpp.o
@@ -1122,7 +1122,7 @@ oxygine/src/core/NativeTexture.o: oxygine/src/core/NativeTexture.cpp.o
 
 # target to build an object file
 oxygine/src/core/NativeTexture.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/NativeTexture.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/NativeTexture.cpp.o
 .PHONY : oxygine/src/core/NativeTexture.cpp.o
 
 oxygine/src/core/NativeTexture.i: oxygine/src/core/NativeTexture.cpp.i
@@ -1130,7 +1130,7 @@ oxygine/src/core/NativeTexture.i: oxygine/src/core/NativeTexture.cpp.i
 
 # target to preprocess a source file
 oxygine/src/core/NativeTexture.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/NativeTexture.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/NativeTexture.cpp.i
 .PHONY : oxygine/src/core/NativeTexture.cpp.i
 
 oxygine/src/core/NativeTexture.s: oxygine/src/core/NativeTexture.cpp.s
@@ -1138,7 +1138,7 @@ oxygine/src/core/NativeTexture.s: oxygine/src/core/NativeTexture.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/core/NativeTexture.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/NativeTexture.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/NativeTexture.cpp.s
 .PHONY : oxygine/src/core/NativeTexture.cpp.s
 
 oxygine/src/core/Object.o: oxygine/src/core/Object.cpp.o
@@ -1146,7 +1146,7 @@ oxygine/src/core/Object.o: oxygine/src/core/Object.cpp.o
 
 # target to build an object file
 oxygine/src/core/Object.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Object.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Object.cpp.o
 .PHONY : oxygine/src/core/Object.cpp.o
 
 oxygine/src/core/Object.i: oxygine/src/core/Object.cpp.i
@@ -1154,7 +1154,7 @@ oxygine/src/core/Object.i: oxygine/src/core/Object.cpp.i
 
 # target to preprocess a source file
 oxygine/src/core/Object.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Object.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Object.cpp.i
 .PHONY : oxygine/src/core/Object.cpp.i
 
 oxygine/src/core/Object.s: oxygine/src/core/Object.cpp.s
@@ -1162,7 +1162,7 @@ oxygine/src/core/Object.s: oxygine/src/core/Object.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/core/Object.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Object.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Object.cpp.s
 .PHONY : oxygine/src/core/Object.cpp.s
 
 oxygine/src/core/Renderer.o: oxygine/src/core/Renderer.cpp.o
@@ -1170,7 +1170,7 @@ oxygine/src/core/Renderer.o: oxygine/src/core/Renderer.cpp.o
 
 # target to build an object file
 oxygine/src/core/Renderer.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Renderer.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Renderer.cpp.o
 .PHONY : oxygine/src/core/Renderer.cpp.o
 
 oxygine/src/core/Renderer.i: oxygine/src/core/Renderer.cpp.i
@@ -1178,7 +1178,7 @@ oxygine/src/core/Renderer.i: oxygine/src/core/Renderer.cpp.i
 
 # target to preprocess a source file
 oxygine/src/core/Renderer.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Renderer.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Renderer.cpp.i
 .PHONY : oxygine/src/core/Renderer.cpp.i
 
 oxygine/src/core/Renderer.s: oxygine/src/core/Renderer.cpp.s
@@ -1186,7 +1186,7 @@ oxygine/src/core/Renderer.s: oxygine/src/core/Renderer.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/core/Renderer.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Renderer.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Renderer.cpp.s
 .PHONY : oxygine/src/core/Renderer.cpp.s
 
 oxygine/src/core/Restorable.o: oxygine/src/core/Restorable.cpp.o
@@ -1194,7 +1194,7 @@ oxygine/src/core/Restorable.o: oxygine/src/core/Restorable.cpp.o
 
 # target to build an object file
 oxygine/src/core/Restorable.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Restorable.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Restorable.cpp.o
 .PHONY : oxygine/src/core/Restorable.cpp.o
 
 oxygine/src/core/Restorable.i: oxygine/src/core/Restorable.cpp.i
@@ -1202,7 +1202,7 @@ oxygine/src/core/Restorable.i: oxygine/src/core/Restorable.cpp.i
 
 # target to preprocess a source file
 oxygine/src/core/Restorable.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Restorable.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Restorable.cpp.i
 .PHONY : oxygine/src/core/Restorable.cpp.i
 
 oxygine/src/core/Restorable.s: oxygine/src/core/Restorable.cpp.s
@@ -1210,7 +1210,7 @@ oxygine/src/core/Restorable.s: oxygine/src/core/Restorable.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/core/Restorable.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Restorable.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Restorable.cpp.s
 .PHONY : oxygine/src/core/Restorable.cpp.s
 
 oxygine/src/core/STDFileSystem.o: oxygine/src/core/STDFileSystem.cpp.o
@@ -1218,7 +1218,7 @@ oxygine/src/core/STDFileSystem.o: oxygine/src/core/STDFileSystem.cpp.o
 
 # target to build an object file
 oxygine/src/core/STDFileSystem.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/STDFileSystem.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/STDFileSystem.cpp.o
 .PHONY : oxygine/src/core/STDFileSystem.cpp.o
 
 oxygine/src/core/STDFileSystem.i: oxygine/src/core/STDFileSystem.cpp.i
@@ -1226,7 +1226,7 @@ oxygine/src/core/STDFileSystem.i: oxygine/src/core/STDFileSystem.cpp.i
 
 # target to preprocess a source file
 oxygine/src/core/STDFileSystem.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/STDFileSystem.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/STDFileSystem.cpp.i
 .PHONY : oxygine/src/core/STDFileSystem.cpp.i
 
 oxygine/src/core/STDFileSystem.s: oxygine/src/core/STDFileSystem.cpp.s
@@ -1234,7 +1234,7 @@ oxygine/src/core/STDFileSystem.s: oxygine/src/core/STDFileSystem.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/core/STDFileSystem.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/STDFileSystem.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/STDFileSystem.cpp.s
 .PHONY : oxygine/src/core/STDFileSystem.cpp.s
 
 oxygine/src/core/Texture.o: oxygine/src/core/Texture.cpp.o
@@ -1242,7 +1242,7 @@ oxygine/src/core/Texture.o: oxygine/src/core/Texture.cpp.o
 
 # target to build an object file
 oxygine/src/core/Texture.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Texture.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Texture.cpp.o
 .PHONY : oxygine/src/core/Texture.cpp.o
 
 oxygine/src/core/Texture.i: oxygine/src/core/Texture.cpp.i
@@ -1250,7 +1250,7 @@ oxygine/src/core/Texture.i: oxygine/src/core/Texture.cpp.i
 
 # target to preprocess a source file
 oxygine/src/core/Texture.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Texture.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Texture.cpp.i
 .PHONY : oxygine/src/core/Texture.cpp.i
 
 oxygine/src/core/Texture.s: oxygine/src/core/Texture.cpp.s
@@ -1258,7 +1258,7 @@ oxygine/src/core/Texture.s: oxygine/src/core/Texture.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/core/Texture.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Texture.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/Texture.cpp.s
 .PHONY : oxygine/src/core/Texture.cpp.s
 
 oxygine/src/core/ThreadMessages.o: oxygine/src/core/ThreadMessages.cpp.o
@@ -1266,7 +1266,7 @@ oxygine/src/core/ThreadMessages.o: oxygine/src/core/ThreadMessages.cpp.o
 
 # target to build an object file
 oxygine/src/core/ThreadMessages.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/ThreadMessages.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/ThreadMessages.cpp.o
 .PHONY : oxygine/src/core/ThreadMessages.cpp.o
 
 oxygine/src/core/ThreadMessages.i: oxygine/src/core/ThreadMessages.cpp.i
@@ -1274,7 +1274,7 @@ oxygine/src/core/ThreadMessages.i: oxygine/src/core/ThreadMessages.cpp.i
 
 # target to preprocess a source file
 oxygine/src/core/ThreadMessages.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/ThreadMessages.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/ThreadMessages.cpp.i
 .PHONY : oxygine/src/core/ThreadMessages.cpp.i
 
 oxygine/src/core/ThreadMessages.s: oxygine/src/core/ThreadMessages.cpp.s
@@ -1282,7 +1282,7 @@ oxygine/src/core/ThreadMessages.s: oxygine/src/core/ThreadMessages.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/core/ThreadMessages.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/ThreadMessages.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/ThreadMessages.cpp.s
 .PHONY : oxygine/src/core/ThreadMessages.cpp.s
 
 oxygine/src/core/UberShaderProgram.o: oxygine/src/core/UberShaderProgram.cpp.o
@@ -1290,7 +1290,7 @@ oxygine/src/core/UberShaderProgram.o: oxygine/src/core/UberShaderProgram.cpp.o
 
 # target to build an object file
 oxygine/src/core/UberShaderProgram.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/UberShaderProgram.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/UberShaderProgram.cpp.o
 .PHONY : oxygine/src/core/UberShaderProgram.cpp.o
 
 oxygine/src/core/UberShaderProgram.i: oxygine/src/core/UberShaderProgram.cpp.i
@@ -1298,7 +1298,7 @@ oxygine/src/core/UberShaderProgram.i: oxygine/src/core/UberShaderProgram.cpp.i
 
 # target to preprocess a source file
 oxygine/src/core/UberShaderProgram.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/UberShaderProgram.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/UberShaderProgram.cpp.i
 .PHONY : oxygine/src/core/UberShaderProgram.cpp.i
 
 oxygine/src/core/UberShaderProgram.s: oxygine/src/core/UberShaderProgram.cpp.s
@@ -1306,7 +1306,7 @@ oxygine/src/core/UberShaderProgram.s: oxygine/src/core/UberShaderProgram.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/core/UberShaderProgram.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/UberShaderProgram.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/UberShaderProgram.cpp.s
 .PHONY : oxygine/src/core/UberShaderProgram.cpp.s
 
 oxygine/src/core/VideoDriver.o: oxygine/src/core/VideoDriver.cpp.o
@@ -1314,7 +1314,7 @@ oxygine/src/core/VideoDriver.o: oxygine/src/core/VideoDriver.cpp.o
 
 # target to build an object file
 oxygine/src/core/VideoDriver.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/VideoDriver.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/VideoDriver.cpp.o
 .PHONY : oxygine/src/core/VideoDriver.cpp.o
 
 oxygine/src/core/VideoDriver.i: oxygine/src/core/VideoDriver.cpp.i
@@ -1322,7 +1322,7 @@ oxygine/src/core/VideoDriver.i: oxygine/src/core/VideoDriver.cpp.i
 
 # target to preprocess a source file
 oxygine/src/core/VideoDriver.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/VideoDriver.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/VideoDriver.cpp.i
 .PHONY : oxygine/src/core/VideoDriver.cpp.i
 
 oxygine/src/core/VideoDriver.s: oxygine/src/core/VideoDriver.cpp.s
@@ -1330,7 +1330,7 @@ oxygine/src/core/VideoDriver.s: oxygine/src/core/VideoDriver.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/core/VideoDriver.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/VideoDriver.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/VideoDriver.cpp.s
 .PHONY : oxygine/src/core/VideoDriver.cpp.s
 
 oxygine/src/core/ZipFileSystem.o: oxygine/src/core/ZipFileSystem.cpp.o
@@ -1338,7 +1338,7 @@ oxygine/src/core/ZipFileSystem.o: oxygine/src/core/ZipFileSystem.cpp.o
 
 # target to build an object file
 oxygine/src/core/ZipFileSystem.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/ZipFileSystem.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/ZipFileSystem.cpp.o
 .PHONY : oxygine/src/core/ZipFileSystem.cpp.o
 
 oxygine/src/core/ZipFileSystem.i: oxygine/src/core/ZipFileSystem.cpp.i
@@ -1346,7 +1346,7 @@ oxygine/src/core/ZipFileSystem.i: oxygine/src/core/ZipFileSystem.cpp.i
 
 # target to preprocess a source file
 oxygine/src/core/ZipFileSystem.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/ZipFileSystem.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/ZipFileSystem.cpp.i
 .PHONY : oxygine/src/core/ZipFileSystem.cpp.i
 
 oxygine/src/core/ZipFileSystem.s: oxygine/src/core/ZipFileSystem.cpp.s
@@ -1354,7 +1354,7 @@ oxygine/src/core/ZipFileSystem.s: oxygine/src/core/ZipFileSystem.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/core/ZipFileSystem.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/ZipFileSystem.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/ZipFileSystem.cpp.s
 .PHONY : oxygine/src/core/ZipFileSystem.cpp.s
 
 oxygine/src/core/coroutines.o: oxygine/src/core/coroutines.cpp.o
@@ -1362,7 +1362,7 @@ oxygine/src/core/coroutines.o: oxygine/src/core/coroutines.cpp.o
 
 # target to build an object file
 oxygine/src/core/coroutines.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/coroutines.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/coroutines.cpp.o
 .PHONY : oxygine/src/core/coroutines.cpp.o
 
 oxygine/src/core/coroutines.i: oxygine/src/core/coroutines.cpp.i
@@ -1370,7 +1370,7 @@ oxygine/src/core/coroutines.i: oxygine/src/core/coroutines.cpp.i
 
 # target to preprocess a source file
 oxygine/src/core/coroutines.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/coroutines.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/coroutines.cpp.i
 .PHONY : oxygine/src/core/coroutines.cpp.i
 
 oxygine/src/core/coroutines.s: oxygine/src/core/coroutines.cpp.s
@@ -1378,7 +1378,7 @@ oxygine/src/core/coroutines.s: oxygine/src/core/coroutines.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/core/coroutines.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/coroutines.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/coroutines.cpp.s
 .PHONY : oxygine/src/core/coroutines.cpp.s
 
 oxygine/src/core/file.o: oxygine/src/core/file.cpp.o
@@ -1386,7 +1386,7 @@ oxygine/src/core/file.o: oxygine/src/core/file.cpp.o
 
 # target to build an object file
 oxygine/src/core/file.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/file.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/file.cpp.o
 .PHONY : oxygine/src/core/file.cpp.o
 
 oxygine/src/core/file.i: oxygine/src/core/file.cpp.i
@@ -1394,7 +1394,7 @@ oxygine/src/core/file.i: oxygine/src/core/file.cpp.i
 
 # target to preprocess a source file
 oxygine/src/core/file.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/file.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/file.cpp.i
 .PHONY : oxygine/src/core/file.cpp.i
 
 oxygine/src/core/file.s: oxygine/src/core/file.cpp.s
@@ -1402,7 +1402,7 @@ oxygine/src/core/file.s: oxygine/src/core/file.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/core/file.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/file.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/file.cpp.s
 .PHONY : oxygine/src/core/file.cpp.s
 
 oxygine/src/core/gl/NativeTextureGLES.o: oxygine/src/core/gl/NativeTextureGLES.cpp.o
@@ -1410,7 +1410,7 @@ oxygine/src/core/gl/NativeTextureGLES.o: oxygine/src/core/gl/NativeTextureGLES.c
 
 # target to build an object file
 oxygine/src/core/gl/NativeTextureGLES.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/NativeTextureGLES.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/NativeTextureGLES.cpp.o
 .PHONY : oxygine/src/core/gl/NativeTextureGLES.cpp.o
 
 oxygine/src/core/gl/NativeTextureGLES.i: oxygine/src/core/gl/NativeTextureGLES.cpp.i
@@ -1418,7 +1418,7 @@ oxygine/src/core/gl/NativeTextureGLES.i: oxygine/src/core/gl/NativeTextureGLES.c
 
 # target to preprocess a source file
 oxygine/src/core/gl/NativeTextureGLES.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/NativeTextureGLES.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/NativeTextureGLES.cpp.i
 .PHONY : oxygine/src/core/gl/NativeTextureGLES.cpp.i
 
 oxygine/src/core/gl/NativeTextureGLES.s: oxygine/src/core/gl/NativeTextureGLES.cpp.s
@@ -1426,7 +1426,7 @@ oxygine/src/core/gl/NativeTextureGLES.s: oxygine/src/core/gl/NativeTextureGLES.c
 
 # target to generate assembly for a file
 oxygine/src/core/gl/NativeTextureGLES.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/NativeTextureGLES.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/NativeTextureGLES.cpp.s
 .PHONY : oxygine/src/core/gl/NativeTextureGLES.cpp.s
 
 oxygine/src/core/gl/ShaderProgramGL.o: oxygine/src/core/gl/ShaderProgramGL.cpp.o
@@ -1434,7 +1434,7 @@ oxygine/src/core/gl/ShaderProgramGL.o: oxygine/src/core/gl/ShaderProgramGL.cpp.o
 
 # target to build an object file
 oxygine/src/core/gl/ShaderProgramGL.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/ShaderProgramGL.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/ShaderProgramGL.cpp.o
 .PHONY : oxygine/src/core/gl/ShaderProgramGL.cpp.o
 
 oxygine/src/core/gl/ShaderProgramGL.i: oxygine/src/core/gl/ShaderProgramGL.cpp.i
@@ -1442,7 +1442,7 @@ oxygine/src/core/gl/ShaderProgramGL.i: oxygine/src/core/gl/ShaderProgramGL.cpp.i
 
 # target to preprocess a source file
 oxygine/src/core/gl/ShaderProgramGL.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/ShaderProgramGL.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/ShaderProgramGL.cpp.i
 .PHONY : oxygine/src/core/gl/ShaderProgramGL.cpp.i
 
 oxygine/src/core/gl/ShaderProgramGL.s: oxygine/src/core/gl/ShaderProgramGL.cpp.s
@@ -1450,7 +1450,7 @@ oxygine/src/core/gl/ShaderProgramGL.s: oxygine/src/core/gl/ShaderProgramGL.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/core/gl/ShaderProgramGL.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/ShaderProgramGL.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/ShaderProgramGL.cpp.s
 .PHONY : oxygine/src/core/gl/ShaderProgramGL.cpp.s
 
 oxygine/src/core/gl/VertexDeclarationGL.o: oxygine/src/core/gl/VertexDeclarationGL.cpp.o
@@ -1458,7 +1458,7 @@ oxygine/src/core/gl/VertexDeclarationGL.o: oxygine/src/core/gl/VertexDeclaration
 
 # target to build an object file
 oxygine/src/core/gl/VertexDeclarationGL.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/VertexDeclarationGL.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/VertexDeclarationGL.cpp.o
 .PHONY : oxygine/src/core/gl/VertexDeclarationGL.cpp.o
 
 oxygine/src/core/gl/VertexDeclarationGL.i: oxygine/src/core/gl/VertexDeclarationGL.cpp.i
@@ -1466,7 +1466,7 @@ oxygine/src/core/gl/VertexDeclarationGL.i: oxygine/src/core/gl/VertexDeclaration
 
 # target to preprocess a source file
 oxygine/src/core/gl/VertexDeclarationGL.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/VertexDeclarationGL.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/VertexDeclarationGL.cpp.i
 .PHONY : oxygine/src/core/gl/VertexDeclarationGL.cpp.i
 
 oxygine/src/core/gl/VertexDeclarationGL.s: oxygine/src/core/gl/VertexDeclarationGL.cpp.s
@@ -1474,7 +1474,7 @@ oxygine/src/core/gl/VertexDeclarationGL.s: oxygine/src/core/gl/VertexDeclaration
 
 # target to generate assembly for a file
 oxygine/src/core/gl/VertexDeclarationGL.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/VertexDeclarationGL.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/VertexDeclarationGL.cpp.s
 .PHONY : oxygine/src/core/gl/VertexDeclarationGL.cpp.s
 
 oxygine/src/core/gl/VideoDriverGL.o: oxygine/src/core/gl/VideoDriverGL.cpp.o
@@ -1482,7 +1482,7 @@ oxygine/src/core/gl/VideoDriverGL.o: oxygine/src/core/gl/VideoDriverGL.cpp.o
 
 # target to build an object file
 oxygine/src/core/gl/VideoDriverGL.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/VideoDriverGL.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/VideoDriverGL.cpp.o
 .PHONY : oxygine/src/core/gl/VideoDriverGL.cpp.o
 
 oxygine/src/core/gl/VideoDriverGL.i: oxygine/src/core/gl/VideoDriverGL.cpp.i
@@ -1490,7 +1490,7 @@ oxygine/src/core/gl/VideoDriverGL.i: oxygine/src/core/gl/VideoDriverGL.cpp.i
 
 # target to preprocess a source file
 oxygine/src/core/gl/VideoDriverGL.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/VideoDriverGL.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/VideoDriverGL.cpp.i
 .PHONY : oxygine/src/core/gl/VideoDriverGL.cpp.i
 
 oxygine/src/core/gl/VideoDriverGL.s: oxygine/src/core/gl/VideoDriverGL.cpp.s
@@ -1498,7 +1498,7 @@ oxygine/src/core/gl/VideoDriverGL.s: oxygine/src/core/gl/VideoDriverGL.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/core/gl/VideoDriverGL.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/VideoDriverGL.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/VideoDriverGL.cpp.s
 .PHONY : oxygine/src/core/gl/VideoDriverGL.cpp.s
 
 oxygine/src/core/gl/VideoDriverGLES20.o: oxygine/src/core/gl/VideoDriverGLES20.cpp.o
@@ -1506,7 +1506,7 @@ oxygine/src/core/gl/VideoDriverGLES20.o: oxygine/src/core/gl/VideoDriverGLES20.c
 
 # target to build an object file
 oxygine/src/core/gl/VideoDriverGLES20.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/VideoDriverGLES20.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/VideoDriverGLES20.cpp.o
 .PHONY : oxygine/src/core/gl/VideoDriverGLES20.cpp.o
 
 oxygine/src/core/gl/VideoDriverGLES20.i: oxygine/src/core/gl/VideoDriverGLES20.cpp.i
@@ -1514,7 +1514,7 @@ oxygine/src/core/gl/VideoDriverGLES20.i: oxygine/src/core/gl/VideoDriverGLES20.c
 
 # target to preprocess a source file
 oxygine/src/core/gl/VideoDriverGLES20.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/VideoDriverGLES20.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/VideoDriverGLES20.cpp.i
 .PHONY : oxygine/src/core/gl/VideoDriverGLES20.cpp.i
 
 oxygine/src/core/gl/VideoDriverGLES20.s: oxygine/src/core/gl/VideoDriverGLES20.cpp.s
@@ -1522,7 +1522,7 @@ oxygine/src/core/gl/VideoDriverGLES20.s: oxygine/src/core/gl/VideoDriverGLES20.c
 
 # target to generate assembly for a file
 oxygine/src/core/gl/VideoDriverGLES20.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/VideoDriverGLES20.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/VideoDriverGLES20.cpp.s
 .PHONY : oxygine/src/core/gl/VideoDriverGLES20.cpp.s
 
 oxygine/src/core/gl/oxgl.o: oxygine/src/core/gl/oxgl.cpp.o
@@ -1530,7 +1530,7 @@ oxygine/src/core/gl/oxgl.o: oxygine/src/core/gl/oxgl.cpp.o
 
 # target to build an object file
 oxygine/src/core/gl/oxgl.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/oxgl.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/oxgl.cpp.o
 .PHONY : oxygine/src/core/gl/oxgl.cpp.o
 
 oxygine/src/core/gl/oxgl.i: oxygine/src/core/gl/oxgl.cpp.i
@@ -1538,7 +1538,7 @@ oxygine/src/core/gl/oxgl.i: oxygine/src/core/gl/oxgl.cpp.i
 
 # target to preprocess a source file
 oxygine/src/core/gl/oxgl.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/oxgl.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/oxgl.cpp.i
 .PHONY : oxygine/src/core/gl/oxgl.cpp.i
 
 oxygine/src/core/gl/oxgl.s: oxygine/src/core/gl/oxgl.cpp.s
@@ -1546,7 +1546,7 @@ oxygine/src/core/gl/oxgl.s: oxygine/src/core/gl/oxgl.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/core/gl/oxgl.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/oxgl.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/gl/oxgl.cpp.s
 .PHONY : oxygine/src/core/gl/oxgl.cpp.s
 
 oxygine/src/core/log.o: oxygine/src/core/log.cpp.o
@@ -1554,7 +1554,7 @@ oxygine/src/core/log.o: oxygine/src/core/log.cpp.o
 
 # target to build an object file
 oxygine/src/core/log.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/log.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/log.cpp.o
 .PHONY : oxygine/src/core/log.cpp.o
 
 oxygine/src/core/log.i: oxygine/src/core/log.cpp.i
@@ -1562,7 +1562,7 @@ oxygine/src/core/log.i: oxygine/src/core/log.cpp.i
 
 # target to preprocess a source file
 oxygine/src/core/log.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/log.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/log.cpp.i
 .PHONY : oxygine/src/core/log.cpp.i
 
 oxygine/src/core/log.s: oxygine/src/core/log.cpp.s
@@ -1570,7 +1570,7 @@ oxygine/src/core/log.s: oxygine/src/core/log.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/core/log.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/log.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/log.cpp.s
 .PHONY : oxygine/src/core/log.cpp.s
 
 oxygine/src/core/oxygine.o: oxygine/src/core/oxygine.cpp.o
@@ -1578,7 +1578,7 @@ oxygine/src/core/oxygine.o: oxygine/src/core/oxygine.cpp.o
 
 # target to build an object file
 oxygine/src/core/oxygine.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/oxygine.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/oxygine.cpp.o
 .PHONY : oxygine/src/core/oxygine.cpp.o
 
 oxygine/src/core/oxygine.i: oxygine/src/core/oxygine.cpp.i
@@ -1586,7 +1586,7 @@ oxygine/src/core/oxygine.i: oxygine/src/core/oxygine.cpp.i
 
 # target to preprocess a source file
 oxygine/src/core/oxygine.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/oxygine.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/oxygine.cpp.i
 .PHONY : oxygine/src/core/oxygine.cpp.i
 
 oxygine/src/core/oxygine.s: oxygine/src/core/oxygine.cpp.s
@@ -1594,7 +1594,7 @@ oxygine/src/core/oxygine.s: oxygine/src/core/oxygine.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/core/oxygine.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/oxygine.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/oxygine.cpp.s
 .PHONY : oxygine/src/core/oxygine.cpp.s
 
 oxygine/src/core/system_data.o: oxygine/src/core/system_data.cpp.o
@@ -1602,7 +1602,7 @@ oxygine/src/core/system_data.o: oxygine/src/core/system_data.cpp.o
 
 # target to build an object file
 oxygine/src/core/system_data.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/system_data.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/system_data.cpp.o
 .PHONY : oxygine/src/core/system_data.cpp.o
 
 oxygine/src/core/system_data.i: oxygine/src/core/system_data.cpp.i
@@ -1610,7 +1610,7 @@ oxygine/src/core/system_data.i: oxygine/src/core/system_data.cpp.i
 
 # target to preprocess a source file
 oxygine/src/core/system_data.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/system_data.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/system_data.cpp.i
 .PHONY : oxygine/src/core/system_data.cpp.i
 
 oxygine/src/core/system_data.s: oxygine/src/core/system_data.cpp.s
@@ -1618,7 +1618,7 @@ oxygine/src/core/system_data.s: oxygine/src/core/system_data.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/core/system_data.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/system_data.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/core/system_data.cpp.s
 .PHONY : oxygine/src/core/system_data.cpp.s
 
 oxygine/src/dev_tools/DeveloperMenu.o: oxygine/src/dev_tools/DeveloperMenu.cpp.o
@@ -1626,7 +1626,7 @@ oxygine/src/dev_tools/DeveloperMenu.o: oxygine/src/dev_tools/DeveloperMenu.cpp.o
 
 # target to build an object file
 oxygine/src/dev_tools/DeveloperMenu.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/DeveloperMenu.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/DeveloperMenu.cpp.o
 .PHONY : oxygine/src/dev_tools/DeveloperMenu.cpp.o
 
 oxygine/src/dev_tools/DeveloperMenu.i: oxygine/src/dev_tools/DeveloperMenu.cpp.i
@@ -1634,7 +1634,7 @@ oxygine/src/dev_tools/DeveloperMenu.i: oxygine/src/dev_tools/DeveloperMenu.cpp.i
 
 # target to preprocess a source file
 oxygine/src/dev_tools/DeveloperMenu.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/DeveloperMenu.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/DeveloperMenu.cpp.i
 .PHONY : oxygine/src/dev_tools/DeveloperMenu.cpp.i
 
 oxygine/src/dev_tools/DeveloperMenu.s: oxygine/src/dev_tools/DeveloperMenu.cpp.s
@@ -1642,7 +1642,7 @@ oxygine/src/dev_tools/DeveloperMenu.s: oxygine/src/dev_tools/DeveloperMenu.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/dev_tools/DeveloperMenu.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/DeveloperMenu.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/DeveloperMenu.cpp.s
 .PHONY : oxygine/src/dev_tools/DeveloperMenu.cpp.s
 
 oxygine/src/dev_tools/TexturesInspector.o: oxygine/src/dev_tools/TexturesInspector.cpp.o
@@ -1650,7 +1650,7 @@ oxygine/src/dev_tools/TexturesInspector.o: oxygine/src/dev_tools/TexturesInspect
 
 # target to build an object file
 oxygine/src/dev_tools/TexturesInspector.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TexturesInspector.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TexturesInspector.cpp.o
 .PHONY : oxygine/src/dev_tools/TexturesInspector.cpp.o
 
 oxygine/src/dev_tools/TexturesInspector.i: oxygine/src/dev_tools/TexturesInspector.cpp.i
@@ -1658,7 +1658,7 @@ oxygine/src/dev_tools/TexturesInspector.i: oxygine/src/dev_tools/TexturesInspect
 
 # target to preprocess a source file
 oxygine/src/dev_tools/TexturesInspector.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TexturesInspector.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TexturesInspector.cpp.i
 .PHONY : oxygine/src/dev_tools/TexturesInspector.cpp.i
 
 oxygine/src/dev_tools/TexturesInspector.s: oxygine/src/dev_tools/TexturesInspector.cpp.s
@@ -1666,7 +1666,7 @@ oxygine/src/dev_tools/TexturesInspector.s: oxygine/src/dev_tools/TexturesInspect
 
 # target to generate assembly for a file
 oxygine/src/dev_tools/TexturesInspector.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TexturesInspector.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TexturesInspector.cpp.s
 .PHONY : oxygine/src/dev_tools/TexturesInspector.cpp.s
 
 oxygine/src/dev_tools/TreeInspector.o: oxygine/src/dev_tools/TreeInspector.cpp.o
@@ -1674,7 +1674,7 @@ oxygine/src/dev_tools/TreeInspector.o: oxygine/src/dev_tools/TreeInspector.cpp.o
 
 # target to build an object file
 oxygine/src/dev_tools/TreeInspector.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TreeInspector.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TreeInspector.cpp.o
 .PHONY : oxygine/src/dev_tools/TreeInspector.cpp.o
 
 oxygine/src/dev_tools/TreeInspector.i: oxygine/src/dev_tools/TreeInspector.cpp.i
@@ -1682,7 +1682,7 @@ oxygine/src/dev_tools/TreeInspector.i: oxygine/src/dev_tools/TreeInspector.cpp.i
 
 # target to preprocess a source file
 oxygine/src/dev_tools/TreeInspector.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TreeInspector.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TreeInspector.cpp.i
 .PHONY : oxygine/src/dev_tools/TreeInspector.cpp.i
 
 oxygine/src/dev_tools/TreeInspector.s: oxygine/src/dev_tools/TreeInspector.cpp.s
@@ -1690,7 +1690,7 @@ oxygine/src/dev_tools/TreeInspector.s: oxygine/src/dev_tools/TreeInspector.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/dev_tools/TreeInspector.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TreeInspector.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TreeInspector.cpp.s
 .PHONY : oxygine/src/dev_tools/TreeInspector.cpp.s
 
 oxygine/src/dev_tools/TreeInspectorLine.o: oxygine/src/dev_tools/TreeInspectorLine.cpp.o
@@ -1698,7 +1698,7 @@ oxygine/src/dev_tools/TreeInspectorLine.o: oxygine/src/dev_tools/TreeInspectorLi
 
 # target to build an object file
 oxygine/src/dev_tools/TreeInspectorLine.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TreeInspectorLine.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TreeInspectorLine.cpp.o
 .PHONY : oxygine/src/dev_tools/TreeInspectorLine.cpp.o
 
 oxygine/src/dev_tools/TreeInspectorLine.i: oxygine/src/dev_tools/TreeInspectorLine.cpp.i
@@ -1706,7 +1706,7 @@ oxygine/src/dev_tools/TreeInspectorLine.i: oxygine/src/dev_tools/TreeInspectorLi
 
 # target to preprocess a source file
 oxygine/src/dev_tools/TreeInspectorLine.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TreeInspectorLine.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TreeInspectorLine.cpp.i
 .PHONY : oxygine/src/dev_tools/TreeInspectorLine.cpp.i
 
 oxygine/src/dev_tools/TreeInspectorLine.s: oxygine/src/dev_tools/TreeInspectorLine.cpp.s
@@ -1714,7 +1714,7 @@ oxygine/src/dev_tools/TreeInspectorLine.s: oxygine/src/dev_tools/TreeInspectorLi
 
 # target to generate assembly for a file
 oxygine/src/dev_tools/TreeInspectorLine.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TreeInspectorLine.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TreeInspectorLine.cpp.s
 .PHONY : oxygine/src/dev_tools/TreeInspectorLine.cpp.s
 
 oxygine/src/dev_tools/TreeInspectorPage.o: oxygine/src/dev_tools/TreeInspectorPage.cpp.o
@@ -1722,7 +1722,7 @@ oxygine/src/dev_tools/TreeInspectorPage.o: oxygine/src/dev_tools/TreeInspectorPa
 
 # target to build an object file
 oxygine/src/dev_tools/TreeInspectorPage.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TreeInspectorPage.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TreeInspectorPage.cpp.o
 .PHONY : oxygine/src/dev_tools/TreeInspectorPage.cpp.o
 
 oxygine/src/dev_tools/TreeInspectorPage.i: oxygine/src/dev_tools/TreeInspectorPage.cpp.i
@@ -1730,7 +1730,7 @@ oxygine/src/dev_tools/TreeInspectorPage.i: oxygine/src/dev_tools/TreeInspectorPa
 
 # target to preprocess a source file
 oxygine/src/dev_tools/TreeInspectorPage.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TreeInspectorPage.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TreeInspectorPage.cpp.i
 .PHONY : oxygine/src/dev_tools/TreeInspectorPage.cpp.i
 
 oxygine/src/dev_tools/TreeInspectorPage.s: oxygine/src/dev_tools/TreeInspectorPage.cpp.s
@@ -1738,7 +1738,7 @@ oxygine/src/dev_tools/TreeInspectorPage.s: oxygine/src/dev_tools/TreeInspectorPa
 
 # target to generate assembly for a file
 oxygine/src/dev_tools/TreeInspectorPage.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TreeInspectorPage.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TreeInspectorPage.cpp.s
 .PHONY : oxygine/src/dev_tools/TreeInspectorPage.cpp.s
 
 oxygine/src/dev_tools/TreeInspectorPreview.o: oxygine/src/dev_tools/TreeInspectorPreview.cpp.o
@@ -1746,7 +1746,7 @@ oxygine/src/dev_tools/TreeInspectorPreview.o: oxygine/src/dev_tools/TreeInspecto
 
 # target to build an object file
 oxygine/src/dev_tools/TreeInspectorPreview.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TreeInspectorPreview.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TreeInspectorPreview.cpp.o
 .PHONY : oxygine/src/dev_tools/TreeInspectorPreview.cpp.o
 
 oxygine/src/dev_tools/TreeInspectorPreview.i: oxygine/src/dev_tools/TreeInspectorPreview.cpp.i
@@ -1754,7 +1754,7 @@ oxygine/src/dev_tools/TreeInspectorPreview.i: oxygine/src/dev_tools/TreeInspecto
 
 # target to preprocess a source file
 oxygine/src/dev_tools/TreeInspectorPreview.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TreeInspectorPreview.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TreeInspectorPreview.cpp.i
 .PHONY : oxygine/src/dev_tools/TreeInspectorPreview.cpp.i
 
 oxygine/src/dev_tools/TreeInspectorPreview.s: oxygine/src/dev_tools/TreeInspectorPreview.cpp.s
@@ -1762,7 +1762,7 @@ oxygine/src/dev_tools/TreeInspectorPreview.s: oxygine/src/dev_tools/TreeInspecto
 
 # target to generate assembly for a file
 oxygine/src/dev_tools/TreeInspectorPreview.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TreeInspectorPreview.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/dev_tools/TreeInspectorPreview.cpp.s
 .PHONY : oxygine/src/dev_tools/TreeInspectorPreview.cpp.s
 
 oxygine/src/math/AffineTransform.o: oxygine/src/math/AffineTransform.cpp.o
@@ -1770,7 +1770,7 @@ oxygine/src/math/AffineTransform.o: oxygine/src/math/AffineTransform.cpp.o
 
 # target to build an object file
 oxygine/src/math/AffineTransform.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/math/AffineTransform.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/math/AffineTransform.cpp.o
 .PHONY : oxygine/src/math/AffineTransform.cpp.o
 
 oxygine/src/math/AffineTransform.i: oxygine/src/math/AffineTransform.cpp.i
@@ -1778,7 +1778,7 @@ oxygine/src/math/AffineTransform.i: oxygine/src/math/AffineTransform.cpp.i
 
 # target to preprocess a source file
 oxygine/src/math/AffineTransform.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/math/AffineTransform.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/math/AffineTransform.cpp.i
 .PHONY : oxygine/src/math/AffineTransform.cpp.i
 
 oxygine/src/math/AffineTransform.s: oxygine/src/math/AffineTransform.cpp.s
@@ -1786,7 +1786,7 @@ oxygine/src/math/AffineTransform.s: oxygine/src/math/AffineTransform.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/math/AffineTransform.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/math/AffineTransform.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/math/AffineTransform.cpp.s
 .PHONY : oxygine/src/math/AffineTransform.cpp.s
 
 oxygine/src/math/Color.o: oxygine/src/math/Color.cpp.o
@@ -1794,7 +1794,7 @@ oxygine/src/math/Color.o: oxygine/src/math/Color.cpp.o
 
 # target to build an object file
 oxygine/src/math/Color.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/math/Color.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/math/Color.cpp.o
 .PHONY : oxygine/src/math/Color.cpp.o
 
 oxygine/src/math/Color.i: oxygine/src/math/Color.cpp.i
@@ -1802,7 +1802,7 @@ oxygine/src/math/Color.i: oxygine/src/math/Color.cpp.i
 
 # target to preprocess a source file
 oxygine/src/math/Color.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/math/Color.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/math/Color.cpp.i
 .PHONY : oxygine/src/math/Color.cpp.i
 
 oxygine/src/math/Color.s: oxygine/src/math/Color.cpp.s
@@ -1810,7 +1810,7 @@ oxygine/src/math/Color.s: oxygine/src/math/Color.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/math/Color.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/math/Color.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/math/Color.cpp.s
 .PHONY : oxygine/src/math/Color.cpp.s
 
 oxygine/src/minizip/ioapi.o: oxygine/src/minizip/ioapi.c.o
@@ -1818,7 +1818,7 @@ oxygine/src/minizip/ioapi.o: oxygine/src/minizip/ioapi.c.o
 
 # target to build an object file
 oxygine/src/minizip/ioapi.c.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/minizip/ioapi.c.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/minizip/ioapi.c.o
 .PHONY : oxygine/src/minizip/ioapi.c.o
 
 oxygine/src/minizip/ioapi.i: oxygine/src/minizip/ioapi.c.i
@@ -1826,7 +1826,7 @@ oxygine/src/minizip/ioapi.i: oxygine/src/minizip/ioapi.c.i
 
 # target to preprocess a source file
 oxygine/src/minizip/ioapi.c.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/minizip/ioapi.c.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/minizip/ioapi.c.i
 .PHONY : oxygine/src/minizip/ioapi.c.i
 
 oxygine/src/minizip/ioapi.s: oxygine/src/minizip/ioapi.c.s
@@ -1834,7 +1834,7 @@ oxygine/src/minizip/ioapi.s: oxygine/src/minizip/ioapi.c.s
 
 # target to generate assembly for a file
 oxygine/src/minizip/ioapi.c.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/minizip/ioapi.c.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/minizip/ioapi.c.s
 .PHONY : oxygine/src/minizip/ioapi.c.s
 
 oxygine/src/minizip/ioapi_mem.o: oxygine/src/minizip/ioapi_mem.c.o
@@ -1842,7 +1842,7 @@ oxygine/src/minizip/ioapi_mem.o: oxygine/src/minizip/ioapi_mem.c.o
 
 # target to build an object file
 oxygine/src/minizip/ioapi_mem.c.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/minizip/ioapi_mem.c.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/minizip/ioapi_mem.c.o
 .PHONY : oxygine/src/minizip/ioapi_mem.c.o
 
 oxygine/src/minizip/ioapi_mem.i: oxygine/src/minizip/ioapi_mem.c.i
@@ -1850,7 +1850,7 @@ oxygine/src/minizip/ioapi_mem.i: oxygine/src/minizip/ioapi_mem.c.i
 
 # target to preprocess a source file
 oxygine/src/minizip/ioapi_mem.c.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/minizip/ioapi_mem.c.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/minizip/ioapi_mem.c.i
 .PHONY : oxygine/src/minizip/ioapi_mem.c.i
 
 oxygine/src/minizip/ioapi_mem.s: oxygine/src/minizip/ioapi_mem.c.s
@@ -1858,7 +1858,7 @@ oxygine/src/minizip/ioapi_mem.s: oxygine/src/minizip/ioapi_mem.c.s
 
 # target to generate assembly for a file
 oxygine/src/minizip/ioapi_mem.c.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/minizip/ioapi_mem.c.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/minizip/ioapi_mem.c.s
 .PHONY : oxygine/src/minizip/ioapi_mem.c.s
 
 oxygine/src/minizip/unzip.o: oxygine/src/minizip/unzip.c.o
@@ -1866,7 +1866,7 @@ oxygine/src/minizip/unzip.o: oxygine/src/minizip/unzip.c.o
 
 # target to build an object file
 oxygine/src/minizip/unzip.c.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/minizip/unzip.c.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/minizip/unzip.c.o
 .PHONY : oxygine/src/minizip/unzip.c.o
 
 oxygine/src/minizip/unzip.i: oxygine/src/minizip/unzip.c.i
@@ -1874,7 +1874,7 @@ oxygine/src/minizip/unzip.i: oxygine/src/minizip/unzip.c.i
 
 # target to preprocess a source file
 oxygine/src/minizip/unzip.c.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/minizip/unzip.c.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/minizip/unzip.c.i
 .PHONY : oxygine/src/minizip/unzip.c.i
 
 oxygine/src/minizip/unzip.s: oxygine/src/minizip/unzip.c.s
@@ -1882,7 +1882,7 @@ oxygine/src/minizip/unzip.s: oxygine/src/minizip/unzip.c.s
 
 # target to generate assembly for a file
 oxygine/src/minizip/unzip.c.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/minizip/unzip.c.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/minizip/unzip.c.s
 .PHONY : oxygine/src/minizip/unzip.c.s
 
 oxygine/src/pugixml/pugixml.o: oxygine/src/pugixml/pugixml.cpp.o
@@ -1890,7 +1890,7 @@ oxygine/src/pugixml/pugixml.o: oxygine/src/pugixml/pugixml.cpp.o
 
 # target to build an object file
 oxygine/src/pugixml/pugixml.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/pugixml/pugixml.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/pugixml/pugixml.cpp.o
 .PHONY : oxygine/src/pugixml/pugixml.cpp.o
 
 oxygine/src/pugixml/pugixml.i: oxygine/src/pugixml/pugixml.cpp.i
@@ -1898,7 +1898,7 @@ oxygine/src/pugixml/pugixml.i: oxygine/src/pugixml/pugixml.cpp.i
 
 # target to preprocess a source file
 oxygine/src/pugixml/pugixml.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/pugixml/pugixml.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/pugixml/pugixml.cpp.i
 .PHONY : oxygine/src/pugixml/pugixml.cpp.i
 
 oxygine/src/pugixml/pugixml.s: oxygine/src/pugixml/pugixml.cpp.s
@@ -1906,7 +1906,7 @@ oxygine/src/pugixml/pugixml.s: oxygine/src/pugixml/pugixml.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/pugixml/pugixml.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/pugixml/pugixml.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/pugixml/pugixml.cpp.s
 .PHONY : oxygine/src/pugixml/pugixml.cpp.s
 
 oxygine/src/res/CreateResourceContext.o: oxygine/src/res/CreateResourceContext.cpp.o
@@ -1914,7 +1914,7 @@ oxygine/src/res/CreateResourceContext.o: oxygine/src/res/CreateResourceContext.c
 
 # target to build an object file
 oxygine/src/res/CreateResourceContext.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/CreateResourceContext.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/CreateResourceContext.cpp.o
 .PHONY : oxygine/src/res/CreateResourceContext.cpp.o
 
 oxygine/src/res/CreateResourceContext.i: oxygine/src/res/CreateResourceContext.cpp.i
@@ -1922,7 +1922,7 @@ oxygine/src/res/CreateResourceContext.i: oxygine/src/res/CreateResourceContext.c
 
 # target to preprocess a source file
 oxygine/src/res/CreateResourceContext.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/CreateResourceContext.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/CreateResourceContext.cpp.i
 .PHONY : oxygine/src/res/CreateResourceContext.cpp.i
 
 oxygine/src/res/CreateResourceContext.s: oxygine/src/res/CreateResourceContext.cpp.s
@@ -1930,7 +1930,7 @@ oxygine/src/res/CreateResourceContext.s: oxygine/src/res/CreateResourceContext.c
 
 # target to generate assembly for a file
 oxygine/src/res/CreateResourceContext.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/CreateResourceContext.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/CreateResourceContext.cpp.s
 .PHONY : oxygine/src/res/CreateResourceContext.cpp.s
 
 oxygine/src/res/ResAnim.o: oxygine/src/res/ResAnim.cpp.o
@@ -1938,7 +1938,7 @@ oxygine/src/res/ResAnim.o: oxygine/src/res/ResAnim.cpp.o
 
 # target to build an object file
 oxygine/src/res/ResAnim.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResAnim.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResAnim.cpp.o
 .PHONY : oxygine/src/res/ResAnim.cpp.o
 
 oxygine/src/res/ResAnim.i: oxygine/src/res/ResAnim.cpp.i
@@ -1946,7 +1946,7 @@ oxygine/src/res/ResAnim.i: oxygine/src/res/ResAnim.cpp.i
 
 # target to preprocess a source file
 oxygine/src/res/ResAnim.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResAnim.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResAnim.cpp.i
 .PHONY : oxygine/src/res/ResAnim.cpp.i
 
 oxygine/src/res/ResAnim.s: oxygine/src/res/ResAnim.cpp.s
@@ -1954,7 +1954,7 @@ oxygine/src/res/ResAnim.s: oxygine/src/res/ResAnim.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/res/ResAnim.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResAnim.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResAnim.cpp.s
 .PHONY : oxygine/src/res/ResAnim.cpp.s
 
 oxygine/src/res/ResAtlas.o: oxygine/src/res/ResAtlas.cpp.o
@@ -1962,7 +1962,7 @@ oxygine/src/res/ResAtlas.o: oxygine/src/res/ResAtlas.cpp.o
 
 # target to build an object file
 oxygine/src/res/ResAtlas.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResAtlas.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResAtlas.cpp.o
 .PHONY : oxygine/src/res/ResAtlas.cpp.o
 
 oxygine/src/res/ResAtlas.i: oxygine/src/res/ResAtlas.cpp.i
@@ -1970,7 +1970,7 @@ oxygine/src/res/ResAtlas.i: oxygine/src/res/ResAtlas.cpp.i
 
 # target to preprocess a source file
 oxygine/src/res/ResAtlas.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResAtlas.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResAtlas.cpp.i
 .PHONY : oxygine/src/res/ResAtlas.cpp.i
 
 oxygine/src/res/ResAtlas.s: oxygine/src/res/ResAtlas.cpp.s
@@ -1978,7 +1978,7 @@ oxygine/src/res/ResAtlas.s: oxygine/src/res/ResAtlas.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/res/ResAtlas.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResAtlas.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResAtlas.cpp.s
 .PHONY : oxygine/src/res/ResAtlas.cpp.s
 
 oxygine/src/res/ResBuffer.o: oxygine/src/res/ResBuffer.cpp.o
@@ -1986,7 +1986,7 @@ oxygine/src/res/ResBuffer.o: oxygine/src/res/ResBuffer.cpp.o
 
 # target to build an object file
 oxygine/src/res/ResBuffer.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResBuffer.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResBuffer.cpp.o
 .PHONY : oxygine/src/res/ResBuffer.cpp.o
 
 oxygine/src/res/ResBuffer.i: oxygine/src/res/ResBuffer.cpp.i
@@ -1994,7 +1994,7 @@ oxygine/src/res/ResBuffer.i: oxygine/src/res/ResBuffer.cpp.i
 
 # target to preprocess a source file
 oxygine/src/res/ResBuffer.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResBuffer.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResBuffer.cpp.i
 .PHONY : oxygine/src/res/ResBuffer.cpp.i
 
 oxygine/src/res/ResBuffer.s: oxygine/src/res/ResBuffer.cpp.s
@@ -2002,7 +2002,7 @@ oxygine/src/res/ResBuffer.s: oxygine/src/res/ResBuffer.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/res/ResBuffer.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResBuffer.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResBuffer.cpp.s
 .PHONY : oxygine/src/res/ResBuffer.cpp.s
 
 oxygine/src/res/ResFont.o: oxygine/src/res/ResFont.cpp.o
@@ -2010,7 +2010,7 @@ oxygine/src/res/ResFont.o: oxygine/src/res/ResFont.cpp.o
 
 # target to build an object file
 oxygine/src/res/ResFont.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResFont.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResFont.cpp.o
 .PHONY : oxygine/src/res/ResFont.cpp.o
 
 oxygine/src/res/ResFont.i: oxygine/src/res/ResFont.cpp.i
@@ -2018,7 +2018,7 @@ oxygine/src/res/ResFont.i: oxygine/src/res/ResFont.cpp.i
 
 # target to preprocess a source file
 oxygine/src/res/ResFont.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResFont.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResFont.cpp.i
 .PHONY : oxygine/src/res/ResFont.cpp.i
 
 oxygine/src/res/ResFont.s: oxygine/src/res/ResFont.cpp.s
@@ -2026,7 +2026,7 @@ oxygine/src/res/ResFont.s: oxygine/src/res/ResFont.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/res/ResFont.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResFont.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResFont.cpp.s
 .PHONY : oxygine/src/res/ResFont.cpp.s
 
 oxygine/src/res/ResFontBM.o: oxygine/src/res/ResFontBM.cpp.o
@@ -2034,7 +2034,7 @@ oxygine/src/res/ResFontBM.o: oxygine/src/res/ResFontBM.cpp.o
 
 # target to build an object file
 oxygine/src/res/ResFontBM.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResFontBM.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResFontBM.cpp.o
 .PHONY : oxygine/src/res/ResFontBM.cpp.o
 
 oxygine/src/res/ResFontBM.i: oxygine/src/res/ResFontBM.cpp.i
@@ -2042,7 +2042,7 @@ oxygine/src/res/ResFontBM.i: oxygine/src/res/ResFontBM.cpp.i
 
 # target to preprocess a source file
 oxygine/src/res/ResFontBM.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResFontBM.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResFontBM.cpp.i
 .PHONY : oxygine/src/res/ResFontBM.cpp.i
 
 oxygine/src/res/ResFontBM.s: oxygine/src/res/ResFontBM.cpp.s
@@ -2050,7 +2050,7 @@ oxygine/src/res/ResFontBM.s: oxygine/src/res/ResFontBM.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/res/ResFontBM.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResFontBM.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResFontBM.cpp.s
 .PHONY : oxygine/src/res/ResFontBM.cpp.s
 
 oxygine/src/res/ResStarlingAtlas.o: oxygine/src/res/ResStarlingAtlas.cpp.o
@@ -2058,7 +2058,7 @@ oxygine/src/res/ResStarlingAtlas.o: oxygine/src/res/ResStarlingAtlas.cpp.o
 
 # target to build an object file
 oxygine/src/res/ResStarlingAtlas.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResStarlingAtlas.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResStarlingAtlas.cpp.o
 .PHONY : oxygine/src/res/ResStarlingAtlas.cpp.o
 
 oxygine/src/res/ResStarlingAtlas.i: oxygine/src/res/ResStarlingAtlas.cpp.i
@@ -2066,7 +2066,7 @@ oxygine/src/res/ResStarlingAtlas.i: oxygine/src/res/ResStarlingAtlas.cpp.i
 
 # target to preprocess a source file
 oxygine/src/res/ResStarlingAtlas.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResStarlingAtlas.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResStarlingAtlas.cpp.i
 .PHONY : oxygine/src/res/ResStarlingAtlas.cpp.i
 
 oxygine/src/res/ResStarlingAtlas.s: oxygine/src/res/ResStarlingAtlas.cpp.s
@@ -2074,7 +2074,7 @@ oxygine/src/res/ResStarlingAtlas.s: oxygine/src/res/ResStarlingAtlas.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/res/ResStarlingAtlas.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResStarlingAtlas.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/ResStarlingAtlas.cpp.s
 .PHONY : oxygine/src/res/ResStarlingAtlas.cpp.s
 
 oxygine/src/res/Resource.o: oxygine/src/res/Resource.cpp.o
@@ -2082,7 +2082,7 @@ oxygine/src/res/Resource.o: oxygine/src/res/Resource.cpp.o
 
 # target to build an object file
 oxygine/src/res/Resource.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/Resource.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/Resource.cpp.o
 .PHONY : oxygine/src/res/Resource.cpp.o
 
 oxygine/src/res/Resource.i: oxygine/src/res/Resource.cpp.i
@@ -2090,7 +2090,7 @@ oxygine/src/res/Resource.i: oxygine/src/res/Resource.cpp.i
 
 # target to preprocess a source file
 oxygine/src/res/Resource.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/Resource.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/Resource.cpp.i
 .PHONY : oxygine/src/res/Resource.cpp.i
 
 oxygine/src/res/Resource.s: oxygine/src/res/Resource.cpp.s
@@ -2098,7 +2098,7 @@ oxygine/src/res/Resource.s: oxygine/src/res/Resource.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/res/Resource.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/Resource.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/Resource.cpp.s
 .PHONY : oxygine/src/res/Resource.cpp.s
 
 oxygine/src/res/Resources.o: oxygine/src/res/Resources.cpp.o
@@ -2106,7 +2106,7 @@ oxygine/src/res/Resources.o: oxygine/src/res/Resources.cpp.o
 
 # target to build an object file
 oxygine/src/res/Resources.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/Resources.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/Resources.cpp.o
 .PHONY : oxygine/src/res/Resources.cpp.o
 
 oxygine/src/res/Resources.i: oxygine/src/res/Resources.cpp.i
@@ -2114,7 +2114,7 @@ oxygine/src/res/Resources.i: oxygine/src/res/Resources.cpp.i
 
 # target to preprocess a source file
 oxygine/src/res/Resources.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/Resources.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/Resources.cpp.i
 .PHONY : oxygine/src/res/Resources.cpp.i
 
 oxygine/src/res/Resources.s: oxygine/src/res/Resources.cpp.s
@@ -2122,7 +2122,7 @@ oxygine/src/res/Resources.s: oxygine/src/res/Resources.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/res/Resources.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/Resources.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/res/Resources.cpp.s
 .PHONY : oxygine/src/res/Resources.cpp.s
 
 oxygine/src/text_utils/Aligner.o: oxygine/src/text_utils/Aligner.cpp.o
@@ -2130,7 +2130,7 @@ oxygine/src/text_utils/Aligner.o: oxygine/src/text_utils/Aligner.cpp.o
 
 # target to build an object file
 oxygine/src/text_utils/Aligner.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/text_utils/Aligner.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/text_utils/Aligner.cpp.o
 .PHONY : oxygine/src/text_utils/Aligner.cpp.o
 
 oxygine/src/text_utils/Aligner.i: oxygine/src/text_utils/Aligner.cpp.i
@@ -2138,7 +2138,7 @@ oxygine/src/text_utils/Aligner.i: oxygine/src/text_utils/Aligner.cpp.i
 
 # target to preprocess a source file
 oxygine/src/text_utils/Aligner.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/text_utils/Aligner.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/text_utils/Aligner.cpp.i
 .PHONY : oxygine/src/text_utils/Aligner.cpp.i
 
 oxygine/src/text_utils/Aligner.s: oxygine/src/text_utils/Aligner.cpp.s
@@ -2146,7 +2146,7 @@ oxygine/src/text_utils/Aligner.s: oxygine/src/text_utils/Aligner.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/text_utils/Aligner.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/text_utils/Aligner.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/text_utils/Aligner.cpp.s
 .PHONY : oxygine/src/text_utils/Aligner.cpp.s
 
 oxygine/src/text_utils/Node.o: oxygine/src/text_utils/Node.cpp.o
@@ -2154,7 +2154,7 @@ oxygine/src/text_utils/Node.o: oxygine/src/text_utils/Node.cpp.o
 
 # target to build an object file
 oxygine/src/text_utils/Node.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/text_utils/Node.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/text_utils/Node.cpp.o
 .PHONY : oxygine/src/text_utils/Node.cpp.o
 
 oxygine/src/text_utils/Node.i: oxygine/src/text_utils/Node.cpp.i
@@ -2162,7 +2162,7 @@ oxygine/src/text_utils/Node.i: oxygine/src/text_utils/Node.cpp.i
 
 # target to preprocess a source file
 oxygine/src/text_utils/Node.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/text_utils/Node.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/text_utils/Node.cpp.i
 .PHONY : oxygine/src/text_utils/Node.cpp.i
 
 oxygine/src/text_utils/Node.s: oxygine/src/text_utils/Node.cpp.s
@@ -2170,7 +2170,7 @@ oxygine/src/text_utils/Node.s: oxygine/src/text_utils/Node.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/text_utils/Node.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/text_utils/Node.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/text_utils/Node.cpp.s
 .PHONY : oxygine/src/text_utils/Node.cpp.s
 
 oxygine/src/text_utils/TextBuilder.o: oxygine/src/text_utils/TextBuilder.cpp.o
@@ -2178,7 +2178,7 @@ oxygine/src/text_utils/TextBuilder.o: oxygine/src/text_utils/TextBuilder.cpp.o
 
 # target to build an object file
 oxygine/src/text_utils/TextBuilder.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/text_utils/TextBuilder.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/text_utils/TextBuilder.cpp.o
 .PHONY : oxygine/src/text_utils/TextBuilder.cpp.o
 
 oxygine/src/text_utils/TextBuilder.i: oxygine/src/text_utils/TextBuilder.cpp.i
@@ -2186,7 +2186,7 @@ oxygine/src/text_utils/TextBuilder.i: oxygine/src/text_utils/TextBuilder.cpp.i
 
 # target to preprocess a source file
 oxygine/src/text_utils/TextBuilder.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/text_utils/TextBuilder.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/text_utils/TextBuilder.cpp.i
 .PHONY : oxygine/src/text_utils/TextBuilder.cpp.i
 
 oxygine/src/text_utils/TextBuilder.s: oxygine/src/text_utils/TextBuilder.cpp.s
@@ -2194,7 +2194,7 @@ oxygine/src/text_utils/TextBuilder.s: oxygine/src/text_utils/TextBuilder.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/text_utils/TextBuilder.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/text_utils/TextBuilder.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/text_utils/TextBuilder.cpp.s
 .PHONY : oxygine/src/text_utils/TextBuilder.cpp.s
 
 oxygine/src/utils/AtlasTool.o: oxygine/src/utils/AtlasTool.cpp.o
@@ -2202,7 +2202,7 @@ oxygine/src/utils/AtlasTool.o: oxygine/src/utils/AtlasTool.cpp.o
 
 # target to build an object file
 oxygine/src/utils/AtlasTool.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/utils/AtlasTool.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/utils/AtlasTool.cpp.o
 .PHONY : oxygine/src/utils/AtlasTool.cpp.o
 
 oxygine/src/utils/AtlasTool.i: oxygine/src/utils/AtlasTool.cpp.i
@@ -2210,7 +2210,7 @@ oxygine/src/utils/AtlasTool.i: oxygine/src/utils/AtlasTool.cpp.i
 
 # target to preprocess a source file
 oxygine/src/utils/AtlasTool.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/utils/AtlasTool.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/utils/AtlasTool.cpp.i
 .PHONY : oxygine/src/utils/AtlasTool.cpp.i
 
 oxygine/src/utils/AtlasTool.s: oxygine/src/utils/AtlasTool.cpp.s
@@ -2218,7 +2218,7 @@ oxygine/src/utils/AtlasTool.s: oxygine/src/utils/AtlasTool.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/utils/AtlasTool.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/utils/AtlasTool.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/utils/AtlasTool.cpp.s
 .PHONY : oxygine/src/utils/AtlasTool.cpp.s
 
 oxygine/src/utils/ImageUtils.o: oxygine/src/utils/ImageUtils.cpp.o
@@ -2226,7 +2226,7 @@ oxygine/src/utils/ImageUtils.o: oxygine/src/utils/ImageUtils.cpp.o
 
 # target to build an object file
 oxygine/src/utils/ImageUtils.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/utils/ImageUtils.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/utils/ImageUtils.cpp.o
 .PHONY : oxygine/src/utils/ImageUtils.cpp.o
 
 oxygine/src/utils/ImageUtils.i: oxygine/src/utils/ImageUtils.cpp.i
@@ -2234,7 +2234,7 @@ oxygine/src/utils/ImageUtils.i: oxygine/src/utils/ImageUtils.cpp.i
 
 # target to preprocess a source file
 oxygine/src/utils/ImageUtils.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/utils/ImageUtils.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/utils/ImageUtils.cpp.i
 .PHONY : oxygine/src/utils/ImageUtils.cpp.i
 
 oxygine/src/utils/ImageUtils.s: oxygine/src/utils/ImageUtils.cpp.s
@@ -2242,7 +2242,7 @@ oxygine/src/utils/ImageUtils.s: oxygine/src/utils/ImageUtils.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/utils/ImageUtils.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/utils/ImageUtils.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/utils/ImageUtils.cpp.s
 .PHONY : oxygine/src/utils/ImageUtils.cpp.s
 
 oxygine/src/utils/stringUtils.o: oxygine/src/utils/stringUtils.cpp.o
@@ -2250,7 +2250,7 @@ oxygine/src/utils/stringUtils.o: oxygine/src/utils/stringUtils.cpp.o
 
 # target to build an object file
 oxygine/src/utils/stringUtils.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/utils/stringUtils.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/utils/stringUtils.cpp.o
 .PHONY : oxygine/src/utils/stringUtils.cpp.o
 
 oxygine/src/utils/stringUtils.i: oxygine/src/utils/stringUtils.cpp.i
@@ -2258,7 +2258,7 @@ oxygine/src/utils/stringUtils.i: oxygine/src/utils/stringUtils.cpp.i
 
 # target to preprocess a source file
 oxygine/src/utils/stringUtils.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/utils/stringUtils.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/utils/stringUtils.cpp.i
 .PHONY : oxygine/src/utils/stringUtils.cpp.i
 
 oxygine/src/utils/stringUtils.s: oxygine/src/utils/stringUtils.cpp.s
@@ -2266,7 +2266,7 @@ oxygine/src/utils/stringUtils.s: oxygine/src/utils/stringUtils.cpp.s
 
 # target to generate assembly for a file
 oxygine/src/utils/stringUtils.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/utils/stringUtils.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/utils/stringUtils.cpp.s
 .PHONY : oxygine/src/utils/stringUtils.cpp.s
 
 oxygine/src/winnie_alloc/system_alloc.o: oxygine/src/winnie_alloc/system_alloc.cpp.o
@@ -2274,7 +2274,7 @@ oxygine/src/winnie_alloc/system_alloc.o: oxygine/src/winnie_alloc/system_alloc.c
 
 # target to build an object file
 oxygine/src/winnie_alloc/system_alloc.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/winnie_alloc/system_alloc.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/winnie_alloc/system_alloc.cpp.o
 .PHONY : oxygine/src/winnie_alloc/system_alloc.cpp.o
 
 oxygine/src/winnie_alloc/system_alloc.i: oxygine/src/winnie_alloc/system_alloc.cpp.i
@@ -2282,7 +2282,7 @@ oxygine/src/winnie_alloc/system_alloc.i: oxygine/src/winnie_alloc/system_alloc.c
 
 # target to preprocess a source file
 oxygine/src/winnie_alloc/system_alloc.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/winnie_alloc/system_alloc.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/winnie_alloc/system_alloc.cpp.i
 .PHONY : oxygine/src/winnie_alloc/system_alloc.cpp.i
 
 oxygine/src/winnie_alloc/system_alloc.s: oxygine/src/winnie_alloc/system_alloc.cpp.s
@@ -2290,7 +2290,7 @@ oxygine/src/winnie_alloc/system_alloc.s: oxygine/src/winnie_alloc/system_alloc.c
 
 # target to generate assembly for a file
 oxygine/src/winnie_alloc/system_alloc.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/winnie_alloc/system_alloc.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/winnie_alloc/system_alloc.cpp.s
 .PHONY : oxygine/src/winnie_alloc/system_alloc.cpp.s
 
 oxygine/src/winnie_alloc/winnie_alloc.o: oxygine/src/winnie_alloc/winnie_alloc.cpp.o
@@ -2298,7 +2298,7 @@ oxygine/src/winnie_alloc/winnie_alloc.o: oxygine/src/winnie_alloc/winnie_alloc.c
 
 # target to build an object file
 oxygine/src/winnie_alloc/winnie_alloc.cpp.o:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/winnie_alloc/winnie_alloc.cpp.o
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/winnie_alloc/winnie_alloc.cpp.o
 .PHONY : oxygine/src/winnie_alloc/winnie_alloc.cpp.o
 
 oxygine/src/winnie_alloc/winnie_alloc.i: oxygine/src/winnie_alloc/winnie_alloc.cpp.i
@@ -2306,7 +2306,7 @@ oxygine/src/winnie_alloc/winnie_alloc.i: oxygine/src/winnie_alloc/winnie_alloc.c
 
 # target to preprocess a source file
 oxygine/src/winnie_alloc/winnie_alloc.cpp.i:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/winnie_alloc/winnie_alloc.cpp.i
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/winnie_alloc/winnie_alloc.cpp.i
 .PHONY : oxygine/src/winnie_alloc/winnie_alloc.cpp.i
 
 oxygine/src/winnie_alloc/winnie_alloc.s: oxygine/src/winnie_alloc/winnie_alloc.cpp.s
@@ -2314,7 +2314,7 @@ oxygine/src/winnie_alloc/winnie_alloc.s: oxygine/src/winnie_alloc/winnie_alloc.c
 
 # target to generate assembly for a file
 oxygine/src/winnie_alloc/winnie_alloc.cpp.s:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/winnie_alloc/winnie_alloc.cpp.s
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/oxygine/src/winnie_alloc/winnie_alloc.cpp.s
 .PHONY : oxygine/src/winnie_alloc/winnie_alloc.cpp.s
 
 # Help Target
@@ -2611,6 +2611,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -47,19 +47,21 @@ RM = /usr/local/Cellar/cmake/3.1.1_1/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/Keith/Desktop/cis330/Gauntmore
+CMAKE_SOURCE_DIR = /Users/Keith/Desktop/cis330/gauntmore
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/Keith/Desktop/cis330/Gauntmore/build
+CMAKE_BINARY_DIR = /Users/Keith/Desktop/cis330/gauntmore/build
 
 #=============================================================================
 # Target rules for target CMakeFiles/gauntmore.dir
 
 # All Build rule for target.
 CMakeFiles/gauntmore.dir/all: oxygine-framework/CMakeFiles/oxygine-framework.dir/all
+CMakeFiles/gauntmore.dir/all: oxygine-sound/CMakeFiles/oxygine-sound.dir/all
+CMakeFiles/gauntmore.dir/all: oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir/all
 	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/depend
 	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26
 	@echo "Built target gauntmore"
 .PHONY : CMakeFiles/gauntmore.dir/all
 
@@ -69,9 +71,9 @@ all: CMakeFiles/gauntmore.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/gauntmore.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles 100
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles 100
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/gauntmore.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles 0
 .PHONY : CMakeFiles/gauntmore.dir/rule
 
 # Convenience name for target.
@@ -109,7 +111,7 @@ oxygine-framework/preinstall:
 oxygine-framework/CMakeFiles/oxygine-framework.dir/all:
 	$(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/depend
 	$(MAKE) -f oxygine-framework/CMakeFiles/oxygine-framework.dir/build.make oxygine-framework/CMakeFiles/oxygine-framework.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles  23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles  27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84
 	@echo "Built target oxygine-framework"
 .PHONY : oxygine-framework/CMakeFiles/oxygine-framework.dir/all
 
@@ -119,9 +121,9 @@ all: oxygine-framework/CMakeFiles/oxygine-framework.dir/all
 
 # Build rule for subdir invocation for target.
 oxygine-framework/CMakeFiles/oxygine-framework.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles 78
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles 58
 	$(MAKE) -f CMakeFiles/Makefile2 oxygine-framework/CMakeFiles/oxygine-framework.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles 0
 .PHONY : oxygine-framework/CMakeFiles/oxygine-framework.dir/rule
 
 # Convenience name for target.
@@ -135,6 +137,108 @@ oxygine-framework/CMakeFiles/oxygine-framework.dir/clean:
 
 # clean rule for target.
 clean: oxygine-framework/CMakeFiles/oxygine-framework.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory oxygine-sound
+
+# Convenience name for "all" pass in the directory.
+oxygine-sound/all: oxygine-sound/CMakeFiles/oxygine-sound.dir/all
+oxygine-sound/all: oxygine-sound/dependencies/tremor/all
+.PHONY : oxygine-sound/all
+
+# Convenience name for "clean" pass in the directory.
+oxygine-sound/clean: oxygine-sound/CMakeFiles/oxygine-sound.dir/clean
+oxygine-sound/clean: oxygine-sound/dependencies/tremor/clean
+.PHONY : oxygine-sound/clean
+
+# Convenience name for "preinstall" pass in the directory.
+oxygine-sound/preinstall: oxygine-sound/dependencies/tremor/preinstall
+.PHONY : oxygine-sound/preinstall
+
+#=============================================================================
+# Target rules for target oxygine-sound/CMakeFiles/oxygine-sound.dir
+
+# All Build rule for target.
+oxygine-sound/CMakeFiles/oxygine-sound.dir/all:
+	$(MAKE) -f oxygine-sound/CMakeFiles/oxygine-sound.dir/build.make oxygine-sound/CMakeFiles/oxygine-sound.dir/depend
+	$(MAKE) -f oxygine-sound/CMakeFiles/oxygine-sound.dir/build.make oxygine-sound/CMakeFiles/oxygine-sound.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles  85 86 87 88 89 90 91
+	@echo "Built target oxygine-sound"
+.PHONY : oxygine-sound/CMakeFiles/oxygine-sound.dir/all
+
+# Include target in all.
+all: oxygine-sound/CMakeFiles/oxygine-sound.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+oxygine-sound/CMakeFiles/oxygine-sound.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles 7
+	$(MAKE) -f CMakeFiles/Makefile2 oxygine-sound/CMakeFiles/oxygine-sound.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles 0
+.PHONY : oxygine-sound/CMakeFiles/oxygine-sound.dir/rule
+
+# Convenience name for target.
+oxygine-sound: oxygine-sound/CMakeFiles/oxygine-sound.dir/rule
+.PHONY : oxygine-sound
+
+# clean rule for target.
+oxygine-sound/CMakeFiles/oxygine-sound.dir/clean:
+	$(MAKE) -f oxygine-sound/CMakeFiles/oxygine-sound.dir/build.make oxygine-sound/CMakeFiles/oxygine-sound.dir/clean
+.PHONY : oxygine-sound/CMakeFiles/oxygine-sound.dir/clean
+
+# clean rule for target.
+clean: oxygine-sound/CMakeFiles/oxygine-sound.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory oxygine-sound/dependencies/tremor
+
+# Convenience name for "all" pass in the directory.
+oxygine-sound/dependencies/tremor/all: oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir/all
+.PHONY : oxygine-sound/dependencies/tremor/all
+
+# Convenience name for "clean" pass in the directory.
+oxygine-sound/dependencies/tremor/clean: oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir/clean
+.PHONY : oxygine-sound/dependencies/tremor/clean
+
+# Convenience name for "preinstall" pass in the directory.
+oxygine-sound/dependencies/tremor/preinstall:
+.PHONY : oxygine-sound/dependencies/tremor/preinstall
+
+#=============================================================================
+# Target rules for target oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir
+
+# All Build rule for target.
+oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir/all:
+	$(MAKE) -f oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir/build.make oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir/depend
+	$(MAKE) -f oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir/build.make oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles  92 93 94 95 96 97 98 99 100
+	@echo "Built target tremor"
+.PHONY : oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir/all
+
+# Include target in all.
+all: oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles 9
+	$(MAKE) -f CMakeFiles/Makefile2 oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles 0
+.PHONY : oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir/rule
+
+# Convenience name for target.
+tremor: oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir/rule
+.PHONY : tremor
+
+# clean rule for target.
+oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir/clean:
+	$(MAKE) -f oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir/build.make oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir/clean
+.PHONY : oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir/clean
+
+# clean rule for target.
+clean: oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir/clean
 .PHONY : clean
 
 #=============================================================================

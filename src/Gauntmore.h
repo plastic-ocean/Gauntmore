@@ -1,9 +1,9 @@
 #include "core/oxygine.h"
 #include "Stage.h"
 #include "DebugActor.h"
-#include "SoundPlayer.h"
-#include "SoundSystem.h"
-#include "SoundInstance.h"
+//#include "SoundPlayer.h"
+//#include "SoundSystem.h"
+//#include "SoundInstance.h"
 
 #include "res.h"
 #include "GameScene.h"
@@ -21,10 +21,10 @@ public:
     void destroy();
     int mainLoop();
     
-    SoundPlayer getMusicPlayer() {
-        return _musicPlayer;
-    }
+//    SoundPlayer getMusicPlayer() {
+//        return _musicPlayer;
+//    }
     
 private:
-    SoundPlayer _musicPlayer;
+//    SoundPlayer _musicPlayer;
 };

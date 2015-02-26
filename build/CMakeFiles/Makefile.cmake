@@ -12,6 +12,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.1.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.1.1/CMakeSystem.cmake"
   "../oxygine-framework/CMakeLists.txt"
+  "../oxygine-sound/CMakeLists.txt"
+  "../oxygine-sound/dependencies/tremor/CMakeLists.txt"
   "/usr/local/Cellar/cmake/3.1.1_1/share/cmake/Modules/CMakeCInformation.cmake"
   "/usr/local/Cellar/cmake/3.1.1_1/share/cmake/Modules/CMakeCXXInformation.cmake"
   "/usr/local/Cellar/cmake/3.1.1_1/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
@@ -47,10 +49,14 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "oxygine-framework/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "oxygine-sound/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "oxygine-sound/dependencies/tremor/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/gauntmore.dir/DependInfo.cmake"
   "oxygine-framework/CMakeFiles/oxygine-framework.dir/DependInfo.cmake"
+  "oxygine-sound/CMakeFiles/oxygine-sound.dir/DependInfo.cmake"
+  "oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir/DependInfo.cmake"
   )

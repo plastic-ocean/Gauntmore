@@ -2,7 +2,7 @@
 #include "Game.h"
 #include "KeyboardInput.h"
 #include "res.h"
-#include "Tmx.h"
+#include "tmx/Tmx.h"
 #include "SDL.h"
 
 

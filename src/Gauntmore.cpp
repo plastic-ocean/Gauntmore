@@ -12,10 +12,10 @@ Gauntmore::Gauntmore() {}
  */
 void Gauntmore::init() {
     // Initialize sound system
-    SoundSystem::instance = SoundSystem::create();
-    SoundSystem::instance->init(16);
-    SoundPlayer::initialize();
-    
+//    SoundSystem::instance = SoundSystem::create();
+//    SoundSystem::instance->init(16);
+//    SoundPlayer::initialize();
+//
     // Load resources.
     loadResources();
     
@@ -33,8 +33,8 @@ void Gauntmore::init() {
  * Global update method. Called every frame.
  */
 void Gauntmore::update() {
-    SoundSystem::instance->update();
-    _musicPlayer.update();
+//    SoundSystem::instance->update();
+//    _musicPlayer.update();
 }
 
 
@@ -42,11 +42,11 @@ void Gauntmore::update() {
  * Free all allocated resources and delete all created actors.
  */
 void Gauntmore::destroy() {
-    _musicPlayer.stop();
-    SoundSystem::instance->stop();
+//    _musicPlayer.stop();
+//    SoundSystem::instance->stop();
     GameScene::instance = 0;
     freeResources();
-    SoundSystem::instance->release();
+//    SoundSystem::instance->release();
 }
 
 

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/Keith/Desktop/cis330/Gauntmore/oxygine-framework
+# Install script for directory: /Users/Keith/Desktop/cis330/gauntmore/oxygine-framework
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,7 +29,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/./debug" TYPE STATIC_LIBRARY FILES "/Users/Keith/Desktop/cis330/Gauntmore/build/oxygine-framework/liboxygine-framework.a")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/./debug" TYPE STATIC_LIBRARY FILES "/Users/Keith/Desktop/cis330/gauntmore/build/oxygine-framework/liboxygine-framework.a")
     if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./debug/liboxygine-framework.a" AND
        NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./debug/liboxygine-framework.a")
       execute_process(COMMAND "/usr/bin/ranlib" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./debug/liboxygine-framework.a")
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/./release" TYPE STATIC_LIBRARY FILES "/Users/Keith/Desktop/cis330/Gauntmore/build/oxygine-framework/liboxygine-framework.a")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/./release" TYPE STATIC_LIBRARY FILES "/Users/Keith/Desktop/cis330/gauntmore/build/oxygine-framework/liboxygine-framework.a")
     if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./release/liboxygine-framework.a" AND
        NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./release/liboxygine-framework.a")
       execute_process(COMMAND "/usr/bin/ranlib" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./release/liboxygine-framework.a")

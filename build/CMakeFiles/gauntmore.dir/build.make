@@ -35,10 +35,10 @@ RM = /usr/local/Cellar/cmake/3.1.1_1/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/Keith/Desktop/cis330/Gauntmore
+CMAKE_SOURCE_DIR = /Users/Keith/Desktop/cis330/gauntmore
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/Keith/Desktop/cis330/Gauntmore/build
+CMAKE_BINARY_DIR = /Users/Keith/Desktop/cis330/gauntmore/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/gauntmore.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/gauntmore.dir/flags.make
 
 CMakeFiles/gauntmore.dir/src/Game.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/Game.cpp.o: ../src/Game.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/Game.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/Game.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/Game.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/Game.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/Game.cpp
 
 CMakeFiles/gauntmore.dir/src/Game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/Game.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/Game.cpp > CMakeFiles/gauntmore.dir/src/Game.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/Game.cpp > CMakeFiles/gauntmore.dir/src/Game.cpp.i
 
 CMakeFiles/gauntmore.dir/src/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/Game.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/Game.cpp -o CMakeFiles/gauntmore.dir/src/Game.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/Game.cpp -o CMakeFiles/gauntmore.dir/src/Game.cpp.s
 
 CMakeFiles/gauntmore.dir/src/Game.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/Game.cpp.o.requires
@@ -74,17 +74,17 @@ CMakeFiles/gauntmore.dir/src/Game.cpp.o.provides.build: CMakeFiles/gauntmore.dir
 
 CMakeFiles/gauntmore.dir/src/GameScene.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/GameScene.cpp.o: ../src/GameScene.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/GameScene.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/GameScene.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/GameScene.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/GameScene.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/GameScene.cpp
 
 CMakeFiles/gauntmore.dir/src/GameScene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/GameScene.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/GameScene.cpp > CMakeFiles/gauntmore.dir/src/GameScene.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/GameScene.cpp > CMakeFiles/gauntmore.dir/src/GameScene.cpp.i
 
 CMakeFiles/gauntmore.dir/src/GameScene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/GameScene.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/GameScene.cpp -o CMakeFiles/gauntmore.dir/src/GameScene.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/GameScene.cpp -o CMakeFiles/gauntmore.dir/src/GameScene.cpp.s
 
 CMakeFiles/gauntmore.dir/src/GameScene.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/GameScene.cpp.o.requires
@@ -97,17 +97,17 @@ CMakeFiles/gauntmore.dir/src/GameScene.cpp.o.provides.build: CMakeFiles/gauntmor
 
 CMakeFiles/gauntmore.dir/src/Map.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/Map.cpp.o: ../src/Map.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/Map.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/Map.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/Map.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/Map.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/Map.cpp
 
 CMakeFiles/gauntmore.dir/src/Map.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/Map.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/Map.cpp > CMakeFiles/gauntmore.dir/src/Map.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/Map.cpp > CMakeFiles/gauntmore.dir/src/Map.cpp.i
 
 CMakeFiles/gauntmore.dir/src/Map.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/Map.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/Map.cpp -o CMakeFiles/gauntmore.dir/src/Map.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/Map.cpp -o CMakeFiles/gauntmore.dir/src/Map.cpp.s
 
 CMakeFiles/gauntmore.dir/src/Map.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/Map.cpp.o.requires
@@ -118,19 +118,42 @@ CMakeFiles/gauntmore.dir/src/Map.cpp.o.provides: CMakeFiles/gauntmore.dir/src/Ma
 
 CMakeFiles/gauntmore.dir/src/Map.cpp.o.provides.build: CMakeFiles/gauntmore.dir/src/Map.cpp.o
 
+CMakeFiles/gauntmore.dir/src/MazeGen.cpp.o: CMakeFiles/gauntmore.dir/flags.make
+CMakeFiles/gauntmore.dir/src/MazeGen.cpp.o: ../src/MazeGen.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/MazeGen.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/MazeGen.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/MazeGen.cpp
+
+CMakeFiles/gauntmore.dir/src/MazeGen.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/MazeGen.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/MazeGen.cpp > CMakeFiles/gauntmore.dir/src/MazeGen.cpp.i
+
+CMakeFiles/gauntmore.dir/src/MazeGen.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/MazeGen.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/MazeGen.cpp -o CMakeFiles/gauntmore.dir/src/MazeGen.cpp.s
+
+CMakeFiles/gauntmore.dir/src/MazeGen.cpp.o.requires:
+.PHONY : CMakeFiles/gauntmore.dir/src/MazeGen.cpp.o.requires
+
+CMakeFiles/gauntmore.dir/src/MazeGen.cpp.o.provides: CMakeFiles/gauntmore.dir/src/MazeGen.cpp.o.requires
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/MazeGen.cpp.o.provides.build
+.PHONY : CMakeFiles/gauntmore.dir/src/MazeGen.cpp.o.provides
+
+CMakeFiles/gauntmore.dir/src/MazeGen.cpp.o.provides.build: CMakeFiles/gauntmore.dir/src/MazeGen.cpp.o
+
 CMakeFiles/gauntmore.dir/src/Room.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/Room.cpp.o: ../src/Room.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/Room.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/Room.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/Room.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/Room.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/Room.cpp
 
 CMakeFiles/gauntmore.dir/src/Room.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/Room.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/Room.cpp > CMakeFiles/gauntmore.dir/src/Room.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/Room.cpp > CMakeFiles/gauntmore.dir/src/Room.cpp.i
 
 CMakeFiles/gauntmore.dir/src/Room.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/Room.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/Room.cpp -o CMakeFiles/gauntmore.dir/src/Room.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/Room.cpp -o CMakeFiles/gauntmore.dir/src/Room.cpp.s
 
 CMakeFiles/gauntmore.dir/src/Room.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/Room.cpp.o.requires
@@ -143,17 +166,17 @@ CMakeFiles/gauntmore.dir/src/Room.cpp.o.provides.build: CMakeFiles/gauntmore.dir
 
 CMakeFiles/gauntmore.dir/src/Scene.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/Scene.cpp.o: ../src/Scene.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/Scene.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/Scene.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/Scene.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/Scene.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/Scene.cpp
 
 CMakeFiles/gauntmore.dir/src/Scene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/Scene.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/Scene.cpp > CMakeFiles/gauntmore.dir/src/Scene.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/Scene.cpp > CMakeFiles/gauntmore.dir/src/Scene.cpp.i
 
 CMakeFiles/gauntmore.dir/src/Scene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/Scene.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/Scene.cpp -o CMakeFiles/gauntmore.dir/src/Scene.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/Scene.cpp -o CMakeFiles/gauntmore.dir/src/Scene.cpp.s
 
 CMakeFiles/gauntmore.dir/src/Scene.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/Scene.cpp.o.requires
@@ -166,17 +189,17 @@ CMakeFiles/gauntmore.dir/src/Scene.cpp.o.provides.build: CMakeFiles/gauntmore.di
 
 CMakeFiles/gauntmore.dir/src/KeyboardInput.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/KeyboardInput.cpp.o: ../src/KeyboardInput.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/KeyboardInput.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/KeyboardInput.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/KeyboardInput.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/KeyboardInput.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.cpp
 
 CMakeFiles/gauntmore.dir/src/KeyboardInput.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/KeyboardInput.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/KeyboardInput.cpp > CMakeFiles/gauntmore.dir/src/KeyboardInput.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.cpp > CMakeFiles/gauntmore.dir/src/KeyboardInput.cpp.i
 
 CMakeFiles/gauntmore.dir/src/KeyboardInput.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/KeyboardInput.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/KeyboardInput.cpp -o CMakeFiles/gauntmore.dir/src/KeyboardInput.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.cpp -o CMakeFiles/gauntmore.dir/src/KeyboardInput.cpp.s
 
 CMakeFiles/gauntmore.dir/src/KeyboardInput.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/KeyboardInput.cpp.o.requires
@@ -189,17 +212,17 @@ CMakeFiles/gauntmore.dir/src/KeyboardInput.cpp.o.provides.build: CMakeFiles/gaun
 
 CMakeFiles/gauntmore.dir/src/Player.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/Player.cpp.o: ../src/Player.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/Player.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/Player.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/Player.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/Player.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/Player.cpp
 
 CMakeFiles/gauntmore.dir/src/Player.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/Player.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/Player.cpp > CMakeFiles/gauntmore.dir/src/Player.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/Player.cpp > CMakeFiles/gauntmore.dir/src/Player.cpp.i
 
 CMakeFiles/gauntmore.dir/src/Player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/Player.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/Player.cpp -o CMakeFiles/gauntmore.dir/src/Player.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/Player.cpp -o CMakeFiles/gauntmore.dir/src/Player.cpp.s
 
 CMakeFiles/gauntmore.dir/src/Player.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/Player.cpp.o.requires
@@ -210,19 +233,157 @@ CMakeFiles/gauntmore.dir/src/Player.cpp.o.provides: CMakeFiles/gauntmore.dir/src
 
 CMakeFiles/gauntmore.dir/src/Player.cpp.o.provides.build: CMakeFiles/gauntmore.dir/src/Player.cpp.o
 
+CMakeFiles/gauntmore.dir/src/Chest.cpp.o: CMakeFiles/gauntmore.dir/flags.make
+CMakeFiles/gauntmore.dir/src/Chest.cpp.o: ../src/Chest.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/Chest.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/Chest.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/Chest.cpp
+
+CMakeFiles/gauntmore.dir/src/Chest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/Chest.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/Chest.cpp > CMakeFiles/gauntmore.dir/src/Chest.cpp.i
+
+CMakeFiles/gauntmore.dir/src/Chest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/Chest.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/Chest.cpp -o CMakeFiles/gauntmore.dir/src/Chest.cpp.s
+
+CMakeFiles/gauntmore.dir/src/Chest.cpp.o.requires:
+.PHONY : CMakeFiles/gauntmore.dir/src/Chest.cpp.o.requires
+
+CMakeFiles/gauntmore.dir/src/Chest.cpp.o.provides: CMakeFiles/gauntmore.dir/src/Chest.cpp.o.requires
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Chest.cpp.o.provides.build
+.PHONY : CMakeFiles/gauntmore.dir/src/Chest.cpp.o.provides
+
+CMakeFiles/gauntmore.dir/src/Chest.cpp.o.provides.build: CMakeFiles/gauntmore.dir/src/Chest.cpp.o
+
+CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.o: CMakeFiles/gauntmore.dir/flags.make
+CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.o: ../src/CollisionDetector.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/CollisionDetector.cpp
+
+CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/CollisionDetector.cpp > CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.i
+
+CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/CollisionDetector.cpp -o CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.s
+
+CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.o.requires:
+.PHONY : CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.o.requires
+
+CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.o.provides: CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.o.requires
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.o.provides.build
+.PHONY : CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.o.provides
+
+CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.o.provides.build: CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.o
+
+CMakeFiles/gauntmore.dir/src/Gold.cpp.o: CMakeFiles/gauntmore.dir/flags.make
+CMakeFiles/gauntmore.dir/src/Gold.cpp.o: ../src/Gold.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/Gold.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/Gold.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/Gold.cpp
+
+CMakeFiles/gauntmore.dir/src/Gold.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/Gold.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/Gold.cpp > CMakeFiles/gauntmore.dir/src/Gold.cpp.i
+
+CMakeFiles/gauntmore.dir/src/Gold.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/Gold.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/Gold.cpp -o CMakeFiles/gauntmore.dir/src/Gold.cpp.s
+
+CMakeFiles/gauntmore.dir/src/Gold.cpp.o.requires:
+.PHONY : CMakeFiles/gauntmore.dir/src/Gold.cpp.o.requires
+
+CMakeFiles/gauntmore.dir/src/Gold.cpp.o.provides: CMakeFiles/gauntmore.dir/src/Gold.cpp.o.requires
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Gold.cpp.o.provides.build
+.PHONY : CMakeFiles/gauntmore.dir/src/Gold.cpp.o.provides
+
+CMakeFiles/gauntmore.dir/src/Gold.cpp.o.provides.build: CMakeFiles/gauntmore.dir/src/Gold.cpp.o
+
+CMakeFiles/gauntmore.dir/src/GoldCount.cpp.o: CMakeFiles/gauntmore.dir/flags.make
+CMakeFiles/gauntmore.dir/src/GoldCount.cpp.o: ../src/GoldCount.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/GoldCount.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/GoldCount.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/GoldCount.cpp
+
+CMakeFiles/gauntmore.dir/src/GoldCount.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/GoldCount.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/GoldCount.cpp > CMakeFiles/gauntmore.dir/src/GoldCount.cpp.i
+
+CMakeFiles/gauntmore.dir/src/GoldCount.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/GoldCount.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/GoldCount.cpp -o CMakeFiles/gauntmore.dir/src/GoldCount.cpp.s
+
+CMakeFiles/gauntmore.dir/src/GoldCount.cpp.o.requires:
+.PHONY : CMakeFiles/gauntmore.dir/src/GoldCount.cpp.o.requires
+
+CMakeFiles/gauntmore.dir/src/GoldCount.cpp.o.provides: CMakeFiles/gauntmore.dir/src/GoldCount.cpp.o.requires
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/GoldCount.cpp.o.provides.build
+.PHONY : CMakeFiles/gauntmore.dir/src/GoldCount.cpp.o.provides
+
+CMakeFiles/gauntmore.dir/src/GoldCount.cpp.o.provides.build: CMakeFiles/gauntmore.dir/src/GoldCount.cpp.o
+
+CMakeFiles/gauntmore.dir/src/HealthBar.cpp.o: CMakeFiles/gauntmore.dir/flags.make
+CMakeFiles/gauntmore.dir/src/HealthBar.cpp.o: ../src/HealthBar.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/HealthBar.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/HealthBar.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.cpp
+
+CMakeFiles/gauntmore.dir/src/HealthBar.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/HealthBar.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.cpp > CMakeFiles/gauntmore.dir/src/HealthBar.cpp.i
+
+CMakeFiles/gauntmore.dir/src/HealthBar.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/HealthBar.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.cpp -o CMakeFiles/gauntmore.dir/src/HealthBar.cpp.s
+
+CMakeFiles/gauntmore.dir/src/HealthBar.cpp.o.requires:
+.PHONY : CMakeFiles/gauntmore.dir/src/HealthBar.cpp.o.requires
+
+CMakeFiles/gauntmore.dir/src/HealthBar.cpp.o.provides: CMakeFiles/gauntmore.dir/src/HealthBar.cpp.o.requires
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/HealthBar.cpp.o.provides.build
+.PHONY : CMakeFiles/gauntmore.dir/src/HealthBar.cpp.o.provides
+
+CMakeFiles/gauntmore.dir/src/HealthBar.cpp.o.provides.build: CMakeFiles/gauntmore.dir/src/HealthBar.cpp.o
+
+CMakeFiles/gauntmore.dir/src/Potion.cpp.o: CMakeFiles/gauntmore.dir/flags.make
+CMakeFiles/gauntmore.dir/src/Potion.cpp.o: ../src/Potion.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/Potion.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/Potion.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/Potion.cpp
+
+CMakeFiles/gauntmore.dir/src/Potion.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/Potion.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/Potion.cpp > CMakeFiles/gauntmore.dir/src/Potion.cpp.i
+
+CMakeFiles/gauntmore.dir/src/Potion.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/Potion.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/Potion.cpp -o CMakeFiles/gauntmore.dir/src/Potion.cpp.s
+
+CMakeFiles/gauntmore.dir/src/Potion.cpp.o.requires:
+.PHONY : CMakeFiles/gauntmore.dir/src/Potion.cpp.o.requires
+
+CMakeFiles/gauntmore.dir/src/Potion.cpp.o.provides: CMakeFiles/gauntmore.dir/src/Potion.cpp.o.requires
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Potion.cpp.o.provides.build
+.PHONY : CMakeFiles/gauntmore.dir/src/Potion.cpp.o.provides
+
+CMakeFiles/gauntmore.dir/src/Potion.cpp.o.provides.build: CMakeFiles/gauntmore.dir/src/Potion.cpp.o
+
 CMakeFiles/gauntmore.dir/src/Creature.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/Creature.cpp.o: ../src/Creature.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/Creature.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/Creature.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/Creature.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/Creature.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/Creature.cpp
 
 CMakeFiles/gauntmore.dir/src/Creature.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/Creature.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/Creature.cpp > CMakeFiles/gauntmore.dir/src/Creature.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/Creature.cpp > CMakeFiles/gauntmore.dir/src/Creature.cpp.i
 
 CMakeFiles/gauntmore.dir/src/Creature.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/Creature.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/Creature.cpp -o CMakeFiles/gauntmore.dir/src/Creature.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/Creature.cpp -o CMakeFiles/gauntmore.dir/src/Creature.cpp.s
 
 CMakeFiles/gauntmore.dir/src/Creature.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/Creature.cpp.o.requires
@@ -233,19 +394,88 @@ CMakeFiles/gauntmore.dir/src/Creature.cpp.o.provides: CMakeFiles/gauntmore.dir/s
 
 CMakeFiles/gauntmore.dir/src/Creature.cpp.o.provides.build: CMakeFiles/gauntmore.dir/src/Creature.cpp.o
 
+CMakeFiles/gauntmore.dir/src/Skeleton.cpp.o: CMakeFiles/gauntmore.dir/flags.make
+CMakeFiles/gauntmore.dir/src/Skeleton.cpp.o: ../src/Skeleton.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/Skeleton.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/Skeleton.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/Skeleton.cpp
+
+CMakeFiles/gauntmore.dir/src/Skeleton.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/Skeleton.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/Skeleton.cpp > CMakeFiles/gauntmore.dir/src/Skeleton.cpp.i
+
+CMakeFiles/gauntmore.dir/src/Skeleton.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/Skeleton.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/Skeleton.cpp -o CMakeFiles/gauntmore.dir/src/Skeleton.cpp.s
+
+CMakeFiles/gauntmore.dir/src/Skeleton.cpp.o.requires:
+.PHONY : CMakeFiles/gauntmore.dir/src/Skeleton.cpp.o.requires
+
+CMakeFiles/gauntmore.dir/src/Skeleton.cpp.o.provides: CMakeFiles/gauntmore.dir/src/Skeleton.cpp.o.requires
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Skeleton.cpp.o.provides.build
+.PHONY : CMakeFiles/gauntmore.dir/src/Skeleton.cpp.o.provides
+
+CMakeFiles/gauntmore.dir/src/Skeleton.cpp.o.provides.build: CMakeFiles/gauntmore.dir/src/Skeleton.cpp.o
+
+CMakeFiles/gauntmore.dir/src/Thing.cpp.o: CMakeFiles/gauntmore.dir/flags.make
+CMakeFiles/gauntmore.dir/src/Thing.cpp.o: ../src/Thing.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/Thing.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/Thing.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/Thing.cpp
+
+CMakeFiles/gauntmore.dir/src/Thing.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/Thing.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/Thing.cpp > CMakeFiles/gauntmore.dir/src/Thing.cpp.i
+
+CMakeFiles/gauntmore.dir/src/Thing.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/Thing.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/Thing.cpp -o CMakeFiles/gauntmore.dir/src/Thing.cpp.s
+
+CMakeFiles/gauntmore.dir/src/Thing.cpp.o.requires:
+.PHONY : CMakeFiles/gauntmore.dir/src/Thing.cpp.o.requires
+
+CMakeFiles/gauntmore.dir/src/Thing.cpp.o.provides: CMakeFiles/gauntmore.dir/src/Thing.cpp.o.requires
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Thing.cpp.o.provides.build
+.PHONY : CMakeFiles/gauntmore.dir/src/Thing.cpp.o.provides
+
+CMakeFiles/gauntmore.dir/src/Thing.cpp.o.provides.build: CMakeFiles/gauntmore.dir/src/Thing.cpp.o
+
+CMakeFiles/gauntmore.dir/src/Slime.cpp.o: CMakeFiles/gauntmore.dir/flags.make
+CMakeFiles/gauntmore.dir/src/Slime.cpp.o: ../src/Slime.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_18)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/Slime.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/Slime.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/Slime.cpp
+
+CMakeFiles/gauntmore.dir/src/Slime.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/Slime.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/Slime.cpp > CMakeFiles/gauntmore.dir/src/Slime.cpp.i
+
+CMakeFiles/gauntmore.dir/src/Slime.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/Slime.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/Slime.cpp -o CMakeFiles/gauntmore.dir/src/Slime.cpp.s
+
+CMakeFiles/gauntmore.dir/src/Slime.cpp.o.requires:
+.PHONY : CMakeFiles/gauntmore.dir/src/Slime.cpp.o.requires
+
+CMakeFiles/gauntmore.dir/src/Slime.cpp.o.provides: CMakeFiles/gauntmore.dir/src/Slime.cpp.o.requires
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Slime.cpp.o.provides.build
+.PHONY : CMakeFiles/gauntmore.dir/src/Slime.cpp.o.provides
+
+CMakeFiles/gauntmore.dir/src/Slime.cpp.o.provides.build: CMakeFiles/gauntmore.dir/src/Slime.cpp.o
+
 CMakeFiles/gauntmore.dir/src/Unit.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/Unit.cpp.o: ../src/Unit.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_19)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/Unit.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/Unit.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/Unit.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/Unit.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/Unit.cpp
 
 CMakeFiles/gauntmore.dir/src/Unit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/Unit.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/Unit.cpp > CMakeFiles/gauntmore.dir/src/Unit.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/Unit.cpp > CMakeFiles/gauntmore.dir/src/Unit.cpp.i
 
 CMakeFiles/gauntmore.dir/src/Unit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/Unit.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/Unit.cpp -o CMakeFiles/gauntmore.dir/src/Unit.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/Unit.cpp -o CMakeFiles/gauntmore.dir/src/Unit.cpp.s
 
 CMakeFiles/gauntmore.dir/src/Unit.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/Unit.cpp.o.requires
@@ -256,42 +486,134 @@ CMakeFiles/gauntmore.dir/src/Unit.cpp.o.provides: CMakeFiles/gauntmore.dir/src/U
 
 CMakeFiles/gauntmore.dir/src/Unit.cpp.o.provides.build: CMakeFiles/gauntmore.dir/src/Unit.cpp.o
 
-CMakeFiles/gauntmore.dir/src/gauntmore.cpp.o: CMakeFiles/gauntmore.dir/flags.make
-CMakeFiles/gauntmore.dir/src/gauntmore.cpp.o: ../src/gauntmore.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_10)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/gauntmore.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/gauntmore.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/gauntmore.cpp
+CMakeFiles/gauntmore.dir/src/PathFinder.cpp.o: CMakeFiles/gauntmore.dir/flags.make
+CMakeFiles/gauntmore.dir/src/PathFinder.cpp.o: ../src/PathFinder.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_20)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/PathFinder.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/PathFinder.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/PathFinder.cpp
 
-CMakeFiles/gauntmore.dir/src/gauntmore.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/gauntmore.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/gauntmore.cpp > CMakeFiles/gauntmore.dir/src/gauntmore.cpp.i
+CMakeFiles/gauntmore.dir/src/PathFinder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/PathFinder.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/PathFinder.cpp > CMakeFiles/gauntmore.dir/src/PathFinder.cpp.i
 
-CMakeFiles/gauntmore.dir/src/gauntmore.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/gauntmore.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/gauntmore.cpp -o CMakeFiles/gauntmore.dir/src/gauntmore.cpp.s
+CMakeFiles/gauntmore.dir/src/PathFinder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/PathFinder.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/PathFinder.cpp -o CMakeFiles/gauntmore.dir/src/PathFinder.cpp.s
 
-CMakeFiles/gauntmore.dir/src/gauntmore.cpp.o.requires:
-.PHONY : CMakeFiles/gauntmore.dir/src/gauntmore.cpp.o.requires
+CMakeFiles/gauntmore.dir/src/PathFinder.cpp.o.requires:
+.PHONY : CMakeFiles/gauntmore.dir/src/PathFinder.cpp.o.requires
 
-CMakeFiles/gauntmore.dir/src/gauntmore.cpp.o.provides: CMakeFiles/gauntmore.dir/src/gauntmore.cpp.o.requires
-	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/gauntmore.cpp.o.provides.build
-.PHONY : CMakeFiles/gauntmore.dir/src/gauntmore.cpp.o.provides
+CMakeFiles/gauntmore.dir/src/PathFinder.cpp.o.provides: CMakeFiles/gauntmore.dir/src/PathFinder.cpp.o.requires
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/PathFinder.cpp.o.provides.build
+.PHONY : CMakeFiles/gauntmore.dir/src/PathFinder.cpp.o.provides
 
-CMakeFiles/gauntmore.dir/src/gauntmore.cpp.o.provides.build: CMakeFiles/gauntmore.dir/src/gauntmore.cpp.o
+CMakeFiles/gauntmore.dir/src/PathFinder.cpp.o.provides.build: CMakeFiles/gauntmore.dir/src/PathFinder.cpp.o
+
+CMakeFiles/gauntmore.dir/src/PathNode.cpp.o: CMakeFiles/gauntmore.dir/flags.make
+CMakeFiles/gauntmore.dir/src/PathNode.cpp.o: ../src/PathNode.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_21)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/PathNode.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/PathNode.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/PathNode.cpp
+
+CMakeFiles/gauntmore.dir/src/PathNode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/PathNode.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/PathNode.cpp > CMakeFiles/gauntmore.dir/src/PathNode.cpp.i
+
+CMakeFiles/gauntmore.dir/src/PathNode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/PathNode.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/PathNode.cpp -o CMakeFiles/gauntmore.dir/src/PathNode.cpp.s
+
+CMakeFiles/gauntmore.dir/src/PathNode.cpp.o.requires:
+.PHONY : CMakeFiles/gauntmore.dir/src/PathNode.cpp.o.requires
+
+CMakeFiles/gauntmore.dir/src/PathNode.cpp.o.provides: CMakeFiles/gauntmore.dir/src/PathNode.cpp.o.requires
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/PathNode.cpp.o.provides.build
+.PHONY : CMakeFiles/gauntmore.dir/src/PathNode.cpp.o.provides
+
+CMakeFiles/gauntmore.dir/src/PathNode.cpp.o.provides.build: CMakeFiles/gauntmore.dir/src/PathNode.cpp.o
+
+CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.o: CMakeFiles/gauntmore.dir/flags.make
+CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.o: ../src/NodeMinHeap.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_22)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/NodeMinHeap.cpp
+
+CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/NodeMinHeap.cpp > CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.i
+
+CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/NodeMinHeap.cpp -o CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.s
+
+CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.o.requires:
+.PHONY : CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.o.requires
+
+CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.o.provides: CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.o.requires
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.o.provides.build
+.PHONY : CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.o.provides
+
+CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.o.provides.build: CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.o
+
+CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.o: CMakeFiles/gauntmore.dir/flags.make
+CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.o: ../src/CreatureMover.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_23)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/CreatureMover.cpp
+
+CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/CreatureMover.cpp > CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.i
+
+CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/CreatureMover.cpp -o CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.s
+
+CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.o.requires:
+.PHONY : CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.o.requires
+
+CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.o.provides: CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.o.requires
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.o.provides.build
+.PHONY : CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.o.provides
+
+CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.o.provides.build: CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.o
+
+CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.o: CMakeFiles/gauntmore.dir/flags.make
+CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.o: ../src/Gauntmore.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_24)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/Gauntmore.cpp
+
+CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/Gauntmore.cpp > CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.i
+
+CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/Gauntmore.cpp -o CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.s
+
+CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.o.requires:
+.PHONY : CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.o.requires
+
+CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.o.provides: CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.o.requires
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.o.provides.build
+.PHONY : CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.o.provides
+
+CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.o.provides.build: CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.o
 
 CMakeFiles/gauntmore.dir/src/res.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/res.cpp.o: ../src/res.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_25)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/res.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/res.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/res.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/res.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/res.cpp
 
 CMakeFiles/gauntmore.dir/src/res.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/res.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/res.cpp > CMakeFiles/gauntmore.dir/src/res.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/res.cpp > CMakeFiles/gauntmore.dir/src/res.cpp.i
 
 CMakeFiles/gauntmore.dir/src/res.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/res.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/res.cpp -o CMakeFiles/gauntmore.dir/src/res.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/res.cpp -o CMakeFiles/gauntmore.dir/src/res.cpp.s
 
 CMakeFiles/gauntmore.dir/src/res.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/res.cpp.o.requires
@@ -302,19 +624,42 @@ CMakeFiles/gauntmore.dir/src/res.cpp.o.provides: CMakeFiles/gauntmore.dir/src/re
 
 CMakeFiles/gauntmore.dir/src/res.cpp.o.provides.build: CMakeFiles/gauntmore.dir/src/res.cpp.o
 
+CMakeFiles/gauntmore.dir/src/main.cpp.o: CMakeFiles/gauntmore.dir/flags.make
+CMakeFiles/gauntmore.dir/src/main.cpp.o: ../src/main.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_26)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/main.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/main.cpp
+
+CMakeFiles/gauntmore.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/main.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/main.cpp > CMakeFiles/gauntmore.dir/src/main.cpp.i
+
+CMakeFiles/gauntmore.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/main.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/main.cpp -o CMakeFiles/gauntmore.dir/src/main.cpp.s
+
+CMakeFiles/gauntmore.dir/src/main.cpp.o.requires:
+.PHONY : CMakeFiles/gauntmore.dir/src/main.cpp.o.requires
+
+CMakeFiles/gauntmore.dir/src/main.cpp.o.provides: CMakeFiles/gauntmore.dir/src/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/src/main.cpp.o.provides.build
+.PHONY : CMakeFiles/gauntmore.dir/src/main.cpp.o.provides
+
+CMakeFiles/gauntmore.dir/src/main.cpp.o.provides.build: CMakeFiles/gauntmore.dir/src/main.cpp.o
+
 CMakeFiles/gauntmore.dir/src/tmx/base64.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/tmx/base64.cpp.o: ../src/tmx/base64.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_27)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/tmx/base64.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/base64.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/base64.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/base64.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/tmx/base64.cpp
 
 CMakeFiles/gauntmore.dir/src/tmx/base64.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/tmx/base64.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/base64.cpp > CMakeFiles/gauntmore.dir/src/tmx/base64.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/tmx/base64.cpp > CMakeFiles/gauntmore.dir/src/tmx/base64.cpp.i
 
 CMakeFiles/gauntmore.dir/src/tmx/base64.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/tmx/base64.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/base64.cpp -o CMakeFiles/gauntmore.dir/src/tmx/base64.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/tmx/base64.cpp -o CMakeFiles/gauntmore.dir/src/tmx/base64.cpp.s
 
 CMakeFiles/gauntmore.dir/src/tmx/base64.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/tmx/base64.cpp.o.requires
@@ -327,17 +672,17 @@ CMakeFiles/gauntmore.dir/src/tmx/base64.cpp.o.provides.build: CMakeFiles/gauntmo
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxPropertySet.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/tmx/TmxPropertySet.cpp.o: ../src/tmx/TmxPropertySet.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_28)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/tmx/TmxPropertySet.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxPropertySet.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxPropertySet.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxPropertySet.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxPropertySet.cpp
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxPropertySet.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/tmx/TmxPropertySet.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxPropertySet.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxPropertySet.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxPropertySet.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxPropertySet.cpp.i
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxPropertySet.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/tmx/TmxPropertySet.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxPropertySet.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxPropertySet.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxPropertySet.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxPropertySet.cpp.s
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxPropertySet.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/tmx/TmxPropertySet.cpp.o.requires
@@ -350,17 +695,17 @@ CMakeFiles/gauntmore.dir/src/tmx/TmxPropertySet.cpp.o.provides.build: CMakeFiles
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxObject.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/tmx/TmxObject.cpp.o: ../src/tmx/TmxObject.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_29)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/tmx/TmxObject.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxObject.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxObject.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxObject.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxObject.cpp
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxObject.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/tmx/TmxObject.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxObject.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxObject.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxObject.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxObject.cpp.i
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxObject.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/tmx/TmxObject.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxObject.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxObject.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxObject.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxObject.cpp.s
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxObject.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/tmx/TmxObject.cpp.o.requires
@@ -373,17 +718,17 @@ CMakeFiles/gauntmore.dir/src/tmx/TmxObject.cpp.o.provides.build: CMakeFiles/gaun
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxImage.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/tmx/TmxImage.cpp.o: ../src/tmx/TmxImage.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_30)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/tmx/TmxImage.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxImage.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxImage.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxImage.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxImage.cpp
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxImage.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/tmx/TmxImage.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxImage.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxImage.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxImage.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxImage.cpp.i
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxImage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/tmx/TmxImage.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxImage.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxImage.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxImage.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxImage.cpp.s
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxImage.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/tmx/TmxImage.cpp.o.requires
@@ -396,17 +741,17 @@ CMakeFiles/gauntmore.dir/src/tmx/TmxImage.cpp.o.provides.build: CMakeFiles/gaunt
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxObjectGroup.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/tmx/TmxObjectGroup.cpp.o: ../src/tmx/TmxObjectGroup.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_31)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/tmx/TmxObjectGroup.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxObjectGroup.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxObjectGroup.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxObjectGroup.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxObjectGroup.cpp
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxObjectGroup.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/tmx/TmxObjectGroup.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxObjectGroup.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxObjectGroup.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxObjectGroup.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxObjectGroup.cpp.i
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxObjectGroup.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/tmx/TmxObjectGroup.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxObjectGroup.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxObjectGroup.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxObjectGroup.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxObjectGroup.cpp.s
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxObjectGroup.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/tmx/TmxObjectGroup.cpp.o.requires
@@ -419,17 +764,17 @@ CMakeFiles/gauntmore.dir/src/tmx/TmxObjectGroup.cpp.o.provides.build: CMakeFiles
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxTile.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/tmx/TmxTile.cpp.o: ../src/tmx/TmxTile.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_32)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/tmx/TmxTile.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxTile.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxTile.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxTile.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxTile.cpp
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxTile.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/tmx/TmxTile.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxTile.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxTile.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxTile.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxTile.cpp.i
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxTile.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/tmx/TmxTile.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxTile.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxTile.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxTile.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxTile.cpp.s
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxTile.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/tmx/TmxTile.cpp.o.requires
@@ -442,17 +787,17 @@ CMakeFiles/gauntmore.dir/src/tmx/TmxTile.cpp.o.provides.build: CMakeFiles/gauntm
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxImageLayer.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/tmx/TmxImageLayer.cpp.o: ../src/tmx/TmxImageLayer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_18)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_33)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/tmx/TmxImageLayer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxImageLayer.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxImageLayer.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxImageLayer.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxImageLayer.cpp
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxImageLayer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/tmx/TmxImageLayer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxImageLayer.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxImageLayer.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxImageLayer.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxImageLayer.cpp.i
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxImageLayer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/tmx/TmxImageLayer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxImageLayer.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxImageLayer.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxImageLayer.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxImageLayer.cpp.s
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxImageLayer.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/tmx/TmxImageLayer.cpp.o.requires
@@ -465,17 +810,17 @@ CMakeFiles/gauntmore.dir/src/tmx/TmxImageLayer.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxTileset.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/tmx/TmxTileset.cpp.o: ../src/tmx/TmxTileset.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_34)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/tmx/TmxTileset.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxTileset.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxTileset.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxTileset.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxTileset.cpp
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxTileset.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/tmx/TmxTileset.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxTileset.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxTileset.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxTileset.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxTileset.cpp.i
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxTileset.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/tmx/TmxTileset.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxTileset.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxTileset.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxTileset.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxTileset.cpp.s
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxTileset.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/tmx/TmxTileset.cpp.o.requires
@@ -488,17 +833,17 @@ CMakeFiles/gauntmore.dir/src/tmx/TmxTileset.cpp.o.provides.build: CMakeFiles/gau
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxLayer.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/tmx/TmxLayer.cpp.o: ../src/tmx/TmxLayer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_20)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_35)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/tmx/TmxLayer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxLayer.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxLayer.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxLayer.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxLayer.cpp
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxLayer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/tmx/TmxLayer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxLayer.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxLayer.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxLayer.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxLayer.cpp.i
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxLayer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/tmx/TmxLayer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxLayer.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxLayer.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxLayer.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxLayer.cpp.s
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxLayer.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/tmx/TmxLayer.cpp.o.requires
@@ -511,17 +856,17 @@ CMakeFiles/gauntmore.dir/src/tmx/TmxLayer.cpp.o.provides.build: CMakeFiles/gaunt
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxPolygon.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/tmx/TmxPolygon.cpp.o: ../src/tmx/TmxPolygon.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_21)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_36)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/tmx/TmxPolygon.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxPolygon.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxPolygon.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxPolygon.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxPolygon.cpp
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxPolygon.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/tmx/TmxPolygon.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxPolygon.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxPolygon.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxPolygon.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxPolygon.cpp.i
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxPolygon.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/tmx/TmxPolygon.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxPolygon.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxPolygon.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxPolygon.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxPolygon.cpp.s
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxPolygon.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/tmx/TmxPolygon.cpp.o.requires
@@ -534,17 +879,17 @@ CMakeFiles/gauntmore.dir/src/tmx/TmxPolygon.cpp.o.provides.build: CMakeFiles/gau
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxUtil.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/tmx/TmxUtil.cpp.o: ../src/tmx/TmxUtil.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_22)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_37)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/tmx/TmxUtil.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxUtil.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxUtil.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxUtil.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxUtil.cpp
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxUtil.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/tmx/TmxUtil.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxUtil.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxUtil.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxUtil.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxUtil.cpp.i
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxUtil.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/tmx/TmxUtil.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxUtil.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxUtil.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxUtil.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxUtil.cpp.s
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxUtil.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/tmx/TmxUtil.cpp.o.requires
@@ -557,17 +902,17 @@ CMakeFiles/gauntmore.dir/src/tmx/TmxUtil.cpp.o.provides.build: CMakeFiles/gauntm
 
 CMakeFiles/gauntmore.dir/src/tmx/tinyxml2.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/tmx/tinyxml2.cpp.o: ../src/tmx/tinyxml2.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_23)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_38)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/tmx/tinyxml2.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/tinyxml2.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/tinyxml2.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/tinyxml2.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/tmx/tinyxml2.cpp
 
 CMakeFiles/gauntmore.dir/src/tmx/tinyxml2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/tmx/tinyxml2.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/tinyxml2.cpp > CMakeFiles/gauntmore.dir/src/tmx/tinyxml2.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/tmx/tinyxml2.cpp > CMakeFiles/gauntmore.dir/src/tmx/tinyxml2.cpp.i
 
 CMakeFiles/gauntmore.dir/src/tmx/tinyxml2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/tmx/tinyxml2.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/tinyxml2.cpp -o CMakeFiles/gauntmore.dir/src/tmx/tinyxml2.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/tmx/tinyxml2.cpp -o CMakeFiles/gauntmore.dir/src/tmx/tinyxml2.cpp.s
 
 CMakeFiles/gauntmore.dir/src/tmx/tinyxml2.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/tmx/tinyxml2.cpp.o.requires
@@ -580,17 +925,17 @@ CMakeFiles/gauntmore.dir/src/tmx/tinyxml2.cpp.o.provides.build: CMakeFiles/gaunt
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxMap.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/tmx/TmxMap.cpp.o: ../src/tmx/TmxMap.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_24)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_39)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/tmx/TmxMap.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxMap.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxMap.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxMap.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxMap.cpp
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxMap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/tmx/TmxMap.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxMap.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxMap.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxMap.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxMap.cpp.i
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxMap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/tmx/TmxMap.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxMap.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxMap.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxMap.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxMap.cpp.s
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxMap.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/tmx/TmxMap.cpp.o.requires
@@ -603,17 +948,17 @@ CMakeFiles/gauntmore.dir/src/tmx/TmxMap.cpp.o.provides.build: CMakeFiles/gauntmo
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxPolyline.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/tmx/TmxPolyline.cpp.o: ../src/tmx/TmxPolyline.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_25)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_40)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/tmx/TmxPolyline.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxPolyline.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxPolyline.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxPolyline.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxPolyline.cpp
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxPolyline.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/tmx/TmxPolyline.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxPolyline.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxPolyline.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxPolyline.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxPolyline.cpp.i
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxPolyline.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/tmx/TmxPolyline.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxPolyline.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxPolyline.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxPolyline.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxPolyline.cpp.s
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxPolyline.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/tmx/TmxPolyline.cpp.o.requires
@@ -626,17 +971,17 @@ CMakeFiles/gauntmore.dir/src/tmx/TmxPolyline.cpp.o.provides.build: CMakeFiles/ga
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxEllipse.cpp.o: CMakeFiles/gauntmore.dir/flags.make
 CMakeFiles/gauntmore.dir/src/tmx/TmxEllipse.cpp.o: ../src/tmx/TmxEllipse.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_26)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles $(CMAKE_PROGRESS_41)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gauntmore.dir/src/tmx/TmxEllipse.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxEllipse.cpp.o -c /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxEllipse.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gauntmore.dir/src/tmx/TmxEllipse.cpp.o -c /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxEllipse.cpp
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxEllipse.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gauntmore.dir/src/tmx/TmxEllipse.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxEllipse.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxEllipse.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxEllipse.cpp > CMakeFiles/gauntmore.dir/src/tmx/TmxEllipse.cpp.i
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxEllipse.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gauntmore.dir/src/tmx/TmxEllipse.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/Gauntmore/src/tmx/TmxEllipse.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxEllipse.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/Keith/Desktop/cis330/gauntmore/src/tmx/TmxEllipse.cpp -o CMakeFiles/gauntmore.dir/src/tmx/TmxEllipse.cpp.s
 
 CMakeFiles/gauntmore.dir/src/tmx/TmxEllipse.cpp.o.requires:
 .PHONY : CMakeFiles/gauntmore.dir/src/tmx/TmxEllipse.cpp.o.requires
@@ -652,14 +997,29 @@ gauntmore_OBJECTS = \
 "CMakeFiles/gauntmore.dir/src/Game.cpp.o" \
 "CMakeFiles/gauntmore.dir/src/GameScene.cpp.o" \
 "CMakeFiles/gauntmore.dir/src/Map.cpp.o" \
+"CMakeFiles/gauntmore.dir/src/MazeGen.cpp.o" \
 "CMakeFiles/gauntmore.dir/src/Room.cpp.o" \
 "CMakeFiles/gauntmore.dir/src/Scene.cpp.o" \
 "CMakeFiles/gauntmore.dir/src/KeyboardInput.cpp.o" \
 "CMakeFiles/gauntmore.dir/src/Player.cpp.o" \
+"CMakeFiles/gauntmore.dir/src/Chest.cpp.o" \
+"CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.o" \
+"CMakeFiles/gauntmore.dir/src/Gold.cpp.o" \
+"CMakeFiles/gauntmore.dir/src/GoldCount.cpp.o" \
+"CMakeFiles/gauntmore.dir/src/HealthBar.cpp.o" \
+"CMakeFiles/gauntmore.dir/src/Potion.cpp.o" \
 "CMakeFiles/gauntmore.dir/src/Creature.cpp.o" \
+"CMakeFiles/gauntmore.dir/src/Skeleton.cpp.o" \
+"CMakeFiles/gauntmore.dir/src/Thing.cpp.o" \
+"CMakeFiles/gauntmore.dir/src/Slime.cpp.o" \
 "CMakeFiles/gauntmore.dir/src/Unit.cpp.o" \
-"CMakeFiles/gauntmore.dir/src/gauntmore.cpp.o" \
+"CMakeFiles/gauntmore.dir/src/PathFinder.cpp.o" \
+"CMakeFiles/gauntmore.dir/src/PathNode.cpp.o" \
+"CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.o" \
+"CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.o" \
+"CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.o" \
 "CMakeFiles/gauntmore.dir/src/res.cpp.o" \
+"CMakeFiles/gauntmore.dir/src/main.cpp.o" \
 "CMakeFiles/gauntmore.dir/src/tmx/base64.cpp.o" \
 "CMakeFiles/gauntmore.dir/src/tmx/TmxPropertySet.cpp.o" \
 "CMakeFiles/gauntmore.dir/src/tmx/TmxObject.cpp.o" \
@@ -682,14 +1042,29 @@ gauntmore_EXTERNAL_OBJECTS =
 gauntmore: CMakeFiles/gauntmore.dir/src/Game.cpp.o
 gauntmore: CMakeFiles/gauntmore.dir/src/GameScene.cpp.o
 gauntmore: CMakeFiles/gauntmore.dir/src/Map.cpp.o
+gauntmore: CMakeFiles/gauntmore.dir/src/MazeGen.cpp.o
 gauntmore: CMakeFiles/gauntmore.dir/src/Room.cpp.o
 gauntmore: CMakeFiles/gauntmore.dir/src/Scene.cpp.o
 gauntmore: CMakeFiles/gauntmore.dir/src/KeyboardInput.cpp.o
 gauntmore: CMakeFiles/gauntmore.dir/src/Player.cpp.o
+gauntmore: CMakeFiles/gauntmore.dir/src/Chest.cpp.o
+gauntmore: CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.o
+gauntmore: CMakeFiles/gauntmore.dir/src/Gold.cpp.o
+gauntmore: CMakeFiles/gauntmore.dir/src/GoldCount.cpp.o
+gauntmore: CMakeFiles/gauntmore.dir/src/HealthBar.cpp.o
+gauntmore: CMakeFiles/gauntmore.dir/src/Potion.cpp.o
 gauntmore: CMakeFiles/gauntmore.dir/src/Creature.cpp.o
+gauntmore: CMakeFiles/gauntmore.dir/src/Skeleton.cpp.o
+gauntmore: CMakeFiles/gauntmore.dir/src/Thing.cpp.o
+gauntmore: CMakeFiles/gauntmore.dir/src/Slime.cpp.o
 gauntmore: CMakeFiles/gauntmore.dir/src/Unit.cpp.o
-gauntmore: CMakeFiles/gauntmore.dir/src/gauntmore.cpp.o
+gauntmore: CMakeFiles/gauntmore.dir/src/PathFinder.cpp.o
+gauntmore: CMakeFiles/gauntmore.dir/src/PathNode.cpp.o
+gauntmore: CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.o
+gauntmore: CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.o
+gauntmore: CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.o
 gauntmore: CMakeFiles/gauntmore.dir/src/res.cpp.o
+gauntmore: CMakeFiles/gauntmore.dir/src/main.cpp.o
 gauntmore: CMakeFiles/gauntmore.dir/src/tmx/base64.cpp.o
 gauntmore: CMakeFiles/gauntmore.dir/src/tmx/TmxPropertySet.cpp.o
 gauntmore: CMakeFiles/gauntmore.dir/src/tmx/TmxObject.cpp.o
@@ -708,6 +1083,10 @@ gauntmore: CMakeFiles/gauntmore.dir/src/tmx/TmxEllipse.cpp.o
 gauntmore: CMakeFiles/gauntmore.dir/build.make
 gauntmore: /usr/lib/libcurl.dylib
 gauntmore: oxygine-framework/liboxygine-framework.a
+gauntmore: ../oxygine-sound/libs/win32/OpenAL32.lib
+gauntmore: ../oxygine-sound/libs/win32/libogg_static.lib
+gauntmore: oxygine-sound/dependencies/tremor/libtremor.a
+gauntmore: oxygine-sound/liboxygine-sound.a
 gauntmore: CMakeFiles/gauntmore.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable gauntmore"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gauntmore.dir/link.txt --verbose=$(VERBOSE)
@@ -719,14 +1098,29 @@ CMakeFiles/gauntmore.dir/build: gauntmore
 CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/Game.cpp.o.requires
 CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/GameScene.cpp.o.requires
 CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/Map.cpp.o.requires
+CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/MazeGen.cpp.o.requires
 CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/Room.cpp.o.requires
 CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/Scene.cpp.o.requires
 CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/KeyboardInput.cpp.o.requires
 CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/Player.cpp.o.requires
+CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/Chest.cpp.o.requires
+CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.o.requires
+CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/Gold.cpp.o.requires
+CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/GoldCount.cpp.o.requires
+CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/HealthBar.cpp.o.requires
+CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/Potion.cpp.o.requires
 CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/Creature.cpp.o.requires
+CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/Skeleton.cpp.o.requires
+CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/Thing.cpp.o.requires
+CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/Slime.cpp.o.requires
 CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/Unit.cpp.o.requires
-CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/gauntmore.cpp.o.requires
+CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/PathFinder.cpp.o.requires
+CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/PathNode.cpp.o.requires
+CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.o.requires
+CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.o.requires
+CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.o.requires
 CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/res.cpp.o.requires
+CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/main.cpp.o.requires
 CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/tmx/base64.cpp.o.requires
 CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/tmx/TmxPropertySet.cpp.o.requires
 CMakeFiles/gauntmore.dir/requires: CMakeFiles/gauntmore.dir/src/tmx/TmxObject.cpp.o.requires
@@ -749,6 +1143,6 @@ CMakeFiles/gauntmore.dir/clean:
 .PHONY : CMakeFiles/gauntmore.dir/clean
 
 CMakeFiles/gauntmore.dir/depend:
-	cd /Users/Keith/Desktop/cis330/Gauntmore/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/Keith/Desktop/cis330/Gauntmore /Users/Keith/Desktop/cis330/Gauntmore /Users/Keith/Desktop/cis330/Gauntmore/build /Users/Keith/Desktop/cis330/Gauntmore/build /Users/Keith/Desktop/cis330/Gauntmore/build/CMakeFiles/gauntmore.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/Keith/Desktop/cis330/gauntmore/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/Keith/Desktop/cis330/gauntmore /Users/Keith/Desktop/cis330/gauntmore /Users/Keith/Desktop/cis330/gauntmore/build /Users/Keith/Desktop/cis330/gauntmore/build /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles/gauntmore.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/gauntmore.dir/depend
 

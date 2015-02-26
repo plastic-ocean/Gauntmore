@@ -312,19 +312,14 @@ void Game::_createTiles() {
     list<spUnit> *units = _map->getRoom()->getUnits();
     for (Units::iterator it = units->begin(); it != units->end(); ++it) {
         spUnit unit = *it;
+        SDL_Rect unitRect = SDL_Rect();
+        unitRect.x = unit->getLocation().x + 20;
+        unitRect.y = unit->getLocation().y + 15;
+        unitRect.h = 30;
+        unitRect.w = 20;
         if (unit->getType() == "thing" && !unit->isPotion()) {
-            SDL_Rect unitRect = SDL_Rect();
-            unitRect.x = unit->getLocation().x + 20;
-            unitRect.y = unit->getLocation().y + 15;
-            unitRect.h = 30;
-            unitRect.w = 20;
             _tiles.push_back(unitRect);
         } else if (unit->isPotion()) {
-            SDL_Rect unitRect = SDL_Rect();
-            unitRect.x = unit->getLocation().x + 20;
-            unitRect.y = unit->getLocation().y + 15;
-            unitRect.h = 30;
-            unitRect.w = 20;
             unit->setRect(unitRect);
         }
     }

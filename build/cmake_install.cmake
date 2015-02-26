@@ -1,4 +1,4 @@
-# Install script for directory: /Users/Keith/Desktop/cis330/Gauntmore
+# Install script for directory: /Users/Keith/Desktop/cis330/gauntmore
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,7 +29,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/Keith/Desktop/cis330/Gauntmore/build/oxygine-framework/cmake_install.cmake")
+  include("/Users/Keith/Desktop/cis330/gauntmore/build/oxygine-framework/cmake_install.cmake")
+  include("/Users/Keith/Desktop/cis330/gauntmore/build/oxygine-sound/cmake_install.cmake")
 
 endif()
 
@@ -39,7 +40,7 @@ else()
   set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 endif()
 
-file(WRITE "/Users/Keith/Desktop/cis330/Gauntmore/build/${CMAKE_INSTALL_MANIFEST}" "")
+file(WRITE "/Users/Keith/Desktop/cis330/gauntmore/build/${CMAKE_INSTALL_MANIFEST}" "")
 foreach(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  file(APPEND "/Users/Keith/Desktop/cis330/Gauntmore/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  file(APPEND "/Users/Keith/Desktop/cis330/gauntmore/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 endforeach()
