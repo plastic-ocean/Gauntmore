@@ -8,6 +8,7 @@
 #include "Map.h"
 #include "HealthBar.h"
 #include "Room.h"
+#include "CollisionDetector.h"
 
 
 /**

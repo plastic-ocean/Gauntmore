@@ -1,7 +1,10 @@
 #pragma once
 #include "Unit.h"
 #include "CollisionDetector.h"
+#include "Game.h"
 #include "res.h"
+
+DECLARE_SMART(CollisionDetector, spCollisionDetector);
 
 DECLARE_SMART(Player, spPlayer);
 class Player: public Unit {

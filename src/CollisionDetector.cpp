@@ -3,9 +3,22 @@
 #include "Player.h"
 #include "Unit.h"
 
+
+/**
+ * Constructor.
+ */
 CollisionDetector::CollisionDetector() {}
 
 
+/**
+ * Detects collisions between a sprite and the walls.
+ *
+ * @tiles is the tiles/Things list.
+ * @x is the sprite's x coordinate.
+ * @y is the sprite's y coordinate.
+ * @h is the sprite's height.
+ * @w is the sprite's width.
+ */
 bool CollisionDetector::detectWalls(vector<SDL_Rect> tiles, int x, int y, int h, int w) {
     bool isCollision = false;
     SDL_Rect spriteRect;
@@ -27,6 +40,15 @@ bool CollisionDetector::detectWalls(vector<SDL_Rect> tiles, int x, int y, int h,
 }
 
 
+/**
+ * Detects collisions between a sprite and potions. Used to pickup potions
+ *
+ * @tiles is the list of units.
+ * @x is the sprite's x coordinate.
+ * @y is the sprite's y coordinate.
+ * @h is the sprite's height.
+ * @w is the sprite's width.
+ */
 bool CollisionDetector::detectUnits(list<spUnit> *units, int x, int y, int h, int w) {
     bool isCollision = false;
     SDL_Rect spriteRect;

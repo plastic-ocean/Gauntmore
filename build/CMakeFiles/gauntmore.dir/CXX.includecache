@@ -1333,12 +1333,16 @@ HealthBar.h
 /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
 Room.h
 /Users/Keith/Desktop/cis330/gauntmore/src/Room.h
+CollisionDetector.h
+/Users/Keith/Desktop/cis330/gauntmore/src/CollisionDetector.h
 
 /Users/Keith/Desktop/cis330/gauntmore/src/Player.h
 Unit.h
 /Users/Keith/Desktop/cis330/gauntmore/src/Unit.h
 CollisionDetector.h
 /Users/Keith/Desktop/cis330/gauntmore/src/CollisionDetector.h
+Game.h
+/Users/Keith/Desktop/cis330/gauntmore/src/Game.h
 res.h
 /Users/Keith/Desktop/cis330/gauntmore/src/res.h
 
