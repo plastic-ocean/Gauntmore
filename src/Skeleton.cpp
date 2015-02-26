@@ -19,6 +19,11 @@ SDL_Rect Skeleton::getBounds(){
 }
 
 
+bool Skeleton::isPotion() {
+    return false;
+}
+
+
 /**
  * Initializes a creatures position and sprite. Called by Unit's init() method.
  */

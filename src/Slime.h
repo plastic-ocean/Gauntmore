@@ -14,6 +14,8 @@ public:
     
     virtual SDL_Rect getBounds();
     
+    virtual bool isPotion();
+    
 private:
     spThing _contents;
     

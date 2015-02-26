@@ -211,6 +211,10 @@ int Game::getTileSize() {
     return tileSize;
 }
 
+spHealthBar Game::getHealthBar() {
+    return _healthBar;
+}
+
 
 /**
  * Updates the Units each frame. A virtual method of Actor it is being called each frame.
@@ -232,6 +236,8 @@ void Game::doUpdate(const UpdateState &us) {
             ++i;
         }
     }
+    
+    _createTiles();
 }
 
 
@@ -248,7 +254,6 @@ void Game::_renderMap() {
     for (int i = 0; i < _tileMap->GetNumLayers(); ++i) {
         // Get a layer.
         const Tmx::Layer *layer = _tileMap->GetLayer(i);
-        
         for (int x = 0; x < layer->GetWidth(); ++x) {
             for (int y = 0; y < layer->GetHeight(); ++y) {
                 int tilesetIndex = layer->GetTileTilesetIndex(x, y);
@@ -299,6 +304,28 @@ void Game::_createTiles() {
                     _tiles.push_back(tile);
                 }
             }
+        }
+    }
+    
+    // Add Things to tiles list
+    _units.clear();
+    list<spUnit> *units = _map->getRoom()->getUnits();
+    for (Units::iterator it = units->begin(); it != units->end(); ++it) {
+        spUnit unit = *it;
+        if (unit->getType() == "thing" && !unit->isPotion()) {
+            SDL_Rect unitRect = SDL_Rect();
+            unitRect.x = unit->getLocation().x + 20;
+            unitRect.y = unit->getLocation().y + 15;
+            unitRect.h = 30;
+            unitRect.w = 20;
+            _tiles.push_back(unitRect);
+        } else if (unit->isPotion()) {
+            SDL_Rect unitRect = SDL_Rect();
+            unitRect.x = unit->getLocation().x + 20;
+            unitRect.y = unit->getLocation().y + 15;
+            unitRect.h = 30;
+            unitRect.w = 20;
+            unit->setRect(unitRect);
         }
     }
 }

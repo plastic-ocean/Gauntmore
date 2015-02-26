@@ -17,6 +17,8 @@ public:
     
     virtual void addSprite();
     
+    virtual bool isPotion();
+    
 private:
     spThing _contents;
     bool _isOpen;

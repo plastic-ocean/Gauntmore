@@ -90,14 +90,26 @@ public:
     Vector2 getLocation() {
         return _location;
     }
+    
+    virtual bool isPotion() = 0;
+    
+    SDL_Rect getRect() {
+        return _rect;
+    }
+    
+    void setRect(SDL_Rect rect) {
+        _rect = rect;
+    }
 
 protected:
     Vector2 _location;
     SDL_Rect _bounds;
     spActor _view;
     spSprite _sprite;
+    SDL_Rect _rect;
     
     string _type;
+    bool _isPotion;
     
     // A pointer to the game.
     Game *_game;

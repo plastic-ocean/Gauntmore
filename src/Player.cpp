@@ -66,6 +66,10 @@ bool Player::updateHealth(int health) {
         _game->updateHealth(healthPercent);
         
         isUpdated = true;
+    } else if (_hp + health >= _maxHealth) {
+        _hp = _maxHealth;
+        _game->getHealthBar()->setToMax();
+        isUpdated = true;
     }
     
     if (_hp <= 0) {
@@ -267,6 +271,11 @@ bool Player::isDamaged() {
 }
 
 
+bool Player::isPotion() {
+    return false;
+}
+
+
 /**
  * Initializes the player's position and sprite. Called by Unit's init() method.
  */
@@ -328,14 +337,15 @@ Vector2 Player::_correctDirection(Vector2 position, Vector2 direction) {
     int newX = position.x + direction.x * 5;
     int newY = position.y + direction.y * 5;
     
-    if (_collisionDetector->detectWalls(_game->getTiles(), newX, position.y, tileSize, tileSize) ||
-            _collisionDetector->detectUnits(_game->getMap()->getRoom()->getUnits(), newX, position.y, tileSize, tileSize)) {
+    if (_collisionDetector->detectWalls(_game->getTiles(), newX, position.y, tileSize, tileSize)) {
         direction.x = 0;
     }
-    if (_collisionDetector->detectWalls(_game->getTiles(), position.x, newY, tileSize, tileSize) ||
-            _collisionDetector->detectUnits(_game->getMap()->getRoom()->getUnits(), newX, position.y, tileSize, tileSize)) {
+    if (_collisionDetector->detectWalls(_game->getTiles(), position.x, newY, tileSize, tileSize)) {
         direction.y = 0;
-    }    
+    }
+    
+    // Detect potions for pickup
+    _collisionDetector->detectUnits(_game->getMap()->getRoom()->getUnits(), newX, position.y, tileSize, tileSize);
     
     return direction;
 }

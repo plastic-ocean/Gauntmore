@@ -23,6 +23,10 @@ void Gold::addSprite() {
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
 }
 
+bool Gold::isPotion() {
+    return false;
+}
+
 void Gold::_init() {
     addSprite();
 }

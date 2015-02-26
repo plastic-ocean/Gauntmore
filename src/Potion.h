@@ -13,6 +13,8 @@ public:
     
     virtual void addSprite();
     
+    virtual bool isPotion();
+    
 private:
     /**
      * Initializes position and sprite of Potion. Called by Unit's init() method.

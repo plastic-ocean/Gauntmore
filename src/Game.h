@@ -79,17 +79,22 @@ public:
     bool isExit(Vector2 position);
     
     int getTileSize();
+    
+    spHealthBar getHealthBar();
+    
+    list<SDL_Rect> getUnits() {
+        return _units;
+    }
 
 protected:
     const int tileSize = 64;
     spMap _map;
     Tmx::Map *_tileMap;
     vector<SDL_Rect> _tiles;
+    list<SDL_Rect> _units;
     
     spKeyboardInput _move;
     spPlayer _player;
-
-//    Units _units;
     
     spSkeleton _skeleton;
     spSlime _slime;
@@ -97,7 +102,6 @@ protected:
     spChest _chest;
     spGold _gold;
     spPotion _potion;
-//    spUnit _unit;
     
     spHealthBar _healthBar;
     spGoldCount _goldCount;

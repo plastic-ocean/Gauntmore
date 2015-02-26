@@ -66,6 +66,8 @@ public:
      */
     bool isDamaged();
     
+    virtual bool isPotion();
+    
 protected:
     const int tileSize = 64;
     

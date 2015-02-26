@@ -13,6 +13,8 @@ public:
     
     virtual void addSprite();
     
+    virtual bool isPotion();
+    
 private:
     int _value;
     /**

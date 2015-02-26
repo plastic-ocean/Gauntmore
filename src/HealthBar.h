@@ -14,6 +14,7 @@ public:
     HealthBar(Game *game);
     void render();
     void updateHealth(float damage);
+    void setToMax();
     
 private:
     Game *_game;

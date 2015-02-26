@@ -9,7 +9,9 @@
 /**
  * Constructor.
  */
-Potion::Potion() {}
+Potion::Potion() {
+
+}
 
 
 SDL_Rect Potion::getBounds() {
@@ -22,11 +24,17 @@ SDL_Rect Potion::getBounds() {
     return _bounds;
 }
 
+
 void Potion::addSprite() {
     _sprite = new Sprite;
     _sprite->setResAnim(resources.getResAnim("potion"));
     _sprite->attachTo(_view);
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
+}
+
+
+bool Potion::isPotion() {
+    return true;
 }
 
 

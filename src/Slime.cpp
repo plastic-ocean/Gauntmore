@@ -21,6 +21,11 @@ SDL_Rect Slime::getBounds() {
 }
 
 
+bool Slime::isPotion() {
+    return false;
+}
+
+
 /**
  * Initializes a creatures position and sprite. Called by Unit's init() method.
  */

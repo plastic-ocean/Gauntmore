@@ -78,6 +78,7 @@ void KeyboardInput::_onEvent(Event *ev) {
         }
 
     if (event->type == SDL_KEYUP && event->key.repeat == 0) {
+//        _pressed = false;
         switch (event->key.keysym.sym ) {
             case SDLK_UP:
             case SDLK_w:

@@ -41,6 +41,10 @@ void Chest::addSprite() {
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
 }
 
+bool Chest::isPotion() {
+    return false;
+}
+
 /**
  * Interaction method for Chest.
  * Sets _open to true and removes chest from game.

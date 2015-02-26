@@ -25,7 +25,6 @@ void Thing::interact(){
  */
 void Thing::_init() {
     // Initialize the stats.
-    
 }
 
 

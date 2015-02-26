@@ -39,3 +39,8 @@ void HealthBar::updateHealth(float damage) {
     _healthBar->setProgress(_health);
 //    _health->addTween(ProgressBar::TweenProgress(num), 1000);
 }
+
+
+void HealthBar::setToMax() {
+    _healthBar->setProgress(1.0f);
+}
