@@ -100,6 +100,7 @@ CMakeFiles/gauntmore.dir/src/Chest.cpp.o
  /Users/Keith/Desktop/cis330/gauntmore/src/CollisionDetector.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Game.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Gold.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
  /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Map.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Player.h
@@ -265,7 +266,11 @@ CMakeFiles/gauntmore.dir/src/CollisionDetector.cpp.o
  /Users/Keith/Desktop/cis330/gauntmore/src/CollisionDetector.cpp
  /Users/Keith/Desktop/cis330/gauntmore/src/CollisionDetector.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Game.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/Map.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Player.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/Room.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Unit.h
  /Users/Keith/Desktop/cis330/gauntmore/src/res.h
  /Users/Keith/Desktop/cis330/gauntmore/src/tmx/Tmx.h
@@ -429,6 +434,8 @@ CMakeFiles/gauntmore.dir/src/Creature.cpp.o
  /Users/Keith/Desktop/cis330/gauntmore/src/Game.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Gold.h
  /Users/Keith/Desktop/cis330/gauntmore/src/GreaterThan.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Map.h
  /Users/Keith/Desktop/cis330/gauntmore/src/NodeMinHeap.h
  /Users/Keith/Desktop/cis330/gauntmore/src/PathFinder.h
@@ -597,7 +604,11 @@ CMakeFiles/gauntmore.dir/src/CreatureMover.cpp.o
  /Users/Keith/Desktop/cis330/gauntmore/src/CreatureMover.cpp
  /Users/Keith/Desktop/cis330/gauntmore/src/CreatureMover.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Game.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/Map.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Player.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/Room.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Unit.h
  /Users/Keith/Desktop/cis330/gauntmore/src/res.h
  /Users/Keith/Desktop/cis330/gauntmore/src/tmx/Tmx.h
@@ -935,7 +946,11 @@ CMakeFiles/gauntmore.dir/src/GameScene.cpp.o
  /Users/Keith/Desktop/cis330/gauntmore/src/Game.h
  /Users/Keith/Desktop/cis330/gauntmore/src/GameScene.cpp
  /Users/Keith/Desktop/cis330/gauntmore/src/GameScene.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/Map.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Player.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/Room.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Scene.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Unit.h
  /Users/Keith/Desktop/cis330/gauntmore/src/res.h
@@ -1098,7 +1113,11 @@ CMakeFiles/gauntmore.dir/src/Gauntmore.cpp.o
  /Users/Keith/Desktop/cis330/gauntmore/src/GameScene.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Gauntmore.cpp
  /Users/Keith/Desktop/cis330/gauntmore/src/Gauntmore.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/Map.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Player.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/Room.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Scene.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Unit.h
  /Users/Keith/Desktop/cis330/gauntmore/src/res.h
@@ -1260,7 +1279,11 @@ CMakeFiles/gauntmore.dir/src/Gold.cpp.o
  /Users/Keith/Desktop/cis330/gauntmore/src/Game.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Gold.cpp
  /Users/Keith/Desktop/cis330/gauntmore/src/Gold.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/Map.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Player.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/Room.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Thing.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Unit.h
  /Users/Keith/Desktop/cis330/gauntmore/src/res.h
@@ -1422,7 +1445,11 @@ CMakeFiles/gauntmore.dir/src/GoldCount.cpp.o
  /Users/Keith/Desktop/cis330/gauntmore/src/Game.h
  /Users/Keith/Desktop/cis330/gauntmore/src/GoldCount.cpp
  /Users/Keith/Desktop/cis330/gauntmore/src/GoldCount.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/Map.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Player.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/Room.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Unit.h
  /Users/Keith/Desktop/cis330/gauntmore/src/res.h
  /Users/Keith/Desktop/cis330/gauntmore/src/tmx/Tmx.h
@@ -1583,7 +1610,10 @@ CMakeFiles/gauntmore.dir/src/HealthBar.cpp.o
  /Users/Keith/Desktop/cis330/gauntmore/src/Game.h
  /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.cpp
  /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/Map.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Player.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/Room.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Unit.h
  /Users/Keith/Desktop/cis330/gauntmore/src/res.h
  /Users/Keith/Desktop/cis330/gauntmore/src/tmx/Tmx.h
@@ -1744,10 +1774,13 @@ CMakeFiles/gauntmore.dir/src/KeyboardInput.cpp.o
  /Users/Keith/Desktop/cis330/gauntmore/src/CollisionDetector.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Game.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Gold.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
  /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.cpp
  /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/Map.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Player.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Potion.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/Room.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Thing.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Unit.h
  /Users/Keith/Desktop/cis330/gauntmore/src/res.h
@@ -1907,6 +1940,8 @@ CMakeFiles/gauntmore.dir/src/Map.cpp.o
  ../oxygine-framework/oxygine/src/utils/stringUtils.h
  /Users/Keith/Desktop/cis330/gauntmore/src/CollisionDetector.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Game.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Map.cpp
  /Users/Keith/Desktop/cis330/gauntmore/src/Map.h
  /Users/Keith/Desktop/cis330/gauntmore/src/MazeGen.h
@@ -2070,6 +2105,9 @@ CMakeFiles/gauntmore.dir/src/MazeGen.cpp.o
  ../oxygine-framework/oxygine/src/utils/stringUtils.h
  /Users/Keith/Desktop/cis330/gauntmore/src/CollisionDetector.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Game.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/Map.h
  /Users/Keith/Desktop/cis330/gauntmore/src/MazeGen.cpp
  /Users/Keith/Desktop/cis330/gauntmore/src/MazeGen.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Player.h
@@ -2235,6 +2273,8 @@ CMakeFiles/gauntmore.dir/src/NodeMinHeap.cpp.o
  /Users/Keith/Desktop/cis330/gauntmore/src/CreatureMover.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Game.h
  /Users/Keith/Desktop/cis330/gauntmore/src/GreaterThan.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Map.h
  /Users/Keith/Desktop/cis330/gauntmore/src/NodeMinHeap.cpp
  /Users/Keith/Desktop/cis330/gauntmore/src/NodeMinHeap.h
@@ -2404,6 +2444,8 @@ CMakeFiles/gauntmore.dir/src/PathFinder.cpp.o
  /Users/Keith/Desktop/cis330/gauntmore/src/CreatureMover.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Game.h
  /Users/Keith/Desktop/cis330/gauntmore/src/GreaterThan.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Map.h
  /Users/Keith/Desktop/cis330/gauntmore/src/NodeMinHeap.h
  /Users/Keith/Desktop/cis330/gauntmore/src/PathFinder.cpp
@@ -2574,6 +2616,8 @@ CMakeFiles/gauntmore.dir/src/PathNode.cpp.o
  /Users/Keith/Desktop/cis330/gauntmore/src/CreatureMover.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Game.h
  /Users/Keith/Desktop/cis330/gauntmore/src/GreaterThan.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Map.h
  /Users/Keith/Desktop/cis330/gauntmore/src/NodeMinHeap.h
  /Users/Keith/Desktop/cis330/gauntmore/src/PathFinder.h
@@ -2905,10 +2949,13 @@ CMakeFiles/gauntmore.dir/src/Potion.cpp.o
  ../oxygine-framework/oxygine/src/utils/stringUtils.h
  /Users/Keith/Desktop/cis330/gauntmore/src/CollisionDetector.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Game.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
  /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/Map.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Player.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Potion.cpp
  /Users/Keith/Desktop/cis330/gauntmore/src/Potion.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/Room.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Thing.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Unit.h
  /Users/Keith/Desktop/cis330/gauntmore/src/res.h
@@ -3370,6 +3417,8 @@ CMakeFiles/gauntmore.dir/src/Skeleton.cpp.o
  /Users/Keith/Desktop/cis330/gauntmore/src/CreatureMover.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Game.h
  /Users/Keith/Desktop/cis330/gauntmore/src/GreaterThan.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Map.h
  /Users/Keith/Desktop/cis330/gauntmore/src/NodeMinHeap.h
  /Users/Keith/Desktop/cis330/gauntmore/src/PathFinder.h
@@ -3540,6 +3589,8 @@ CMakeFiles/gauntmore.dir/src/Slime.cpp.o
  /Users/Keith/Desktop/cis330/gauntmore/src/CreatureMover.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Game.h
  /Users/Keith/Desktop/cis330/gauntmore/src/GreaterThan.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Map.h
  /Users/Keith/Desktop/cis330/gauntmore/src/NodeMinHeap.h
  /Users/Keith/Desktop/cis330/gauntmore/src/PathFinder.h
@@ -3707,7 +3758,11 @@ CMakeFiles/gauntmore.dir/src/Thing.cpp.o
  ../oxygine-framework/oxygine/src/utils/stringUtils.h
  /Users/Keith/Desktop/cis330/gauntmore/src/CollisionDetector.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Game.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/Map.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Player.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/Room.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Thing.cpp
  /Users/Keith/Desktop/cis330/gauntmore/src/Thing.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Unit.h
@@ -3868,6 +3923,7 @@ CMakeFiles/gauntmore.dir/src/Unit.cpp.o
  ../oxygine-framework/oxygine/src/utils/stringUtils.h
  /Users/Keith/Desktop/cis330/gauntmore/src/CollisionDetector.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Game.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
  /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Map.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Player.h
@@ -4033,7 +4089,11 @@ CMakeFiles/gauntmore.dir/src/main.cpp.o
  /Users/Keith/Desktop/cis330/gauntmore/src/Game.h
  /Users/Keith/Desktop/cis330/gauntmore/src/GameScene.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Gauntmore.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/Map.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Player.h
+ /Users/Keith/Desktop/cis330/gauntmore/src/Room.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Scene.h
  /Users/Keith/Desktop/cis330/gauntmore/src/Unit.h
  /Users/Keith/Desktop/cis330/gauntmore/src/main.cpp

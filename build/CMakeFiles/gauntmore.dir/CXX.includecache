@@ -1123,6 +1123,12 @@ tmx/tinyxml2.h
 /Users/Keith/Desktop/cis330/gauntmore/src/tmx/tinyxml2.h
 Player.h
 /Users/Keith/Desktop/cis330/gauntmore/src/Player.h
+HealthBar.h
+/Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
+KeyboardInput.h
+/Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.h
+Map.h
+/Users/Keith/Desktop/cis330/gauntmore/src/Map.h
 
 /Users/Keith/Desktop/cis330/gauntmore/src/GameScene.cpp
 GameScene.h
@@ -1445,6 +1451,12 @@ tmx/tinyxml2.h
 /Users/Keith/Desktop/cis330/gauntmore/src/tmx/tinyxml2.h
 Player.h
 /Users/Keith/Desktop/cis330/gauntmore/src/Player.h
+HealthBar.h
+/Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
+KeyboardInput.h
+/Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.h
+Map.h
+/Users/Keith/Desktop/cis330/gauntmore/src/Map.h
 
 /Users/Keith/Desktop/cis330/gauntmore/src/main.cpp
 core/oxygine.h

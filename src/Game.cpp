@@ -21,8 +21,6 @@
 #include "HealthBar.h"
 #include "GoldCount.h"
 
-typedef list<spUnit> Units;
-
 
 /**
  * Constructor.
@@ -38,9 +36,10 @@ Game::Game() {
     _map = new Map(size);
     _renderMap();
     _createTiles();
-    
+
+    // Create Creatures and Things
     list<spUnit> *units = _map->getRoom()->getUnits();
-    for (Units::iterator i = units->begin(); i != units->end(); ++i) {
+    for (list<spUnit>::iterator i = units->begin(); i != units->end(); ++i) {
         spUnit unit = *i;
         if (unit->getType() != "player") {
             unit->init(unit->getLocation(), this);
@@ -51,7 +50,8 @@ Game::Game() {
     _player = new Player(10, 1, 1);
     _player->init(_getEntrance(), this);
     _map->getRoom()->getUnits()->push_back(_player);
-    
+
+    // Keyboard handler
     _move = new KeyboardInput(this);
     
     // Health bar
@@ -69,8 +69,10 @@ Game::~Game() {}
 
 
 /**
-* Switches viewable map to the room in the direction of the given edge in the maze.
-*/
+ * Switches viewable map to the room in the direction of the given edge in the maze.
+ *
+ * @edge is the edge the player existed on.
+ */
 void Game::switchRoom(int edge) {
     // Change to a new room in the maze.
     _map->changeRoom(edge);
@@ -104,7 +106,7 @@ void Game::switchRoom(int edge) {
 
     // Setup units
     list<spUnit> *units = _map->getRoom()->getUnits();
-    for (Units::iterator i = units->begin(); i != units->end(); ) {
+    for (list<spUnit>::iterator i = units->begin(); i != units->end(); ) {
         spUnit unit = *i;
         if (unit->getType() == "player") {
             i = units->erase(i);
@@ -115,7 +117,6 @@ void Game::switchRoom(int edge) {
     }
     
     // Setup player
-//    _player->detachUnit();
     _player->attachUnit();
     _player->addSprite();
     _player->setPosition(Vector2(playerCol, playerRow));
@@ -127,58 +128,11 @@ void Game::switchRoom(int edge) {
 }
 
 
-void Game::pushUnit(spUnit unit) {
-    _map->getRoom()->pushUnit(unit);
-}
-
-
-spPlayer Game::getPlayer() {
-    return _player;
-}
-
-
-spMap Game::getMap() {
-    return _map;
-}
-
-
 /**
- * Gets the tile map.
+ * Checks if the given position is an exit. Used to switch rooms.
  *
- * @return the tile map.
+ * @position is the position to check.
  */
-Tmx::Map *Game::getTileMap() {
-    return _tileMap;
-}
-
-
-/**
- * Gets tiles.
- *
- * @return the tiles vector<SDL_Rect>.
- */
-std::vector<SDL_Rect> Game::getTiles() {
-    return _tiles;
-}
-
-/**
- * Gets the keyboard input handler.
- */
-spKeyboardInput Game::getMove() {
-    return _move;
-}
-
-
-void Game::updateHealth(float num) {
-    _healthBar->updateHealth(num);
-}
-
-
-void Game::updateGoldCount(int value) {
-    _goldCount->updateGoldCount(value);
-}
-
-
 bool Game::isExit(Vector2 position) {
     bool isExit = false;
     int size = getMap()->getRoom()->getSize() * tileSize;
@@ -207,12 +161,24 @@ bool Game::isExit(Vector2 position) {
     return isExit;
 }
 
-int Game::getTileSize() {
-    return tileSize;
+
+/**
+* Updates the health bar.
+*
+* @num is the value to update by.
+*/
+void Game::updateHealth(float num) {
+    _healthBar->updateHealth(num);
 }
 
-spHealthBar Game::getHealthBar() {
-    return _healthBar;
+
+/**
+* Updates the gold counter.
+*
+* @num is the value to update by.
+*/
+void Game::updateGoldCount(int value) {
+    _goldCount->updateGoldCount(value);
 }
 
 
@@ -224,12 +190,10 @@ spHealthBar Game::getHealthBar() {
 void Game::doUpdate(const UpdateState &us) {
     list<spUnit> *units = _map->getRoom()->getUnits();
     // Iterate through the unit list and call their update method. Then check for death.
-    for (Units::iterator i = units->begin(); i != units->end(); ) {
+    for (list<spUnit>::iterator i = units->begin(); i != units->end(); ) {
         spUnit unit = *i;
         unit->update(us);
-//        cout << "update " << unit->getType() << endl;
         if (unit->isDead()) {
-//            cout << "erase " << unit->getType() << endl;
             // If it is dead remove it from list.
             i = units->erase(i);
         } else {
@@ -310,7 +274,7 @@ void Game::_createTiles() {
     // Add Things to tiles list
     _units.clear();
     list<spUnit> *units = _map->getRoom()->getUnits();
-    for (Units::iterator it = units->begin(); it != units->end(); ++it) {
+    for (list<spUnit>::iterator it = units->begin(); it != units->end(); ++it) {
         spUnit unit = *it;
         SDL_Rect unitRect = SDL_Rect();
         unitRect.x = unit->getLocation().x + 20;
@@ -326,6 +290,11 @@ void Game::_createTiles() {
 }
 
 
+/**
+ * Gets the maze entrance location.
+ *
+ * @return the entrance Vector2.
+ */
 Vector2 Game::_getEntrance() {
     Vector2 location = _map->getRoom()->getEntrance();
     location.x *= tileSize;

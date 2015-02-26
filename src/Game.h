@@ -3,87 +3,92 @@
 #include "tmx/Tmx.h"
 #include "tmx/tinyxml2.h"
 #include "Player.h"
+#include "HealthBar.h"
+#include "KeyboardInput.h"
+#include "Map.h"
 
 using namespace oxygine;
 using namespace std;
 
+DECLARE_SMART(Unit, spUnit);
 DECLARE_SMART(Player, spPlayer);
 DECLARE_SMART(Creature, spCreature);
 DECLARE_SMART(Skeleton, spSkeleton);
 DECLARE_SMART(Slime, spSlime);
+
 DECLARE_SMART(HealthBar, spHealthBar);
 DECLARE_SMART(GoldCount, spGoldCount);
-DECLARE_SMART(Unit, spUnit);
+
 DECLARE_SMART(Chest, spChest);
 DECLARE_SMART(Gold, spGold);
-DECLARE_SMART(CollisionDetector, spCollisionDetector);
 DECLARE_SMART(Potion, spPotion);
-DECLARE_SMART(KeyboardInput, spKeyboardInput)
-DECLARE_SMART(Unit, spUnit);
+
 DECLARE_SMART(Room, spRoom)
 DECLARE_SMART(Map, spMap);
-DECLARE_SMART(Game, spGame);
 
+DECLARE_SMART(CollisionDetector, spCollisionDetector);
+DECLARE_SMART(KeyboardInput, spKeyboardInput)
+
+DECLARE_SMART(Game, spGame);
 class Game: public Actor {
     
 public:
 	Game();
     ~Game();
-    
-    typedef list<spUnit> Units;
-    
-    /**
-     * Initialzes the game. Creates the map, the player, the monsters, the static objects
-     * and puts them in the game world.
-     */
-    void init();
-    
-    /**
-     * Gets the tile map.
-     *
-     * @return the tile map.
-     */
-    Tmx::Map *getTileMap();
-    
-    /**
-     * Gets tiles.
-     *
-     * @return the tiles vector<SDL_Rect>.
-     */
-    vector<SDL_Rect> getTiles();
-    
-    /**
-     * Gets the keyboard input handler.
-     */
-    spKeyboardInput getMove();
-    
-    /**
-     * Adds unit to the back of the units list.
-     *
-     * @unit is the Unit to be added.
-     */
-    void pushUnit(spUnit unit);
-    
-    void switchRoom(int edge);
-    
-    spPlayer getPlayer();
-    
-//    std::list<spUnit> getUnits();
 
-    spMap getMap();
-    
-    void updateHealth(float num);
-    
-    void updateGoldCount(int value);
-    
+    /**
+     * Switches viewable map to the room in the direction of the given edge in the maze.
+     *
+     * @edge is the edge the player existed on.
+     */
+    void switchRoom(int edge);
+
+    /**
+     * Checks if the given position is an exit. Used to switch rooms.
+     *
+     * @position is the position to check.
+     */
     bool isExit(Vector2 position);
-    
-    int getTileSize();
-    
-    spHealthBar getHealthBar();
-    
-    list<SDL_Rect> getUnits() {
-        return _units;
+
+    /**
+     * Updates the health bar.
+     *
+     * @num is the value to update by.
+     */
+    void updateHealth(float num);
+
+    /**
+     * Updates the gold counter.
+     *
+     * @num is the value to update by.
+     */
+    void updateGoldCount(int value);
+
+
+    /* Getters and Setters */
+
+    spPlayer getPlayer() {
+        return _player;
+    }
+
+    spMap getMap() {
+        return _map;
+    }
+
+    vector<SDL_Rect> getTiles() {
+        return _tiles;
+    }
+
+    spKeyboardInput getMove() {
+        return _move;
+    }
+
+    spHealthBar getHealthBar() {
+        return _healthBar;
+    }
+
+    int getTileSize() {
+        return tileSize;
     }
 
 protected:
@@ -123,7 +128,8 @@ protected:
      */
     void _createTiles();
 
-//    void _setUnits();
-    
+    /**
+     * Gets the maze entrance location.
+     */
     Vector2 _getEntrance();
 };

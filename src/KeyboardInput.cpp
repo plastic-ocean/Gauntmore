@@ -70,7 +70,6 @@ void KeyboardInput::_onEvent(Event *ev) {
                 break;
             case SDLK_RETURN:
                 _game->getPlayer()->updateHealth(-1);
-                _game->updateGoldCount(250);
                 break;
             default:
                 break;
