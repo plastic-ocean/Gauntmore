@@ -212,8 +212,6 @@ void Game::_renderMap() {
     _tileMap = new Tmx::Map();
     
     _tileMap->ParseFile("tmx/room.tmx");
-
-    _map->getRoom()->setTileMap(_tileMap);
     
     for (int i = 0; i < _tileMap->GetNumLayers(); ++i) {
         // Get a layer.

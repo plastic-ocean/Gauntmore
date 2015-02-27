@@ -59,7 +59,7 @@ vector<vector<spRoom>> MazeGen::generate() {
 
             if (_maze[i][j] != '@' ) {
                 // See if there are surrounding rooms.
-                if (i - 1 > 0 && _maze[i - 1][j] != '@' ) {
+                if (i - 1 >= 0 && _maze[i - 1][j] != '@' ) {
                     // Look up
                     up = true;
                 }
@@ -71,7 +71,7 @@ vector<vector<spRoom>> MazeGen::generate() {
                     // Look down
                     down = true;
                 }
-                if (j - 1 > 0 && _maze[i][j - 1] != '@' ) {
+                if (j - 1 >= 0 && _maze[i][j - 1] != '@' ) {
                     // Look left
                     left = true;
                 }
@@ -83,33 +83,26 @@ vector<vector<spRoom>> MazeGen::generate() {
 
                 // Use this information to choose a room type to put in the spRoom matrix.
                 spRoom room;
-                RoomType type = deadend;
 
                 if ((up && !right && !down && !left) || (!up && right && !down && !left) ||
                         (!up && !right && down && !left) || (!up && !right && !down && left)) {
                     // dead end
-                    type = deadend;
                     room = new Room(deadend, _size, exitBools);
                 } else if ((up && !right && down && !left) || (!up && right && !down && left)) {
                     // straight
-                    type = straight;
                     room = new Room(straight, _size, exitBools);
                 } else if ((up && right && !down && !left) || (up && !right && !down && left) ||
                         (!up && right && down && !left) || (!up && !right && down && left)) {
                     // turn
-                    type = turn;
                     room = new Room(turn, _size, exitBools);
                 } else if ((!up && right && down && left) || (up && !right && down && left) ||
                         (up && right && !down && left) || (up && right && down && !left)) {
                     // branch
-                    type = branch;
                     room = new Room(branch, _size, exitBools);
                 } else if (up && right && down && left) {
                     // intersection
-                    type = intersection;
                     room = new Room(intersection, _size, exitBools);
                 }
-//                cout << "maze room: " << i << ", " << j << "; type: " << type << endl;
 
                 roomMap[i][j] = room;
             }
@@ -244,7 +237,7 @@ void MazeGen::_addWall(int i, int j) {
 * @return the chosen edge.
 */
 int MazeGen::_chooseEntrance() {
-    int edge = rand() % 3;
+    int edge = rand() % 4;
     int i = 0; // entrance column
     int j = 0; // entrance row
     if (edge == 0) {
@@ -255,7 +248,9 @@ int MazeGen::_chooseEntrance() {
         i = 0;
         j = rand() % (_size - 2) + 1;
         _maze[i + 1][j] = '.';
-        _maze[i][j] = 'x';
+        _maze[i][j] = '.';
+        // Set entrance.
+        setEntrance(pair<int, int>(i, j));
         i++;
 
         // Add adjacent walls.
@@ -270,7 +265,9 @@ int MazeGen::_chooseEntrance() {
         i = rand() % (_size - 2) + 1;
         j = _size - 1;
         _maze[i][j - 1] = '.';
-        _maze[i][j] = 'x';
+        _maze[i][j] = '.';
+        // Set entrance.
+        setEntrance(pair<int, int>(i, j));
         j--;
 
         // Add adjacent walls.
@@ -285,7 +282,9 @@ int MazeGen::_chooseEntrance() {
         i = _size - 1;
         j = rand() % (_size - 2) + 1;
         _maze[i - 1][j] = '.';
-        _maze[i][j] = 'x';
+        _maze[i][j] = '.';
+        // Set entrance.
+        setEntrance(pair<int, int>(i, j));
         i--;
 
         // Add adjacent walls.
@@ -300,7 +299,9 @@ int MazeGen::_chooseEntrance() {
         i = rand() % (_size - 2) + 1;
         j = 0;
         _maze[i][j + 1] = '.';
-        _maze[i][j] = 'x';
+        _maze[i][j] = '.';
+        // Set entrance.
+        setEntrance(pair<int, int>(i, j));
         j++;
 
         // Add adjacent walls.
@@ -314,8 +315,7 @@ int MazeGen::_chooseEntrance() {
     _floorList[_floorListSize][1] = j;
     _floorListSize++;
 
-    // Set entrance.
-    setEntrance(Vector2(i, j));
+
 
     return edge;
 }
@@ -406,9 +406,9 @@ int MazeGen::_chooseExit(int edge) {
         temp = rand() % exitListSize;
         i = exitList[temp];
     }
-
     // Create exit
     _maze[i][j] = '.';
+    setExit(pair<int, int>(i, j));
 
     return edge;
 }
@@ -425,4 +425,7 @@ void MazeGen::_printMap() {
         }
         cout << endl;
     }
+
+    cout << "Entrance: (" << _entrance.first << ", " << _entrance.second << ")" << endl;
+    cout << "Exit: (" << _exit.first << ", " << _exit.second << ")" << endl;
 }

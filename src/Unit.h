@@ -15,7 +15,7 @@ public:
      * Initializes a unit. When initializing any child this is the called method.
      * It calls the overloaded _init method for all children.
      *
-     * @pos is the unit's positon
+     * @pos is the unit's position
      * @game is the game.
      */
     void init(const Vector2 &pos, Game *game);
@@ -70,18 +70,9 @@ public:
         return _defense;
     }
     
-    /**
-     * Reduces the Unit's hit points. Overload this for each child.
-     */
-    virtual void damage(){}
-    
     string getType();
     
     void setType(string type);
-    
-    virtual SDL_Rect getBounds() = 0;
-    
-    virtual void addSprite() = 0;
     
     void setLocation(Vector2 location) {
         _location = location;
@@ -91,8 +82,6 @@ public:
         return _location;
     }
     
-    virtual bool isPotion() = 0;
-    
     SDL_Rect getRect() {
         return _rect;
     }
@@ -100,6 +89,15 @@ public:
     void setRect(SDL_Rect rect) {
         _rect = rect;
     }
+
+
+    /* Virtual Methods */
+
+    virtual SDL_Rect getBounds() = 0;
+
+    virtual void addSprite() = 0;
+
+    virtual bool isPotion() = 0;
 
 protected:
     Vector2 _location;
@@ -119,7 +117,7 @@ protected:
     int _hp;
     int _attack;
     int _defense;
-    int _speed = 300;//****FIX ME******
+    int _speed = 300; //****FIX ME******
     
     // Indicates if unit is dead. Set by damage() and retrieved with isDead().
     // Used to remove unit from game's units list.

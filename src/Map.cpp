@@ -1,7 +1,6 @@
 #include <iostream>
 #include "Map.h"
 #include "MazeGen.h"
-#include "Game.h"
 
 using namespace std;
 
@@ -12,20 +11,17 @@ using namespace std;
 Map::Map(int size) {
     // TODO mini-map: store two copies of maze matrix and change all tiles in one to "explored" only when visited by player
     spMazeGen mazeGen = new MazeGen(size);
-    _roomMap = mazeGen->generate();
+    setRoomMap(static_cast<vector<vector<spRoom>>>(mazeGen->generate()));
     
     _entrance = mazeGen->getEntrance();
-    _row = static_cast<int>(_entrance.x);
-    _col = static_cast<int>(_entrance.y);
+    setRow(_entrance.first);
+    setCol(_entrance.second);
 
     _room = _roomMap[_row][_col];
 
 //    _room = new Room(turn, 15, {true, true, false, false});
 
     _room->createTileMap();
-
-//    _room->printMap();
-//    cout << "entrance: " << _row << ", " << _col << endl;
 }
 
 
@@ -47,7 +43,6 @@ void Map::changeRoom(int edge) {
             break;
     }
 
-//    cout << "new room: " << _row << ", " << _col << endl;
     setRoom(_roomMap[_row][_col]);
     _room->createTileMap();
 }

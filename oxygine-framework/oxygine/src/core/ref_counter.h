@@ -29,9 +29,10 @@ namespace oxygine
 		//commented, unsafe
 		//todo, find solution
 
-	private: 
+		const ref_counter& operator=( const ref_counter& );
+
+	private:
 		ref_counter( const ref_counter& );
-		const ref_counter& operator=( const ref_counter& );	
 
 	};
 

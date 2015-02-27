@@ -109,6 +109,9 @@ void Slime::_interact() {
  * @us is the UpdateStatus sent by Unit's update method.
  */
 void Slime::_update(const UpdateState &us) {
+//    Vector2 direction = moveMe();
+
+
     // look around
     // if player is adjacent to creature:
     //     turn to face player

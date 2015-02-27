@@ -22,12 +22,20 @@ public:
         _size = size;
     }
 
-    Vector2 getEntrance() {
+    pair<int, int> getEntrance() {
         return _entrance;
     }
 
-    void setEntrance(Vector2 entrance) {
+    void setEntrance(pair<int, int> entrance) {
         _entrance = entrance;
+    }
+
+    pair<int, int> getExit() {
+        return _exit;
+    }
+
+    void setExit(pair<int, int> exit) {
+        _exit = exit;
     }
 
 private:
@@ -37,7 +45,6 @@ private:
     Game *_game;
     int _size;
     char _maze[_maxSize][_maxSize];
-//    vector<vector<int>> _map;
 
     int _wallListSize;
     int _wallList[_maxListSize][2];
@@ -45,7 +52,8 @@ private:
     int _floorListSize;
     int _floorList[_maxListSize][2];
 
-    Vector2 _entrance;
+    pair<int, int> _entrance;
+    pair<int, int> _exit;
 
     /**
     * Creates a 2D maze array using Prim's algorithm for minimum spanning trees.

@@ -1067,20 +1067,10 @@ Game.h
 /Users/Keith/Desktop/cis330/gauntmore/src/Game.h
 Player.h
 /Users/Keith/Desktop/cis330/gauntmore/src/Player.h
-CreatureMover.h
-/Users/Keith/Desktop/cis330/gauntmore/src/CreatureMover.h
 Thing.h
 /Users/Keith/Desktop/cis330/gauntmore/src/Thing.h
 
 /Users/Keith/Desktop/cis330/gauntmore/src/CreatureMover.cpp
-CreatureMover.h
-/Users/Keith/Desktop/cis330/gauntmore/src/CreatureMover.h
-
-/Users/Keith/Desktop/cis330/gauntmore/src/CreatureMover.h
-stdio.h
--
-Game.h
-/Users/Keith/Desktop/cis330/gauntmore/src/Game.h
 
 /Users/Keith/Desktop/cis330/gauntmore/src/Game.cpp
 iostream
@@ -1180,8 +1170,6 @@ Game.h
 res.h
 /Users/Keith/Desktop/cis330/gauntmore/src/res.h
 
-/Users/Keith/Desktop/cis330/gauntmore/src/GreaterThan.h
-
 /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.cpp
 HealthBar.h
 /Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
@@ -1231,8 +1219,6 @@ Map.h
 /Users/Keith/Desktop/cis330/gauntmore/src/Map.h
 MazeGen.h
 /Users/Keith/Desktop/cis330/gauntmore/src/MazeGen.h
-Game.h
-/Users/Keith/Desktop/cis330/gauntmore/src/Game.h
 
 /Users/Keith/Desktop/cis330/gauntmore/src/Map.h
 oxygine-framework.h
@@ -1261,58 +1247,12 @@ Game.h
 /Users/Keith/Desktop/cis330/gauntmore/src/Game.h
 
 /Users/Keith/Desktop/cis330/gauntmore/src/NodeMinHeap.cpp
-NodeMinHeap.h
-/Users/Keith/Desktop/cis330/gauntmore/src/NodeMinHeap.h
-
-/Users/Keith/Desktop/cis330/gauntmore/src/NodeMinHeap.h
-stdio.h
--
-PathNode.h
-/Users/Keith/Desktop/cis330/gauntmore/src/PathNode.h
-Game.h
-/Users/Keith/Desktop/cis330/gauntmore/src/Game.h
 
 /Users/Keith/Desktop/cis330/gauntmore/src/PathFinder.cpp
-queue
--
-cmath
--
-PathFinder.h
-/Users/Keith/Desktop/cis330/gauntmore/src/PathFinder.h
-game.h
-/Users/Keith/Desktop/cis330/gauntmore/src/game.h
-PathNode.h
-/Users/Keith/Desktop/cis330/gauntmore/src/PathNode.h
 
 /Users/Keith/Desktop/cis330/gauntmore/src/PathFinder.h
-stdio.h
--
-queue
--
-NodeMinHeap.h
-/Users/Keith/Desktop/cis330/gauntmore/src/NodeMinHeap.h
-Game.h
-/Users/Keith/Desktop/cis330/gauntmore/src/Game.h
-Map.h
-/Users/Keith/Desktop/cis330/gauntmore/src/Map.h
-PathNode.h
-/Users/Keith/Desktop/cis330/gauntmore/src/PathNode.h
-GreaterThan.h
-/Users/Keith/Desktop/cis330/gauntmore/src/GreaterThan.h
 
 /Users/Keith/Desktop/cis330/gauntmore/src/PathNode.cpp
-PathNode.h
-/Users/Keith/Desktop/cis330/gauntmore/src/PathNode.h
-
-/Users/Keith/Desktop/cis330/gauntmore/src/PathNode.h
-stdio.h
--
-Map.h
-/Users/Keith/Desktop/cis330/gauntmore/src/Map.h
-Creature.h
-/Users/Keith/Desktop/cis330/gauntmore/src/Creature.h
-Game.h
-/Users/Keith/Desktop/cis330/gauntmore/src/Game.h
 
 /Users/Keith/Desktop/cis330/gauntmore/src/Player.cpp
 iostream
@@ -1445,22 +1385,6 @@ KeyboardInput.h
 /Users/Keith/Desktop/cis330/gauntmore/src/Unit.h
 oxygine-framework.h
 /Users/Keith/Desktop/cis330/gauntmore/src/oxygine-framework.h
-
-/Users/Keith/Desktop/cis330/gauntmore/src/game.h
-oxygine-framework.h
-/Users/Keith/Desktop/cis330/gauntmore/src/oxygine-framework.h
-tmx/Tmx.h
-/Users/Keith/Desktop/cis330/gauntmore/src/tmx/Tmx.h
-tmx/tinyxml2.h
-/Users/Keith/Desktop/cis330/gauntmore/src/tmx/tinyxml2.h
-Player.h
-/Users/Keith/Desktop/cis330/gauntmore/src/Player.h
-HealthBar.h
-/Users/Keith/Desktop/cis330/gauntmore/src/HealthBar.h
-KeyboardInput.h
-/Users/Keith/Desktop/cis330/gauntmore/src/KeyboardInput.h
-Map.h
-/Users/Keith/Desktop/cis330/gauntmore/src/Map.h
 
 /Users/Keith/Desktop/cis330/gauntmore/src/main.cpp
 core/oxygine.h

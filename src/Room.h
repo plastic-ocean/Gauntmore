@@ -13,14 +13,25 @@ public:
     Room();
     Room(int type, int size, vector<bool> exitBools);
 
-    typedef list<spUnit> Units;
-
     /**
     * Creates a room map.
     *
     * @type is the room type.
     */
     void createRoom();
+
+    /**
+    * Creates a tile map (.tmx file) from the 2D map array.
+    */
+    void createTileMap();
+
+    /**
+    * Prints the map.
+    */
+    void printMap();
+
+
+    /* Setters and Getters */
 
     int getSize() const {
         return _size;
@@ -38,14 +49,6 @@ public:
         _entrance = entrance;
     }
 
-    Tmx::Map *getTileMap() {
-        return _tileMap;
-    }
-
-    void setTileMap(Tmx::Map *tileMap) {
-        _tileMap = tileMap;
-    }
-
     vector<SDL_Rect> getTiles() {
         return _tiles;
     }
@@ -54,41 +57,13 @@ public:
         _tiles = tiles;
     }
 
-    Units* getUnits() {
+    list<spUnit>* getUnits() {
         return &_units;
-    }
-
-    void setUnits(Units units) {
-        _units = units;
-    }
-
-    /**
-    * Adds unit to the back of the units list.
-    *
-    * @unit is the Unit to be added.
-    */
-    void pushUnit(spUnit unit) {
-        _units.push_back(unit);
-    }
-    
-    void removeUnit(Units::iterator i) {
-        _units.erase(i);
     }
 
     int getType() {
         return _type;
     }
-
-    /**
-    * Prints the map.
-    */
-    void printMap();
-
-    /**
-    * Creates a tile map (.tmx file) from the 2D map array.
-    */
-    void createTileMap();
-
 
     vector<Vector2> getExits() {
         return _exits;
@@ -102,8 +77,8 @@ public:
         return _top;
     }
 
-    void setTop(int _top) {
-        Room::_top = _top;
+    void setTop(int top) {
+        _top = top;
     }
 
     int getRight() {
@@ -135,12 +110,10 @@ private:
     const int tileSize = 64;
     
     Game *_game;
-    
-    Tmx::Map *_tileMap;
+
     vector<SDL_Rect> _tiles;
 
-    typedef list<spUnit> units;
-    Units _units;
+    list<spUnit> _units;
 
     const static int _maxSize = 30;
     const static int _maxListSize = _maxSize * _maxSize;
@@ -161,7 +134,7 @@ private:
 
     int _type;
 
-// exit cells
+    // exit cells
     int _top;
     int _right;
     int _bottom;
@@ -191,6 +164,11 @@ private:
     * Creates two intersecting straight halls.
     */
     void _createIntersection();
+
+    /**
+    * Creates an empty room.
+    */
+    void _createEmpty();
     
     /**
     * Returns a number betweeen start and finish inclusive.
@@ -230,39 +208,3 @@ private:
     */
     void _drawHallRow(int row, int begin, int end);
 };
-
-
-
-
-///**
-//* Creates a 2D maze array using Prim's algorithm for minimum spanning trees.
-//*/
-//void _createMaze();
-//
-///**
-//* Creates and draws a room on the map. Checks if the main hall is on a row or a column.
-//* Then checks if there is space above or below a row and left or right of a column.
-//* Connects the room(s) to the main hall with connecting halls.
-//*/
-//void _createHallMap(int exits);
-///**
-// * Adds all walls adjacent to map[i][j] to the wall list.
-// *
-// * @i is the i in map[i][j].
-// * @j is the j in map[i][j].
-// */
-//void _addWall(int i, int j);
-//
-///**
-// * Randomly chooses an entrance, adds the first floor cell, and adds its walls to the wall list.
-// *
-// * @return the chosen edge.
-// */
-//int _chooseEntrance();
-//
-///**
-// * Choose a random map edge and cell for the exit.
-// *
-// * @edge is the entrance edge.
-// */
-//int _chooseExit(int edge);
