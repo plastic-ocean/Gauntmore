@@ -211,7 +211,7 @@ void Game::doUpdate(const UpdateState &us) {
 void Game::_renderMap() {
     _tileMap = new Tmx::Map();
     
-    _tileMap->ParseFile("tmx/outside_top.tmx");
+    _tileMap->ParseFile("tmx/outside_left.tmx");
     
     for (int i = 0; i < _tileMap->GetNumLayers(); ++i) {
         // Get a layer.
@@ -273,7 +273,13 @@ void Game::_createTiles() {
                         name == "tree_trunk3" ||
                         name == "cave_wall_bottom" ||
                         name == "tree_bottom_only_right" ||
-                        name == "tree_bottom_only_left") {
+                        name == "tree_bottom_only_left" ||
+                        name == "cave_wall_left" ||
+                        name == "cave_wall_right" ||
+                        name == "tree_wall_left_tree" ||
+                        name == "tree_wall_right_tree" ||
+                        name == "tree_entrance_left" ||
+                        name == "tree_entrance_right") {
                     int posX = x * tileSize;
                     int posY = y * tileSize;
                     SDL_Rect tile;
