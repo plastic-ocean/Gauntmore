@@ -68,12 +68,13 @@ void Armor::_interact() {
         cout << "Defense: " << _game->getPlayer()->getDefense() << endl;
       
         _game->getPlayer()->setDefense(_value);
-        // _game->updateGoldCount(_value);
+        _game->updateArmorCount(_value);
+        
         
         cout << "Defense: " << _game->getPlayer()->getDefense() << endl;
         
         // remove sprite
-        _view->addTween(Actor::TweenAlpha(0), 1000)->setDetachActor(true);
+        _view->addTween(Actor::TweenAlpha(0), 1500)->setDetachActor(true);
         _dead = true;
     }
 }
