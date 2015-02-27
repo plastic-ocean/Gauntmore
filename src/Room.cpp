@@ -152,7 +152,7 @@ void Room::_createDeadEnd() {
             hall = _getRand(column, width);
             _top = hall;
             _drawHallCol(hall, 0, row);
-            setEntrance(Vector2(hall, 0));
+            setEntrance(Vector2(hall, 1));
             break;
         case 1:
             // Right
