@@ -41,8 +41,7 @@ public:
 private:
     const static int _maxSize = 30;
     const static int _maxListSize = _maxSize * _maxSize;
-    
-    Game *_game;
+
     int _size;
     char _maze[_maxSize][_maxSize];
 

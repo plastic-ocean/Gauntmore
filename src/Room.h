@@ -108,8 +108,6 @@ public:
 
 private:
     const int tileSize = 64;
-    
-    Game *_game;
 
     vector<SDL_Rect> _tiles;
 

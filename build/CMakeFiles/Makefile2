@@ -56,9 +56,9 @@ CMAKE_BINARY_DIR = /Users/Keith/Desktop/cis330/gauntmore/build
 # Target rules for target CMakeFiles/gauntmore.dir
 
 # All Build rule for target.
-CMakeFiles/gauntmore.dir/all: oxygine-sound/CMakeFiles/oxygine-sound.dir/all
 CMakeFiles/gauntmore.dir/all: oxygine-framework/CMakeFiles/oxygine-framework.dir/all
 CMakeFiles/gauntmore.dir/all: oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir/all
+CMakeFiles/gauntmore.dir/all: oxygine-sound/CMakeFiles/oxygine-sound.dir/all
 	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/depend
 	$(MAKE) -f CMakeFiles/gauntmore.dir/build.make CMakeFiles/gauntmore.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26

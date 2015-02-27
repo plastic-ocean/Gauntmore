@@ -52,7 +52,6 @@ public:
     }
 
 private:
-    Game *_game;
     spRoom _room;
     vector<vector<spRoom>> _roomMap;
     pair<int, int> _entrance;
