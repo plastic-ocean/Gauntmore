@@ -27,16 +27,16 @@ void NodeArray::push_back(PathNode *node) {
     theHeap[size++] = *node;
     
 }
-PathNode NodeArray::pop_back() {
-    return theHeap[--size];
+PathNode* NodeArray::pop_back() {
+    return &theHeap[--size];
 }
 
 bool NodeArray::isEmpty() {
     return size==0;
 }
 
-void NodeArray::setFront(PathNode node) {
-    theHeap[0] = node;
+void NodeArray::setFront(PathNode *node) {
+    theHeap[0] = *node;
 }
 
 PathNode* NodeArray::getFront() {
@@ -44,17 +44,17 @@ PathNode* NodeArray::getFront() {
     return &theHeap[0];
 }
 
-PathNode NodeArray::getBack() {
-    return theHeap[size-1];
+PathNode* NodeArray::getBack() {
+    return &theHeap[size-1];
 }
 int NodeArray::getSize() {
     return size;
 }
 
 void NodeArray::swap(int a, int b) {
-    PathNode temp = theHeap[a];
+    PathNode *temp = &theHeap[a];
     theHeap[a] = theHeap[b];
-    theHeap[b] = temp;
+    theHeap[b] = *temp;
 }
 
 bool NodeArray::compare(int a, int b) {

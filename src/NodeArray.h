@@ -16,11 +16,11 @@ public:
     NodeArray();
     ~NodeArray();
     void push_back(PathNode*);
-    PathNode pop_back();
+    PathNode* pop_back();
     bool isEmpty();
-    void setFront(PathNode);
+    void setFront(PathNode*);
     PathNode* getFront();
-    PathNode getBack();
+    PathNode* getBack();
     int getSize();
     void swap(int, int);
     bool compare(int, int);

@@ -97,7 +97,7 @@ void PathFinder::scanSurround( PathNode *node ) {
             
             temp.x += mapSize;
         }
-        temp.x -= (2*mapSize);
+        temp.x -= (3*mapSize);
         temp.y += mapSize;
     }
 
