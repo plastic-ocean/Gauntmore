@@ -211,7 +211,7 @@ void Game::doUpdate(const UpdateState &us) {
 void Game::_renderMap() {
     _tileMap = new Tmx::Map();
     
-    _tileMap->ParseFile("tmx/outside_bottom.tmx");
+    _tileMap->ParseFile("tmx/outside_top.tmx");
     
     for (int i = 0; i < _tileMap->GetNumLayers(); ++i) {
         // Get a layer.
@@ -255,12 +255,25 @@ void Game::_createTiles() {
                 int tileSize = tileset->GetImage()->GetWidth();
                 std::string name = tileset->GetName();
                 
-                if (name == "wall" || name == "cave_wall" ||
-                        name == "bottom_left" || name == "bottom_right" ||
-                        name == "tree_bottom_left" || name == "tree_bottom_right" ||
-                        name == "tree_top_left" || name == "tree_top_right" ||
-                        name == "tree_top_cave_wall_left" || name == "tree_top_cave_wall_right" ||
-                        name == "tree_top1" || name == "tree_top2" || name == "tree_top3") {
+                if (    name == "wall" ||
+                        name == "cave_wall" ||
+                        name == "bottom_left" ||
+                        name == "bottom_right" ||
+                        name == "tree_bottom_left" ||
+                        name == "tree_bottom_right" ||
+                        name == "tree_top_left" ||
+                        name == "tree_top_right" ||
+                        name == "tree_top_cave_wall_left" ||
+                        name == "tree_top_cave_wall_right" ||
+                        name == "tree_top1" ||
+                        name == "tree_top2" ||
+                        name == "tree_top3" ||
+                        name == "tree_trunk" ||
+                        name == "tree_trunk2" ||
+                        name == "tree_trunk3" ||
+                        name == "cave_wall_bottom" ||
+                        name == "tree_bottom_only_right" ||
+                        name == "tree_bottom_only_left") {
                     int posX = x * tileSize;
                     int posY = y * tileSize;
                     SDL_Rect tile;

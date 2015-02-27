@@ -61,5 +61,15 @@
         <image file="tree_top1.png" />
         <image file="tree_top2.png" />
         <image file="tree_top3.png" />
+
+        <image file="tree_trunk.png" />
+        <image file="tree_trunk2.png" />
+        <image file="tree_trunk3.png" />
+
+        <image file="tree_bottom_only_left.png" />
+        <image file="tree_bottom_only_right.png" />
+
+        <image file="cave_wall_bottom.png" />
+        <image file="cave_entrance_bottom.png" />
     </atlas>
 </resources>
