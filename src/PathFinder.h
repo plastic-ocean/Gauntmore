@@ -12,14 +12,14 @@
 #include <stdio.h>
 #include <queue>
 #include "NodeMinHeap.h"
-#include "Game.h"
-#include "Map.h"
+//#include "Game.h"
+//#include "Map.h"
 #include "PathNode.h"
-#include "GreaterThan.h"
+//#include "GreaterThan.h"
 
-class NodeMinHeap;
-class PathNode;
-DECLARE_SMART(PathFinder, spPathFinder);
+//class NodeMinHeap;
+//class PathNode;
+//DECLARE_SMART(PathFinder, spPathFinder);
 class PathFinder : public Object {
     
     
@@ -28,20 +28,22 @@ public:
     ~PathFinder();
     int findHeuristic( Vector2 );
     vector<Vector2> aStar( Vector2, Vector2 );                       //***  what should this return?  ***
-    
+    Vector2 nextMove(Vector2, Vector2);
     
     
     
 private:
     Vector2 target;
     Vector2 source;
-    NodeMinHeap* openList;
-    vector<PathNode> closedList;
-    int mapSize = 64;   //*** FIX ME ***
-    void scanSurround( PathNode node );
+    NodeMinHeap openList;
+    const static int mapSize = 64;   //*** FIX ME ***
+    void scanSurround( PathNode *node );
     bool inClosedList( PathNode node );
     bool atExit( PathNode );
-    vector<Vector2> makePath(PathNode);
+    std::vector<Vector2> makePath(PathNode);
+    PathNode closedList[1000];
+    void addNode(PathNode*);
+    int loc;
     
     
 };

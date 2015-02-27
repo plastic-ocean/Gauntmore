@@ -23,7 +23,7 @@ public:
     bool isEmpty();
     
 private:
-    vector<Vector2> thePath;
+    std::vector<Vector2> thePath;
     
     
 };

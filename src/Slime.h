@@ -13,6 +13,8 @@ public:
     Slime();
     
     virtual SDL_Rect getBounds();
+    virtual void damage();
+    virtual void addSprite();
     
 private:
     spThing _contents;

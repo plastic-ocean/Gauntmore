@@ -9,60 +9,56 @@
 #include "NodeMinHeap.h"
 
 NodeMinHeap::NodeMinHeap() {
-    theHeap = *new vector<PathNode>;
     //default constructor, do nothing
 }
 
 NodeMinHeap::NodeMinHeap( PathNode head ) {
-    theHeap = *new vector<PathNode>;
-    this->theHeap.push_back(head);
 }
+
 NodeMinHeap::~NodeMinHeap(){}
 
-void NodeMinHeap::insertNode( PathNode node ) {
-    this->theHeap.push_back(node);
-    bubbleUp( (int)theHeap.size() - 1 );
+void NodeMinHeap::insertNode( PathNode *node ) {
+    Vector2 vec = {0,0};
+//    PathNode temp = node;
+    
+    theHeap.push_back(node);
+    bubbleUp( theHeap.getSize() );
     
 }
 
-PathNode NodeMinHeap::getMinNode() {
-    PathNode temp = theHeap.front();//copy head to temp
-    theHeap[0] = theHeap.back();//copy last to head
+PathNode* NodeMinHeap::getMinNode() {
+    PathNode *temp = theHeap.getFront();//copy head to temp
+    theHeap.setFront(theHeap.getBack() );//copy last to head
     theHeap.pop_back();//remove last
     filterDown(0);//fix heap
     
     return temp;//return old head
 }
 
-void NodeMinHeap::swap(int a, int b) {
-    PathNode temp = theHeap[a];
-    theHeap[a] = theHeap[b];
-    theHeap[b] = temp;
-}
 
 
 
 void NodeMinHeap::bubbleUp(int pos) {
     if ( pos == 0 ) return;
     int parent = (int)(pos/2);
-    if ( theHeap[parent].getTotal() > theHeap[pos].getTotal() ) {
-        swap(parent, pos);
+    if (theHeap.compare(parent, pos) ) {  //if ( theHeap[parent].getTotal() > theHeap[pos].getTotal() ) {
+        theHeap.swap(parent, pos);
     }
     bubbleUp(parent);
 }
 
 bool NodeMinHeap::empty() {
-    return theHeap.empty();
+    return theHeap.getSize() == 0;
 }
 
 void NodeMinHeap::filterDown(int pos) {
     
     //check if you are out of scope
     int child = (pos*2);
-    if ( theHeap.size() - 1 < child ) return;
-    else if ( theHeap.size() - 1 < (child+1) ) {
-        if ( theHeap[pos].getTotal() > theHeap[child].getTotal() ) {
-            swap(pos, child);
+    if ( theHeap.getSize() - 1 < child ) return;
+    else if ( theHeap.getSize() - 1 < (child+1) ) {
+        if (theHeap.compare(pos, child) ) {        //if ( theHeap[pos].getTotal() > theHeap[child].getTotal() ) {
+            theHeap.swap(pos, child);
         }
         return; //one child, so you are at the bottom of the heap
     }
@@ -70,8 +66,8 @@ void NodeMinHeap::filterDown(int pos) {
     //find smallest of left and right children
     
     if ( child > (child+1) ) child++;
-    if ( theHeap[pos].getTotal() < theHeap[child].getTotal() ) {
-        swap(pos, child);
+    if (theHeap.compare(child, pos) ) {        //if ( theHeap[child].getTotal() > theHeap[pos].getTotal() ) {
+        theHeap.swap(child, pos);
         filterDown(child);
     }
     

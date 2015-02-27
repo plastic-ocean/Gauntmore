@@ -66,33 +66,39 @@ void Creature::_init() {
 
 
 Vector2 Creature::moveMe() {
-    const int DEADZONE = 0;
+//    const int DEADZONE = 0;
     Vector2 moveDir = {0,0};
     Vector2 pPos = _game->getPlayer()->getPosition();//player's position
     Vector2 cPos = getPosition();//creature's position
     
+    cout << "Creature at: " << cPos.x << " " << cPos.y << endl;
+    cout << "Player at: " << pPos.x << " " << pPos.y << endl;
+    
+    
     if ( abs(pPos.x - cPos.x) <= 64 && abs(pPos.y - cPos.y) <= 64 ) {
+        cout << "I am not updating anything" << endl;
         return moveDir;//you are less than 64 pixels away, do nothing
     }
     //otherwise, check the movement Queue
-    if ( moveQ.isEmpty() ) {
+//    if ( moveQ.isEmpty() ) {
         std::cout << "moveQ is empty, attempting to fill it" << std::endl;
-        moveQ.updatePath(findPath->aStar(pPos, cPos) );
-    }
-    
+        moveQ.updatePath(findPath.aStar(cPos, pPos) );
+//    }
+
     
     //if the Q is NOT empty
         Vector2 nextSpot = moveQ.peekNext();//look at where you are going
         if ( abs(pPos.x - nextSpot.x) <= 10 && abs(pPos.y - nextSpot.y) <= 10) {
-            moveQ.updatePath(findPath->aStar(pPos, cPos) );
-
-            nextSpot = moveQ.peekNext();//start moving to the next spot
+            moveQ.updatePath(findPath.aStar(pPos, cPos) );
         }
+            nextSpot = moveQ.peekNext();//start moving to the next spot
+//            cout << "next vector: " << nextSpot.x << " " << nextSpot.y << endl;
     
-    if ( (cPos.x - nextSpot.x) < -DEADZONE ) moveDir.x = 1;
-    if ( (cPos.x - nextSpot.x) > DEADZONE ) moveDir.x = -1;
-    if ( (cPos.y - nextSpot.y) < -DEADZONE ) moveDir.y = 1;
-    if ( (cPos.y - nextSpot.y) > DEADZONE ) moveDir.y = -1;
+    
+    if ( (cPos.x - nextSpot.x) < 0 ) moveDir.x = 1;
+    if ( (cPos.x - nextSpot.x) > 0 ) moveDir.x = -1;
+    if ( (cPos.y - nextSpot.y) < 0 ) moveDir.y = 1;
+    if ( (cPos.y - nextSpot.y) > 0 ) moveDir.y = -1;
     
     return moveDir;
 }
@@ -104,11 +110,12 @@ Vector2 Creature::moveMe() {
  * @us is the UpdateStatus sent by Unit's update method.
  */
 void Creature::_update(const UpdateState &us) {
-    Vector2 direction = moveMe();
-    Vector2 position = getPosition();
-    position += direction * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
-    setPosition(position);
-    
+//    cout << "creature update" << endl;
+//    Vector2 direction = moveMe();
+//    Vector2 position = getPosition();
+//    position += direction * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
+//    setPosition(position);
+//    
 }
 
 

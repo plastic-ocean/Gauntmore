@@ -48,6 +48,12 @@ Game::Game() {
     }
  
     // Create player
+    _slime = new Slime();
+    _slime->init(Vector2((_map->getRoom()->getSize() / 2) * 64, (_map->getRoom()->getSize() / 2) * 64), this);
+    _map->getRoom()->getUnits()->push_back(_slime);
+
+    
+    
     _player = new Player(10, 1, 1);
     _player->init(_getEntrance(), this);
     _map->getRoom()->getUnits()->push_back(_player);
@@ -241,7 +247,7 @@ void Game::doUpdate(const UpdateState &us) {
 void Game::_renderMap() {
     _tileMap = new Tmx::Map();
     
-    _tileMap->ParseFile("tmx/room.tmx");
+    _tileMap->ParseFile("tmx/room01.tmx");
 
     _map->getRoom()->setTileMap(_tileMap);
     

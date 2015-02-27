@@ -11,14 +11,13 @@
 
 #include <stdio.h>
 #include "Map.h"
-#include "Creature.h"
 #include "Game.h"
 
 class PathNode {
 public:
     PathNode();
     PathNode( Vector2, int, int );
-    PathNode( Vector2, int, int, PathNode );
+    PathNode( Vector2, int, int, PathNode* );
     ~PathNode();
     const Vector2 getLocation();
     const int getHeuristic();
@@ -30,7 +29,7 @@ public:
     void setLocation(Vector2);
     //    bool operator>(  PathNode& node );
     PathNode getParent();
-    void setParent(PathNode);
+    void setParent(PathNode*);
     
 private:
     Vector2 location;

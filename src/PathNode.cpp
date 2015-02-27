@@ -8,25 +8,34 @@
 
 #include "PathNode.h"
 
-PathNode::PathNode(){}
+PathNode::PathNode(){
+    this->location = {0,0};
+    this->heuristic = 9999;
+    this->total = 9999;
+    this->cost = 9999;
+    this->parent = NULL;
+}
 
-PathNode::PathNode( Vector2 location, int cost, int heuristic ) {
+PathNode::PathNode( Vector2 location, int cost, int heuristic ) {//loopback constructor
     this->location = location;
     this->cost = cost;
     this->heuristic = heuristic;
-    this->parent = this;
+    this->parent = NULL;
+    this->total = cost + heuristic;
 }
 
 
-PathNode::PathNode( Vector2 location, int cost, int heuristic, PathNode parent ) {
+PathNode::PathNode( Vector2 location, int cost, int heuristic, PathNode *parent ) {
     this->location = location;
     this->cost = cost;
     this->heuristic = heuristic;
-    this->parent = &parent;
+    this->parent = parent;
+    this->total = cost + heuristic;
 }
 PathNode::~PathNode(){}
 
 const Vector2 PathNode::getLocation(){
+    
     return this->location;
 }
 const int PathNode::getHeuristic() {
@@ -57,8 +66,8 @@ PathNode PathNode::getParent() {
     return *parent;
 }
 
-void PathNode::setParent( PathNode parent ) {
-    this->parent = &parent;
+void PathNode::setParent( PathNode *parent ) {
+    this->parent = parent;
 }
 //bool PathNode::operator>(PathNode &node ) {
 //    return this->cost > node.cost;

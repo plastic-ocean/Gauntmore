@@ -8,7 +8,7 @@
 #include "CreatureMover.h"
 #include "Thing.h"
 
-DECLARE_SMART(PathFinder, spPathFinder);
+//DECLARE_SMART(PathFinder, spPathFinder);
 //DECLARE_SMART(CreatureMover, spCreatureMover);
 DECLARE_SMART(Creature, spCreature);
 class Creature : public Unit {
@@ -32,7 +32,7 @@ public:
     
 protected:
     spThing _contents;
-    spPathFinder findPath;
+    PathFinder findPath;
     CreatureMover moveQ;
     
     Vector2 moveMe();

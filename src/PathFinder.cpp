@@ -28,7 +28,8 @@
  
  */
 PathFinder::PathFinder() {
-    openList = new NodeMinHeap();
+//    openList = NodeMinHeap();
+    loc = 0;
 }
 
 PathFinder::~PathFinder() {
@@ -36,21 +37,26 @@ PathFinder::~PathFinder() {
 }
 
 vector<Vector2> PathFinder::aStar(Vector2 start, Vector2 finish ) {
-    PathNode first = *new PathNode( start, 0, findHeuristic(start) );
-    this->target = finish;
-    this->source = start;
-    openList->insertNode(first);//add start to heap
+    PathNode first = PathNode( start, 0, 0 );
+    target = finish;
+    source = start;
     
+    openList.insertNode(&first);//add start to heap
     
-    while ( !openList->empty() ) {
+//    PathNode testTemp = openList.getMinNode();
+//    cout << "total of min node: " << testTemp.getTotal();
+    
+    while ( !openList.empty() ) {
         
-        PathNode temp = openList->getMinNode();//pop smallest from heap
+        PathNode temp = *openList.getMinNode();//pop smallest from heap
         if ( atExit(temp) ) {//are we at the exit?
+            cout << "we found a path. maybe" << endl;
            return makePath( temp );
             
         }
-        closedList.push_back( temp );//put node in closed list
-        scanSurround( closedList.back() );//add surrounding nodes to open list
+        
+        addNode( &temp );//put node in closed list
+        scanSurround( &temp );//add surrounding nodes to open list
     }
     //if you got here, there is no path to the target.
     vector<Vector2> nullVector;
@@ -58,29 +64,40 @@ vector<Vector2> PathFinder::aStar(Vector2 start, Vector2 finish ) {
     
 }
 
+void PathFinder::addNode(PathNode *node) {
+    closedList[loc++] = *node;
+}
+
+
+
 int PathFinder::findHeuristic( Vector2 curLoc ) {
     return abs( curLoc.x - this->target.x ) + abs( curLoc.y - this->target.y );
 }
 
 
-void PathFinder::scanSurround( PathNode node ) {
-    Vector2 temp = node.getLocation() ;
+void PathFinder::scanSurround( PathNode *node ) {
+    Vector2 temp = node->getLocation() ;
     temp.x -= mapSize;
     temp.y -= mapSize;
     int summ = 12;//something more clever goes here
     int flip = -2;
-    
         //check for collision
         //check for existence in closedList
-    for ( int i = 0; i < 2; i++ ) {
-        for ( int j = 0; j < 2; j++ ) {
+    for ( int i = 0; i < 3; i++ ) {
+        for ( int j = 0; j < 3; j++ ) {
             flip *= (-1);
-            if (!inClosedList(node) ) {
-                openList->insertNode(*new PathNode( temp,node.getTotal()+(summ+flip), findHeuristic(temp), node ) );
+
+            if (temp.x > 0 && temp.y > 0 ) {
+            
+            PathNode nodeNew = PathNode( temp, node->getCost()+(summ+flip), findHeuristic(temp), node );
+            if (!inClosedList(nodeNew) ) {
+                openList.insertNode( &nodeNew );
+                }
             }
+            
             temp.x += mapSize;
         }
-        temp.x -= 3*mapSize;
+        temp.x -= (2*mapSize);
         temp.y += mapSize;
     }
 
@@ -99,7 +116,7 @@ bool PathFinder::atExit( PathNode node ) {
 
 
 bool PathFinder::inClosedList( PathNode node ) {
-    int size = (int)closedList.size();
+    int size = loc;
     for (int i = 0; i<size;i++ ) {
         if ( closedList[i].getLocation() == node.getLocation() ) return true;
     }
@@ -108,6 +125,7 @@ bool PathFinder::inClosedList( PathNode node ) {
 }
 
 vector<Vector2> PathFinder::makePath(PathNode node ) {
+    
     vector<Vector2> tempVect;
 
     while (node.getLocation() != source ) {
