@@ -35,6 +35,10 @@ protected:
     spPathFinder findPath;
     CreatureMover moveQ;
     
+    /**
+     *
+     *
+     */
     Vector2 moveMe();
     
     /**
@@ -42,8 +46,16 @@ protected:
      */
     void _init();
     
+    /**
+     *
+     *
+     */
     void _setContents();
     
+    /**
+     *
+     *
+     */
     void _dropContents();
     
     /**

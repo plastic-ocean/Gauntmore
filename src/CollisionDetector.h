@@ -23,6 +23,7 @@ public:
      * @y is the sprite's y coordinate.
      * @h is the sprite's height.
      * @w is the sprite's width.
+     * @return: ture if there is a collision. false if not.
      */
     bool detectWalls(std::vector<SDL_Rect> tiles, int x, int y, int h, int w);
 
@@ -34,6 +35,7 @@ public:
      * @y is the sprite's y coordinate.
      * @h is the sprite's height.
      * @w is the sprite's width.
+     * @return: ture if there is a collision. false if not.
      */
     bool detectUnits(std::list<spUnit> *units, int x, int y, int h, int w);
 

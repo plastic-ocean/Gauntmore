@@ -9,7 +9,10 @@ Slime::Slime() {
     
 }
 
-
+/**
+ *
+ *
+ */
 SDL_Rect Slime::getBounds() {
     Vector2 unitPosition = getPosition();
     _bounds.x = unitPosition.x + 20;
@@ -20,7 +23,10 @@ SDL_Rect Slime::getBounds() {
     return _bounds;
 }
 
-
+/**
+ *
+ *
+ */
 bool Slime::isPotion() {
     return false;
 }

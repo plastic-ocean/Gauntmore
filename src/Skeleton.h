@@ -10,27 +10,39 @@ DECLARE_SMART(Skeleton, spSkeleton);
 class Skeleton : public Creature {
     
 public:
+    /**
+     *
+     *
+     */
     Skeleton();
     
+    /**
+     *
+     *
+     */
     virtual SDL_Rect getBounds();
     
+    /**
+     *
+     *
+     */
     virtual bool isPotion();
     
 private:
     spThing _contents;
     
     /**
-     * Initializes position and sprite of Chest. Called by Unit's init() method.
+     * Initializes position and sprite of Skeleton. Called by Unit's init() method.
      */
     void _init();
     
     /**
-     * Interaction method for Chest.
+     * Interaction method for Skeleton.
      */
     void _interact();
     
     /**
-     * Updates the Chest every frame. Called by Units update() method.
+     * Updates the Skeleton every frame. Called by Units update() method.
      *
      * @us is the UpdateStatus sent by Unit's update method.
      */

@@ -9,6 +9,10 @@ DECLARE_SMART(Unit, spUnit);
 class Unit: public Object {
     
 public:
+    /**
+     *
+     *
+     */
 	Unit();
     
     /**
@@ -20,8 +24,16 @@ public:
      */
     void init(const Vector2 &pos, Game *game);
     
+    /**
+     *
+     *
+     */
     void attachUnit();
     
+    /**
+     *
+     *
+     */
     void detachUnit();
     
     /**
@@ -58,14 +70,26 @@ public:
         return _dead;
     }
 
+    /**
+     *
+     *
+     */
     int getHp() {
         return _hp;
     }
 
+    /**
+     *
+     *
+     */
     int getAttack() {
         return _attack;
     }
 
+    /**
+     *
+     *
+     */
     int getDefense() {
         return _defense;
     }
@@ -75,28 +99,64 @@ public:
      */
     virtual void damage(){}
     
+    /**
+     *
+     *
+     */
     string getType();
     
+    /**
+     *
+     *
+     */
     void setType(string type);
     
+    /**
+     *
+     *
+     */
     virtual SDL_Rect getBounds() = 0;
     
+    /**
+     *
+     *
+     */
     virtual void addSprite() = 0;
     
+    /**
+     *
+     *
+     */
     void setLocation(Vector2 location) {
         _location = location;
     }
     
+    /**
+     *
+     *
+     */
     Vector2 getLocation() {
         return _location;
     }
     
+    /**
+     *
+     *
+     */
     virtual bool isPotion() = 0;
     
+    /**
+     *
+     *
+     */
     SDL_Rect getRect() {
         return _rect;
     }
     
+    /**
+     *
+     *
+     */
     void setRect(SDL_Rect rect) {
         _rect = rect;
     }
@@ -111,10 +171,14 @@ protected:
     string _type;
     bool _isPotion;
     
-    // A pointer to the game.
+    /**
+     * Pointer to the game.
+     */
     Game *_game;
     
-    // Stats
+    /**
+     * Stats
+     */
     int _maxHealth;
     int _hp;
     int _attack;

@@ -13,7 +13,10 @@ Potion::Potion() {
 
 }
 
-
+/**
+ *
+ *
+ */
 SDL_Rect Potion::getBounds() {
     Vector2 unitPosition = getPosition();
     _bounds.x = unitPosition.x + 20;
@@ -24,7 +27,10 @@ SDL_Rect Potion::getBounds() {
     return _bounds;
 }
 
-
+/**
+ *
+ *
+ */
 void Potion::addSprite() {
     _sprite = new Sprite;
     _sprite->setResAnim(resources.getResAnim("potion"));
@@ -32,7 +38,10 @@ void Potion::addSprite() {
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
 }
 
-
+/**
+ *
+ *
+ */
 bool Potion::isPotion() {
     return true;
 }
@@ -52,7 +61,6 @@ void Potion::_init() {
 void Potion::_interact() {
     if (!isDead() && _game->getPlayer()->isDamaged()) {
         // add health to player
-//        _game->updateHealth(0.1f);
         _game->getPlayer()->updateHealth(2);
         
         // stop collision detection

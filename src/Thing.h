@@ -9,6 +9,10 @@ DECLARE_SMART(Thing, spThing);
 class Thing: public Unit {
     
 public:
+    /**
+     *
+     *
+     */
     Thing();
     
     /**

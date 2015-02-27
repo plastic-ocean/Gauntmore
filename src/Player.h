@@ -43,6 +43,34 @@ public:
     void attack();
     
     /**
+     *
+     */
+    int getAttack(){
+        return _attack;
+    };
+    
+    /**
+     *
+     */
+    void setAttack(int attack){
+        _attack = attack;
+    };
+    
+    /**
+     *
+     */
+    int getDefense(){
+        return _defense;
+    };
+    
+    /**
+     *
+     */
+    void setDefense(int defense){
+        _defense += defense;
+    };
+    
+    /**
      * Plays the move animation.
      *
      * @facing is a int. 0: up, 1: right, 2: down, 3: left

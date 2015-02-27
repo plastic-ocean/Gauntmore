@@ -9,21 +9,34 @@ class Gold: public Thing {
 public:
     Gold();
     
+    /**
+     *  Gets bounds of the unit Gold.
+     *  @return: SDL_Rect which is the bounds of Gold.
+     */
     SDL_Rect getBounds();
     
+    /**
+     * Adds sprite and attachs it to the game.
+     */
     virtual void addSprite();
     
+    /**
+     *  Method to determine whether unit is a Potion.
+     *  @return: false since the current unit is a Gold.
+     */
     virtual bool isPotion();
     
 private:
     int _value;
+    
     /**
-     * Initializes position and sprite of Gold. Called by Unit's init() method.
+     * Initializes a Gold position and sprite. Called by Unit's init() method.
      */
     void _init();
     
     /**
-     * Interaction method for Gold.
+     *  Adds gold value to the player's current total.
+     *  Removes sprite from the game.
      */
     void _interact();
         

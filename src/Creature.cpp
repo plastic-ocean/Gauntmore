@@ -13,7 +13,10 @@ Creature::Creature() {
     setType("creature");
 }
 
-
+/**
+ *
+ *
+ */
 void Creature::_setContents() {
     int randNum = rand() % 2;
     
@@ -27,6 +30,10 @@ void Creature::_setContents() {
     }
 }
 
+/**
+ *
+ *
+ */
 void Creature::_dropContents() {
     if (_contents) {
         _contents->init(getPosition(), _game);
@@ -64,7 +71,10 @@ void Creature::_init() {
 //    _sprite->setAnchor(Vector2(0.5f, 0.5f));
 }
 
-
+/**
+ *
+ *
+ */
 Vector2 Creature::moveMe() {
     const int DEADZONE = 0;
     Vector2 moveDir = {0,0};

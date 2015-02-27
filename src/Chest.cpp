@@ -1,6 +1,7 @@
 #include "Chest.h"
 #include "Gold.h"
 #include "Potion.h"
+#include "Armor.h"
 #include "Game.h"
 #include "Map.h"
 #include "KeyboardInput.h"
@@ -15,6 +16,10 @@
 Chest::Chest():_isOpen(false), _contents(0) {}
 
 
+/**
+ *  Gets bounds of a chest.
+ *  @return: SDL_Rect _bounds which is the bounds of a chest.
+ */
 SDL_Rect Chest::getBounds(){
     Vector2 unitPosition = getPosition();
     _bounds.x = unitPosition.x + 20;
@@ -25,15 +30,9 @@ SDL_Rect Chest::getBounds(){
     return _bounds;
 }
 
-
 /**
- * Initializes a Chest position and sprite. Called by Unit's init() method.
+ * Adds sprite and attachs it to the game.
  */
-void Chest::_init() {
-    addSprite();
-    _setContents();
-}
-
 void Chest::addSprite() {
     _sprite = new Sprite;
     _sprite->setResAnim(resources.getResAnim("chest"));
@@ -41,8 +40,20 @@ void Chest::addSprite() {
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
 }
 
+/**
+ *  Method to determine whether unit is a potion.
+ *  @returns false since the current unit is a chest.
+ */
 bool Chest::isPotion() {
     return false;
+}
+
+/**
+ * Initializes a Chest position and sprite. Called by Unit's init() method.
+ */
+void Chest::_init() {
+    addSprite();
+    _setContents();
 }
 
 /**
@@ -54,9 +65,7 @@ void Chest::_interact() {
         _isOpen = true;
         _dead = true;
         
-        // The chest is open, hide it with an alpha tween.
         _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-        
         
         _contents->init(getLocation(), _game);
         _contents->setLocation(getLocation());
@@ -64,11 +73,17 @@ void Chest::_interact() {
     }
 }
 
-//
+/**
+ *  Sets the contents of a chest to either a Potion or Gold.
+ */
 void Chest::_setContents() {
-    int randContents = rand() % 2;
+  //  int randContents = rand() % 3;
+    int randContents = 1;
     if (randContents == 0) {
         _contents = new Potion();
+    }
+    if (randContents == 1) {
+        _contents = new Armor();
     }
     else{
         _contents = new Gold();
@@ -81,6 +96,4 @@ void Chest::_setContents() {
  * @us is the UpdateStatus sent by Unit's update method.
  */
 void Chest::_update(const UpdateState &us) {
-//    Vector2 isOpen;
-    
 }
