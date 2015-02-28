@@ -25,13 +25,14 @@ public:
     void insertNode(PathNode*);
     PathNode &getMinNode();
     bool empty();
-    NodeArray theHeap;
+    void clearHeap();
     
 protected:
     void bubbleUp(int);
     void filterDown(int);
     void swap(int,int);
-    
+        NodeArray theHeap;
+
     
     
 };

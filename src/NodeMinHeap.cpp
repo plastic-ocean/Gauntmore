@@ -26,6 +26,14 @@ void NodeMinHeap::insertNode( PathNode *node ) {
     
 }
 
+void NodeMinHeap::clearHeap() {
+    NodeArray newArray = NodeArray();
+    
+    theHeap = newArray;
+    
+}
+
+
 PathNode &NodeMinHeap::getMinNode() { //the problem is here.
     
     PathNode temp = *theHeap.getFront();//copy head to temp

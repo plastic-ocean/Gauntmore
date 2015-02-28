@@ -38,6 +38,7 @@ PathFinder::~PathFinder() {
 
 vector<Vector2> PathFinder::aStar(Vector2 start, Vector2 finish ) {
     PathNode first = PathNode( start, 0, 0 );
+    openList.clearHeap();
     target = finish;
     source = start;
     vector<Vector2> outPath;

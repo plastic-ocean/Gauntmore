@@ -80,25 +80,29 @@ Vector2 Creature::moveMe() {
         return moveDir;//you are less than 64 pixels away, do nothing
     }
     //otherwise, check the movement Queue
-//    if ( moveQ.isEmpty() ) {
+    if ( moveQ.isEmpty() ) {
         std::cout << "moveQ is empty, attempting to fill it" << std::endl;
         moveQ.updatePath(findPath.aStar(cPos, pPos) );
-//    }
+    }
 
+    
+    
+    
+    
     
     //if the Q is NOT empty
         Vector2 nextSpot = moveQ.peekNext();//look at where you are going
-        if ( abs(pPos.x - nextSpot.x) <= 10 && abs(pPos.y - nextSpot.y) <= 10) {
+        if ( abs(cPos.x - nextSpot.x) <= 10 && abs(cPos.y - nextSpot.y) <= 10) {
             moveQ.updatePath(findPath.aStar(pPos, cPos) );
         }
             nextSpot = moveQ.peekNext();//start moving to the next spot
 //            cout << "next vector: " << nextSpot.x << " " << nextSpot.y << endl;
     
     
-    if ( (cPos.x - nextSpot.x) < 0 ) moveDir.x = 1;
-    if ( (cPos.x - nextSpot.x) > 0 ) moveDir.x = -1;
-    if ( (cPos.y - nextSpot.y) < 0 ) moveDir.y = 1;
-    if ( (cPos.y - nextSpot.y) > 0 ) moveDir.y = -1;
+    if ( (cPos.x - nextSpot.x) <= 0 ) moveDir.x = 1;
+    else if ( (cPos.x - nextSpot.x) > 0 ) moveDir.x = -1;
+    if ( (cPos.y - nextSpot.y) <= 0 ) moveDir.y = 1;
+    else if ( (cPos.y - nextSpot.y) > 0 ) moveDir.y = -1;
     
     return moveDir;
 }
