@@ -71,6 +71,9 @@ void KeyboardInput::_onEvent(Event *ev) {
             case SDLK_RETURN:
                 _game->getPlayer()->updateHealth(-1);
                 break;
+            case SDLK_ESCAPE:
+                core::requestQuit();
+                break;
             default:
                 break;
             }
