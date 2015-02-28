@@ -4,6 +4,7 @@
 #include "Thing.h"
 #include "Potion.h"
 #include "Gold.h"
+#include "Armor.h"
 
 using namespace std;
 
@@ -13,10 +14,21 @@ class Chest: public Thing {
 public:
     Chest();
     
+    /**
+     *  Gets bounds of a chest.
+     *  @return: A SDL_Rect which is the bounds of a chest.
+     */
     virtual SDL_Rect getBounds();
     
+    /**
+     * Adds sprite and attachs it to the game.
+     */
     virtual void addSprite();
     
+    /**
+     *  Method to determine whether unit is a potion.
+     *  @return: false since the current unit is a chest.
+     */
     virtual bool isPotion();
     
 private:
@@ -33,11 +45,13 @@ private:
      */
     void _interact();
     
+    /**
+     *  Sets the contents of a chest to either a Potion or Gold.
+     */
     void _setContents();
     
     /**
      * Updates the Chest every frame. Called by Units update() method.
-     *
      * @us is the UpdateStatus sent by Unit's update method.
      */
     void _update(const UpdateState &us);

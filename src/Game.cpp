@@ -20,6 +20,7 @@
 
 #include "HealthBar.h"
 #include "GoldCount.h"
+#include "ArmorCount.h"
 
 
 /**
@@ -47,7 +48,7 @@ Game::Game() {
     }
  
     // Create player
-    _player = new Player(10, 1, 1);
+    _player = new Player(10, 1, 0);
     _player->init(_getEntrance(), this);
     _map->getRoom()->getUnits()->push_back(_player);
 
@@ -59,6 +60,11 @@ Game::Game() {
     
     // Gold count
     _goldCount = new GoldCount(this);
+    
+    // Armor Count
+    _armorCount = new ArmorCount(this);
+
+    
 }
 
 
@@ -125,6 +131,7 @@ void Game::switchRoom(int edge) {
     // Update UI
     _healthBar->render();
     _goldCount->render();
+    _armorCount->render();
 }
 
 
@@ -167,8 +174,8 @@ bool Game::isExit(Vector2 position) {
 *
 * @num is the value to update by.
 */
-void Game::updateHealth(float num) {
-    _healthBar->updateHealth(num);
+void Game::updateHealth(float value) {
+    _healthBar->updateHealth(value);
 }
 
 
@@ -179,6 +186,15 @@ void Game::updateHealth(float num) {
 */
 void Game::updateGoldCount(int value) {
     _goldCount->updateGoldCount(value);
+}
+
+/**
+ * Updates the armor counter.
+ *
+ * @num is the value to update by.
+ */
+void Game::updateArmorCount(int value) {
+    _armorCount->updateArmorCount(value);
 }
 
 

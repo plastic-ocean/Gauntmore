@@ -29,14 +29,20 @@ void Unit::init(const Vector2 &pos, Game *game) {
 	_init();
 }
 
-
+/**
+ *  
+ *
+ */
 void Unit::attachUnit() {
     // Attach the Unit (as an Actor) to the game.
     _view = new Actor;
     _view->attachTo(_game);
 }
 
-
+/**
+ *
+ *
+ */
 void Unit::detachUnit() {
     _sprite->detach();
     _view->detach();
@@ -52,39 +58,6 @@ void Unit::detachUnit() {
  */
 void Unit::interact() {
     _interact();
-}
-
-
-/**
- * Gets the unit's position.
- *
- * @return the unit's position
- */
-const Vector2& Unit::getPosition() {
-    return _view->getPosition();
-}
-
-//SDL_Rect Unit::getBounds() {
-//    return _bounds;
-//}
-
-
-/**
- * Sets the unit's position.
- *
- * @position the position to set
- */
-void Unit::setPosition(const Vector2& position) {
-    _view->setPosition(position);
-}
-
-
-string Unit::getType() {
-    return _type;
-}
-
-void Unit::setType(string type) {
-    _type = type;
 }
 
 

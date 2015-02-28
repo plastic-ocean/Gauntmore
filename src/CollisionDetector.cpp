@@ -18,6 +18,7 @@ CollisionDetector::CollisionDetector() {}
  * @y is the sprite's y coordinate.
  * @h is the sprite's height.
  * @w is the sprite's width.
+ * @return: ture if there is a collision. false if not.
  */
 bool CollisionDetector::detectWalls(vector<SDL_Rect> tiles, int x, int y, int h, int w) {
     bool isCollision = false;
@@ -48,6 +49,7 @@ bool CollisionDetector::detectWalls(vector<SDL_Rect> tiles, int x, int y, int h,
  * @y is the sprite's y coordinate.
  * @h is the sprite's height.
  * @w is the sprite's width.
+ * @return: ture if there is a collision. false if not.
  */
 bool CollisionDetector::detectUnits(list<spUnit> *units, int x, int y, int h, int w) {
     bool isCollision = false;

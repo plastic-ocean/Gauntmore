@@ -13,7 +13,10 @@ Creature::Creature() {
     setType("creature");
 }
 
-
+/**
+ *
+ *
+ */
 void Creature::_setContents() {
     int randNum = rand() % 2;
     
@@ -27,6 +30,10 @@ void Creature::_setContents() {
     }
 }
 
+/**
+ *
+ *
+ */
 void Creature::_dropContents() {
     if (_contents) {
         _contents->init(getPosition(), _game);
@@ -65,12 +72,16 @@ void Creature::_init() {
 }
 
 
+/**
+ *
+ *
+ */
 //Vector2 Creature::moveMe() {
 //    const int DEADZONE = 0;
 //    Vector2 moveDir = {0,0};
 //    Vector2 pPos = _game->getPlayer()->getPosition();//player's position
 //    Vector2 cPos = getPosition();//creature's position
-//
+//    
 //    if ( abs(pPos.x - cPos.x) <= 64 && abs(pPos.y - cPos.y) <= 64 ) {
 //        return moveDir;//you are less than 64 pixels away, do nothing
 //    }
@@ -79,7 +90,7 @@ void Creature::_init() {
 //        std::cout << "moveQ is empty, attempting to fill it" << std::endl;
 //        moveQ.updatePath(findPath->aStar(pPos, cPos) );
 //    }
-//
+//        
 //    //if the Q is NOT empty
 //        Vector2 nextSpot = moveQ.peekNext();//look at where you are going
 //        if ( abs(pPos.x - nextSpot.x) <= 10 && abs(pPos.y - nextSpot.y) <= 10) {
@@ -87,12 +98,12 @@ void Creature::_init() {
 //
 //            nextSpot = moveQ.peekNext();//start moving to the next spot
 //        }
-//
+//    
 //    if ( (cPos.x - nextSpot.x) < -DEADZONE ) moveDir.x = 1;
 //    if ( (cPos.x - nextSpot.x) > DEADZONE ) moveDir.x = -1;
 //    if ( (cPos.y - nextSpot.y) < -DEADZONE ) moveDir.y = 1;
 //    if ( (cPos.y - nextSpot.y) > DEADZONE ) moveDir.y = -1;
-//
+//    
 //    return moveDir;
 //}
 

@@ -18,6 +18,7 @@ DECLARE_SMART(Slime, spSlime);
 
 DECLARE_SMART(HealthBar, spHealthBar);
 DECLARE_SMART(GoldCount, spGoldCount);
+DECLARE_SMART(ArmorCount, spArmorCount);
 
 DECLARE_SMART(Chest, spChest);
 DECLARE_SMART(Gold, spGold);
@@ -55,7 +56,7 @@ public:
      *
      * @num is the value to update by.
      */
-    void updateHealth(float num);
+    void updateHealth(float value);
 
     /**
      * Updates the gold counter.
@@ -63,6 +64,13 @@ public:
      * @num is the value to update by.
      */
     void updateGoldCount(int value);
+    
+    /**
+     * Updates the armor counter.
+     *
+     * @num is the value to update by.
+     */
+    void updateArmorCount(int value);
 
 
     /* Getters and Setters */
@@ -110,6 +118,8 @@ protected:
     
     spHealthBar _healthBar;
     spGoldCount _goldCount;
+    spArmorCount _armorCount;
+    
     
     /**
      * Updates the player each frame. A virtual method of Actor it is being called each frame.

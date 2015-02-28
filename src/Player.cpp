@@ -40,6 +40,7 @@ SDL_Rect Player::getBounds() {
 
 /**
  * Get the current facing.
+ * @return: _facing
  */
 Player::Facing Player::getFacing() {
     return _facing;

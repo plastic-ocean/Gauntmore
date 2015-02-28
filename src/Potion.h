@@ -7,12 +7,28 @@ DECLARE_SMART(Potion, spPotion);
 class Potion: public Thing {
     
 public:
+    /**
+     *
+     *
+     */
     Potion();
     
+    /**
+     *
+     *
+     */
     SDL_Rect getBounds();
     
+    /**
+     *
+     *
+     */
     virtual void addSprite();
     
+    /**
+     *
+     *
+     */
     virtual bool isPotion();
     
 private:

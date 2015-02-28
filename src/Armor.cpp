@@ -1,19 +1,27 @@
-#include "Gold.h"
-#include "res.h"
-#include "Game.h"
+//
+//  Armor.cpp
+//  gauntmore_macosx
+//
+//  Created by Steven Warren on 2/26/15.
+//  Copyright (c) 2015 oxygine. All rights reserved.
+//
 
+#include "Armor.h"
+#include "res.h"
+#include "game.h"
+#include "Player.h"
 
 /**
  *  Constructor.
  */
-Gold::Gold():_value(10) {
+Armor::Armor():_value(1) {
 }
 
 /**
  *  Gets bounds of the unit Gold.
  *  @return: SDL_Rect _bounds which is the bounds of Gold.
  */
-SDL_Rect Gold::getBounds() {
+SDL_Rect Armor::getBounds() {
     Vector2 unitPosition = getPosition();
     _bounds.x = unitPosition.x + 20;
     _bounds.y = unitPosition.y + 15;
@@ -26,9 +34,9 @@ SDL_Rect Gold::getBounds() {
 /**
  * Adds sprite and attachs it to the game.
  */
-void Gold::addSprite() {
+void Armor::addSprite() {
     _sprite = new Sprite;
-    _sprite->addTween(TweenAnim(resources.getResAnim("gold")), 500, -1);;
+    _sprite->addTween(TweenAnim(resources.getResAnim("armor")), 500, -1);;
     _sprite->attachTo(_view);
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
 }
@@ -37,14 +45,14 @@ void Gold::addSprite() {
  *  Method to determine whether unit is a Potion.
  *  @returns false since the current unit is Gold.
  */
-bool Gold::isPotion() {
+bool Armor::isPotion() {
     return false;
 }
 
 /**
  * Initializes a Gold position and sprite. Called by Unit's init() method.
  */
-void Gold::_init() {
+void Armor::_init() {
     addSprite();
 }
 
@@ -52,12 +60,21 @@ void Gold::_init() {
  *  Adds gold value to the player's current total.
  *  Removes sprite from the game.
  */
-void Gold::_interact() {
+void Armor::_interact() {
     if (!isDead()) {
-        _game->updateGoldCount(_value);
+        
+         cout << "_value: " << _value << endl;
+        
+        cout << "Defense: " << _game->getPlayer()->getDefense() << endl;
+      
+        _game->getPlayer()->setDefense(_value);
+        _game->updateArmorCount(_value);
+        
+        
+        cout << "Defense: " << _game->getPlayer()->getDefense() << endl;
         
         // remove sprite
-        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
+        _view->addTween(Actor::TweenAlpha(0), 1500)->setDetachActor(true);
         _dead = true;
     }
 }
@@ -66,5 +83,6 @@ void Gold::_interact() {
  *
  *
  */
-void Gold::_update(const UpdateState &us) {
+void Armor::_update(const UpdateState &us) {
+   
 }

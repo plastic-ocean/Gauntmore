@@ -9,7 +9,7 @@ DECLARE_SMART(Unit, spUnit);
 class Unit: public Object {
     
 public:
-	Unit();
+    Unit();
     
     /**
      * Initializes a unit. When initializing any child this is the called method.
@@ -20,8 +20,16 @@ public:
      */
     void init(const Vector2 &pos, Game *game);
     
+    /**
+     *
+     *
+     */
     void attachUnit();
     
+    /**
+     *
+     *
+     */
     void detachUnit();
     
     /**
@@ -29,25 +37,51 @@ public:
      *
      */
     void interact();
+
+    /**
+     * Calls the overloaded _update method in children.
+     */
+    void update(const UpdateState &us);
+    
+    
+    /* Getters and Setters */
+    
+    
+    
     
     /**
      * Gets the unit's position.
      *
-     * @return the unit's position.
+     * @return the unit's position
      */
-    const Vector2& getPosition();
+    const Vector2& getPosition() {
+        return _view->getPosition();
+    }
     
     /**
      * Sets the unit's position.
      *
      * @position the position to set
      */
-    void setPosition(const Vector2& position);
-
+    void setPosition(const Vector2& position) {
+        _view->setPosition(position);
+    }
+    
     /**
-     * Calls the overloaded _update method in children.
+     *
+     *
      */
-    void update(const UpdateState &us);
+    string getType() {
+        return _type;
+    }
+    
+    /**
+     *
+     *
+     */
+    void setType(string type) {
+        _type = type;
+    }
     
     /**
      * Check for unit death.
@@ -58,46 +92,89 @@ public:
         return _dead;
     }
 
+    /**
+     *
+     *
+     */
     int getHp() {
         return _hp;
     }
 
+    /**
+     *
+     *
+     */
     int getAttack() {
         return _attack;
     }
 
+    /**
+     *
+     *
+     */
     int getDefense() {
         return _defense;
     }
     
-    string getType();
-    
-    void setType(string type);
-    
+    /**
+     *
+     *
+     */
+
     void setLocation(Vector2 location) {
         _location = location;
     }
     
+    /**
+     *
+     *
+     */
     Vector2 getLocation() {
         return _location;
     }
+    
+    /**
+     *
+     *
+     */
     
     SDL_Rect getRect() {
         return _rect;
     }
     
+    /**
+     *
+     *
+     */
     void setRect(SDL_Rect rect) {
         _rect = rect;
     }
-
-
+    
+    
     /* Virtual Methods */
-
-    virtual SDL_Rect getBounds() = 0;
-
-    virtual void addSprite() = 0;
-
+    
+    /**
+     * Reduces the Unit's hit points. Overload this for each child.
+     */
+    virtual void damage(){}
+    
+    /**
+     *
+     *
+     */
     virtual bool isPotion() = 0;
+    
+    /**
+     *
+     *
+     */
+    virtual SDL_Rect getBounds() = 0;
+    
+    /**
+     *
+     *
+     */
+    virtual void addSprite() = 0;
 
 protected:
     Vector2 _location;
@@ -109,10 +186,14 @@ protected:
     string _type;
     bool _isPotion;
     
-    // A pointer to the game.
+    /**
+     * Pointer to the game.
+     */
     Game *_game;
     
-    // Stats
+    /**
+     * Stats
+     */
     int _maxHealth;
     int _hp;
     int _attack;

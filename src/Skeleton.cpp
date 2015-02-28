@@ -7,7 +7,10 @@
  */
 Skeleton::Skeleton():_contents(0) {}
 
-
+/**
+ *
+ *
+ */
 SDL_Rect Skeleton::getBounds(){
     Vector2 unitPosition = getPosition();
     _bounds.x = unitPosition.x + 20;
@@ -18,7 +21,10 @@ SDL_Rect Skeleton::getBounds(){
     return _bounds;
 }
 
-
+/**
+ *
+ *
+ */
 bool Skeleton::isPotion() {
     return false;
 }
@@ -42,7 +48,10 @@ void Skeleton::_init() {
     _setContents();
 }
 
-
+/**
+ *
+ *
+ */
 void Skeleton::_interact() {
     _hp--;
     if (_hp == 0) {

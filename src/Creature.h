@@ -29,18 +29,31 @@ public:
     
 protected:
     spThing _contents;
+    
 //    spPathFinder findPath;
 //    CreatureMover moveQ;
-//
-//    Vector2 moveMe();
+    
+    /**
+     *
+     *
+     */
+    Vector2 moveMe();
     
     /**
      * Initializes a creatures position and sprite. Called by Unit's init() method.
      */
     void _init();
     
+    /**
+     *
+     *
+     */
     void _setContents();
     
+    /**
+     *
+     *
+     */
     void _dropContents();
     
     /**

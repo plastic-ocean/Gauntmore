@@ -63,6 +63,8 @@
 		53B46C7A1A9E476900915203 /* PathNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53B46C791A9E476900915203 /* PathNode.cpp */; };
 		53BCF11B1A8ED99F00BD6288 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53BCF1171A8ED99F00BD6288 /* GameScene.cpp */; };
 		53BCF11C1A8ED99F00BD6288 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53BCF1191A8ED99F00BD6288 /* Scene.cpp */; };
+		9083BCF81AA1098F00D53A4D /* ArmorCount.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9083BCF61AA1098F00D53A4D /* ArmorCount.cpp */; };
+		908A75FD1A9FE03500162B36 /* Armor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 908A75FB1A9FE03500162B36 /* Armor.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -239,6 +241,10 @@
 		53BCF1181A8ED99F00BD6288 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = src/GameScene.h; sourceTree = "<group>"; };
 		53BCF1191A8ED99F00BD6288 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Scene.cpp; path = src/Scene.cpp; sourceTree = "<group>"; };
 		53BCF11A1A8ED99F00BD6288 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Scene.h; path = src/Scene.h; sourceTree = "<group>"; };
+		9083BCF61AA1098F00D53A4D /* ArmorCount.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ArmorCount.cpp; path = src/ArmorCount.cpp; sourceTree = "<group>"; };
+		9083BCF71AA1098F00D53A4D /* ArmorCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArmorCount.h; path = src/ArmorCount.h; sourceTree = "<group>"; };
+		908A75FB1A9FE03500162B36 /* Armor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Armor.cpp; path = src/Armor.cpp; sourceTree = "<group>"; };
+		908A75FC1A9FE03500162B36 /* Armor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Armor.h; path = src/Armor.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -417,6 +423,8 @@
 				539584411A99A42D0080A994 /* GoldCount.h */,
 				539584441A99A42D0080A994 /* HealthBar.cpp */,
 				539584451A99A42D0080A994 /* HealthBar.h */,
+				9083BCF61AA1098F00D53A4D /* ArmorCount.cpp */,
+				9083BCF71AA1098F00D53A4D /* ArmorCount.h */,
 			);
 			name = hud;
 			sourceTree = "<group>";
@@ -455,6 +463,8 @@
 				539584571A99A42D0080A994 /* Thing.h */,
 				539584591A99A42D0080A994 /* Unit.cpp */,
 				5395845A1A99A42D0080A994 /* Unit.h */,
+				908A75FB1A9FE03500162B36 /* Armor.cpp */,
+				908A75FC1A9FE03500162B36 /* Armor.h */,
 			);
 			name = units;
 			sourceTree = "<group>";
@@ -635,6 +645,7 @@
 				532878A61A99A6EB00228299 /* TmxPolygon.cpp in Sources */,
 				539584651A99A42D0080A994 /* Player.cpp in Sources */,
 				5395845C1A99A42D0080A994 /* Creature.cpp in Sources */,
+				908A75FD1A9FE03500162B36 /* Armor.cpp in Sources */,
 				5395845E1A99A42D0080A994 /* GoldCount.cpp in Sources */,
 				532878A71A99A6EB00228299 /* TmxPolyline.cpp in Sources */,
 				532878A01A99A6EB00228299 /* TmxImage.cpp in Sources */,
@@ -646,6 +657,7 @@
 				532878A11A99A6EB00228299 /* TmxImageLayer.cpp in Sources */,
 				5395846B1A99A42D0080A994 /* Unit.cpp in Sources */,
 				53B46C731A9E44EC00915203 /* NodeMinHeap.cpp in Sources */,
+				9083BCF81AA1098F00D53A4D /* ArmorCount.cpp in Sources */,
 				5359D5991A96C6E600AE6365 /* Gauntmore.cpp in Sources */,
 				5395845D1A99A42D0080A994 /* Gold.cpp in Sources */,
 				5328789E1A99A6EB00228299 /* tinyxml2.cpp in Sources */,
