@@ -48,7 +48,7 @@ const int PathNode::getTotal()  {
     return total;
 }
 void PathNode::setCost( int cost ) {
-    this->cost = cost; //I still dont like this much
+    this->cost = cost;
 }
 
 void PathNode::setLocation( Vector2 location ) {
@@ -69,6 +69,3 @@ PathNode* PathNode::getParent() {
 void PathNode::setParent( PathNode *parent ) {
     this->parent = parent;
 }
-//bool PathNode::operator>(PathNode &node ) {
-//    return this->cost > node.cost;
-//}

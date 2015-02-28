@@ -33,21 +33,4 @@ private:
     
 };
 
-
-
-/*
- push back
- pop back
- is empty
- 
- setFront
- getFront
- getBack
- getSize
- swap(int, int)
- 
- */
-
-
-
 #endif /* defined(__gauntmore_macosx__NodeArray__) */

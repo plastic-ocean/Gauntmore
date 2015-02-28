@@ -44,22 +44,19 @@ vector<Vector2> PathFinder::aStar(Vector2 start, Vector2 finish ) {
     vector<Vector2> outPath;
     openList.insertNode(&first);//add start to heap
     
-//    PathNode testTemp = openList.getMinNode();
-//    cout << "total of min node: " << testTemp.getTotal();
-    
     while ( !openList.empty() ) {
         
         PathNode temp = openList.getMinNode();//pop smallest from heap
         outPath.push_back(temp.getLocation() );
         if ( atExit(temp) ) {//are we at the exit?
-            cout << "we found a path. maybe" << endl;
            return outPath;
             
         }
-        
         addNode( &temp );//put node in closed list
+        
         scanSurround( &temp );//add surrounding nodes to open list
     }
+    
     //if you got here, there is no path to the target.
     vector<Vector2> nullVector;
     return nullVector;
@@ -83,8 +80,7 @@ void PathFinder::scanSurround( PathNode *node ) {
     temp.y -=(int) mapSize;
     int summ = 12;//something more clever goes here
     int flip = -2;
-        //check for collision
-        //check for existence in closedList
+    
     for ( int i = 0; i < 3; i++ ) {
         for ( int j = 0; j < 3; j++ ) {
             flip *= (-1);

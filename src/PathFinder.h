@@ -12,22 +12,14 @@
 #include <stdio.h>
 #include <queue>
 #include "NodeMinHeap.h"
-//#include "Game.h"
-//#include "Map.h"
 #include "PathNode.h"
-//#include "GreaterThan.h"
 
-//class NodeMinHeap;
-//class PathNode;
-//DECLARE_SMART(PathFinder, spPathFinder);
 class PathFinder : public Object {
-    
-    
 public:
     PathFinder();
     ~PathFinder();
     int findHeuristic( Vector2 );
-    vector<Vector2> aStar( Vector2, Vector2 );                       //***  what should this return?  ***
+    vector<Vector2> aStar( Vector2, Vector2 );
     Vector2 nextMove(Vector2, Vector2);
     
     

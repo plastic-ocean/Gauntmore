@@ -14,9 +14,6 @@
 #include "PathNode.h"
 #include "NodeArray.h"
 
-
-//#include "Game.h"
-//class PathNode;
 class NodeMinHeap {
 public:
     NodeMinHeap();
