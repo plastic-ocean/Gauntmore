@@ -45,7 +45,7 @@ const int PathNode::getCost() {
     return this->cost;
 }
 const int PathNode::getTotal()  {
-    return cost + heuristic;
+    return total;
 }
 void PathNode::setCost( int cost ) {
     this->cost = cost; //I still dont like this much
@@ -62,8 +62,8 @@ void PathNode::setHeuristic( int heuristic ) {
 void PathNode::calculateTotal() {
     this->total = cost + heuristic;
 }
-PathNode PathNode::getParent() {
-    return *parent;
+PathNode* PathNode::getParent() {
+    return this->parent;
 }
 
 void PathNode::setParent( PathNode *parent ) {

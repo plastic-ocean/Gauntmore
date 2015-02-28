@@ -40,7 +40,7 @@ vector<Vector2> PathFinder::aStar(Vector2 start, Vector2 finish ) {
     PathNode first = PathNode( start, 0, 0 );
     target = finish;
     source = start;
-    
+    vector<Vector2> outPath;
     openList.insertNode(&first);//add start to heap
     
 //    PathNode testTemp = openList.getMinNode();
@@ -48,10 +48,11 @@ vector<Vector2> PathFinder::aStar(Vector2 start, Vector2 finish ) {
     
     while ( !openList.empty() ) {
         
-        PathNode temp = *openList.getMinNode();//pop smallest from heap
+        PathNode temp = openList.getMinNode();//pop smallest from heap
+        outPath.push_back(temp.getLocation() );
         if ( atExit(temp) ) {//are we at the exit?
             cout << "we found a path. maybe" << endl;
-           return makePath( temp );
+           return outPath;
             
         }
         
@@ -65,7 +66,7 @@ vector<Vector2> PathFinder::aStar(Vector2 start, Vector2 finish ) {
 }
 
 void PathFinder::addNode(PathNode *node) {
-    closedList[loc++] = *node;
+    closedList[loc++] = node;
 }
 
 
@@ -77,8 +78,8 @@ int PathFinder::findHeuristic( Vector2 curLoc ) {
 
 void PathFinder::scanSurround( PathNode *node ) {
     Vector2 temp = node->getLocation() ;
-    temp.x -= mapSize;
-    temp.y -= mapSize;
+    temp.x -=(int) mapSize;
+    temp.y -=(int) mapSize;
     int summ = 12;//something more clever goes here
     int flip = -2;
         //check for collision
@@ -118,7 +119,7 @@ bool PathFinder::atExit( PathNode node ) {
 bool PathFinder::inClosedList( PathNode node ) {
     int size = loc;
     for (int i = 0; i<size;i++ ) {
-        if ( closedList[i].getLocation() == node.getLocation() ) return true;
+        if ( closedList[i]->getLocation() == node.getLocation() ) return true;
     }
     return false;
     
@@ -130,7 +131,7 @@ vector<Vector2> PathFinder::makePath(PathNode node ) {
 
     while (node.getLocation() != source ) {
         tempVect.push_back( node.getLocation() );
-        node = node.getParent();
+        node = *node.getParent();
         }
     return tempVect;
 }

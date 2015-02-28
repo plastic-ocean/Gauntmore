@@ -52,9 +52,9 @@ int NodeArray::getSize() {
 }
 
 void NodeArray::swap(int a, int b) {
-    PathNode *temp = &theHeap[a];
+    PathNode temp = theHeap[a];
     theHeap[a] = theHeap[b];
-    theHeap[b] = *temp;
+    theHeap[b] = temp;
 }
 
 bool NodeArray::compare(int a, int b) {

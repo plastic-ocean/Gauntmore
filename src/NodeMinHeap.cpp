@@ -26,14 +26,14 @@ void NodeMinHeap::insertNode( PathNode *node ) {
     
 }
 
-PathNode* NodeMinHeap::getMinNode() {
+PathNode &NodeMinHeap::getMinNode() { //the problem is here.
     
     PathNode temp = *theHeap.getFront();//copy head to temp
     theHeap.setFront(theHeap.pop_back() );//copy last to head
 //    theHeap.pop_back();//remove last
     filterDown(0);//fix heap
     
-    return &temp;//return old head
+    return temp;//return old head
 }
 
 

@@ -28,7 +28,7 @@ public:
     void calculateTotal();
     void setLocation(Vector2);
     //    bool operator>(  PathNode& node );
-    PathNode getParent();
+    PathNode* getParent();
     void setParent(PathNode*);
     
 private:
