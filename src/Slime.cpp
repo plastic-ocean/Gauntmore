@@ -6,6 +6,10 @@
  * Constructor
  */
 Slime::Slime() {
+    // Initialize the stats.
+    _hp = 3;
+    _attack = 1;
+    _defense = 0;
     
 }
 
@@ -23,6 +27,7 @@ SDL_Rect Slime::getBounds() {
     return _bounds;
 }
 
+
 /**
  *
  *
@@ -30,24 +35,19 @@ SDL_Rect Slime::getBounds() {
 bool Slime::isPotion() {
     return false;
 }
-
-
-/**
- * Initializes a creatures position and sprite. Called by Unit's init() method.
- */
-void Slime::_init() {
-    // Initialize the stats.
-    _hp = 3;
-    _attack = 1;
-    _defense = 0;
     
+void Slime::damage() {
+
+    
+}
+
+void Slime::addSprite() {
     // Add sprite to the game scene view.
     _sprite = new Sprite;
     _sprite->setResAnim(resources.getResAnim("slime_down"));
     _sprite->attachTo(_view);
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
     
-    _setContents();
 }
 
 
@@ -74,6 +74,7 @@ void Slime::_init() {
 //}
 
 
+
 /**
  * Plays the move animation.
  */
@@ -98,6 +99,17 @@ void Slime::_init() {
 //}
 
 
+/**
+ * Initializes a creatures position and sprite. Called by Unit's init() method.
+ */
+void Slime::_init() {
+    
+    addSprite();
+    
+    _setContents();
+}
+
+
 void Slime::_interact() {
     _hp--;
     if (_hp == 0) {
@@ -115,13 +127,16 @@ void Slime::_interact() {
  * @us is the UpdateStatus sent by Unit's update method.
  */
 void Slime::_update(const UpdateState &us) {
-//    Vector2 direction = moveMe();
-
-
-    // look around
-    // if player is adjacent to creature:
-    //     turn to face player
-    //     attack player
-    // else:
-    //     move toward player
+//    cout << "creature update" << endl;
+    Vector2 direction = moveMe();
+    Vector2 positionOld = getPosition();
+    Vector2 position = getPosition();
+    position += direction * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
+    
+    if (position != positionOld) {
+        setPosition(position);
+    } else {
+        
+    }
+    
 }

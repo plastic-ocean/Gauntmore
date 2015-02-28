@@ -28,8 +28,13 @@ public:
      */
     virtual bool isPotion();
     
+    virtual void damage();
+    
+    void addSprite();
+    
 private:
     spThing _contents;
+    int _speed = 100;
     
     /**
      * Initializes position and sprite of Chest. Called by Unit's init() method.
