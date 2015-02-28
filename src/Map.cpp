@@ -21,7 +21,9 @@ Map::Map(int size) {
 
 //    _room = new Room(turn, 15, {true, true, false, false});
 
-    _room->createTileMap();
+    string tmxFile = _getTmxFile();
+
+    _room->createTileMap(tmxFile);
 }
 
 
@@ -42,7 +44,33 @@ void Map::changeRoom(int edge) {
         default:
             break;
     }
-
+    
     setRoom(_roomMap[_row][_col]);
-    _room->createTileMap();
+
+    string tmxFile = _getTmxFile();
+    _room->createTileMap(tmxFile);
+}
+
+
+/**
+* Checks if the current room is an outside room.
+*
+* @return a file string.
+*/
+string Map::_getTmxFile() {
+    string tmxFile = "";
+    if (_row == 0) {
+        // top
+        tmxFile = "tmx/outside_top.tmx";
+    } else if (_col == _room->getSize() - 1) {
+        // right
+        tmxFile = "tmx/outside_right.tmx";
+    } else if (_row == _room->getSize() - 1) {
+        // bottom
+        tmxFile = "tmx/outside_bottom.tmx";
+    } else if (_col == 0) {
+        // left
+        tmxFile = "tmx/outside_left.tmx";
+    }
+    return tmxFile;
 }

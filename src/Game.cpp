@@ -192,6 +192,7 @@ void Game::doUpdate(const UpdateState &us) {
     // Iterate through the unit list and call their update method. Then check for death.
     for (list<spUnit>::iterator i = units->begin(); i != units->end(); ) {
         spUnit unit = *i;
+//        cout << unit->getType() << endl;
         unit->update(us);
         if (unit->isDead()) {
             // If it is dead remove it from list.
@@ -211,7 +212,7 @@ void Game::doUpdate(const UpdateState &us) {
 void Game::_renderMap() {
     _tileMap = new Tmx::Map();
     
-    _tileMap->ParseFile("tmx/outside_left.tmx");
+    _tileMap->ParseFile("tmx/room.tmx");
     
     for (int i = 0; i < _tileMap->GetNumLayers(); ++i) {
         // Get a layer.

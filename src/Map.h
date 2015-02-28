@@ -23,8 +23,8 @@ public:
         return _room;
     }
 
-    void setRoom(spRoom &_room) {
-        Map::_room = _room;
+    void setRoom(spRoom &room) {
+        _room = room;
     }
 
     vector<vector<spRoom>> getRoomMap() {
@@ -60,4 +60,10 @@ private:
     int _col;
     int _row;
 
+    /**
+    * Checks if the current room is an outside room.
+    *
+    * @return a file string.
+    */
+    string _getTmxFile();
 };

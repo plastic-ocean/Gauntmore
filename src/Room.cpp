@@ -6,7 +6,7 @@
 
 using namespace std;
 
-enum RoomType {deadend, straight, turn, branch, intersection, empty};
+enum RoomType {deadend, straight, turn, branch, intersection, outsideTop, outsideRight, outsideBottom, outsideLeft};
 
 Room::Room() {}
 
@@ -59,14 +59,37 @@ void Room::createRoom() {
         case intersection:
             _createIntersection();
             break;
-        case empty:
-            _createEmpty();
+        case outsideTop:
+            setEntrance(Vector2(6, _size - 2));
+            _top = 6;
+            _right = 6;
+            _bottom = 6;
+            _left = 6;
+            break;
+        case outsideRight:
+            setEntrance(Vector2(1, 6));
+            _top = 6;
+            _right = 6;
+            _bottom = 6;
+            _left = 6;
+            break;
+        case outsideBottom:
+            setEntrance(Vector2(6, 1));
+            _top = 6;
+            _right = 6;
+            _bottom = 6;
+            _left = 6;
+            break;
+        case outsideLeft:
+            setEntrance(Vector2(_size - 2, 6));
+            _top = 6;
+            _right = 6;
+            _bottom = 6;
+            _left = 6;
             break;
         default:
             break;
     }
-
-    createTileMap();
 //    printMap();
 }
 
@@ -74,42 +97,46 @@ void Room::createRoom() {
 /**
 * Creates a tile map (.tmx file) from the 2D map array.
 */
-void Room::createTileMap() {
-    ofstream tmxFile;
-    tmxFile.open("tmx/room.tmx");
+void Room::createTileMap(string file) {
+    if (_type != outsideTop && _type != outsideRight && _type != outsideBottom && _type != outsideLeft) {
+        ofstream tmxFile;
+        tmxFile.open("tmx/room.tmx");
 
-    if (tmxFile.is_open()) {
-        tmxFile << "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" << endl;
-        tmxFile << "<map version=\"1.0\" orientation=\"orthogonal\" renderorder=\"right-down\" width=\"" << _size << "\" height=\"" << _size << "\" tilewidth=\"" << tileSize << "\" tileheight=\"" << tileSize << "\" nextobjectid=\"1\">" << endl;
-        tmxFile << " <tileset firstgid=\"1\" name=\"floor\" tilewidth=\"" << tileSize << "\" tileheight=\"" << tileSize << "\">" << endl;
-        tmxFile << "  <image source=\"data/tmx/floor.png\" width=\"" << tileSize << "\" height=\"" << tileSize << "\"/>" << endl;
-        tmxFile << " </tileset>" << endl;
-        tmxFile << " <tileset firstgid=\"2\" name=\"wall\" tilewidth=\"" << tileSize << "\" tileheight=\"" << tileSize << "\">" << endl;
-        tmxFile << "  <image source=\"data/tmx/wall.png\" width=\"" << tileSize << "\" height=\"" << tileSize << "\"/>" << endl;
-        tmxFile << " </tileset>" << endl;
-        tmxFile << " <layer name=\"Tile Layer 1\" width=\"" << _size << "\" height=\"" << _size << "\">" << endl;
-        tmxFile << "  <data>" << endl;
+        if (tmxFile.is_open()) {
+            tmxFile << "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" << endl;
+            tmxFile << "<map version=\"1.0\" orientation=\"orthogonal\" renderorder=\"right-down\" width=\"" << _size << "\" height=\"" << _size << "\" tilewidth=\"" << tileSize << "\" tileheight=\"" << tileSize << "\" nextobjectid=\"1\">" << endl;
+            tmxFile << " <tileset firstgid=\"1\" name=\"floor\" tilewidth=\"" << tileSize << "\" tileheight=\"" << tileSize << "\">" << endl;
+            tmxFile << "  <image source=\"data/tmx/floor.png\" width=\"" << tileSize << "\" height=\"" << tileSize << "\"/>" << endl;
+            tmxFile << " </tileset>" << endl;
+            tmxFile << " <tileset firstgid=\"2\" name=\"wall\" tilewidth=\"" << tileSize << "\" tileheight=\"" << tileSize << "\">" << endl;
+            tmxFile << "  <image source=\"data/tmx/wall.png\" width=\"" << tileSize << "\" height=\"" << tileSize << "\"/>" << endl;
+            tmxFile << " </tileset>" << endl;
+            tmxFile << " <layer name=\"Tile Layer 1\" width=\"" << _size << "\" height=\"" << _size << "\">" << endl;
+            tmxFile << "  <data>" << endl;
 
-        for (int i = 0; i < _size; ++i) {
-            for (int j = 0; j < _size; ++j) {
-                if (_map[i][j] == '@') {
-                    // Add a wall tile.
-                    tmxFile << "   <tile gid=\"2\"/>" << endl;
-                } else {
-                    // Add a floor tile.
-                    tmxFile << "   <tile gid=\"1\"/>" << endl;
+            for (int i = 0; i < _size; ++i) {
+                for (int j = 0; j < _size; ++j) {
+                    if (_map[i][j] == '@') {
+                        // Add a wall tile.
+                        tmxFile << "   <tile gid=\"2\"/>" << endl;
+                    } else {
+                        // Add a floor tile.
+                        tmxFile << "   <tile gid=\"1\"/>" << endl;
+                    }
                 }
             }
+
+            tmxFile << "  </data>" << endl;
+            tmxFile << " </layer>" << endl;
+            tmxFile << "</map>" << endl;
+        } else {
+            cerr << "Unable to open tmx file." << endl;
         }
 
-        tmxFile << "  </data>" << endl;
-        tmxFile << " </layer>" << endl;
-        tmxFile << "</map>" << endl;
+        tmxFile.close();
     } else {
-        cerr << "Unable to open tmx file." << endl;
+        _createOutsideTileMap(file);
     }
-
-    tmxFile.close();
 }
 
 
@@ -124,6 +151,20 @@ void Room::printMap() {
         }
         cout << endl;
     }
+}
+
+
+/**
+*  Copies one of the outside tile maps (.tmx) to room.tmx.
+*/
+void Room::_createOutsideTileMap(string tmxFile) {
+    ifstream source(tmxFile, ios::binary);
+    ofstream destination("tmx/room.tmx", ios::binary);
+
+    destination << source.rdbuf();
+
+    source.close();
+    destination.close();
 }
 
 

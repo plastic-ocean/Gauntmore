@@ -84,15 +84,18 @@
  <tileset firstgid="28" name="cave_entrance_right" tilewidth="64" tileheight="64">
   <image source="../../../LPC/outside/cave_entrance_right.png" width="64" height="64"/>
  </tileset>
- <tileset firstgid="29" name="cave_wall_left_tree" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/cave_wall_left_tree.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="30" name="cave_wall_right_tree" tilewidth="64" tileheight="64">
+ <tileset firstgid="29" name="cave_wall_right_tree" tilewidth="64" tileheight="64">
   <image source="../../../LPC/outside/cave_wall_right_tree.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="30" name="cave_entrance_right" tilewidth="64" tileheight="64">
+  <image source="../../../LPC/outside/cave_entrance_right.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="31" name="cave_wall_right" tilewidth="64" tileheight="64">
+  <image source="../../../LPC/outside/cave_wall_right.png" width="64" height="64"/>
  </tileset>
  <layer name="Tile Layer 1" width="13" height="13">
   <data>
-   <tile gid="25"/>
+   <tile gid="11"/>
    <tile gid="23"/>
    <tile gid="24"/>
    <tile gid="22"/>
@@ -104,8 +107,8 @@
    <tile gid="23"/>
    <tile gid="24"/>
    <tile gid="22"/>
-   <tile gid="13"/>
-   <tile gid="25"/>
+   <tile gid="31"/>
+   <tile gid="8"/>
    <tile gid="3"/>
    <tile gid="1"/>
    <tile gid="2"/>
@@ -117,8 +120,8 @@
    <tile gid="2"/>
    <tile gid="3"/>
    <tile gid="2"/>
-   <tile gid="12"/>
-   <tile gid="25"/>
+   <tile gid="31"/>
+   <tile gid="11"/>
    <tile gid="3"/>
    <tile gid="2"/>
    <tile gid="3"/>
@@ -130,8 +133,8 @@
    <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="1"/>
-   <tile gid="13"/>
-   <tile gid="25"/>
+   <tile gid="31"/>
+   <tile gid="8"/>
    <tile gid="3"/>
    <tile gid="2"/>
    <tile gid="3"/>
@@ -143,8 +146,8 @@
    <tile gid="3"/>
    <tile gid="3"/>
    <tile gid="1"/>
-   <tile gid="12"/>
-   <tile gid="25"/>
+   <tile gid="31"/>
+   <tile gid="11"/>
    <tile gid="2"/>
    <tile gid="1"/>
    <tile gid="1"/>
@@ -156,8 +159,8 @@
    <tile gid="3"/>
    <tile gid="1"/>
    <tile gid="1"/>
-   <tile gid="13"/>
-   <tile gid="25"/>
+   <tile gid="31"/>
+   <tile gid="8"/>
    <tile gid="2"/>
    <tile gid="3"/>
    <tile gid="2"/>
@@ -169,8 +172,8 @@
    <tile gid="2"/>
    <tile gid="3"/>
    <tile gid="1"/>
-   <tile gid="12"/>
-   <tile gid="27"/>
+   <tile gid="31"/>
+   <tile gid="11"/>
    <tile gid="1"/>
    <tile gid="2"/>
    <tile gid="2"/>
@@ -182,8 +185,8 @@
    <tile gid="3"/>
    <tile gid="3"/>
    <tile gid="1"/>
-   <tile gid="13"/>
-   <tile gid="25"/>
+   <tile gid="30"/>
+   <tile gid="8"/>
    <tile gid="1"/>
    <tile gid="1"/>
    <tile gid="2"/>
@@ -195,8 +198,8 @@
    <tile gid="3"/>
    <tile gid="3"/>
    <tile gid="1"/>
-   <tile gid="12"/>
-   <tile gid="25"/>
+   <tile gid="31"/>
+   <tile gid="11"/>
    <tile gid="1"/>
    <tile gid="1"/>
    <tile gid="2"/>
@@ -208,8 +211,8 @@
    <tile gid="3"/>
    <tile gid="3"/>
    <tile gid="2"/>
-   <tile gid="13"/>
-   <tile gid="25"/>
+   <tile gid="31"/>
+   <tile gid="8"/>
    <tile gid="3"/>
    <tile gid="3"/>
    <tile gid="3"/>
@@ -221,8 +224,8 @@
    <tile gid="1"/>
    <tile gid="3"/>
    <tile gid="2"/>
-   <tile gid="12"/>
-   <tile gid="25"/>
+   <tile gid="31"/>
+   <tile gid="11"/>
    <tile gid="1"/>
    <tile gid="3"/>
    <tile gid="3"/>
@@ -234,8 +237,8 @@
    <tile gid="1"/>
    <tile gid="1"/>
    <tile gid="2"/>
-   <tile gid="13"/>
-   <tile gid="25"/>
+   <tile gid="31"/>
+   <tile gid="8"/>
    <tile gid="1"/>
    <tile gid="1"/>
    <tile gid="1"/>
@@ -247,20 +250,20 @@
    <tile gid="1"/>
    <tile gid="1"/>
    <tile gid="1"/>
-   <tile gid="12"/>
+   <tile gid="31"/>
+   <tile gid="17"/>
+   <tile gid="16"/>
+   <tile gid="15"/>
+   <tile gid="16"/>
+   <tile gid="15"/>
+   <tile gid="16"/>
+   <tile gid="15"/>
+   <tile gid="16"/>
+   <tile gid="15"/>
+   <tile gid="16"/>
+   <tile gid="15"/>
+   <tile gid="16"/>
    <tile gid="29"/>
-   <tile gid="16"/>
-   <tile gid="15"/>
-   <tile gid="16"/>
-   <tile gid="15"/>
-   <tile gid="16"/>
-   <tile gid="15"/>
-   <tile gid="16"/>
-   <tile gid="15"/>
-   <tile gid="16"/>
-   <tile gid="15"/>
-   <tile gid="16"/>
-   <tile gid="14"/>
   </data>
  </layer>
 </map>

@@ -6,7 +6,7 @@
 using namespace std;
 
 
-enum RoomType {deadend, straight, turn, branch, intersection};
+enum RoomType {deadend, straight, turn, branch, intersection, outsideTop, outsideRight, outsideBottom, outsideLeft};
 
 
 MazeGen::MazeGen(int size):_size(size), _wallListSize(0), _floorListSize(0) {
@@ -44,6 +44,7 @@ vector<vector<spRoom>> MazeGen::generate() {
     bool right;
     bool down;
     bool left;
+    bool isOutside;
 
     _createMaze();
     _printMap();
@@ -56,22 +57,43 @@ vector<vector<spRoom>> MazeGen::generate() {
             right = false;
             down = false;
             left = false;
+            isOutside = false;
 
-            if (_maze[i][j] != '@' ) {
+            if (_maze[i][j] != '@') {
+
+                RoomType roomType = outsideTop;
+                if (i == 0) {
+                    // top
+                    roomType = outsideTop;
+                    isOutside = true;
+                } else if (j == _size - 1) {
+                    // left
+                    roomType = outsideRight;
+                    isOutside = true;
+                } else if (i == _size - 1) {
+                    // right
+                    roomType = outsideBottom;
+                    isOutside = true;
+                } else if (j == 0) {
+                    // bottom
+                    roomType = outsideLeft;
+                    isOutside = true;
+                }
+
                 // See if there are surrounding rooms.
-                if (i - 1 >= 0 && _maze[i - 1][j] != '@' ) {
+                if (i - 1 >= 0 && _maze[i - 1][j] != '@') {
                     // Look up
                     up = true;
                 }
-                if (j + 1 < _size && _maze[i][j + 1] != '@' ) {
+                if (j + 1 < _size && _maze[i][j + 1] != '@') {
                     // Look right
                     right = true;
                 }
-                if (i + 1 < _size && _maze[i + 1][j] != '@' ) {
+                if (i + 1 < _size && _maze[i + 1][j] != '@') {
                     // Look down
                     down = true;
                 }
-                if (j - 1 >= 0 && _maze[i][j - 1] != '@' ) {
+                if (j - 1 >= 0 && _maze[i][j - 1] != '@') {
                     // Look left
                     left = true;
                 }
@@ -87,7 +109,11 @@ vector<vector<spRoom>> MazeGen::generate() {
                 if ((up && !right && !down && !left) || (!up && right && !down && !left) ||
                         (!up && !right && down && !left) || (!up && !right && !down && left)) {
                     // dead end
-                    room = new Room(deadend, _size, exitBools);
+                    if (isOutside) {
+                        room = new Room(roomType, _size, exitBools);
+                    } else {
+                        room = new Room(deadend, _size, exitBools);
+                    }
                 } else if ((up && !right && down && !left) || (!up && right && !down && left)) {
                     // straight
                     room = new Room(straight, _size, exitBools);

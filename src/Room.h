@@ -23,7 +23,7 @@ public:
     /**
     * Creates a tile map (.tmx file) from the 2D map array.
     */
-    void createTileMap();
+    void createTileMap(string file);
 
     /**
     * Prints the map.
@@ -137,6 +137,12 @@ private:
     int _right;
     int _bottom;
     int _left;
+
+
+    /**
+    * Copies one of the outside tile maps (.tmx) to room.tmx.
+    */
+    void _createOutsideTileMap(string tmxFile);
 
     /**
     * Creates a straight hall.
