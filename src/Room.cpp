@@ -61,31 +61,19 @@ void Room::createRoom() {
             break;
         case outsideTop:
             setEntrance(Vector2(6, _size - 2));
-            _top = 6;
-            _right = 6;
             _bottom = 6;
-            _left = 6;
             break;
         case outsideRight:
             setEntrance(Vector2(1, 6));
-            _top = 6;
-            _right = 6;
-            _bottom = 6;
             _left = 6;
             break;
         case outsideBottom:
             setEntrance(Vector2(6, 1));
             _top = 6;
-            _right = 6;
-            _bottom = 6;
-            _left = 6;
             break;
         case outsideLeft:
             setEntrance(Vector2(_size - 2, 6));
-            _top = 6;
             _right = 6;
-            _bottom = 6;
-            _left = 6;
             break;
         default:
             break;
@@ -398,13 +386,18 @@ int Room::_getRand(int start, int finish) {
 }
 
 
+/**
+ * Draws open spaces in the room.
+ *
+ * @row
+ * @column
+ * @isColumn
+ */
 void Room::_drawOpenSpaces(int row, int column, bool isColumn) {
     int roomCol = _getRand(1, _size / 2);
     int roomWidth = _getRand(roomCol, _size - 2);
     int roomRow = _getRand(1, _size / 2);
     int roomHeight = _getRand(roomRow, _size - 2);
-
-//    _drawRoom(roomRow, roomCol, roomHeight, roomWidth);
     
     // Draw the rooms.
     if (isColumn) {
