@@ -15,6 +15,7 @@
 		0405A00118720D2200BA6557 /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04059FF11872031A00BA6557 /* libpng.a */; };
 		049B57321871FBE900EF3C66 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049B57311871FBE900EF3C66 /* Cocoa.framework */; };
 		049B574A1871FBE900EF3C66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049B57491871FBE900EF3C66 /* Images.xcassets */; };
+		485AA5F31A9FF07300ED2895 /* NodeArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 485AA5F11A9FF07300ED2895 /* NodeArray.cpp */; };
 		5328789D1A99A6EB00228299 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5328787C1A99A6EB00228299 /* base64.cpp */; };
 		5328789E1A99A6EB00228299 /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5328787E1A99A6EB00228299 /* tinyxml2.cpp */; };
 		5328789F1A99A6EB00228299 /* TmxEllipse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 532878811A99A6EB00228299 /* TmxEllipse.cpp */; };
@@ -150,6 +151,8 @@
 		049B57501871FBE900EF3C66 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		04A57D761871FFEB0068B1E5 /* oxygine_macosx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = oxygine_macosx.xcodeproj; path = "oxygine-framework//oxygine/SDL/macosx/oxygine_macosx/oxygine_macosx.xcodeproj"; sourceTree = "<group>"; };
 		04A57D7E1872012A0068B1E5 /* SDL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL.xcodeproj; path = ".//SDL/Xcode/SDL/SDL.xcodeproj"; sourceTree = "<group>"; };
+		485AA5F11A9FF07300ED2895 /* NodeArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NodeArray.cpp; path = src/NodeArray.cpp; sourceTree = "<group>"; };
+		485AA5F21A9FF07300ED2895 /* NodeArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NodeArray.h; path = src/NodeArray.h; sourceTree = "<group>"; };
 		5328787C1A99A6EB00228299 /* base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = base64.cpp; sourceTree = "<group>"; };
 		5328787D1A99A6EB00228299 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
 		5328787E1A99A6EB00228299 /* tinyxml2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml2.cpp; sourceTree = "<group>"; };
@@ -488,6 +491,8 @@
 				53B46C701A9E44EC00915203 /* PathFinder.h */,
 				53B46C791A9E476900915203 /* PathNode.cpp */,
 				53B46C711A9E44EC00915203 /* PathNode.h */,
+				485AA5F11A9FF07300ED2895 /* NodeArray.cpp */,
+				485AA5F21A9FF07300ED2895 /* NodeArray.h */,
 			);
 			name = pathfinding;
 			sourceTree = "<group>";
@@ -648,6 +653,7 @@
 				908A75FD1A9FE03500162B36 /* Armor.cpp in Sources */,
 				5395845E1A99A42D0080A994 /* GoldCount.cpp in Sources */,
 				532878A71A99A6EB00228299 /* TmxPolyline.cpp in Sources */,
+				485AA5F31A9FF07300ED2895 /* NodeArray.cpp in Sources */,
 				532878A01A99A6EB00228299 /* TmxImage.cpp in Sources */,
 				534097B01A896C0A000434F6 /* KeyboardInput.cpp in Sources */,
 				532878A81A99A6EB00228299 /* TmxPropertySet.cpp in Sources */,

@@ -67,8 +67,8 @@ void Chest::_interact() {
         
         _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
         
-        _contents->init(getLocation(), _game);
-        _contents->setLocation(getLocation());
+        _contents->init(getPosition(), _game);
+//        _contents->setLocation(getPosition());
         _game->getMap()->getRoom()->getUnits()->push_back(_contents);
     }
 }

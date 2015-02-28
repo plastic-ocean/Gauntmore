@@ -6,6 +6,8 @@
 #include "Game.h"
 #include "Player.h"
 #include "Thing.h"
+#include "CreatureMover.h"
+
 
 DECLARE_SMART(Creature, spCreature);
 class Creature : public Unit {
@@ -29,10 +31,10 @@ public:
     
 protected:
     spThing _contents;
-    
-//    spPathFinder findPath;
-//    CreatureMover moveQ;
-    
+
+    PathFinder findPath;
+    CreatureMover moveQ;
+
     /**
      *
      *

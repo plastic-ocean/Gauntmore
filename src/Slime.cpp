@@ -38,7 +38,6 @@ bool Slime::isPotion() {
     
 void Slime::damage() {
 
-    
 }
 
 void Slime::addSprite() {
@@ -47,7 +46,14 @@ void Slime::addSprite() {
     _sprite->setResAnim(resources.getResAnim("slime_down"));
     _sprite->attachTo(_view);
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
-    
+}
+
+/**
+ * Initializes a creatures position and sprite. Called by Unit's init() method.
+ */
+void Slime::_init() {
+    addSprite();
+    _setContents();
 }
 
 
@@ -99,17 +105,6 @@ void Slime::addSprite() {
 //}
 
 
-/**
- * Initializes a creatures position and sprite. Called by Unit's init() method.
- */
-void Slime::_init() {
-    
-    addSprite();
-    
-    _setContents();
-}
-
-
 void Slime::_interact() {
     _hp--;
     if (_hp == 0) {
@@ -127,16 +122,9 @@ void Slime::_interact() {
  * @us is the UpdateStatus sent by Unit's update method.
  */
 void Slime::_update(const UpdateState &us) {
-//    cout << "creature update" << endl;
+    cout << "creature update" << endl;
     Vector2 direction = moveMe();
-    Vector2 positionOld = getPosition();
     Vector2 position = getPosition();
     position += direction * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
-    
-    if (position != positionOld) {
-        setPosition(position);
-    } else {
-        
-    }
-    
+    setPosition(position);
 }

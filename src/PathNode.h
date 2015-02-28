@@ -19,7 +19,7 @@ public:
     void setCost(int);
     void calculateTotal();
     void setLocation(Vector2);
-    //    bool operator>(  PathNode& node );
+    
     PathNode* getParent();
     void setParent(PathNode*);
     

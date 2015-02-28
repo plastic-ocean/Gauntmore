@@ -217,6 +217,4 @@ protected:
      * @us is the UpdateStatus sent by Unit's update method.
      */
 	virtual void _update(const UpdateState &us) {}
-    
-    void _move(const UpdateState &us);
 };

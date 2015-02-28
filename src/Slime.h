@@ -10,27 +10,14 @@ DECLARE_SMART(Slime, spSlime);
 class Slime : public Creature {
     
 public:
-    /**
-     *
-     *
-     */
     Slime();
     
-    /**
-     *
-     *
-     */
+    /* Virtual Methods */
+    
     virtual SDL_Rect getBounds();
-    
-    /**
-     *
-     *
-     */
-    virtual bool isPotion();
-    
     virtual void damage();
-    
-    void addSprite();
+    virtual void addSprite();
+    virtual bool isPotion();
     
 private:
     spThing _contents;
