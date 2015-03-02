@@ -7,27 +7,21 @@ DECLARE_SMART(Potion, spPotion);
 class Potion: public Thing {
     
 public:
-    /**
-     *
-     *
-     */
     Potion();
     
     /**
-     *
-     *
+     *  Gets bounds of the unit Potion.
+     *  @return: SDL_Rect _bounds which is the bounds of Potion.
      */
     SDL_Rect getBounds();
     
     /**
-     *
-     *
+     *  Adds Sprite and attaches it to the game.
      */
     virtual void addSprite();
     
     /**
-     *
-     *
+     *  Boolean method to determine if the unit is a Potion.
      */
     virtual bool isPotion();
     

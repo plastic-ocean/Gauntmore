@@ -42,30 +42,19 @@ public:
      */
     void attack();
     
-    /**
-     *
-     */
+    /* Attack and Defense getters and setters. */
     int getAttack(){
         return _attack;
     };
     
-    /**
-     *
-     */
     void setAttack(int attack){
         _attack = attack;
     };
     
-    /**
-     *
-     */
     int getDefense(){
         return _defense;
     };
     
-    /**
-     *
-     */
     void setDefense(int defense){
         _defense += defense;
     };

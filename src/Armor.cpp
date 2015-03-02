@@ -62,26 +62,19 @@ void Armor::_init() {
  */
 void Armor::_interact() {
     if (!isDead()) {
-        
-         cout << "_value: " << _value << endl;
-        
-        cout << "Defense: " << _game->getPlayer()->getDefense() << endl;
-      
         _game->getPlayer()->setDefense(_value);
         _game->updateArmorCount(_value);
         
-        
-        cout << "Defense: " << _game->getPlayer()->getDefense() << endl;
-        
-        // remove sprite
+        /* Removes Sprite from game */
         _view->addTween(Actor::TweenAlpha(0), 1500)->setDetachActor(true);
         _dead = true;
     }
 }
 
 /**
+ * Updates Armor every frame. Called by Units update() method.
  *
- *
+ * @us is the UpdateStatus sent by Unit's update method.
  */
 void Armor::_update(const UpdateState &us) {
    
