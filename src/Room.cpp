@@ -3,6 +3,7 @@
 #include <random>
 #include "Room.h"
 #include "Chest.h"
+#include "Skeleton.h"
 
 using namespace std;
 
@@ -493,6 +494,15 @@ void Room::_drawOpenSpaces(int row, int column, bool isColumn) {
         spChest chest = new Chest;
         chest->setLocation(Vector2(chestCol, chestRow));
         _units.push_back(chest);
+    }
+    
+    for(int i = 0; i < _getRand(0,5); i++){
+        int skeletonRow = _getRand(roomRow, roomHeight) * 64;
+        int skeletonCol = _getRand(roomCol, roomWidth) * 64;
+        spSkeleton skeleton = new Skeleton;
+        skeleton->setLocation(Vector2(skeletonCol, skeletonRow));
+        _units.push_back(skeleton);
+        
     }
 }
 

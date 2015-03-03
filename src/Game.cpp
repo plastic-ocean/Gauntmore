@@ -336,7 +336,7 @@ void Game::_createTiles() {
         unitRect.y = unit->getLocation().y + 15;
         unitRect.h = 30;
         unitRect.w = 20;
-        if (unit->getType() == "thing" && !unit->isPotion()) {
+        if (unit->getType() != "player" && !unit->isPotion()) {
             _tiles.push_back(unitRect);
         } else if (unit->isPotion()) {
             unit->setRect(unitRect);

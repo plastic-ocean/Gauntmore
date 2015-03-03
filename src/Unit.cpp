@@ -65,6 +65,7 @@ void Unit::interact() {
  */
 void Unit::update(const UpdateState &us) {
     if (!_game->isPaused()) {
+        setLocation(getPosition());
         _update(us);
     }
 }
