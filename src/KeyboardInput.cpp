@@ -72,6 +72,10 @@ void KeyboardInput::_onEvent(Event *ev) {
                 _game->getPlayer()->updateHealth(-1);
                 _game->updateGoldCount(250);
                 break;
+            case SDLK_c:
+                //add alert
+                
+                break;
             default:
                 break;
             }

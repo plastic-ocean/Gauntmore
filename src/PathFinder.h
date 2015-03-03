@@ -13,6 +13,7 @@
 #include <queue>
 #include "NodeMinHeap.h"
 #include "PathNode.h"
+#include "CollisionDetector.h"
 
 class PathFinder : public Object {
 public:
@@ -21,10 +22,12 @@ public:
     int findHeuristic( Vector2 );
     vector<Vector2> aStar( Vector2, Vector2 );
     Vector2 nextMove(Vector2, Vector2);
+    void setGame(Game *game);
     
     
     
 private:
+    Game *_game;
     Vector2 target;
     Vector2 source;
     NodeMinHeap openList;
@@ -36,6 +39,7 @@ private:
     PathNode closedList[1000];
     void addNode(PathNode*);
     int loc;
+    spCollisionDetector coll;
     
     
 };

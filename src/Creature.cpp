@@ -11,6 +11,7 @@
  */
 Creature::Creature() {
     setType("creature");
+    
 }
 
 
@@ -52,21 +53,15 @@ void Creature::_interact() {
  * Initializes a creatures position and sprite. Called by Unit's init() method.
  */
 void Creature::_init() {
-//    // Initialize the stats.
-//    _hp = 3;
-//    _attack = 0;
-//    _defense = 0;
-//    
-//    // Add sprite to the game scene view.
-//    _sprite = new Sprite;
-//    _sprite->setResAnim(resources.getResAnim(""));
-//    _sprite->attachTo(_view);
-//    _sprite->setAnchor(Vector2(0.5f, 0.5f));
+    findPath.setGame(_game);//for collision detection
+    
 }
 
 
 Vector2 Creature::moveMe() {
     Vector2 moveDir = {0,0};
+//    if (!_alerted) return moveDir;
+    
     Vector2 pPos = _game->getPlayer()->getPosition();//player's position
     Vector2 cPos = getPosition();//creature's position
     

@@ -10,6 +10,7 @@ Slime::Slime() {
     _hp = 3;
     _attack = 1;
     _defense = 0;
+    _speed = 100;
     
 }
 

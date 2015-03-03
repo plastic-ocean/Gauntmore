@@ -34,6 +34,7 @@ protected:
     spThing _contents;
     PathFinder findPath;
     CreatureMover moveQ;
+    bool _alerted = false;
     
     Vector2 moveMe();
     
