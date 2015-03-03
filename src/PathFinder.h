@@ -33,7 +33,7 @@ private:
     bool inClosedList( PathNode node );
     bool atExit( PathNode );
     std::vector<Vector2> makePath(PathNode);
-    PathNode* closedList[1000];
+    PathNode closedList[1000];
     void addNode(PathNode*);
     int loc;
     
