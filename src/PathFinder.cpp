@@ -21,31 +21,33 @@
  
  */
 PathFinder::PathFinder() {
-//    openList = NodeMinHeap();
     loc = 0;
 }
 
 PathFinder::~PathFinder() {
     
 }
+void PathFinder::setGame(Game *game) {
+    _game = game;
+}
 
 vector<Vector2> PathFinder::aStar(Vector2 start, Vector2 finish ) {
-    PathNode first = PathNode( start, 0, 0 );
+    PathNode *first =  new PathNode( start, 0, 0 );
     openList.clearHeap();
     target = finish;
     source = start;
-    vector<Vector2> outPath;
-    openList.insertNode(&first);//add start to heap
+//    vector<Vector2> outPath;
+    openList.insertNode(first);//add start to heap
     
     while ( !openList.empty() ) {
         
         PathNode temp = openList.getMinNode();//pop smallest from heap
-        outPath.push_back(temp.getLocation() );
         if ( atExit(temp) ) {//are we at the exit?
-           return outPath;
+           return makePath(temp);
             
         }
-        addNode( &temp );//put node in closed list
+        closedList[loc++] = temp;
+//        addNode( &temp );//put node in closed list
         
         scanSurround( &temp );//add surrounding nodes to open list
     }
@@ -57,7 +59,7 @@ vector<Vector2> PathFinder::aStar(Vector2 start, Vector2 finish ) {
 }
 
 void PathFinder::addNode(PathNode *node) {
-    closedList[loc++] = node;
+    closedList[loc++] = *node;
 }
 
 
@@ -73,18 +75,28 @@ void PathFinder::scanSurround( PathNode *node ) {
     temp.y -=(int) mapSize;
     int summ = 12;//something more clever goes here
     int flip = -2;
-    
+
     for ( int i = 0; i < 3; i++ ) {
         for ( int j = 0; j < 3; j++ ) {
             flip *= (-1);
 
             if (temp.x > 0 && temp.y > 0 ) {
-            
-            PathNode nodeNew = PathNode( temp, node->getCost()+(summ+flip), findHeuristic(temp), node );
-            if (!inClosedList(nodeNew) ) {
-                openList.insertNode( &nodeNew );
+            PathNode nodeNew = PathNode( temp, node->getCost()+(summ+flip), findHeuristic(temp), &closedList[loc-1] );
+                
+                if (!inClosedList(nodeNew) ) {
+                    if ( flip < 0 ) {
+                    
+                    //corner collision check
+                } else {
+//                    if ( !coll->detectWalls(_game->getTiles(), temp.x, temp.y, 2, 2) ) {
+//                        openList.insertNode(&nodeNew);
+//                    }
+                    //cardinal collision check
+                    
                 }
+                    openList.insertNode( &nodeNew );
             }
+        }
             
             temp.x += mapSize;
         }
@@ -109,7 +121,7 @@ bool PathFinder::atExit( PathNode node ) {
 bool PathFinder::inClosedList( PathNode node ) {
     int size = loc;
     for (int i = 0; i<size;i++ ) {
-        if ( closedList[i]->getLocation() == node.getLocation() ) return true;
+        if ( closedList[i].getLocation() == node.getLocation() ) return true;
     }
     return false;
     

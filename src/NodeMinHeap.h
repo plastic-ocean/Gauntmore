@@ -12,7 +12,7 @@ public:
     NodeMinHeap(PathNode);
     ~NodeMinHeap();
     void insertNode(PathNode*);
-    PathNode &getMinNode();
+    PathNode getMinNode();
     bool empty();
     void clearHeap();
     

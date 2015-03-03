@@ -74,6 +74,10 @@ void KeyboardInput::_onEvent(Event *ev) {
             case SDLK_ESCAPE:
                 _game->pauseGame();
                 break;
+            case SDLK_c:
+                //add alert
+                
+                break;
             default:
                 break;
         }

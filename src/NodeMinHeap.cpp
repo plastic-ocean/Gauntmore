@@ -24,7 +24,7 @@ void NodeMinHeap::clearHeap() {
 }
 
 
-PathNode &NodeMinHeap::getMinNode() {
+PathNode NodeMinHeap::getMinNode() {
     
     PathNode temp = *theHeap.getFront();//copy head to temp
     theHeap.setFront(theHeap.pop_back() );//copy last to head

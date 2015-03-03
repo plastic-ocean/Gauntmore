@@ -39,6 +39,8 @@ protected:
      *
      *
      */
+    bool _alerted = false;
+    
     Vector2 moveMe();
     
     /**
