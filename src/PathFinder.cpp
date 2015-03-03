@@ -95,13 +95,13 @@ void PathFinder::scanSurround( PathNode *node ) {
                     
                     //corner collision check
                 } else {
-                    if ( !coll->detectWalls(_game->getTiles(), temp.x, temp.y, 2, 2) ) {
-                        openList.insertNode(&nodeNew);
-                    }
+//                    if ( !coll->detectWalls(_game->getTiles(), temp.x, temp.y, 2, 2) ) {
+//                        openList.insertNode(&nodeNew);
+//                    }
                     //cardinal collision check
                     
                 }
-//                    openList.insertNode( &nodeNew );
+                    openList.insertNode( &nodeNew );
             }
         }
             
