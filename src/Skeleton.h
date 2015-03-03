@@ -28,6 +28,11 @@ public:
      */
     virtual bool isPotion();
     
+    virtual void addSprite();
+    virtual void damage();
+    
+    
+    
 private:
     spThing _contents;
     

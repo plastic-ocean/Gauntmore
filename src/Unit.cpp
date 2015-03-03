@@ -65,5 +65,6 @@ void Unit::interact() {
  * Virtual method is overload in children.
  */
 void Unit::update(const UpdateState &us) {
+    setLocation(getPosition());
 	_update(us);
 }
