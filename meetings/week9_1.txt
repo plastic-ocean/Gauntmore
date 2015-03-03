@@ -1,0 +1,12 @@
+Date: 3/3
+
+Attendance:
+
+Keith Hamm
+David Wenzel
+Steven Warren
+Benjamin Barnes
+
+Minutes:
+
+David has finalized the pathfinding algorithm and is working on adding collision detection for Creatures. Keith is working on start menu, pause menu, and death menu. Steven continued working adding armor, now updating the image on the HUD, and adding weapons (to increase attack stat). Ben is working on creature combat and animations, facing, etc.

@@ -19,8 +19,9 @@ void Gauntmore::init() {
     // Load resources.
     loadResources();
     
-    // Create game scene.
+    // Create scenes.
     GameScene::instance = new GameScene;
+    PauseMenu::instance = new PauseMenu;
     
     // Setup music player and play music.
 //    _musicPlayer.play(resSounds.get("music"));
@@ -44,6 +45,7 @@ void Gauntmore::update() {
 void Gauntmore::destroy() {
 //    _musicPlayer.stop();
 //    SoundSystem::instance->stop();
+    PauseMenu::instance = 0;
     GameScene::instance = 0;
     freeResources();
 //    SoundSystem::instance->release();

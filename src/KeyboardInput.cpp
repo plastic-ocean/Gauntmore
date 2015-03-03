@@ -43,7 +43,7 @@ void KeyboardInput::_onEvent(Event *ev) {
     SDL_Event *event = (SDL_Event*) ev->userData;
     _pressed = true;
     
-    if (event->type == SDL_KEYDOWN && event->key.repeat == 0) {
+    if (event->type == SDL_KEYDOWN && event->key.repeat == 0 && !_game->isPaused()) {
         switch (event->key.keysym.sym) {
             case SDLK_UP:
             case SDLK_w:
@@ -72,14 +72,14 @@ void KeyboardInput::_onEvent(Event *ev) {
                 _game->getPlayer()->updateHealth(-1);
                 break;
             case SDLK_ESCAPE:
-                core::requestQuit();
+                _game->pauseGame();
                 break;
             default:
                 break;
-            }
         }
+    }
 
-    if (event->type == SDL_KEYUP && event->key.repeat == 0) {
+    if (event->type == SDL_KEYUP && event->key.repeat == 0 && !_game->isPaused()) {
 //        _pressed = false;
         switch (event->key.keysym.sym ) {
             case SDLK_UP:

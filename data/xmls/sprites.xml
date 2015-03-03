@@ -36,6 +36,18 @@
         <image file="adventurer_attack_right.png" cols = "7" />
     </atlas>
     <atlas>
+        <image file="title.png" />
+        
+        <image file="new_game.png" />
+        <image file="new_game_selected.png" />
+        
+        <image file="continue.png" />
+        <image file="continue_selected.png" />
+        
+        <image file="quit.png" />
+        <image file="quit_selected.png" />
+    </atlas>
+    <atlas>
         <image file="bottom_left.png" />
         <image file="bottom_right.png" />
 

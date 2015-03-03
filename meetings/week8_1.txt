@@ -1,0 +1,12 @@
+Date: 2/23
+
+Attendance:
+
+Keith Hamm
+David Wenzel
+Steven Warren
+Benjamin Barnes
+
+Minutes:
+
+Created and tested a new Linux build. Keith is working on code to randomly add Creatures and Things to the maze and added the health and gold counters. Steven is working on new Things like armor and weapons. Ben is working on adding new Creature types and working on the cleaning up the animations. David is continuing to work on pathfining for the creatues.

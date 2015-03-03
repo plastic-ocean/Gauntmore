@@ -53,8 +53,7 @@ void Unit::detachUnit() {
 /**
  *  Interaction method for Unit:
  *  Iterates thru list of units and determines which the player is facing.
- *  Then calls that objects interact method. 
- *
+ *  Then calls that objects interact method.
  */
 void Unit::interact() {
     _interact();
@@ -65,5 +64,7 @@ void Unit::interact() {
  * Virtual method is overload in children.
  */
 void Unit::update(const UpdateState &us) {
-	_update(us);
+    if (!_game->isPaused()) {
+        _update(us);
+    }
 }

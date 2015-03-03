@@ -71,6 +71,8 @@ public:
      * @num is the value to update by.
      */
     void updateArmorCount(int value);
+    
+    void pauseGame();
 
 
     /* Getters and Setters */
@@ -98,6 +100,14 @@ public:
     int getTileSize() {
         return tileSize;
     }
+    
+    void setPaused(bool isPaused) {
+        _isPaused = isPaused;
+    }
+    
+    bool isPaused() {
+        return _isPaused;
+    }
 
 protected:
     const int tileSize = 64;
@@ -120,6 +130,7 @@ protected:
     spGoldCount _goldCount;
     spArmorCount _armorCount;
     
+    bool _isPaused;
     
     /**
      * Updates the player each frame. A virtual method of Actor it is being called each frame.

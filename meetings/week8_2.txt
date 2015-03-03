@@ -1,0 +1,12 @@
+Date: 2/26
+
+Attendance:
+
+Keith Hamm
+David Wenzel
+Steven Warren
+Benjamin Barnes
+
+Minutes:
+
+Keith added entrances and exits for the maze. David finished up a first draft of the pathfinding code. Steven continued working on Things, added an armor counter and started cleanup. Ben started randomly adding Creatures to the Rooms

@@ -4,9 +4,9 @@
 //#include "SoundPlayer.h"
 //#include "SoundSystem.h"
 //#include "SoundInstance.h"
-
-#include "res.h"
 #include "GameScene.h"
+#include "PauseMenu.h"
+#include "res.h"
 
 
 using namespace oxygine;

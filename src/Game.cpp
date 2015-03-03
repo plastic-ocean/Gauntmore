@@ -22,11 +22,13 @@
 #include "GoldCount.h"
 #include "ArmorCount.h"
 
+#include "PauseMenu.h"
+
 
 /**
  * Constructor.
  */
-Game::Game() {
+Game::Game():_isPaused(false) {
     // Set the size of the scene to the size of the display.
     setSize(getStage()->getSize());
     
@@ -202,6 +204,13 @@ void Game::updateGoldCount(int value) {
  */
 void Game::updateArmorCount(int value) {
     _armorCount->updateArmorCount(value);
+}
+
+
+void Game::pauseGame() {
+    setPaused(true);
+    getClock()->pause();
+    PauseMenu::instance->show();
 }
 
 

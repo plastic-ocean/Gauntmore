@@ -127,4 +127,5 @@ void Slime::_update(const UpdateState &us) {
     Vector2 position = getPosition();
     position += direction * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
     setPosition(position);
+    
 }
