@@ -29,6 +29,7 @@ public:
     
 private:
     Selection _selection;
+    spSprite _background;
     spSprite _name;
     spSprite _newGame;
     spSprite _quit;

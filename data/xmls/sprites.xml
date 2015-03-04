@@ -39,6 +39,8 @@
         <image file="title.png" />
         <image file="title_small.png" />
         
+        <image file="start_menu_background.png" />
+        
         <image file="new_game.png" />
         <image file="new_game_selected.png" />
         

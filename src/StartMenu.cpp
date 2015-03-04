@@ -14,6 +14,12 @@ spStartMenu StartMenu::instance;
  * Constructor.
  */
 StartMenu::StartMenu():_selection(selectNewGame), _isVisible(false) {
+    _background = new Sprite;
+    _background->setResAnim(resources.getResAnim("start_menu_background"));
+    _background->setAnchor(Vector2(0.5f, 0.5f));
+    _background->setPosition(Vector2(768 / 2, 768 / 2));
+    _background->attachTo(_view);
+    
     _name = new Sprite;
     _name->setResAnim(resources.getResAnim("title"));
     _name->setAnchor(Vector2(0.5f, 0.5f));
