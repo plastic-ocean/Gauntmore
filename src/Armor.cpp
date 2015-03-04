@@ -8,7 +8,7 @@
 
 #include "Armor.h"
 #include "res.h"
-#include "game.h"
+#include "Game.h"
 #include "Player.h"
 
 /**
@@ -27,7 +27,7 @@ SDL_Rect Armor::getBounds() {
     _bounds.y = unitPosition.y + 15;
     _bounds.h = 30;
     _bounds.w = 20;
-    
+
     return _bounds;
 }
 
@@ -62,17 +62,17 @@ void Armor::_init() {
  */
 void Armor::_interact() {
     if (!isDead()) {
-        
+
          cout << "_value: " << _value << endl;
-        
+
         cout << "Defense: " << _game->getPlayer()->getDefense() << endl;
-      
+
         _game->getPlayer()->setDefense(_value);
         _game->updateArmorCount(_value);
-        
-        
+
+
         cout << "Defense: " << _game->getPlayer()->getDefense() << endl;
-        
+
         // remove sprite
         _view->addTween(Actor::TweenAlpha(0), 1500)->setDetachActor(true);
         _dead = true;
@@ -84,5 +84,5 @@ void Armor::_interact() {
  *
  */
 void Armor::_update(const UpdateState &us) {
-   
+
 }
