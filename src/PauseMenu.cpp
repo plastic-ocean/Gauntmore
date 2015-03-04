@@ -15,21 +15,21 @@ spPauseMenu PauseMenu::instance;
  */
 PauseMenu::PauseMenu():_isReady(false), _selection(selectContinue) {
     _name = new Sprite;
-    _name->setResAnim(resources.getResAnim("title"));
+    _name->setResAnim(resources.getResAnim("title_small"));
     _name->setAnchor(Vector2(0.5f, 0.5f));
-    _name->setPosition(Vector2(768 / 2, (768 / 2) - _name->getHeight()));
+    _name->setPosition(Vector2(768 / 2, _name->getHeight()));
     _name->attachTo(_view);
     
     _continue = new Sprite;
     _continue->setResAnim(resources.getResAnim("continue_selected"));
     _continue->setAnchor(Vector2(0.5f, 0.5f));
-    _continue->setPosition(Vector2(768 / 2, 768 / 2));
+    _continue->setPosition(Vector2(768 / 2, 768 / 2 - 50));
     _continue->attachTo(_view);
     
     _quit = new Sprite;
     _quit->setResAnim(resources.getResAnim("quit"));
     _quit->setAnchor(Vector2(0.5f, 0.5f));
-    _quit->setPosition(Vector2(768 / 2, 768 / 2 + _quit->getHeight()));
+    _quit->setPosition(Vector2(768 / 2, 768 / 2 + _quit->getHeight() - 50));
     _quit->attachTo(_view);
     
     // Add escape key listener

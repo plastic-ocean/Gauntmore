@@ -75,9 +75,8 @@ Vector2 Creature::moveMe() {
     Vector2 pPos = _game->getPlayer()->getPosition();//player's position
     Vector2 cPos = getPosition();//creature's position
     
-    cout << "Creature at: " << cPos.x << " " << cPos.y << endl;
-    cout << "Player at: " << pPos.x << " " << pPos.y << endl;
-    
+//    cout << "Creature at: " << cPos.x << " " << cPos.y << endl;
+//    cout << "Player at: " << pPos.x << " " << pPos.y << endl;
     
     if ( abs(pPos.x - cPos.x) <= 64 && abs(pPos.y - cPos.y) <= 64 ) {
         return moveDir;//you are less than 64 pixels away, do nothing

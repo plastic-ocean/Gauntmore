@@ -24,6 +24,7 @@
 
 #include "PauseMenu.h"
 #include "StartMenu.h"
+#include "DeathMenu.h"
 
 
 /**
@@ -71,9 +72,6 @@ Game::Game():_isPaused(false), _isFirstRun(true) {
     
     // Armor Count
     _armorCount = new ArmorCount(this);
-
-//    getClock()->pause();
-//    setPaused(true);
 }
 
 
@@ -222,6 +220,55 @@ void Game::startGame() {
 }
 
 
+void Game::killPlayer() {
+    setPaused(true);
+    getClock()->pause();
+    DeathMenu::instance->setGame(this);
+    DeathMenu::instance->show();
+}
+
+
+void Game::createNewGame() {
+    // Size is the number of tiles
+    int size = 13;
+    
+    // Create map
+    _map = new Map(size);
+    _renderMap();
+    _createTiles();
+    
+    // Create Creatures and Things
+    list<spUnit> *units = _map->getRoom()->getUnits();
+    for (list<spUnit>::iterator i = units->begin(); i != units->end(); ++i) {
+        spUnit unit = *i;
+        if (unit->getType() != "player") {
+            unit->init(unit->getLocation(), this);
+        }
+    }
+    
+    _slime = new Slime();
+    _slime->init(Vector2((_map->getRoom()->getSize() / 2) * 64, (_map->getRoom()->getSize() / 2) * 64), this);
+    _map->getRoom()->getUnits()->push_back(_slime);
+    
+    
+    // Create player
+    _player = new Player(10, 1, 1);
+    _player->init(_getEntrance(), this);
+    _map->getRoom()->getUnits()->push_back(_player);
+    
+    // Health bar
+    _healthBar = new HealthBar(this);
+    
+    // Gold count
+    _goldCount = new GoldCount(this);
+    
+    // Armor Count
+    _armorCount = new ArmorCount(this);
+    
+    setPaused(false);
+}
+
+
 /**
  * Updates the Units each frame. A virtual method of Actor it is being called each frame.
  *
@@ -244,6 +291,10 @@ void Game::doUpdate(const UpdateState &us) {
         } else {
             ++i;
         }
+    }
+    
+    if (_player->isDead()) {
+        killPlayer();
     }
     
     _createTiles();

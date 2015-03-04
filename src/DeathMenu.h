@@ -6,15 +6,15 @@
 using namespace oxygine;
 
 
-DECLARE_SMART(StartMenu, spStartMenu);
+DECLARE_SMART(DeathMenu, spDeathMenu);
 class Game;
-class StartMenu : public Scene {
+class DeathMenu : public Scene {
     
 public:
-    static spStartMenu instance;
+    static spDeathMenu instance;
     enum Selection {selectNewGame, selectQuit};
     
-    StartMenu();
+    DeathMenu();
     
     
     /* Getters and setters */
@@ -27,9 +27,16 @@ public:
         _quit->setResAnim(resources.getResAnim(quitImage));
     }
     
+    void setGame(Game *game) {
+        _game = game;
+    }
+    
 private:
+    Game *_game;
     Selection _selection;
+    spSprite _deathBackground;
     spSprite _name;
+    spSprite _youDied;
     spSprite _newGame;
     spSprite _quit;
     bool _isVisible;
@@ -47,5 +54,5 @@ private:
     void _selectNext();
     
     void _show();
-
+    
 };

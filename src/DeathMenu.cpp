@@ -3,37 +3,49 @@
 #include "SDL_keyboard.h"
 #include "SDL_events.h"
 
-#include "StartMenu.h"
+#include "DeathMenu.h"
 #include "res.h"
 
 
-spStartMenu StartMenu::instance;
+spDeathMenu DeathMenu::instance;
 
 
 /**
  * Constructor.
  */
-StartMenu::StartMenu():_selection(selectNewGame), _isVisible(false) {
+DeathMenu::DeathMenu():_selection(selectNewGame), _isVisible(false) {
+    _deathBackground = new Sprite;
+    _deathBackground->setResAnim(resources.getResAnim("death_background"));
+    _deathBackground->setAnchor(Vector2(0.5f, 0.5f));
+    _deathBackground->setPosition(Vector2(768 / 2, 768 / 2));
+    _deathBackground->attachTo(_view);
+    
     _name = new Sprite;
-    _name->setResAnim(resources.getResAnim("title"));
+    _name->setResAnim(resources.getResAnim("title_small"));
     _name->setAnchor(Vector2(0.5f, 0.5f));
-    _name->setPosition(Vector2(768 / 2, (768 / 2) - _name->getHeight()));
+    _name->setPosition(Vector2(768 / 2, _name->getHeight()));
     _name->attachTo(_view);
+    
+    _youDied = new Sprite;
+    _youDied->setResAnim(resources.getResAnim("you_died"));
+    _youDied->setAnchor(Vector2(0.5f, 0.5f));
+    _youDied->setPosition(Vector2(768 / 2, (768 / 2) - _name->getHeight()));
+    _youDied->attachTo(_view);
     
     _newGame = new Sprite;
     _newGame->setResAnim(resources.getResAnim("new_game_selected"));
     _newGame->setAnchor(Vector2(0.5f, 0.5f));
-    _newGame->setPosition(Vector2(768 / 2, 768 / 2));
+    _newGame->setPosition(Vector2(768 / 2, 768 / 2 + 50));
     _newGame->attachTo(_view);
     
     _quit = new Sprite;
     _quit->setResAnim(resources.getResAnim("quit"));
     _quit->setAnchor(Vector2(0.5f, 0.5f));
-    _quit->setPosition(Vector2(768 / 2, 768 / 2 + _quit->getHeight()));
+    _quit->setPosition(Vector2(768 / 2, 768 / 2 + _quit->getHeight() + 50));
     _quit->attachTo(_view);
     
     // Add escape key listener
-    Input::instance.addEventListener(Input::event_platform, CLOSURE(this, &StartMenu::_onEvent));
+    Input::instance.addEventListener(Input::event_platform, CLOSURE(this, &DeathMenu::_onEvent));
 }
 
 
@@ -42,7 +54,7 @@ StartMenu::StartMenu():_selection(selectNewGame), _isVisible(false) {
  *
  * @ev is the SDL event sent by the event listener.
  */
-void StartMenu::_onEvent(Event *ev) {
+void DeathMenu::_onEvent(Event *ev) {
     SDL_Event *event = (SDL_Event*) ev->userData;
     
     if (event->type == SDL_KEYDOWN && event->key.repeat == 0 && _isVisible) {
@@ -50,6 +62,7 @@ void StartMenu::_onEvent(Event *ev) {
             case SDLK_RETURN:
                 if (_selection == selectNewGame) {
                     _isVisible = false;
+                    _game->createNewGame();
                     changeScene(GameScene::instance);
                 } else if (_selection == selectQuit) {
                     core::requestQuit();
@@ -72,7 +85,7 @@ void StartMenu::_onEvent(Event *ev) {
 /**
  * Selects the next item in the menu list.
  */
-void StartMenu::_selectNext() {
+void DeathMenu::_selectNext() {
     if (_selection == selectNewGame) {
         _selection = selectQuit;
         setQuit("quit_selected");
@@ -84,6 +97,7 @@ void StartMenu::_selectNext() {
     }
 }
 
-void StartMenu::_show() {
+
+void DeathMenu::_show() {
     _isVisible = true;
 }

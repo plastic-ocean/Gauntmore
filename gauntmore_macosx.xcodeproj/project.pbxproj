@@ -45,6 +45,7 @@
 		5359D5991A96C6E600AE6365 /* Gauntmore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5971A96C6E600AE6365 /* Gauntmore.cpp */; };
 		5359D5C71A9807AC00AE6365 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 5359D5C61A9807AC00AE6365 /* fonts */; };
 		53916D991AA36EC900B9164A /* PauseMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53916D971AA36EC900B9164A /* PauseMenu.cpp */; };
+		53945E6B1AA78AA700DF4A7B /* DeathMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53945E691AA78AA700DF4A7B /* DeathMenu.cpp */; };
 		539584391A999D000080A994 /* CollisionDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584371A999D000080A994 /* CollisionDetector.cpp */; };
 		5395845B1A99A42D0080A994 /* Chest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5395843A1A99A42D0080A994 /* Chest.cpp */; };
 		5395845C1A99A42D0080A994 /* Creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5395843C1A99A42D0080A994 /* Creature.cpp */; };
@@ -208,6 +209,8 @@
 		5359D5C61A9807AC00AE6365 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fonts; path = data/fonts; sourceTree = "<group>"; };
 		53916D971AA36EC900B9164A /* PauseMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PauseMenu.cpp; path = src/PauseMenu.cpp; sourceTree = "<group>"; };
 		53916D981AA36EC900B9164A /* PauseMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PauseMenu.h; path = src/PauseMenu.h; sourceTree = "<group>"; };
+		53945E691AA78AA700DF4A7B /* DeathMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DeathMenu.cpp; path = src/DeathMenu.cpp; sourceTree = "<group>"; };
+		53945E6A1AA78AA700DF4A7B /* DeathMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeathMenu.h; path = src/DeathMenu.h; sourceTree = "<group>"; };
 		539584371A999D000080A994 /* CollisionDetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CollisionDetector.cpp; path = src/CollisionDetector.cpp; sourceTree = "<group>"; };
 		539584381A999D000080A994 /* CollisionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollisionDetector.h; path = src/CollisionDetector.h; sourceTree = "<group>"; };
 		5395843A1A99A42D0080A994 /* Chest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Chest.cpp; path = src/Chest.cpp; sourceTree = "<group>"; };
@@ -362,15 +365,12 @@
 				534097851A896C0A000434F6 /* KeyboardInput.h */,
 				5340977F1A896C0A000434F6 /* main.cpp */,
 				532878BD1A9BA09000228299 /* map */,
+				53945E6F1AA78B2500DF4A7B /* menus */,
 				53B46C781A9E44F500915203 /* pathfinding */,
-				53916D971AA36EC900B9164A /* PauseMenu.cpp */,
-				53916D981AA36EC900B9164A /* PauseMenu.h */,
 				534097881A896C0A000434F6 /* res.cpp */,
 				534097891A896C0A000434F6 /* res.h */,
 				53BCF1191A8ED99F00BD6288 /* Scene.cpp */,
 				53BCF11A1A8ED99F00BD6288 /* Scene.h */,
-				53C5BB951AA554970008BCD5 /* StartMenu.cpp */,
-				53C5BB961AA554970008BCD5 /* StartMenu.h */,
 				5328787B1A99A6EB00228299 /* tmx */,
 				532878BE1A9BA15500228299 /* units */,
 			);
@@ -488,6 +488,19 @@
 				5359D5871A96BAE000AE6365 /* liboxygine-sound.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		53945E6F1AA78B2500DF4A7B /* menus */ = {
+			isa = PBXGroup;
+			children = (
+				53945E691AA78AA700DF4A7B /* DeathMenu.cpp */,
+				53945E6A1AA78AA700DF4A7B /* DeathMenu.h */,
+				53916D971AA36EC900B9164A /* PauseMenu.cpp */,
+				53916D981AA36EC900B9164A /* PauseMenu.h */,
+				53C5BB951AA554970008BCD5 /* StartMenu.cpp */,
+				53C5BB961AA554970008BCD5 /* StartMenu.h */,
+			);
+			name = menus;
 			sourceTree = "<group>";
 		};
 		53B46C781A9E44F500915203 /* pathfinding */ = {
@@ -679,6 +692,7 @@
 				5395845D1A99A42D0080A994 /* Gold.cpp in Sources */,
 				5328789E1A99A6EB00228299 /* tinyxml2.cpp in Sources */,
 				53C5BB971AA554970008BCD5 /* StartMenu.cpp in Sources */,
+				53945E6B1AA78AA700DF4A7B /* DeathMenu.cpp in Sources */,
 				53BCF11C1A8ED99F00BD6288 /* Scene.cpp in Sources */,
 				532878A91A99A6EB00228299 /* TmxTile.cpp in Sources */,
 				539584601A99A42D0080A994 /* HealthBar.cpp in Sources */,

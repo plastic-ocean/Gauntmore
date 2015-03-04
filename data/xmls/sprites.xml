@@ -37,6 +37,7 @@
     </atlas>
     <atlas>
         <image file="title.png" />
+        <image file="title_small.png" />
         
         <image file="new_game.png" />
         <image file="new_game_selected.png" />
@@ -46,6 +47,9 @@
         
         <image file="quit.png" />
         <image file="quit_selected.png" />
+        
+        <image file="death_background.png" />
+        <image file="you_died.png" />
     </atlas>
     <atlas>
         <image file="bottom_left.png" />

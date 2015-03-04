@@ -75,6 +75,10 @@ public:
     void pauseGame();
     
     void startGame();
+    
+    void killPlayer();
+    
+    void createNewGame();
 
 
     /* Getters and Setters */
