@@ -14,7 +14,7 @@ src/Room.cpp src/Room.h src/Scene.cpp src/Scene.h src/KeyboardInput.cpp src/Keyb
 src/Chest.cpp src/Chest.h src/CollisionDetector.cpp src/CollisionDetector.h src/Gold.cpp src/Gold.h
 src/GoldCount.cpp src/GoldCount.h src/HealthBar.cpp src/HealthBar.h src/Potion.cpp src/Potion.h
 src/Creature.cpp src/Creature.h src/Skeleton.cpp src/Skeleton.h src/Thing.cpp src/Thing.h src/Slime.cpp src/Slime.h
-src/Unit.cpp src/Unit.h src/PathFinder.cpp src/PathFinder.h src/PathNode.cpp src/PathNode.h
+src/Unit.cpp src/Unit.h src/PathFinder.cpp src/PathFinder.h src/PathNode.cpp src/PathNode.h src/NodeArray.cpp src/NodeArray.h
 src/NodeMinHeap.cpp src/NodeMinHeap.h src/CreatureMover.cpp src/CreatureMover.h src/DeathMenu.cpp src/DeathMenu.h
 src/PauseMenu.cpp src/PauseMenu.h src/StartMenu.cpp src/StartMenu.h src/ArmorCount.cpp src/ArmorCount.h
 src/Armor.cpp src/Armor.h
@@ -29,3 +29,5 @@ src/tmx/TmxPolyline.h src/tmx/Tmx.h
 )
 
 target_link_libraries(gauntmore ${OXYGINE_CORE_LIBS})
+
+https://hkhamm@bitbucket.org/plastic-ocean/gauntmore.git
