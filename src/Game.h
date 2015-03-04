@@ -73,6 +73,8 @@ public:
     void updateArmorCount(int value);
     
     void pauseGame();
+    
+    void startGame();
 
 
     /* Getters and Setters */
@@ -108,6 +110,14 @@ public:
     bool isPaused() {
         return _isPaused;
     }
+    
+    void setFirstRun(bool isFirstRun) {
+        _isFirstRun = isFirstRun;
+    }
+    
+    bool isFirstRun() {
+        return _isFirstRun;
+    }
 
 protected:
     const int tileSize = 64;
@@ -131,6 +141,7 @@ protected:
     spArmorCount _armorCount;
     
     bool _isPaused;
+    bool _isFirstRun;
     
     /**
      * Updates the player each frame. A virtual method of Actor it is being called each frame.

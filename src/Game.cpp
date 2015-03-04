@@ -23,12 +23,13 @@
 #include "ArmorCount.h"
 
 #include "PauseMenu.h"
+#include "StartMenu.h"
 
 
 /**
  * Constructor.
  */
-Game::Game():_isPaused(false) {
+Game::Game():_isPaused(false), _isFirstRun(true) {
     // Set the size of the scene to the size of the display.
     setSize(getStage()->getSize());
     
@@ -71,7 +72,8 @@ Game::Game():_isPaused(false) {
     // Armor Count
     _armorCount = new ArmorCount(this);
 
-    
+//    getClock()->pause();
+//    setPaused(true);
 }
 
 
@@ -212,12 +214,24 @@ void Game::pauseGame() {
 }
 
 
+void Game::startGame() {
+    setFirstRun(false);
+    setPaused(true);
+    getClock()->pause();
+    StartMenu::instance->show();
+}
+
+
 /**
  * Updates the Units each frame. A virtual method of Actor it is being called each frame.
  *
  * @us is the UpdateStatus sent by the global update method.
  */
 void Game::doUpdate(const UpdateState &us) {
+    if (isFirstRun()) {
+        startGame();
+    }
+    
     list<spUnit> *units = _map->getRoom()->getUnits();
     // Iterate through the unit list and call their update method. Then check for death.
     for (list<spUnit>::iterator i = units->begin(); i != units->end(); ) {

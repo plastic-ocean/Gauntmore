@@ -6,20 +6,19 @@
 #include "PauseMenu.h"
 #include "res.h"
 
+
 spPauseMenu PauseMenu::instance;
 
+
+/**
+ * Constructor.
+ */
 PauseMenu::PauseMenu():_isReady(false), _selection(selectContinue) {
     _name = new Sprite;
     _name->setResAnim(resources.getResAnim("title"));
     _name->setAnchor(Vector2(0.5f, 0.5f));
     _name->setPosition(Vector2(768 / 2, (768 / 2) - _name->getHeight()));
     _name->attachTo(_view);
-    
-//    _newGame = new Sprite;
-//    _newGame->setResAnim(resources.getResAnim("new_game"));
-//    _newGame->setAnchor(Vector2(0.5f, 0.5f));
-//    _newGame->setPosition(Vector2(768 / 2, 768 / 2));
-//    _newGame->attachTo(_view);
     
     _continue = new Sprite;
     _continue->setResAnim(resources.getResAnim("continue_selected"));
@@ -37,6 +36,12 @@ PauseMenu::PauseMenu():_isReady(false), _selection(selectContinue) {
     Input::instance.addEventListener(Input::event_platform, CLOSURE(this, &PauseMenu::_onEvent));
 }
 
+
+/**
+ * Keyboard event handler.
+ *
+ * @ev is the SDL event sent by the event listener.
+ */
 void PauseMenu::_onEvent(Event *ev) {
     SDL_Event *event = (SDL_Event*) ev->userData;
     
@@ -73,6 +78,10 @@ void PauseMenu::_onEvent(Event *ev) {
     }
 }
 
+
+/**
+ * Selects the next item in the menu list.
+ */
 void PauseMenu::selectNext() {
     if (_selection == selectContinue) {
         _selection = selectQuit;

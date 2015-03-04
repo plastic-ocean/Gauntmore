@@ -16,6 +16,9 @@ public:
     
     PauseMenu();
     
+    
+    /* Getters and setters */
+    
     void setContinue(string continueImage) {
         _continue->setResAnim(resources.getResAnim(continueImage));
     }
@@ -30,9 +33,18 @@ private:
     spSprite _continue;
     spSprite _newGame;
     spSprite _quit;
-    
     bool _isReady;
+    
+    /**
+     * Keyboard event handler.
+     *
+     * @ev is the SDL event sent by the event listener.
+     */
     void _onEvent(Event *ev);
+    
+    /**
+     * Selects the next item in the menu list.
+     */
     void selectNext();
     
 };

@@ -10,7 +10,10 @@
 spStartMenu StartMenu::instance;
 
 
-StartMenu::StartMenu():_isReady(false) {
+/**
+ * Constructor.
+ */
+StartMenu::StartMenu():_selection(selectNewGame) {
     _name = new Sprite;
     _name->setResAnim(resources.getResAnim("title"));
     _name->setAnchor(Vector2(0.5f, 0.5f));
@@ -18,7 +21,7 @@ StartMenu::StartMenu():_isReady(false) {
     _name->attachTo(_view);
     
     _newGame = new Sprite;
-    _newGame->setResAnim(resources.getResAnim("new_game"));
+    _newGame->setResAnim(resources.getResAnim("new_game_selected"));
     _newGame->setAnchor(Vector2(0.5f, 0.5f));
     _newGame->setPosition(Vector2(768 / 2, 768 / 2));
     _newGame->attachTo(_view);
@@ -39,30 +42,49 @@ StartMenu::StartMenu():_isReady(false) {
     Input::instance.addEventListener(Input::event_platform, CLOSURE(this, &StartMenu::_onEvent));
 }
 
+
+/**
+ * Keyboard event handler.
+ *
+ * @ev is the SDL event sent by the event listener.
+ */
 void StartMenu::_onEvent(Event *ev) {
     SDL_Event *event = (SDL_Event*) ev->userData;
     
-    if (event->type == SDL_KEYDOWN && event->key.repeat == 0 && _isReady) {
+    if (event->type == SDL_KEYDOWN && event->key.repeat == 0) {
         switch (event->key.keysym.sym) {
             case SDLK_RETURN:
-                _isReady = false;
-                changeScene(GameScene::instance);
+                if (_selection == selectNewGame) {
+                    changeScene(GameScene::instance);
+                } else if (_selection == selectQuit) {
+                    core::requestQuit();
+                }
                 break;
+            case SDLK_UP:
+            case SDLK_w:
+            case SDLK_DOWN:
+            case SDLK_s:
             case SDLK_TAB:
-                // change selection
+                selectNext();
                 break;
             default:
                 break;
         }
     }
-    
-    if (event->type == SDL_KEYUP && event->key.repeat == 0) {
-        switch (event->key.keysym.sym) {
-            case SDLK_ESCAPE:
-                _isReady = true;
-                break;
-            default:
-                break;
-        }
+}
+
+
+/**
+ * Selects the next item in the menu list.
+ */
+void StartMenu::selectNext() {
+    if (_selection == selectNewGame) {
+        _selection = selectQuit;
+        setQuit("quit_selected");
+        setNewGame("new_game");
+    } else if (_selection == selectQuit) {
+        _selection = selectNewGame;
+        setQuit("quit");
+        setNewGame("new_game_selected");
     }
 }
