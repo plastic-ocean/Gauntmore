@@ -275,6 +275,8 @@ void Game::createNewGame() {
  * @us is the UpdateStatus sent by the global update method.
  */
 void Game::doUpdate(const UpdateState &us) {
+    int killedUnit = false;
+    
     if (isFirstRun()) {
         startGame();
     }
@@ -283,11 +285,11 @@ void Game::doUpdate(const UpdateState &us) {
     // Iterate through the unit list and call their update method. Then check for death.
     for (list<spUnit>::iterator i = units->begin(); i != units->end(); ) {
         spUnit unit = *i;
-//        cout << unit->getType() << endl;
         unit->update(us);
         if (unit->isDead()) {
             // If it is dead remove it from list.
             i = units->erase(i);
+            killedUnit = true;
         } else {
             ++i;
         }
@@ -297,7 +299,9 @@ void Game::doUpdate(const UpdateState &us) {
         killPlayer();
     }
     
-    _createTiles();
+    if (killedUnit) {
+        _createTiles();
+    }
 }
 
 
