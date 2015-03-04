@@ -19,6 +19,7 @@ DECLARE_SMART(Slime, spSlime);
 DECLARE_SMART(HealthBar, spHealthBar);
 DECLARE_SMART(GoldCount, spGoldCount);
 DECLARE_SMART(ArmorCount, spArmorCount);
+DECLARE_SMART(WeaponCount, spWeaponCount);
 
 DECLARE_SMART(Chest, spChest);
 DECLARE_SMART(Gold, spGold);
@@ -72,6 +73,12 @@ public:
      */
     void updateArmorCount(int value);
 
+    /**
+     * Updates the weapon counter.
+     *
+     * @num is the value to update by.
+     */
+    void updateWeaponCount(int value);
 
     /* Getters and Setters */
 
@@ -119,7 +126,7 @@ protected:
     spHealthBar _healthBar;
     spGoldCount _goldCount;
     spArmorCount _armorCount;
-    
+    spWeaponCount _weaponCount;
     
     /**
      * Updates the player each frame. A virtual method of Actor it is being called each frame.

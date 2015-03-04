@@ -4,11 +4,18 @@
     <atlas>
         <image file="floor.png" />
         <image file="wall.png" />
+        <image file="place_holder.png" />
         <image file="chest.png" />
         <image file="potion.png" />
         <image file="gold.png" cols = "8" />
         <image file="coin.png" />
-        <image file="armor.png" />
+        <image file="armor1.png" />
+        <image file="armor2.png" />
+        <image file="armor3.png" />
+        <image file="weapon1.png" />
+        <image file="weapon2.png" />
+        <image file="weapon3.png" />
+        
                 
         <image file="health.png" />
         <image file="health_border.png" />
@@ -17,6 +24,8 @@
         <image file="slime_up.png" cols = "3" />
         <image file="slime_left.png" cols = "3" />
         <image file="slime_right.png" cols = "3" />
+        
+        <image file="snake.png" rows = "4" cols = "3" />
         
         <image file="adventurer_down.png" />
         <image file="adventurer_up.png" />

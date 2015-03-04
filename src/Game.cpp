@@ -21,6 +21,7 @@
 #include "HealthBar.h"
 #include "GoldCount.h"
 #include "ArmorCount.h"
+#include "WeaponCount.h"
 
 
 /**
@@ -71,6 +72,10 @@ Game::Game() {
     // Armor Count
     _armorCount = new ArmorCount(this);
 
+    // Weapon Count
+    _weaponCount = new WeaponCount(this);
+    
+    
     
 }
 
@@ -139,6 +144,7 @@ void Game::switchRoom(int edge) {
     _healthBar->render();
     _goldCount->render();
     _armorCount->render();
+    _weaponCount->render();
 }
 
 
@@ -202,6 +208,15 @@ void Game::updateGoldCount(int value) {
  */
 void Game::updateArmorCount(int value) {
     _armorCount->updateArmorCount(value);
+}
+
+/**
+ * Updates the weapon counter.
+ *
+ * @num is the value to update by.
+ */
+void Game::updateWeaponCount(int value) {
+    _weaponCount->updateWeaponCount(value);
 }
 
 

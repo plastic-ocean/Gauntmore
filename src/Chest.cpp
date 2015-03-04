@@ -2,6 +2,7 @@
 #include "Gold.h"
 #include "Potion.h"
 #include "Armor.h"
+#include "Weapon.h"
 #include "Game.h"
 #include "Map.h"
 #include "KeyboardInput.h"
@@ -78,14 +79,25 @@ void Chest::_interact() {
  */
 void Chest::_setContents() {
   //  int randContents = rand() % 3;
-    int randContents = 1;
+    int armorType = (rand() % 2) + 2;
+    int weaponType = (rand() % 2) + 2;
+    
+    cout << "Armor Type: " << armorType << endl;
+    cout << "Weapon Type: " << weaponType << endl;
+    
+    
+    int randContents = 2;
+    
     if (randContents == 0) {
         _contents = new Potion();
     }
     if (randContents == 1) {
-        _contents = new Armor();
+        _contents = new Armor(armorType);
     }
-    else{
+    if (randContents == 2) {
+        _contents = new Weapon(weaponType);
+    }
+    if (randContents == 3) {
         _contents = new Gold();
     }
 }

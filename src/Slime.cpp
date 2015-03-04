@@ -14,8 +14,8 @@ Slime::Slime() {
 }
 
 /**
- *
- *
+ *  Gets bounds of the unit Slime.
+ *  @return: SDL_Rect _bounds which is the bounds of Slime.
  */
 SDL_Rect Slime::getBounds() {
     Vector2 unitPosition = getPosition();
@@ -27,19 +27,23 @@ SDL_Rect Slime::getBounds() {
     return _bounds;
 }
 
-
 /**
- *
- *
+ *  Boolean method to determine if the unit is a Potion.
  */
 bool Slime::isPotion() {
     return false;
 }
-    
+
+/**
+ *  Method that does damage to the Player.
+ */
 void Slime::damage() {
 
 }
 
+/**
+ *  Adds Sprite and attaches it to the game.
+ */
 void Slime::addSprite() {
     // Add sprite to the game scene view.
     _sprite = new Sprite;
@@ -49,62 +53,16 @@ void Slime::addSprite() {
 }
 
 /**
- * Initializes a creatures position and sprite. Called by Unit's init() method.
+ * Initializes a Slime position and sprite. Called by Unit's init() method.
  */
 void Slime::_init() {
     addSprite();
     _setContents();
 }
 
-
 /**
- * Plays the attack animation.
+ * Interaction method for Slime.
  */
-//void Slime::attack() {
-//    switch (_facing) {
-//        case up:
-//            _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("slime_up")), 500);
-//            break;
-//        case right:
-//            _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("slime_right")), 500);
-//            break;
-//        case down:
-//            _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("slime_down")), 500);
-//            break;
-//        case left:
-//            _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("slime_left")), 500);
-//            break;
-//        default:
-//            break;
-//    }
-//}
-
-
-
-/**
- * Plays the move animation.
- */
-//void Slime::move() {
-//    _checkTween();
-//    switch (_facing) {
-//        case up:
-//            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("slime_up")), 500, -1);
-//            break;
-//        case right:
-//            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("slime_right")), 500, -1);
-//            break;
-//        case down:
-//            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("slime_down")), 500, -1);
-//            break;
-//        case left:
-//            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("slime_left")), 500, -1);
-//            break;
-//        default:
-//            break;
-//    }
-//}
-
-
 void Slime::_interact() {
     _hp--;
     if (_hp == 0) {
@@ -114,7 +72,6 @@ void Slime::_interact() {
         _dropContents();
     }
 }
-
 
 /**
  * Updates the creature every frame. Called by Unit::update.

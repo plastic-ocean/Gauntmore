@@ -8,8 +8,8 @@
 Skeleton::Skeleton():_contents(0) {}
 
 /**
- *
- *
+ *  Gets bounds of the unit Skeleton.
+ *  @return: SDL_Rect _bounds which is the bounds of Skeleton.
  */
 SDL_Rect Skeleton::getBounds(){
     Vector2 unitPosition = getPosition();
@@ -22,8 +22,7 @@ SDL_Rect Skeleton::getBounds(){
 }
 
 /**
- *
- *
+ *  Boolean method to determine if the unit is a Potion.
  */
 bool Skeleton::isPotion() {
     return false;

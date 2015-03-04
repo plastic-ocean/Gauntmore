@@ -486,7 +486,8 @@ void Room::_drawOpenSpaces(int row, int column, bool isColumn) {
     }
     
     // Create a chest 1/3 of the time
-    int randChoice = _getRand(0, 2);
+    int randChoice = 0;
+    //_getRand(0, 2);
     if (randChoice == 0) {
         int chestRow = _getRand(roomRow, roomHeight) * 64;
         int chestCol = _getRand(roomCol, roomWidth) * 64;

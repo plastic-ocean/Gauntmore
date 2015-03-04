@@ -46,9 +46,6 @@ public:
     
     /* Getters and Setters */
     
-    
-    
-    
     /**
      * Gets the unit's position.
      *
