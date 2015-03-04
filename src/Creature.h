@@ -44,11 +44,6 @@ protected:
     Vector2 moveMe();
     
     /**
-     * Initializes a creatures position and sprite. Called by Unit's init() method.
-     */
-    void _init();
-    
-    /**
      *
      *
      */
@@ -61,16 +56,21 @@ protected:
     void _dropContents();
     
     /**
+     * Initializes a creatures position and sprite. Called by Unit's init() method.
+     */
+    virtual void _init() = 0;
+    
+    /**
      * Reduces the creature's hit points.
      */
-    void _interact();
+    virtual void _interact() = 0;
     
     /**
      * Updates the creature every frame. Called by Units update() method.
      *
      * @us is the UpdateStatus sent by Unit's update method.
      */
-    void _update(const UpdateState &us);
+    virtual void _update(const UpdateState &us) = 0;
 };
 
 #endif /* defined(__gauntmore__Creature__) */

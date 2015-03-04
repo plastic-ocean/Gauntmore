@@ -6,10 +6,13 @@
 #include "NodeMinHeap.h"
 #include "PathNode.h"
 #include "CollisionDetector.h"
+#include "Game.h"
 
+class Game;
 class PathFinder : public Object {
 public:
     PathFinder();
+    PathFinder(Game * game);
     ~PathFinder();
     int findHeuristic( Vector2 );
     vector<Vector2> aStar( Vector2, Vector2 );

@@ -20,16 +20,16 @@
  
  
  */
-PathFinder::PathFinder() {
+PathFinder::PathFinder() {}
+
+PathFinder::PathFinder(Game *game):_game(game) {
     loc = 0;
 }
 
 PathFinder::~PathFinder() {
     
 }
-void PathFinder::setGame(Game *game) {
-    _game = game;
-}
+
 
 vector<Vector2> PathFinder::aStar(Vector2 start, Vector2 finish ) {
     PathNode *first =  new PathNode( start, 0, 0 );

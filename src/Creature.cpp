@@ -11,7 +11,7 @@
  */
 Creature::Creature() {
     setType("creature");
-    
+    PathFinder findPath = PathFinder(_game);
 }
 
 /**
@@ -47,24 +47,24 @@ void Creature::_dropContents() {
 /**
  * Reduces the creatures hit points.
  */
-void Creature::_interact() {
-    _hp--;
-    if (_hp == 0) {
-        // The creature is dead, hide it with an alpha tween.
-        _dead = true;
-        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-        _dropContents();
-    }
-}
+//void Creature::_interact() {
+//    _hp--;
+//    if (_hp == 0) {
+//        // The creature is dead, hide it with an alpha tween.
+//        _dead = true;
+//        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
+//        _dropContents();
+//    }
+//}
 
 
 /**
  * Initializes a creatures position and sprite. Called by Unit's init() method.
  */
-void Creature::_init() {
-    findPath.setGame(_game);//for collision detection
-    
-}
+//void Creature::_init() {
+//    findPath.setGame(_game);//for collision detection
+//    
+//}
 
 
 
@@ -108,12 +108,12 @@ Vector2 Creature::moveMe() {
  *
  * @us is the UpdateStatus sent by Unit's update method.
  */
-void Creature::_update(const UpdateState &us) {
-//    Vector2 direction = moveMe();
-//    Vector2 position = getPosition();
-//    position += direction * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
-//    setPosition(position);
-
-}
+//void Creature::_update(const UpdateState &us) {
+////    Vector2 direction = moveMe();
+////    Vector2 position = getPosition();
+////    position += direction * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
+////    setPosition(position);
+//
+//}
 
 
