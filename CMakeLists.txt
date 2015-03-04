@@ -29,5 +29,3 @@ src/tmx/TmxPolyline.h src/tmx/Tmx.h
 )
 
 target_link_libraries(gauntmore ${OXYGINE_CORE_LIBS})
-
-https://hkhamm@bitbucket.org/plastic-ocean/gauntmore.git
