@@ -1,7 +1,7 @@
 #include <queue>
 #include <cmath>
 #include "PathFinder.h"
-#include "game.h"
+#include "Game.h"
 #include "PathNode.h"
 
 /*
@@ -20,10 +20,9 @@
  
  
  */
-PathFinder::PathFinder() {}
+PathFinder::PathFinder():loc(0) {}
 
-PathFinder::PathFinder(Game *game):_game(game) {
-    loc = 0;
+PathFinder::PathFinder(Game *game):_game(game), loc(0) {
 }
 
 PathFinder::~PathFinder() {

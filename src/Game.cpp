@@ -48,9 +48,7 @@ Game::Game():_isPaused(false) {
             unit->init(unit->getLocation(), this);
         }
     }
- 
     
-
     _slime = new Slime();
     _slime->init(Vector2((_map->getRoom()->getSize() / 2) * 64, (_map->getRoom()->getSize() / 2) * 64), this);
     _map->getRoom()->getUnits()->push_back(_slime);

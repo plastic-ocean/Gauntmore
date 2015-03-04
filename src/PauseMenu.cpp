@@ -6,11 +6,9 @@
 #include "PauseMenu.h"
 #include "res.h"
 
-
 spPauseMenu PauseMenu::instance;
 
-
-PauseMenu::PauseMenu():_isReady(false) {
+PauseMenu::PauseMenu():_isReady(false), _selection(selectContinue) {
     _name = new Sprite;
     _name->setResAnim(resources.getResAnim("title"));
     _name->setAnchor(Vector2(0.5f, 0.5f));
@@ -24,7 +22,7 @@ PauseMenu::PauseMenu():_isReady(false) {
 //    _newGame->attachTo(_view);
     
     _continue = new Sprite;
-    _continue->setResAnim(resources.getResAnim("continue"));
+    _continue->setResAnim(resources.getResAnim("continue_selected"));
     _continue->setAnchor(Vector2(0.5f, 0.5f));
     _continue->setPosition(Vector2(768 / 2, 768 / 2));
     _continue->attachTo(_view);
@@ -45,11 +43,19 @@ void PauseMenu::_onEvent(Event *ev) {
     if (event->type == SDL_KEYDOWN && event->key.repeat == 0 && _isReady) {
         switch (event->key.keysym.sym) {
             case SDLK_RETURN:
-                _isReady = false;
-                changeScene(GameScene::instance);
+                if (_selection == selectContinue) {
+                    _isReady = false;
+                    changeScene(GameScene::instance);
+                } else if (_selection == selectQuit) {
+                    core::requestQuit();
+                }
                 break;
+            case SDLK_UP:
+            case SDLK_w:
+            case SDLK_DOWN:
+            case SDLK_s:
             case SDLK_TAB:
-                // change selection
+                selectNext();
                 break;
             default:
                 break;
@@ -64,5 +70,17 @@ void PauseMenu::_onEvent(Event *ev) {
             default:
                 break;
         }
+    }
+}
+
+void PauseMenu::selectNext() {
+    if (_selection == selectContinue) {
+        _selection = selectQuit;
+        setQuit("quit_selected");
+        setContinue("continue");
+    } else if (_selection == selectQuit) {
+        _selection = selectContinue;
+        setQuit("quit");
+        setContinue("continue_selected");
     }
 }

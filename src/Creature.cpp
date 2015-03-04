@@ -11,7 +11,7 @@
  */
 Creature::Creature() {
     setType("creature");
-    PathFinder findPath = PathFinder(_game);
+    PathFinder findPath = PathFinder();
 }
 
 /**

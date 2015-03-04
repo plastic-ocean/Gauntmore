@@ -12,18 +12,20 @@ class PauseMenu : public Scene {
 
 public:
     static spPauseMenu instance;
+    enum Selection {selectContinue, selectQuit};
     
     PauseMenu();
     
-    void setNewGame(string newGame) {
-        // pass the new image string
+    void setContinue(string continueImage) {
+        _continue->setResAnim(resources.getResAnim(continueImage));
     }
     
-    void setQuit(string quit) {
-        // pass the new image string
+    void setQuit(string quitImage) {
+        _quit->setResAnim(resources.getResAnim(quitImage));
     }
     
 private:
+    Selection _selection;
     spSprite _name;
     spSprite _continue;
     spSprite _newGame;
@@ -31,5 +33,6 @@ private:
     
     bool _isReady;
     void _onEvent(Event *ev);
+    void selectNext();
     
 };
