@@ -1,4 +1,0 @@
-/Users/Keith/Desktop/cis330/gauntmore/build/oxygine-sound/CMakeFiles/oxygine-sound.dir
-/Users/Keith/Desktop/cis330/gauntmore/build/oxygine-framework/CMakeFiles/oxygine-framework.dir
-/Users/Keith/Desktop/cis330/gauntmore/build/oxygine-sound/dependencies/tremor/CMakeFiles/tremor.dir
-/Users/Keith/Desktop/cis330/gauntmore/build/CMakeFiles/gauntmore.dir
