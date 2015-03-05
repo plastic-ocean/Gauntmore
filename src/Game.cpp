@@ -316,7 +316,7 @@ bool Game::isFirstRun() {
  * @us is the UpdateStatus sent by the global update method.
  */
 void Game::doUpdate(const UpdateState &us) {
-    int killedUnit = false;
+    bool killedUnit = false;
     
     if (isFirstRun()) {
         startGame();

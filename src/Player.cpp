@@ -310,10 +310,10 @@ void Player::_init() {
  * @us is the UpdateStatus sent by Unit's update method.
  */
 void Player::_update(const UpdateState &us) {
-    _isMoving = false;
+//    _isMoving = false;
     Vector2 direction;
     if (_game->getMove()->getDirection(direction)) {
-        _isMoving = true;
+//        _isMoving = true;
         Vector2 position = getPosition();
         direction = _correctDirection(position, direction);
         position += direction * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
