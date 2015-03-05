@@ -41,6 +41,8 @@ bool Skeleton::isPotion() {
 void Skeleton::_init() {
     addSprite();
     _setContents();
+    findPath.setGame(_game);
+
 }
 
 /**

@@ -28,7 +28,7 @@ public:
 //    virtual void attack() = 0;
 //    
 //    virtual void move(Facing facing) = 0;
-    
+
 protected:
     spThing _contents;
 

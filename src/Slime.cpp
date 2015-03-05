@@ -11,6 +11,7 @@ Slime::Slime() {
     _attack = 1;
     _defense = 0;
     _speed = 100;
+
     
 }
 
@@ -55,6 +56,8 @@ void Slime::addSprite() {
 void Slime::_init() {
     addSprite();
     _setContents();
+    findPath.setGame(_game);
+
 }
 
 
