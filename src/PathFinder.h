@@ -19,8 +19,6 @@ public:
     Vector2 nextMove(Vector2, Vector2);
     void setGame(Game *game);
     
-    
-    
 private:
     Game *_game;
     Vector2 target;
@@ -34,7 +32,7 @@ private:
     PathNode closedList[1000];
     void addNode(PathNode*);
     int loc;
-    spCollisionDetector coll;
+    CollisionDetector coll;
     
     
 };

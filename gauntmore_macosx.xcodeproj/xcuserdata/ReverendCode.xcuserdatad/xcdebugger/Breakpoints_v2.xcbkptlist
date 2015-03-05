@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "src/PathFinder.cpp"
-            timestampString = "447116779.683387"
+            timestampString = "447285800.398417"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "PathFinder::aStar(Vector2 start, Vector2 finish )"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "src/PathFinder.cpp"
-            timestampString = "447116779.683387"
+            timestampString = "447285800.398417"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "PathFinder::aStar(Vector2 start, Vector2 finish )"
             landmarkType = "5">
          </BreakpointContent>
@@ -46,9 +46,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "NodeMinHeap::getMinNode()"
-            landmarkType = "5">
+            endingLineNumber = "38">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -58,11 +56,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "src/PathFinder.cpp"
-            timestampString = "447116779.683387"
+            timestampString = "447285800.398417"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "PathFinder::scanSurround( PathNode *node )"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,13 +72,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "src/PathFinder.cpp"
-            timestampString = "447116779.683387"
+            timestampString = "447285800.398417"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "PathFinder::makePath(PathNode node )"
-            landmarkType = "5">
+            startingLineNumber = "140"
+            endingLineNumber = "140">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -90,11 +86,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "src/PathFinder.cpp"
-            timestampString = "447116779.683387"
+            timestampString = "447285800.398417"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "PathFinder::aStar(Vector2 start, Vector2 finish )"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,12 +102,58 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "src/PathFinder.cpp"
-            timestampString = "447116779.683387"
+            timestampString = "447285800.398417"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "PathFinder::aStar(Vector2 start, Vector2 finish )"
+            startingLineNumber = "62"
+            endingLineNumber = "62">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "src/PathFinder.cpp"
+            timestampString = "447282770.727829"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "PathFinder::setGame( Game *game )"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "src/PathFinder.cpp"
+            timestampString = "447286736.516075"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "PathFinder::scanSurround( PathNode *node )"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "src/PathFinder.cpp"
+            timestampString = "447286777.088289"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "PathFinder::scanSurround( PathNode *node )"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

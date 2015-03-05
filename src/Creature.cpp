@@ -11,7 +11,7 @@
  */
 Creature::Creature() {
     setType("creature");
-    PathFinder findPath = PathFinder();
+//    PathFinder findPath = PathFinder(_game);
 }
 
 /**
@@ -93,10 +93,10 @@ Vector2 Creature::moveMe() {
             nextSpot = moveQ.peekNext();//start moving to the next spot
     
     
-    if ( (cPos.x - nextSpot.x) <= 0 ) moveDir.x = 1;
-    else if ( (cPos.x - nextSpot.x) > 0 ) moveDir.x = -1;
-    if ( (cPos.y - nextSpot.y) <= 0 ) moveDir.y = 1;
-    else if ( (cPos.y - nextSpot.y) > 0 ) moveDir.y = -1;
+    if ( (cPos.x - nextSpot.x) < -4 ) moveDir.x = 1;
+     if ( (cPos.x - nextSpot.x) > 4 ) moveDir.x = -1;
+    if ( (cPos.y - nextSpot.y) < -4 ) moveDir.y = 1;
+     if ( (cPos.y - nextSpot.y) > 4 ) moveDir.y = -1;
     
     return moveDir;
 }

@@ -42,6 +42,8 @@ bool Skeleton::isPotion() {
 void Skeleton::_init() {
     addSprite();
     _setContents();
+    findPath.setGame(_game);
+
 }
 
 /**
@@ -84,7 +86,7 @@ void Skeleton::_update(const UpdateState &us) {
     setPosition(position);
     // if the abs of the two positions is less than equal to stopping distance then attack
     if((abs(position.x - _game->getPlayer()->getPosition().x) <= 70) && (abs(position.y - _game->getPlayer()->getPosition().y) <= 70)){
-        cout << "attacking" << endl;
+//        cout << "attacking" << endl;
         //sleep(1000);
     }
     // this will damage player

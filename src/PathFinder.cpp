@@ -28,14 +28,16 @@ PathFinder::PathFinder(Game *game):_game(game), loc(0) {
 PathFinder::~PathFinder() {
     
 }
-
+void PathFinder::setGame( Game *game ) {
+    _game = game;
+}
 
 vector<Vector2> PathFinder::aStar(Vector2 start, Vector2 finish ) {
     PathNode *first =  new PathNode( start, 0, 0 );
     openList.clearHeap();
     target = finish;
     source = start;
-//    vector<Vector2> outPath;
+    
     openList.insertNode(first);//add start to heap
     
     while ( !openList.empty() ) {
@@ -69,31 +71,28 @@ int PathFinder::findHeuristic( Vector2 curLoc ) {
 
 
 void PathFinder::scanSurround( PathNode *node ) {
-    Vector2 temp = node->getLocation() ;
+    Vector2 temp = node->getLocation();
+    Vector2 old = node->getLocation();
     temp.x -=(int) mapSize;
     temp.y -=(int) mapSize;
     int summ = 12;//something more clever goes here
     int flip = -2;
+    int touchX;
+    int touchY;
 
     for ( int i = 0; i < 3; i++ ) {
         for ( int j = 0; j < 3; j++ ) {
             flip *= (-1);
 
-            if (temp.x > 0 && temp.y > 0 ) {
+            if (temp.x > 0 && temp.y > 0 ) {//is the location > 0?
             PathNode nodeNew = PathNode( temp, node->getCost()+(summ+flip), findHeuristic(temp), &closedList[loc-1] );
                 
                 if (!inClosedList(nodeNew) ) {
-                    if ( flip < 0 ) {
-                    
-                    //corner collision check
-                } else {
-//                    if ( !coll->detectWalls(_game->getTiles(), temp.x, temp.y, 2, 2) ) {
-//                        openList.insertNode(&nodeNew);
-//                    }
-                    //cardinal collision check
-                    
-                }
+//                    touchX = ( temp.x - old.x )/2;
+//                    touchY = ( temp.y - old.y )/2;
+                    if ( !coll.detectWalls(_game->getTiles(), temp.x, temp.y, 60, 60) ) {
                     openList.insertNode( &nodeNew );
+                    }
             }
         }
             
