@@ -36,6 +36,13 @@ PauseMenu::PauseMenu():_isReady(false), _selection(selectContinue) {
     Input::instance.addEventListener(Input::event_platform, CLOSURE(this, &PauseMenu::_onEvent));
 }
 
+void PauseMenu::setContinue(string continueImage) {
+    _continue->setResAnim(resources.getResAnim(continueImage));
+}
+
+void PauseMenu::setQuit(string quitImage) {
+    _quit->setResAnim(resources.getResAnim(quitImage));
+}
 
 /**
  * Keyboard event handler.

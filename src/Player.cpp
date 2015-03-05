@@ -172,6 +172,24 @@ void Player::attack() {
 }
 
 
+int Player::getAttack(){
+    return _attack;
+};
+
+
+void Player::setAttack(int attack){
+    _attack = attack;
+};
+
+int Player::getDefense(){
+    return _defense;
+};
+
+void Player::setDefense(int defense){
+    _defense += defense;
+};
+
+
 /**
  * Plays the move animation.
  */

@@ -33,78 +33,41 @@ public:
 
     /* Setters and Getters */
 
-    int getSize() const {
-        return _size;
-    }
+    int getSize() const;
 
-    void setSize(int size) {
-        _size = size;
-    }
+    void setSize(int size);
 
-    Vector2 getEntrance() {
-        return _entrance;
-    }
+    Vector2 getEntrance();
 
-    void setEntrance(Vector2 entrance) {
-        _entrance = entrance;
-    }
+    void setEntrance(Vector2 entrance);
 
-    vector<SDL_Rect> getTiles() {
-        return _tiles;
-    }
+    vector<SDL_Rect> getTiles();
 
-    void setTiles(vector<SDL_Rect> tiles) {
-        _tiles = tiles;
-    }
+    void setTiles(vector<SDL_Rect> tiles);
 
-    list<spUnit>* getUnits() {
-        return &_units;
-    }
+    list<spUnit>* getUnits();
 
-    int getType() {
-        return _type;
-    }
+    int getType();
 
-    vector<Vector2> getExits() {
-        return _exits;
-    }
+    vector<Vector2> getExits();
 
-    void setExits(vector<Vector2> exits) {
-        _exits = exits;
-    }
+    void setExits(vector<Vector2> exits);
 
-    int getTop() {
-        return _top;
-    }
+    int getTop();
 
-    void setTop(int top) {
-        _top = top;
-    }
+    void setTop(int top);
 
-    int getRight() {
-        return _right;
-    }
+    int getRight();
 
-    void setRight(int right) {
-        _right = right;
-    }
+    void setRight(int right);
 
-    int getBottom() {
-        return _bottom;
-    }
+    int getBottom();
 
-    void setBottom(int bottom) {
-        _bottom = bottom;
-    }
+    void setBottom(int bottom);
 
-    int getLeft() {
-        return _left;
-    }
+    int getLeft();
 
-    void setLeft(int left) {
-        _left = left;
-    }
-
+    void setLeft(int left);
 
 private:
     const int tileSize = 64;

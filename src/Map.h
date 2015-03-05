@@ -19,37 +19,21 @@ public:
      */
     void changeRoom(int edge);
 
-    spRoom getRoom() {
-        return _room;
-    }
+    spRoom getRoom();
 
-    void setRoom(spRoom &room) {
-        _room = room;
-    }
+    void setRoom(spRoom &room);
 
-    vector<vector<spRoom>> getRoomMap() {
-        return _roomMap;
-    }
+    vector<vector<spRoom>> getRoomMap();
 
-    void setRoomMap(vector<vector<spRoom>> roomMap) {
-        _roomMap = roomMap;
-    }
+    void setRoomMap(vector<vector<spRoom>> roomMap);
 
-    int getCol() const {
-        return _col;
-    }
+    int getCol() const;
 
-    void setCol(int col) {
-        Map::_col = col;
-    }
+    void setCol(int col);
 
-    int getRow() const {
-        return _row;
-    }
+    int getRow() const;
 
-    void setRow(int row) {
-        Map::_row = row;
-    }
+    void setRow(int row);
 
 private:
     spRoom _room;

@@ -42,33 +42,14 @@ public:
      */
     void attack();
     
-    /**
-     *
-     */
-    int getAttack(){
-        return _attack;
-    };
+    int getAttack();
     
-    /**
-     *
-     */
-    void setAttack(int attack){
-        _attack = attack;
-    };
+
+    void setAttack(int attack);
     
-    /**
-     *
-     */
-    int getDefense(){
-        return _defense;
-    };
+    int getDefense();
     
-    /**
-     *
-     */
-    void setDefense(int defense){
-        _defense += defense;
-    };
+    void setDefense(int defense);
     
     /**
      * Plays the move animation.

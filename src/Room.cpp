@@ -143,6 +143,79 @@ void Room::printMap() {
 }
 
 
+int Room::getSize() const {
+    return _size;
+}
+
+void Room::setSize(int size) {
+    _size = size;
+}
+
+Vector2 Room::getEntrance() {
+    return _entrance;
+}
+
+void Room::setEntrance(Vector2 entrance) {
+    _entrance = entrance;
+}
+
+vector<SDL_Rect> Room::getTiles() {
+    return _tiles;
+}
+
+void Room::setTiles(vector<SDL_Rect> tiles) {
+    _tiles = tiles;
+}
+
+list<spUnit>* Room::getUnits() {
+    return &_units;
+}
+
+int Room::getType() {
+    return _type;
+}
+
+vector<Vector2> Room::getExits() {
+    return _exits;
+}
+
+void Room::setExits(vector<Vector2> exits) {
+    _exits = exits;
+}
+
+int Room::getTop() {
+    return _top;
+}
+
+void Room::setTop(int top) {
+    _top = top;
+}
+
+int Room::getRight() {
+    return _right;
+}
+
+void Room::setRight(int right) {
+    _right = right;
+}
+
+int Room::getBottom() {
+    return _bottom;
+}
+
+void Room::setBottom(int bottom) {
+    _bottom = bottom;
+}
+
+int Room::getLeft() {
+    return _left;
+}
+
+void Room::setLeft(int left) {
+    _left = left;
+}
+
+
 /**
 *  Copies one of the outside tile maps (.tmx) to room.tmx.
 */

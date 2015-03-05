@@ -46,109 +46,29 @@ public:
     
     /* Getters and Setters */
     
+    const Vector2& getPosition();
     
+    void setPosition(const Vector2& position);
     
+    string getType();
     
-    /**
-     * Gets the unit's position.
-     *
-     * @return the unit's position
-     */
-    const Vector2& getPosition() {
-        return _view->getPosition();
-    }
+    void setType(string type);
     
-    /**
-     * Sets the unit's position.
-     *
-     * @position the position to set
-     */
-    void setPosition(const Vector2& position) {
-        _view->setPosition(position);
-    }
-    
-    /**
-     *
-     *
-     */
-    string getType() {
-        return _type;
-    }
-    
-    /**
-     *
-     *
-     */
-    void setType(string type) {
-        _type = type;
-    }
-    
-    /**
-     * Check for unit death.
-     *
-     * @returns true if unit is dead and false if it is not.
-     */
-    const bool isDead() {
-        return _dead;
-    }
+    const bool isDead();
 
-    /**
-     *
-     *
-     */
-    int getHp() {
-        return _hp;
-    }
+    int getHp();
 
-    /**
-     *
-     *
-     */
-    int getAttack() {
-        return _attack;
-    }
+    int getAttack();
 
-    /**
-     *
-     *
-     */
-    int getDefense() {
-        return _defense;
-    }
+    int getDefense();
     
-    /**
-     *
-     *
-     */
-
-    void setLocation(Vector2 location) {
-        _location = location;
-    }
+    void setLocation(Vector2 location);
     
-    /**
-     *
-     *
-     */
-    Vector2 getLocation() {
-        return _location;
-    }
+    Vector2 getLocation();
     
-    /**
-     *
-     *
-     */
+    SDL_Rect getRect();
     
-    SDL_Rect getRect() {
-        return _rect;
-    }
-    
-    /**
-     *
-     *
-     */
-    void setRect(SDL_Rect rect) {
-        _rect = rect;
-    }
+    void setRect(SDL_Rect rect);
     
     
     /* Virtual Methods */

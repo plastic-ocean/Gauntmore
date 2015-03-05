@@ -269,6 +269,47 @@ void Game::createNewGame() {
 }
 
 
+spPlayer Game::getPlayer() {
+    return _player;
+}
+
+spMap Game::getMap() {
+    return _map;
+}
+
+vector<SDL_Rect> Game::getTiles() {
+    return _tiles;
+}
+
+spKeyboardInput Game::getMove() {
+    return _move;
+}
+
+spHealthBar Game::getHealthBar() {
+    return _healthBar;
+}
+
+int Game::getTileSize() {
+    return tileSize;
+}
+
+void Game::setPaused(bool isPaused) {
+    _isPaused = isPaused;
+}
+
+bool Game::isPaused() {
+    return _isPaused;
+}
+
+void Game::setFirstRun(bool isFirstRun) {
+    _isFirstRun = isFirstRun;
+}
+
+bool Game::isFirstRun() {
+    return _isFirstRun;
+}
+
+
 /**
  * Updates the Units each frame. A virtual method of Actor it is being called each frame.
  *

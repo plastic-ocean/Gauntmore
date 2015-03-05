@@ -83,45 +83,25 @@ public:
 
     /* Getters and Setters */
 
-    spPlayer getPlayer() {
-        return _player;
-    }
+    spPlayer getPlayer();
 
-    spMap getMap() {
-        return _map;
-    }
+    spMap getMap();
 
-    vector<SDL_Rect> getTiles() {
-        return _tiles;
-    }
+    vector<SDL_Rect> getTiles();
 
-    spKeyboardInput getMove() {
-        return _move;
-    }
+    spKeyboardInput getMove();
 
-    spHealthBar getHealthBar() {
-        return _healthBar;
-    }
+    spHealthBar getHealthBar();
 
-    int getTileSize() {
-        return tileSize;
-    }
+    int getTileSize();
     
-    void setPaused(bool isPaused) {
-        _isPaused = isPaused;
-    }
+    void setPaused(bool isPaused);
     
-    bool isPaused() {
-        return _isPaused;
-    }
+    bool isPaused();
     
-    void setFirstRun(bool isFirstRun) {
-        _isFirstRun = isFirstRun;
-    }
+    void setFirstRun(bool isFirstRun);
     
-    bool isFirstRun() {
-        return _isFirstRun;
-    }
+    bool isFirstRun();
 
 protected:
     const int tileSize = 64;

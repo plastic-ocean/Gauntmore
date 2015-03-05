@@ -49,6 +49,19 @@ DeathMenu::DeathMenu():_selection(selectNewGame), _isVisible(false) {
 }
 
 
+void DeathMenu::setNewGame(string newGameImage) {
+    _newGame->setResAnim(resources.getResAnim(newGameImage));
+}
+
+void DeathMenu::setQuit(string quitImage) {
+    _quit->setResAnim(resources.getResAnim(quitImage));
+}
+
+void DeathMenu::setGame(Game *game) {
+    _game = game;
+}
+
+
 /**
  * Keyboard event handler.
  *

@@ -19,17 +19,11 @@ public:
     
     /* Getters and setters */
     
-    void setNewGame(string newGameImage) {
-        _newGame->setResAnim(resources.getResAnim(newGameImage));
-    }
+    void setNewGame(string newGameImage);
     
-    void setQuit(string quitImage) {
-        _quit->setResAnim(resources.getResAnim(quitImage));
-    }
+    void setQuit(string quitImage);
     
-    void setGame(Game *game) {
-        _game = game;
-    }
+    void setGame(Game *game);
     
 private:
     Game *_game;
