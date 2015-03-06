@@ -37,11 +37,14 @@ vector<Vector2> PathFinder::aStar(Vector2 start, Vector2 finish ) {
     openList.clearHeap();
     target = finish;
     source = start;
+    loc = 0;
+    vector<Vector2> noMove;
+    noMove.push_back(source);
     
     openList.insertNode(first);//add start to heap
     
     while ( !openList.empty() ) {
-        
+        if (openList.getSize() > 999 || loc > 999 ) return noMove;
         PathNode temp = openList.getMinNode();//pop smallest from heap
         if ( atExit(temp) ) {//are we at the exit?
            return makePath(temp);
@@ -54,8 +57,7 @@ vector<Vector2> PathFinder::aStar(Vector2 start, Vector2 finish ) {
     }
     
     //if you got here, there is no path to the target.
-    vector<Vector2> nullVector;
-    return nullVector;
+    return noMove;
     
 }
 
@@ -77,8 +79,6 @@ void PathFinder::scanSurround( PathNode *node ) {
     temp.y -=(int) mapSize;
     int summ = 12;//something more clever goes here
     int flip = -2;
-    int touchX;
-    int touchY;
 
     for ( int i = 0; i < 3; i++ ) {
         for ( int j = 0; j < 3; j++ ) {
@@ -88,13 +88,17 @@ void PathFinder::scanSurround( PathNode *node ) {
             PathNode nodeNew = PathNode( temp, node->getCost()+(summ+flip), findHeuristic(temp), &closedList[loc-1] );
                 
                 if (!inClosedList(nodeNew) ) {
-//                    touchX = ( temp.x - old.x )/2;
-//                    touchY = ( temp.y - old.y )/2;
-                    if ( !coll.detectWalls(_game->getTiles(), temp.x, temp.y, 60, 60) ) {
+                    
+                    if (flip < 0) {//Cardinal collision detection
+                    if ( !coll.detectWalls(_game->getTiles(), temp.x, temp.y, 50, 50) ) {
                     openList.insertNode( &nodeNew );
                     }
+                    } else {//diagonal collision detection
+                        
+                    }
+                    
+                }
             }
-        }
             
             temp.x += mapSize;
         }
