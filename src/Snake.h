@@ -1,16 +1,16 @@
-#ifndef __gauntmore__Slime__
-#define __gauntmore__Slime__
+#ifndef __gauntmore__Snake__
+#define __gauntmore__Snake__
 
 #include "Creature.h"
 #include "Thing.h"
 
 using namespace std;
 
-DECLARE_SMART(Slime, spSlime);
-class Slime : public Creature {
+DECLARE_SMART(Snake, spSnake);
+class Snake : public Creature {
     
 public:
-    Slime();
+    Snake();
     
     /* Virtual Methods */
     
@@ -45,4 +45,4 @@ private:
     void _update(const UpdateState &us);
 };
 
-#endif /* defined(__gauntmore__Slime__) */
+#endif /* defined(__gauntmore__Snake__) */

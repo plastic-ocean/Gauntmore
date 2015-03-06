@@ -4,6 +4,8 @@
 #include "Room.h"
 #include "Chest.h"
 #include "Skeleton.h"
+#include "Bat.h"
+#include "Snake.h"
 
 using namespace std;
 
@@ -570,11 +572,19 @@ void Room::_drawOpenSpaces(int row, int column, bool isColumn) {
     }
     
     for(int i = 0; i < _getRand(0,5); i++){
-        int skeletonRow = _getRand(roomRow, roomHeight) * 64;
-        int skeletonCol = _getRand(roomCol, roomWidth) * 64;
-        spSkeleton skeleton = new Skeleton;
-        skeleton->setLocation(Vector2(skeletonCol, skeletonRow));
-        _units.push_back(skeleton);
+        int batRow = _getRand(roomRow, roomHeight) * 64;
+        int batCol = _getRand(roomCol, roomWidth) * 64;
+        spBat bat = new Bat;
+        bat->setLocation(Vector2(batCol, batRow));
+        _units.push_back(bat);
+        
+    }
+    for(int i = 0; i < _getRand(0,5); i++){
+        int snakeRow = _getRand(roomRow, roomHeight) * 64;
+        int snakeCol = _getRand(roomCol, roomWidth) * 64;
+        spSnake snake = new Snake;
+        snake->setLocation(Vector2(snakeCol, snakeRow));
+        _units.push_back(snake);
         
     }
 }

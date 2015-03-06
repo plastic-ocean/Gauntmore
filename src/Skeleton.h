@@ -10,6 +10,7 @@ DECLARE_SMART(Skeleton, spSkeleton);
 class Skeleton : public Creature {
     
 public:
+
     /**
      *
      *
@@ -34,6 +35,8 @@ public:
     
     
 private:
+    Facing _facing;
+    
     spThing _contents;
     
     /**
@@ -45,6 +48,10 @@ private:
      * Interaction method for Skeleton.
      */
     void _interact();
+    
+    void move();
+    
+    void attack();
     
     /**
      * Updates the Skeleton every frame. Called by Units update() method.

@@ -14,6 +14,8 @@ DECLARE_SMART(Unit, spUnit);
 DECLARE_SMART(Player, spPlayer);
 DECLARE_SMART(Creature, spCreature);
 DECLARE_SMART(Skeleton, spSkeleton);
+DECLARE_SMART(Bat, spBat);
+DECLARE_SMART(Snake, spSnake);
 DECLARE_SMART(Slime, spSlime);
 
 DECLARE_SMART(HealthBar, spHealthBar);
@@ -114,6 +116,8 @@ protected:
     spPlayer _player;
     
     spSkeleton _skeleton;
+    spBat _bat;
+    spSnake _snake;
     spSlime _slime;
     
     spChest _chest;

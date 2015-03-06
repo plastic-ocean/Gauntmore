@@ -18,6 +18,16 @@
         <image file="slime_left.png" cols = "3" />
         <image file="slime_right.png" cols = "3" />
         
+        <image file="bat_down.png" cols = "3" />
+        <image file="bat_up.png" cols = "3" />
+        <image file="bat_left.png" cols = "3" />
+        <image file="bat_right.png" cols = "3" />
+        
+        <image file="snake_down.png" cols = "3" />
+        <image file="snake_up.png" cols = "3" />
+        <image file="snake_left.png" cols = "3" />
+        <image file="snake_right.png" cols = "3" />
+        
         <image file="adventurer_down.png" />
         <image file="adventurer_up.png" />
         <image file="adventurer_left.png" />

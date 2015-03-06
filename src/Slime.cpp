@@ -48,6 +48,7 @@ void Slime::addSprite() {
     _sprite->setResAnim(resources.getResAnim("slime_down"));
     _sprite->attachTo(_view);
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
+    move();
 }
 
 /**
@@ -88,25 +89,25 @@ void Slime::_init() {
 /**
  * Plays the move animation.
  */
-//void Slime::move() {
-//    _checkTween();
-//    switch (_facing) {
-//        case up:
-//            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("slime_up")), 500, -1);
-//            break;
-//        case right:
-//            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("slime_right")), 500, -1);
-//            break;
-//        case down:
-//            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("slime_down")), 500, -1);
-//            break;
-//        case left:
-//            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("slime_left")), 500, -1);
-//            break;
-//        default:
-//            break;
-//    }
-//}
+void Slime::move() {
+    //_checkTween();
+    switch (_facing) {
+        case up:
+            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("slime_up")), 500, -1);
+            break;
+        case right:
+            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("slime_right")), 500, -1);
+            break;
+        case down:
+            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("slime_down")), 500, -1);
+            break;
+        case left:
+            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("slime_left")), 500, -1);
+            break;
+        default:
+            break;
+    }
+}
 
 
 void Slime::_interact() {
@@ -126,9 +127,65 @@ void Slime::_interact() {
  * @us is the UpdateStatus sent by Unit's update method.
  */
 void Slime::_update(const UpdateState &us) {
-//    cout << "creature update" << endl;
     Vector2 direction = moveMe();
     Vector2 position = getPosition();
+    Facing prevFacing = _facing;
+    
+//    if((direction.x == 1 && direction.y == 0)
+//       || (direction.x == 1 && direction.y == 1)
+//       || (direction.x == 1 && direction.y == -1)){
+//        cout << "creature update east" << endl;
+//        // if direction is moving east or northeast or southeast
+//        _facing = right;
+//        move();
+//    }else if (direction.x == 0 && direction.y == 1){
+//        cout << "creature update north" << endl;
+//        // if direction is moving north
+//        _facing = up;
+//        move();
+//    } else if((direction.x == -1 && direction.y == 0)
+//              || (direction.x == -1 && direction.y == 1)
+//              || (direction.x == -1 && direction.y == -1)){
+//        cout << "creature update west" << endl;
+//        // if moving west or north west or south west
+//        _facing = left;
+//        move();
+//    }else if(direction.x == 0 && direction.y == -1){
+//        cout << "creature update south" << endl;
+//        // if moving south
+//        _facing = down;
+//        move();
+//    }
+    
+        if((direction.x == 1 && direction.y == 0)){
+            cout << "creature update east" << endl;
+            // if direction is moving east or northeast or southeast
+            _facing = right;
+            //move();
+        }else if ((direction.x == 0 && direction.y == 1)
+                  || (direction.x == -1 && direction.y == 1)
+                  || (direction.x == 1 && direction.y == 1)){
+            cout << "creature update north" << endl;
+            // if direction is moving north
+            _facing = up;
+            //move();
+        } else if((direction.x == -1 && direction.y == 0)){
+            cout << "creature update west" << endl;
+            // if moving west or north west or south west
+            _facing = left;
+            //move();
+        }else if((direction.x == 0 && direction.y == -1)
+                 || (direction.x == -1 && direction.y == -1)
+                 || (direction.x == 1 && direction.y == -1)){
+            cout << "creature update south" << endl;
+            // if moving south
+            _facing = down;
+            //move();
+        }
+    if(_facing != prevFacing){
+        move();
+    }
+    
     position += direction * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
     setPosition(position);
     
