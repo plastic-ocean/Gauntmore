@@ -158,26 +158,26 @@ void Slime::_update(const UpdateState &us) {
 //    }
     
         if ((direction.x == 1 && direction.y == 0)) {
-            cout << "creature update east" << endl;
+//            cout << "creature update east" << endl;
             // if direction is moving east or northeast or southeast
             _facing = right;
             //move();
         } else if ((direction.x == 0 && direction.y == 1)
                   || (direction.x == -1 && direction.y == 1)
                   || (direction.x == 1 && direction.y == 1)) {
-            cout << "creature update north" << endl;
+//            cout << "creature update north" << endl;
             // if direction is moving north
             _facing = up;
             //move();
         } else if ((direction.x == -1 && direction.y == 0)) {
-            cout << "creature update west" << endl;
+//            cout << "creature update west" << endl;
             // if moving west or north west or south west
             _facing = left;
             //move();
         } else if ((direction.x == 0 && direction.y == -1)
                  || (direction.x == -1 && direction.y == -1)
                  || (direction.x == 1 && direction.y == -1)) {
-            cout << "creature update south" << endl;
+//            cout << "creature update south" << endl;
             // if moving south
             _facing = down;
             //move();
