@@ -1,8 +1,6 @@
 #include "NodeArray.h"
 
-NodeArray::NodeArray() {
-    max = 10;
-    size = 0;
+NodeArray::NodeArray():size(0) {
     Vector2 vec = {0,0};
     for (int i = 0;i<1000;i++) {
         theHeap[i] = PathNode(vec,9999,9999);
@@ -16,7 +14,10 @@ NodeArray::~NodeArray() {
 }
 
 void NodeArray::push_back(PathNode *node) {
-    theHeap[size++] = *node;
+    theHeap[size] = *node;
+    if (size < 10000) {
+        size++;
+    }
     
 }
 PathNode* NodeArray::pop_back() {
@@ -53,7 +54,10 @@ bool NodeArray::compare(int a, int b) {
     return theHeap[a].getTotal() > theHeap[b].getTotal();
 }
 
-void NodeArray::expand() {
+void NodeArray::arrayDouble() {
+//    int newSize = size*2;
+//    PathNode temp[newSize];
+    
     
 }
 

@@ -32,6 +32,7 @@ bool CreatureMover::updatePath(vector<Vector2> newPath) {
 }
 
 Vector2 CreatureMover::peekNext() {
+//    if ( thePath.size() == 0) return {0,0};
     return thePath.back();
 }
 

@@ -15,6 +15,7 @@ public:
     PathNode getMinNode();
     bool empty();
     void clearHeap();
+    int getSize();
     
 protected:
     void bubbleUp(int);

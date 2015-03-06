@@ -18,10 +18,10 @@ public:
     bool compare(int, int);
     
 private:
-    int max;
     PathNode theHeap[1000];
     void expand();
     int size;
+    void arrayDouble();
     
 };
 
