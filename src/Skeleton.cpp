@@ -10,6 +10,7 @@ Skeleton::Skeleton():_contents(0) {
     _hp = 3;
     _attack = 2;
     _defense = 0;
+    _speed = 175;
 }
 
 /**

@@ -12,7 +12,6 @@ NodeMinHeap::~NodeMinHeap(){}
 void NodeMinHeap::insertNode( PathNode *node ) {
     
     theHeap.push_back(node);
-    cout << "size: " << theHeap.getSize() << endl;
     
     bubbleUp( theHeap.getSize()-1 );
     

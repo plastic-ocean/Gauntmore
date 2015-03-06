@@ -21,14 +21,12 @@ bool CreatureMover::isEmpty() {
 }
 
 bool CreatureMover::updatePath(vector<Vector2> newPath) {
-    //    if (thePath.size() == 0 ) {
-    this->thePath = newPath; //maybe add some clever stuff here later
+    for (int i = 0; i < newPath.size();i++) {
+        thePath.push_back(newPath.back());
+        newPath.pop_back();
+    }
+    
     return true;
-    //    }
-    //    else {
-    //
-    //    }
-    //    return false;
 }
 
 Vector2 CreatureMover::peekNext() {

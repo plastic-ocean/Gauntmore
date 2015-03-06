@@ -75,11 +75,9 @@ Vector2 Creature::moveMe() {
     Vector2 pPos = _game->getPlayer()->getPosition();//player's position
     Vector2 cPos = getPosition();//creature's position
     
-    cout << "Creature at: " << cPos.x << " " << cPos.y << endl;
-    cout << "Player at: " << pPos.x << " " << pPos.y << endl;
     
     
-    if ( abs(pPos.x - cPos.x) <= 64 && abs(pPos.y - cPos.y) <= 64 ) {
+    if ( abs(pPos.x - cPos.x) <= 50 && abs(pPos.y - cPos.y) <= 50 ) {
         return moveDir;//you are less than 64 pixels away, do nothing
     }
     //otherwise, check the movement Queue
@@ -88,7 +86,7 @@ Vector2 Creature::moveMe() {
     }
     //if the Q is NOT empty
         Vector2 nextSpot = moveQ.peekNext();//look at where you are going
-        if ( abs(cPos.x - nextSpot.x) <= 10 && abs(cPos.y - nextSpot.y) <= 10) {
+        if ( abs(cPos.x - nextSpot.x) <= 4 && abs(cPos.y - nextSpot.y) <= 4) {
             moveQ.updatePath(findPath.aStar(pPos, cPos) );
         }
             nextSpot = moveQ.peekNext();//start moving to the next spot

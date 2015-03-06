@@ -80,7 +80,8 @@ void PathFinder::scanSurround( PathNode *node ) {
     temp.y -=(int) mapSize;
     int summ = 12;//something more clever goes here
     int flip = -2;
-
+    bool insert = false;
+    
     for ( int i = 0; i < 3; i++ ) {
         for ( int j = 0; j < 3; j++ ) {
             flip *= (-1);
@@ -91,13 +92,22 @@ void PathFinder::scanSurround( PathNode *node ) {
                 if (!inClosedList(nodeNew) ) {
                     
                     if (flip < 0) {//Cardinal collision detection
-                    if ( !coll.detectWalls(_game->getTiles(), temp.x, temp.y, 50, 50) ) {
-                    openList.insertNode( &nodeNew );
-                    }
+                        if ( !coll.detectWalls(_game->getTiles(), temp.x, temp.y, 50, 50) ) {
+                            openList.insertNode(&nodeNew);
+                            
+                        }
                     } else {//diagonal collision detection
-                        
+//                        insert = true; //set flag
+//                        old -= temp;
+//                        
+//                        if ( old.x > 0 && coll.detectWalls(_game->getTiles(), temp.x + 50, temp.y, 50, 50) ) insert = false;
+//                        if ( old.x < 0 && coll.detectWalls(_game->getTiles(), temp.x - 50, temp.y, 50, 50) ) insert = false;
+//                        if ( old.y > 0 && coll.detectWalls(_game->getTiles(), temp.x, temp.y + 50, 50, 50) ) insert = false;
+//                        if ( old.y < 0 && coll.detectWalls(_game->getTiles(), temp.x, temp.y - 50, 50, 50) ) insert = false;
+//                        if ( insert == true ) openList.insertNode(&nodeNew);
+//                        insert = false; 
                     }
-                    
+                  
                 }
             }
             
