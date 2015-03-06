@@ -122,7 +122,7 @@ bool PathFinder::atExit( PathNode node ) {
 
 bool PathFinder::inClosedList( PathNode node ) {
     int size = loc;
-    for (int i = 0; i<size;i++ ) {
+    for (int i = 0; i < size; i++) {
         if ( closedList[i].getLocation() == node.getLocation() ) return true;
     }
     return false;
