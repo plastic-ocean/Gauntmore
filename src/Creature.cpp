@@ -83,11 +83,11 @@ Vector2 Creature::moveMe() {
         moveQ.updatePath(findPath.aStar(cPos, pPos) );
     }
     //if the Q is NOT empty
-        Vector2 nextSpot = moveQ.peekNext();//look at where you are going
-        if ( abs(cPos.x - nextSpot.x) <= 10 && abs(cPos.y - nextSpot.y) <= 10) {
-            moveQ.updatePath(findPath.aStar(pPos, cPos) );
-        }
-            nextSpot = moveQ.peekNext();//start moving to the next spot
+    Vector2 nextSpot = moveQ.peekNext();//look at where you are going
+    if ( abs(cPos.x - nextSpot.x) <= 10 && abs(cPos.y - nextSpot.y) <= 10) {
+        moveQ.updatePath(findPath.aStar(pPos, cPos) );
+    }
+        nextSpot = moveQ.peekNext();//start moving to the next spot
     
     
     if ( (cPos.x - nextSpot.x) < -4 ) moveDir.x = 1;

@@ -38,6 +38,12 @@ src/PauseMenu.cpp src/PauseMenu.h
 src/StartMenu.cpp src/StartMenu.h
 src/ArmorCount.cpp src/ArmorCount.h
 src/Armor.cpp src/Armor.h
+src/Eyeball.cpp src/Eyeball.h
+src/Ghost.cpp src/Ghost.h
+src/Bat.cpp src/Bat.h
+src/Bee.cpp src/Bee.h
+src/Snake.cpp src/Snake.h
+src/Worm.cpp src/Worm.h
 src/Gauntmore.cpp src/Gauntmore.h
 src/res.cpp src/res.h
 src/main.cpp

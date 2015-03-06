@@ -56,6 +56,7 @@ void Snake::addSprite() {
 void Snake::_init() {
     addSprite();
     _setContents();
+    findPath.setGame(_game);
 }
 
 /**

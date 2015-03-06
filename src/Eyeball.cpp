@@ -56,6 +56,7 @@ void Eyeball::addSprite() {
 void Eyeball::_init() {
     addSprite();
     _setContents();
+    findPath.setGame(_game);
 }
 
 /**

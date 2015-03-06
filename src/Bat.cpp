@@ -56,6 +56,7 @@ void Bat::addSprite() {
 void Bat::_init() {
     addSprite();
     _setContents();
+    findPath.setGame(_game);
 }
 
 

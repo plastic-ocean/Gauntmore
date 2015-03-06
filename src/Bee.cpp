@@ -56,6 +56,7 @@ void Bee::addSprite() {
 void Bee::_init() {
     addSprite();
     _setContents();
+    findPath.setGame(_game);
 }
 
 

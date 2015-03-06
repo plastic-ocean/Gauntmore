@@ -88,13 +88,13 @@ void PathFinder::scanSurround( PathNode *node ) {
             PathNode nodeNew = PathNode( temp, node->getCost()+(summ+flip), findHeuristic(temp), &closedList[loc-1] );
                 
                 if (!inClosedList(nodeNew) ) {
-                    
+
                     if (flip < 0) {//Cardinal collision detection
                     if ( !coll.detectWalls(_game->getTiles(), temp.x, temp.y, 50, 50) ) {
                     openList.insertNode( &nodeNew );
                     }
                     } else {//diagonal collision detection
-                        
+
                     }
                     
                 }

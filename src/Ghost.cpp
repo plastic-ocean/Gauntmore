@@ -56,6 +56,7 @@ void Ghost::addSprite() {
 void Ghost::_init() {
     addSprite();
     _setContents();
+    findPath.setGame(_game);
 }
 
 

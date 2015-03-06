@@ -56,6 +56,7 @@ void Worm::addSprite() {
 void Worm::_init() {
     addSprite();
     _setContents();
+    findPath.setGame(_game);
 }
 
 

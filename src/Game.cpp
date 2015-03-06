@@ -11,6 +11,8 @@
 #include "Creature.h"
 #include "Skeleton.h"
 #include "Slime.h"
+#include "Snake.h"
+#include "Bat.h"
 
 #include "Chest.h"
 #include "Gold.h"
@@ -51,9 +53,9 @@ Game::Game():_isPaused(false), _isFirstRun(true) {
         }
     }
     
-    _slime = new Slime();
-    _slime->init(Vector2((_map->getRoom()->getSize() / 2) * 64, (_map->getRoom()->getSize() / 2) * 64), this);
-    _map->getRoom()->getUnits()->push_back(_slime);
+//    _slime = new Slime();
+//    _slime->init(Vector2((_map->getRoom()->getSize() / 2) * 64, (_map->getRoom()->getSize() / 2) * 64), this);
+//    _map->getRoom()->getUnits()->push_back(_slime);
 
     
     // Create player
