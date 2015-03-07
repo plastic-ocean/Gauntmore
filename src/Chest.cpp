@@ -1,4 +1,5 @@
 #include "Chest.h"
+#include "Thing.h"
 #include "Gold.h"
 #include "Potion.h"
 #include "Armor.h"
@@ -9,12 +10,18 @@
 #include "res.h"
 #include "tmx/Tmx.h"
 #include "SDL.h"
+#include <list>
+
 
 
 /**
  * Constructor
  */
-Chest::Chest():_isOpen(false), _contents(0) {}
+Chest::Chest():_isOpen(false), _contents(0) {
+    setType("chest");
+
+
+}
 
 
 /**
@@ -69,7 +76,7 @@ void Chest::_interact() {
         _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
         
         _contents->init(getPosition(), _game);
-//        _contents->setLocation(getPosition());
+        //        _contents->setLocation(getPosition());
         _game->getMap()->getRoom()->getUnits()->push_back(_contents);
     }
 }
@@ -78,27 +85,24 @@ void Chest::_interact() {
  *  Sets the contents of a chest to either a Potion or Gold.
  */
 void Chest::_setContents() {
-  //  int randContents = rand() % 3;
-    int armorType = (rand() % 2) + 2;
-    int weaponType = (rand() % 2) + 2;
-    
-    cout << "Armor Type: " << armorType << endl;
-    cout << "Weapon Type: " << weaponType << endl;
     
     
-    int randContents = 2;
+    list<spThing> *_things = _game->getContentsList();
     
-    if (randContents == 0) {
-        _contents = new Potion();
-    }
-    if (randContents == 1) {
-        _contents = new Armor(armorType);
-    }
-    if (randContents == 2) {
-        _contents = new Weapon(weaponType);
-    }
-    if (randContents == 3) {
-        _contents = new Gold();
+    int randNum = rand() % _things->size();
+    
+    int j = 0;
+    
+    for (list<spThing>::iterator i = _things->begin(); i != _things->end(); ++i) {
+        
+        j++;
+        
+        if (j == randNum) {
+            spThing _thing = *i;
+            _contents = _thing;
+          //  cout << "_contents: " << _contents->getType() << endl;
+            i = _things->erase(i);
+        }
     }
 }
 

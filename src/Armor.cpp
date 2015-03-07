@@ -16,6 +16,7 @@
  */
 Armor::Armor(int armorType):_value(armorType) {
     _armorType = armorType;
+    setType("armor");
 }
 
 /**

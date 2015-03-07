@@ -31,7 +31,7 @@ ArmorCount::ArmorCount(Game *game):_game(game), _count(0) {
     style.hAlign = TextStyle::HALIGN_CENTER;
     
     _armorCount->setStyle(style);
-    _armorCount->setText("0");
+    _armorCount->setText("1");
 }
 
 

@@ -34,6 +34,7 @@ public:
 private:
     spThing _contents;
     bool _isOpen;
+    
 
     /**
      * Initializes position and sprite of Chest. Called by Unit's init() method.

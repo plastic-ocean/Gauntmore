@@ -16,6 +16,7 @@
  */
 Weapon::Weapon(int weaponType):_value(weaponType) {
     _weaponType = weaponType;
+    setType("weapon");
 }
 
 /**

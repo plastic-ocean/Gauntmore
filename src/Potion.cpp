@@ -10,7 +10,7 @@
  * Constructor.
  */
 Potion::Potion() {
-
+    setType("potion");
 }
 
 /**

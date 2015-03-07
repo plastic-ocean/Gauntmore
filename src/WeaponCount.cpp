@@ -30,7 +30,7 @@ WeaponCount::WeaponCount(Game *game):_game(game), _count(0) {
     style.hAlign = TextStyle::HALIGN_CENTER;
     
     _weaponCount->setStyle(style);
-    _weaponCount->setText("0");
+    _weaponCount->setText("1");
 }
 
 

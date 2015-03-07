@@ -79,7 +79,7 @@ void Slime::_interact() {
  * @us is the UpdateStatus sent by Unit's update method.
  */
 void Slime::_update(const UpdateState &us) {
-    cout << "creature update" << endl;
+//    cout << "creature update" << endl;
     Vector2 direction = moveMe();
     Vector2 position = getPosition();
     position += direction * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!

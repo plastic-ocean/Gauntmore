@@ -1,4 +1,5 @@
 #include <iostream>
+#include <list>
 
 #include "tmx/Tmx.h"
 
@@ -15,6 +16,8 @@
 #include "Chest.h"
 #include "Gold.h"
 #include "Potion.h"
+#include "Armor.h"
+#include "Weapon.h"
 
 #include "Map.h"
 
@@ -33,6 +36,25 @@ Game::Game() {
     
     // Size is the number of tiles
     int size = 13;
+    
+    
+    _things.push_back(new Armor(2));
+    _things.push_back(new Armor(3));
+    _things.push_back(new Weapon(2));
+    _things.push_back(new Weapon(3));
+    
+    int i = 0;
+    
+    for (i = 0; i < 38; i++) {
+        _things.push_back(new Gold);
+        _things.push_back(new Potion);
+        
+    }
+    
+//    cout << "Things:" << endl;
+//    for (spThing thing : _things) {
+//        cout << thing->getType() << endl;
+//    }
     
     // Create map
     _map = new Map(size);
@@ -74,6 +96,18 @@ Game::Game() {
 
     // Weapon Count
     _weaponCount = new WeaponCount(this);
+    
+    
+
+    
+//    
+//    for (list<spThing>::iterator i = _things.begin(); i != _things.end(); ++i) {
+//        spThing _thing = *i;
+//        i = _things.erase(i);
+//        cout << "_thing: " << _thing << endl;
+//    }
+//    
+//    cout << "_thing.size(): " << _things.size() << endl;
     
     
     

@@ -6,6 +6,7 @@
 #include "HealthBar.h"
 #include "KeyboardInput.h"
 #include "Map.h"
+#include "Thing.h"
 
 using namespace oxygine;
 using namespace std;
@@ -105,6 +106,10 @@ public:
     int getTileSize() {
         return tileSize;
     }
+    
+    list<spThing>* getContentsList(){
+        return &_things;
+    }
 
 protected:
     const int tileSize = 64;
@@ -112,6 +117,8 @@ protected:
     Tmx::Map *_tileMap;
     vector<SDL_Rect> _tiles;
     list<SDL_Rect> _units;
+    
+    list<spThing> _things;
     
     spKeyboardInput _move;
     spPlayer _player;
