@@ -69,7 +69,9 @@ void PathFinder::addNode(PathNode *node) {
 
 
 int PathFinder::findHeuristic( Vector2 curLoc ) {
-    return abs( curLoc.x - this->target.x ) + abs( curLoc.y - this->target.y );
+    int temp = abs( curLoc.x - this->target.x ) + abs( curLoc.y - this->target.y );
+    if ( coll.detectWalls(_game->getTiles(), curLoc.x, curLoc.y, 30, 30) ) temp += 99999;
+    return temp;
 }
 
 
@@ -92,10 +94,10 @@ void PathFinder::scanSurround( PathNode *node ) {
                 if (!inClosedList(nodeNew) ) {
                     
                     if (flip < 0) {//Cardinal collision detection
-                        if ( !coll.detectWalls(_game->getTiles(), temp.x, temp.y, 50, 50) ) {
+//                        if ( !coll.detectWalls(_game->getTiles(), temp.x, temp.y, 50, 50) ) {
                             openList.insertNode(&nodeNew);
                             
-                        }
+//                        }
                     } else {//diagonal collision detection
 //                        insert = true; //set flag
 //                        old -= temp;

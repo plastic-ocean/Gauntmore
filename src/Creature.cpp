@@ -86,8 +86,8 @@ Vector2 Creature::moveMe() {
     }
     //if the Q is NOT empty
         Vector2 nextSpot = moveQ.peekNext();//look at where you are going
-        if ( abs(cPos.x - nextSpot.x) <= 4 && abs(cPos.y - nextSpot.y) <= 4) {
-            moveQ.updatePath(findPath.aStar(pPos, cPos) );
+        if ( abs(cPos.x - nextSpot.x) <= 5 && abs(cPos.y - nextSpot.y) <= 5) {
+            moveQ.updatePath(findPath.aStar(pPos, nextSpot) );
         }
             nextSpot = moveQ.peekNext();//start moving to the next spot
     
