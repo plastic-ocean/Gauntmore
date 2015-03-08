@@ -1,4 +1,5 @@
 #include <iostream>
+#include <list>
 
 #include "tmx/Tmx.h"
 
@@ -17,12 +18,15 @@
 #include "Chest.h"
 #include "Gold.h"
 #include "Potion.h"
+#include "Armor.h"
+#include "Weapon.h"
 
 #include "Map.h"
 
 #include "HealthBar.h"
 #include "GoldCount.h"
 #include "ArmorCount.h"
+#include "WeaponCount.h"
 
 #include "PauseMenu.h"
 #include "StartMenu.h"
@@ -38,6 +42,25 @@ Game::Game():_isPaused(false), _isFirstRun(true) {
     
     // Size is the number of tiles
     int size = 13;
+    
+    
+    _things.push_back(new Armor(2));
+    _things.push_back(new Armor(3));
+    _things.push_back(new Weapon(2));
+    _things.push_back(new Weapon(3));
+    
+    int i = 0;
+    
+    for (i = 0; i < 38; i++) {
+        _things.push_back(new Gold);
+        _things.push_back(new Potion);
+        
+    }
+    
+//    cout << "Things:" << endl;
+//    for (spThing thing : _things) {
+//        cout << thing->getType() << endl;
+//    }
     
     // Create map
     _map = new Map(size);
@@ -74,6 +97,9 @@ Game::Game():_isPaused(false), _isFirstRun(true) {
     
     // Armor Count
     _armorCount = new ArmorCount(this);
+
+    // Weapon Count
+    _weaponCount = new WeaponCount(this);
 }
 
 
@@ -141,6 +167,7 @@ void Game::switchRoom(int edge) {
     _healthBar->render();
     _goldCount->render();
     _armorCount->render();
+    _weaponCount->render();
 }
 
 
@@ -204,6 +231,15 @@ void Game::updateGoldCount(int value) {
  */
 void Game::updateArmorCount(int value) {
     _armorCount->updateArmorCount(value);
+}
+
+/**
+ * Updates the weapon counter.
+ *
+ * @num is the value to update by.
+ */
+void Game::updateWeaponCount(int value) {
+    _weaponCount->updateWeaponCount(value);
 }
 
 
@@ -309,6 +345,10 @@ void Game::setFirstRun(bool isFirstRun) {
 
 bool Game::isFirstRun() {
     return _isFirstRun;
+}
+
+list<spThing>* Game::getContentsList() {
+    return &_things;
 }
 
 

@@ -16,8 +16,8 @@ Slime::Slime() {
 }
 
 /**
- *
- *
+ *  Gets bounds of the unit Slime.
+ *  @return: SDL_Rect _bounds which is the bounds of Slime.
  */
 SDL_Rect Slime::getBounds() {
     Vector2 unitPosition = getPosition();
@@ -29,19 +29,23 @@ SDL_Rect Slime::getBounds() {
     return _bounds;
 }
 
-
 /**
- *
- *
+ *  Boolean method to determine if the unit is a Potion.
  */
 bool Slime::isPotion() {
     return false;
 }
-    
+
+/**
+ *  Method that does damage to the Player.
+ */
 void Slime::damage() {
 
 }
 
+/**
+ *  Adds Sprite and attaches it to the game.
+ */
 void Slime::addSprite() {
     // Add sprite to the game scene view.
     _sprite = new Sprite;
@@ -52,7 +56,7 @@ void Slime::addSprite() {
 }
 
 /**
- * Initializes a creatures position and sprite. Called by Unit's init() method.
+ * Initializes a Slime position and sprite. Called by Unit's init() method.
  */
 void Slime::_init() {
     addSprite();
@@ -61,33 +65,8 @@ void Slime::_init() {
 
 }
 
-
 /**
- * Plays the attack animation.
- */
-//void Slime::attack() {
-//    switch (_facing) {
-//        case up:
-//            _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("slime_up")), 500);
-//            break;
-//        case right:
-//            _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("slime_right")), 500);
-//            break;
-//        case down:
-//            _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("slime_down")), 500);
-//            break;
-//        case left:
-//            _attackTween = _sprite->addTween(TweenAnim(resources.getResAnim("slime_left")), 500);
-//            break;
-//        default:
-//            break;
-//    }
-//}
-
-
-
-/**
- * Plays the move animation.
+ * Interaction method for Slime.
  */
 void Slime::move() {
     //_checkTween();
@@ -120,7 +99,6 @@ void Slime::_interact() {
     }
 }
 
-
 /**
  * Updates the creature every frame. Called by Unit::update.
  *
@@ -130,32 +108,6 @@ void Slime::_update(const UpdateState &us) {
     Vector2 direction = moveMe();
     Vector2 position = getPosition();
     Facing prevFacing = _facing;
-    
-//    if((direction.x == 1 && direction.y == 0)
-//       || (direction.x == 1 && direction.y == 1)
-//       || (direction.x == 1 && direction.y == -1)){
-//        cout << "creature update east" << endl;
-//        // if direction is moving east or northeast or southeast
-//        _facing = right;
-//        move();
-//    }else if (direction.x == 0 && direction.y == 1){
-//        cout << "creature update north" << endl;
-//        // if direction is moving north
-//        _facing = up;
-//        move();
-//    } else if((direction.x == -1 && direction.y == 0)
-//              || (direction.x == -1 && direction.y == 1)
-//              || (direction.x == -1 && direction.y == -1)){
-//        cout << "creature update west" << endl;
-//        // if moving west or north west or south west
-//        _facing = left;
-//        move();
-//    }else if(direction.x == 0 && direction.y == -1){
-//        cout << "creature update south" << endl;
-//        // if moving south
-//        _facing = down;
-//        move();
-//    }
     
         if ((direction.x == 1 && direction.y == 0)) {
 //            cout << "creature update east" << endl;

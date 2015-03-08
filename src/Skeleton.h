@@ -10,22 +10,16 @@ DECLARE_SMART(Skeleton, spSkeleton);
 class Skeleton : public Creature {
     
 public:
-
-    /**
-     *
-     *
-     */
     Skeleton();
     
     /**
-     *
-     *
+     *  Gets bounds of the unit Skeleton.
+     *  @return: SDL_Rect _bounds which is the bounds of Skeleton.
      */
     virtual SDL_Rect getBounds();
     
     /**
-     *
-     *
+     *  Boolean method to determine if the unit is a Potion.
      */
     virtual bool isPotion();
     

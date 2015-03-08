@@ -14,9 +14,25 @@ public:
     
     /* Virtual Methods */
     
+    /**
+     *  Gets bounds of the unit Slime.
+     *  @return: SDL_Rect _bounds which is the bounds of Slime.
+     */
     virtual SDL_Rect getBounds();
+    
+    /**
+     *  Method that does damage to the Player.
+     */
     virtual void damage();
+    
+    /**
+     *  Adds Sprite and attaches it to the game.
+     */
     virtual void addSprite();
+    
+    /**
+     *  Boolean method to determine if the unit is a Potion.
+     */
     virtual bool isPotion();
     
     void move();
@@ -28,12 +44,12 @@ private:
     spTween _moveTween;
     
     /**
-     * Initializes position and sprite of Chest. Called by Unit's init() method.
+     * Initializes a Slime position and sprite. Called by Unit's init() method.
      */
     void _init();
     
     /**
-     * Interaction method for Chest.
+     * Interaction method for Slime.
      */
     void _interact();
     

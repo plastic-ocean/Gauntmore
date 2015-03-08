@@ -14,6 +14,7 @@ Creature::Creature() {
 //    PathFinder findPath = PathFinder(_game);
 }
 
+
 /**
  *
  *
@@ -31,6 +32,7 @@ void Creature::_setContents() {
     }
 }
 
+
 /**
  *
  *
@@ -42,7 +44,6 @@ void Creature::_dropContents() {
         _game->getMap()->getRoom()->getUnits()->push_back(_contents);
     }
 }
-
 
 
 Vector2 Creature::moveMe() {

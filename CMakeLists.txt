@@ -38,6 +38,8 @@ src/PauseMenu.cpp src/PauseMenu.h
 src/StartMenu.cpp src/StartMenu.h
 src/ArmorCount.cpp src/ArmorCount.h
 src/Armor.cpp src/Armor.h
+src/WeaponCount.cpp src/WeaponCount.h
+src/Weapon.cpp src/Weapon.h
 src/Eyeball.cpp src/Eyeball.h
 src/Ghost.cpp src/Ghost.h
 src/Bat.cpp src/Bat.h

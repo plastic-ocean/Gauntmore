@@ -17,7 +17,7 @@ DECLARE_SMART(Armor, spArmor);
 class Armor: public Thing {
     
 public:
-    Armor();
+    Armor(int armorType);
     
     /**
      *  Gets bounds of the unit Armor.
@@ -38,6 +38,8 @@ public:
     
 private:
     int _value;
+    int _armorType;
+    
     
     /**
      * Initializes a Armor position and sprite. Called by Unit's init() method.

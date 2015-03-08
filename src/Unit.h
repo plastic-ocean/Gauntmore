@@ -45,7 +45,7 @@ public:
     
     
     /* Getters and Setters */
-    
+
     const Vector2& getPosition();
     
     void setPosition(const Vector2& position);

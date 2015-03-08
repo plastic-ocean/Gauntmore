@@ -6,6 +6,7 @@
 #include "HealthBar.h"
 #include "KeyboardInput.h"
 #include "Map.h"
+#include "Thing.h"
 
 using namespace oxygine;
 using namespace std;
@@ -21,6 +22,7 @@ DECLARE_SMART(Slime, spSlime);
 DECLARE_SMART(HealthBar, spHealthBar);
 DECLARE_SMART(GoldCount, spGoldCount);
 DECLARE_SMART(ArmorCount, spArmorCount);
+DECLARE_SMART(WeaponCount, spWeaponCount);
 
 DECLARE_SMART(Chest, spChest);
 DECLARE_SMART(Gold, spGold);
@@ -82,6 +84,12 @@ public:
     
     void createNewGame();
 
+    /**
+     * Updates the weapon counter.
+     *
+     * @num is the value to update by.
+     */
+    void updateWeaponCount(int value);
 
     /* Getters and Setters */
 
@@ -105,12 +113,16 @@ public:
     
     bool isFirstRun();
 
+    list<spThing>* getContentsList();
+
 protected:
     const int tileSize = 64;
     spMap _map;
     Tmx::Map *_tileMap;
     vector<SDL_Rect> _tiles;
     list<SDL_Rect> _units;
+    
+    list<spThing> _things;
     
     spKeyboardInput _move;
     spPlayer _player;
@@ -127,6 +139,7 @@ protected:
     spHealthBar _healthBar;
     spGoldCount _goldCount;
     spArmorCount _armorCount;
+    spWeaponCount _weaponCount;
     
     bool _isPaused;
     bool _isFirstRun;

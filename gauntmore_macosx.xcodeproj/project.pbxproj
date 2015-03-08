@@ -73,6 +73,8 @@
 		7199DCC31AA91DD000CA9293 /* Eyeball.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7199DCC11AA91DD000CA9293 /* Eyeball.cpp */; };
 		7199DCC61AA91E3A00CA9293 /* Bee.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7199DCC41AA91E3A00CA9293 /* Bee.cpp */; };
 		7199DCC91AA9202C00CA9293 /* Worm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7199DCC71AA9202C00CA9293 /* Worm.cpp */; };
+		9009AA111AA6789200B7388C /* Weapon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9009AA0F1AA6789200B7388C /* Weapon.cpp */; };
+		9009AA171AA67B1800B7388C /* WeaponCount.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9009AA151AA67B1800B7388C /* WeaponCount.cpp */; };
 		9083BCF81AA1098F00D53A4D /* ArmorCount.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9083BCF61AA1098F00D53A4D /* ArmorCount.cpp */; };
 		908A75FD1A9FE03500162B36 /* Armor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 908A75FB1A9FE03500162B36 /* Armor.cpp */; };
 /* End PBXBuildFile section */
@@ -271,6 +273,10 @@
 		7199DCC51AA91E3A00CA9293 /* Bee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bee.h; path = src/Bee.h; sourceTree = "<group>"; };
 		7199DCC71AA9202C00CA9293 /* Worm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Worm.cpp; path = src/Worm.cpp; sourceTree = "<group>"; };
 		7199DCC81AA9202C00CA9293 /* Worm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Worm.h; path = src/Worm.h; sourceTree = "<group>"; };
+		9009AA0F1AA6789200B7388C /* Weapon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Weapon.cpp; path = src/Weapon.cpp; sourceTree = "<group>"; };
+		9009AA101AA6789200B7388C /* Weapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Weapon.h; path = src/Weapon.h; sourceTree = "<group>"; };
+		9009AA151AA67B1800B7388C /* WeaponCount.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WeaponCount.cpp; path = src/WeaponCount.cpp; sourceTree = "<group>"; };
+		9009AA161AA67B1800B7388C /* WeaponCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeaponCount.h; path = src/WeaponCount.h; sourceTree = "<group>"; };
 		9083BCF61AA1098F00D53A4D /* ArmorCount.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ArmorCount.cpp; path = src/ArmorCount.cpp; sourceTree = "<group>"; };
 		9083BCF71AA1098F00D53A4D /* ArmorCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArmorCount.h; path = src/ArmorCount.h; sourceTree = "<group>"; };
 		908A75FB1A9FE03500162B36 /* Armor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Armor.cpp; path = src/Armor.cpp; sourceTree = "<group>"; };
@@ -456,6 +462,8 @@
 				539584451A99A42D0080A994 /* HealthBar.h */,
 				9083BCF61AA1098F00D53A4D /* ArmorCount.cpp */,
 				9083BCF71AA1098F00D53A4D /* ArmorCount.h */,
+				9009AA151AA67B1800B7388C /* WeaponCount.cpp */,
+				9009AA161AA67B1800B7388C /* WeaponCount.h */,
 			);
 			name = hud;
 			sourceTree = "<group>";
@@ -508,6 +516,8 @@
 				7199DCC51AA91E3A00CA9293 /* Bee.h */,
 				7199DCC71AA9202C00CA9293 /* Worm.cpp */,
 				7199DCC81AA9202C00CA9293 /* Worm.h */,
+				9009AA0F1AA6789200B7388C /* Weapon.cpp */,
+				9009AA101AA6789200B7388C /* Weapon.h */,
 			);
 			name = units;
 			sourceTree = "<group>";
@@ -690,6 +700,7 @@
 				53B46C741A9E44EC00915203 /* PathFinder.cpp in Sources */,
 				532878A31A99A6EB00228299 /* TmxMap.cpp in Sources */,
 				711CB5E51AA918D3001130C3 /* Ghost.cpp in Sources */,
+				9009AA111AA6789200B7388C /* Weapon.cpp in Sources */,
 				539584611A99A42D0080A994 /* Map.cpp in Sources */,
 				5328789F1A99A6EB00228299 /* TmxEllipse.cpp in Sources */,
 				532878AA1A99A6EB00228299 /* TmxTileset.cpp in Sources */,
@@ -709,6 +720,7 @@
 				539584651A99A42D0080A994 /* Player.cpp in Sources */,
 				5395845C1A99A42D0080A994 /* Creature.cpp in Sources */,
 				908A75FD1A9FE03500162B36 /* Armor.cpp in Sources */,
+				9009AA171AA67B1800B7388C /* WeaponCount.cpp in Sources */,
 				5395845E1A99A42D0080A994 /* GoldCount.cpp in Sources */,
 				532878A71A99A6EB00228299 /* TmxPolyline.cpp in Sources */,
 				485AA5F31A9FF07300ED2895 /* NodeArray.cpp in Sources */,
@@ -726,11 +738,8 @@
 				5395845D1A99A42D0080A994 /* Gold.cpp in Sources */,
 				5328789E1A99A6EB00228299 /* tinyxml2.cpp in Sources */,
 				53C5BB971AA554970008BCD5 /* StartMenu.cpp in Sources */,
-<<<<<<< HEAD
 				53945E6B1AA78AA700DF4A7B /* DeathMenu.cpp in Sources */,
-=======
 				7199DCC61AA91E3A00CA9293 /* Bee.cpp in Sources */,
->>>>>>> origin/ben
 				53BCF11C1A8ED99F00BD6288 /* Scene.cpp in Sources */,
 				532878A91A99A6EB00228299 /* TmxTile.cpp in Sources */,
 				539584601A99A42D0080A994 /* HealthBar.cpp in Sources */,

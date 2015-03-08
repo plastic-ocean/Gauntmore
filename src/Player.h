@@ -41,9 +41,8 @@ public:
      * Plays the attack animation.
      */
     void attack();
-    
+
     int getAttack();
-    
 
     void setAttack(int attack);
     
