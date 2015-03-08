@@ -42,7 +42,7 @@
 Game::Game():_isPaused(false), _isFirstRun(true) {
     // Set the size of the scene to the size of the display.
     setSize(getStage()->getSize());
-    
+
     // Size is the number of tiles
     int size = 13;
 
@@ -50,18 +50,18 @@ Game::Game():_isPaused(false), _isFirstRun(true) {
     _things.push_back(new Armor(3));
     _things.push_back(new Weapon(2));
     _things.push_back(new Weapon(3));
-    
+
     for (int i = 0; i < 38; i++) {
         _things.push_back(new Gold);
         _things.push_back(new Potion);
-        
+
     }
-    
+
 //    cout << "Things:" << endl;
 //    for (spThing thing : _things) {
 //        cout << thing->getType() << endl;
 //    }
-    
+
     // Create map
     _map = new Map(size);
     _renderMap();
@@ -75,31 +75,33 @@ Game::Game():_isPaused(false), _isFirstRun(true) {
             unit->init(unit->getLocation(), this);
         }
     }
-    
+
 //    _snake = new Snake();
 //    _snake->init(Vector2((_map->getRoom()->getSize() / 2) * 64, (_map->getRoom()->getSize() / 2) * 64), this);
 //    _map->getRoom()->getUnits()->push_back(_snake);
 
-    
+
     // Create player
     _player = new Player(20, 1, 1);
     _player->init(_getEntrance(), this);
     _map->getRoom()->getUnits()->push_back(_player);
 
-    // Keyboard handler
-    _move = new KeyboardInput(this);
-    
+
+
     // Health bar
     _healthBar = new HealthBar(this);
-    
+
     // Gold count
     _goldCount = new GoldCount(this);
-    
+
     // Armor Count
     _armorCount = new ArmorCount(this);
 
     // Weapon Count
     _weaponCount = new WeaponCount(this);
+
+    // Keyboard handler
+    _move = new KeyboardInput(this);
 }
 
 
@@ -301,7 +303,7 @@ void Game::createNewGame() {
 //    _map->getRoom()->getUnits()->push_back(_snake);
     
     // Create player
-    _player = new Player(10, 1, 1);
+    _player = new Player(20, 1, 1);
     _player->init(_getEntrance(), this);
     _map->getRoom()->getUnits()->push_back(_player);
 
