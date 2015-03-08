@@ -13,10 +13,13 @@ using namespace std;
 DECLARE_SMART(Unit, spUnit);
 DECLARE_SMART(Player, spPlayer);
 DECLARE_SMART(Creature, spCreature);
-DECLARE_SMART(Skeleton, spSkeleton);
+
 DECLARE_SMART(Bat, spBat);
 DECLARE_SMART(Snake, spSnake);
 DECLARE_SMART(Slime, spSlime);
+DECLARE_SMART(Ghost, spGhost);
+DECLARE_SMART(Eyeball, spEyeball);
+DECLARE_SMART(Worm, spWorm);
 
 DECLARE_SMART(HealthBar, spHealthBar);
 DECLARE_SMART(GoldCount, spGoldCount);
@@ -115,10 +118,12 @@ protected:
     spKeyboardInput _move;
     spPlayer _player;
     
-    spSkeleton _skeleton;
     spBat _bat;
     spSnake _snake;
     spSlime _slime;
+    spWorm _worm;
+    spEyeball _eyeball;
+    spGhost _ghost;
     
     spChest _chest;
     spGold _gold;

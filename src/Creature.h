@@ -17,6 +17,10 @@ public:
     
     enum Facing {up, right, down, left};
     
+    Facing getFacing(Vector2 direction);
+    
+    virtual void damage();
+    
 //    Facing getFacing() {
 //        return _facing;
 //    }
@@ -30,6 +34,7 @@ public:
 //    virtual void move(Facing facing) = 0;
 
 protected:
+    time_t _lastTimeAttack;
     spThing _contents;
 
     PathFinder findPath;

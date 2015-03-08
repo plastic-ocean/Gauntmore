@@ -28,6 +28,21 @@
         <image file="snake_left.png" cols = "3" />
         <image file="snake_right.png" cols = "3" />
         
+        <image file="worm_down.png" cols = "3" />
+        <image file="worm_up.png" cols = "3" />
+        <image file="worm_left.png" cols = "3" />
+        <image file="worm_right.png" cols = "3" />
+        
+        <image file="eyeball_down.png" cols = "3" />
+        <image file="eyeball_up.png" cols = "3" />
+        <image file="eyeball_left.png" cols = "3" />
+        <image file="eyeball_right.png" cols = "3" />
+        
+        <image file="ghost_down.png" cols = "3" />
+        <image file="ghost_up.png" cols = "3" />
+        <image file="ghost_left.png" cols = "3" />
+        <image file="ghost_right.png" cols = "3" />
+        
         <image file="adventurer_down.png" />
         <image file="adventurer_up.png" />
         <image file="adventurer_left.png" />

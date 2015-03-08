@@ -105,37 +105,39 @@ void Player::interact() {
 
         switch(_facing) {
             case up:
-                rect.x = playerPosition.x;
-                rect.y = playerPosition.y - 16;
-                rect.h = 16;
+                rect.x = playerPosition.x - 32;
+                rect.y = playerPosition.y - 48;
+                rect.h = 20;
                 rect.w = 64;
                 if (_isCollision(rect, unit)) {
                     unit->interact();
                 }
                 break;
             case right:
-                rect.x = playerPosition.x + 64;
-                rect.y = playerPosition.y;
+                rect.x = playerPosition.x + 32;
+                rect.y = playerPosition.y - 32;
                 rect.h = 64;
-                rect.w = 64;
+                rect.w = 20;
                 if (_isCollision(rect, unit)) {
                     unit->interact();
                 }
                 break;
             case down:
-                rect.x = playerPosition.x;
-                rect.y = playerPosition.y + 64;
-                rect.h = 16;
+                std::cout << "player pos" << playerPosition.x << std::endl;
+                std::cout << "player pos minus 32" << playerPosition.x - 32 << std::endl;
+                rect.x = playerPosition.x - 32;
+                rect.y = playerPosition.y + 28;
+                rect.h = 20;
                 rect.w = 64;
                 if (_isCollision(rect, unit)) {
                     unit->interact();
                 }
                 break;
             case left:
-                rect.x = playerPosition.x - 16;
-                rect.y = playerPosition.y;
+                rect.x = playerPosition.x - 48;
+                rect.y = playerPosition.y - 32;
                 rect.h = 64;
-                rect.w = 16;
+                rect.w = 20;
                 if (_isCollision(rect, unit)) {
                     unit->interact();
                 }

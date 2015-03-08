@@ -57,7 +57,6 @@
 		539584651A99A42D0080A994 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5395844E1A99A42D0080A994 /* Player.cpp */; };
 		539584661A99A42D0080A994 /* Potion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584501A99A42D0080A994 /* Potion.cpp */; };
 		539584671A99A42D0080A994 /* Room.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584521A99A42D0080A994 /* Room.cpp */; };
-		539584681A99A42D0080A994 /* Skeleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584541A99A42D0080A994 /* Skeleton.cpp */; };
 		539584691A99A42D0080A994 /* Thing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584561A99A42D0080A994 /* Thing.cpp */; };
 		5395846B1A99A42D0080A994 /* Unit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584591A99A42D0080A994 /* Unit.cpp */; };
 		53B46C721A9E44EC00915203 /* CreatureMover.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53B46C6B1A9E44EC00915203 /* CreatureMover.cpp */; };
@@ -71,7 +70,6 @@
 		711CB5EB1AA91B27001130C3 /* Bat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 711CB5E91AA91B27001130C3 /* Bat.cpp */; };
 		7199DCBD1AA91D2E00CA9293 /* Snake.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7199DCBB1AA91D2E00CA9293 /* Snake.cpp */; };
 		7199DCC31AA91DD000CA9293 /* Eyeball.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7199DCC11AA91DD000CA9293 /* Eyeball.cpp */; };
-		7199DCC61AA91E3A00CA9293 /* Bee.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7199DCC41AA91E3A00CA9293 /* Bee.cpp */; };
 		7199DCC91AA9202C00CA9293 /* Worm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7199DCC71AA9202C00CA9293 /* Worm.cpp */; };
 		9083BCF81AA1098F00D53A4D /* ArmorCount.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9083BCF61AA1098F00D53A4D /* ArmorCount.cpp */; };
 		908A75FD1A9FE03500162B36 /* Armor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 908A75FB1A9FE03500162B36 /* Armor.cpp */; };
@@ -239,8 +237,6 @@
 		539584511A99A42D0080A994 /* Potion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Potion.h; path = src/Potion.h; sourceTree = "<group>"; };
 		539584521A99A42D0080A994 /* Room.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Room.cpp; path = src/Room.cpp; sourceTree = "<group>"; };
 		539584531A99A42D0080A994 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Room.h; path = src/Room.h; sourceTree = "<group>"; };
-		539584541A99A42D0080A994 /* Skeleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Skeleton.cpp; path = src/Skeleton.cpp; sourceTree = "<group>"; };
-		539584551A99A42D0080A994 /* Skeleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Skeleton.h; path = src/Skeleton.h; sourceTree = "<group>"; };
 		539584561A99A42D0080A994 /* Thing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Thing.cpp; path = src/Thing.cpp; sourceTree = "<group>"; };
 		539584571A99A42D0080A994 /* Thing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Thing.h; path = src/Thing.h; sourceTree = "<group>"; };
 		539584591A99A42D0080A994 /* Unit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Unit.cpp; path = src/Unit.cpp; sourceTree = "<group>"; };
@@ -267,8 +263,6 @@
 		7199DCBC1AA91D2E00CA9293 /* Snake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Snake.h; path = src/Snake.h; sourceTree = "<group>"; };
 		7199DCC11AA91DD000CA9293 /* Eyeball.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Eyeball.cpp; path = src/Eyeball.cpp; sourceTree = "<group>"; };
 		7199DCC21AA91DD000CA9293 /* Eyeball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Eyeball.h; path = src/Eyeball.h; sourceTree = "<group>"; };
-		7199DCC41AA91E3A00CA9293 /* Bee.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Bee.cpp; path = src/Bee.cpp; sourceTree = "<group>"; };
-		7199DCC51AA91E3A00CA9293 /* Bee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bee.h; path = src/Bee.h; sourceTree = "<group>"; };
 		7199DCC71AA9202C00CA9293 /* Worm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Worm.cpp; path = src/Worm.cpp; sourceTree = "<group>"; };
 		7199DCC81AA9202C00CA9293 /* Worm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Worm.h; path = src/Worm.h; sourceTree = "<group>"; };
 		9083BCF61AA1098F00D53A4D /* ArmorCount.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ArmorCount.cpp; path = src/ArmorCount.cpp; sourceTree = "<group>"; };
@@ -488,8 +482,6 @@
 				5395844F1A99A42D0080A994 /* Player.h */,
 				539584501A99A42D0080A994 /* Potion.cpp */,
 				539584511A99A42D0080A994 /* Potion.h */,
-				539584541A99A42D0080A994 /* Skeleton.cpp */,
-				539584551A99A42D0080A994 /* Skeleton.h */,
 				532878B81A9A6AA700228299 /* Slime.cpp */,
 				532878B91A9A6AA700228299 /* Slime.h */,
 				539584561A99A42D0080A994 /* Thing.cpp */,
@@ -504,8 +496,6 @@
 				7199DCBC1AA91D2E00CA9293 /* Snake.h */,
 				7199DCC11AA91DD000CA9293 /* Eyeball.cpp */,
 				7199DCC21AA91DD000CA9293 /* Eyeball.h */,
-				7199DCC41AA91E3A00CA9293 /* Bee.cpp */,
-				7199DCC51AA91E3A00CA9293 /* Bee.h */,
 				7199DCC71AA9202C00CA9293 /* Worm.cpp */,
 				7199DCC81AA9202C00CA9293 /* Worm.h */,
 			);
@@ -698,7 +688,6 @@
 				532878BA1A9A6AA700228299 /* Slime.cpp in Sources */,
 				532878A21A99A6EB00228299 /* TmxLayer.cpp in Sources */,
 				711CB5EB1AA91B27001130C3 /* Bat.cpp in Sources */,
-				539584681A99A42D0080A994 /* Skeleton.cpp in Sources */,
 				534097B21A896C0A000434F6 /* res.cpp in Sources */,
 				532878AB1A99A6EB00228299 /* TmxUtil.cpp in Sources */,
 				539584391A999D000080A994 /* CollisionDetector.cpp in Sources */,
@@ -726,11 +715,7 @@
 				5395845D1A99A42D0080A994 /* Gold.cpp in Sources */,
 				5328789E1A99A6EB00228299 /* tinyxml2.cpp in Sources */,
 				53C5BB971AA554970008BCD5 /* StartMenu.cpp in Sources */,
-<<<<<<< HEAD
 				53945E6B1AA78AA700DF4A7B /* DeathMenu.cpp in Sources */,
-=======
-				7199DCC61AA91E3A00CA9293 /* Bee.cpp in Sources */,
->>>>>>> origin/ben
 				53BCF11C1A8ED99F00BD6288 /* Scene.cpp in Sources */,
 				532878A91A99A6EB00228299 /* TmxTile.cpp in Sources */,
 				539584601A99A42D0080A994 /* HealthBar.cpp in Sources */,
