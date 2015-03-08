@@ -92,7 +92,7 @@ void Ghost::_update(const UpdateState &us) {
     setPosition(position);
     if((abs(position.x - _game->getPlayer()->getPosition().x) <= 70) && (abs(position.y - _game->getPlayer()->getPosition().y) <= 70)){
         time_t _current = time(0);
-        if(_current >= _lastTimeAttack+2){
+        if(_current >= _lastTimeAttack + 2){
             _lastTimeAttack = time(0);
             attack();
             //cout << "attacking" << endl;
