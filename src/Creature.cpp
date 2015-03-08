@@ -78,7 +78,7 @@ Vector2 Creature::moveMe() {
     
     
     if ( abs(pPos.x - cPos.x) <= 50 && abs(pPos.y - cPos.y) <= 50 ) {
-        return moveDir;//you are less than 64 pixels away, do nothing
+        return moveDir;//you are less than 50 pixels away, do nothing
     }
     //otherwise, check the movement Queue
     if ( moveQ.isEmpty() ) {
@@ -87,7 +87,7 @@ Vector2 Creature::moveMe() {
     //if the Q is NOT empty
         Vector2 nextSpot = moveQ.peekNext();//look at where you are going
         if ( abs(cPos.x - nextSpot.x) <= 5 && abs(cPos.y - nextSpot.y) <= 5) {
-            moveQ.updatePath(findPath.aStar(pPos, nextSpot) );
+            moveQ.updatePath(findPath.aStar(nextSpot, pPos) );
         }
             nextSpot = moveQ.peekNext();//start moving to the next spot
     

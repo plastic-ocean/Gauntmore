@@ -52,7 +52,6 @@ vector<Vector2> PathFinder::aStar(Vector2 start, Vector2 finish ) {
             
         }
         closedList[loc++] = temp;
-//        addNode( &temp );//put node in closed list
         
         scanSurround( &temp );//add surrounding nodes to open list
     }
@@ -70,19 +69,18 @@ void PathFinder::addNode(PathNode *node) {
 
 int PathFinder::findHeuristic( Vector2 curLoc ) {
     int temp = abs( curLoc.x - this->target.x ) + abs( curLoc.y - this->target.y );
-    if ( coll.detectWalls(_game->getTiles(), curLoc.x, curLoc.y, 30, 30) ) temp += 99999;
+    if ( coll.detectWalls(_game->getTiles(), (int)curLoc.x, (int)curLoc.y, 64, 64) ) return 99999;
+    
     return temp;
 }
 
 
 void PathFinder::scanSurround( PathNode *node ) {
     Vector2 temp = node->getLocation();
-    Vector2 old = node->getLocation();
-    temp.x -=(int) mapSize;
-    temp.y -=(int) mapSize;
+    temp.x -= mapSize;
+    temp.y -= mapSize;
     int summ = 12;//something more clever goes here
     int flip = -2;
-    bool insert = false;
     
     for ( int i = 0; i < 3; i++ ) {
         for ( int j = 0; j < 3; j++ ) {
@@ -91,25 +89,9 @@ void PathFinder::scanSurround( PathNode *node ) {
             if (temp.x > 0 && temp.y > 0 ) {//is the location > 0?
             PathNode nodeNew = PathNode( temp, node->getCost()+(summ+flip), findHeuristic(temp), &closedList[loc-1] );
                 
-                if (!inClosedList(nodeNew) ) {
+                if (!inClosedList(nodeNew) && nodeNew.getCost() < 99999 ) {
                     
-                    if (flip < 0) {//Cardinal collision detection
-//                        if ( !coll.detectWalls(_game->getTiles(), temp.x, temp.y, 50, 50) ) {
                             openList.insertNode(&nodeNew);
-                            
-//                        }
-                    } else {//diagonal collision detection
-//                        insert = true; //set flag
-//                        old -= temp;
-//                        
-//                        if ( old.x > 0 && coll.detectWalls(_game->getTiles(), temp.x + 50, temp.y, 50, 50) ) insert = false;
-//                        if ( old.x < 0 && coll.detectWalls(_game->getTiles(), temp.x - 50, temp.y, 50, 50) ) insert = false;
-//                        if ( old.y > 0 && coll.detectWalls(_game->getTiles(), temp.x, temp.y + 50, 50, 50) ) insert = false;
-//                        if ( old.y < 0 && coll.detectWalls(_game->getTiles(), temp.x, temp.y - 50, 50, 50) ) insert = false;
-//                        if ( insert == true ) openList.insertNode(&nodeNew);
-//                        insert = false; 
-                    }
-                  
                 }
             }
             

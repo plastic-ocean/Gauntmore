@@ -2,9 +2,9 @@
 
 PathNode::PathNode(){
     this->location = {0,0};
-    this->heuristic = 9999;
-    this->total = 9999;
-    this->cost = 9999;
+    this->heuristic = 99999;
+    this->total = 99999;
+    this->cost = 99999;
     this->parent = NULL;
 }
 
