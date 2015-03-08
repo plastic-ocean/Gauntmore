@@ -49,11 +49,6 @@ private:
     void _init();
     
     /**
-     * Interaction method for Slime.
-     */
-    void _interact();
-    
-    /**
      * Updates the Chest every frame. Called by Units update() method.
      *
      * @us is the UpdateStatus sent by Unit's update method.

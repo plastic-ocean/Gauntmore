@@ -68,7 +68,7 @@ protected:
     /**
      * Reduces the creature's hit points.
      */
-    virtual void _interact() = 0;
+    virtual void _interact();
     
     /**
      * Updates the creature every frame. Called by Units update() method.

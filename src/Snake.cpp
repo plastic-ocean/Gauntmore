@@ -11,7 +11,7 @@
 Snake::Snake() {
     // Initialize the stats.
     _hp = 3;
-    _attack = 1;
+    _attack = 2;
     _defense = 0;
     _speed = 100;
     _lastTimeAttack = time(0);
@@ -82,17 +82,6 @@ void Snake::move() {
             break;
         default:
             break;
-    }
-}
-
-
-void Snake::_interact() {
-    _hp--;
-    if (_hp == 0) {
-        // The creature is dead, hide it with an alpha tween.
-        _dead = true;
-        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-        _dropContents();
     }
 }
 

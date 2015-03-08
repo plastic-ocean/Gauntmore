@@ -66,7 +66,7 @@ void KeyboardInput::_onEvent(Event *ev) {
                 _game->getPlayer()->move(Player::right);
                 break;
             case SDLK_SPACE:
-                _game->getPlayer()->interact();
+                _game->getPlayer()->act();
                 break;
             case SDLK_ESCAPE:
                 _game->pauseGame();

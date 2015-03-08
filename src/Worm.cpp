@@ -8,8 +8,8 @@
  */
 Worm::Worm() {
     // Initialize the stats.
-    _hp = 3;
-    _attack = 1;
+    _hp = 7;
+    _attack = 4;
     _defense = 0;
     _speed = 100;
     
@@ -83,17 +83,6 @@ void Worm::move() {
             break;
         default:
             break;
-    }
-}
-
-
-void Worm::_interact() {
-    _hp--;
-    if (_hp == 0) {
-        // The creature is dead, hide it with an alpha tween.
-        _dead = true;
-        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-        _dropContents();
     }
 }
 

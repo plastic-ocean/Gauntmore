@@ -8,8 +8,8 @@
  */
 Eyeball::Eyeball() {
     // Initialize the stats.
-    _hp = 3;
-    _attack = 1;
+    _hp = 6;
+    _attack = 3;
     _defense = 0;
     _speed = 100;
     
@@ -84,42 +84,29 @@ void Eyeball::move() {
 }
 
 
-void Eyeball::_interact() {
-    _hp--;
-    if (_hp == 0) {
-        // The creature is dead, hide it with an alpha tween.
-        _dead = true;
-        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-        _dropContents();
-    }
-}
-
-
 /**
  * Updates the creature every frame. Called by Unit::update.
  *
  * @us is the UpdateStatus sent by Unit's update method.
  */
 void Eyeball::_update(const UpdateState &us) {
-    
     Vector2 direction = moveMe();
     Vector2 position = getPosition();
     
     Facing prevFacing = _facing;
     _facing = getFacing(direction);
-    if(_facing != prevFacing){
+    if (_facing != prevFacing) {
         move();
     }
     
     position += direction * (us.dt / 1000.0f) * _speed;
     setPosition(position);
-    if((abs(position.x - _game->getPlayer()->getPosition().x) <= 70) && (abs(position.y - _game->getPlayer()->getPosition().y) <= 70)){
+    if((abs(position.x - _game->getPlayer()->getPosition().x) <= 70) && (abs(position.y - _game->getPlayer()->getPosition().y) <= 70)) {
         time_t _current = time(0);
-        if(_current >= _lastTimeAttack+2){
+        if(_current >= _lastTimeAttack + 2){
             _lastTimeAttack = time(0);
             damage();
             //cout << "attacking" << endl;
         }
     }
-    
 }

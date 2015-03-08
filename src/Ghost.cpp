@@ -8,9 +8,9 @@
  */
 Ghost::Ghost() {
     // Initialize the stats.
-    _hp = 3;
-    _attack = 1;
-    _defense = 0;
+    _hp = 8;
+    _attack = 3;
+    _defense = 1;
     _speed = 100;
     
 }
@@ -81,17 +81,6 @@ void Ghost::move() {
             break;
         default:
             break;
-    }
-}
-
-
-void Ghost::_interact() {
-    _hp--;
-    if (_hp == 0) {
-        // The creature is dead, hide it with an alpha tween.
-        _dead = true;
-        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-        _dropContents();
     }
 }
 

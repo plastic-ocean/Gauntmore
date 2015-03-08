@@ -9,7 +9,7 @@
 Slime::Slime() {
     // Initialize the stats.
     _hp = 3;
-    _attack = 1;
+    _attack = 2;
     _defense = 0;
     _speed = 100;
 
@@ -89,16 +89,6 @@ void Slime::move() {
     }
 }
 
-
-void Slime::_interact() {
-    _hp--;
-    if (_hp == 0) {
-        // The creature is dead, hide it with an alpha tween.
-        _dead = true;
-        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-        _dropContents();
-    }
-}
 
 /**
  * Updates the creature every frame. Called by Unit::update.

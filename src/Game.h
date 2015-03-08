@@ -63,7 +63,7 @@ public:
      *
      * @num is the value to update by.
      */
-    void updateHealth(float value);
+    void updateHealth(double value);
 
     /**
      * Updates the gold counter.

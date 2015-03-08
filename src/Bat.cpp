@@ -8,8 +8,8 @@
  */
 Bat::Bat() {
     // Initialize the stats.
-    _hp = 3;
-    _attack = 1;
+    _hp = 2;
+    _attack = 2;
     _defense = 0;
     _speed = 100;
     
@@ -78,17 +78,6 @@ void Bat::move() {
             break;
         default:
             break;
-    }
-}
-
-
-void Bat::_interact() {
-    _hp--;
-    if (_hp == 0) {
-        // The creature is dead, hide it with an alpha tween.
-        _dead = true;
-        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-        _dropContents();
     }
 }
 

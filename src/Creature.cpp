@@ -48,25 +48,25 @@ void Creature::_dropContents() {
 
 
 void Creature::damage() {
-    _game->getPlayer()->updateHealth(-1);
+    _game->getPlayer()->updateHealth(-_attack);
 }
 
 
 Creature::Facing Creature::getFacing(Vector2 direction){
-    if((direction.x == 1 && direction.y == 0)){
+    if (direction.x == 1 && direction.y == 0) {
         // if direction is moving east or northeast or southeast
         return right;
-    }else if ((direction.x == 0 && direction.y == 1)
-              || (direction.x == -1 && direction.y == 1)
-              || (direction.x == 1 && direction.y == 1)){
+    } else if ((direction.x == 0 && direction.y == 1) ||
+               (direction.x == -1 && direction.y == 1) ||
+               (direction.x == 1 && direction.y == 1)) {
         // if direction is moving north
         return up;
-    }else if((direction.x == 0 && direction.y == -1)
-             || (direction.x == -1 && direction.y == -1)
-             || (direction.x == 1 && direction.y == -1)){
+    } else if ((direction.x == 0 && direction.y == -1) ||
+               (direction.x == -1 && direction.y == -1) ||
+               (direction.x == 1 && direction.y == -1)) {
         // if moving south
         return down;
-    } else{
+    } else {
         // if moving west or north west or south west
         return left;
     }
@@ -101,4 +101,16 @@ Vector2 Creature::moveMe() {
     if ( (cPos.y - nextSpot.y) > 4 ) moveDir.y = -1;
     
     return moveDir;
+}
+
+
+void Creature::_interact() {
+    int damage = _game->getPlayer()->getAttack() - _defense;
+    _hp -= damage;
+    if (_hp == 0) {
+        // The creature is dead, hide it with an alpha tween.
+        _dead = true;
+        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
+        _dropContents();
+    }
 }

@@ -35,7 +35,7 @@ public:
     /**
      * Interacts with Things or Creatures.
      */
-    void interact();
+    void act();
     
     /**
      * Plays the attack animation.

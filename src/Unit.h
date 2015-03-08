@@ -21,20 +21,17 @@ public:
     void init(const Vector2 &pos, Game *game);
     
     /**
-     *
-     *
+     * Attach the Unit (as an Actor) to the game.
      */
     void attachUnit();
     
     /**
-     *
-     *
+     * Detach the Unit from the game.
      */
     void detachUnit();
     
     /**
-     *  Interaction method for Unit
-     *
+     * Allows other Units to interact with this Unit.
      */
     void interact();
 
@@ -44,7 +41,9 @@ public:
     void update(const UpdateState &us);
     
     
-    /* Getters and Setters */
+    /**
+     * Getters and setters
+     */
 
     const Vector2& getPosition();
     
