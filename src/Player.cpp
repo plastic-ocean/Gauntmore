@@ -105,8 +105,8 @@ void Player::interact() {
 
         switch(_facing) {
             case up:
-                rect.x = playerPosition.x;
-                rect.y = playerPosition.y - 16;
+                rect.x = static_cast<int>(playerPosition.x);
+                rect.y = static_cast<int>(playerPosition.y - 16);
                 rect.h = 16;
                 rect.w = 64;
                 if (_isCollision(rect, unit)) {
@@ -114,8 +114,8 @@ void Player::interact() {
                 }
                 break;
             case right:
-                rect.x = playerPosition.x + 64;
-                rect.y = playerPosition.y;
+                rect.x = static_cast<int>(playerPosition.x + 64);
+                rect.y = static_cast<int>(playerPosition.y);
                 rect.h = 64;
                 rect.w = 64;
                 if (_isCollision(rect, unit)) {
@@ -123,8 +123,8 @@ void Player::interact() {
                 }
                 break;
             case down:
-                rect.x = playerPosition.x;
-                rect.y = playerPosition.y + 64;
+                rect.x = static_cast<int>(playerPosition.x);
+                rect.y = static_cast<int>(playerPosition.y + 64);
                 rect.h = 16;
                 rect.w = 64;
                 if (_isCollision(rect, unit)) {
@@ -132,8 +132,8 @@ void Player::interact() {
                 }
                 break;
             case left:
-                rect.x = playerPosition.x - 16;
-                rect.y = playerPosition.y;
+                rect.x = static_cast<int>(playerPosition.x - 16);
+                rect.y = static_cast<int>(playerPosition.y);
                 rect.h = 64;
                 rect.w = 16;
                 if (_isCollision(rect, unit)) {
@@ -350,23 +350,26 @@ bool Player::_isCollision(SDL_Rect thisRect, spUnit unit) {
  * Corrects the movement direction by checking for collision with wall tiles or other Units and adjusting the 
  * direction vector's x and y values.
  *
- * @postion is the player's current position.
+ * @position is the player's current position.
  * @direction is the player's current movement direction.
  */
 Vector2 Player::_correctDirection(Vector2 position, Vector2 direction) {
     int newX = position.x + direction.x * 5;
     int newY = position.y + direction.y * 5;
-    
-    if (_collisionDetector->detectWalls(_game->getTiles(), newX, position.y, tileSize, tileSize)) {
+    int h = tileSize - 14;
+    int w = tileSize - 24;
+
+    if (_collisionDetector->detectWalls(_game->getTiles(), newX + 10, position.y + 12, h, w)) {
         direction.x = 0;
     }
-    if (_collisionDetector->detectWalls(_game->getTiles(), position.x, newY, tileSize, tileSize)) {
+    if (_collisionDetector->detectWalls(_game->getTiles(), position.x + 10, newY + 12, h, w)) {
         direction.y = 0;
     }
-    
+
     // Detect potions for pickup
-    _collisionDetector->detectUnits(_game->getMap()->getRoom()->getUnits(), newX, position.y, tileSize, tileSize);
-    
+    _collisionDetector->detectUnits(_game->getMap()->getRoom()->getUnits(), newX + 10, position.y + 12, h, w);
+
+
     return direction;
 }
 
