@@ -3,9 +3,14 @@
 #include <random>
 #include "Room.h"
 #include "Chest.h"
-#include "Skeleton.h"
+
 #include "Bat.h"
 #include "Snake.h"
+#include "Ghost.h"
+#include "Eyeball.h"
+#include "Worm.h"
+#include "Slime.h"
+
 
 using namespace std;
 
@@ -572,22 +577,39 @@ void Room::_drawOpenSpaces(int row, int column, bool isColumn) {
         _units.push_back(chest);
     }
     
-    for(int i = 0; i < _getRand(0,5); i++){
-        int batRow = _getRand(roomRow, roomHeight) * 64;
-        int batCol = _getRand(roomCol, roomWidth) * 64;
-        spBat bat = new Bat;
-        bat->setLocation(Vector2(batCol, batRow));
-        _units.push_back(bat);
+    int numOfAI = _getRand(3, 9);
+    for (int i = 0; i < numOfAI; i++) {
+        int rand = _getRand(1, 6);
+        int randRow = _getRand(roomRow, roomHeight) * 64;
+        int randCol = _getRand(roomCol, roomWidth) * 64;
         
+        if(rand == 1){
+            spBat bat = new Bat;
+            bat->setLocation(Vector2(randCol, randRow));
+            _units.push_back(bat);
+        } else if(rand == 2){
+            spSnake snake = new Snake;
+            snake->setLocation(Vector2(randCol, randRow));
+            _units.push_back(snake);
+        } else if(rand == 3){
+            spWorm worm = new Worm;
+            worm->setLocation(Vector2(randCol, randRow));
+            _units.push_back(worm);
+        } else if(rand == 4){
+            spEyeball eyeball = new Eyeball;
+            eyeball->setLocation(Vector2(randCol, randRow));
+            _units.push_back(eyeball);
+        } else if(rand == 5){
+            spGhost ghost = new Ghost;
+            ghost->setLocation(Vector2(randCol, randRow));
+            _units.push_back(ghost);
+        } else if(rand == 6){
+            spSlime slime = new Slime;
+            slime->setLocation(Vector2(randCol, randRow));
+            _units.push_back(slime);
+        }
     }
-    for(int i = 0; i < _getRand(0,5); i++){
-        int snakeRow = _getRand(roomRow, roomHeight) * 64;
-        int snakeCol = _getRand(roomCol, roomWidth) * 64;
-        spSnake snake = new Snake;
-        snake->setLocation(Vector2(snakeCol, snakeRow));
-        _units.push_back(snake);
-        
-    }
+    
 }
 
 

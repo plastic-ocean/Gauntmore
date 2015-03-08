@@ -1,5 +1,6 @@
 #include "res.h"
 #include "Worm.h"
+#include <cmath>
 
 
 /**
@@ -106,39 +107,22 @@ void Worm::_update(const UpdateState &us) {
     
     Vector2 direction = moveMe();
     Vector2 position = getPosition();
+    
     Facing prevFacing = _facing;
-    
-    
-    if((direction.x == 1 && direction.y == 0)){
-//        cout << "creature update east" << endl;
-        // if direction is moving east or northeast or southeast
-        _facing = right;
-        //move();
-    }else if ((direction.x == 0 && direction.y == 1)
-              || (direction.x == -1 && direction.y == 1)
-              || (direction.x == 1 && direction.y == 1)){
-//        cout << "creature update north" << endl;
-        // if direction is moving north
-        _facing = up;
-        //move();
-    } else if((direction.x == -1 && direction.y == 0)){
-//        cout << "creature update west" << endl;
-        // if moving west or north west or south west
-        _facing = left;
-        //move();
-    }else if((direction.x == 0 && direction.y == -1)
-             || (direction.x == -1 && direction.y == -1)
-             || (direction.x == 1 && direction.y == -1)){
-//        cout << "creature update south" << endl;
-        // if moving south
-        _facing = down;
-        //move();
-    }
+    _facing = getFacing(direction);
     if(_facing != prevFacing){
         move();
     }
     
-    position += direction * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
+    position += direction * (us.dt / 1000.0f) * _speed;
     setPosition(position);
+    if((abs(position.x - _game->getPlayer()->getPosition().x) <= 70) && (abs(position.y - _game->getPlayer()->getPosition().y) <= 70)){
+        time_t _current = time(0);
+        if(_current >= _lastTimeAttack+2){
+            _lastTimeAttack = time(0);
+            damage();
+            //cout << "attacking" << endl;
+        }
+    }
     
 }

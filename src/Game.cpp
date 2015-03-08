@@ -10,10 +10,13 @@
 #include "Player.h"
 
 #include "Creature.h"
-#include "Skeleton.h"
+
 #include "Slime.h"
 #include "Snake.h"
 #include "Bat.h"
+#include "Worm.h"
+#include "Eyeball.h"
+#include "Ghost.h"
 
 #include "Chest.h"
 #include "Gold.h"
@@ -74,9 +77,9 @@ Game::Game():_isPaused(false), _isFirstRun(true) {
         }
     }
     
-//    _slime = new Slime();
-//    _slime->init(Vector2((_map->getRoom()->getSize() / 2) * 64, (_map->getRoom()->getSize() / 2) * 64), this);
-//    _map->getRoom()->getUnits()->push_back(_slime);
+//    _snake = new Snake();
+//    _snake->init(Vector2((_map->getRoom()->getSize() / 2) * 64, (_map->getRoom()->getSize() / 2) * 64), this);
+//    _map->getRoom()->getUnits()->push_back(_snake);
 
     
     // Create player
@@ -282,11 +285,10 @@ void Game::createNewGame() {
             unit->init(unit->getLocation(), this);
         }
     }
-    
-//    _slime = new Slime();
-//    _slime->init(Vector2((_map->getRoom()->getSize() / 2) * 64, (_map->getRoom()->getSize() / 2) * 64), this);
-//    _map->getRoom()->getUnits()->push_back(_slime);
-    
+
+//    _snake = new Snake();
+//    _snake->init(Vector2((_map->getRoom()->getSize() / 2) * 64, (_map->getRoom()->getSize() / 2) * 64), this);
+//    _map->getRoom()->getUnits()->push_back(_snake);
     
     // Create player
     _player = new Player(10, 1, 1);

@@ -143,6 +143,47 @@ void Player::interact() {
             default:
                 break;
         }
+
+//        switch(_facing) {
+//            case up:
+//                rect.x = playerPosition.x - 32;
+//                rect.y = playerPosition.y - 48;
+//                rect.h = 20;
+//                rect.w = 64;
+//                if (_isCollision(rect, unit)) {
+//                    unit->interact();
+//                }
+//                break;
+//            case right:
+//                rect.x = playerPosition.x + 32;
+//                rect.y = playerPosition.y - 32;
+//                rect.h = 64;
+//                rect.w = 20;
+//                if (_isCollision(rect, unit)) {
+//                    unit->interact();
+//                }
+//                break;
+//            case down:
+//                rect.x = playerPosition.x - 32;
+//                rect.y = playerPosition.y + 28;
+//                rect.h = 20;
+//                rect.w = 64;
+//                if (_isCollision(rect, unit)) {
+//                    unit->interact();
+//                }
+//                break;
+//            case left:
+//                rect.x = playerPosition.x - 48;
+//                rect.y = playerPosition.y - 32;
+//                rect.h = 64;
+//                rect.w = 20;
+//                if (_isCollision(rect, unit)) {
+//                    unit->interact();
+//                }
+//                break;
+//            default:
+//                break;
+//        }
         
     }
     

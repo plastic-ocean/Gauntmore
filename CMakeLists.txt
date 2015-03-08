@@ -24,7 +24,6 @@ src/GoldCount.cpp src/GoldCount.h
 src/HealthBar.cpp src/HealthBar.h
 src/Potion.cpp src/Potion.h
 src/Creature.cpp src/Creature.h
-src/Skeleton.cpp src/Skeleton.h
 src/Thing.cpp src/Thing.h
 src/Slime.cpp src/Slime.h
 src/Unit.cpp src/Unit.h
@@ -43,7 +42,6 @@ src/Weapon.cpp src/Weapon.h
 src/Eyeball.cpp src/Eyeball.h
 src/Ghost.cpp src/Ghost.h
 src/Bat.cpp src/Bat.h
-src/Bee.cpp src/Bee.h
 src/Snake.cpp src/Snake.h
 src/Worm.cpp src/Worm.h
 src/Gauntmore.cpp src/Gauntmore.h

@@ -15,13 +15,14 @@ public:
     /* Virtual Methods */
     
     virtual SDL_Rect getBounds();
-    virtual void damage();
+    //virtual void damage();
     virtual void addSprite();
     virtual bool isPotion();
     
     void move();
     
 private:
+
     Facing _facing;
     spThing _contents;
     int _speed = 100;
