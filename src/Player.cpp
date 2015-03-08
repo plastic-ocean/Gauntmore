@@ -395,20 +395,20 @@ bool Player::_isCollision(SDL_Rect thisRect, spUnit unit) {
  * @direction is the player's current movement direction.
  */
 Vector2 Player::_correctDirection(Vector2 position, Vector2 direction) {
-    int newX = position.x + direction.x * 5;
-    int newY = position.y + direction.y * 5;
-    int h = tileSize - 14;
+    int newX = static_cast<int>(position.x + direction.x * 5);
+    int newY = static_cast<int>(position.y + direction.y * 5);
+    int h = tileSize - 16;
     int w = tileSize - 24;
 
-    if (_collisionDetector->detectWalls(_game->getTiles(), newX + 10, position.y + 12, h, w)) {
+    if (_collisionDetector->detectWalls(_game->getTiles(), newX + 10, static_cast<int>(position.y + 14), h, w)) {
         direction.x = 0;
     }
-    if (_collisionDetector->detectWalls(_game->getTiles(), position.x + 10, newY + 12, h, w)) {
+    if (_collisionDetector->detectWalls(_game->getTiles(), static_cast<int>(position.x + 10), newY + 14, h, w)) {
         direction.y = 0;
     }
 
     // Detect potions for pickup
-    _collisionDetector->detectUnits(_game->getMap()->getRoom()->getUnits(), newX + 10, position.y + 12, h, w);
+    _collisionDetector->detectUnits(_game->getMap()->getRoom()->getUnits(), newX + 10, static_cast<int>(position.y + 14), h, w);
 
 
     return direction;

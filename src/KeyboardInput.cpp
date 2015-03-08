@@ -68,15 +68,11 @@ void KeyboardInput::_onEvent(Event *ev) {
             case SDLK_SPACE:
                 _game->getPlayer()->interact();
                 break;
-            case SDLK_RETURN:
-                _game->getPlayer()->updateHealth(-1);
-                break;
             case SDLK_ESCAPE:
                 _game->pauseGame();
                 break;
             case SDLK_c:
                 //add alert
-                
                 break;
             default:
                 break;
