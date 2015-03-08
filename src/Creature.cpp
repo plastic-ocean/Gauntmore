@@ -12,46 +12,20 @@
  */
 Creature::Creature() {
     setType("creature");
-//    PathFinder findPath = PathFinder(_game);
 }
 
 
 /**
- *
- *
+ * Attacks the player.
  */
-void Creature::_setContents() {
-    int randNum = rand() % 2;
-    
-    if (randNum == 0) {
-        int randContents = rand() % 2;
-        if (randContents == 0) {
-            _contents = new Potion();
-        } else {
-            _contents = new Gold();
-        }
-    }
-}
-
-
-/**
- *
- *
- */
-void Creature::_dropContents() {
-    if (_contents) {
-        _contents->init(getPosition(), _game);
-        _contents->setLocation(getPosition());
-        _game->getMap()->getRoom()->getUnits()->push_back(_contents);
-    }
-}
-
-
-void Creature::damage() {
+void Creature::attack() {
     _game->getPlayer()->updateHealth(-_attack);
 }
 
 
+/**
+ * Gets the Creature's facing.
+ */
 Creature::Facing Creature::getFacing(Vector2 direction){
     if (direction.x == 1 && direction.y == 0) {
         // if direction is moving east or northeast or southeast
@@ -73,7 +47,10 @@ Creature::Facing Creature::getFacing(Vector2 direction){
 }
 
 
-Vector2 Creature::moveMe() {
+/**
+ * Moves the creature.
+ */
+Vector2 Creature::_moveMe() {
     Vector2 moveDir = {0,0};
 //    if (!_alerted) return moveDir;
     
@@ -84,15 +61,15 @@ Vector2 Creature::moveMe() {
         return moveDir;//you are less than 64 pixels away, do nothing
     }
     //otherwise, check the movement Queue
-    if ( moveQ.isEmpty() ) {
-        moveQ.updatePath(findPath.aStar(cPos, pPos) );
+    if ( _moveQ.isEmpty() ) {
+        _moveQ.updatePath(_findPath.aStar(cPos, pPos) );
     }
     //if the Q is NOT empty
-    Vector2 nextSpot = moveQ.peekNext();//look at where you are going
+    Vector2 nextSpot = _moveQ.peekNext();//look at where you are going
     if ( abs(cPos.x - nextSpot.x) <= 10 && abs(cPos.y - nextSpot.y) <= 10) {
-        moveQ.updatePath(findPath.aStar(pPos, cPos) );
+        _moveQ.updatePath(_findPath.aStar(pPos, cPos) );
     }
-        nextSpot = moveQ.peekNext();//start moving to the next spot
+        nextSpot = _moveQ.peekNext();//start moving to the next spot
     
     
     if ( (cPos.x - nextSpot.x) < -4 ) moveDir.x = 1;
@@ -104,6 +81,38 @@ Vector2 Creature::moveMe() {
 }
 
 
+/**
+ * Sets the creature's item, if it has one.
+ */
+void Creature::_setContents() {
+    int randNum = rand() % 2;
+
+    if (randNum == 0) {
+        int randContents = rand() % 2;
+        if (randContents == 0) {
+            _contents = new Potion();
+        } else {
+            _contents = new Gold();
+        }
+    }
+}
+
+
+/**
+ * Drops the creature's item, if it has one.
+ */
+void Creature::_dropContents() {
+    if (_contents) {
+        _contents->init(getPosition(), _game);
+        _contents->setLocation(getPosition());
+        _game->getMap()->getRoom()->getUnits()->push_back(_contents);
+    }
+}
+
+
+/**
+ * Reduces the creature's hit points.
+ */
 void Creature::_interact() {
     int damage = _game->getPlayer()->getAttack() - _defense;
     _hp -= damage;

@@ -29,19 +29,6 @@ SDL_Rect Worm::getBounds() {
     return _bounds;
 }
 
-
-/**
- *
- *
- */
-bool Worm::isPotion() {
-    return false;
-}
-
-void Worm::damage() {
-    
-}
-
 void Worm::addSprite() {
     // Add sprite to the game scene view.
     _sprite = new Sprite;
@@ -50,17 +37,6 @@ void Worm::addSprite() {
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
     move();
 }
-
-/**
- * Initializes a creatures position and sprite. Called by Unit's init() method.
- */
-void Worm::_init() {
-    addSprite();
-    _setContents();
-    findPath.setGame(_game);
-}
-
-
 
 
 /**
@@ -88,13 +64,23 @@ void Worm::move() {
 
 
 /**
+ * Initializes a creatures position and sprite. Called by Unit's init() method.
+ */
+void Worm::_init() {
+    addSprite();
+    _setContents();
+    _findPath.setGame(_game);
+}
+
+
+/**
  * Updates the creature every frame. Called by Unit::update.
  *
  * @us is the UpdateStatus sent by Unit's update method.
  */
 void Worm::_update(const UpdateState &us) {
     
-    Vector2 direction = moveMe();
+    Vector2 direction = _moveMe();
     Vector2 position = getPosition();
     
     Facing prevFacing = _facing;
@@ -109,7 +95,7 @@ void Worm::_update(const UpdateState &us) {
         time_t _current = time(0);
         if(_current >= _lastTimeAttack+2){
             _lastTimeAttack = time(0);
-            damage();
+            attack();
             //cout << "attacking" << endl;
         }
     }

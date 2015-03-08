@@ -65,7 +65,7 @@ bool Player::updateHealth(int health) {
         _hp += health;
         
         // Convert health to a decimal percentage for the health bar.
-        double healthPercent = health * 0.1;
+        double healthPercent = health * 0.05;
         if (healthPercent > 1.0) {
             healthPercent = 1.0;
         }
@@ -116,7 +116,7 @@ void Player::act() {
                 rect.y = static_cast<int>(playerPosition.y - 16);
                 rect.h = 16;
                 rect.w = 64;
-                if (_isCollision(rect, unit)) {
+                if (_isValidAttack(rect, unit)) {
                     unit->interact();
                 }
                 break;
@@ -125,7 +125,7 @@ void Player::act() {
                 rect.y = static_cast<int>(playerPosition.y);
                 rect.h = 64;
                 rect.w = 64;
-                if (_isCollision(rect, unit)) {
+                if (_isValidAttack(rect, unit)) {
                     unit->interact();
                 }
                 break;
@@ -134,7 +134,7 @@ void Player::act() {
                 rect.y = static_cast<int>(playerPosition.y + 64);
                 rect.h = 16;
                 rect.w = 64;
-                if (_isCollision(rect, unit)) {
+                if (_isValidAttack(rect, unit)) {
                     unit->interact();
                 }
                 break;
@@ -143,7 +143,7 @@ void Player::act() {
                 rect.y = static_cast<int>(playerPosition.y);
                 rect.h = 64;
                 rect.w = 16;
-                if (_isCollision(rect, unit)) {
+                if (_isValidAttack(rect, unit)) {
                     unit->interact();
                 }
                 break;
@@ -218,24 +218,6 @@ void Player::attack() {
             break;
     }
 }
-
-
-int Player::getAttack(){
-    return _attack;
-};
-
-
-void Player::setAttack(int attack){
-    _attack = attack;
-};
-
-int Player::getDefense(){
-    return _defense;
-};
-
-void Player::setDefense(int defense){
-    _defense += defense;
-};
 
 
 /**
@@ -339,11 +321,6 @@ bool Player::isDamaged() {
 }
 
 
-bool Player::isPotion() {
-    return false;
-}
-
-
 /**
  * Initializes the player's position and sprite. Called by Unit's init() method.
  */
@@ -375,11 +352,12 @@ void Player::_update(const UpdateState &us) {
 
 /**
  * Checks for a collision between the players rect and the unit's rect.
+ * Tests if the Player is in range to attack a Creature.
  *
  * @rect is an SDL_Rect for the player.
  * @unit is the unit to check against.
  */
-bool Player::_isCollision(SDL_Rect thisRect, spUnit unit) {
+bool Player::_isValidAttack(SDL_Rect thisRect, spUnit unit) {
     bool isCollision = false;
     SDL_Rect otherRect = unit->getBounds();
     const SDL_Rect *playerRect = &thisRect;

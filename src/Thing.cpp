@@ -14,19 +14,15 @@ Thing::Thing() {
 }
 
 /**
- * Interaction method for Thing.
+ * Does nothing in Things.
  */
-void Thing::interact(){
-    
-}
+void attack() {}
+
 
 /**
  * Initializes a creatures position and sprite. Called by Unit's init() method.
  */
-void Thing::_init() {
-    // Initialize the stats.
-}
-
+void Thing::_init() {}
 
 
 /**
@@ -34,6 +30,4 @@ void Thing::_init() {
  *
  * @us is the UpdateStatus sent by Unit's update method.
  */
-void Thing::_update(const UpdateState &us){
-    
-}
+void Thing::_update(const UpdateState &us) {}

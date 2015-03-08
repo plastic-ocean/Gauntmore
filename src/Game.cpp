@@ -75,7 +75,7 @@ Game::Game():_isPaused(false), _isFirstRun(true) {
 //    _map->getRoom()->getUnits()->push_back(_snake);
     
     // Create player
-    _player = new Player(10, 1, 1);
+    _player = new Player(20, 1, 1);
     _player->init(_getEntrance(), this);
     _map->getRoom()->getUnits()->push_back(_player);
 

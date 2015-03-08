@@ -37,19 +37,13 @@ void Potion::addSprite() {
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
 }
 
-/**
- *  Boolean method to determine if the unit is a Potion.
- */
-bool Potion::isPotion() {
-    return true;
-}
-
 
 /**
  * Initializes position and sprite of Potion. Called by Unit's init() method.
  */
 void Potion::_init() {
     addSprite();
+    _isPotion = true;
 }
 
 

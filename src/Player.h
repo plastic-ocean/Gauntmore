@@ -41,14 +41,6 @@ public:
      * Plays the attack animation.
      */
     void attack();
-
-    int getAttack();
-
-    void setAttack(int attack);
-    
-    int getDefense();
-    
-    void setDefense(int defense);
     
     /**
      * Plays the move animation.
@@ -76,8 +68,6 @@ public:
      * Checks if the player is damaged by comparing _hp to maxHealth.
      */
     bool isDamaged();
-    
-    virtual bool isPotion();
     
 protected:
     const int tileSize = 64;
@@ -110,14 +100,15 @@ protected:
      * Checks whether the sprite already has a tween before trying to removing it.
      */
     void _checkTween();
-    
+
     /**
-     * Checks for a collision between the players rect and the unit's rect.
-     *
-     * @rect is an SDL_Rect for the player.
-     * @unit is the unit to check against.
-     */
-    bool _isCollision(SDL_Rect rect, spUnit unit);
+    * Checks for a collision between the players rect and the unit's rect.
+    * Tests if the Player is in range to attack a Creature.
+    *
+    * @rect is an SDL_Rect for the player.
+    * @unit is the unit to check against.
+    */
+    bool _isValidAttack(SDL_Rect rect, spUnit unit);
     
     /**
      * Corrects the movement direction by checking for collision with wall tiles or other Units and adjusting the

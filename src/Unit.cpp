@@ -6,7 +6,7 @@
 /**
  * Constructor.
  */
-Unit::Unit():_game(0), _dead(false) {}
+Unit::Unit():_game(0), _dead(false), _isPotion(false) {}
 
 
 /**
@@ -95,9 +95,17 @@ int Unit::getAttack() {
     return _attack;
 }
 
+void Unit::setAttack(int attack){
+    _attack = attack;
+};
+
 int Unit::getDefense() {
     return _defense;
 }
+
+void Unit::setDefense(int defense){
+    _defense += defense;
+};
 
 void Unit::setLocation(Vector2 location) {
     _location = location;
@@ -113,4 +121,8 @@ SDL_Rect Unit::getRect() {
 
 void Unit::setRect(SDL_Rect rect) {
     _rect = rect;
+}
+
+bool Unit::isPotion() {
+    return _isPotion;
 }

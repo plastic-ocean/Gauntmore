@@ -15,9 +15,7 @@ public:
     /* Virtual Methods */
     
     virtual SDL_Rect getBounds();
-    //virtual void damage();
     virtual void addSprite();
-    virtual bool isPotion();
     
     void move();
     

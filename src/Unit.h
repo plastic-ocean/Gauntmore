@@ -41,9 +41,7 @@ public:
     void update(const UpdateState &us);
     
     
-    /**
-     * Getters and setters
-     */
+    /* Getters and Setters */
 
     const Vector2& getPosition();
     
@@ -59,7 +57,11 @@ public:
 
     int getAttack();
 
+    void setAttack(int attack);
+
     int getDefense();
+
+    void setDefense(int defense);
     
     void setLocation(Vector2 location);
     
@@ -68,6 +70,8 @@ public:
     SDL_Rect getRect();
     
     void setRect(SDL_Rect rect);
+
+    bool isPotion();
     
     
     /* Virtual Methods */
@@ -75,23 +79,15 @@ public:
     /**
      * Reduces the Unit's hit points. Overload this for each child.
      */
-    virtual void damage(){}
+    virtual void attack() {}
     
     /**
-     *
-     *
-     */
-    virtual bool isPotion() = 0;
-    
-    /**
-     *
-     *
+     * Gets the Unit's bounding rectangle.
      */
     virtual SDL_Rect getBounds() = 0;
     
     /**
-     *
-     *
+     * Add's the Unit's sprite.
      */
     virtual void addSprite() = 0;
 
@@ -101,7 +97,6 @@ protected:
     spActor _view;
     spSprite _sprite;
     SDL_Rect _rect;
-    
     string _type;
     bool _isPotion;
     
@@ -127,7 +122,10 @@ protected:
      * Initializes a child of Unit. Called by Unit::init() for all children.
      */
 	virtual void _init() {}
-    
+
+    /**
+     * Allows the player to interact with the Unit. Called by Unit::interact for all children.
+     */
     virtual void _interact() {}
     
     /**

@@ -31,20 +31,6 @@ SDL_Rect Slime::getBounds() {
 }
 
 /**
- *  Boolean method to determine if the unit is a Potion.
- */
-bool Slime::isPotion() {
-    return false;
-}
-
-/**
- *  Method that does damage to the Player.
- */
-void Slime::damage() {
-
-}
-
-/**
  *  Adds Sprite and attaches it to the game.
  */
 void Slime::addSprite() {
@@ -56,15 +42,6 @@ void Slime::addSprite() {
     move();
 }
 
-/**
- * Initializes a Slime position and sprite. Called by Unit's init() method.
- */
-void Slime::_init() {
-    addSprite();
-    _setContents();
-    findPath.setGame(_game);
-
-}
 
 /**
  * Interaction method for Slime.
@@ -91,12 +68,23 @@ void Slime::move() {
 
 
 /**
+ * Initializes a Slime position and sprite. Called by Unit's init() method.
+ */
+void Slime::_init() {
+    addSprite();
+    _setContents();
+    _findPath.setGame(_game);
+    
+}
+
+
+/**
  * Updates the creature every frame. Called by Unit::update.
  *
  * @us is the UpdateStatus sent by Unit's update method.
  */
 void Slime::_update(const UpdateState &us) {
-    Vector2 direction = moveMe();
+    Vector2 direction = _moveMe();
     Vector2 position = getPosition();
     
     Facing prevFacing = _facing;
@@ -111,7 +99,7 @@ void Slime::_update(const UpdateState &us) {
         time_t _current = time(0);
         if(_current >= _lastTimeAttack+2){
             _lastTimeAttack = time(0);
-            damage();
+            attack();
             //cout << "attacking" << endl;
         }
     }

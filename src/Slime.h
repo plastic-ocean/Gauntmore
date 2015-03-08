@@ -21,19 +21,9 @@ public:
     virtual SDL_Rect getBounds();
     
     /**
-     *  Method that does damage to the Player.
-     */
-    virtual void damage();
-    
-    /**
      *  Adds Sprite and attaches it to the game.
      */
     virtual void addSprite();
-    
-    /**
-     *  Boolean method to determine if the unit is a Potion.
-     */
-    virtual bool isPotion();
     
     void move();
     

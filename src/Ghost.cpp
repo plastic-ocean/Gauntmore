@@ -29,19 +29,6 @@ SDL_Rect Ghost::getBounds() {
     return _bounds;
 }
 
-
-/**
- *
- *
- */
-bool Ghost::isPotion() {
-    return false;
-}
-
-void Ghost::damage() {
-    
-}
-
 void Ghost::addSprite() {
     // Add sprite to the game scene view.
     _sprite = new Sprite;
@@ -49,15 +36,6 @@ void Ghost::addSprite() {
     _sprite->attachTo(_view);
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
     move();
-}
-
-/**
- * Initializes a creatures position and sprite. Called by Unit's init() method.
- */
-void Ghost::_init() {
-    addSprite();
-    _setContents();
-    findPath.setGame(_game);
 }
 
 
@@ -86,13 +64,22 @@ void Ghost::move() {
 
 
 /**
+ * Initializes a creatures position and sprite. Called by Unit's init() method.
+ */
+void Ghost::_init() {
+    addSprite();
+    _setContents();
+    _findPath.setGame(_game);
+}
+
+
+/**
  * Updates the creature every frame. Called by Unit::update.
  *
  * @us is the UpdateStatus sent by Unit's update method.
  */
 void Ghost::_update(const UpdateState &us) {
-    
-    Vector2 direction = moveMe();
+    Vector2 direction = _moveMe();
     Vector2 position = getPosition();
     
     Facing prevFacing = _facing;
@@ -107,7 +94,7 @@ void Ghost::_update(const UpdateState &us) {
         time_t _current = time(0);
         if(_current >= _lastTimeAttack+2){
             _lastTimeAttack = time(0);
-            damage();
+            attack();
             //cout << "attacking" << endl;
         }
     }

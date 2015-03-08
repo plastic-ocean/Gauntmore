@@ -29,19 +29,6 @@ SDL_Rect Eyeball::getBounds() {
     return _bounds;
 }
 
-
-/**
- *
- *
- */
-bool Eyeball::isPotion() {
-    return false;
-}
-
-void Eyeball::damage() {
-    
-}
-
 void Eyeball::addSprite() {
     // Add sprite to the game scene view.
     _sprite = new Sprite;
@@ -49,15 +36,6 @@ void Eyeball::addSprite() {
     _sprite->attachTo(_view);
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
     move();
-}
-
-/**
- * Initializes a creatures position and sprite. Called by Unit's init() method.
- */
-void Eyeball::_init() {
-    addSprite();
-    _setContents();
-    findPath.setGame(_game);
 }
 
 /**
@@ -85,12 +63,22 @@ void Eyeball::move() {
 
 
 /**
+ * Initializes a creatures position and sprite. Called by Unit's init() method.
+ */
+void Eyeball::_init() {
+    addSprite();
+    _setContents();
+    _findPath.setGame(_game);
+}
+
+
+/**
  * Updates the creature every frame. Called by Unit::update.
  *
  * @us is the UpdateStatus sent by Unit's update method.
  */
 void Eyeball::_update(const UpdateState &us) {
-    Vector2 direction = moveMe();
+    Vector2 direction = _moveMe();
     Vector2 position = getPosition();
     
     Facing prevFacing = _facing;
@@ -105,7 +93,7 @@ void Eyeball::_update(const UpdateState &us) {
         time_t _current = time(0);
         if(_current >= _lastTimeAttack + 2){
             _lastTimeAttack = time(0);
-            damage();
+            attack();
             //cout << "attacking" << endl;
         }
     }
