@@ -13,9 +13,9 @@ Potion::Potion() {
     setType("potion");
 }
 
+
 /**
- *  Gets bounds of the unit Potion.
- *  @return: SDL_Rect _bounds which is the bounds of Potion.
+ *  Gets the bounding rectangle.
  */
 SDL_Rect Potion::getBounds() {
     Vector2 unitPosition = getPosition();
@@ -26,6 +26,7 @@ SDL_Rect Potion::getBounds() {
     
     return _bounds;
 }
+
 
 /**
  *  Adds Sprite and attaches it to the game.
@@ -65,10 +66,8 @@ void Potion::_interact() {
 
 
 /**
- * Updates the Potion every frame. Called by Units update() method.
+ * Updates the Potion every frame. Called by Unit's update() method.
  *
  * @us is the UpdateStatus sent by Unit's update method.
  */
-void Potion::_update(const UpdateState &us) {
-    
-}
+void Potion::_update(const UpdateState &us) {}

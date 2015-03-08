@@ -69,7 +69,7 @@ Vector2 Creature::_moveMe() {
     if ( abs(cPos.x - nextSpot.x) <= 10 && abs(cPos.y - nextSpot.y) <= 10) {
         _moveQ.updatePath(_findPath.aStar(pPos, cPos) );
     }
-        nextSpot = _moveQ.peekNext();//start moving to the next spot
+    nextSpot = _moveQ.peekNext();//start moving to the next spot
     
     
     if ( (cPos.x - nextSpot.x) < -4 ) moveDir.x = 1;
@@ -116,7 +116,7 @@ void Creature::_dropContents() {
 void Creature::_interact() {
     int damage = _game->getPlayer()->getAttack() - _defense;
     _hp -= damage;
-    if (_hp == 0) {
+    if (_hp <= 0) {
         // The creature is dead, hide it with an alpha tween.
         _dead = true;
         _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
