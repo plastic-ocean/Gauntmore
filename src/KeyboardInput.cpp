@@ -35,7 +35,15 @@ bool KeyboardInput::getDirection(Vector2 &dir) const {
 
 
 /**
- * Sets the movement direction and interactino for the Player on valid keyboard input.
+ * Resets keyboard direction to 0.
+ */
+void KeyboardInput::resetDir() {
+    _dir = Vector2(0, 0);
+}
+
+
+/**
+ * Sets the movement direction and interaction for the Player on valid keyboard input.
  *
  * @ev is the event, will be turned into an SDL_Event.
  */
@@ -102,9 +110,8 @@ void KeyboardInput::_onEvent(Event *ev) {
                 _dir -= Vector2(1, 0);
                 _game->getPlayer()->removeTween(Player::right);
                 break;
-            default: break;
+            default:
+                break;
         }
     }
-    
- 
 }

@@ -577,7 +577,6 @@ void Room::_drawOpenSpaces(int row, int column, bool isColumn) {
         _units.push_back(chest);
     }
 
-    cout << "Units.size " << _units.size() << endl;
     if(_units.size() < 3) {
         int numOfSmall = _getRand(3, 6);
         for (int i = 0; i < numOfSmall; i++) {

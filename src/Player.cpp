@@ -60,6 +60,10 @@ bool Player::updateHealth(int health) {
     if (health < 0) {
         // This is damage.
         health = static_cast<int>(ceil(health / _defense));
+
+        if (health == 0){
+            health = -1;
+        }
     }
 
     if (_hp + health < _maxHealth) {

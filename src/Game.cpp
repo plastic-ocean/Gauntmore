@@ -57,11 +57,6 @@ Game::Game():_isPaused(false), _isFirstRun(true) {
 
     }
 
-//    cout << "Things:" << endl;
-//    for (spThing thing : _things) {
-//        cout << thing->getType() << endl;
-//    }
-
     // Create map
     _map = new Map(size);
     _renderMap();
@@ -273,6 +268,7 @@ void Game::createNewGame() {
     // Size is the number of tiles
     int size = 13;
 
+    _things.clear();
     _things.push_back(new Armor(2));
     _things.push_back(new Armor(3));
     _things.push_back(new Weapon(2));
@@ -297,10 +293,6 @@ void Game::createNewGame() {
             unit->init(unit->getLocation(), this);
         }
     }
-
-//    _snake = new Snake();
-//    _snake->init(Vector2((_map->getRoom()->getSize() / 2) * 64, (_map->getRoom()->getSize() / 2) * 64), this);
-//    _map->getRoom()->getUnits()->push_back(_snake);
     
     // Create player
     _player = new Player(20, 1, 1);
@@ -309,8 +301,8 @@ void Game::createNewGame() {
 
     setPaused(false);
 
-//    // Keyboard handler
-//    _move = new KeyboardInput(this);
+    // Keyboard handler
+    _move->resetDir();
     
     // Health bar
     _healthBar = new HealthBar(this);
@@ -494,7 +486,6 @@ void Game::_createTiles() {
     for (list<spUnit>::iterator it = units->begin(); it != units->end(); ++it) {
         spUnit unit = *it;
         SDL_Rect unitRect = SDL_Rect();
-//        cout << unit->getType() << " x: " << unit->getPosition().x << " y: " << unit->getPosition().y << endl;
 
         unitRect.x = unit->getPosition().x + 20;
         unitRect.y = unit->getPosition().y + 15;
