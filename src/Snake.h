@@ -15,14 +15,12 @@ public:
     /* Virtual Methods */
     
     virtual SDL_Rect getBounds();
-    //virtual void damage();
     virtual void addSprite();
     virtual bool isPotion();
     
     void move();
     
 private:
-
     Facing _facing;
     spThing _contents;
     int _speed = 100;
@@ -32,11 +30,6 @@ private:
      * Initializes position and sprite of Chest. Called by Unit's init() method.
      */
     void _init();
-    
-    /**
-     * Interaction method for Chest.
-     */
-    void _interact();
     
     /**
      * Updates the Chest every frame. Called by Units update() method.

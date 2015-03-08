@@ -9,6 +9,7 @@
 #include "HealthBar.h"
 #include "Room.h"
 #include "CollisionDetector.h"
+#include "math.h"
 
 
 /**
@@ -55,12 +56,17 @@ Player::Facing Player::getFacing() {
  */
 bool Player::updateHealth(int health) {
     bool isUpdated = false;
-    
+
+    if (health < 0) {
+        // This is damage.
+        health = static_cast<int>(ceil(health / _defense));
+    }
+
     if (_hp + health < _maxHealth) {
         _hp += health;
         
         // Convert health to a decimal percentage for the health bar.
-        float healthPercent = health * 0.1;
+        double healthPercent = health * 0.05;
         if (healthPercent > 1.0) {
             healthPercent = 1.0;
         }
@@ -79,6 +85,8 @@ bool Player::updateHealth(int health) {
         _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
         _dead = true;
     }
+
+    cout << "Player HP: " << _hp << endl;
     
     return isUpdated;
 }
@@ -400,15 +408,15 @@ Vector2 Player::_correctDirection(Vector2 position, Vector2 direction) {
     int h = tileSize - 16;
     int w = tileSize - 24;
 
-    if (_collisionDetector->detectWalls(_game->getTiles(), newX + 10, static_cast<int>(position.y + 14), h, w)) {
+    if (_collisionDetector->detect(_game->getTiles(), newX + 10, static_cast<int>(position.y + 14), h, w)) {
         direction.x = 0;
     }
-    if (_collisionDetector->detectWalls(_game->getTiles(), static_cast<int>(position.x + 10), newY + 14, h, w)) {
+    if (_collisionDetector->detect(_game->getTiles(), static_cast<int>(position.x + 10), newY + 14, h, w)) {
         direction.y = 0;
     }
 
     // Detect potions for pickup
-    _collisionDetector->detectUnits(_game->getMap()->getRoom()->getUnits(), newX + 10, static_cast<int>(position.y + 14), h, w);
+    _collisionDetector->detectPotions(_game->getMap()->getRoom()->getUnits(), newX + 10, static_cast<int>(position.y + 14), h, w);
 
 
     return direction;

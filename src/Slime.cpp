@@ -8,13 +8,14 @@
  */
 Slime::Slime() {
     // Initialize the stats.
-    _hp = 3;
-    _attack = 1;
+    _hp = 5;
+    _attack = 4;
     _defense = 0;
-    _speed = 100;
-
-    
+    _speed = 50;
+    _attackSpeed = 2;
+    _lastTimeAttack = time(0);
 }
+
 
 /**
  *  Gets bounds of the unit Slime.
@@ -37,12 +38,6 @@ bool Slime::isPotion() {
     return false;
 }
 
-/**
- *  Method that does damage to the Player.
- */
-void Slime::damage() {
-
-}
 
 /**
  *  Adds Sprite and attaches it to the game.
@@ -90,15 +85,15 @@ void Slime::move() {
 }
 
 
-void Slime::_interact() {
-    _hp--;
-    if (_hp == 0) {
-        // The creature is dead, hide it with an alpha tween.
-        _dead = true;
-        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-        _dropContents();
-    }
-}
+//void Slime::_interact() {
+//    _hp--;
+//    if (_hp == 0) {
+//        // The creature is dead, hide it with an alpha tween.
+//        _dead = true;
+//        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
+//        _dropContents();
+//    }
+//}
 
 /**
  * Updates the creature every frame. Called by Unit::update.
@@ -119,7 +114,7 @@ void Slime::_update(const UpdateState &us) {
     setPosition(position);
     if((abs(position.x - _game->getPlayer()->getPosition().x) <= 70) && (abs(position.y - _game->getPlayer()->getPosition().y) <= 70)){
         time_t _current = time(0);
-        if(_current >= _lastTimeAttack+2){
+        if(_current >= _lastTimeAttack + _attackSpeed){
             _lastTimeAttack = time(0);
             damage();
             //cout << "attacking" << endl;

@@ -8,12 +8,14 @@
  */
 Worm::Worm() {
     // Initialize the stats.
-    _hp = 3;
-    _attack = 1;
+    _hp = 8;
+    _attack = 10;
     _defense = 0;
-    _speed = 100;
-    
+    _speed = 30;
+    _attackSpeed = 4;
+    _lastTimeAttack = time(0);
 }
+
 
 /**
  *
@@ -38,9 +40,6 @@ bool Worm::isPotion() {
     return false;
 }
 
-void Worm::damage() {
-    
-}
 
 void Worm::addSprite() {
     // Add sprite to the game scene view.
@@ -61,8 +60,6 @@ void Worm::_init() {
 }
 
 
-
-
 /**
  * Plays the move animation.
  */
@@ -70,30 +67,19 @@ void Worm::move() {
     //_checkTween();
     switch (_facing) {
         case up:
-            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("worm_up")), 500, -1);
+            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("worm_down")), 500, -1);
             break;
         case right:
             _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("worm_right")), 500, -1);
             break;
         case down:
-            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("worm_down")), 500, -1);
+            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("worm_up")), 500, -1);
             break;
         case left:
             _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("worm_left")), 500, -1);
             break;
         default:
             break;
-    }
-}
-
-
-void Worm::_interact() {
-    _hp--;
-    if (_hp == 0) {
-        // The creature is dead, hide it with an alpha tween.
-        _dead = true;
-        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-        _dropContents();
     }
 }
 
@@ -118,7 +104,7 @@ void Worm::_update(const UpdateState &us) {
     setPosition(position);
     if((abs(position.x - _game->getPlayer()->getPosition().x) <= 70) && (abs(position.y - _game->getPlayer()->getPosition().y) <= 70)){
         time_t _current = time(0);
-        if(_current >= _lastTimeAttack+2){
+        if(_current >= _lastTimeAttack + _attackSpeed){
             _lastTimeAttack = time(0);
             damage();
             //cout << "attacking" << endl;

@@ -48,7 +48,7 @@ void Creature::_dropContents() {
 
 
 void Creature::damage() {
-    _game->getPlayer()->updateHealth(-1);
+    _game->getPlayer()->updateHealth(-_attack);
 }
 
 
@@ -101,4 +101,16 @@ Vector2 Creature::moveMe() {
     if ( (cPos.y - nextSpot.y) > 4 ) moveDir.y = -1;
     
     return moveDir;
+}
+
+
+void Creature::_interact() {
+    int damage = _game->getPlayer()->getAttack();
+    _hp -= damage;
+    if (_hp == 0) {
+        // The creature is dead, hide it with an alpha tween.
+        _dead = true;
+        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
+        _dropContents();
+    }
 }

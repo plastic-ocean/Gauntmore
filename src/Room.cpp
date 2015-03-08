@@ -576,37 +576,40 @@ void Room::_drawOpenSpaces(int row, int column, bool isColumn) {
         chest->setLocation(Vector2(chestCol, chestRow));
         _units.push_back(chest);
     }
-    
-    int numOfAI = _getRand(3, 9);
-    for (int i = 0; i < numOfAI; i++) {
-        int rand = _getRand(1, 6);
-        int randRow = _getRand(roomRow, roomHeight) * 64;
-        int randCol = _getRand(roomCol, roomWidth) * 64;
-        
-        if(rand == 1){
-            spBat bat = new Bat;
-            bat->setLocation(Vector2(randCol, randRow));
-            _units.push_back(bat);
-        } else if(rand == 2){
-            spSnake snake = new Snake;
-            snake->setLocation(Vector2(randCol, randRow));
-            _units.push_back(snake);
-        } else if(rand == 3){
-            spWorm worm = new Worm;
-            worm->setLocation(Vector2(randCol, randRow));
-            _units.push_back(worm);
-        } else if(rand == 4){
-            spEyeball eyeball = new Eyeball;
-            eyeball->setLocation(Vector2(randCol, randRow));
-            _units.push_back(eyeball);
-        } else if(rand == 5){
-            spGhost ghost = new Ghost;
-            ghost->setLocation(Vector2(randCol, randRow));
-            _units.push_back(ghost);
-        } else if(rand == 6){
-            spSlime slime = new Slime;
-            slime->setLocation(Vector2(randCol, randRow));
-            _units.push_back(slime);
+
+    cout << "Units.size " << _units.size() << endl;
+    if(_units.size() > 0) {
+        int numOfAI = _getRand(3, 9);
+        for (int i = 0; i < numOfAI; i++) {
+            int rand = _getRand(1, 6);
+            int randRow = _getRand(roomRow, roomHeight) * 64;
+            int randCol = _getRand(roomCol, roomWidth) * 64;
+
+            if (rand == 1) {
+                spBat bat = new Bat;
+                bat->setLocation(Vector2(randCol, randRow));
+                _units.push_back(bat);
+            } else if (rand == 2) {
+                spSnake snake = new Snake;
+                snake->setLocation(Vector2(randCol, randRow));
+                _units.push_back(snake);
+            } else if (rand == 3) {
+                spWorm worm = new Worm;
+                worm->setLocation(Vector2(randCol, randRow));
+                _units.push_back(worm);
+            } else if (rand == 4) {
+                spEyeball eyeball = new Eyeball;
+                eyeball->setLocation(Vector2(randCol, randRow));
+                _units.push_back(eyeball);
+            } else if (rand == 5) {
+                spGhost ghost = new Ghost;
+                ghost->setLocation(Vector2(randCol, randRow));
+                _units.push_back(ghost);
+            } else if (rand == 6) {
+                spSlime slime = new Slime;
+                slime->setLocation(Vector2(randCol, randRow));
+                _units.push_back(slime);
+            }
         }
     }
     

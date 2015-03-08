@@ -8,11 +8,12 @@
  */
 Bat::Bat() {
     // Initialize the stats.
-    _hp = 3;
-    _attack = 1;
+    _hp = 2;
+    _attack = 2;
     _defense = 0;
-    _speed = 100;
-    
+    _speed = 150;
+    _attackSpeed = 2;
+    _lastTimeAttack = time(0);
 }
 
 /**
@@ -82,15 +83,16 @@ void Bat::move() {
 }
 
 
-void Bat::_interact() {
-    _hp--;
-    if (_hp == 0) {
-        // The creature is dead, hide it with an alpha tween.
-        _dead = true;
-        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-        _dropContents();
-    }
-}
+//void Bat::_interact() {
+//    int damage = static_cast<int>(ceil(_game->getPlayer()->getAttack() / _defense));
+//    _hp -= damage;
+//    if (_hp == 0) {
+//        // The creature is dead, hide it with an alpha tween.
+//        _dead = true;
+//        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
+//        _dropContents();
+//    }
+//}
 
 
 /**
@@ -113,7 +115,7 @@ void Bat::_update(const UpdateState &us) {
     setPosition(position);
     if((abs(position.x - _game->getPlayer()->getPosition().x) <= 70) && (abs(position.y - _game->getPlayer()->getPosition().y) <= 70)){
         time_t _current = time(0);
-        if(_current >= _lastTimeAttack+2){
+        if(_current >= _lastTimeAttack + _attackSpeed){
             _lastTimeAttack = time(0);
             damage();
             //cout << "attacking" << endl;

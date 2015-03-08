@@ -8,10 +8,12 @@
  */
 Eyeball::Eyeball() {
     // Initialize the stats.
-    _hp = 3;
-    _attack = 1;
+    _hp = 10;
+    _attack = 6;
     _defense = 0;
     _speed = 100;
+    _attackSpeed = 3;
+    _lastTimeAttack = time(0);
     
 }
 
@@ -36,10 +38,6 @@ SDL_Rect Eyeball::getBounds() {
  */
 bool Eyeball::isPotion() {
     return false;
-}
-
-void Eyeball::damage() {
-    
 }
 
 void Eyeball::addSprite() {
@@ -67,30 +65,19 @@ void Eyeball::move() {
     //_checkTween();
     switch (_facing) {
         case up:
-            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("eyeball_up")), 500, -1);
+            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("eyeball_down")), 500, -1);
             break;
         case right:
             _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("eyeball_right")), 500, -1);
             break;
         case down:
-            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("eyeball_down")), 500, -1);
+            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("eyeball_up")), 500, -1);
             break;
         case left:
             _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("eyeball_left")), 500, -1);
             break;
         default:
             break;
-    }
-}
-
-
-void Eyeball::_interact() {
-    _hp--;
-    if (_hp == 0) {
-        // The creature is dead, hide it with an alpha tween.
-        _dead = true;
-        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-        _dropContents();
     }
 }
 
@@ -115,7 +102,7 @@ void Eyeball::_update(const UpdateState &us) {
     setPosition(position);
     if((abs(position.x - _game->getPlayer()->getPosition().x) <= 70) && (abs(position.y - _game->getPlayer()->getPosition().y) <= 70)){
         time_t _current = time(0);
-        if(_current >= _lastTimeAttack+2){
+        if(_current >= _lastTimeAttack + _attackSpeed){
             _lastTimeAttack = time(0);
             damage();
             //cout << "attacking" << endl;

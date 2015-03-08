@@ -8,11 +8,12 @@
  */
 Ghost::Ghost() {
     // Initialize the stats.
-    _hp = 3;
-    _attack = 1;
+    _hp = 15;
+    _attack = 4;
     _defense = 0;
-    _speed = 100;
-    
+    _speed = 90;
+    _attackSpeed = 3;
+    _lastTimeAttack = time(0);
 }
 
 /**
@@ -38,9 +39,6 @@ bool Ghost::isPotion() {
     return false;
 }
 
-void Ghost::damage() {
-    
-}
 
 void Ghost::addSprite() {
     // Add sprite to the game scene view.
@@ -68,30 +66,19 @@ void Ghost::move() {
     //_checkTween();
     switch (_facing) {
         case up:
-            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("ghost_up")), 500, -1);
+            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("ghost_down")), 500, -1);
             break;
         case right:
             _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("ghost_right")), 500, -1);
             break;
         case down:
-            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("ghost_down")), 500, -1);
+            _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("ghost_up")), 500, -1);
             break;
         case left:
             _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("ghost_left")), 500, -1);
             break;
         default:
             break;
-    }
-}
-
-
-void Ghost::_interact() {
-    _hp--;
-    if (_hp == 0) {
-        // The creature is dead, hide it with an alpha tween.
-        _dead = true;
-        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-        _dropContents();
     }
 }
 

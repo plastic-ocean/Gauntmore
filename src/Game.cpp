@@ -45,8 +45,7 @@ Game::Game():_isPaused(false), _isFirstRun(true) {
     
     // Size is the number of tiles
     int size = 13;
-    
-    
+
     _things.push_back(new Armor(2));
     _things.push_back(new Armor(3));
     _things.push_back(new Weapon(2));
@@ -83,7 +82,7 @@ Game::Game():_isPaused(false), _isFirstRun(true) {
 
     
     // Create player
-    _player = new Player(10, 1, 1);
+    _player = new Player(20, 1, 1);
     _player->init(_getEntrance(), this);
     _map->getRoom()->getUnits()->push_back(_player);
 
@@ -212,7 +211,7 @@ bool Game::isExit(Vector2 position) {
 *
 * @num is the value to update by.
 */
-void Game::updateHealth(float value) {
+void Game::updateHealth(double value) {
     _healthBar->updateHealth(value);
 }
 
@@ -271,6 +270,17 @@ void Game::killPlayer() {
 void Game::createNewGame() {
     // Size is the number of tiles
     int size = 13;
+
+    _things.push_back(new Armor(2));
+    _things.push_back(new Armor(3));
+    _things.push_back(new Weapon(2));
+    _things.push_back(new Weapon(3));
+
+    for (int i = 0; i < 38; i++) {
+        _things.push_back(new Gold);
+        _things.push_back(new Potion);
+
+    }
     
     // Create map
     _map = new Map(size);
@@ -294,6 +304,11 @@ void Game::createNewGame() {
     _player = new Player(10, 1, 1);
     _player->init(_getEntrance(), this);
     _map->getRoom()->getUnits()->push_back(_player);
+
+    setPaused(false);
+
+//    // Keyboard handler
+//    _move = new KeyboardInput(this);
     
     // Health bar
     _healthBar = new HealthBar(this);
@@ -303,14 +318,13 @@ void Game::createNewGame() {
     
     // Armor Count
     _armorCount = new ArmorCount(this);
-    
-    setPaused(false);
 }
 
 
 spPlayer Game::getPlayer() {
     return _player;
 }
+
 
 spMap Game::getMap() {
     return _map;

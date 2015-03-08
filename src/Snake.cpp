@@ -11,11 +11,11 @@
 Snake::Snake() {
     // Initialize the stats.
     _hp = 3;
-    _attack = 1;
+    _attack = 3;
     _defense = 0;
-    _speed = 100;
+    _speed = 70;
+    _attackSpeed = 2;
     _lastTimeAttack = time(0);
-    
     
 }
 
@@ -86,17 +86,6 @@ void Snake::move() {
 }
 
 
-void Snake::_interact() {
-    _hp--;
-    if (_hp == 0) {
-        // The creature is dead, hide it with an alpha tween.
-        _dead = true;
-        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-        _dropContents();
-    }
-}
-
-
 /**
  * Updates the creature every frame. Called by Unit::update.
  *
@@ -117,7 +106,7 @@ void Snake::_update(const UpdateState &us) {
     setPosition(position);
     if((abs(position.x - _game->getPlayer()->getPosition().x) <= 70) && (abs(position.y - _game->getPlayer()->getPosition().y) <= 70)){
         time_t _current = time(0);
-        if(_current >= _lastTimeAttack+2){
+        if(_current >= _lastTimeAttack + _attackSpeed){
             _lastTimeAttack = time(0);
             damage();
             //cout << "attacking" << endl;

@@ -21,11 +21,6 @@ public:
     virtual SDL_Rect getBounds();
     
     /**
-     *  Method that does damage to the Player.
-     */
-    virtual void damage();
-    
-    /**
      *  Adds Sprite and attaches it to the game.
      */
     virtual void addSprite();
@@ -47,11 +42,6 @@ private:
      * Initializes a Slime position and sprite. Called by Unit's init() method.
      */
     void _init();
-    
-    /**
-     * Interaction method for Slime.
-     */
-    void _interact();
     
     /**
      * Updates the Chest every frame. Called by Units update() method.
