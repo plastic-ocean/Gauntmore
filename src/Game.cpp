@@ -49,9 +49,7 @@ Game::Game():_isPaused(false), _isFirstRun(true) {
     _things.push_back(new Weapon(2));
     _things.push_back(new Weapon(3));
     
-    int i = 0;
-    
-    for (i = 0; i < 38; i++) {
+    for (int i = 0; i < 38; i++) {
         _things.push_back(new Gold);
         _things.push_back(new Potion);
         
@@ -118,7 +116,6 @@ void Game::switchRoom(int edge) {
     // Change to a new room in the maze.
     _map->changeRoom(edge);
     _renderMap();
-    _createTiles();
 
     // Get player entrance position
     int playerCol = 1;
@@ -168,6 +165,8 @@ void Game::switchRoom(int edge) {
     _goldCount->render();
     _armorCount->render();
     _weaponCount->render();
+
+    _createTiles();
 }
 
 
@@ -284,9 +283,9 @@ void Game::createNewGame() {
         }
     }
     
-    _slime = new Slime();
-    _slime->init(Vector2((_map->getRoom()->getSize() / 2) * 64, (_map->getRoom()->getSize() / 2) * 64), this);
-    _map->getRoom()->getUnits()->push_back(_slime);
+//    _slime = new Slime();
+//    _slime->init(Vector2((_map->getRoom()->getSize() / 2) * 64, (_map->getRoom()->getSize() / 2) * 64), this);
+//    _map->getRoom()->getUnits()->push_back(_slime);
     
     
     // Create player
@@ -358,8 +357,6 @@ list<spThing>* Game::getContentsList() {
  * @us is the UpdateStatus sent by the global update method.
  */
 void Game::doUpdate(const UpdateState &us) {
-    bool killedUnit = false;
-    
     if (isFirstRun()) {
         startGame();
     }
@@ -372,7 +369,6 @@ void Game::doUpdate(const UpdateState &us) {
         if (unit->isDead()) {
             // If it is dead remove it from list.
             i = units->erase(i);
-            killedUnit = true;
         } else {
             ++i;
         }
@@ -381,10 +377,8 @@ void Game::doUpdate(const UpdateState &us) {
     if (_player->isDead()) {
         killPlayer();
     }
-    
-    if (killedUnit) {
-        _createTiles();
-    }
+
+    _createTiles();
 }
 
 
@@ -482,8 +476,10 @@ void Game::_createTiles() {
     for (list<spUnit>::iterator it = units->begin(); it != units->end(); ++it) {
         spUnit unit = *it;
         SDL_Rect unitRect = SDL_Rect();
-        unitRect.x = unit->getLocation().x + 20;
-        unitRect.y = unit->getLocation().y + 15;
+//        cout << unit->getType() << " x: " << unit->getPosition().x << " y: " << unit->getPosition().y << endl;
+
+        unitRect.x = unit->getPosition().x + 20;
+        unitRect.y = unit->getPosition().y + 15;
         unitRect.h = 30;
         unitRect.w = 20;
         if (unit->getType() != "player" && !unit->isPotion()) {
