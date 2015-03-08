@@ -8,9 +8,6 @@ add_definitions(${OXYGINE_DEFINITIONS})
 include_directories(${OXYGINE_INCLUDE_DIRS})
 link_directories(${OXYGINE_LIBRARY_DIRS})
 
-add_subdirectory(oxygine-sound/ oxygine-sound)
-include_directories(${OXYGINESOUND_INCLUDE_DIRS})
-
 add_executable(gauntmore
 src/Game.cpp src/Game.h
 src/GameScene.cpp src/GameScene.h
@@ -71,4 +68,4 @@ src/tmx/TmxMapTile.h
 src/tmx/Tmx.h
 )
 
-target_link_libraries(gauntmore ${OXYGINE_CORE_LIBS} ${OXYGINESOUND_LIBS})
+target_link_libraries(gauntmore ${OXYGINE_CORE_LIBS})
