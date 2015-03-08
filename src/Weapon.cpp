@@ -56,6 +56,14 @@ void Weapon::addSprite() {
 }
 
 /**
+ *  Method to determine whether unit is a Potion.
+ *  @returns false since the current unit is Weapon.
+ */
+bool Weapon::isPotion() {
+    return false;
+}
+
+/**
  * Initializes a Weapon position and sprite. Called by Unit's init() method.
  */
 void Weapon::_init() {

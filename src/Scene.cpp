@@ -1,5 +1,5 @@
 /**
- * This class is from an oxygine example project.
+ * This class is from an oxygine example progect.
  */
 
 #include "Scene.h"

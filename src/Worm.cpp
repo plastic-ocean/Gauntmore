@@ -8,8 +8,8 @@
  */
 Worm::Worm() {
     // Initialize the stats.
-    _hp = 7;
-    _attack = 4;
+    _hp = 3;
+    _attack = 1;
     _defense = 0;
     _speed = 100;
     
@@ -29,6 +29,19 @@ SDL_Rect Worm::getBounds() {
     return _bounds;
 }
 
+
+/**
+ *
+ *
+ */
+bool Worm::isPotion() {
+    return false;
+}
+
+void Worm::damage() {
+    
+}
+
 void Worm::addSprite() {
     // Add sprite to the game scene view.
     _sprite = new Sprite;
@@ -37,6 +50,17 @@ void Worm::addSprite() {
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
     move();
 }
+
+/**
+ * Initializes a creatures position and sprite. Called by Unit's init() method.
+ */
+void Worm::_init() {
+    addSprite();
+    _setContents();
+    findPath.setGame(_game);
+}
+
+
 
 
 /**
@@ -63,13 +87,14 @@ void Worm::move() {
 }
 
 
-/**
- * Initializes a creatures position and sprite. Called by Unit's init() method.
- */
-void Worm::_init() {
-    addSprite();
-    _setContents();
-    _findPath.setGame(_game);
+void Worm::_interact() {
+    _hp--;
+    if (_hp == 0) {
+        // The creature is dead, hide it with an alpha tween.
+        _dead = true;
+        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
+        _dropContents();
+    }
 }
 
 
@@ -80,7 +105,7 @@ void Worm::_init() {
  */
 void Worm::_update(const UpdateState &us) {
     
-    Vector2 direction = _moveMe();
+    Vector2 direction = moveMe();
     Vector2 position = getPosition();
     
     Facing prevFacing = _facing;
@@ -95,7 +120,7 @@ void Worm::_update(const UpdateState &us) {
         time_t _current = time(0);
         if(_current >= _lastTimeAttack+2){
             _lastTimeAttack = time(0);
-            attack();
+            damage();
             //cout << "attacking" << endl;
         }
     }

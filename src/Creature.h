@@ -16,38 +16,47 @@ public:
     Creature();
     
     enum Facing {up, right, down, left};
-
-    /**
-     * Gets the Creature's facing.
-     */
+    
     Facing getFacing(Vector2 direction);
-
-    /**
-     * Attacks the player.
-     */
-    virtual void attack();
+    
+    virtual void damage();
+    
+//    Facing getFacing() {
+//        return _facing;
+//    }
+//    
+//    void setFacing(Facing facing) {
+//        _facing = facing;
+//    }
+    
+//    virtual void attack() = 0;
+//    
+//    virtual void move(Facing facing) = 0;
 
 protected:
     time_t _lastTimeAttack;
     spThing _contents;
 
-    PathFinder _findPath;
-    CreatureMover _moveQ;
-
-//    bool _alerted = false;
+    PathFinder findPath;
+    CreatureMover moveQ;
 
     /**
-     * Moves the creature.
+     *
+     *
      */
-    Vector2 _moveMe();
+    bool _alerted = false;
+    
+    Vector2 moveMe();
     
     /**
-     * Sets the creature's item, if it has one.
+     *
+     *
      */
     void _setContents();
     
     /**
-     * Drops the creature's item, if it has one.
+     *
+     *
      */
     void _dropContents();
     
@@ -59,7 +68,7 @@ protected:
     /**
      * Reduces the creature's hit points.
      */
-    virtual void _interact();
+    virtual void _interact() = 0;
     
     /**
      * Updates the creature every frame. Called by Units update() method.

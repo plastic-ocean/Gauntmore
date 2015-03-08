@@ -25,7 +25,7 @@ public:
      * @w is the sprite's width.
      * @return: ture if there is a collision. false if not.
      */
-    bool detect(std::vector<SDL_Rect> tiles, int x, int y, int h, int w);
+    bool detectWalls(std::vector<SDL_Rect> tiles, int x, int y, int h, int w);
 
     /**
      * Detects collisions between a sprite and potions. Used to pickup potions
@@ -37,7 +37,7 @@ public:
      * @w is the sprite's width.
      * @return: ture if there is a collision. false if not.
      */
-    bool detectPotions(std::list<spUnit> *units, int x, int y, int h, int w);
+    bool detectUnits(std::list<spUnit> *units, int x, int y, int h, int w);
 
 private:
 

@@ -55,17 +55,12 @@ Player::Facing Player::getFacing() {
  */
 bool Player::updateHealth(int health) {
     bool isUpdated = false;
-
-    // Reduce damage by defense (armor as damage reduction)
-    if (health < 0) {
-        health += _defense;
-    }
     
     if (_hp + health < _maxHealth) {
         _hp += health;
         
         // Convert health to a decimal percentage for the health bar.
-        double healthPercent = health * 0.05;
+        float healthPercent = health * 0.1;
         if (healthPercent > 1.0) {
             healthPercent = 1.0;
         }
@@ -84,8 +79,6 @@ bool Player::updateHealth(int health) {
         _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
         _dead = true;
     }
-
-    cout << "Player HP: " << _hp << endl;
     
     return isUpdated;
 }
@@ -101,7 +94,7 @@ bool Player::updateHealth(int health) {
  * Gets the position of the user and the unit, takes the difference of
  * their positions and determines if we are in interacting distance.
  */
-void Player::act() {
+void Player::interact() {
     attack();
     
     Vector2 playerPosition = getPosition();
@@ -116,7 +109,7 @@ void Player::act() {
                 rect.y = static_cast<int>(playerPosition.y - 16);
                 rect.h = 16;
                 rect.w = 64;
-                if (_isValidAttack(rect, unit)) {
+                if (_isCollision(rect, unit)) {
                     unit->interact();
                 }
                 break;
@@ -125,7 +118,7 @@ void Player::act() {
                 rect.y = static_cast<int>(playerPosition.y);
                 rect.h = 64;
                 rect.w = 64;
-                if (_isValidAttack(rect, unit)) {
+                if (_isCollision(rect, unit)) {
                     unit->interact();
                 }
                 break;
@@ -134,7 +127,7 @@ void Player::act() {
                 rect.y = static_cast<int>(playerPosition.y + 64);
                 rect.h = 16;
                 rect.w = 64;
-                if (_isValidAttack(rect, unit)) {
+                if (_isCollision(rect, unit)) {
                     unit->interact();
                 }
                 break;
@@ -143,7 +136,7 @@ void Player::act() {
                 rect.y = static_cast<int>(playerPosition.y);
                 rect.h = 64;
                 rect.w = 16;
-                if (_isValidAttack(rect, unit)) {
+                if (_isCollision(rect, unit)) {
                     unit->interact();
                 }
                 break;
@@ -218,6 +211,24 @@ void Player::attack() {
             break;
     }
 }
+
+
+int Player::getAttack(){
+    return _attack;
+};
+
+
+void Player::setAttack(int attack){
+    _attack = attack;
+};
+
+int Player::getDefense(){
+    return _defense;
+};
+
+void Player::setDefense(int defense){
+    _defense += defense;
+};
 
 
 /**
@@ -321,6 +332,11 @@ bool Player::isDamaged() {
 }
 
 
+bool Player::isPotion() {
+    return false;
+}
+
+
 /**
  * Initializes the player's position and sprite. Called by Unit's init() method.
  */
@@ -352,12 +368,11 @@ void Player::_update(const UpdateState &us) {
 
 /**
  * Checks for a collision between the players rect and the unit's rect.
- * Tests if the Player is in range to attack a Creature.
  *
  * @rect is an SDL_Rect for the player.
  * @unit is the unit to check against.
  */
-bool Player::_isValidAttack(SDL_Rect thisRect, spUnit unit) {
+bool Player::_isCollision(SDL_Rect thisRect, spUnit unit) {
     bool isCollision = false;
     SDL_Rect otherRect = unit->getBounds();
     const SDL_Rect *playerRect = &thisRect;
@@ -385,15 +400,15 @@ Vector2 Player::_correctDirection(Vector2 position, Vector2 direction) {
     int h = tileSize - 16;
     int w = tileSize - 24;
 
-    if (_collisionDetector->detect(_game->getTiles(), newX + 10, static_cast<int>(position.y + 14), h, w)) {
+    if (_collisionDetector->detectWalls(_game->getTiles(), newX + 10, static_cast<int>(position.y + 14), h, w)) {
         direction.x = 0;
     }
-    if (_collisionDetector->detect(_game->getTiles(), static_cast<int>(position.x + 10), newY + 14, h, w)) {
+    if (_collisionDetector->detectWalls(_game->getTiles(), static_cast<int>(position.x + 10), newY + 14, h, w)) {
         direction.y = 0;
     }
 
     // Detect potions for pickup
-    _collisionDetector->detectPotions(_game->getMap()->getRoom()->getUnits(), newX + 10, static_cast<int>(position.y + 14), h, w);
+    _collisionDetector->detectUnits(_game->getMap()->getRoom()->getUnits(), newX + 10, static_cast<int>(position.y + 14), h, w);
 
 
     return direction;

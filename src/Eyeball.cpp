@@ -8,8 +8,8 @@
  */
 Eyeball::Eyeball() {
     // Initialize the stats.
-    _hp = 6;
-    _attack = 3;
+    _hp = 3;
+    _attack = 1;
     _defense = 0;
     _speed = 100;
     
@@ -29,6 +29,19 @@ SDL_Rect Eyeball::getBounds() {
     return _bounds;
 }
 
+
+/**
+ *
+ *
+ */
+bool Eyeball::isPotion() {
+    return false;
+}
+
+void Eyeball::damage() {
+    
+}
+
 void Eyeball::addSprite() {
     // Add sprite to the game scene view.
     _sprite = new Sprite;
@@ -36,6 +49,15 @@ void Eyeball::addSprite() {
     _sprite->attachTo(_view);
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
     move();
+}
+
+/**
+ * Initializes a creatures position and sprite. Called by Unit's init() method.
+ */
+void Eyeball::_init() {
+    addSprite();
+    _setContents();
+    findPath.setGame(_game);
 }
 
 /**
@@ -62,13 +84,14 @@ void Eyeball::move() {
 }
 
 
-/**
- * Initializes a creatures position and sprite. Called by Unit's init() method.
- */
-void Eyeball::_init() {
-    addSprite();
-    _setContents();
-    _findPath.setGame(_game);
+void Eyeball::_interact() {
+    _hp--;
+    if (_hp == 0) {
+        // The creature is dead, hide it with an alpha tween.
+        _dead = true;
+        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
+        _dropContents();
+    }
 }
 
 
@@ -78,23 +101,25 @@ void Eyeball::_init() {
  * @us is the UpdateStatus sent by Unit's update method.
  */
 void Eyeball::_update(const UpdateState &us) {
-    Vector2 direction = _moveMe();
+    
+    Vector2 direction = moveMe();
     Vector2 position = getPosition();
     
     Facing prevFacing = _facing;
     _facing = getFacing(direction);
-    if (_facing != prevFacing) {
+    if(_facing != prevFacing){
         move();
     }
     
     position += direction * (us.dt / 1000.0f) * _speed;
     setPosition(position);
-    if((abs(position.x - _game->getPlayer()->getPosition().x) <= 70) && (abs(position.y - _game->getPlayer()->getPosition().y) <= 70)) {
+    if((abs(position.x - _game->getPlayer()->getPosition().x) <= 70) && (abs(position.y - _game->getPlayer()->getPosition().y) <= 70)){
         time_t _current = time(0);
-        if(_current >= _lastTimeAttack + 2){
+        if(_current >= _lastTimeAttack+2){
             _lastTimeAttack = time(0);
-            attack();
+            damage();
             //cout << "attacking" << endl;
         }
     }
+    
 }

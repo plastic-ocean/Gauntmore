@@ -11,16 +11,16 @@ CollisionDetector::CollisionDetector() {}
 
 
 /**
- * Detects collisions between a sprite and other objects in the game.
+ * Detects collisions between a sprite and the walls.
  *
- * @tiles is the list of walls and Units.
+ * @tiles is the tiles/Things list.
  * @x is the sprite's x coordinate.
  * @y is the sprite's y coordinate.
  * @h is the sprite's height.
  * @w is the sprite's width.
  * @return true if there is a collision, false if not.
  */
-bool CollisionDetector::detect(vector<SDL_Rect> tiles, int x, int y, int h, int w) {
+bool CollisionDetector::detectWalls(vector<SDL_Rect> tiles, int x, int y, int h, int w) {
     bool isCollision = false;
     SDL_Rect spriteRect;
     spriteRect.x = x;
@@ -42,16 +42,16 @@ bool CollisionDetector::detect(vector<SDL_Rect> tiles, int x, int y, int h, int 
 
 
 /**
- * Detects collisions between a sprite and potions. Used to pickup potions.
+ * Detects collisions between a sprite and potions. Used to pickup potions
  *
- * @units is the list of units.
+ * @tiles is the list of units.
  * @x is the sprite's x coordinate.
  * @y is the sprite's y coordinate.
  * @h is the sprite's height.
  * @w is the sprite's width.
  * @return true if there is a collision, false if not.
  */
-bool CollisionDetector::detectPotions(list<spUnit> *units, int x, int y, int h, int w) {
+bool CollisionDetector::detectUnits(list<spUnit> *units, int x, int y, int h, int w) {
     bool isCollision = false;
     SDL_Rect spriteRect;
     spriteRect.x = x;

@@ -30,6 +30,12 @@ public:
      */
     virtual void addSprite();
     
+    /**
+     *  Method to determine whether unit is a Potion.
+     *  @return: false since the current unit is a Armor.
+     */
+    virtual bool isPotion();
+    
 private:
     int _value;
     int _armorType;

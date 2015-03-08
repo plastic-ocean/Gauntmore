@@ -6,7 +6,7 @@
 /**
  * Constructor.
  */
-Unit::Unit():_game(0), _dead(false), _isPotion(false) {}
+Unit::Unit():_game(0), _dead(false) {}
 
 
 /**
@@ -16,6 +16,7 @@ Unit::Unit():_game(0), _dead(false), _isPotion(false) {}
  * @game is the game.
  */
 void Unit::init(const Vector2 &pos, Game *game) {
+	// Initialize the game.
 	_game = game;
     
     attachUnit();
@@ -26,15 +27,18 @@ void Unit::init(const Vector2 &pos, Game *game) {
 }
 
 /**
- * Attach the Unit (as an Actor) to the game.
+ *  
+ *
  */
 void Unit::attachUnit() {
+    // Attach the Unit (as an Actor) to the game.
     _view = new Actor;
     _view->attachTo(_game);
 }
 
 /**
- * Detach the Unit from the game.
+ *
+ *
  */
 void Unit::detachUnit() {
     _sprite->detach();
@@ -44,8 +48,9 @@ void Unit::detachUnit() {
 
 
 /**
- * Allows other Units to interact with this Unit.
-
+ *  Interaction method for Unit:
+ *  Iterates thru list of units and determines which the player is facing.
+ *  Then calls that objects interact method.
  */
 void Unit::interact() {
     _interact();
@@ -61,11 +66,6 @@ void Unit::update(const UpdateState &us) {
         _update(us);
     }
 }
-
-
-/**
- * Getters and setters
- */
 
 const Vector2& Unit::getPosition() {
     return _view->getPosition();
@@ -95,17 +95,9 @@ int Unit::getAttack() {
     return _attack;
 }
 
-void Unit::setAttack(int attack){
-    _attack = attack;
-};
-
 int Unit::getDefense() {
     return _defense;
 }
-
-void Unit::setDefense(int defense){
-    _defense += defense;
-};
 
 void Unit::setLocation(Vector2 location) {
     _location = location;
@@ -121,8 +113,4 @@ SDL_Rect Unit::getRect() {
 
 void Unit::setRect(SDL_Rect rect) {
     _rect = rect;
-}
-
-bool Unit::isPotion() {
-    return _isPotion;
 }

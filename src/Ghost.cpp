@@ -8,9 +8,9 @@
  */
 Ghost::Ghost() {
     // Initialize the stats.
-    _hp = 8;
-    _attack = 3;
-    _defense = 1;
+    _hp = 3;
+    _attack = 1;
+    _defense = 0;
     _speed = 100;
     
 }
@@ -29,6 +29,19 @@ SDL_Rect Ghost::getBounds() {
     return _bounds;
 }
 
+
+/**
+ *
+ *
+ */
+bool Ghost::isPotion() {
+    return false;
+}
+
+void Ghost::damage() {
+    
+}
+
 void Ghost::addSprite() {
     // Add sprite to the game scene view.
     _sprite = new Sprite;
@@ -36,6 +49,15 @@ void Ghost::addSprite() {
     _sprite->attachTo(_view);
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
     move();
+}
+
+/**
+ * Initializes a creatures position and sprite. Called by Unit's init() method.
+ */
+void Ghost::_init() {
+    addSprite();
+    _setContents();
+    findPath.setGame(_game);
 }
 
 
@@ -63,13 +85,14 @@ void Ghost::move() {
 }
 
 
-/**
- * Initializes a creatures position and sprite. Called by Unit's init() method.
- */
-void Ghost::_init() {
-    addSprite();
-    _setContents();
-    _findPath.setGame(_game);
+void Ghost::_interact() {
+    _hp--;
+    if (_hp == 0) {
+        // The creature is dead, hide it with an alpha tween.
+        _dead = true;
+        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
+        _dropContents();
+    }
 }
 
 
@@ -79,7 +102,8 @@ void Ghost::_init() {
  * @us is the UpdateStatus sent by Unit's update method.
  */
 void Ghost::_update(const UpdateState &us) {
-    Vector2 direction = _moveMe();
+    
+    Vector2 direction = moveMe();
     Vector2 position = getPosition();
     
     Facing prevFacing = _facing;
@@ -92,9 +116,9 @@ void Ghost::_update(const UpdateState &us) {
     setPosition(position);
     if((abs(position.x - _game->getPlayer()->getPosition().x) <= 70) && (abs(position.y - _game->getPlayer()->getPosition().y) <= 70)){
         time_t _current = time(0);
-        if(_current >= _lastTimeAttack + 2){
+        if(_current >= _lastTimeAttack+2){
             _lastTimeAttack = time(0);
-            attack();
+            damage();
             //cout << "attacking" << endl;
         }
     }

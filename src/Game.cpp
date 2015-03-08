@@ -46,6 +46,7 @@ Game::Game():_isPaused(false), _isFirstRun(true) {
     // Size is the number of tiles
     int size = 13;
     
+    
     _things.push_back(new Armor(2));
     _things.push_back(new Armor(3));
     _things.push_back(new Weapon(2));
@@ -54,7 +55,13 @@ Game::Game():_isPaused(false), _isFirstRun(true) {
     for (int i = 0; i < 38; i++) {
         _things.push_back(new Gold);
         _things.push_back(new Potion);
+        
     }
+    
+//    cout << "Things:" << endl;
+//    for (spThing thing : _things) {
+//        cout << thing->getType() << endl;
+//    }
     
     // Create map
     _map = new Map(size);
@@ -73,9 +80,10 @@ Game::Game():_isPaused(false), _isFirstRun(true) {
 //    _snake = new Snake();
 //    _snake->init(Vector2((_map->getRoom()->getSize() / 2) * 64, (_map->getRoom()->getSize() / 2) * 64), this);
 //    _map->getRoom()->getUnits()->push_back(_snake);
+
     
     // Create player
-    _player = new Player(20, 1, 1);
+    _player = new Player(10, 1, 1);
     _player->init(_getEntrance(), this);
     _map->getRoom()->getUnits()->push_back(_player);
 
@@ -204,7 +212,7 @@ bool Game::isExit(Vector2 position) {
 *
 * @num is the value to update by.
 */
-void Game::updateHealth(double value) {
+void Game::updateHealth(float value) {
     _healthBar->updateHealth(value);
 }
 
@@ -414,9 +422,9 @@ void Game::_renderMap() {
  */
 void Game::_createTiles() {
     _tiles.clear();
-    
-    // Add walls to the tiles list.
+    // Build a vector of rectangles to represent the collidable tiles.
     for (int i = 0; i < _tileMap->GetNumLayers(); ++i) {
+        // Get a layer.
         const Tmx::Layer *layer = _tileMap->GetLayer(i);
         for (int x = 0; x < layer->GetWidth(); ++x) {
             for (int y = 0; y < layer->GetHeight(); ++y) {

@@ -56,6 +56,14 @@ void Armor::addSprite() {
 }
 
 /**
+ *  Method to determine whether unit is a Potion.
+ *  @returns false since the current unit is Gold.
+ */
+bool Armor::isPotion() {
+    return false;
+}
+
+/**
  * Initializes a Gold position and sprite. Called by Unit's init() method.
  */
 void Armor::_init() {

@@ -90,7 +90,7 @@ void PathFinder::scanSurround( PathNode *node ) {
                 if (!inClosedList(nodeNew) ) {
 
                     if (flip < 0) {//Cardinal collision detection
-                    if ( !coll.detect(_game->getTiles(), temp.x, temp.y, 50, 50) ) {
+                    if ( !coll.detectWalls(_game->getTiles(), temp.x, temp.y, 50, 50) ) {
                     openList.insertNode( &nodeNew );
                     }
                     } else {//diagonal collision detection

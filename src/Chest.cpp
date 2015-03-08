@@ -13,11 +13,14 @@
 #include <list>
 
 
+
 /**
  * Constructor
  */
 Chest::Chest():_isOpen(false), _contents(0) {
     setType("chest");
+
+
 }
 
 
@@ -35,7 +38,6 @@ SDL_Rect Chest::getBounds(){
     return _bounds;
 }
 
-
 /**
  * Adds sprite and attachs it to the game.
  */
@@ -46,6 +48,13 @@ void Chest::addSprite() {
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
 }
 
+/**
+ *  Method to determine whether unit is a potion.
+ *  @returns false since the current unit is a chest.
+ */
+bool Chest::isPotion() {
+    return false;
+}
 
 /**
  * Initializes a Chest position and sprite. Called by Unit's init() method.
@@ -54,7 +63,6 @@ void Chest::_init() {
     addSprite();
     _setContents();
 }
-
 
 /**
  * Interaction method for Chest.
@@ -77,11 +85,16 @@ void Chest::_interact() {
  *  Sets the contents of a chest to either a Potion or Gold.
  */
 void Chest::_setContents() {
+    
+    
     list<spThing> *_things = _game->getContentsList();
-    int randNum = rand() % static_cast<int>(_things->size());
+    
+    int randNum = rand() % _things->size();
+    
     int j = 0;
     
     for (list<spThing>::iterator i = _things->begin(); i != _things->end(); ++i) {
+        
         j++;
         
         if (j == randNum) {
@@ -98,4 +111,5 @@ void Chest::_setContents() {
  *
  * @us is the UpdateStatus sent by Unit's update method.
  */
-void Chest::_update(const UpdateState &us) {}
+void Chest::_update(const UpdateState &us) {
+}

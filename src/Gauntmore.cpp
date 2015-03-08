@@ -15,7 +15,7 @@ void Gauntmore::init() {
 //    SoundSystem::instance = SoundSystem::create();
 //    SoundSystem::instance->init(16);
 //    SoundPlayer::initialize();
-
+//
     // Load resources.
     loadResources();
     
@@ -27,7 +27,6 @@ void Gauntmore::init() {
         
     // Setup music player and play music.
 //    _musicPlayer.play(resSounds.get("music"));
-
     GameScene::instance->show();
 }
 

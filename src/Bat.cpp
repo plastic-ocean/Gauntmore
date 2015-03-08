@@ -8,8 +8,8 @@
  */
 Bat::Bat() {
     // Initialize the stats.
-    _hp = 2;
-    _attack = 2;
+    _hp = 3;
+    _attack = 1;
     _defense = 0;
     _speed = 100;
     
@@ -30,6 +30,15 @@ SDL_Rect Bat::getBounds() {
 }
 
 
+/**
+ *
+ *
+ */
+bool Bat::isPotion() {
+    return false;
+}
+
+
 void Bat::addSprite() {
     // Add sprite to the game scene view.
     _sprite = new Sprite;
@@ -37,6 +46,15 @@ void Bat::addSprite() {
     _sprite->attachTo(_view);
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
     move();
+}
+
+/**
+ * Initializes a creatures position and sprite. Called by Unit's init() method.
+ */
+void Bat::_init() {
+    addSprite();
+    _setContents();
+    findPath.setGame(_game);
 }
 
 
@@ -64,13 +82,14 @@ void Bat::move() {
 }
 
 
-/**
- * Initializes a creatures position and sprite. Called by Unit's init() method.
- */
-void Bat::_init() {
-    addSprite();
-    _setContents();
-    _findPath.setGame(_game);
+void Bat::_interact() {
+    _hp--;
+    if (_hp == 0) {
+        // The creature is dead, hide it with an alpha tween.
+        _dead = true;
+        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
+        _dropContents();
+    }
 }
 
 
@@ -80,7 +99,8 @@ void Bat::_init() {
  * @us is the UpdateStatus sent by Unit's update method.
  */
 void Bat::_update(const UpdateState &us) {
-    Vector2 direction = _moveMe();
+    
+    Vector2 direction = moveMe();
     Vector2 position = getPosition();
     
     Facing prevFacing = _facing;
@@ -95,7 +115,7 @@ void Bat::_update(const UpdateState &us) {
         time_t _current = time(0);
         if(_current >= _lastTimeAttack+2){
             _lastTimeAttack = time(0);
-            attack();
+            damage();
             //cout << "attacking" << endl;
         }
     }
