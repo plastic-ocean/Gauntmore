@@ -69,36 +69,8 @@ void Creature::_dropContents() {
 
 
 Vector2 Creature::moveMe() {
-    Vector2 moveDir = {0,0};
-//    if (!_alerted) return moveDir;
-    
-    Vector2 pPos = _game->getPlayer()->getPosition();//player's position
-    Vector2 cPos = getPosition();//creature's position
-    
-    
-    
-    if ( abs(pPos.x - cPos.x) <= 50 && abs(pPos.y - cPos.y) <= 50 ) {
-        return moveDir;//you are less than 50 pixels away, do nothing
-    }
-    //otherwise, check the movement Queue
-    if ( moveQ.isEmpty() ) {
-        moveQ.updatePath(findPath.aStar(cPos, pPos) );
-    }
-    //if the Q is NOT empty
-        Vector2 nextSpot = moveQ.peekNext();//look at where you are going
-        if ( abs(cPos.x - nextSpot.x) <= 5 && abs(cPos.y - nextSpot.y) <= 5) {
-            moveQ.updatePath(findPath.aStar(nextSpot, pPos) );
-        }
-            nextSpot = moveQ.peekNext();//start moving to the next spot
-    
-    
-    if ( (cPos.x - nextSpot.x) < -4 ) moveDir.x = 1;
-     if ( (cPos.x - nextSpot.x) > 4 ) moveDir.x = -1;
-    if ( (cPos.y - nextSpot.y) < -4 ) moveDir.y = 1;
-     if ( (cPos.y - nextSpot.y) > 4 ) moveDir.y = -1;
-    
-    return moveDir;
-}
+     
+    return findPath.setDirection(getPosition() );}
 
 
 /**

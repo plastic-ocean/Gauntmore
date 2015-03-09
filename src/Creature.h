@@ -33,7 +33,6 @@ protected:
     spThing _contents;
 
     PathFinder findPath;
-    CreatureMover moveQ;
 
     /**
      *

@@ -11,10 +11,10 @@ NodeMinHeap::~NodeMinHeap(){}
 
 void NodeMinHeap::insertNode( PathNode *node ) {
     
-    theHeap.push_back(node);
-    
-    bubbleUp( theHeap.getSize()-1 );
-    
+    if ( theHeap.getSize() < 999 ){
+        theHeap.push_back(node);
+        bubbleUp( theHeap.getSize()-1 );
+    }
 }
 
 void NodeMinHeap::clearHeap() {

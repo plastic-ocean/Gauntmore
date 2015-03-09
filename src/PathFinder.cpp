@@ -114,6 +114,55 @@ bool PathFinder::atExit( PathNode node ) {
 }
 
 
+Vector2 PathFinder::setDirection(Vector2 cPos) {
+    Vector2 moveDir = {0,0};
+    
+    Vector2 pPos = _game->getPlayer()->getPosition();//player's position
+
+    if ( abs(pPos.x - cPos.x) <= 50 && abs(pPos.y - cPos.y) <= 50 ) {
+        return moveDir;//you are less than 50 pixels away, do nothing
+    }
+    //otherwise, check the movement Queue
+    if ( moveQ.empty() ) {
+        moveQ = aStar(cPos, pPos);
+        return moveDir;
+    }
+    //if the Q is NOT empty
+    Vector2 nextSpot = moveQ.back();//look at where you are going
+    if ( abs(cPos.x - nextSpot.x) <= 9 && abs(cPos.y - nextSpot.y) <= 9) {
+        moveQ = aStar(nextSpot, pPos);
+    }
+    
+    
+    if ( (cPos.x - nextSpot.x) < -4  ) {
+            moveDir.x = 1;//move right
+    }
+    else if ( (cPos.x - nextSpot.x) > 4 ) {
+          moveDir.x = -1;//move left
+    }
+    if ( (cPos.y - nextSpot.y) < -4  ) {
+            moveDir.y = 1;//move down
+    }
+    else if ( (cPos.y - nextSpot.y) > 4 ) {
+            moveDir.y = -1;//move up
+    }
+    
+    return fixDirection(cPos, moveDir);
+
+}
+Vector2 PathFinder::fixDirection(Vector2 position, Vector2 direction) {
+    int newX = position.x + (direction.x * 5);
+    int newY = position.y + (direction.y * 5);
+    
+    if ( coll.detectWalls(_game->getTiles(), newX, position.y, 30, 30) ) {
+        direction.x = 0;
+    }
+    if ( coll.detectWalls(_game->getTiles(), position.x, newY, 32, 32) ) {
+        direction.y = 0;
+    }
+ 
+    return direction;
+}
 
 bool PathFinder::inClosedList( PathNode node ) {
     int size = loc;

@@ -18,8 +18,11 @@ public:
     vector<Vector2> aStar( Vector2, Vector2 );
     Vector2 nextMove(Vector2, Vector2);
     void setGame(Game *game);
+    Vector2 setDirection(Vector2);
     
 private:
+    Vector2 fixDirection(Vector2, Vector2);
+    vector<Vector2> moveQ;
     Game *_game;
     Vector2 target;
     Vector2 source;

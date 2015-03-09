@@ -59,7 +59,6 @@
 		539584681A99A42D0080A994 /* Skeleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584541A99A42D0080A994 /* Skeleton.cpp */; };
 		539584691A99A42D0080A994 /* Thing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584561A99A42D0080A994 /* Thing.cpp */; };
 		5395846B1A99A42D0080A994 /* Unit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584591A99A42D0080A994 /* Unit.cpp */; };
-		53B46C721A9E44EC00915203 /* CreatureMover.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53B46C6B1A9E44EC00915203 /* CreatureMover.cpp */; };
 		53B46C731A9E44EC00915203 /* NodeMinHeap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53B46C6D1A9E44EC00915203 /* NodeMinHeap.cpp */; };
 		53B46C741A9E44EC00915203 /* PathFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53B46C6F1A9E44EC00915203 /* PathFinder.cpp */; };
 		53B46C7A1A9E476900915203 /* PathNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53B46C791A9E476900915203 /* PathNode.cpp */; };
@@ -236,8 +235,6 @@
 		539584571A99A42D0080A994 /* Thing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Thing.h; path = src/Thing.h; sourceTree = "<group>"; };
 		539584591A99A42D0080A994 /* Unit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Unit.cpp; path = src/Unit.cpp; sourceTree = "<group>"; };
 		5395845A1A99A42D0080A994 /* Unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Unit.h; path = src/Unit.h; sourceTree = "<group>"; };
-		53B46C6B1A9E44EC00915203 /* CreatureMover.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CreatureMover.cpp; path = src/CreatureMover.cpp; sourceTree = "<group>"; };
-		53B46C6C1A9E44EC00915203 /* CreatureMover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreatureMover.h; path = src/CreatureMover.h; sourceTree = "<group>"; };
 		53B46C6D1A9E44EC00915203 /* NodeMinHeap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NodeMinHeap.cpp; path = src/NodeMinHeap.cpp; sourceTree = "<group>"; };
 		53B46C6E1A9E44EC00915203 /* NodeMinHeap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NodeMinHeap.h; path = src/NodeMinHeap.h; sourceTree = "<group>"; };
 		53B46C6F1A9E44EC00915203 /* PathFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PathFinder.cpp; path = src/PathFinder.cpp; sourceTree = "<group>"; };
@@ -493,8 +490,6 @@
 		53B46C781A9E44F500915203 /* pathfinding */ = {
 			isa = PBXGroup;
 			children = (
-				53B46C6B1A9E44EC00915203 /* CreatureMover.cpp */,
-				53B46C6C1A9E44EC00915203 /* CreatureMover.h */,
 				53B46C6D1A9E44EC00915203 /* NodeMinHeap.cpp */,
 				53B46C6E1A9E44EC00915203 /* NodeMinHeap.h */,
 				53B46C6F1A9E44EC00915203 /* PathFinder.cpp */,
@@ -670,7 +665,6 @@
 				532878A81A99A6EB00228299 /* TmxPropertySet.cpp in Sources */,
 				539584691A99A42D0080A994 /* Thing.cpp in Sources */,
 				53BCF11B1A8ED99F00BD6288 /* GameScene.cpp in Sources */,
-				53B46C721A9E44EC00915203 /* CreatureMover.cpp in Sources */,
 				532878A11A99A6EB00228299 /* TmxImageLayer.cpp in Sources */,
 				5395846B1A99A42D0080A994 /* Unit.cpp in Sources */,
 				53B46C731A9E44EC00915203 /* NodeMinHeap.cpp in Sources */,
