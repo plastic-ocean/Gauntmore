@@ -16,8 +16,18 @@ using namespace std;
 
 enum RoomType {deadend, straight, turn, branch, intersection, outsideTop, outsideRight, outsideBottom, outsideLeft};
 
+/**
+ * Default constructor.
+ */
 Room::Room() {}
 
+/**
+ * Constructor.
+ *
+ * @type is the type of room.
+ * @size is the size of the room.
+ * @existBools list whether there is exist on a given edge.
+ */
 Room::Room(int type, int size, vector<bool> exitBools):
            _type(type), _size(size), _wallListSize(0), _floorListSize(0),
            _top(0), _right(0), _bottom(0), _left(0), _exitBools(exitBools) {
@@ -150,74 +160,145 @@ void Room::printMap() {
 }
 
 
+/**
+ * Gets the size of the room.
+ */
 int Room::getSize() const {
     return _size;
 }
 
+
+/**
+ * Sets the size of the room.
+ */
 void Room::setSize(int size) {
     _size = size;
 }
 
+
+/**
+ * Gets the entrance of the room.
+ */
 Vector2 Room::getEntrance() {
     return _entrance;
 }
 
+
+/**
+ * Sets the entrance to the room.
+ */
 void Room::setEntrance(Vector2 entrance) {
     _entrance = entrance;
 }
 
+
+/**
+ * Gets the tiles list.
+ */
 vector<SDL_Rect> Room::getTiles() {
     return _tiles;
 }
 
+
+/**
+ * Sets the tiles list.
+ */
 void Room::setTiles(vector<SDL_Rect> tiles) {
     _tiles = tiles;
 }
 
+
+/**
+ * Gets the units list.
+ */
 list<spUnit>* Room::getUnits() {
     return &_units;
 }
 
+
+/**
+ * Gets the room tyle
+ */
 int Room::getType() {
     return _type;
 }
 
+
+/**
+ * Gets the exist vector.
+ */
 vector<Vector2> Room::getExits() {
     return _exits;
 }
 
+
+/**
+ * Sets the exists vector.
+ */
 void Room::setExits(vector<Vector2> exits) {
     _exits = exits;
 }
 
+
+/**
+ * Gets the top exit column.
+ */
 int Room::getTop() {
     return _top;
 }
 
+
+/**
+ * Sets the top exit column.
+ */
 void Room::setTop(int top) {
     _top = top;
 }
 
+
+/**
+ * Gets the right exit row.
+ */
 int Room::getRight() {
     return _right;
 }
 
+
+/**
+ * Sets the right exit row.
+ */
 void Room::setRight(int right) {
     _right = right;
 }
 
+
+/**
+ * Gets the bottom exit column.
+ */
 int Room::getBottom() {
     return _bottom;
 }
 
+
+/**
+ * Sets the bottom exit column.
+ */
 void Room::setBottom(int bottom) {
     _bottom = bottom;
 }
 
+
+/**
+ * Gets the left exit row.
+ */
 int Room::getLeft() {
     return _left;
 }
 
+
+/**
+ * Sets the left exit row.
+ */
 void Room::setLeft(int left) {
     _left = left;
 }

@@ -1,16 +1,3 @@
-//
-//  ArmorCount.h
-//  gauntmore_macosx
-//
-//  Created by Steven Warren on 2/27/15.
-//  Copyright (c) 2015 oxygine. All rights reserved.
-//
-
-#ifndef __gauntmore_macosx__ArmorCount__
-#define __gauntmore_macosx__ArmorCount__
-
-#include <stdio.h>
-
 #pragma once
 #include "oxygine-framework.h"
 #include "Game.h"
@@ -43,5 +30,3 @@ private:
     spSprite _shield;
     int _count;
 };
-
-#endif /* defined(__gauntmore_macosx__ArmorCount__) */

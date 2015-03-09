@@ -9,7 +9,6 @@ using namespace std;
  * Constructor.
  */
 Map::Map(int size) {
-    // TODO mini-map: store two copies of maze matrix and change all tiles in one to "explored" only when visited by player
     spMazeGen mazeGen = new MazeGen(size);
     setRoomMap(static_cast<vector<vector<spRoom>>>(mazeGen->generate()));
     
@@ -19,14 +18,17 @@ Map::Map(int size) {
 
     _room = _roomMap[_row][_col];
 
-//    _room = new Room(turn, 15, {true, true, false, false});
-
     string tmxFile = _getTmxFile();
 
     _room->createTileMap(tmxFile);
 }
 
 
+/**
+ * Sets the current room a new room in the maze depending the given wall edge.
+ *
+ * @edge is the wall edge of the last room the player existed.
+ */
 void Map::changeRoom(int edge) {
     switch (edge) {
         case 0: // top
@@ -52,34 +54,64 @@ void Map::changeRoom(int edge) {
 }
 
 
+/**
+ * Gets the current room.
+ */
 spRoom Map::getRoom() {
     return _room;
 }
 
+
+/**
+ * Sets the current room.
+ */
 void Map::setRoom(spRoom &room) {
     _room = room;
 }
 
+
+/**
+ * Gets the room map.
+ */
 vector<vector<spRoom>> Map::getRoomMap() {
     return _roomMap;
 }
 
+
+/**
+ * Sets the room map.
+ */
 void Map::setRoomMap(vector<vector<spRoom>> roomMap) {
     _roomMap = roomMap;
 }
 
+
+/**
+ * Gets the current column in the maze.
+ */
 int Map::getCol() const {
     return _col;
 }
 
+
+/**
+ * Sets the current column in the maze.
+ */
 void Map::setCol(int col) {
     Map::_col = col;
 }
 
+
+/**
+ * Gets the current row in the maze.
+ */
 int Map::getRow() const {
     return _row;
 }
 
+/**
+ * Sets the current row in the maze.
+ */
 void Map::setRow(int row) {
     Map::_row = row;
 }

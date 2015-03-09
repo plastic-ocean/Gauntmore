@@ -42,14 +42,6 @@ StartMenu::StartMenu():_selection(selectNewGame), _isVisible(false) {
     Input::instance.addEventListener(Input::event_platform, CLOSURE(this, &StartMenu::_onEvent));
 }
 
-void StartMenu::setNewGame(string newGameImage) {
-    _newGame->setResAnim(resources.getResAnim(newGameImage));
-}
-
-void StartMenu::setQuit(string quitImage) {
-    _quit->setResAnim(resources.getResAnim(quitImage));
-}
-
 /**
  * Keyboard event handler.
  *

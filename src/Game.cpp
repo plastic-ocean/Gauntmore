@@ -43,57 +43,11 @@ Game::Game():_isPaused(false), _isFirstRun(true) {
     // Set the size of the scene to the size of the display.
     setSize(getStage()->getSize());
 
-    // Size is the number of tiles
-    int size = 13;
+    _createMap();
 
-    _things.push_back(new Armor(2));
-    _things.push_back(new Armor(3));
-    _things.push_back(new Weapon(2));
-    _things.push_back(new Weapon(3));
+    _createUnits();
 
-    for (int i = 0; i < 38; i++) {
-        _things.push_back(new Gold);
-        _things.push_back(new Potion);
-
-    }
-
-    // Create map
-    _map = new Map(size);
-    _renderMap();
-    _createTiles();
-
-    // Create Creatures and Things
-    list<spUnit> *units = _map->getRoom()->getUnits();
-    for (list<spUnit>::iterator i = units->begin(); i != units->end(); ++i) {
-        spUnit unit = *i;
-        if (unit->getType() != "player") {
-            unit->init(unit->getLocation(), this);
-        }
-    }
-
-//    _snake = new Snake();
-//    _snake->init(Vector2((_map->getRoom()->getSize() / 2) * 64, (_map->getRoom()->getSize() / 2) * 64), this);
-//    _map->getRoom()->getUnits()->push_back(_snake);
-
-
-    // Create player
-    _player = new Player(20, 1, 1);
-    _player->init(_getEntrance(), this);
-    _map->getRoom()->getUnits()->push_back(_player);
-
-
-
-    // Health bar
-    _healthBar = new HealthBar(this);
-
-    // Gold count
-    _goldCount = new GoldCount(this);
-
-    // Armor Count
-    _armorCount = new ArmorCount(this);
-
-    // Weapon Count
-    _weaponCount = new WeaponCount(this);
+    _createHud();
 
     // Keyboard handler
     _move = new KeyboardInput(this);
@@ -165,7 +119,7 @@ void Game::switchRoom(int edge) {
     _armorCount->render();
     _weaponCount->render();
 
-    _createTiles();
+    _createCollisionRects();
 }
 
 
@@ -241,6 +195,9 @@ void Game::updateWeaponCount(int value) {
 }
 
 
+/**
+ * Pauses the game when switching to the pause menu.
+ */
 void Game::pauseGame() {
     setPaused(true);
     getClock()->pause();
@@ -248,6 +205,9 @@ void Game::pauseGame() {
 }
 
 
+/**
+ * Pauses the game when switching to the start menu.
+ */
 void Game::startGame() {
     setFirstRun(false);
     setPaused(true);
@@ -256,6 +216,9 @@ void Game::startGame() {
 }
 
 
+/**
+ * Pauses the game when switching to the death menu.
+ */
 void Game::killPlayer() {
     setPaused(true);
     getClock()->pause();
@@ -264,98 +227,105 @@ void Game::killPlayer() {
 }
 
 
+/**
+ * Creates a new game on player death.
+ */
 void Game::createNewGame() {
-    // Size is the number of tiles
-    int size = 13;
-
-    _things.clear();
-    _things.push_back(new Armor(2));
-    _things.push_back(new Armor(3));
-    _things.push_back(new Weapon(2));
-    _things.push_back(new Weapon(3));
-
-    for (int i = 0; i < 38; i++) {
-        _things.push_back(new Gold);
-        _things.push_back(new Potion);
-
-    }
+    _createMap();
     
-    // Create map
-    _map = new Map(size);
-    _renderMap();
-    _createTiles();
+    _createUnits();
     
-    // Create Creatures and Things
-    list<spUnit> *units = _map->getRoom()->getUnits();
-    for (list<spUnit>::iterator i = units->begin(); i != units->end(); ++i) {
-        spUnit unit = *i;
-        if (unit->getType() != "player") {
-            unit->init(unit->getLocation(), this);
-        }
-    }
+    _createHud();
     
-    // Create player
-    _player = new Player(20, 1, 1);
-    _player->init(_getEntrance(), this);
-    _map->getRoom()->getUnits()->push_back(_player);
-
     setPaused(false);
-
+    
     // Keyboard handler
     _move->resetDir();
-    
-    // Health bar
-    _healthBar = new HealthBar(this);
-    
-    // Gold count
-    _goldCount = new GoldCount(this);
-    
-    // Armor Count
-    _armorCount = new ArmorCount(this);
 }
 
 
+/**
+ * Gets the player.
+ */
 spPlayer Game::getPlayer() {
     return _player;
 }
 
 
+/**
+ * Gets the map.
+ */
 spMap Game::getMap() {
     return _map;
 }
 
+
+/**
+ * Gets the list of collision rects.
+ */
 vector<SDL_Rect> Game::getTiles() {
     return _tiles;
 }
 
+
+/**
+ * Gets the keyboard input handler.
+ */
 spKeyboardInput Game::getMove() {
     return _move;
 }
 
+
+/**
+ * Gets the keyboard input handler.
+ */
 spHealthBar Game::getHealthBar() {
     return _healthBar;
 }
 
+/**
+ * Gets the tile size.
+ */
 int Game::getTileSize() {
     return tileSize;
 }
 
+
+/**
+ * Sets the game state to paused.
+ */
 void Game::setPaused(bool isPaused) {
     _isPaused = isPaused;
 }
 
+
+/**
+ * Checks if the game is paused.
+ */
 bool Game::isPaused() {
     return _isPaused;
 }
 
+
+/**
+ * Sets the games state to first run.
+ */
 void Game::setFirstRun(bool isFirstRun) {
     _isFirstRun = isFirstRun;
 }
 
+
+/**
+ * Checks if this is th games first run.
+ */
 bool Game::isFirstRun() {
     return _isFirstRun;
 }
 
+
+/**
+ * Gets the list of chest contents.
+ */
 list<spThing>* Game::getContentsList() {
     return &_things;
 }
@@ -388,7 +358,70 @@ void Game::doUpdate(const UpdateState &us) {
         killPlayer();
     }
 
-    _createTiles();
+    _createCollisionRects();
+}
+
+
+/**
+ * Creates the map, renders it, and creates the collision list.
+ */
+void Game::_createMap() {
+    // Size is the number of tiles
+    int size = 13;
+    
+    // Generate things for chests
+    _things.push_back(new Armor(2));
+    _things.push_back(new Armor(3));
+    _things.push_back(new Weapon(2));
+    _things.push_back(new Weapon(3));
+    
+    for (int i = 0; i < 38; i++) {
+        _things.push_back(new Gold);
+        _things.push_back(new Potion);
+        
+    }
+    
+    // Create map
+    _map = new Map(size);
+    _renderMap();
+    _createCollisionRects();
+}
+
+/**
+ * Create the creatures and the player.
+ */
+void Game::_createUnits() {
+    // Create Creatures and Things
+    list<spUnit> *units = _map->getRoom()->getUnits();
+    for (list<spUnit>::iterator i = units->begin(); i != units->end(); ++i) {
+        spUnit unit = *i;
+        if (unit->getType() != "player") {
+            unit->init(unit->getLocation(), this);
+        }
+    }
+    
+    // Create player
+    _player = new Player(40, 1, 1);
+    _player->init(_getEntrance(), this);
+    _map->getRoom()->getUnits()->push_back(_player);
+}
+
+
+/**
+ * Create the health, gold, defense, and attack HUD elements.
+ */
+void Game::_createHud() {
+    // Health bar
+    _healthBar = new HealthBar(this);
+    
+    // Gold count
+    _goldCount = new GoldCount(this);
+    
+    // Armor Count
+    _armorCount = new ArmorCount(this);
+    
+    // Weapon Count
+    _weaponCount = new WeaponCount(this);
 }
 
 
@@ -421,14 +454,13 @@ void Game::_renderMap() {
             }
         }
     }
-//    delete map;
 }
 
 
 /**
  * Creates a vector of rectangles called tiles that is used to detect collisions.
  */
-void Game::_createTiles() {
+void Game::_createCollisionRects() {
     _tiles.clear();
     // Build a vector of rectangles to represent the collidable tiles.
     for (int i = 0; i < _tileMap->GetNumLayers(); ++i) {

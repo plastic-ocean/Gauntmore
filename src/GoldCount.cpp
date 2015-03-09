@@ -1,5 +1,6 @@
 #include "GoldCount.h"
 
+
 /**
  * Constructor.
  */

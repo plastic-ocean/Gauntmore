@@ -1,13 +1,6 @@
-//
-//  ArmorCount.cpp
-//  gauntmore_macosx
-//
-//  Created by Steven Warren on 2/27/15.
-//  Copyright (c) 2015 oxygine. All rights reserved.
-//
-
 #include "ArmorCount.h"
 #include "Armor.h"
+
 
 /**
  * Constructor.
@@ -36,7 +29,7 @@ ArmorCount::ArmorCount(Game *game):_game(game), _count(0) {
 
 
 /**
- * Renders the on screen gold counter on room changes.
+ * Renders the on screen defense counter on room changes.
  */
 void ArmorCount::render() {
     _shield->attachTo(_game);
@@ -45,7 +38,7 @@ void ArmorCount::render() {
 
 
 /**
- * Updates the string count and sets the on screen gold count.
+ * Updates the string count and sets the on screen defense count.
  *
  * @count is the value to add to the count.
  */

@@ -11,7 +11,7 @@ CollisionDetector::CollisionDetector() {}
 
 
 /**
- * Detects collisions between a sprite and the walls.
+ * Detects collisions between a sprite and the items in the tiles list.
  *
  * @tiles is the tiles/Things list.
  * @x is the sprite's x coordinate.

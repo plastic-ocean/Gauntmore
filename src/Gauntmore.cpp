@@ -15,7 +15,7 @@ void Gauntmore::init() {
 //    SoundSystem::instance = SoundSystem::create();
 //    SoundSystem::instance->init(16);
 //    SoundPlayer::initialize();
-//
+
     // Load resources.
     loadResources();
     
@@ -78,3 +78,10 @@ int Gauntmore::mainLoop() {
     
     return done ? 1 : 0;
 }
+
+/**
+ * Gets the music player.
+ */
+//    SoundPlayer getMusicPlayer() {
+//        return _musicPlayer;
+//    }

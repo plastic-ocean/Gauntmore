@@ -1,14 +1,4 @@
-//
-//  WeaponCount.h
-//  gauntmore_macosx
-//
-//  Created by Steven Warren on 3/3/15.
-//  Copyright (c) 2015 oxygine. All rights reserved.
-//
-
-#ifndef __gauntmore_macosx__WeaponCount__
-#define __gauntmore_macosx__WeaponCount__
-
+#pragma once
 #include <stdio.h>
 
 #pragma once
@@ -43,6 +33,3 @@ private:
     spSprite _sword;
     int _count;
 };
-
-
-#endif /* defined(__gauntmore_macosx__WeaponCount__) */

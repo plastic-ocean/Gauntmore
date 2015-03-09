@@ -49,19 +49,6 @@ DeathMenu::DeathMenu():_selection(selectNewGame), _isVisible(false) {
 }
 
 
-void DeathMenu::setNewGame(string newGameImage) {
-    _newGame->setResAnim(resources.getResAnim(newGameImage));
-}
-
-void DeathMenu::setQuit(string quitImage) {
-    _quit->setResAnim(resources.getResAnim(quitImage));
-}
-
-void DeathMenu::setGame(Game *game) {
-    _game = game;
-}
-
-
 /**
  * Keyboard event handler.
  *
@@ -111,6 +98,9 @@ void DeathMenu::_selectNext() {
 }
 
 
+/**
+ * Sets the menu to visible when shown. Used for handling input.
+ */
 void DeathMenu::_show() {
     _isVisible = true;
 }

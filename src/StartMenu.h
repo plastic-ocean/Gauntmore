@@ -1,4 +1,5 @@
 #pragma once
+#include "Menu.h"
 #include "Scene.h"
 #include "GameScene.h"
 #include "Game.h"
@@ -8,7 +9,7 @@ using namespace oxygine;
 
 DECLARE_SMART(StartMenu, spStartMenu);
 class Game;
-class StartMenu : public Scene {
+class StartMenu : public Menu {
     
 public:
     static spStartMenu instance;
@@ -16,19 +17,9 @@ public:
     
     StartMenu();
     
-    
-    /* Getters and setters */
-    
-    void setNewGame(string newGameImage);
-    
-    void setQuit(string quitImage);
-    
 private:
     Selection _selection;
     spSprite _background;
-    spSprite _name;
-    spSprite _newGame;
-    spSprite _quit;
     bool _isVisible;
     
     /**

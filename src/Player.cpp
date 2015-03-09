@@ -70,7 +70,7 @@ bool Player::updateHealth(int health) {
         _hp += health;
         
         // Convert health to a decimal percentage for the health bar.
-        double healthPercent = health * 0.05;
+        double healthPercent = health * 0.025;
         if (healthPercent > 1.0) {
             healthPercent = 1.0;
         }

@@ -36,10 +36,18 @@ PauseMenu::PauseMenu():_isReady(false), _selection(selectContinue) {
     Input::instance.addEventListener(Input::event_platform, CLOSURE(this, &PauseMenu::_onEvent));
 }
 
+
+/**
+ * Changes the continue image between selected and unselected.
+ */
 void PauseMenu::setContinue(string continueImage) {
     _continue->setResAnim(resources.getResAnim(continueImage));
 }
 
+
+/**
+ * Changes the quit image between selected and unselected.
+ */
 void PauseMenu::setQuit(string quitImage) {
     _quit->setResAnim(resources.getResAnim(quitImage));
 }
@@ -67,7 +75,7 @@ void PauseMenu::_onEvent(Event *ev) {
             case SDLK_DOWN:
             case SDLK_s:
             case SDLK_TAB:
-                selectNext();
+                _selectNext();
                 break;
             default:
                 break;
@@ -89,7 +97,7 @@ void PauseMenu::_onEvent(Event *ev) {
 /**
  * Selects the next item in the menu list.
  */
-void PauseMenu::selectNext() {
+void PauseMenu::_selectNext() {
     if (_selection == selectContinue) {
         _selection = selectQuit;
         setQuit("quit_selected");

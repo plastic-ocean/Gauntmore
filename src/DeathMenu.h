@@ -1,4 +1,5 @@
 #pragma once
+#include "Menu.h"
 #include "Scene.h"
 #include "GameScene.h"
 #include "Game.h"
@@ -8,7 +9,7 @@ using namespace oxygine;
 
 DECLARE_SMART(DeathMenu, spDeathMenu);
 class Game;
-class DeathMenu : public Scene {
+class DeathMenu : public Menu {
     
 public:
     static spDeathMenu instance;
@@ -16,23 +17,10 @@ public:
     
     DeathMenu();
     
-    
-    /* Getters and setters */
-    
-    void setNewGame(string newGameImage);
-    
-    void setQuit(string quitImage);
-    
-    void setGame(Game *game);
-    
 private:
-    Game *_game;
     Selection _selection;
     spSprite _deathBackground;
-    spSprite _name;
     spSprite _youDied;
-    spSprite _newGame;
-    spSprite _quit;
     bool _isVisible;
     
     /**
@@ -47,6 +35,9 @@ private:
      */
     void _selectNext();
     
+    /**
+     * Sets the menu to visible when shown. Used for handling input.
+     */
     void _show();
     
 };

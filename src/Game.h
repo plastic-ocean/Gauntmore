@@ -79,43 +79,88 @@ public:
      */
     void updateArmorCount(int value);
     
-    void pauseGame();
-    
-    void startGame();
-    
-    void killPlayer();
-    
-    void createNewGame();
-
     /**
      * Updates the weapon counter.
      *
      * @num is the value to update by.
      */
     void updateWeaponCount(int value);
+    
+    /**
+     * Pauses the game when switching to the pause menu.
+     */
+    void pauseGame();
+    
+    /**
+     * Pauses the game when switching to the start menu.
+     */
+    void startGame();
+    
+    /**
+     * Pauses the game when switching to the death menu.
+     */
+    void killPlayer();
+    
+    /**
+     * Creates a new game on player death.
+     */
+    void createNewGame();
 
     /* Getters and Setters */
-
+    
+    /**
+     * Gets the player.
+     */
     spPlayer getPlayer();
-
+    
+    /**
+     * Gets the map.
+     */
     spMap getMap();
 
+    /**
+     * Gets the list of collision rects.
+     */
     vector<SDL_Rect> getTiles();
-
+    
+    /**
+     * Gets the keyboard input handler.
+     */
     spKeyboardInput getMove();
 
+    /**
+     * Gets the keyboard input handler.
+     */
     spHealthBar getHealthBar();
-
+    
+    /**
+     * Gets the tile size.
+     */
     int getTileSize();
     
+    /**
+     * Sets the game state to paused.
+     */
     void setPaused(bool isPaused);
     
+    /**
+     * Checks if the game is paused.
+     */
     bool isPaused();
     
+    /**
+     * Sets the games state to first run.
+     */
     void setFirstRun(bool isFirstRun);
     
+    /**
+     * Checks if this is th games first run.
+     */
     bool isFirstRun();
-
+    
+    /**
+     * Gets the list of chest contents.
+     */
     list<spThing>* getContentsList();
 
 protected:
@@ -157,6 +202,21 @@ protected:
 	void doUpdate(const UpdateState &us);
     
     /**
+     * Creates the map, renders it, and creates the collision list.
+     */
+    void _createMap();
+    
+    /**
+     * Create the creatures and the player.
+     */
+    void _createUnits();
+    
+    /**
+     * Create the health, gold, defense, and attack HUD elements.
+     */
+    void _createHud();
+    
+    /**
      * Reads the tile map description from the .tmx file and uses it to render the map.
      */
     void _renderMap();
@@ -164,7 +224,7 @@ protected:
     /**
      * Creates a vector of rectangles called tiles that is used to detect collisions.
      */
-    void _createTiles();
+    void _createCollisionRects();
 
     /**
      * Gets the maze entrance location.

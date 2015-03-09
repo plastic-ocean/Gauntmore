@@ -32,41 +32,95 @@ public:
 
 
     /* Setters and Getters */
-
+    
+    /**
+     * Gets the size of the room.
+     */
     int getSize() const;
 
+    /**
+     * Sets the size of the room.
+     */
     void setSize(int size);
 
+    /**
+     * Gets the entrance of the room.
+     */
     Vector2 getEntrance();
 
+    /**
+     * Sets the entrance to the room.
+     */
     void setEntrance(Vector2 entrance);
 
+    /**
+     * Gets the tiles list.
+     */
     vector<SDL_Rect> getTiles();
 
+    /**
+     * Sets the tiles list.
+     */
     void setTiles(vector<SDL_Rect> tiles);
 
+    /**
+     * Gets the units list.
+     */
     list<spUnit>* getUnits();
 
+    /**
+     * Gets the room tyle
+     */
     int getType();
 
+    /**
+     * Gets the exist vector.
+     */
     vector<Vector2> getExits();
 
+    /**
+     * Sets the exists vector.
+     */
     void setExits(vector<Vector2> exits);
 
+    /**
+     * Gets the top exit column.
+     */
     int getTop();
 
+    /**
+     * Sets the top exit column.
+     */
     void setTop(int top);
 
+    /**
+     * Gets the right exit row.
+     */
     int getRight();
 
+    /**
+     * Sets the right exit row.
+     */
     void setRight(int right);
 
+    /**
+     * Gets the bottom exit column.
+     */
     int getBottom();
 
+    /**
+     * Sets the bottom exit column.
+     */
     void setBottom(int bottom);
 
+    /**
+     * Gets the left exit row.
+     */
     int getLeft();
 
+    /**
+     * Sets the left exit row.
+     */
     void setLeft(int left);
 
 private:

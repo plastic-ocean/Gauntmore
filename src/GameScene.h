@@ -8,10 +8,14 @@ class GameScene: public Scene {
     
 public:
     static spGameScene instance;
+    
     GameScene();
     
 private:
     spGame _game;
-    void _show();
     
+    /**
+     * Unpauses the game when switching to this scene.
+     */
+    void _show();
 };

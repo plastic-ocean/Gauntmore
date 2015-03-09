@@ -9,6 +9,9 @@ using namespace std;
 enum RoomType {deadend, straight, turn, branch, intersection, outsideTop, outsideRight, outsideBottom, outsideLeft};
 
 
+/**
+ * Constructor.
+ */
 MazeGen::MazeGen(int size):_size(size), _wallListSize(0), _floorListSize(0) {
     // Seed rand.
     random_device randomDevice;
@@ -33,8 +36,8 @@ MazeGen::MazeGen(int size):_size(size), _wallListSize(0), _floorListSize(0) {
 
 
 /**
-* Generates and returns a 2D matrix of Rooms.
-*/
+ * Generates and returns a 2D matrix of Rooms.
+ */
 vector<vector<spRoom>> MazeGen::generate() {
     vector<vector<spRoom>> roomMap;
     size_t size = static_cast<size_t>(_size);
@@ -139,26 +142,48 @@ vector<vector<spRoom>> MazeGen::generate() {
 }
 
 
+/**
+ * Gets the size of the maze.
+ */
 int MazeGen::getSize() {
     return _size;
 }
 
+
+/**
+ * Sets the size of the maze.
+ */
 void MazeGen::setSize(int size) {
     _size = size;
 }
 
+
+/**
+ * Gets the entrance to the maze.
+ */
 pair<int, int> MazeGen::getEntrance() {
     return _entrance;
 }
 
+
+/**
+ * Sets the entrance to the maze.
+ */
 void MazeGen::setEntrance(pair<int, int> entrance) {
     _entrance = entrance;
 }
 
+
+/**
+ * Gets the exist to the maze.
+ */
 pair<int, int> MazeGen::getExit() {
     return _exit;
 }
 
+/**
+ * Sets the entrance to the maze.
+ */
 void MazeGen::setExit(pair<int, int> exit) {
     _exit = exit;
 }

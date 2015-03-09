@@ -11,22 +11,43 @@ class MazeGen : public Object {
 
 public:
     MazeGen(int size);
-
+    
+    /**
+     * Generates and returns a 2D matrix of Rooms.
+     */
     vector<vector<spRoom>> generate();
     
     
     /* Getters and Setters */
-
+    
+    /**
+     * Gets the size of the maze.
+     */
     int getSize();
-
+    
+    /**
+     * Sets the size of the maze.
+     */
     void setSize(int size);
-
+    
+    /**
+     * Gets the entrance to the maze.
+     */
     pair<int, int> getEntrance();
-
+    
+    /**
+     * Sets the entrance to the maze.
+     */
     void setEntrance(pair<int, int> entrance);
-
+    
+    /**
+     * Gets the exist to the maze.
+     */
     pair<int, int> getExit();
-
+    
+    /**
+     * Sets the entrance to the maze.
+     */
     void setExit(pair<int, int> exit);
 
 private:

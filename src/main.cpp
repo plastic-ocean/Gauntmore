@@ -31,7 +31,7 @@ int main(int argc, char* argv[]) {
     
     // DebugActor is a helper actor node. It shows FPS, memory usage and other useful stuff.
     //DebugActor::show();
-
+    
     gauntmore.init();
     
     // Start the main loop.
@@ -51,7 +51,8 @@ int main(int argc, char* argv[]) {
     // Releases all internal components and Stage
     core::release();
     
-    // Dump list should be empty now. Everything has been deleted and there can't be any memory leaks.
+    // Dump list should be empty now.
+    // If everything has been deleted and there aren't any memory leaks this will print a total of 0.
     ObjectBase::dumpCreatedObjects();
     
     ObjectBase::__stopTracingLeaks();

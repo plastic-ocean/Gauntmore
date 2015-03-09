@@ -1,5 +1,6 @@
 #pragma once
 #include "Scene.h"
+#include "Menu.h"
 #include "GameScene.h"
 #include "Game.h"
 
@@ -19,8 +20,14 @@ public:
     
     /* Getters and setters */
     
+    /**
+     * Changes the continue image between selected and unselected.
+     */
     void setContinue(string continueImage);
     
+    /**
+     * Changes the quit image between selected and unselected.
+     */
     void setQuit(string quitImage);
     
 private:
@@ -41,6 +48,6 @@ private:
     /**
      * Selects the next item in the menu list.
      */
-    void selectNext();
+    void _selectNext();
     
 };

@@ -1,6 +1,4 @@
-#ifndef __gauntmore__CollisionDetector__
-#define __gauntmore__CollisionDetector__
-
+#pragma once
 #include <iostream>
 #include "oxygine-framework.h"
 #include "Game.h"
@@ -12,18 +10,16 @@ class CollisionDetector : public Object {
     
 public:
     CollisionDetector();
-    
-    int count = 0;
 
     /**
-     * Detects collisions between a sprite and the walls.
+     * Detects collisions between a sprite and the items in the tiles list.
      *
      * @tiles is the tiles/Things list.
      * @x is the sprite's x coordinate.
      * @y is the sprite's y coordinate.
      * @h is the sprite's height.
      * @w is the sprite's width.
-     * @return: ture if there is a collision. false if not.
+     * @return true if there is a collision, false if not.
      */
     bool detect(std::vector<SDL_Rect> tiles, int x, int y, int h, int w);
 
@@ -42,5 +38,3 @@ public:
 private:
 
 };
-
-#endif

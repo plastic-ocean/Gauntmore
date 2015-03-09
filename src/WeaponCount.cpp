@@ -1,11 +1,3 @@
-//
-//  WeaponCount.cpp
-//  gauntmore_macosx
-//
-//  Created by Steven Warren on 3/3/15.
-//  Copyright (c) 2015 oxygine. All rights reserved.
-//
-
 #include "WeaponCount.h"
 
 /**
@@ -35,7 +27,7 @@ WeaponCount::WeaponCount(Game *game):_game(game), _count(0) {
 
 
 /**
- * Renders the on screen gold counter on room changes.
+ * Renders the on screen attack counter on room changes.
  */
 void WeaponCount::render() {
     _sword->attachTo(_game);
@@ -44,7 +36,7 @@ void WeaponCount::render() {
 
 
 /**
- * Updates the string count and sets the on screen gold count.
+ * Updates the string count and sets the on screen attack count.
  *
  * @count is the value to add to the count.
  */

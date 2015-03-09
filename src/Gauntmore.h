@@ -18,14 +18,30 @@ class Gauntmore {
 public:
     Gauntmore();
     
+    /**
+     * Load resources, initialize the game, and attach it to the stage.
+     */
     void init();
+    
+    /**
+     * Global update method. Called every frame.
+     */
     void update();
+    
+    /**
+     * Free all allocated resources and delete all created actors.
+     */
     void destroy();
+    
+    /**
+     * The main loop method. Called each frame.
+     */
     int mainLoop();
     
-//    SoundPlayer getMusicPlayer() {
-//        return _musicPlayer;
-//    }
+    /**
+     * Gets the music player.
+     */
+//    SoundPlayer getMusicPlayer();
     
 private:
 //    SoundPlayer _musicPlayer;
