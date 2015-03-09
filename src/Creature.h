@@ -6,7 +6,6 @@
 #include "Game.h"
 #include "Player.h"
 #include "Thing.h"
-#include "CreatureMover.h"
 
 
 DECLARE_SMART(Creature, spCreature);

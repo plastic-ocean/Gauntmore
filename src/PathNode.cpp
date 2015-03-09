@@ -1,63 +1,77 @@
 #include "PathNode.h"
 
+
+/*
+Default Constructor
+ */
 PathNode::PathNode(){
-    this->location = {0,0};
-    this->heuristic = 99999;
-    this->total = 99999;
-    this->cost = 99999;
-    this->parent = NULL;
+    this->_location = {0,0};
+    this->_heuristic = 99999;
+    this->_total = 99999;
+    this->_cost = 99999;
+    this->_parent = NULL;
 }
 
+
+/*
+Constructor for 'root' node
+ parent pointer goes to null
+ */
 PathNode::PathNode( Vector2 location, int cost, int heuristic ) {//loopback constructor
-    this->location = location;
-    this->cost = cost;
-    this->heuristic = heuristic;
-    this->parent = NULL;
-    this->total = cost + heuristic;
+    this->_location = location;
+    this->_cost = cost;
+    this->_heuristic = heuristic;
+    this->_parent = NULL;
+    this->_total = cost + heuristic;
 }
 
 
+/*
+ Overloaded Constructor
+ */
 PathNode::PathNode( Vector2 location, int cost, int heuristic, PathNode *parent ) {
-    this->location = location;
-    this->cost = cost;
-    this->heuristic = heuristic;
-    this->parent = parent;
-    this->total = cost + heuristic;
+    this->_location = location;
+    this->_cost = cost;
+    this->_heuristic = heuristic;
+    this->_parent = parent;
+    this->_total = cost + heuristic;
 }
+
+
+/*
+ Destructor
+ */
 PathNode::~PathNode(){}
 
 const Vector2 PathNode::getLocation(){
     
-    return this->location;
+    return this->_location;
 }
 const int PathNode::getHeuristic() {
-    return this->heuristic;
+    return this->_heuristic;
 }
 const int PathNode::getCost() {
-    return this->cost;
+    return this->_cost;
 }
 const int PathNode::getTotal()  {
-    return total;
+    return _total;
 }
 void PathNode::setCost( int cost ) {
-    this->cost = cost;
+    this->_cost = cost;
 }
 
 void PathNode::setLocation( Vector2 location ) {
-    this->location = location;
+    this->_location = location;
 }
 
 void PathNode::setHeuristic( int heuristic ) {
-    this->heuristic = heuristic;
+    this->_heuristic = heuristic;
 }
 
-void PathNode::calculateTotal() {
-    this->total = cost + heuristic;
-}
 PathNode* PathNode::getParent() {
-    return this->parent;
+    return this->_parent;
 }
 
 void PathNode::setParent( PathNode *parent ) {
-    this->parent = parent;
+    this->_parent = parent;
 }

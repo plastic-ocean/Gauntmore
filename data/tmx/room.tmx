@@ -1,269 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-up" width="13" height="13" tilewidth="64" tileheight="64" nextobjectid="1">
- <tileset firstgid="1" name="grass1" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/grass1.png" width="64" height="64"/>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="13" height="13" tilewidth="64" tileheight="64" nextobjectid="1">
+ <tileset firstgid="1" name="floor" tilewidth="64" tileheight="64">
+  <image source="data/tmx/floor.png" width="64" height="64"/>
  </tileset>
- <tileset firstgid="2" name="grass2" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/grass2.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="3" name="grass3" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/grass3.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="4" name="cave_entrance" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/cave_entrance.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="5" name="cave_left" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/cave_left.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="6" name="cave_right" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/cave_right.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="7" name="cave_wall" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/cave_wall.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="8" name="tree_top_left" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/tree_top_left.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="9" name="tree_top_cave_left" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/tree_top_cave_left.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="10" name="tree_top_cave_right" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/tree_top_cave_right.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="11" name="tree_bottom_left" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/tree_bottom_left.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="12" name="tree_top_right" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/tree_top_right.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="13" name="tree_bottom_right" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/tree_bottom_right.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="14" name="bottom_right" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/bottom_right.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="15" name="tree_top1" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/tree_top1.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="16" name="tree_top2" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/tree_top2.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="17" name="bottom_left" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/bottom_left.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="18" name="cave_wall_bottom" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/cave_wall_bottom.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="19" name="cave_entrance_bottom" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/cave_entrance_bottom.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="20" name="tree_bottom_only_right" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/tree_bottom_only_right.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="21" name="tree_bottom_only_left" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/tree_bottom_only_left.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="22" name="tree_trunk" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/tree_trunk.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="23" name="tree_trunk2" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/tree_trunk2.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="24" name="tree_trunk3" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/tree_trunk3.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="25" name="cave_wall_left" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/cave_wall_left.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="26" name="cave_wall_right" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/cave_wall_right.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="27" name="cave_entrance_left" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/cave_entrance_left.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="28" name="cave_entrance_right" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/cave_entrance_right.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="29" name="cave_wall_right_tree" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/cave_wall_right_tree.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="30" name="cave_entrance_right" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/cave_entrance_right.png" width="64" height="64"/>
- </tileset>
- <tileset firstgid="31" name="cave_wall_right" tilewidth="64" tileheight="64">
-  <image source="../../../LPC/outside/cave_wall_right.png" width="64" height="64"/>
+ <tileset firstgid="2" name="wall" tilewidth="64" tileheight="64">
+  <image source="data/tmx/wall.png" width="64" height="64"/>
  </tileset>
  <layer name="Tile Layer 1" width="13" height="13">
   <data>
-   <tile gid="11"/>
-   <tile gid="23"/>
-   <tile gid="24"/>
-   <tile gid="22"/>
-   <tile gid="22"/>
-   <tile gid="23"/>
-   <tile gid="24"/>
-   <tile gid="23"/>
-   <tile gid="24"/>
-   <tile gid="23"/>
-   <tile gid="24"/>
-   <tile gid="22"/>
-   <tile gid="31"/>
-   <tile gid="8"/>
-   <tile gid="3"/>
-   <tile gid="1"/>
-   <tile gid="2"/>
-   <tile gid="1"/>
-   <tile gid="2"/>
-   <tile gid="2"/>
-   <tile gid="1"/>
-   <tile gid="1"/>
-   <tile gid="2"/>
-   <tile gid="3"/>
-   <tile gid="2"/>
-   <tile gid="31"/>
-   <tile gid="11"/>
-   <tile gid="3"/>
-   <tile gid="2"/>
-   <tile gid="3"/>
-   <tile gid="2"/>
-   <tile gid="3"/>
-   <tile gid="1"/>
-   <tile gid="3"/>
    <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="1"/>
-   <tile gid="31"/>
-   <tile gid="8"/>
-   <tile gid="3"/>
-   <tile gid="2"/>
-   <tile gid="3"/>
-   <tile gid="1"/>
-   <tile gid="3"/>
-   <tile gid="3"/>
-   <tile gid="3"/>
-   <tile gid="2"/>
-   <tile gid="3"/>
-   <tile gid="3"/>
-   <tile gid="1"/>
-   <tile gid="31"/>
-   <tile gid="11"/>
-   <tile gid="2"/>
-   <tile gid="1"/>
-   <tile gid="1"/>
-   <tile gid="3"/>
-   <tile gid="2"/>
-   <tile gid="3"/>
-   <tile gid="1"/>
-   <tile gid="1"/>
-   <tile gid="3"/>
-   <tile gid="1"/>
-   <tile gid="1"/>
-   <tile gid="31"/>
-   <tile gid="8"/>
-   <tile gid="2"/>
-   <tile gid="3"/>
    <tile gid="2"/>
    <tile gid="2"/>
-   <tile gid="3"/>
-   <tile gid="1"/>
-   <tile gid="1"/>
    <tile gid="2"/>
    <tile gid="2"/>
-   <tile gid="3"/>
-   <tile gid="1"/>
-   <tile gid="31"/>
-   <tile gid="11"/>
-   <tile gid="1"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="1"/>
-   <tile gid="3"/>
    <tile gid="2"/>
-   <tile gid="3"/>
-   <tile gid="1"/>
-   <tile gid="3"/>
-   <tile gid="3"/>
-   <tile gid="1"/>
-   <tile gid="30"/>
-   <tile gid="8"/>
-   <tile gid="1"/>
-   <tile gid="1"/>
-   <tile gid="2"/>
-   <tile gid="2"/>
-   <tile gid="1"/>
-   <tile gid="3"/>
-   <tile gid="1"/>
-   <tile gid="1"/>
-   <tile gid="3"/>
-   <tile gid="3"/>
-   <tile gid="1"/>
-   <tile gid="31"/>
-   <tile gid="11"/>
-   <tile gid="1"/>
-   <tile gid="1"/>
-   <tile gid="2"/>
-   <tile gid="3"/>
-   <tile gid="3"/>
-   <tile gid="3"/>
-   <tile gid="2"/>
-   <tile gid="2"/>
-   <tile gid="3"/>
-   <tile gid="3"/>
-   <tile gid="2"/>
-   <tile gid="31"/>
-   <tile gid="8"/>
-   <tile gid="3"/>
-   <tile gid="3"/>
-   <tile gid="3"/>
-   <tile gid="3"/>
-   <tile gid="1"/>
-   <tile gid="1"/>
-   <tile gid="2"/>
-   <tile gid="1"/>
-   <tile gid="1"/>
-   <tile gid="3"/>
-   <tile gid="2"/>
-   <tile gid="31"/>
-   <tile gid="11"/>
-   <tile gid="1"/>
-   <tile gid="3"/>
-   <tile gid="3"/>
    <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="1"/>
    <tile gid="1"/>
-   <tile gid="3"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="1"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
    <tile gid="1"/>
    <tile gid="1"/>
    <tile gid="2"/>
-   <tile gid="31"/>
-   <tile gid="8"/>
-   <tile gid="1"/>
-   <tile gid="1"/>
-   <tile gid="1"/>
-   <tile gid="3"/>
-   <tile gid="1"/>
-   <tile gid="1"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="1"/>
    <tile gid="1"/>
    <tile gid="1"/>
-   <tile gid="31"/>
-   <tile gid="17"/>
-   <tile gid="16"/>
-   <tile gid="15"/>
-   <tile gid="16"/>
-   <tile gid="15"/>
-   <tile gid="16"/>
-   <tile gid="15"/>
-   <tile gid="16"/>
-   <tile gid="15"/>
-   <tile gid="16"/>
-   <tile gid="15"/>
-   <tile gid="16"/>
-   <tile gid="29"/>
+   <tile gid="1"/>
+   <tile gid="1"/>
+   <tile gid="1"/>
+   <tile gid="1"/>
+   <tile gid="1"/>
+   <tile gid="1"/>
+   <tile gid="1"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="1"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="1"/>
+   <tile gid="1"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="1"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="1"/>
+   <tile gid="1"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="1"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="1"/>
+   <tile gid="1"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="1"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="1"/>
+   <tile gid="1"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="1"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="1"/>
+   <tile gid="1"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="1"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="1"/>
+   <tile gid="1"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="1"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="1"/>
+   <tile gid="1"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="1"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="1"/>
+   <tile gid="1"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="1"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
   </data>
  </layer>
 </map>
