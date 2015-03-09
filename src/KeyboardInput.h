@@ -16,6 +16,11 @@ public:
      * @return true on a button press and false when it is lifted up.
      */
     bool getDirection(Vector2 &dir) const;
+
+    /**
+     * Resets keyboard direction to 0.
+     */
+    void resetDir();
     
 private:
     bool _pressed;

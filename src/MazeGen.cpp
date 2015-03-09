@@ -139,6 +139,31 @@ vector<vector<spRoom>> MazeGen::generate() {
 }
 
 
+int MazeGen::getSize() {
+    return _size;
+}
+
+void MazeGen::setSize(int size) {
+    _size = size;
+}
+
+pair<int, int> MazeGen::getEntrance() {
+    return _entrance;
+}
+
+void MazeGen::setEntrance(pair<int, int> entrance) {
+    _entrance = entrance;
+}
+
+pair<int, int> MazeGen::getExit() {
+    return _exit;
+}
+
+void MazeGen::setExit(pair<int, int> exit) {
+    _exit = exit;
+}
+
+
 /**
 * Creates a 2D map array using Prim's algorithm for minimum spanning trees.
 */

@@ -3,7 +3,14 @@
 #include <random>
 #include "Room.h"
 #include "Chest.h"
-#include "Skeleton.h"
+
+#include "Bat.h"
+#include "Snake.h"
+#include "Ghost.h"
+#include "Eyeball.h"
+#include "Worm.h"
+#include "Slime.h"
+
 
 using namespace std;
 
@@ -140,6 +147,79 @@ void Room::printMap() {
         }
         cout << endl;
     }
+}
+
+
+int Room::getSize() const {
+    return _size;
+}
+
+void Room::setSize(int size) {
+    _size = size;
+}
+
+Vector2 Room::getEntrance() {
+    return _entrance;
+}
+
+void Room::setEntrance(Vector2 entrance) {
+    _entrance = entrance;
+}
+
+vector<SDL_Rect> Room::getTiles() {
+    return _tiles;
+}
+
+void Room::setTiles(vector<SDL_Rect> tiles) {
+    _tiles = tiles;
+}
+
+list<spUnit>* Room::getUnits() {
+    return &_units;
+}
+
+int Room::getType() {
+    return _type;
+}
+
+vector<Vector2> Room::getExits() {
+    return _exits;
+}
+
+void Room::setExits(vector<Vector2> exits) {
+    _exits = exits;
+}
+
+int Room::getTop() {
+    return _top;
+}
+
+void Room::setTop(int top) {
+    _top = top;
+}
+
+int Room::getRight() {
+    return _right;
+}
+
+void Room::setRight(int right) {
+    _right = right;
+}
+
+int Room::getBottom() {
+    return _bottom;
+}
+
+void Room::setBottom(int bottom) {
+    _bottom = bottom;
+}
+
+int Room::getLeft() {
+    return _left;
+}
+
+void Room::setLeft(int left) {
+    _left = left;
 }
 
 
@@ -487,7 +567,8 @@ void Room::_drawOpenSpaces(int row, int column, bool isColumn) {
     }
     
     // Create a chest 1/3 of the time
-    int randChoice = _getRand(0, 2);
+    int randChoice = 0;
+    //_getRand(0, 2);
     if (randChoice == 0) {
         int chestRow = _getRand(roomRow, roomHeight) * 64;
         int chestCol = _getRand(roomCol, roomWidth) * 64;
@@ -495,15 +576,51 @@ void Room::_drawOpenSpaces(int row, int column, bool isColumn) {
         chest->setLocation(Vector2(chestCol, chestRow));
         _units.push_back(chest);
     }
-    
-    for(int i = 0; i < _getRand(0,5); i++){
-        int skeletonRow = _getRand(roomRow, roomHeight) * 64;
-        int skeletonCol = _getRand(roomCol, roomWidth) * 64;
-        spSkeleton skeleton = new Skeleton;
-        skeleton->setLocation(Vector2(skeletonCol, skeletonRow));
-        _units.push_back(skeleton);
-        
+
+    if(_units.size() < 3) {
+        int numOfSmall = _getRand(3, 6);
+        for (int i = 0; i < numOfSmall; i++) {
+            int rand = _getRand(1, 3);
+            int randRow = _getRand(roomRow, roomHeight) * 64;
+            int randCol = _getRand(roomCol, roomWidth) * 64;
+
+            if (rand == 1) {
+                spBat bat = new Bat;
+                bat->setLocation(Vector2(randCol, randRow));
+                _units.push_back(bat);
+            } else if (rand == 2) {
+                spSnake snake = new Snake;
+                snake->setLocation(Vector2(randCol, randRow));
+                _units.push_back(snake);
+            } else if (rand == 3) {
+                spSlime slime = new Slime;
+                slime->setLocation(Vector2(randCol, randRow));
+                _units.push_back(slime);
+            }
+        }
+
+        int numOfLarge = _getRand(1, 2);
+        for (int i = 0; i < numOfLarge; i++) {
+            int rand = _getRand(1, 3);
+            int randRow = _getRand(roomRow, roomHeight) * 64;
+            int randCol = _getRand(roomCol, roomWidth) * 64;
+
+            if (rand == 1) {
+                spWorm worm = new Worm;
+                worm->setLocation(Vector2(randCol, randRow));
+                _units.push_back(worm);
+            } else if (rand == 2) {
+                spEyeball eyeball = new Eyeball;
+                eyeball->setLocation(Vector2(randCol, randRow));
+                _units.push_back(eyeball);
+            } else if (rand == 3) {
+                spGhost ghost = new Ghost;
+                ghost->setLocation(Vector2(randCol, randRow));
+                _units.push_back(ghost);
+            }
+        }
     }
+    
 }
 
 

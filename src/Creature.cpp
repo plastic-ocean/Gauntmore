@@ -4,6 +4,7 @@
 #include "Potion.h"
 #include "Gold.h"
 #include "res.h"
+#include <cmath>
 
 
 /**
@@ -13,6 +14,7 @@ Creature::Creature() {
     setType("creature");
 //    PathFinder findPath = PathFinder(_game);
 }
+
 
 /**
  *
@@ -31,6 +33,7 @@ void Creature::_setContents() {
     }
 }
 
+
 /**
  *
  *
@@ -44,46 +47,44 @@ void Creature::_dropContents() {
 }
 
 
-/**
- * Reduces the creatures hit points.
- */
-//void Creature::_interact() {
-//    _hp--;
-//    if (_hp == 0) {
-//        // The creature is dead, hide it with an alpha tween.
-//        _dead = true;
-//        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-//        _dropContents();
-//    }
-//}
+void Creature::damage() {
+    _game->getPlayer()->updateHealth(-_attack);
+}
 
 
-/**
- * Initializes a creatures position and sprite. Called by Unit's init() method.
- */
-//void Creature::_init() {
-//    findPath.setGame(_game);//for collision detection
-//    
-//}
-
+Creature::Facing Creature::getFacing(Vector2 direction){
+    if((direction.x == 1 && direction.y == 0)){
+        // if direction is moving east or northeast or southeast
+        return right;
+    }else if ((direction.x == 0 && direction.y == 1)
+              || (direction.x == -1 && direction.y == 1)
+              || (direction.x == 1 && direction.y == 1)){
+        // if direction is moving north
+        return up;
+    }else if((direction.x == 0 && direction.y == -1)
+             || (direction.x == -1 && direction.y == -1)
+             || (direction.x == 1 && direction.y == -1)){
+        // if moving south
+        return down;
+    } else{
+        // if moving west or north west or south west
+        return left;
+    }
+}
 
 
 Vector2 Creature::moveMe() {
-     
-    return findPath.setDirection(getPosition() );}
+    return findPath.setDirection(getPosition() );
+}
 
 
-/**
- * Updates the creature every frame. Called by Units update() method.
- *
- * @us is the UpdateStatus sent by Unit's update method.
- */
-//void Creature::_update(const UpdateState &us) {
-////    Vector2 direction = moveMe();
-////    Vector2 position = getPosition();
-////    position += direction * (us.dt / 1000.0f) * _speed; //CHANGE ME!!!!!!!!!!!
-////    setPosition(position);
-//
-//}
-
-
+void Creature::_interact() {
+    int damage = _game->getPlayer()->getAttack();
+    _hp -= damage;
+    if (_hp == 0) {
+        // The creature is dead, hide it with an alpha tween.
+        _dead = true;
+        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
+        _dropContents();
+    }
+}

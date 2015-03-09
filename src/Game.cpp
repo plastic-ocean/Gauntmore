@@ -1,4 +1,5 @@
 #include <iostream>
+#include <list>
 
 #include "tmx/Tmx.h"
 
@@ -9,32 +10,53 @@
 #include "Player.h"
 
 #include "Creature.h"
-#include "Skeleton.h"
+
 #include "Slime.h"
+#include "Snake.h"
+#include "Bat.h"
+#include "Worm.h"
+#include "Eyeball.h"
+#include "Ghost.h"
 
 #include "Chest.h"
 #include "Gold.h"
 #include "Potion.h"
+#include "Armor.h"
+#include "Weapon.h"
 
 #include "Map.h"
 
 #include "HealthBar.h"
 #include "GoldCount.h"
 #include "ArmorCount.h"
+#include "WeaponCount.h"
 
 #include "PauseMenu.h"
+#include "StartMenu.h"
+#include "DeathMenu.h"
 
 
 /**
  * Constructor.
  */
-Game::Game():_isPaused(false) {
+Game::Game():_isPaused(false), _isFirstRun(true) {
     // Set the size of the scene to the size of the display.
     setSize(getStage()->getSize());
-    
+
     // Size is the number of tiles
     int size = 13;
-    
+
+    _things.push_back(new Armor(2));
+    _things.push_back(new Armor(3));
+    _things.push_back(new Weapon(2));
+    _things.push_back(new Weapon(3));
+
+    for (int i = 0; i < 38; i++) {
+        _things.push_back(new Gold);
+        _things.push_back(new Potion);
+
+    }
+
     // Create map
     _map = new Map(size);
     _renderMap();
@@ -48,32 +70,33 @@ Game::Game():_isPaused(false) {
             unit->init(unit->getLocation(), this);
         }
     }
- 
-    
 
-    _slime = new Slime();
-    _slime->init(Vector2((_map->getRoom()->getSize() / 2) * 64, (_map->getRoom()->getSize() / 2) * 64), this);
-    _map->getRoom()->getUnits()->push_back(_slime);
+//    _snake = new Snake();
+//    _snake->init(Vector2((_map->getRoom()->getSize() / 2) * 64, (_map->getRoom()->getSize() / 2) * 64), this);
+//    _map->getRoom()->getUnits()->push_back(_snake);
 
-    
+
     // Create player
-    _player = new Player(10, 1, 1);
+    _player = new Player(20, 1, 1);
     _player->init(_getEntrance(), this);
     _map->getRoom()->getUnits()->push_back(_player);
 
-    // Keyboard handler
-    _move = new KeyboardInput(this);
-    
+
+
     // Health bar
     _healthBar = new HealthBar(this);
-    
+
     // Gold count
     _goldCount = new GoldCount(this);
-    
+
     // Armor Count
     _armorCount = new ArmorCount(this);
 
-    
+    // Weapon Count
+    _weaponCount = new WeaponCount(this);
+
+    // Keyboard handler
+    _move = new KeyboardInput(this);
 }
 
 
@@ -92,7 +115,6 @@ void Game::switchRoom(int edge) {
     // Change to a new room in the maze.
     _map->changeRoom(edge);
     _renderMap();
-    _createTiles();
 
     // Get player entrance position
     int playerCol = 1;
@@ -141,6 +163,9 @@ void Game::switchRoom(int edge) {
     _healthBar->render();
     _goldCount->render();
     _armorCount->render();
+    _weaponCount->render();
+
+    _createTiles();
 }
 
 
@@ -183,7 +208,7 @@ bool Game::isExit(Vector2 position) {
 *
 * @num is the value to update by.
 */
-void Game::updateHealth(float value) {
+void Game::updateHealth(double value) {
     _healthBar->updateHealth(value);
 }
 
@@ -206,11 +231,133 @@ void Game::updateArmorCount(int value) {
     _armorCount->updateArmorCount(value);
 }
 
+/**
+ * Updates the weapon counter.
+ *
+ * @num is the value to update by.
+ */
+void Game::updateWeaponCount(int value) {
+    _weaponCount->updateWeaponCount(value);
+}
+
 
 void Game::pauseGame() {
     setPaused(true);
     getClock()->pause();
     PauseMenu::instance->show();
+}
+
+
+void Game::startGame() {
+    setFirstRun(false);
+    setPaused(true);
+    getClock()->pause();
+    StartMenu::instance->show();
+}
+
+
+void Game::killPlayer() {
+    setPaused(true);
+    getClock()->pause();
+    DeathMenu::instance->setGame(this);
+    DeathMenu::instance->show();
+}
+
+
+void Game::createNewGame() {
+    // Size is the number of tiles
+    int size = 13;
+
+    _things.clear();
+    _things.push_back(new Armor(2));
+    _things.push_back(new Armor(3));
+    _things.push_back(new Weapon(2));
+    _things.push_back(new Weapon(3));
+
+    for (int i = 0; i < 38; i++) {
+        _things.push_back(new Gold);
+        _things.push_back(new Potion);
+
+    }
+    
+    // Create map
+    _map = new Map(size);
+    _renderMap();
+    _createTiles();
+    
+    // Create Creatures and Things
+    list<spUnit> *units = _map->getRoom()->getUnits();
+    for (list<spUnit>::iterator i = units->begin(); i != units->end(); ++i) {
+        spUnit unit = *i;
+        if (unit->getType() != "player") {
+            unit->init(unit->getLocation(), this);
+        }
+    }
+    
+    // Create player
+    _player = new Player(20, 1, 1);
+    _player->init(_getEntrance(), this);
+    _map->getRoom()->getUnits()->push_back(_player);
+
+    setPaused(false);
+
+    // Keyboard handler
+    _move->resetDir();
+    
+    // Health bar
+    _healthBar = new HealthBar(this);
+    
+    // Gold count
+    _goldCount = new GoldCount(this);
+    
+    // Armor Count
+    _armorCount = new ArmorCount(this);
+}
+
+
+spPlayer Game::getPlayer() {
+    return _player;
+}
+
+
+spMap Game::getMap() {
+    return _map;
+}
+
+vector<SDL_Rect> Game::getTiles() {
+    return _tiles;
+}
+
+spKeyboardInput Game::getMove() {
+    return _move;
+}
+
+spHealthBar Game::getHealthBar() {
+    return _healthBar;
+}
+
+int Game::getTileSize() {
+    return tileSize;
+}
+
+void Game::setPaused(bool isPaused) {
+    _isPaused = isPaused;
+}
+
+bool Game::isPaused() {
+    return _isPaused;
+}
+
+void Game::setFirstRun(bool isFirstRun) {
+    _isFirstRun = isFirstRun;
+}
+
+bool Game::isFirstRun() {
+    return _isFirstRun;
+}
+
+list<spThing>* Game::getContentsList() {
+    return &_things;
 }
 
 
@@ -220,11 +367,14 @@ void Game::pauseGame() {
  * @us is the UpdateStatus sent by the global update method.
  */
 void Game::doUpdate(const UpdateState &us) {
+    if (isFirstRun()) {
+        startGame();
+    }
+    
     list<spUnit> *units = _map->getRoom()->getUnits();
     // Iterate through the unit list and call their update method. Then check for death.
     for (list<spUnit>::iterator i = units->begin(); i != units->end(); ) {
         spUnit unit = *i;
-//        cout << unit->getType() << endl;
         unit->update(us);
         if (unit->isDead()) {
             // If it is dead remove it from list.
@@ -234,6 +384,10 @@ void Game::doUpdate(const UpdateState &us) {
         }
     }
     
+    if (_player->isDead()) {
+        killPlayer();
+    }
+
     _createTiles();
 }
 
@@ -332,8 +486,9 @@ void Game::_createTiles() {
     for (list<spUnit>::iterator it = units->begin(); it != units->end(); ++it) {
         spUnit unit = *it;
         SDL_Rect unitRect = SDL_Rect();
-        unitRect.x = unit->getLocation().x + 20;
-        unitRect.y = unit->getLocation().y + 15;
+
+        unitRect.x = unit->getPosition().x + 20;
+        unitRect.y = unit->getPosition().y + 15;
         unitRect.h = 30;
         unitRect.w = 20;
         if (unit->getType() != "player" && !unit->isPotion()) {

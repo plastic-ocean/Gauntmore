@@ -10,12 +10,12 @@
  * Constructor.
  */
 Potion::Potion() {
-
+    setType("potion");
 }
 
 /**
- *
- *
+ *  Gets bounds of the unit Potion.
+ *  @return: SDL_Rect _bounds which is the bounds of Potion.
  */
 SDL_Rect Potion::getBounds() {
     Vector2 unitPosition = getPosition();
@@ -28,8 +28,7 @@ SDL_Rect Potion::getBounds() {
 }
 
 /**
- *
- *
+ *  Adds Sprite and attaches it to the game.
  */
 void Potion::addSprite() {
     _sprite = new Sprite;
@@ -39,8 +38,7 @@ void Potion::addSprite() {
 }
 
 /**
- *
- *
+ *  Boolean method to determine if the unit is a Potion.
  */
 bool Potion::isPotion() {
     return true;

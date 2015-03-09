@@ -10,7 +10,16 @@
 spStartMenu StartMenu::instance;
 
 
-StartMenu::StartMenu():_isReady(false) {
+/**
+ * Constructor.
+ */
+StartMenu::StartMenu():_selection(selectNewGame), _isVisible(false) {
+    _background = new Sprite;
+    _background->setResAnim(resources.getResAnim("start_menu_background"));
+    _background->setAnchor(Vector2(0.5f, 0.5f));
+    _background->setPosition(Vector2(768 / 2, 768 / 2));
+    _background->attachTo(_view);
+    
     _name = new Sprite;
     _name->setResAnim(resources.getResAnim("title"));
     _name->setAnchor(Vector2(0.5f, 0.5f));
@@ -18,16 +27,10 @@ StartMenu::StartMenu():_isReady(false) {
     _name->attachTo(_view);
     
     _newGame = new Sprite;
-    _newGame->setResAnim(resources.getResAnim("new_game"));
+    _newGame->setResAnim(resources.getResAnim("new_game_selected"));
     _newGame->setAnchor(Vector2(0.5f, 0.5f));
     _newGame->setPosition(Vector2(768 / 2, 768 / 2));
     _newGame->attachTo(_view);
-    
-//    _continue = new Sprite;
-//    _continue->setResAnim(resources.getResAnim("continue"));
-//    _continue->setAnchor(Vector2(0.5f, 0.5f));
-//    _continue->setPosition(Vector2(768 / 2, 768 / 2));
-//    _continue->attachTo(_view);
     
     _quit = new Sprite;
     _quit->setResAnim(resources.getResAnim("quit"));
@@ -39,30 +42,61 @@ StartMenu::StartMenu():_isReady(false) {
     Input::instance.addEventListener(Input::event_platform, CLOSURE(this, &StartMenu::_onEvent));
 }
 
+void StartMenu::setNewGame(string newGameImage) {
+    _newGame->setResAnim(resources.getResAnim(newGameImage));
+}
+
+void StartMenu::setQuit(string quitImage) {
+    _quit->setResAnim(resources.getResAnim(quitImage));
+}
+
+/**
+ * Keyboard event handler.
+ *
+ * @ev is the SDL event sent by the event listener.
+ */
 void StartMenu::_onEvent(Event *ev) {
     SDL_Event *event = (SDL_Event*) ev->userData;
     
-    if (event->type == SDL_KEYDOWN && event->key.repeat == 0 && _isReady) {
+    if (event->type == SDL_KEYDOWN && event->key.repeat == 0 && _isVisible) {
         switch (event->key.keysym.sym) {
             case SDLK_RETURN:
-                _isReady = false;
-                changeScene(GameScene::instance);
+                if (_selection == selectNewGame) {
+                    _isVisible = false;
+                    changeScene(GameScene::instance);
+                } else if (_selection == selectQuit) {
+                    core::requestQuit();
+                }
                 break;
+            case SDLK_UP:
+            case SDLK_w:
+            case SDLK_DOWN:
+            case SDLK_s:
             case SDLK_TAB:
-                // change selection
+                _selectNext();
                 break;
             default:
                 break;
         }
     }
-    
-    if (event->type == SDL_KEYUP && event->key.repeat == 0) {
-        switch (event->key.keysym.sym) {
-            case SDLK_ESCAPE:
-                _isReady = true;
-                break;
-            default:
-                break;
-        }
+}
+
+
+/**
+ * Selects the next item in the menu list.
+ */
+void StartMenu::_selectNext() {
+    if (_selection == selectNewGame) {
+        _selection = selectQuit;
+        setQuit("quit_selected");
+        setNewGame("new_game");
+    } else if (_selection == selectQuit) {
+        _selection = selectNewGame;
+        setQuit("quit");
+        setNewGame("new_game_selected");
     }
+}
+
+void StartMenu::_show() {
+    _isVisible = true;
 }

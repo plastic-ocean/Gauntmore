@@ -6,6 +6,8 @@
 //#include "SoundInstance.h"
 #include "GameScene.h"
 #include "PauseMenu.h"
+#include "StartMenu.h"
+#include "DeathMenu.h"
 #include "res.h"
 
 

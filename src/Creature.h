@@ -17,6 +17,10 @@ public:
     
     enum Facing {up, right, down, left};
     
+    Facing getFacing(Vector2 direction);
+    
+    virtual void damage();
+    
 //    Facing getFacing() {
 //        return _facing;
 //    }
@@ -30,6 +34,7 @@ public:
 //    virtual void move(Facing facing) = 0;
 
 protected:
+    time_t _lastTimeAttack;
     spThing _contents;
 
     PathFinder findPath;
@@ -62,7 +67,7 @@ protected:
     /**
      * Reduces the creature's hit points.
      */
-    virtual void _interact() = 0;
+    virtual void _interact();
     
     /**
      * Updates the creature every frame. Called by Units update() method.

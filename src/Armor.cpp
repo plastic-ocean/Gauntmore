@@ -8,13 +8,15 @@
 
 #include "Armor.h"
 #include "res.h"
-#include "game.h"
+#include "Game.h"
 #include "Player.h"
 
 /**
  *  Constructor.
  */
-Armor::Armor():_value(1) {
+Armor::Armor(int armorType):_value(armorType) {
+    _armorType = armorType;
+    setType("armor");
 }
 
 /**
@@ -27,7 +29,7 @@ SDL_Rect Armor::getBounds() {
     _bounds.y = unitPosition.y + 15;
     _bounds.h = 30;
     _bounds.w = 20;
-    
+
     return _bounds;
 }
 
@@ -36,7 +38,19 @@ SDL_Rect Armor::getBounds() {
  */
 void Armor::addSprite() {
     _sprite = new Sprite;
-    _sprite->addTween(TweenAnim(resources.getResAnim("armor")), 500, -1);;
+    
+    switch (_armorType) {
+        case 2:
+            _sprite->setResAnim(resources.getResAnim("armor2"));
+            break;
+        case 3:
+            _sprite->setResAnim(resources.getResAnim("armor3"));
+            break;
+        default:
+            break;
+    }
+    
+    
     _sprite->attachTo(_view);
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
 }
@@ -62,27 +76,20 @@ void Armor::_init() {
  */
 void Armor::_interact() {
     if (!isDead()) {
-        
-         cout << "_value: " << _value << endl;
-        
-        cout << "Defense: " << _game->getPlayer()->getDefense() << endl;
-      
         _game->getPlayer()->setDefense(_value);
         _game->updateArmorCount(_value);
         
-        
-        cout << "Defense: " << _game->getPlayer()->getDefense() << endl;
-        
-        // remove sprite
+        // Removes Sprite from game
         _view->addTween(Actor::TweenAlpha(0), 1500)->setDetachActor(true);
         _dead = true;
     }
 }
 
 /**
+ * Updates Armor every frame. Called by Units update() method.
  *
- *
+ * @us is the UpdateStatus sent by Unit's update method.
  */
 void Armor::_update(const UpdateState &us) {
-   
+
 }

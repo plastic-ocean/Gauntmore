@@ -21,11 +21,12 @@ void Gauntmore::init() {
     
     // Create scenes.
     GameScene::instance = new GameScene;
+    StartMenu::instance = new StartMenu;
     PauseMenu::instance = new PauseMenu;
-    
+    DeathMenu::instance = new DeathMenu;
+        
     // Setup music player and play music.
 //    _musicPlayer.play(resSounds.get("music"));
-    
     GameScene::instance->show();
 }
 
@@ -45,7 +46,9 @@ void Gauntmore::update() {
 void Gauntmore::destroy() {
 //    _musicPlayer.stop();
 //    SoundSystem::instance->stop();
+    DeathMenu::instance = 0;
     PauseMenu::instance = 0;
+    StartMenu::instance = 0;
     GameScene::instance = 0;
     freeResources();
 //    SoundSystem::instance->release();

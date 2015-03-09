@@ -13,7 +13,7 @@ class HealthBar : public Object {
 public:
     HealthBar(Game *game);
     void render();
-    void updateHealth(float damage);
+    void updateHealth(double damage);
     void setToMax();
     
 private:

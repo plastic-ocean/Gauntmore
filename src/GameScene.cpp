@@ -9,9 +9,6 @@ GameScene::GameScene() {
     _game->attachTo(_view);
     
     _game->setClock(new Clock);
-    
-    // Subscribe to hidden messages from PauseMenu
-//    PauseMenu::instance->addEventListener(GameScene::HiddenEvent::EVENT, CLOSURE(this, &GameScene::_onEvent));
 }
 
 void GameScene::_show() {

@@ -10,16 +10,8 @@ public:
     static spGameScene instance;
     GameScene();
     
-    void pauseGame();
-    
-    bool isPaused() {
-        return _isPaused;
-    }
-    
 private:
     spGame _game;
-    bool _isPaused;
-    void _onEvent(Event *ev);
     void _show();
     
 };

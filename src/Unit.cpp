@@ -21,9 +21,6 @@ void Unit::init(const Vector2 &pos, Game *game) {
     
     attachUnit();
     setPosition(pos);
-    
-    // Add to Game's units list.
-//    _game->pushUnit(this);
 
 	// Virtual method that is overload by children.
 	_init();
@@ -68,4 +65,52 @@ void Unit::update(const UpdateState &us) {
         setLocation(getPosition());
         _update(us);
     }
+}
+
+const Vector2& Unit::getPosition() {
+    return _view->getPosition();
+}
+
+void Unit::setPosition(const Vector2& position) {
+    _view->setPosition(position);
+}
+
+string Unit::getType() {
+    return _type;
+}
+
+void Unit::setType(string type) {
+    _type = type;
+}
+
+const bool Unit::isDead() {
+    return _dead;
+}
+
+int Unit::getHp() {
+    return _hp;
+}
+
+int Unit::getAttack() {
+    return _attack;
+}
+
+int Unit::getDefense() {
+    return _defense;
+}
+
+void Unit::setLocation(Vector2 location) {
+    _location = location;
+}
+
+Vector2 Unit::getLocation() {
+    return _location;
+}
+
+SDL_Rect Unit::getRect() {
+    return _rect;
+}
+
+void Unit::setRect(SDL_Rect rect) {
+    _rect = rect;
 }

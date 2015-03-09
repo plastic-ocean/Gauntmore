@@ -7,6 +7,7 @@
  *  Constructor.
  */
 Gold::Gold():_value(10) {
+    setType("gold");
 }
 
 /**

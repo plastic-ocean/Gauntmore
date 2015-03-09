@@ -13,30 +13,21 @@ public:
     MazeGen(int size);
 
     vector<vector<spRoom>> generate();
+    
+    
+    /* Getters and Setters */
 
-    int getSize() {
-        return _size;
-    }
+    int getSize();
 
-    void setSize(int size) {
-        _size = size;
-    }
+    void setSize(int size);
 
-    pair<int, int> getEntrance() {
-        return _entrance;
-    }
+    pair<int, int> getEntrance();
 
-    void setEntrance(pair<int, int> entrance) {
-        _entrance = entrance;
-    }
+    void setEntrance(pair<int, int> entrance);
 
-    pair<int, int> getExit() {
-        return _exit;
-    }
+    pair<int, int> getExit();
 
-    void setExit(pair<int, int> exit) {
-        _exit = exit;
-    }
+    void setExit(pair<int, int> exit);
 
 private:
     const static int _maxSize = 30;

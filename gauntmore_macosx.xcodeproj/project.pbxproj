@@ -16,6 +16,8 @@
 		049B57321871FBE900EF3C66 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049B57311871FBE900EF3C66 /* Cocoa.framework */; };
 		049B574A1871FBE900EF3C66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049B57491871FBE900EF3C66 /* Images.xcassets */; };
 		485AA5F31A9FF07300ED2895 /* NodeArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 485AA5F11A9FF07300ED2895 /* NodeArray.cpp */; };
+		530A07F11AAC0ECC0074D3C7 /* Weapon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530A07ED1AAC0ECC0074D3C7 /* Weapon.cpp */; };
+		530A07F21AAC0ECC0074D3C7 /* WeaponCount.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530A07EF1AAC0ECC0074D3C7 /* WeaponCount.cpp */; };
 		5328789D1A99A6EB00228299 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5328787C1A99A6EB00228299 /* base64.cpp */; };
 		5328789E1A99A6EB00228299 /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5328787E1A99A6EB00228299 /* tinyxml2.cpp */; };
 		5328789F1A99A6EB00228299 /* TmxEllipse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 532878811A99A6EB00228299 /* TmxEllipse.cpp */; };
@@ -45,6 +47,7 @@
 		5359D5991A96C6E600AE6365 /* Gauntmore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5359D5971A96C6E600AE6365 /* Gauntmore.cpp */; };
 		5359D5C71A9807AC00AE6365 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 5359D5C61A9807AC00AE6365 /* fonts */; };
 		53916D991AA36EC900B9164A /* PauseMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53916D971AA36EC900B9164A /* PauseMenu.cpp */; };
+		53945E6B1AA78AA700DF4A7B /* DeathMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53945E691AA78AA700DF4A7B /* DeathMenu.cpp */; };
 		539584391A999D000080A994 /* CollisionDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584371A999D000080A994 /* CollisionDetector.cpp */; };
 		5395845B1A99A42D0080A994 /* Chest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5395843A1A99A42D0080A994 /* Chest.cpp */; };
 		5395845C1A99A42D0080A994 /* Creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5395843C1A99A42D0080A994 /* Creature.cpp */; };
@@ -56,7 +59,6 @@
 		539584651A99A42D0080A994 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5395844E1A99A42D0080A994 /* Player.cpp */; };
 		539584661A99A42D0080A994 /* Potion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584501A99A42D0080A994 /* Potion.cpp */; };
 		539584671A99A42D0080A994 /* Room.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584521A99A42D0080A994 /* Room.cpp */; };
-		539584681A99A42D0080A994 /* Skeleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584541A99A42D0080A994 /* Skeleton.cpp */; };
 		539584691A99A42D0080A994 /* Thing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584561A99A42D0080A994 /* Thing.cpp */; };
 		5395846B1A99A42D0080A994 /* Unit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539584591A99A42D0080A994 /* Unit.cpp */; };
 		53B46C731A9E44EC00915203 /* NodeMinHeap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53B46C6D1A9E44EC00915203 /* NodeMinHeap.cpp */; };
@@ -65,6 +67,11 @@
 		53BCF11B1A8ED99F00BD6288 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53BCF1171A8ED99F00BD6288 /* GameScene.cpp */; };
 		53BCF11C1A8ED99F00BD6288 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53BCF1191A8ED99F00BD6288 /* Scene.cpp */; };
 		53C5BB971AA554970008BCD5 /* StartMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53C5BB951AA554970008BCD5 /* StartMenu.cpp */; };
+		711CB5E51AA918D3001130C3 /* Ghost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 711CB5E31AA918D3001130C3 /* Ghost.cpp */; };
+		711CB5EB1AA91B27001130C3 /* Bat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 711CB5E91AA91B27001130C3 /* Bat.cpp */; };
+		7199DCBD1AA91D2E00CA9293 /* Snake.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7199DCBB1AA91D2E00CA9293 /* Snake.cpp */; };
+		7199DCC31AA91DD000CA9293 /* Eyeball.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7199DCC11AA91DD000CA9293 /* Eyeball.cpp */; };
+		7199DCC91AA9202C00CA9293 /* Worm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7199DCC71AA9202C00CA9293 /* Worm.cpp */; };
 		9083BCF81AA1098F00D53A4D /* ArmorCount.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9083BCF61AA1098F00D53A4D /* ArmorCount.cpp */; };
 		908A75FD1A9FE03500162B36 /* Armor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 908A75FB1A9FE03500162B36 /* Armor.cpp */; };
 /* End PBXBuildFile section */
@@ -154,6 +161,10 @@
 		04A57D7E1872012A0068B1E5 /* SDL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL.xcodeproj; path = ".//SDL/Xcode/SDL/SDL.xcodeproj"; sourceTree = "<group>"; };
 		485AA5F11A9FF07300ED2895 /* NodeArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NodeArray.cpp; path = src/NodeArray.cpp; sourceTree = "<group>"; };
 		485AA5F21A9FF07300ED2895 /* NodeArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NodeArray.h; path = src/NodeArray.h; sourceTree = "<group>"; };
+		530A07ED1AAC0ECC0074D3C7 /* Weapon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Weapon.cpp; path = src/Weapon.cpp; sourceTree = "<group>"; };
+		530A07EE1AAC0ECC0074D3C7 /* Weapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Weapon.h; path = src/Weapon.h; sourceTree = "<group>"; };
+		530A07EF1AAC0ECC0074D3C7 /* WeaponCount.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WeaponCount.cpp; path = src/WeaponCount.cpp; sourceTree = "<group>"; };
+		530A07F01AAC0ECC0074D3C7 /* WeaponCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeaponCount.h; path = src/WeaponCount.h; sourceTree = "<group>"; };
 		5328787C1A99A6EB00228299 /* base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = base64.cpp; sourceTree = "<group>"; };
 		5328787D1A99A6EB00228299 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
 		5328787E1A99A6EB00228299 /* tinyxml2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml2.cpp; sourceTree = "<group>"; };
@@ -207,6 +218,8 @@
 		5359D5C61A9807AC00AE6365 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fonts; path = data/fonts; sourceTree = "<group>"; };
 		53916D971AA36EC900B9164A /* PauseMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PauseMenu.cpp; path = src/PauseMenu.cpp; sourceTree = "<group>"; };
 		53916D981AA36EC900B9164A /* PauseMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PauseMenu.h; path = src/PauseMenu.h; sourceTree = "<group>"; };
+		53945E691AA78AA700DF4A7B /* DeathMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DeathMenu.cpp; path = src/DeathMenu.cpp; sourceTree = "<group>"; };
+		53945E6A1AA78AA700DF4A7B /* DeathMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeathMenu.h; path = src/DeathMenu.h; sourceTree = "<group>"; };
 		539584371A999D000080A994 /* CollisionDetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CollisionDetector.cpp; path = src/CollisionDetector.cpp; sourceTree = "<group>"; };
 		539584381A999D000080A994 /* CollisionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollisionDetector.h; path = src/CollisionDetector.h; sourceTree = "<group>"; };
 		5395843A1A99A42D0080A994 /* Chest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Chest.cpp; path = src/Chest.cpp; sourceTree = "<group>"; };
@@ -229,8 +242,6 @@
 		539584511A99A42D0080A994 /* Potion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Potion.h; path = src/Potion.h; sourceTree = "<group>"; };
 		539584521A99A42D0080A994 /* Room.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Room.cpp; path = src/Room.cpp; sourceTree = "<group>"; };
 		539584531A99A42D0080A994 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Room.h; path = src/Room.h; sourceTree = "<group>"; };
-		539584541A99A42D0080A994 /* Skeleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Skeleton.cpp; path = src/Skeleton.cpp; sourceTree = "<group>"; };
-		539584551A99A42D0080A994 /* Skeleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Skeleton.h; path = src/Skeleton.h; sourceTree = "<group>"; };
 		539584561A99A42D0080A994 /* Thing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Thing.cpp; path = src/Thing.cpp; sourceTree = "<group>"; };
 		539584571A99A42D0080A994 /* Thing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Thing.h; path = src/Thing.h; sourceTree = "<group>"; };
 		539584591A99A42D0080A994 /* Unit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Unit.cpp; path = src/Unit.cpp; sourceTree = "<group>"; };
@@ -247,6 +258,16 @@
 		53BCF11A1A8ED99F00BD6288 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Scene.h; path = src/Scene.h; sourceTree = "<group>"; };
 		53C5BB951AA554970008BCD5 /* StartMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StartMenu.cpp; path = src/StartMenu.cpp; sourceTree = "<group>"; };
 		53C5BB961AA554970008BCD5 /* StartMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StartMenu.h; path = src/StartMenu.h; sourceTree = "<group>"; };
+		711CB5E31AA918D3001130C3 /* Ghost.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Ghost.cpp; path = src/Ghost.cpp; sourceTree = "<group>"; };
+		711CB5E41AA918D3001130C3 /* Ghost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ghost.h; path = src/Ghost.h; sourceTree = "<group>"; };
+		711CB5E91AA91B27001130C3 /* Bat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Bat.cpp; path = src/Bat.cpp; sourceTree = "<group>"; };
+		711CB5EA1AA91B27001130C3 /* Bat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bat.h; path = src/Bat.h; sourceTree = "<group>"; };
+		7199DCBB1AA91D2E00CA9293 /* Snake.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Snake.cpp; path = src/Snake.cpp; sourceTree = "<group>"; };
+		7199DCBC1AA91D2E00CA9293 /* Snake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Snake.h; path = src/Snake.h; sourceTree = "<group>"; };
+		7199DCC11AA91DD000CA9293 /* Eyeball.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Eyeball.cpp; path = src/Eyeball.cpp; sourceTree = "<group>"; };
+		7199DCC21AA91DD000CA9293 /* Eyeball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Eyeball.h; path = src/Eyeball.h; sourceTree = "<group>"; };
+		7199DCC71AA9202C00CA9293 /* Worm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Worm.cpp; path = src/Worm.cpp; sourceTree = "<group>"; };
+		7199DCC81AA9202C00CA9293 /* Worm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Worm.h; path = src/Worm.h; sourceTree = "<group>"; };
 		9083BCF61AA1098F00D53A4D /* ArmorCount.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ArmorCount.cpp; path = src/ArmorCount.cpp; sourceTree = "<group>"; };
 		9083BCF71AA1098F00D53A4D /* ArmorCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArmorCount.h; path = src/ArmorCount.h; sourceTree = "<group>"; };
 		908A75FB1A9FE03500162B36 /* Armor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Armor.cpp; path = src/Armor.cpp; sourceTree = "<group>"; };
@@ -359,15 +380,12 @@
 				534097851A896C0A000434F6 /* KeyboardInput.h */,
 				5340977F1A896C0A000434F6 /* main.cpp */,
 				532878BD1A9BA09000228299 /* map */,
+				53945E6F1AA78B2500DF4A7B /* menus */,
 				53B46C781A9E44F500915203 /* pathfinding */,
-				53916D971AA36EC900B9164A /* PauseMenu.cpp */,
-				53916D981AA36EC900B9164A /* PauseMenu.h */,
 				534097881A896C0A000434F6 /* res.cpp */,
 				534097891A896C0A000434F6 /* res.h */,
 				53BCF1191A8ED99F00BD6288 /* Scene.cpp */,
 				53BCF11A1A8ED99F00BD6288 /* Scene.h */,
-				53C5BB951AA554970008BCD5 /* StartMenu.cpp */,
-				53C5BB961AA554970008BCD5 /* StartMenu.h */,
 				5328787B1A99A6EB00228299 /* tmx */,
 				532878BE1A9BA15500228299 /* units */,
 			);
@@ -429,12 +447,14 @@
 		532878BC1A9BA07900228299 /* hud */ = {
 			isa = PBXGroup;
 			children = (
+				9083BCF61AA1098F00D53A4D /* ArmorCount.cpp */,
+				9083BCF71AA1098F00D53A4D /* ArmorCount.h */,
 				539584401A99A42D0080A994 /* GoldCount.cpp */,
 				539584411A99A42D0080A994 /* GoldCount.h */,
 				539584441A99A42D0080A994 /* HealthBar.cpp */,
 				539584451A99A42D0080A994 /* HealthBar.h */,
-				9083BCF61AA1098F00D53A4D /* ArmorCount.cpp */,
-				9083BCF71AA1098F00D53A4D /* ArmorCount.h */,
+				530A07EF1AAC0ECC0074D3C7 /* WeaponCount.cpp */,
+				530A07F01AAC0ECC0074D3C7 /* WeaponCount.h */,
 			);
 			name = hud;
 			sourceTree = "<group>";
@@ -457,24 +477,34 @@
 			children = (
 				908A75FB1A9FE03500162B36 /* Armor.cpp */,
 				908A75FC1A9FE03500162B36 /* Armor.h */,
+				711CB5E91AA91B27001130C3 /* Bat.cpp */,
+				711CB5EA1AA91B27001130C3 /* Bat.h */,
 				5395843A1A99A42D0080A994 /* Chest.cpp */,
 				5395843B1A99A42D0080A994 /* Chest.h */,
 				5395843C1A99A42D0080A994 /* Creature.cpp */,
 				5395843D1A99A42D0080A994 /* Creature.h */,
+				7199DCC11AA91DD000CA9293 /* Eyeball.cpp */,
+				7199DCC21AA91DD000CA9293 /* Eyeball.h */,
+				711CB5E31AA918D3001130C3 /* Ghost.cpp */,
+				711CB5E41AA918D3001130C3 /* Ghost.h */,
 				5395843E1A99A42D0080A994 /* Gold.cpp */,
 				5395843F1A99A42D0080A994 /* Gold.h */,
 				5395844E1A99A42D0080A994 /* Player.cpp */,
 				5395844F1A99A42D0080A994 /* Player.h */,
 				539584501A99A42D0080A994 /* Potion.cpp */,
 				539584511A99A42D0080A994 /* Potion.h */,
-				539584541A99A42D0080A994 /* Skeleton.cpp */,
-				539584551A99A42D0080A994 /* Skeleton.h */,
 				532878B81A9A6AA700228299 /* Slime.cpp */,
 				532878B91A9A6AA700228299 /* Slime.h */,
+				7199DCBB1AA91D2E00CA9293 /* Snake.cpp */,
+				7199DCBC1AA91D2E00CA9293 /* Snake.h */,
 				539584561A99A42D0080A994 /* Thing.cpp */,
 				539584571A99A42D0080A994 /* Thing.h */,
 				539584591A99A42D0080A994 /* Unit.cpp */,
 				5395845A1A99A42D0080A994 /* Unit.h */,
+				530A07ED1AAC0ECC0074D3C7 /* Weapon.cpp */,
+				530A07EE1AAC0ECC0074D3C7 /* Weapon.h */,
+				7199DCC71AA9202C00CA9293 /* Worm.cpp */,
+				7199DCC81AA9202C00CA9293 /* Worm.h */,
 			);
 			name = units;
 			sourceTree = "<group>";
@@ -485,6 +515,19 @@
 				5359D5871A96BAE000AE6365 /* liboxygine-sound.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		53945E6F1AA78B2500DF4A7B /* menus */ = {
+			isa = PBXGroup;
+			children = (
+				53945E691AA78AA700DF4A7B /* DeathMenu.cpp */,
+				53945E6A1AA78AA700DF4A7B /* DeathMenu.h */,
+				53916D971AA36EC900B9164A /* PauseMenu.cpp */,
+				53916D981AA36EC900B9164A /* PauseMenu.h */,
+				53C5BB951AA554970008BCD5 /* StartMenu.cpp */,
+				53C5BB961AA554970008BCD5 /* StartMenu.h */,
+			);
+			name = menus;
 			sourceTree = "<group>";
 		};
 		53B46C781A9E44F500915203 /* pathfinding */ = {
@@ -634,19 +677,24 @@
 			files = (
 				5395845B1A99A42D0080A994 /* Chest.cpp in Sources */,
 				532878A51A99A6EB00228299 /* TmxObjectGroup.cpp in Sources */,
+				7199DCC91AA9202C00CA9293 /* Worm.cpp in Sources */,
 				5328789D1A99A6EB00228299 /* base64.cpp in Sources */,
 				53B46C7A1A9E476900915203 /* PathNode.cpp in Sources */,
+				530A07F11AAC0ECC0074D3C7 /* Weapon.cpp in Sources */,
 				53916D991AA36EC900B9164A /* PauseMenu.cpp in Sources */,
 				534097AD1A896C0A000434F6 /* main.cpp in Sources */,
 				53B46C741A9E44EC00915203 /* PathFinder.cpp in Sources */,
 				532878A31A99A6EB00228299 /* TmxMap.cpp in Sources */,
+				711CB5E51AA918D3001130C3 /* Ghost.cpp in Sources */,
 				539584611A99A42D0080A994 /* Map.cpp in Sources */,
 				5328789F1A99A6EB00228299 /* TmxEllipse.cpp in Sources */,
 				532878AA1A99A6EB00228299 /* TmxTileset.cpp in Sources */,
 				539584661A99A42D0080A994 /* Potion.cpp in Sources */,
+				7199DCBD1AA91D2E00CA9293 /* Snake.cpp in Sources */,
 				532878BA1A9A6AA700228299 /* Slime.cpp in Sources */,
 				532878A21A99A6EB00228299 /* TmxLayer.cpp in Sources */,
-				539584681A99A42D0080A994 /* Skeleton.cpp in Sources */,
+				530A07F21AAC0ECC0074D3C7 /* WeaponCount.cpp in Sources */,
+				711CB5EB1AA91B27001130C3 /* Bat.cpp in Sources */,
 				534097B21A896C0A000434F6 /* res.cpp in Sources */,
 				532878AB1A99A6EB00228299 /* TmxUtil.cpp in Sources */,
 				539584391A999D000080A994 /* CollisionDetector.cpp in Sources */,
@@ -673,9 +721,11 @@
 				5395845D1A99A42D0080A994 /* Gold.cpp in Sources */,
 				5328789E1A99A6EB00228299 /* tinyxml2.cpp in Sources */,
 				53C5BB971AA554970008BCD5 /* StartMenu.cpp in Sources */,
+				53945E6B1AA78AA700DF4A7B /* DeathMenu.cpp in Sources */,
 				53BCF11C1A8ED99F00BD6288 /* Scene.cpp in Sources */,
 				532878A91A99A6EB00228299 /* TmxTile.cpp in Sources */,
 				539584601A99A42D0080A994 /* HealthBar.cpp in Sources */,
+				7199DCC31AA91DD000CA9293 /* Eyeball.cpp in Sources */,
 				534097AE1A896C0A000434F6 /* Game.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

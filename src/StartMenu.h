@@ -12,24 +12,37 @@ class StartMenu : public Scene {
     
 public:
     static spStartMenu instance;
+    enum Selection {selectNewGame, selectQuit};
     
     StartMenu();
     
-    void setNewGame(string newGame) {
-        // pass the new image string
-    }
     
-    void setQuit(string quit) {
-        // pass the new image string
-    }
+    /* Getters and setters */
+    
+    void setNewGame(string newGameImage);
+    
+    void setQuit(string quitImage);
     
 private:
+    Selection _selection;
+    spSprite _background;
     spSprite _name;
-    spSprite _continue;
     spSprite _newGame;
     spSprite _quit;
+    bool _isVisible;
     
-    bool _isReady;
+    /**
+     * Keyboard event handler.
+     *
+     * @ev is the SDL event sent by the event listener.
+     */
     void _onEvent(Event *ev);
     
+    /**
+     * Selects the next item in the menu list.
+     */
+    void _selectNext();
+    
+    void _show();
+
 };

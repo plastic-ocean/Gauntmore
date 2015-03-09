@@ -22,8 +22,7 @@
  */
 PathFinder::PathFinder():loc(0) {}
 
-PathFinder::PathFinder(Game *game):_game(game) {
-    loc = 0;
+PathFinder::PathFinder(Game *game):_game(game), loc(0) {
 }
 
 PathFinder::~PathFinder() {
@@ -69,7 +68,7 @@ void PathFinder::addNode(PathNode *node) {
 
 int PathFinder::findHeuristic( Vector2 curLoc ) {
     int temp = abs( curLoc.x - this->target.x ) + abs( curLoc.y - this->target.y );
-    if ( coll.detectWalls(_game->getTiles(), (int)curLoc.x, (int)curLoc.y, 64, 64) ) return 99999;
+    if ( coll.detect(_game->getTiles(), (int)curLoc.x, (int)curLoc.y, 64, 64) ) return 99999;
     
     return temp;
 }
@@ -81,7 +80,6 @@ void PathFinder::scanSurround( PathNode *node ) {
     temp.y -= mapSize;
     int summ = 12;//something more clever goes here
     int flip = -2;
-    
     for ( int i = 0; i < 3; i++ ) {
         for ( int j = 0; j < 3; j++ ) {
             flip *= (-1);
@@ -154,10 +152,10 @@ Vector2 PathFinder::fixDirection(Vector2 position, Vector2 direction) {
     int newX = position.x + (direction.x * 5);
     int newY = position.y + (direction.y * 5);
     
-    if ( coll.detectWalls(_game->getTiles(), newX, position.y, 30, 30) ) {
+    if ( coll.detect(_game->getTiles(), newX, position.y, 30, 30) ) {
         direction.x = 0;
     }
-    if ( coll.detectWalls(_game->getTiles(), position.x, newY, 32, 32) ) {
+    if ( coll.detect(_game->getTiles(), position.x, newY, 32, 32) ) {
         direction.y = 0;
     }
  
@@ -166,7 +164,7 @@ Vector2 PathFinder::fixDirection(Vector2 position, Vector2 direction) {
 
 bool PathFinder::inClosedList( PathNode node ) {
     int size = loc;
-    for (int i = 0; i<size;i++ ) {
+    for (int i = 0; i < size; i++) {
         if ( closedList[i].getLocation() == node.getLocation() ) return true;
     }
     return false;

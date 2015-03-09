@@ -52,6 +52,39 @@ void Map::changeRoom(int edge) {
 }
 
 
+spRoom Map::getRoom() {
+    return _room;
+}
+
+void Map::setRoom(spRoom &room) {
+    _room = room;
+}
+
+vector<vector<spRoom>> Map::getRoomMap() {
+    return _roomMap;
+}
+
+void Map::setRoomMap(vector<vector<spRoom>> roomMap) {
+    _roomMap = roomMap;
+}
+
+int Map::getCol() const {
+    return _col;
+}
+
+void Map::setCol(int col) {
+    Map::_col = col;
+}
+
+int Map::getRow() const {
+    return _row;
+}
+
+void Map::setRow(int row) {
+    Map::_row = row;
+}
+
+
 /**
 * Checks if the current room is an outside room.
 *

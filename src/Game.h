@@ -6,6 +6,7 @@
 #include "HealthBar.h"
 #include "KeyboardInput.h"
 #include "Map.h"
+#include "Thing.h"
 
 using namespace oxygine;
 using namespace std;
@@ -13,12 +14,18 @@ using namespace std;
 DECLARE_SMART(Unit, spUnit);
 DECLARE_SMART(Player, spPlayer);
 DECLARE_SMART(Creature, spCreature);
-DECLARE_SMART(Skeleton, spSkeleton);
+
+DECLARE_SMART(Bat, spBat);
+DECLARE_SMART(Snake, spSnake);
 DECLARE_SMART(Slime, spSlime);
+DECLARE_SMART(Ghost, spGhost);
+DECLARE_SMART(Eyeball, spEyeball);
+DECLARE_SMART(Worm, spWorm);
 
 DECLARE_SMART(HealthBar, spHealthBar);
 DECLARE_SMART(GoldCount, spGoldCount);
 DECLARE_SMART(ArmorCount, spArmorCount);
+DECLARE_SMART(WeaponCount, spWeaponCount);
 
 DECLARE_SMART(Chest, spChest);
 DECLARE_SMART(Gold, spGold);
@@ -56,7 +63,7 @@ public:
      *
      * @num is the value to update by.
      */
-    void updateHealth(float value);
+    void updateHealth(double value);
 
     /**
      * Updates the gold counter.
@@ -73,41 +80,43 @@ public:
     void updateArmorCount(int value);
     
     void pauseGame();
+    
+    void startGame();
+    
+    void killPlayer();
+    
+    void createNewGame();
 
+    /**
+     * Updates the weapon counter.
+     *
+     * @num is the value to update by.
+     */
+    void updateWeaponCount(int value);
 
     /* Getters and Setters */
 
-    spPlayer getPlayer() {
-        return _player;
-    }
+    spPlayer getPlayer();
 
-    spMap getMap() {
-        return _map;
-    }
+    spMap getMap();
 
-    vector<SDL_Rect> getTiles() {
-        return _tiles;
-    }
+    vector<SDL_Rect> getTiles();
 
-    spKeyboardInput getMove() {
-        return _move;
-    }
+    spKeyboardInput getMove();
 
-    spHealthBar getHealthBar() {
-        return _healthBar;
-    }
+    spHealthBar getHealthBar();
 
-    int getTileSize() {
-        return tileSize;
-    }
+    int getTileSize();
     
-    void setPaused(bool isPaused) {
-        _isPaused = isPaused;
-    }
+    void setPaused(bool isPaused);
     
-    bool isPaused() {
-        return _isPaused;
-    }
+    bool isPaused();
+    
+    void setFirstRun(bool isFirstRun);
+    
+    bool isFirstRun();
+
+    list<spThing>* getContentsList();
 
 protected:
     const int tileSize = 64;
@@ -116,11 +125,17 @@ protected:
     vector<SDL_Rect> _tiles;
     list<SDL_Rect> _units;
     
+    list<spThing> _things;
+    
     spKeyboardInput _move;
     spPlayer _player;
     
-    spSkeleton _skeleton;
+    spBat _bat;
+    spSnake _snake;
     spSlime _slime;
+    spWorm _worm;
+    spEyeball _eyeball;
+    spGhost _ghost;
     
     spChest _chest;
     spGold _gold;
@@ -129,8 +144,10 @@ protected:
     spHealthBar _healthBar;
     spGoldCount _goldCount;
     spArmorCount _armorCount;
+    spWeaponCount _weaponCount;
     
     bool _isPaused;
+    bool _isFirstRun;
     
     /**
      * Updates the player each frame. A virtual method of Actor it is being called each frame.

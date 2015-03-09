@@ -20,13 +20,13 @@ CollisionDetector::CollisionDetector() {}
  * @w is the sprite's width.
  * @return true if there is a collision, false if not.
  */
-bool CollisionDetector::detectWalls(vector<SDL_Rect> tiles, int x, int y, int h, int w) {
+bool CollisionDetector::detect(vector<SDL_Rect> tiles, int x, int y, int h, int w) {
     bool isCollision = false;
     SDL_Rect spriteRect;
-    spriteRect.x = x + 10;
-    spriteRect.y = y + 12;
-    spriteRect.h = h - 14;
-    spriteRect.w = w - 24;
+    spriteRect.x = x;
+    spriteRect.y = y;
+    spriteRect.h = h;
+    spriteRect.w = w;
     
     // Iterate through the tiles vector to see if the spriteRect collides with the tile.
     const SDL_Rect *sprite = &spriteRect;
@@ -51,13 +51,13 @@ bool CollisionDetector::detectWalls(vector<SDL_Rect> tiles, int x, int y, int h,
  * @w is the sprite's width.
  * @return true if there is a collision, false if not.
  */
-bool CollisionDetector::detectUnits(list<spUnit> *units, int x, int y, int h, int w) {
+bool CollisionDetector::detectPotions(list<spUnit> *units, int x, int y, int h, int w) {
     bool isCollision = false;
     SDL_Rect spriteRect;
-    spriteRect.x = x + 10;
-    spriteRect.y = y + 12;
-    spriteRect.h = h - 14;
-    spriteRect.w = w - 24;
+    spriteRect.x = x;
+    spriteRect.y = y;
+    spriteRect.h = h;
+    spriteRect.w = w;
     
     // Detect potion collisions for pickup
     const SDL_Rect *sprite = &spriteRect;

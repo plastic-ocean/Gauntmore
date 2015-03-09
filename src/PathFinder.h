@@ -12,7 +12,7 @@ class Game;
 class PathFinder : public Object {
 public:
     PathFinder();
-    PathFinder(Game * game);
+    PathFinder(Game *game);
     ~PathFinder();
     int findHeuristic( Vector2 );
     vector<Vector2> aStar( Vector2, Vector2 );
@@ -32,7 +32,7 @@ private:
     bool inClosedList( PathNode node );
     bool atExit( PathNode );
     std::vector<Vector2> makePath(PathNode);
-    PathNode closedList[10000];
+    PathNode closedList[1000];
     void addNode(PathNode*);
     int loc;
     CollisionDetector coll;
