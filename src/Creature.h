@@ -6,7 +6,6 @@
 #include "Game.h"
 #include "Player.h"
 #include "Thing.h"
-#include "CreatureMover.h"
 
 
 DECLARE_SMART(Creature, spCreature);
@@ -26,7 +25,6 @@ protected:
     spThing _contents;
 
     PathFinder findPath;
-    CreatureMover moveQ;
 
     /**
      *

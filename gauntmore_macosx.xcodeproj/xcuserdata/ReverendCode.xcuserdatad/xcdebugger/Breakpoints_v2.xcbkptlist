@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "src/PathFinder.cpp"
-            timestampString = "447295885.312824"
+            timestampString = "447567698.527744"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "PathFinder::aStar(Vector2 start, Vector2 finish )"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "PathFinder::setDirection(Vector2 cPos)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,18 +26,25 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "src/PathFinder.cpp"
-            timestampString = "447295885.312824"
+            timestampString = "447563868.063653"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "PathFinder::aStar(Vector2 start, Vector2 finish )"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "PathFinder::setDirection(Vector2 cPos)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+<<<<<<< HEAD
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "src/PathFinder.cpp"
+            timestampString = "447567698.527744"
+=======
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -151,11 +158,12 @@
             continueAfterRunningActions = "No"
             filePath = "src/NodeArray.cpp"
             timestampString = "447294643.175451"
+>>>>>>> keith
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "NodeArray::arrayDouble()"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "PathFinder::fixDirection(Vector2 position, Vector2 direction)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

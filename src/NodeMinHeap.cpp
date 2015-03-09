@@ -1,23 +1,35 @@
 #include "NodeMinHeap.h"
 
+
+/*
+Default Constructor
+ */
 NodeMinHeap::NodeMinHeap() {
     //default constructor, do nothing
 }
 
-NodeMinHeap::NodeMinHeap( PathNode head ) {
-}
 
+/*
+ Destructor
+ */
 NodeMinHeap::~NodeMinHeap(){}
 
+
+/*
+ Adds a node to the openlist
+ @node is a pointer to the node to be inserted
+ */
 void NodeMinHeap::insertNode( PathNode *node ) {
-    
-    theHeap.push_back(node);
-//    cout << "size: " << theHeap.getSize() << endl;
-    
-    bubbleUp( theHeap.getSize()-1 );
-    
+    if ( theHeap.getSize() < 999 ){
+        theHeap.push_back(node);
+        bubbleUp( theHeap.getSize()-1 );
+    }
 }
 
+
+/*
+ empties the heap to allow for a clean slate
+ */
 void NodeMinHeap::clearHeap() {
     NodeArray newArray = NodeArray();
     
@@ -26,6 +38,9 @@ void NodeMinHeap::clearHeap() {
 }
 
 
+/*
+ Returns the root of the minHeap
+ */
 PathNode NodeMinHeap::getMinNode() {
     
     PathNode temp = *theHeap.getFront();//copy head to temp
@@ -35,11 +50,27 @@ PathNode NodeMinHeap::getMinNode() {
     return temp;//return old head
 }
 
+
+/*
+ Returns the number of elements in the heap
+ */
 int NodeMinHeap::getSize() {
     return theHeap.getSize();
 }
 
 
+/*
+ Checks if the heap is empty
+ */
+bool NodeMinHeap::empty() {
+    return theHeap.getSize() == 0;
+}
+
+
+/*
+ Moves a node from the bottom of the heap to it's proper place
+ @pos is the location in the heap of the node being bubbled
+ */
 void NodeMinHeap::bubbleUp(int pos) {
     if ( pos == 0 ) return;
     int parent = (pos/2);
@@ -49,10 +80,11 @@ void NodeMinHeap::bubbleUp(int pos) {
     bubbleUp(parent);
 }
 
-bool NodeMinHeap::empty() {
-    return theHeap.getSize() == 0;
-}
 
+/*
+ takes a node at the 'top' of the heap, and has it sink to it's proper level
+ @pos is location of the node in the heap
+ */
 void NodeMinHeap::filterDown(int pos) {
     //check if you are out of scope
     int child = (pos*2);
