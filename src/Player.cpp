@@ -23,6 +23,7 @@ Player::Player(int hp, int attack, int defense):_hasTween(false), _facing(down),
     _maxHealth = hp;
     _attack = attack;
     _defense = defense;
+    _speed = 300;
 }
 
 

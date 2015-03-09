@@ -19,8 +19,11 @@ public:
     Facing getFacing(Vector2 direction);
     
     void damage();
+    
+    virtual void move() = 0;
 
 protected:
+    Facing _facing;
     time_t _lastTimeAttack;
     spThing _contents;
 
@@ -47,21 +50,21 @@ protected:
     void _dropContents();
     
     /**
-     * Initializes a creatures position and sprite. Called by Unit's init() method.
-     */
-    virtual void _init() = 0;
-    
-    /**
-     * Reduces the creature's hit points.
-     */
-    virtual void _interact();
-    
-    /**
      * Updates the creature every frame. Called by Units update() method.
      *
      * @us is the UpdateStatus sent by Unit's update method.
      */
-    virtual void _update(const UpdateState &us) = 0;
+    void _update(const UpdateState &us);
+    
+    /**
+     * Reduces the creature's hit points.
+     */
+    void _interact();
+    
+    /**
+     * Initializes a creatures position and sprite. Called by Unit's init() method.
+     */
+    virtual void _init() = 0;
 };
 
 #endif /* defined(__gauntmore__Creature__) */

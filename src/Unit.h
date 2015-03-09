@@ -118,7 +118,7 @@ protected:
     int _hp;
     int _attack;
     int _defense;
-    int _speed = 300; //****FIX ME******
+    int _speed;
     int _attackSpeed;
     
     // Indicates if unit is dead. Set by damage() and retrieved with isDead().
