@@ -8,7 +8,6 @@ using namespace oxygine;
 
 
 DECLARE_SMART(DeathMenu, spDeathMenu);
-class Game;
 class DeathMenu : public Menu {
     
 public:

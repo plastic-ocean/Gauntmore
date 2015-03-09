@@ -8,7 +8,6 @@ using namespace oxygine;
 
 
 DECLARE_SMART(PauseMenu, spPauseMenu);
-class Game;
 class PauseMenu : public Scene {
 
 public:

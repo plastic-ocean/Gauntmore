@@ -3,6 +3,9 @@
 
 spGameScene GameScene::instance;
 
+/**
+ * Constructor.
+ */
 GameScene::GameScene() {
     // Create game actor.
     _game = new Game;

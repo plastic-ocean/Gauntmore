@@ -44,7 +44,7 @@ DeathMenu::DeathMenu():_selection(selectNewGame), _isVisible(false) {
     _quit->setPosition(Vector2(768 / 2, 768 / 2 + _quit->getHeight() + 50));
     _quit->attachTo(_view);
     
-    // Add escape key listener
+    // Add keyboard listener
     Input::instance.addEventListener(Input::event_platform, CLOSURE(this, &DeathMenu::_onEvent));
 }
 

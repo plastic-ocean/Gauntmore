@@ -32,7 +32,7 @@ PauseMenu::PauseMenu():_isReady(false), _selection(selectContinue) {
     _quit->setPosition(Vector2(768 / 2, 768 / 2 + _quit->getHeight() - 50));
     _quit->attachTo(_view);
     
-    // Add escape key listener
+    // Add keyboard listener
     Input::instance.addEventListener(Input::event_platform, CLOSURE(this, &PauseMenu::_onEvent));
 }
 

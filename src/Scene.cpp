@@ -1,45 +1,47 @@
-/**
- * This class is from an oxygine example progect.
- */
-
 #include "Scene.h"
 
+
+/**
+ * Constructor.
+ */
 Scene::Scene() {
     _view = new Actor;
     _view->setSize(getStage()->getSize());
 }
 
+
+/**
+ * Hides the current scene and shows the next scene.
+ */
 void Scene::changeScene(spScene next) {
-    //hide current scene
     hide();
-    
-    //show next scene
     next->show();
 }
 
+
+/**
+ * Adds the scene view to the root, fades in the scene, and calls _show for all children.
+ */
 void Scene::show() {
-    //add scene view to root
     getStage()->addChild(_view);
-    //and fade in
     _view->setAlpha(0);
     _view->addTween(Actor::TweenAlpha(255), 300);
-    
-    //call virtual method (overloaded in inherited classes)
     _show();
 }
 
+
+/**
+ * Fades out the current scene and detaches it from the view.
+ */
 void Scene::hide() {
     spTween tween = _view->addTween(Actor::TweenAlpha(0), 300);
-    //detach when done
     tween->setDetachActor(true);
-    //and call Scene::hidden
-    tween->addDoneCallback(CLOSURE(this, &Scene::hidden));
 }
 
-void Scene::hidden(Event *ev) {
-    //hidden called by Tween
-    //notify HiddenEvent listeners
-    
-    HiddenEvent he(this);
-    dispatchEvent(&he);
+
+/**
+ * Gets the view.
+ */
+spActor Scene::getView() {
+    return _view;
 }

@@ -7,7 +7,6 @@ using namespace oxygine;
 
 
 DECLARE_SMART(Menu, spMenu);
-//class Game;
 class Menu : public Scene {
     
 public:

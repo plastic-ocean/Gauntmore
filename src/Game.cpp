@@ -332,7 +332,7 @@ list<spThing>* Game::getContentsList() {
 
 
 /**
- * Updates the Units each frame. A virtual method of Actor it is being called each frame.
+ * Updates the Units each frame. A virtual method of Actor called each frame.
  *
  * @us is the UpdateStatus sent by the global update method.
  */
@@ -512,7 +512,7 @@ void Game::_createCollisionRects() {
         }
     }
     
-    // Add Things to tiles list
+    // Add Units to tiles list
     _units.clear();
     list<spUnit> *units = _map->getRoom()->getUnits();
     for (list<spUnit>::iterator it = units->begin(); it != units->end(); ++it) {

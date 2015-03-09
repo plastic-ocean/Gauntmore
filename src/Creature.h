@@ -19,19 +19,7 @@ public:
     
     Facing getFacing(Vector2 direction);
     
-    virtual void damage();
-    
-//    Facing getFacing() {
-//        return _facing;
-//    }
-//    
-//    void setFacing(Facing facing) {
-//        _facing = facing;
-//    }
-    
-//    virtual void attack() = 0;
-//    
-//    virtual void move(Facing facing) = 0;
+    void damage();
 
 protected:
     time_t _lastTimeAttack;

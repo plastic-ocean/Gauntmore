@@ -1,7 +1,3 @@
-/**
- * This class is from an oxygine example progect.
- */
-
 #pragma once
 #include "oxygine-framework.h"
 
@@ -14,30 +10,36 @@ class Scene: public EventDispatcher {
 public:
     Scene();
     
-    //declare own Event type
-    //it would be fired when scene would completely hidden
-    class HiddenEvent: public Event
-    {
-    public:
-        //define unique int ID with makefourcc 'SHid' = SceneHidden
-        enum {EVENT = makefourcc('S', 'H', 'i', 'd')};
-        
-        HiddenEvent(Scene *scene_):Event(EVENT), scene(scene_){};
-        Scene *scene;
-    };
+    /**
+     * Hides the current scene and shows the next scene.
+     */
+    void changeScene(spScene next);
     
+    /**
+     * Adds the scene view to the root, fades in the scene, and calls _show for all children.
+     */
     void show();
     
-    //fires HiddenEvent when scene completed hidden
+    /**
+     * Fades out the current scene and detaches it from the view.
+     */
     void hide();
     
-    void changeScene(spScene next);
-    spActor getView() const {return _view;}
+    /**
+     * Gets the view.
+     */
+    spActor getView();
     
 protected:
-    virtual void _show(){}
-    virtual void _hide(){}
-    
-    void hidden(Event *ev);
     spActor _view;
+    
+    /**
+     * Virtual method called by show for all children.
+     */
+    virtual void _show() {}
+    
+    /**
+     * Virtual method called by hide for all children.
+     */
+    virtual void _hide() {}
 };
