@@ -1,6 +1,6 @@
 #pragma once
-#include "Scene.h"
 #include "Menu.h"
+#include "Scene.h"
 #include "GameScene.h"
 #include "Game.h"
 
@@ -12,12 +12,16 @@ class PauseMenu : public Scene {
 
 public:
     static spPauseMenu instance;
-    enum Selection {selectContinue, selectQuit};
+    enum Selection {selectContinue, selectNewGame, selectQuit};
     
     PauseMenu();
     
-    
     /* Getters and setters */
+    
+    /**
+     * Changes the new game image between selected and unselected.
+     */
+    void setNewGame(string newGameImage);
     
     /**
      * Changes the continue image between selected and unselected.
@@ -29,7 +33,13 @@ public:
      */
     void setQuit(string quitImage);
     
-private:
+    /**
+     * Sets the game.
+     */
+    void setGame(Game *game);
+    
+protected:
+    Game *_game;
     Selection _selection;
     spSprite _name;
     spSprite _continue;
@@ -47,6 +57,6 @@ private:
     /**
      * Selects the next item in the menu list.
      */
-    void _selectNext();
+    void _selectNext(string direction);
     
 };

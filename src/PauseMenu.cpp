@@ -23,17 +23,31 @@ PauseMenu::PauseMenu():_isReady(false), _selection(selectContinue) {
     _continue = new Sprite;
     _continue->setResAnim(resources.getResAnim("continue_selected"));
     _continue->setAnchor(Vector2(0.5f, 0.5f));
-    _continue->setPosition(Vector2(768 / 2, 768 / 2 - 50));
+    _continue->setPosition(Vector2(768 / 2, 768 / 2 - 80));
     _continue->attachTo(_view);
+    
+    _newGame = new Sprite;
+    _newGame->setResAnim(resources.getResAnim("new_game"));
+    _newGame->setAnchor(Vector2(0.5f, 0.5f));
+    _newGame->setPosition(Vector2(768 / 2, 768 / 2));
+    _newGame->attachTo(_view);
     
     _quit = new Sprite;
     _quit->setResAnim(resources.getResAnim("quit"));
     _quit->setAnchor(Vector2(0.5f, 0.5f));
-    _quit->setPosition(Vector2(768 / 2, 768 / 2 + _quit->getHeight() - 50));
+    _quit->setPosition(Vector2(768 / 2, 768 / 2 + _quit->getHeight()));
     _quit->attachTo(_view);
     
     // Add keyboard listener
     Input::instance.addEventListener(Input::event_platform, CLOSURE(this, &PauseMenu::_onEvent));
+}
+
+
+/**
+ * Changes the new game image between selected and unselected.
+ */
+void PauseMenu::setNewGame(string newGameImage) {
+    _newGame->setResAnim(resources.getResAnim(newGameImage));
 }
 
 
@@ -52,6 +66,15 @@ void PauseMenu::setQuit(string quitImage) {
     _quit->setResAnim(resources.getResAnim(quitImage));
 }
 
+
+/**
+ * Sets the game.
+ */
+void PauseMenu::setGame(Game *game) {
+    _game = game;
+}
+
+
 /**
  * Keyboard event handler.
  *
@@ -66,16 +89,21 @@ void PauseMenu::_onEvent(Event *ev) {
                 if (_selection == selectContinue) {
                     _isReady = false;
                     changeScene(GameScene::instance);
+                } else if (_selection == selectNewGame) {
+                    _isReady = false;
+                    _game->createNewGame();
+                    changeScene(GameScene::instance);
                 } else if (_selection == selectQuit) {
                     core::requestQuit();
                 }
                 break;
             case SDLK_UP:
             case SDLK_w:
+                _selectNext("up");
+                break;
             case SDLK_DOWN:
             case SDLK_s:
-            case SDLK_TAB:
-                _selectNext();
+                _selectNext("down");
                 break;
             default:
                 break;
@@ -97,14 +125,30 @@ void PauseMenu::_onEvent(Event *ev) {
 /**
  * Selects the next item in the menu list.
  */
-void PauseMenu::_selectNext() {
-    if (_selection == selectContinue) {
+void PauseMenu::_selectNext(string direction) {
+    if (_selection == selectContinue && direction == "down") {
+        _selection = selectNewGame;
+        setNewGame("new_game_selected");
+        setContinue("continue");
+    } else if (_selection == selectContinue && direction == "up") {
         _selection = selectQuit;
         setQuit("quit_selected");
         setContinue("continue");
-    } else if (_selection == selectQuit) {
+    } else if (_selection == selectNewGame && direction == "down") {
+        _selection = selectQuit;
+        setNewGame("new_game");
+        setQuit("quit_selected");
+    } else if (_selection == selectNewGame && direction == "up") {
+        _selection = selectContinue;
+        setNewGame("new_game");
+        setContinue("continue_selected");
+    } else if (_selection == selectQuit && direction == "down") {
         _selection = selectContinue;
         setQuit("quit");
         setContinue("continue_selected");
+    } else if (_selection == selectQuit && direction == "up") {
+        _selection = selectNewGame;
+        setNewGame("new_game_selected");
+        setQuit("quit");
     }
 }

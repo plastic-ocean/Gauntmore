@@ -34,5 +34,4 @@ private:
     void _selectNext();
     
     void _show();
-
 };

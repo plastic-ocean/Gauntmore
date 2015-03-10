@@ -201,6 +201,7 @@ void Game::updateWeaponCount(int value) {
 void Game::pauseGame() {
     setPaused(true);
     getClock()->pause();
+    PauseMenu::instance->setGame(this);
     PauseMenu::instance->show();
 }
 
