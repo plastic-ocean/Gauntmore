@@ -54,7 +54,7 @@ protected:
      *
      * @us is the UpdateStatus sent by Unit's update method.
      */
-    void _update(const UpdateState &us);
+//    void _update(const UpdateState &us);
     
     /**
      * Reduces the creature's hit points.

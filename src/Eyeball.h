@@ -35,7 +35,7 @@ private:
      *
      * @us is the UpdateStatus sent by Unit's update method.
      */
-//    void _update(const UpdateState &us);
+    void _update(const UpdateState &us);
 };
 
 #endif /* defined(__gauntmore__Eyeball__) */

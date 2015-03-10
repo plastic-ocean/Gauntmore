@@ -1,8 +1,4 @@
-#include <queue>
-#include <cmath>
 #include "PathFinder.h"
-#include "Game.h"
-#include "PathNode.h"
 
 /*
         basic implementation of A* pathfinding algorithm
@@ -89,7 +85,7 @@ vector<Vector2> PathFinder::aStar(Vector2 start, Vector2 finish ) {
  */
 int PathFinder::findHeuristic( Vector2 curLoc ) {
     int temp = abs( curLoc.x - this->_target.x ) + abs( curLoc.y - this->_target.y );
-    if ( _coll.detect(_game->getTiles(), (int)curLoc.x+10, (int)curLoc.y+14, 48, 40) ) return 99999;
+    if ( _coll.detect(_game->getTiles(), (int)curLoc.x + 10, (int)curLoc.y + 14, 1, 1) ) return 99999;
     
     return temp;
 }
@@ -109,7 +105,7 @@ void PathFinder::_scanSurround( PathNode *node ) {
         for ( int j = 0; j < 3; j++ ) {
             flip *= (-1);
 
-            if (temp.x > 0 && temp.y > 0 ) {//is the location > 0?
+            if (temp.x > 0 && temp.y > 0 && temp.x < _MAPBOUND && temp.y < _MAPBOUND) {//is the location > 0?
             PathNode nodeNew = PathNode( temp, node->getCost()+(summ+flip), findHeuristic(temp), &_closedList[_loc-1] );
                 
                 if (!_inClosedList(nodeNew) && nodeNew.getCost() < 99999 ) {
@@ -123,8 +119,6 @@ void PathFinder::_scanSurround( PathNode *node ) {
         temp.x -= (3*_TILESIZE);
         temp.y += _TILESIZE;
     }
-
-    
 }
 
 
@@ -162,7 +156,7 @@ Vector2 PathFinder::setDirection(Vector2 cPos) {
     }
     //if the Q is NOT empty
     Vector2 nextSpot = _moveQ.back();//look at where you are going
-    if ( abs(cPos.x - nextSpot.x) <= 9 && abs(cPos.y - nextSpot.y) <= 9) {
+    if ( abs(cPos.x - nextSpot.x) <= 5 && abs(cPos.y - nextSpot.y) <= 5) {
         _moveQ = aStar(nextSpot, pPos);
     }
     
@@ -191,14 +185,14 @@ Vector2 PathFinder::setDirection(Vector2 cPos) {
  @direction is the Vector2 we would like to apply
  */
 Vector2 PathFinder::_fixDirection(Vector2 position, Vector2 direction) {
-    int newX = position.x + (direction.x * 5);
-    int newY = position.y + (direction.y * 5);
+    int newX = position.x + (direction.x * 4);
+    int newY = position.y + (direction.y * 4);
     
     //this 'seems' to work now
-    if ( _coll.detect(_game->getTiles(), newX+10, position.y+14, 1, 1) ) {
+    if ( _coll.detect(_game->getTiles(), newX + 10, (int)position.y + 14, 1, 1) ) {
         direction.x = 0;
     }
-    if ( _coll.detect(_game->getTiles(), position.x+10, newY+14, 1, 1) ) {
+    if ( _coll.detect(_game->getTiles(), (int)position.x + 10, newY + 14, 1, 1) ) {
         direction.y = 0;
     }
  

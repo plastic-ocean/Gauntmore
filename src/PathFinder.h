@@ -1,6 +1,7 @@
 #ifndef __gauntmore_macosx__PathFinder__
 #define __gauntmore_macosx__PathFinder__
 
+#include <cmath>
 #include <stdio.h>
 #include <queue>
 #include "NodeMinHeap.h"
@@ -46,6 +47,7 @@ public:
     
 private:
     const static int _TILESIZE = 64;
+    const static int _MAPBOUND = 768;
     int _loc;
     
     Game *_game;

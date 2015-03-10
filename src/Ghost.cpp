@@ -88,26 +88,26 @@ void Ghost::move() {
  *
  * @us is the UpdateStatus sent by Unit's update method.
  */
-//void Ghost::_update(const UpdateState &us) {
-//    
-//    Vector2 direction = moveMe();
-//    Vector2 position = getPosition();
-//    
-//    Facing prevFacing = _facing;
-//    _facing = getFacing(direction);
-//    if(_facing != prevFacing){
-//        move();
-//    }
-//    
-//    position += direction * (us.dt / 1000.0f) * _speed;
-//    setPosition(position);
-//    if((abs(position.x - _game->getPlayer()->getPosition().x) <= 70) && (abs(position.y - _game->getPlayer()->getPosition().y) <= 70)){
-//        time_t _current = time(0);
-//        if(_current >= _lastTimeAttack+2){
-//            _lastTimeAttack = time(0);
-//            damage();
-//            //cout << "attacking" << endl;
-//        }
-//    }
-//    
-//}
+void Ghost::_update(const UpdateState &us) {
+    
+    Vector2 direction = moveMe();
+    Vector2 position = getPosition();
+    
+    Facing prevFacing = _facing;
+    _facing = getFacing(direction);
+    if(_facing != prevFacing){
+        move();
+    }
+    
+    position += direction * (us.dt / 1000.0f) * _speed;
+    setPosition(position);
+    if((abs(position.x - _game->getPlayer()->getPosition().x) <= 70) && (abs(position.y - _game->getPlayer()->getPosition().y) <= 70)){
+        time_t _current = time(0);
+        if(_current >= _lastTimeAttack+2){
+            _lastTimeAttack = time(0);
+            damage();
+            //cout << "attacking" << endl;
+        }
+    }
+    
+}
