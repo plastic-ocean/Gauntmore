@@ -9,44 +9,49 @@ include_directories(${OXYGINE_INCLUDE_DIRS})
 link_directories(${OXYGINE_LIBRARY_DIRS})
 
 add_executable(gauntmore
+src/main.cpp
+src/Gauntmore.cpp src/Gauntmore.h
+src/res.cpp src/res.h
 src/Game.cpp src/Game.h
-src/GameScene.cpp src/GameScene.h
+src/KeyboardInput.cpp src/KeyboardInput.h
+src/CollisionDetector.cpp src/CollisionDetector.h
+
 src/Map.cpp src/Map.h
 src/MazeGen.cpp src/MazeGen.h
 src/Room.cpp src/Room.h
-src/Scene.cpp src/Scene.h
-src/KeyboardInput.cpp src/KeyboardInput.h
-src/Player.cpp src/Player.h
-src/Chest.cpp src/Chest.h
-src/CollisionDetector.cpp src/CollisionDetector.h
-src/Gold.cpp src/Gold.h
-src/GoldCount.cpp src/GoldCount.h
-src/HealthBar.cpp src/HealthBar.h
-src/Potion.cpp src/Potion.h
-src/Creature.cpp src/Creature.h
-src/Thing.cpp src/Thing.h
-src/Slime.cpp src/Slime.h
-src/Unit.cpp src/Unit.h
+
 src/PathFinder.cpp src/PathFinder.h
 src/PathNode.cpp src/PathNode.h
 src/NodeArray.cpp src/NodeArray.h
 src/NodeMinHeap.cpp src/NodeMinHeap.h
-src/CreatureMover.cpp src/CreatureMover.h
+
+src/Scene.cpp src/Scene.h
+src/GameScene.cpp src/GameScene.h
+src/Menu.cpp src/Menu.h
 src/DeathMenu.cpp src/DeathMenu.h
 src/PauseMenu.cpp src/PauseMenu.h
 src/StartMenu.cpp src/StartMenu.h
-src/ArmorCount.cpp src/ArmorCount.h
+
+src/Unit.cpp src/Unit.h
+src/Player.cpp src/Player.h
+src/Thing.cpp src/Thing.h
+src/Chest.cpp src/Chest.h
+src/Gold.cpp src/Gold.h
+src/Potion.cpp src/Potion.h
 src/Armor.cpp src/Armor.h
-src/WeaponCount.cpp src/WeaponCount.h
 src/Weapon.cpp src/Weapon.h
+src/Creature.cpp src/Creature.h
+src/Slime.cpp src/Slime.h
 src/Eyeball.cpp src/Eyeball.h
 src/Ghost.cpp src/Ghost.h
 src/Bat.cpp src/Bat.h
 src/Snake.cpp src/Snake.h
 src/Worm.cpp src/Worm.h
-src/Gauntmore.cpp src/Gauntmore.h
-src/res.cpp src/res.h
-src/main.cpp
+
+src/GoldCount.cpp src/GoldCount.h
+src/HealthBar.cpp src/HealthBar.h
+src/ArmorCount.cpp src/ArmorCount.h
+src/WeaponCount.cpp src/WeaponCount.h
 
 src/tmx/base64.cpp src/tmx/base64.h
 src/tmx/TmxEllipse.cpp src/tmx/TmxEllipse.h
