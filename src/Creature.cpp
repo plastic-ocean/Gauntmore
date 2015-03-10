@@ -16,41 +16,11 @@ Creature::Creature() {
 
 
 /**
+ * Returns the direction the creature should face based off a direction.
  *
- *
+ * @direction a pair of ints (-1, 0, 1) that we use to detemine direction.
+ * @return a Facing enum
  */
-void Creature::_setContents() {
-    int randNum = rand() % 2;
-    
-    if (randNum == 0) {
-        int randContents = rand() % 2;
-        if (randContents == 0) {
-            _contents = new Potion();
-        } else {
-            _contents = new Gold();
-        }
-    }
-}
-
-
-/**
- *
- *
- */
-void Creature::_dropContents() {
-    if (_contents) {
-        _contents->init(getPosition(), _game);
-        _contents->setLocation(getPosition());
-        _game->getMap()->getRoom()->getUnits()->push_back(_contents);
-    }
-}
-
-
-void Creature::damage() {
-    _game->getPlayer()->updateHealth(-_attack);
-}
-
-
 Creature::Facing Creature::getFacing(Vector2 direction){
     if((direction.x == 1 && direction.y == 0)){
         // if direction is moving east or northeast or southeast
@@ -72,11 +42,56 @@ Creature::Facing Creature::getFacing(Vector2 direction){
 }
 
 
+/**
+ * Damages the player.
+ */
+void Creature::damage() {
+    _game->getPlayer()->updateHealth(-_attack);
+}
+
+
+/**
+ * Figures out which direction the creature should move.
+ *
+ * @returns a vector2 of ints (-1, 0, 1) which is used to set facing.
+ */
 Vector2 Creature::moveMe() {
     return findPath.setDirection(getPosition() );
 }
 
 
+/**
+ * Gives the creature gold or a potion.
+ */
+void Creature::_setContents() {
+    int randNum = rand() % 2;
+    
+    if (randNum == 0) {
+        int randContents = rand() % 2;
+        if (randContents == 0) {
+            _contents = new Potion();
+        } else {
+            _contents = new Gold();
+        }
+    }
+}
+
+
+/**
+ * Puts the creatures contents on the ground when it dies.
+ */
+void Creature::_dropContents() {
+    if (_contents) {
+        _contents->init(getPosition(), _game);
+        _contents->setLocation(getPosition());
+        _game->getMap()->getRoom()->getUnits()->push_back(_contents);
+    }
+}
+
+
+/**
+ * Reduces the creature's hit points.
+ */
 void Creature::_interact() {
     int damage = _game->getPlayer()->getAttack();
     _hp -= damage;
@@ -87,32 +102,3 @@ void Creature::_interact() {
         _dropContents();
     }
 }
-
-/**
- * Updates the creature every frame. Called by Unit::update.
- *
- * @us is the UpdateStatus sent by Unit's update method.
- */
-//void Creature::_update(const UpdateState &us) {
-//    
-//    Vector2 direction = moveMe();
-//    Vector2 position = getPosition();
-//    
-//    Facing prevFacing = _facing;
-//    _facing = getFacing(direction);
-//    if (_facing != prevFacing){
-//        move();
-//    }
-//    
-//    position += direction * (us.dt / 1000.0f) * _speed;
-//    setPosition(position);
-//    if((abs(position.x - _game->getPlayer()->getPosition().x) <= 70) && (abs(position.y - _game->getPlayer()->getPosition().y) <= 70)){
-//        
-//        time_t _current = time(0);
-//        if(_current >= _lastTimeAttack + _attackSpeed){
-//            _lastTimeAttack = time(0);
-//            damage();
-//            //cout << "attacking" << endl;
-//        }
-//    }
-//}
