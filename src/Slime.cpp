@@ -4,7 +4,7 @@
 
 
 /**
- * Constructor
+ * Constructor. Initializes the stats
  */
 Slime::Slime() {
     // Initialize the stats.
@@ -18,8 +18,9 @@ Slime::Slime() {
 
 
 /**
- *  Gets bounds of the unit Slime.
- *  @return: SDL_Rect _bounds which is the bounds of Slime.
+ * Returns the bounds of the Creature
+ *
+ * @return SDL_Rect that is the bounds for Creature
  */
 SDL_Rect Slime::getBounds() {
     Vector2 unitPosition = getPosition();
@@ -31,19 +32,11 @@ SDL_Rect Slime::getBounds() {
     return _bounds;
 }
 
-/**
- *  Boolean method to determine if the unit is a Potion.
- */
-bool Slime::isPotion() {
-    return false;
-}
-
 
 /**
- *  Adds Sprite and attaches it to the game.
+ * Puts a Creature sprite in the game
  */
 void Slime::addSprite() {
-    // Add sprite to the game scene view.
     _sprite = new Sprite;
     _sprite->setResAnim(resources.getResAnim("slime_down"));
     _sprite->attachTo(_view);
@@ -51,18 +44,11 @@ void Slime::addSprite() {
     move();
 }
 
-/**
- * Initializes a Slime position and sprite. Called by Unit's init() method.
- */
-void Slime::_init() {
-    addSprite();
-    _setContents();
-    findPath.setGame(_game);
 
-}
+
 
 /**
- * Interaction method for Slime.
+ * Plays the move animation.
  */
 void Slime::move() {
     //_checkTween();
@@ -85,15 +71,15 @@ void Slime::move() {
 }
 
 
-//void Slime::_interact() {
-//    _hp--;
-//    if (_hp == 0) {
-//        // The creature is dead, hide it with an alpha tween.
-//        _dead = true;
-//        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-//        _dropContents();
-//    }
-//}
+/**
+ * Initializes a creatures position and sprite. Called by Unit's init() method.
+ */
+void Slime::_init() {
+    addSprite();
+    _setContents();
+    findPath.setGame(_game);
+}
+
 
 
 /**

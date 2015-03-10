@@ -4,10 +4,9 @@
 
 
 /**
- * Constructor
+ * Constructor. Initializes the stats
  */
 Ghost::Ghost() {
-    // Initialize the stats.
     _hp = 15;
     _attack = 4;
     _defense = 0;
@@ -16,9 +15,11 @@ Ghost::Ghost() {
     _lastTimeAttack = time(0);
 }
 
+
 /**
+ * Returns the bounds of the Creature
  *
- *
+ * @return SDL_Rect that is the bounds for Creature
  */
 SDL_Rect Ghost::getBounds() {
     Vector2 unitPosition = getPosition();
@@ -26,36 +27,20 @@ SDL_Rect Ghost::getBounds() {
     _bounds.y = unitPosition.y + 15;
     _bounds.h = 30;
     _bounds.w = 20;
-    
+
     return _bounds;
 }
 
 
 /**
- *
- *
+ * Puts a Creature sprite in the game
  */
-bool Ghost::isPotion() {
-    return false;
-}
-
-
 void Ghost::addSprite() {
-    // Add sprite to the game scene view.
     _sprite = new Sprite;
     _sprite->setResAnim(resources.getResAnim("ghost_down"));
     _sprite->attachTo(_view);
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
     move();
-}
-
-/**
- * Initializes a creatures position and sprite. Called by Unit's init() method.
- */
-void Ghost::_init() {
-    addSprite();
-    _setContents();
-    findPath.setGame(_game);
 }
 
 
@@ -80,6 +65,16 @@ void Ghost::move() {
         default:
             break;
     }
+}
+
+
+/**
+ * Initializes a creatures position and sprite. Called by Unit's init() method.
+ */
+void Ghost::_init() {
+    addSprite();
+    _setContents();
+    findPath.setGame(_game);
 }
 
 

@@ -21,27 +21,23 @@ public:
     void init(const Vector2 &pos, Game *game);
     
     /**
-     *
-     *
+     * Attaches the unit to the view.
      */
     void attachUnit();
     
     /**
-     *
-     *
+     * Detaches the unit from the view.
      */
     void detachUnit();
     
     /**
-     *  Interaction method for Unit
-     *
+     * Allows the player to interacts with the unit. Calls the _interact method in all children.
      */
     void interact();
 
     /**
-     * Calls the overloaded _update method in children.
-     */
-    void update(const UpdateState &us);
+     * Updates all Units. Calls method _update that is is defined in children.
+     */    void update(const UpdateState &us);
     
     
     /* Getters and Setters */
@@ -70,29 +66,21 @@ public:
     
     void setRect(SDL_Rect rect);
     
+    /**
+     * Checks if the Units is a potion.
+     */
+    bool isPotion();
+    
     
     /* Virtual Methods */
     
     /**
-     * Reduces the Unit's hit points. Overload this for each child.
-     */
-    virtual void damage(){}
-    
-    /**
-     *
-     *
-     */
-    virtual bool isPotion() = 0;
-    
-    /**
-     *
-     *
+     * Gets the units bounds. Implemented by children.
      */
     virtual SDL_Rect getBounds() = 0;
     
     /**
-     *
-     *
+     * Adds the sprite. Implemented by children.
      */
     virtual void addSprite() = 0;
 

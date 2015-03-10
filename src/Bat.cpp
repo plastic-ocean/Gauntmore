@@ -4,10 +4,9 @@
 
 
 /**
- * Constructor
+ * Constructor. Initializes the stats
  */
 Bat::Bat() {
-    // Initialize the stats.
     _hp = 2;
     _attack = 2;
     _defense = 0;
@@ -16,9 +15,11 @@ Bat::Bat() {
     _lastTimeAttack = time(0);
 }
 
+
 /**
+ * Returns the bounds of the Creature
  *
- *
+ * @return SDL_Rect that is the bounds for Creature
  */
 SDL_Rect Bat::getBounds() {
     Vector2 unitPosition = getPosition();
@@ -32,14 +33,8 @@ SDL_Rect Bat::getBounds() {
 
 
 /**
- *
- *
+ * Puts a Creature sprite in the game
  */
-bool Bat::isPotion() {
-    return false;
-}
-
-
 void Bat::addSprite() {
     // Add sprite to the game scene view.
     _sprite = new Sprite;
@@ -47,15 +42,6 @@ void Bat::addSprite() {
     _sprite->attachTo(_view);
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
     move();
-}
-
-/**
- * Initializes a creatures position and sprite. Called by Unit's init() method.
- */
-void Bat::_init() {
-    addSprite();
-    _setContents();
-    findPath.setGame(_game);
 }
 
 
@@ -83,16 +69,14 @@ void Bat::move() {
 }
 
 
-//void Bat::_interact() {
-//    int damage = static_cast<int>(ceil(_game->getPlayer()->getAttack() / _defense));
-//    _hp -= damage;
-//    if (_hp == 0) {
-//        // The creature is dead, hide it with an alpha tween.
-//        _dead = true;
-//        _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
-//        _dropContents();
-//    }
-//}
+/**
+ * Initializes a creatures position and sprite. Called by Unit's init() method.
+ */
+void Bat::_init() {
+    addSprite();
+    _setContents();
+    findPath.setGame(_game);
+}
 
 
 /**

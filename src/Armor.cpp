@@ -1,15 +1,8 @@
-//
-//  Armor.cpp
-//  gauntmore_macosx
-//
-//  Created by Steven Warren on 2/26/15.
-//  Copyright (c) 2015 oxygine. All rights reserved.
-//
-
 #include "Armor.h"
 #include "res.h"
 #include "Game.h"
 #include "Player.h"
+
 
 /**
  *  Constructor.
@@ -18,6 +11,7 @@ Armor::Armor(int armorType):_value(armorType) {
     _armorType = armorType;
     setType("armor");
 }
+
 
 /**
  *  Gets bounds of the unit Gold.
@@ -32,6 +26,7 @@ SDL_Rect Armor::getBounds() {
 
     return _bounds;
 }
+
 
 /**
  * Adds sprite and attachs it to the game.
@@ -55,13 +50,6 @@ void Armor::addSprite() {
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
 }
 
-/**
- *  Method to determine whether unit is a Potion.
- *  @returns false since the current unit is Gold.
- */
-bool Armor::isPotion() {
-    return false;
-}
 
 /**
  * Initializes a Gold position and sprite. Called by Unit's init() method.
@@ -69,6 +57,7 @@ bool Armor::isPotion() {
 void Armor::_init() {
     addSprite();
 }
+
 
 /**
  *  Adds gold value to the player's current total.
@@ -84,6 +73,7 @@ void Armor::_interact() {
         _dead = true;
     }
 }
+
 
 /**
  * Updates Armor every frame. Called by Units update() method.

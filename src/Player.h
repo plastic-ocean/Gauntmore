@@ -42,12 +42,32 @@ public:
      */
     void attack();
 
+    /**
+     * Gets the players attack int
+     * 
+     * @returns the players attack score; int
+     */
     int getAttack();
 
+    /**
+     * Sets players attack score
+     *
+     * @attack whatever the players attack should be
+     */
     void setAttack(int attack);
     
+    /**
+     * returns the players defense stat
+     *
+     * @returns int - the players defense
+     */
     int getDefense();
     
+    /**
+     * sets players defense stat
+     *
+     * @defense players defense stat
+     */
     void setDefense(int defense);
     
     /**
@@ -76,8 +96,6 @@ public:
      * Checks if the player is damaged by comparing _hp to maxHealth.
      */
     bool isDamaged();
-    
-    virtual bool isPotion();
     
 protected:
     const int tileSize = 64;

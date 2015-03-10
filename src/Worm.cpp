@@ -4,10 +4,9 @@
 
 
 /**
- * Constructor
+ * Constructor. Initializes the stats
  */
 Worm::Worm() {
-    // Initialize the stats.
     _hp = 8;
     _attack = 10;
     _defense = 0;
@@ -18,8 +17,9 @@ Worm::Worm() {
 
 
 /**
+ * Returns the bounds of the Creature
  *
- *
+ * @return SDL_Rect that is the bounds for Creature
  */
 SDL_Rect Worm::getBounds() {
     Vector2 unitPosition = getPosition();
@@ -33,16 +33,9 @@ SDL_Rect Worm::getBounds() {
 
 
 /**
- *
- *
+ * Puts a Creature sprite in the game
  */
-bool Worm::isPotion() {
-    return false;
-}
-
-
 void Worm::addSprite() {
-    // Add sprite to the game scene view.
     _sprite = new Sprite;
     _sprite->setResAnim(resources.getResAnim("worm_down"));
     _sprite->attachTo(_view);
@@ -50,21 +43,11 @@ void Worm::addSprite() {
     move();
 }
 
-/**
- * Initializes a creatures position and sprite. Called by Unit's init() method.
- */
-void Worm::_init() {
-    addSprite();
-    _setContents();
-    findPath.setGame(_game);
-}
-
 
 /**
  * Plays the move animation.
  */
 void Worm::move() {
-    //_checkTween();
     switch (_facing) {
         case up:
             _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("worm_down")), 500, -1);
@@ -81,6 +64,16 @@ void Worm::move() {
         default:
             break;
     }
+}
+
+
+/**
+ * Initializes a creatures position and sprite. Called by Unit's init() method.
+ */
+void Worm::_init() {
+    addSprite();
+    _setContents();
+    findPath.setGame(_game);
 }
 
 

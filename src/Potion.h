@@ -20,11 +20,6 @@ public:
      */
     virtual void addSprite();
     
-    /**
-     *  Boolean method to determine if the unit is a Potion.
-     */
-    virtual bool isPotion();
-    
 private:
     /**
      * Initializes position and sprite of Potion. Called by Unit's init() method.

@@ -3,13 +3,10 @@
 #include <cmath>
 
 
-
-
 /**
- * Constructor
+ * Constructor. Initializes the stats
  */
 Snake::Snake() {
-    // Initialize the stats.
     _hp = 3;
     _attack = 3;
     _defense = 0;
@@ -19,9 +16,11 @@ Snake::Snake() {
     
 }
 
+
 /**
+ * Returns the bounds of the Creature
  *
- *
+ * @return SDL_Rect that is the bounds for Creature
  */
 SDL_Rect Snake::getBounds() {
     Vector2 unitPosition = getPosition();
@@ -35,17 +34,9 @@ SDL_Rect Snake::getBounds() {
 
 
 /**
- *
- *
+ * Puts a Creature sprite in the game
  */
-bool Snake::isPotion() {
-    return false;
-}
-
-
-
 void Snake::addSprite() {
-    // Add sprite to the game scene view.
     _sprite = new Sprite;
     _sprite->setResAnim(resources.getResAnim("snake_down"));
     _sprite->attachTo(_view);
@@ -53,20 +44,11 @@ void Snake::addSprite() {
     move();
 }
 
-/**
- * Initializes a creatures position and sprite. Called by Unit's init() method.
- */
-void Snake::_init() {
-    addSprite();
-    _setContents();
-    findPath.setGame(_game);
-}
 
 /**
  * Plays the move animation.
  */
 void Snake::move() {
-    //_checkTween();
     switch (_facing) {
         case up:
             _moveTween = _sprite->addTween(TweenAnim(resources.getResAnim("snake_down")), 500, -1);
@@ -83,6 +65,16 @@ void Snake::move() {
         default:
             break;
     }
+}
+
+
+/**
+ * Initializes a creatures position and sprite. Called by Unit's init() method.
+ */
+void Snake::_init() {
+    addSprite();
+    _setContents();
+    findPath.setGame(_game);
 }
 
 

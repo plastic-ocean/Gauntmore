@@ -1,5 +1,4 @@
-#ifndef __gauntmore__Slime__
-#define __gauntmore__Slime__
+#pragma once
 
 #include "Creature.h"
 #include "Thing.h"
@@ -24,12 +23,11 @@ public:
      *  Adds Sprite and attaches it to the game.
      */
     virtual void addSprite();
+
     
     /**
-     *  Boolean method to determine if the unit is a Potion.
+     * Plays the move animation.
      */
-    virtual bool isPotion();
-    
     void move();
     
 private:
@@ -50,4 +48,3 @@ private:
     void _update(const UpdateState &us);
 };
 
-#endif /* defined(__gauntmore__Slime__) */

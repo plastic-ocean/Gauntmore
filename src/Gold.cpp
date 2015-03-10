@@ -10,6 +10,7 @@ Gold::Gold():_value(10) {
     setType("gold");
 }
 
+
 /**
  *  Gets bounds of the unit Gold.
  *  @return: SDL_Rect _bounds which is the bounds of Gold.
@@ -24,6 +25,7 @@ SDL_Rect Gold::getBounds() {
     return _bounds;
 }
 
+
 /**
  * Adds sprite and attachs it to the game.
  */
@@ -34,13 +36,6 @@ void Gold::addSprite() {
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
 }
 
-/**
- *  Method to determine whether unit is a Potion.
- *  @returns false since the current unit is Gold.
- */
-bool Gold::isPotion() {
-    return false;
-}
 
 /**
  * Initializes a Gold position and sprite. Called by Unit's init() method.
@@ -48,6 +43,7 @@ bool Gold::isPotion() {
 void Gold::_init() {
     addSprite();
 }
+
 
 /**
  *  Adds gold value to the player's current total.
@@ -62,6 +58,7 @@ void Gold::_interact() {
         _dead = true;
     }
 }
+
 
 /**
  *

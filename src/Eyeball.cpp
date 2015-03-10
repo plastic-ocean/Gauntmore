@@ -4,10 +4,9 @@
 
 
 /**
- * Constructor
+ * Constructor. Initializes the stats
  */
 Eyeball::Eyeball() {
-    // Initialize the stats.
     _hp = 10;
     _attack = 6;
     _defense = 0;
@@ -17,9 +16,11 @@ Eyeball::Eyeball() {
     
 }
 
+
 /**
+ * Returns the bounds of the Creature
  *
- *
+ * @return SDL_Rect that is the bounds for Creature
  */
 SDL_Rect Eyeball::getBounds() {
     Vector2 unitPosition = getPosition();
@@ -31,17 +32,10 @@ SDL_Rect Eyeball::getBounds() {
     return _bounds;
 }
 
-
 /**
- *
- *
+ * Puts a Creature sprite in the game
  */
-bool Eyeball::isPotion() {
-    return false;
-}
-
 void Eyeball::addSprite() {
-    // Add sprite to the game scene view.
     _sprite = new Sprite;
     _sprite->setResAnim(resources.getResAnim("eyeball_down"));
     _sprite->attachTo(_view);
@@ -49,14 +43,6 @@ void Eyeball::addSprite() {
     move();
 }
 
-/**
- * Initializes a creatures position and sprite. Called by Unit's init() method.
- */
-void Eyeball::_init() {
-    addSprite();
-    _setContents();
-    findPath.setGame(_game);
-}
 
 /**
  * Plays the move animation.
@@ -79,6 +65,16 @@ void Eyeball::move() {
         default:
             break;
     }
+}
+
+
+/**
+ * Initializes a creatures position and sprite. Called by Unit's init() method.
+ */
+void Eyeball::_init() {
+    addSprite();
+    _setContents();
+    findPath.setGame(_game);
 }
 
 

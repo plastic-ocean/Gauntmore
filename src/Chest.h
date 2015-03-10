@@ -25,12 +25,6 @@ public:
      */
     virtual void addSprite();
     
-    /**
-     *  Method to determine whether unit is a potion.
-     *  @return: false since the current unit is a chest.
-     */
-    virtual bool isPotion();
-    
 private:
     spThing _contents;
     bool _isOpen;

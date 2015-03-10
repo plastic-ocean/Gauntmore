@@ -1,5 +1,4 @@
-#ifndef __gauntmore__Ghost__
-#define __gauntmore__Ghost__
+#pragma once
 
 #include "Creature.h"
 #include "Thing.h"
@@ -14,10 +13,22 @@ public:
     
     /* Virtual Methods */
     
+    /**
+     * Returns the bounds of the Creature
+     *
+     * @return SDL_Rect that is the bounds for Creature
+     */
     virtual SDL_Rect getBounds();
-    virtual void addSprite();
-    virtual bool isPotion();
     
+    /**
+     * Puts a Worm sprite in the game
+     */
+    virtual void addSprite();
+    
+    
+    /**
+     * Plays the move animation.
+     */
     void move();
     
 private:
@@ -37,5 +48,3 @@ private:
      */
     void _update(const UpdateState &us);
 };
-
-#endif /* defined(__gauntmore__Ghost__) */

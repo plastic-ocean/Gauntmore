@@ -26,7 +26,6 @@ protected:
      */
     void _init();
     
-    
     /**
      * Updates the Thing every frame. Called by Units update() method.
      *

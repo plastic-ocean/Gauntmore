@@ -49,14 +49,6 @@ void Chest::addSprite() {
 }
 
 /**
- *  Method to determine whether unit is a potion.
- *  @returns false since the current unit is a chest.
- */
-bool Chest::isPotion() {
-    return false;
-}
-
-/**
  * Initializes a Chest position and sprite. Called by Unit's init() method.
  */
 void Chest::_init() {
