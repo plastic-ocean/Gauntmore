@@ -1,5 +1,4 @@
-#ifndef __gauntmore__Potion__
-#define __gauntmore__Potion__
+#pragma once
 
 #include "Thing.h"
 
@@ -38,5 +37,3 @@ private:
      */
     void _update(const UpdateState &us);
 };
-
-#endif /* defined(__gauntmore__Potion__) */

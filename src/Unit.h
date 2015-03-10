@@ -21,23 +21,26 @@ public:
     void init(const Vector2 &pos, Game *game);
     
     /**
-     * Attaches the unit to the view.
+     *  Attaches the Unit to the game as an Actor.
      */
     void attachUnit();
     
     /**
-     * Detaches the unit from the view.
+     *  Detaches the Unit to the game as an Actor.
      */
     void detachUnit();
     
     /**
      * Allows the player to interacts with the unit. Calls the _interact method in all children.
+     *  Iterates thru list of units and determines which the player is facing.
+     *  Then calls that objects interact method.
      */
     void interact();
 
     /**
      * Updates all Units. Calls method _update that is is defined in children.
-     */    void update(const UpdateState &us);
+     */
+    void update(const UpdateState &us);
     
     
     /* Getters and Setters */
@@ -75,7 +78,7 @@ public:
     /* Virtual Methods */
     
     /**
-     * Gets the units bounds. Implemented by children.
+     *  Virtual Method implemented in children.
      */
     virtual SDL_Rect getBounds() = 0;
     
@@ -94,9 +97,6 @@ protected:
     string _type;
     bool _isPotion;
     
-    /**
-     * Pointer to the game.
-     */
     Game *_game;
     
     /**
@@ -109,8 +109,10 @@ protected:
     int _speed;
     int _attackSpeed;
     
-    // Indicates if unit is dead. Set by damage() and retrieved with isDead().
-    // Used to remove unit from game's units list.
+    /**
+     * Indicates if unit is dead. Set by damage() and retrieved with isDead().
+     * Used to remove unit from game's units list.
+     */
     bool _dead;
     
     /**
@@ -118,6 +120,9 @@ protected:
      */
 	virtual void _init() {}
     
+    /**
+     * Interact method of Unit. Called by Unit::init() for all children.
+     */
     virtual void _interact() {}
     
     /**

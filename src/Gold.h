@@ -1,5 +1,4 @@
-#ifndef __gauntmore__Gold__
-#define __gauntmore__Gold__
+#pragma once
 
 #include "Thing.h"
 
@@ -41,5 +40,3 @@ private:
      */
     void _update(const UpdateState &us);
 };
-
-#endif /* defined(__gauntmore__Gold__) */

@@ -14,8 +14,8 @@ Armor::Armor(int armorType):_value(armorType) {
 
 
 /**
- *  Gets bounds of the unit Gold.
- *  @return: SDL_Rect _bounds which is the bounds of Gold.
+ *  Gets bounds of the unit Armor.
+ *  @return: SDL_Rect _bounds which is the bounds of Armor.
  */
 SDL_Rect Armor::getBounds() {
     Vector2 unitPosition = getPosition();
@@ -52,7 +52,7 @@ void Armor::addSprite() {
 
 
 /**
- * Initializes a Gold position and sprite. Called by Unit's init() method.
+ * Initializes a Armor position and sprite. Called by Unit's init() method.
  */
 void Armor::_init() {
     addSprite();
@@ -60,7 +60,7 @@ void Armor::_init() {
 
 
 /**
- *  Adds gold value to the player's current total.
+ *  Adds Armor value to the player's current total.
  *  Removes sprite from the game.
  */
 void Armor::_interact() {

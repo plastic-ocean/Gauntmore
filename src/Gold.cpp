@@ -61,8 +61,9 @@ void Gold::_interact() {
 
 
 /**
+ * Updates Gold every frame. Called by Units update() method.
  *
- *
+ * @us is the UpdateStatus sent by Unit's update method.
  */
 void Gold::_update(const UpdateState &us) {
 }

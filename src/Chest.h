@@ -1,5 +1,4 @@
-#ifndef __gauntmore__Chest__
-#define __gauntmore__Chest__
+#pragma once
 
 #include "Thing.h"
 #include "Potion.h"
@@ -51,5 +50,3 @@ private:
      */
     void _update(const UpdateState &us);
 };
-
-#endif /* defined(__gauntmore__Chest__) */

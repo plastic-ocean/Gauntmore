@@ -13,6 +13,7 @@ Potion::Potion() {
     setType("potion");
 }
 
+
 /**
  *  Gets bounds of the unit Potion.
  *  @return: SDL_Rect _bounds which is the bounds of Potion.
@@ -26,6 +27,7 @@ SDL_Rect Potion::getBounds() {
     
     return _bounds;
 }
+
 
 /**
  *  Adds Sprite and attaches it to the game.

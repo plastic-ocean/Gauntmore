@@ -18,7 +18,6 @@ Thing::Thing() {
  * Interaction method for Thing.
  */
 void Thing::interact(){
-    
 }
 
 
@@ -26,7 +25,6 @@ void Thing::interact(){
  * Initializes a creatures position and sprite. Called by Unit's init() method.
  */
 void Thing::_init() {
-    // Initialize the stats.
 }
 
 

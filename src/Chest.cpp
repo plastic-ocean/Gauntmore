@@ -19,8 +19,6 @@
  */
 Chest::Chest():_isOpen(false), _contents(0) {
     setType("chest");
-
-
 }
 
 
@@ -38,6 +36,7 @@ SDL_Rect Chest::getBounds(){
     return _bounds;
 }
 
+
 /**
  * Adds sprite and attachs it to the game.
  */
@@ -48,6 +47,7 @@ void Chest::addSprite() {
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
 }
 
+
 /**
  * Initializes a Chest position and sprite. Called by Unit's init() method.
  */
@@ -55,6 +55,7 @@ void Chest::_init() {
     addSprite();
     _setContents();
 }
+
 
 /**
  * Interaction method for Chest.
@@ -68,35 +69,31 @@ void Chest::_interact() {
         _view->addTween(Actor::TweenAlpha(0), 300)->setDetachActor(true);
         
         _contents->init(getPosition(), _game);
-        //        _contents->setLocation(getPosition());
         _game->getMap()->getRoom()->getUnits()->push_back(_contents);
     }
 }
+
 
 /**
  *  Sets the contents of a chest to either a Potion or Gold.
  */
 void Chest::_setContents() {
-    
-    
     list<spThing> *_things = _game->getContentsList();
     
     int randNum = rand() % _things->size();
-    
     int j = 0;
     
     for (list<spThing>::iterator i = _things->begin(); i != _things->end(); ++i) {
-        
         j++;
         
         if (j == randNum) {
             spThing _thing = *i;
             _contents = _thing;
-          //  cout << "_contents: " << _contents->getType() << endl;
             i = _things->erase(i);
         }
     }
 }
+
 
 /**
  * Updates the Chest every frame. Called by Units update() method.

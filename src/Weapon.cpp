@@ -1,11 +1,3 @@
-//
-//  Weapon.cpp
-//  gauntmore_macosx
-//
-//  Created by Steven Warren on 3/3/15.
-//  Copyright (c) 2015 oxygine. All rights reserved.
-//
-
 #include "Weapon.h"
 #include "res.h"
 #include "game.h"
@@ -19,9 +11,10 @@ Weapon::Weapon(int weaponType):_value(weaponType) {
     setType("weapon");
 }
 
+
 /**
- *  Gets bounds of the unit Gold.
- *  @return: SDL_Rect _bounds which is the bounds of Gold.
+ *  Gets bounds of the unit Weapon.
+ *  @return: SDL_Rect _bounds which is the bounds of Weapon.
  */
 SDL_Rect Weapon::getBounds() {
     Vector2 unitPosition = getPosition();
@@ -32,6 +25,7 @@ SDL_Rect Weapon::getBounds() {
     
     return _bounds;
 }
+
 
 /**
  * Adds sprite and attachs it to the game.
@@ -49,18 +43,19 @@ void Weapon::addSprite() {
         default:
             break;
     }
-    
-    
     _sprite->attachTo(_view);
     _sprite->setAnchor(Vector2(0.5f, 0.5f));
 }
 
+
 /**
+>>>>>>> origin/_steven
  * Initializes a Weapon position and sprite. Called by Unit's init() method.
  */
 void Weapon::_init() {
     addSprite();
 }
+
 
 /**
  *  Adds Weapon to the player.
@@ -71,11 +66,11 @@ void Weapon::_interact() {
         _game->getPlayer()->setAttack(_value);
         _game->updateWeaponCount(_value);
         
-        /* Removes Sprite from game */
         _view->addTween(Actor::TweenAlpha(0), 1500)->setDetachActor(true);
         _dead = true;
     }
 }
+
 
 /**
  * Updates Weapon every frame. Called by Units update() method.
@@ -83,5 +78,4 @@ void Weapon::_interact() {
  * @us is the UpdateStatus sent by Unit's update method.
  */
 void Weapon::_update(const UpdateState &us) {
-    
 }

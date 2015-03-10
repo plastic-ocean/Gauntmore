@@ -1,5 +1,4 @@
-#ifndef __gauntmore__Thing__
-#define __gauntmore__Thing__
+#pragma once
 
 #include "Unit.h"
 
@@ -33,5 +32,3 @@ protected:
      */
     void _update(const UpdateState &us);
 };
-
-#endif /* defined(__gauntmore__Thing__) */

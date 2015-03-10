@@ -1,13 +1,4 @@
-//
-//  Weapon.h
-//  gauntmore_macosx
-//
-//  Created by Steven Warren on 3/3/15.
-//  Copyright (c) 2015 oxygine. All rights reserved.
-//
-
-#ifndef __gauntmore_macosx__Weapon__
-#define __gauntmore_macosx__Weapon__
+#pragma once
 
 #include <stdio.h>
 
@@ -34,7 +25,6 @@ private:
     int _value;
     int _weaponType;
     
-    
     /**
      * Initializes a Weapon position and sprite. Called by Unit's init() method.
      */
@@ -53,6 +43,3 @@ private:
      */
     void _update(const UpdateState &us);
 };
-
-
-#endif /* defined(__gauntmore_macosx__Weapon__) */

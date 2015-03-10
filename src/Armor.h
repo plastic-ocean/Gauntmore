@@ -1,14 +1,4 @@
-//
-//  Armor.h
-//  gauntmore_macosx
-//
-//  Created by Steven Warren on 2/26/15.
-//  Copyright (c) 2015 oxygine. All rights reserved.
-//
-
-#ifndef __gauntmore_macosx__Armor__
-#define __gauntmore_macosx__Armor__
-
+#pragma once
 #include <stdio.h>
 
 #include "Thing.h"
@@ -52,5 +42,3 @@ private:
      */
     void _update(const UpdateState &us);
 };
-
-#endif /* defined(__gauntmore_macosx__Armor__) */
